@@ -1,0 +1,73 @@
+<UserControl x:Class="RefLab.Presentation.Views.AccountingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:AccountingViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource SurfaceBrush}">
+
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Style="{StaticResource ChromePanelStyle}">
+            <TextBlock Text="{StaticResource Screen.Accounting}"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="SemiBold"
+                       VerticalAlignment="Center" />
+        </Border>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Grid Margin="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <DockPanel Grid.Column="0" Margin="0,0,8,0">
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                    </StackPanel>
+                    <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Payments}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{StaticResource Column.Date}" Binding="{Binding PaidDate}" Width="140" />
+                            <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding LegacyOrderIdentifier}" Width="150" />
+                            <DataGridTextColumn Header="{StaticResource Column.Amount}" Binding="{Binding Amount}" Width="100" />
+                            <DataGridTextColumn Header="{StaticResource Column.Currency}" Binding="{Binding CurrencyCode}" Width="80" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+
+                <DockPanel Grid.Column="1">
+                    <TextBlock DockPanel.Dock="Top" Text="{StaticResource Column.Amount}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+                    <StackPanel>
+                        <TextBlock Text="{StaticResource Field.OrderId}" Style="{StaticResource BaseTextStyle}" />
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding OrderId, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="{StaticResource Field.Amount}" Style="{StaticResource BaseTextStyle}" />
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding Amount, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="{StaticResource Field.ReferringPartyCode}" Style="{StaticResource BaseTextStyle}" />
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ReferringPartyCode, UpdateSourceTrigger=PropertyChanged}" />
+                        <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RecordPaymentAsyncCommand}" />
+                    </StackPanel>
+                    <TextBlock DockPanel.Dock="Top" Text="{StaticResource Screen.Statistics}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+                    <StackPanel>
+                        <TextBlock Text="{StaticResource Field.From}" Style="{StaticResource BaseTextStyle}" />
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding StockTakeFrom, StringFormat=yyyy-MM-dd, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="{StaticResource Field.To}" Style="{StaticResource BaseTextStyle}" />
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding StockTakeTo, StringFormat=yyyy-MM-dd, UpdateSourceTrigger=PropertyChanged}" />
+                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RunStockTakeAsyncCommand}" />
+                        <Button Content="{StaticResource Command.Confirm}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RunScopedStockTakeAsyncCommand}" />
+                    </StackPanel>
+                    <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding ReferringParties}" MaxHeight="180">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding Code}" Width="90" />
+                            <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding Name}" Width="*" />
+                            <DataGridTextColumn Header="{StaticResource Column.Amount}" Binding="{Binding CommissionRate}" Width="90" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </Grid>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,197 @@
+<UserControl x:Class="RefLab.Presentation.Views.Controls.PatientPanelControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:PatientPanelViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="RightToLeft"
+             Background="{StaticResource PanelBrush}">
+
+    <!--
+        The Arabic patient panel.
+
+        The panel is laid out right to left: the Arabic labels sit on the right
+        and the fields on their left, which is how the reference product
+        presented it. The identifier, the barcode and the amounts keep a left to
+        right direction of their own, because the thirteen-character order
+        identifier and the decimal amounts have to read unambiguously.
+    -->
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"
+                       Text="{StaticResource Ar.PatientPanel.Title}"
+                       Style="{StaticResource HeadingTextStyle}"
+                       HorizontalAlignment="Right" />
+
+            <!-- The order identity -->
+            <Grid Grid.Row="1" Margin="0,0,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.ReservationNumber}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <TextBox Grid.Row="0" Grid.Column="1"
+                         Style="{StaticResource ArabicValueStyle}"
+                         FlowDirection="LeftToRight"
+                         IsReadOnly="True"
+                         Text="{Binding LegacyIdentifier, Mode=OneWay}" />
+
+                <TextBlock Grid.Row="1" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.RecordStatus}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <TextBox Grid.Row="1" Grid.Column="1"
+                         Style="{StaticResource ArabicValueStyle}"
+                         FlowDirection="LeftToRight"
+                         IsReadOnly="True"
+                         Text="{Binding RecordStatus, Mode=OneWay}" />
+
+                <TextBlock Grid.Row="2" Grid.Column="0"
+                           Text="{StaticResource Ar.Command.Barcode}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <TextBox Grid.Row="2" Grid.Column="1"
+                         Style="{StaticResource ArabicValueStyle}"
+                         FlowDirection="LeftToRight"
+                         IsReadOnly="True"
+                         Text="{Binding Barcode, Mode=OneWay}" />
+
+                <TextBlock Grid.Row="3" Grid.Column="0"
+                           Text="{StaticResource Column.Currency}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <TextBox Grid.Row="3" Grid.Column="1"
+                         Style="{StaticResource ArabicValueStyle}"
+                         FlowDirection="LeftToRight"
+                         IsReadOnly="True"
+                         Text="{Binding CurrencyCode, Mode=OneWay}" />
+            </Grid>
+
+            <!-- The patient identity -->
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.Name}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <TextBox Grid.Row="0" Grid.Column="1"
+                         Style="{StaticResource ArabicValueStyle}"
+                         Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+
+                <TextBlock Grid.Row="1" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.Sex}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <ComboBox Grid.Row="1" Grid.Column="1"
+                          Style="{StaticResource LabComboBoxStyle}"
+                          HorizontalAlignment="Stretch"
+                          ItemsSource="{x:Static vm:EnumSource.SexValues}"
+                          SelectedItem="{Binding Sex}" />
+
+                <TextBlock Grid.Row="2" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.Age}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                    <TextBox Style="{StaticResource ArabicValueStyle}"
+                             Width="70"
+                             Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="{StaticResource Ar.PatientPanel.Years}"
+                               Style="{StaticResource ArabicLabelStyle}"
+                               Margin="6,0,0,0" />
+                </StackPanel>
+
+                <TextBlock Grid.Row="3" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.Address}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <TextBox Grid.Row="3" Grid.Column="1"
+                         Style="{StaticResource ArabicValueStyle}"
+                         Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" />
+
+                <TextBlock Grid.Row="4" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.PhoneNumber}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <TextBox Grid.Row="4" Grid.Column="1"
+                         Style="{StaticResource ArabicValueStyle}"
+                         FlowDirection="LeftToRight"
+                         Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}" />
+
+                <TextBlock Grid.Row="5" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.Transfer}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <CheckBox Grid.Row="5" Grid.Column="1"
+                          Style="{StaticResource LabCheckBoxStyle}"
+                          HorizontalAlignment="Right"
+                          IsChecked="{Binding IsVip}" />
+
+                <TextBlock Grid.Row="6" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.NotificationState}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <ComboBox Grid.Row="6" Grid.Column="1"
+                          Style="{StaticResource LabComboBoxStyle}"
+                          HorizontalAlignment="Stretch" />
+
+                <TextBlock Grid.Row="7" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.Notes}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <TextBox Grid.Row="7" Grid.Column="1"
+                         Style="{StaticResource ArabicValueStyle}"
+                         AcceptsReturn="True"
+                         Height="56"
+                         VerticalScrollBarVisibility="Auto"
+                         Text="{Binding ReceptionNote, UpdateSourceTrigger=PropertyChanged}" />
+
+                <TextBlock Grid.Row="8" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.AccountHolderName}"
+                           Style="{StaticResource ArabicLabelStyle}" />
+                <TextBox Grid.Row="8" Grid.Column="1"
+                         Style="{StaticResource ArabicValueStyle}"
+                         FlowDirection="LeftToRight"
+                         Text="{Binding ReferringPhysicianCode, UpdateSourceTrigger=PropertyChanged}" />
+            </Grid>
+
+            <!-- The requested tests -->
+            <TextBlock Grid.Row="3"
+                       Text="{StaticResource Ar.PatientPanel.RequestedTests}"
+                       Style="{StaticResource HeadingTextStyle}"
+                       HorizontalAlignment="Right"
+                       Margin="0,12,0,4" />
+
+            <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Text="{StaticResource Sample.Blood}" Style="{StaticResource BaseTextStyle}" Margin="8,2" />
+                <TextBlock Text="{StaticResource Sample.Urine}" Style="{StaticResource BaseTextStyle}" Margin="8,2" />
+                <TextBlock Text="{StaticResource Sample.Stool}" Style="{StaticResource BaseTextStyle}" Margin="8,2" />
+                <TextBlock Text="{StaticResource Sample.Serum}" Style="{StaticResource BaseTextStyle}" Margin="8,2" />
+                <TextBlock Text="{StaticResource Sample.CSF}" Style="{StaticResource BaseTextStyle}" Margin="8,2" />
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

@@ -1,6 +1,21 @@
 <Application x:Class="RefLab.Presentation.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources />
+             xmlns:converters="clr-namespace:RefLab.Presentation.Resources.Converters">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Themes/Light.xaml" />
+                <ResourceDictionary Source="Resources/Strings.xaml" />
+                <ResourceDictionary Source="Resources/Strings.ar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisibility" />
+            <converters:BoolToVisibilityConverter x:Key="InverseBoolToVisibility" Invert="True" />
+            <converters:NotNullToVisibilityConverter x:Key="NotNullToVisibility" />
+            <converters:NotNullToVisibilityConverter x:Key="NullToVisibility" Invert="True" />
+            <converters:EnumEqualsConverter x:Key="EnumEquals" />
+            <converters:EnumDisplayConverter x:Key="EnumDisplay" />
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

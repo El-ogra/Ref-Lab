@@ -1,0 +1,52 @@
+<UserControl x:Class="RefLab.Presentation.Views.AuditView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:AuditViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource SurfaceBrush}">
+
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Style="{StaticResource ChromePanelStyle}">
+            <TextBlock Text="{StaticResource Screen.Audit}"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="SemiBold"
+                       VerticalAlignment="Center" />
+        </Border>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <DockPanel Margin="8">
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                    <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                    <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RecordAttendanceAsyncCommand}" />
+                </StackPanel>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <DataGrid Grid.Column="0" Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding PrintAudits}" Margin="0,0,4,0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{StaticResource Column.SequenceNumber}" Binding="{Binding SequenceNumber}" Width="110" />
+                            <DataGridTextColumn Header="{StaticResource Column.Operator}" Binding="{Binding Operator}" Width="*" />
+                            <DataGridTextColumn Header="{StaticResource Column.PrintedAt}" Binding="{Binding PrintedAt}" Width="140" />
+                            <DataGridTextColumn Header="{StaticResource Column.Category}" Binding="{Binding Category}" Width="100" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid Grid.Column="1" Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Attendance}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{StaticResource Column.Operator}" Binding="{Binding OperatorName}" Width="*" />
+                            <DataGridTextColumn Header="{StaticResource Column.EventType}" Binding="{Binding EventType}" Width="120" />
+                            <DataGridTextColumn Header="{StaticResource Column.OccurredAt}" Binding="{Binding OccurredAt}" Width="140" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </DockPanel>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>

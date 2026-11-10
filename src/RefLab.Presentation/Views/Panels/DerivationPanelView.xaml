@@ -1,0 +1,63 @@
+<UserControl x:Class="RefLab.Presentation.Views.Panels.DerivationPanelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels.Panels"
+             d:DataContext="{d:DesignInstance Type=vm:DerivationPanelViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource PanelBrush}">
+
+    <!--
+        The derivation panel.
+
+        The panel asks the Application layer for the derived clinical values and
+        displays what it returns; it never derives a value itself.
+    -->
+    <DockPanel Margin="6">
+        <TextBlock DockPanel.Dock="Top" Text="Derivation" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+
+        <StackPanel DockPanel.Dock="Top">
+            <TextBlock Text="{StaticResource Field.Hemoglobin}" Style="{StaticResource BaseTextStyle}" />
+            <TextBox Style="{StaticResource LabTextBoxStyle}"
+                     Text="{Binding Hemoglobin, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="{StaticResource Field.AgeYears}" Style="{StaticResource BaseTextStyle}" />
+            <TextBox Style="{StaticResource LabTextBoxStyle}"
+                     Text="{Binding AgeYears, UpdateSourceTrigger=PropertyChanged}" />
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Haematocrit" Style="{StaticResource ActionButtonStyle}" Command="{Binding DeriveHematocritAsyncCommand}" />
+                <Button Content="Haemoglobin %" Style="{StaticResource ActionButtonStyle}" Command="{Binding DeriveHemoglobinPercentageAsyncCommand}" />
+            </StackPanel>
+
+            <TextBlock Text="{StaticResource Field.PatientProthrombinTime}" Style="{StaticResource BaseTextStyle}" />
+            <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding PatientProthrombinTime, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="{StaticResource Field.ControlProthrombinTime}" Style="{StaticResource BaseTextStyle}" />
+            <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ControlProthrombinTime, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="{StaticResource Field.NormalProthrombinTime}" Style="{StaticResource BaseTextStyle}" />
+            <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding NormalProthrombinTime, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="{StaticResource Field.ControlIndex}" Style="{StaticResource BaseTextStyle}" />
+            <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ControlIndex, UpdateSourceTrigger=PropertyChanged}" />
+
+            <Button Content="Sensitivity index" Style="{StaticResource ActionButtonStyle}" Command="{Binding DeriveInternationalSensitivityIndexAsyncCommand}" />
+
+            <TextBlock Text="{StaticResource Field.ControlTime}" Style="{StaticResource BaseTextStyle}" />
+            <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ControlTime, UpdateSourceTrigger=PropertyChanged}" />
+
+            <Button Content="Prothrombin control" Style="{StaticResource ActionButtonStyle}" Command="{Binding InterpolateProthrombinControlAsyncCommand}" />
+        </StackPanel>
+
+        <DataGrid ItemsSource="{Binding Results}" Style="{StaticResource LabDataGridStyle}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding Name}" Width="*" />
+                <DataGridTextColumn Header="{StaticResource Column.Result}" Binding="{Binding Value}" Width="100" />
+                <DataGridTextColumn Header="{StaticResource Column.Unit}" Binding="{Binding Unit}" Width="90" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>

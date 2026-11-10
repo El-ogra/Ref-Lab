@@ -1,0 +1,84 @@
+<UserControl x:Class="RefLab.Presentation.Views.Controls.CataloguePanelControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:CataloguePanelViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource PanelBrush}">
+
+    <!--
+        The English test-catalogue panel.
+
+        The catalogue is the English surface of the application and stays left
+        to right, even when it sits beside the Arabic patient panel.
+    -->
+    <DockPanel Margin="8">
+        <TextBlock DockPanel.Dock="Top"
+                   Text="Routine test menu"
+                   Style="{StaticResource HeadingTextStyle}"
+                   HorizontalAlignment="Left" />
+
+        <Grid DockPanel.Dock="Top" Margin="0,0,0,6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0"
+                     Style="{StaticResource LabTextBoxStyle}"
+                     Text="{Binding Filter, UpdateSourceTrigger=PropertyChanged}" />
+            <CheckBox Grid.Column="1"
+                      Style="{StaticResource LabCheckBoxStyle}"
+                      Content="Send-out only"
+                      IsChecked="{Binding SendOutOnly}" />
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- The catalogue -->
+            <DataGrid Grid.Row="0" Grid.Column="0"
+                      Style="{StaticResource LabDataGridStyle}"
+                      ItemsSource="{Binding Tests}"
+                      SelectedItem="{Binding SelectedTest, Mode=TwoWay}"
+                      Margin="0,0,4,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="{StaticResource Column.TestName}" Binding="{Binding Name}" Width="*" />
+                    <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding Code}" Width="60" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- The selection -->
+            <DockPanel Grid.Row="0" Grid.Column="1">
+                <TextBlock DockPanel.Dock="Top" Text="Selected Test" Style="{StaticResource BaseTextStyle}" FontWeight="SemiBold" />
+                <ListView ItemsSource="{Binding SelectedTests}"
+                          Style="{StaticResource LabListViewStyle}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="{StaticResource Column.TestName}" DisplayMemberBinding="{Binding Name}" Width="140" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </DockPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Left"
+                        Margin="0,6,0,0">
+                <Button Content="Add select test" Style="{StaticResource ActionButtonStyle}" />
+                <Button Content="Delete" Style="{StaticResource ActionButtonStyle}" />
+                <Button Content="All" Style="{StaticResource ActionButtonStyle}" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

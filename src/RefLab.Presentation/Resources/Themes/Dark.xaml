@@ -1,0 +1,37 @@
+<!--
+    The dark theme of the Ref Lab presentation layer.
+
+    The dark theme overrides only the palette and the base text styles; every
+    layout style is inherited from the light theme, so a surface keeps exactly
+    the same structure whichever theme is applied.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <Color x:Key="ChromeColor">#FF102A43</Color>
+    <Color x:Key="PanelColor">#FF1B3A57</Color>
+    <Color x:Key="SurfaceColor">#FF14293D</Color>
+    <Color x:Key="AccentColor">#FF43A047</Color>
+    <Color x:Key="WarningColor">#FFFB8C00</Color>
+    <Color x:Key="DangerColor">#FFE53935</Color>
+    <Color x:Key="TextColor">#FFF2F5F8</Color>
+    <Color x:Key="MutedTextColor">#FFB0BEC5</Color>
+
+    <SolidColorBrush x:Key="ChromeBrush" Color="{StaticResource ChromeColor}" />
+    <SolidColorBrush x:Key="PanelBrush" Color="{StaticResource PanelColor}" />
+    <SolidColorBrush x:Key="SurfaceBrush" Color="{StaticResource SurfaceColor}" />
+    <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="WarningBrush" Color="{StaticResource WarningColor}" />
+    <SolidColorBrush x:Key="DangerBrush" Color="{StaticResource DangerColor}" />
+    <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}" />
+    <SolidColorBrush x:Key="MutedTextBrush" Color="{StaticResource MutedTextColor}" />
+
+    <Style x:Key="BaseTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource UiFontFamily}" />
+        <Setter Property="FontSize" Value="{StaticResource UiFontSize}" />
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+</ResourceDictionary>

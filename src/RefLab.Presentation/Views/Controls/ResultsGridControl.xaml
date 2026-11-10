@@ -1,0 +1,33 @@
+<UserControl x:Class="RefLab.Presentation.Views.Controls.ResultsGridControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:PatientWorkViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight">
+
+    <!--
+        The results grid.
+
+        The grid shows the state of each ordered test. The legacy product
+        carried three separate boolean columns — Finish, Verify and Print —
+        which were the raw storage flags of the order test row. Ref Lab keeps
+        the state as a single value, ResultState, and shows it once; the three
+        legacy flags are not reproduced as separate columns.
+    -->
+    <DataGrid Style="{StaticResource LabDataGridStyle}"
+              ItemsSource="{Binding Tests}"
+              SelectedItem="{Binding SelectedTest, Mode=TwoWay}"
+              AutoGenerateColumns="False">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="{StaticResource Column.TestAbbreviation}" Binding="{Binding TestSimpleName}" Width="140" />
+            <DataGridTextColumn Header="{StaticResource Column.Result}" Binding="{Binding ResultText}" Width="110" />
+            <DataGridTextColumn Header="{StaticResource Column.Unit}" Binding="{Binding TestUnit}" Width="90" />
+            <DataGridTextColumn Header="{StaticResource Column.Status}" Binding="{Binding ClassificationText}" Width="110" />
+            <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding State}" Width="90" />
+            <DataGridTextColumn Header="{StaticResource Column.Amount}" Binding="{Binding Price}" Width="90" />
+        </DataGrid.Columns>
+    </DataGrid>
+</UserControl>

@@ -55,6 +55,12 @@ public sealed class QuestPdfExporter : IPdfExporter
                 {
                     column.Spacing(8);
 
+                    // The laboratory branding is applied to every document. This is
+                    // the single point at which the report layer reaches the
+                    // branding; the presentation layer never sees the strings and
+                    // never assembles report content.
+                    ReportBranding.Apply(column);
+
                     if (!string.IsNullOrWhiteSpace(document.Title))
                     {
                         column.Item().Text(document.Title).FontSize(16).SemiBold();

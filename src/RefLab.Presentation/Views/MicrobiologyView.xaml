@@ -1,0 +1,77 @@
+<UserControl x:Class="RefLab.Presentation.Views.MicrobiologyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:MicrobiologyViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource SurfaceBrush}">
+
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Style="{StaticResource ChromePanelStyle}">
+            <TextBlock Text="{StaticResource Screen.Microbiology}"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="SemiBold"
+                       VerticalAlignment="Center" />
+        </Border>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TabControl Margin="8">
+                <TabItem Header="Cultures">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="220" Text="{Binding CultureId, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="220" Text="{Binding Organism, UpdateSourceTrigger=PropertyChanged}" />
+                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding AddSusceptibilityCommand}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RecordCultureAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCulturesAsyncCommand}" />
+                        </StackPanel>
+                        <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Cultures}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding CultureId}" Width="120" />
+                                <DataGridTextColumn Header="{StaticResource Column.Organism}" Binding="{Binding Organism}" Width="*" />
+                                <DataGridTextColumn Header="{StaticResource Column.Date}" Binding="{Binding RequestDate}" Width="140" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </TabItem>
+
+                <TabItem Header="Antibiotics">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="160" Text="{Binding AntibioticSymbol, UpdateSourceTrigger=PropertyChanged}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveAntibioticAsyncCommand}" />
+                        </StackPanel>
+                        <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Antibiotics}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{StaticResource Column.Symbol}" Binding="{Binding Symbol}" Width="120" />
+                                <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding ScientificName}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </TabItem>
+
+                <TabItem Header="Farms">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="180" Text="{Binding FarmName, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="140" Text="{Binding IssuedAmount, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="140" Text="{Binding ReceivedAmount, UpdateSourceTrigger=PropertyChanged}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveFarmResultAsyncCommand}" />
+                        </StackPanel>
+                        <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding FarmTransactions}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding FarmName}" Width="*" />
+                                <DataGridTextColumn Header="{StaticResource Column.Date}" Binding="{Binding TransactionDate}" Width="140" />
+                                <DataGridTextColumn Header="{StaticResource Column.Amount}" Binding="{Binding IssuedAmount}" Width="100" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </TabItem>
+            </TabControl>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>

@@ -320,4 +320,57 @@ Every Arabic term below was **transcribed verbatim from a frame**.
 
 ---
 
+---
+
+## 9. Owner-approved Arabic strings from the V2 corpus
+
+**Document ID:** RL-UI-001 · Section 9
+**Added:** 2026-11-10
+**Approved by:** the project owner, in the Phase 5 execution directive
+
+The strings below were **not** part of the screen-recording transcription of
+sections 2 and 7, which remains the primary evidence of this document. They
+were transcribed from the V2 requirement corpus and were explicitly approved by
+the project owner for use in the Phase 5 presentation layer. They are recorded
+here so that this document remains the **single authorised source** of Arabic
+user-interface labels, exactly as the project's localisation rule requires.
+
+The presentation boundary test `B9` asserts that every Arabic literal in the
+source of the laboratory appears in this document, so a string that is not
+listed below cannot reach the user interface.
+
+### 9.1 Strings transcribed from the V2 corpus
+
+| # | Arabic string | Provenance | Requirement | Function | Where it is used in Ref Lab |
+|---:|---|---|---|---|---|
+| 1 | «الإحصائيات ومتابعة أداء المعمل» | `RL-V2-FRM-001` §2 master function inventory, Arabic-label column | `V2-REQ-054`, `V2-REQ-055` | `V2-FUNC-032` — Run the statistics and performance module | The title of the statistics and performance screen |
+| 2 | «هل الفلوس المحصلة من مرضى الفترة فقط؟» | `RL-V2-FRM-001` §3 requirement card, Arabic-label row | `V2-REQ-025` | `V2-FUNC-015` — Run accounting and stock-take | The scope confirmation of the stock-take on the accounting screen |
+| 3 | «عالٍ أو منخفضة أو حرجة» | `RL-V2-FRM-001` §3 requirement card, Arabic-label row | `V2-REQ-014` | `V2-FUNC-008` — Enter a result with automatic classification | The three result-classification terms below |
+
+### 9.2 The result-classification terms
+
+The classification triple of `V2-REQ-014` is used as the three separate terms
+that the presentation layer binds, each of which is a word of the approved
+string:
+
+| # | Arabic term | English gloss | Provenance |
+|---:|---|---|---|
+| 4 | «عالٍ» | High | `V2-REQ-014` — «عالٍ أو منخفضة أو حرجة» |
+| 5 | «منخفضة» | Low | `V2-REQ-014` — «عالٍ أو منخفضة أو حرجة» |
+| 6 | «حرجة» | Critical | `V2-REQ-014` — «عالٍ أو منخفضة أو حرجة» |
+
+### 9.3 A string whose provenance is the visual reference material
+
+| # | Arabic string | Provenance | Where it is used in Ref Lab |
+|---:|---|---|---|
+| 7 | «شاشة الوحدات و عوامل التحويل» | The **visual reference material** of the Phase 5 preparation — the units and conversion-factors editor of the reference system — together with the owner's explicit approval. **It is not present in the V2 requirement corpus.** | The title of the units and conversions view of the catalogue administration workspace |
+
+> **Provenance note.** This string is the only Arabic string in this document
+> that does not come from the V2 corpus. It was read from the reference
+> system's own screen, and the owner approved it by name in the Phase 5
+> execution directive. It is recorded here so that the single-source rule
+> holds and so that the boundary test `B9` accepts it.
+
+---
+
 **End of UI Labels extraction.**

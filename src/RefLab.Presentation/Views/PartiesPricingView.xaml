@@ -1,0 +1,78 @@
+<UserControl x:Class="RefLab.Presentation.Views.PartiesPricingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:PartiesPricingViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource SurfaceBrush}">
+
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Style="{StaticResource ChromePanelStyle}">
+            <TextBlock Text="{StaticResource Screen.PartiesPricing}"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="SemiBold"
+                       VerticalAlignment="Center" />
+        </Border>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TabControl Margin="8">
+                <TabItem Header="Referring parties">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                        </StackPanel>
+                        <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding ReferringParties}" SelectedItem="{Binding SelectedParty, Mode=TwoWay}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding Code}" Width="100" />
+                                <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding Name}" Width="*" />
+                                <DataGridTextColumn Header="{StaticResource Column.Phone}" Binding="{Binding Phone}" Width="120" />
+                                <DataGridTextColumn Header="{StaticResource Column.Amount}" Binding="{Binding CommissionRate}" Width="90" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </TabItem>
+
+                <TabItem Header="Treating physicians">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="90" Text="{Binding PhysicianCode, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="200" Text="{Binding PhysicianName, UpdateSourceTrigger=PropertyChanged}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SavePhysicianAsyncCommand}" />
+                        </StackPanel>
+                        <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding TreatingPhysicians}" SelectedItem="{Binding SelectedPhysician, Mode=TwoWay}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding Code}" Width="100" />
+                                <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding Name}" Width="*" />
+                                <DataGridTextColumn Header="{StaticResource Column.Phone}" Binding="{Binding Phone}" Width="120" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </TabItem>
+
+                <TabItem Header="Price lists">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="180" Text="{Binding PriceListName, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="180" Text="{Binding PriceListTestSimpleName, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="100" Text="{Binding PriceListPrice, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox Style="{StaticResource LabTextBoxStyle}" Width="260" Text="{Binding DestinationDirectory, UpdateSourceTrigger=PropertyChanged}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SavePriceListAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Print}" Style="{StaticResource ActionButtonStyle}" Command="{Binding PrintPriceListAsyncCommand}" />
+                        </StackPanel>
+                        <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding PriceLists}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding PriceListName}" Width="*" />
+                                <DataGridTextColumn Header="{StaticResource Column.TestName}" Binding="{Binding TestSimpleName}" Width="*" />
+                                <DataGridTextColumn Header="{StaticResource Column.Amount}" Binding="{Binding Price}" Width="100" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </TabItem>
+            </TabControl>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>

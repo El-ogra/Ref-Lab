@@ -1,0 +1,88 @@
+<!--
+    The Arabic resource dictionary of the Ref Lab presentation layer.
+
+    Scope: the Arabic surface of the application — the patient panel of the
+    patient work screen and the Arabic command labels of the action rows. The
+    English surface has its own dictionary, Resources/Strings.xaml, and the two
+    dictionaries use disjoint key sets, so a surface always renders in the
+    language it was designed for regardless of the workstation locale. This is
+    the localisation boundary recorded in Docs/ui-labels-verified.md.
+
+    Provenance of every string below:
+      * PatientPanel.*, Command.*, Keypad.*, TestName.*, Report.* are
+        transcribed from Docs/ui-labels-verified.md sections 7.1 to 7.5.
+      * Statistics.Title, StockTake.ConfirmScope and the Classification.* terms
+        are the owner-approved strings of 2026-11-10, recorded in
+        Docs/ui-labels-verified.md section 9 with their V2-REQ provenance
+        (V2-REQ-054/055, V2-REQ-025 and V2-REQ-014 respectively).
+      * Units.Title is the owner-approved string of 2026-11-10 recorded in
+        Docs/ui-labels-verified.md section 9; it originates from the visual
+        reference material rather than from the V2 corpus.
+
+    No Arabic wording may be added to this dictionary. A new Arabic string must
+    be added to Docs/ui-labels-verified.md and approved by the project owner
+    first. The presentation boundary test asserts exactly that.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Patient panel -->
+    <sys:String x:Key="Ar.PatientPanel.Title">بيانات المريض</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.ReservationNumber">رقم الحجز</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.RequestNumber">رقم الطلب</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.Time">الوقت</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.RecordStatus">حالة السجل</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.Name">الاسم</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.Sex">الجنس</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.Age">العمر</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.Years">سنوات</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.Unit">الوحدة</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.Address">العنوان</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.Notes">ملاحظات</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.PhoneNumber">رقم الهاتف</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.AccountHolderName">اسم صاحب الحساب</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.Transfer">تحويل</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.NotificationState">حالة الاعلام</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.RequestedTests">الاختبارات المطلوبة</sys:String>
+
+    <!-- Command labels -->
+    <sys:String x:Key="Ar.Command.Save">حفظ</sys:String>
+    <sys:String x:Key="Ar.Command.Delete">حذف</sys:String>
+    <sys:String x:Key="Ar.Command.Exit">خروج</sys:String>
+    <sys:String x:Key="Ar.Command.Search">بحث</sys:String>
+    <sys:String x:Key="Ar.Command.Edit">تعديل</sys:String>
+    <sys:String x:Key="Ar.Command.Print">طباعة</sys:String>
+    <sys:String x:Key="Ar.Command.Printing">الطباعة</sys:String>
+    <sys:String x:Key="Ar.Command.Clear">مسح</sys:String>
+    <sys:String x:Key="Ar.Command.Confirm">تأكيد</sys:String>
+    <sys:String x:Key="Ar.Command.Logout">تسجيل خروج</sys:String>
+
+    <!-- On-screen keypad -->
+    <sys:String x:Key="Ar.Keypad.Letters">حروف</sys:String>
+    <sys:String x:Key="Ar.Keypad.Symbols">رموز</sys:String>
+    <sys:String x:Key="Ar.Keypad.Space">مسافة</sys:String>
+    <sys:String x:Key="Ar.Keypad.ArabicModeIndicator">ط</sys:String>
+
+    <!-- Clinical test names -->
+    <sys:String x:Key="Ar.TestName.UrineAnalysis">تحليل بول</sys:String>
+    <sys:String x:Key="Ar.TestName.CompleteBloodCount">صورة دم كاملة</sys:String>
+    <sys:String x:Key="Ar.TestName.SugarRatio">نسبة Sugar</sys:String>
+    <sys:String x:Key="Ar.TestName.BloodDifferential">صورة ك-diff</sys:String>
+    <sys:String x:Key="Ar.TestName.PregnancyTest">اختبار حمل</sys:String>
+
+    <!-- Printed report branding -->
+    <sys:String x:Key="Ar.Report.SystemName">ريال لاب سيستم</sys:String>
+    <sys:String x:Key="Ar.Report.ReportTitle">التقرير المختبرى</sys:String>
+
+    <!-- Owner-approved strings from the V2 corpus -->
+    <sys:String x:Key="Ar.Statistics.Title">الإحصائيات ومتابعة أداء المعمل</sys:String>
+    <sys:String x:Key="Ar.Units.Title">شاشة الوحدات و عوامل التحويل</sys:String>
+    <sys:String x:Key="Ar.StockTake.ConfirmScope">هل الفلوس المحصلة من مرضى الفترة فقط؟</sys:String>
+
+    <!-- Result classification -->
+    <sys:String x:Key="Ar.Classification.High">عالٍ</sys:String>
+    <sys:String x:Key="Ar.Classification.Low">منخفضة</sys:String>
+    <sys:String x:Key="Ar.Classification.Critical">حرجة</sys:String>
+
+</ResourceDictionary>

@@ -1,0 +1,68 @@
+<UserControl x:Class="RefLab.Presentation.Views.ReportSetupView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:ReportSetupViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource SurfaceBrush}">
+
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Style="{StaticResource ChromePanelStyle}">
+            <TextBlock Text="{StaticResource Screen.ReportSetup}"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="SemiBold"
+                       VerticalAlignment="Center" />
+        </Border>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Grid Margin="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <DockPanel Grid.Column="0" Margin="0,0,8,0">
+                    <TextBlock DockPanel.Dock="Top" Text="{StaticResource Column.PrinterRole}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Width="200" Text="{Binding PrinterName, UpdateSourceTrigger=PropertyChanged}" />
+                        <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding BindPrinterAsyncCommand}" />
+                    </StackPanel>
+                    <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Printers}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{StaticResource Column.PrinterRole}" Binding="{Binding Role}" Width="160" />
+                            <DataGridTextColumn Header="{StaticResource Column.PrinterName}" Binding="{Binding PrinterName}" Width="*" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="{StaticResource Field.PaperSize}" Style="{StaticResource BaseTextStyle}" />
+                    <ComboBox Style="{StaticResource LabComboBoxStyle}" ItemsSource="{x:Static vm:EnumSource.PaperSizeValues}" SelectedItem="{Binding PaperSize}" />
+                    <TextBlock Text="{StaticResource Field.GlobalHeaderText}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding GlobalHeaderText, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="{StaticResource Field.GlobalHeaderSecondaryText}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding GlobalHeaderSecondaryText, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="{StaticResource Field.FooterText}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding FooterText, UpdateSourceTrigger=PropertyChanged}" />
+                    <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveHeaderFooterAsyncCommand}" />
+                    <TextBlock Text="{StaticResource Field.LeftMargin}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding LeftMargin, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="{StaticResource Field.RightMargin}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding RightMargin, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="{StaticResource Field.TopMargin}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding TopMargin, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="{StaticResource Field.BottomMargin}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding BottomMargin, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="{StaticResource Field.BackgroundColour}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding BackgroundColour, UpdateSourceTrigger=PropertyChanged}" />
+                    <Button Content="{StaticResource Command.Apply}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveLayoutAsyncCommand}" />
+                    <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>

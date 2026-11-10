@@ -1,0 +1,196 @@
+<!--
+    The neutral (English) resource dictionary of the Ref Lab presentation layer.
+
+    Scope: the English surface of the application — screen titles, column
+    headers, administration labels and the English test-catalogue wording.
+    The Arabic surface has its own dictionary, Resources/Strings.ar.xaml, and
+    the two dictionaries use disjoint key sets, so a surface always renders in
+    the language it was designed for regardless of the workstation locale.
+
+    Every Arabic string in this project is authorised by Docs/ui-labels-verified.md.
+    This dictionary contains no Arabic.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Screen titles -->
+    <sys:String x:Key="App.Title">Ref Lab</sys:String>
+    <sys:String x:Key="Screen.SignIn">Sign-in</sys:String>
+    <sys:String x:Key="Screen.PatientWork">Patient work</sys:String>
+    <sys:String x:Key="Screen.TestCatalogue">Test catalogue</sys:String>
+    <sys:String x:Key="Screen.CatalogueAdministration">Catalogue administration</sys:String>
+    <sys:String x:Key="Screen.SendOut">Send-out queue</sys:String>
+    <sys:String x:Key="Screen.Microbiology">Microbiology and farm results</sys:String>
+    <sys:String x:Key="Screen.Accounting">Accounting</sys:String>
+    <sys:String x:Key="Screen.PartiesPricing">Parties and pricing</sys:String>
+    <sys:String x:Key="Screen.ReportSetup">Report setup</sys:String>
+    <sys:String x:Key="Screen.LaboratorySettings">Laboratory settings</sys:String>
+    <sys:String x:Key="Screen.OperatorAdministration">Operator administration</sys:String>
+    <sys:String x:Key="Screen.Statistics">Statistics and performance</sys:String>
+    <sys:String x:Key="Screen.Audit">Audit trail and attendance</sys:String>
+
+    <!-- Commands -->
+    <sys:String x:Key="Command.Save">Save</sys:String>
+    <sys:String x:Key="Command.Search">Search</sys:String>
+    <sys:String x:Key="Command.Edit">Edit</sys:String>
+    <sys:String x:Key="Command.Print">Print</sys:String>
+    <sys:String x:Key="Command.Clear">Clear</sys:String>
+    <sys:String x:Key="Command.Delete">Delete</sys:String>
+    <sys:String x:Key="Command.Confirm">Confirm</sys:String>
+    <sys:String x:Key="Command.Exit">Exit</sys:String>
+    <sys:String x:Key="Command.Logout">Log out</sys:String>
+    <sys:String x:Key="Command.Refresh">Refresh</sys:String>
+    <sys:String x:Key="Command.Add">Add</sys:String>
+    <sys:String x:Key="Command.Apply">Apply</sys:String>
+    <sys:String x:Key="Command.Open">Open</sys:String>
+    <sys:String x:Key="Command.Register">Register</sys:String>
+    <sys:String x:Key="Command.OrderTests">Order tests</sys:String>
+    <sys:String x:Key="Command.EnterResult">Enter result</sys:String>
+    <sys:String x:Key="Command.Review">Review</sys:String>
+    <sys:String xmlns:sys="clr-namespace:System;assembly=mscorlib" x:Key="Command.HandOver">Hand over</sys:String>
+    <sys:String x:Key="Command.Barcode">Barcode</sys:String>
+    <sys:String x:Key="Command.History">Patient history</sys:String>
+    <sys:String x:Key="Command.FollowUpCase">Follow up cases</sys:String>
+    <sys:String x:Key="Command.SendOut">Send-out</sys:String>
+
+    <!-- Column headers -->
+    <sys:String x:Key="Column.TestName">Test Name</sys:String>
+    <sys:String x:Key="Column.TestAbbreviation">Test Abbreviation</sys:String>
+    <sys:String x:Key="Column.Result">Result</sys:String>
+    <sys:String x:Key="Column.Status">Status</sys:String>
+    <sys:String x:Key="Column.Unit">Unit</sys:String>
+    <sys:String x:Key="Column.NormalRange">Normal range</sys:String>
+    <sys:String x:Key="Column.Amount">Amount</sys:String>
+    <sys:String x:Key="Column.Date">Date</sys:String>
+    <sys:String x:Key="Column.Code">Code</sys:String>
+    <sys:String x:Key="Column.Name">Name</sys:String>
+    <sys:String x:Key="Column.Total">Total</sys:String>
+    <sys:String x:Key="Column.Paid">Paid</sys:String>
+    <sys:String x:Key="Column.Currency">Currency</sys:String>
+    <sys:String x:Key="Column.Operator">Operator</sys:String>
+    <sys:String x:Key="Column.SequenceNumber">Sequence number</sys:String>
+    <sys:String x:Key="Column.Category">Category</sys:String>
+    <sys:String x:Key="Column.Permissions">Permissions</sys:String>
+    <sys:String x:Key="Column.SampleType">Sample type</sys:String>
+    <sys:String x:Key="Column.DestinationLab">Destination laboratory</sys:String>
+
+    <!-- Field labels -->
+    <sys:String x:Key="Field.OperatorName">Operator name</sys:String>
+    <sys:String x:Key="Field.Password">Password</sys:String>
+    <sys:String x:Key="Field.CurrentPassword">Current password</sys:String>
+    <sys:String x:Key="Field.NewPassword">New password</sys:String>
+    <sys:String x:Key="Field.RoleCaption">Role caption</sys:String>
+    <sys:String x:Key="Field.IsActive">Active</sys:String>
+    <sys:String x:Key="Field.IsAdministrator">Administrator</sys:String>
+    <sys:String x:Key="Field.SearchTerm">Search term</sys:String>
+    <sys:String x:Key="Field.From">From</sys:String>
+    <sys:String x:Key="Field.To">To</sys:String>
+    <sys:String x:Key="Field.DestinationDirectory">Destination directory</sys:String>
+    <sys:String x:Key="Field.PrinterName">Printer name</sys:String>
+    <sys:String x:Key="Field.PrinterRole">Printer role</sys:String>
+    <sys:String x:Key="Field.PaperSize">Paper size</sys:String>
+    <sys:String x:Key="Field.GlobalHeaderText">Global header text</sys:String>
+    <sys:String x:Key="Field.GlobalHeaderSecondaryText">Global secondary header text</sys:String>
+    <sys:String x:Key="Field.FooterText">Footer text</sys:String>
+    <sys:String x:Key="Field.LeftMargin">Left margin</sys:String>
+    <sys:String x:Key="Field.RightMargin">Right margin</sys:String>
+    <sys:String x:Key="Field.TopMargin">Top margin</sys:String>
+    <sys:String x:Key="Field.BottomMargin">Bottom margin</sys:String>
+    <sys:String x:Key="Field.BackgroundColour">Background colour</sys:String>
+    <sys:String x:Key="Field.DefaultAccountType">Default account type</sys:String>
+    <sys:String x:Key="Field.ConnectionReceiptHeader">Connection receipt header</sys:String>
+    <sys:String x:Key="Field.ConnectionReceiptFooter">Connection receipt footer</sys:String>
+    <sys:String x:Key="Field.ReportSequenceStart">Report sequence origin</sys:String>
+    <sys:String x:Key="Field.IsBarcodeAutoCreated">Create a barcode for every order</sys:String>
+    <sys:String x:Key="Field.IsWorkSheetPrinted">Print work sheets automatically</sys:String>
+    <sys:String x:Key="Field.HistoryDisplayMode">History display mode</sys:String>
+
+    <!-- Sample types — English in the legacy product, both in the Arabic panel and in the catalogue -->
+    <sys:String x:Key="Sample.Blood">Blood</sys:String>
+    <sys:String x:Key="Sample.Urine">Urine</sys:String>
+    <sys:String x:Key="Sample.Stool">Stool</sys:String>
+    <sys:String x:Key="Sample.Serum">Serum</sys:String>
+    <sys:String x:Key="Sample.CSF">CSF</sys:String>
+
+    <!-- Report category -->
+    <sys:String x:Key="Category.Contracts">Contracts</sys:String>
+    <sys:String x:Key="Category.Free">Free</sys:String>
+    <sys:String x:Key="Category.Individual">Individual</sys:String>
+    <sys:String x:Key="Category.LabToLab">Lab To Lab</sys:String>
+
+    <sys:String x:Key="Column.State">State</sys:String>
+    <sys:String x:Key="Column.Notes">Notes</sys:String>
+    <sys:String x:Key="Column.Sequence">Sequence</sys:String>
+    <sys:String x:Key="Column.Dispatched">Dispatched</sys:String>
+    <sys:String x:Key="Column.Settled">Settled</sys:String>
+    <sys:String x:Key="Column.Organism">Organism</sys:String>
+    <sys:String x:Key="Column.Symbol">Symbol</sys:String>
+    <sys:String x:Key="Column.Meaning">Meaning</sys:String>
+    <sys:String x:Key="Column.Factor">Factor</sys:String>
+    <sys:String x:Key="Column.FromUnit">From unit</sys:String>
+    <sys:String x:Key="Column.ToUnit">To unit</sys:String>
+    <sys:String x:Key="Column.EventType">Event</sys:String>
+    <sys:String x:Key="Column.OccurredAt">Occurred at</sys:String>
+    <sys:String x:Key="Column.Period">Period</sys:String>
+    <sys:String x:Key="Column.Count">Count</sys:String>
+    <sys:String x:Key="Column.PrintedAt">Printed at</sys:String>
+    <sys:String x:Key="Field.SexScope">Sex scope</sys:String>
+    <sys:String x:Key="Field.AgeUnit">Age unit</sys:String>
+    <sys:String x:Key="Field.LowLimit">Lower limit</sys:String>
+    <sys:String x:Key="Field.HighLimit">Upper limit</sys:String>
+    <sys:String x:Key="Field.TestCode">Test code</sys:String>
+    <sys:String x:Key="Field.TestName">Test name</sys:String>
+    <sys:String x:Key="Field.SimpleName">Simple name</sys:String>
+    <sys:String x:Key="Field.SubGroupCode">Sub-group code</sys:String>
+    <sys:String x:Key="Field.PatientPrice">Patient price</sys:String>
+    <sys:String x:Key="Field.LabPrice">Laboratory price</sys:String>
+    <sys:String x:Key="Field.OtherLabPrice">External laboratory price</sys:String>
+    <sys:String x:Key="Field.SampleType">Sample type</sys:String>
+    <sys:String x:Key="Field.Abbreviation">Abbreviation</sys:String>
+    <sys:String x:Key="Field.ArabicName">Arabic name</sys:String>
+    <sys:String x:Key="Field.SubGroupName">Sub-group name</sys:String>
+    <sys:String x:Key="Field.UnitName">Unit name</sys:String>
+    <sys:String x:Key="Field.Factor">Factor</sys:String>
+    <sys:String x:Key="Field.Text">Text</sys:String>
+    <sys:String x:Key="Field.Meaning">Meaning</sys:String>
+    <sys:String x:Key="Field.Identifier">Identifier</sys:String>
+    <sys:String x:Key="Field.OrderId">Order identifier</sys:String>
+    <sys:String x:Key="Field.PatientId">Patient identifier</sys:String>
+    <sys:String x:Key="Field.TestCodeValue">Test code</sys:String>
+    <sys:String x:Key="Field.CultureId">Culture identifier</sys:String>
+    <sys:String x:Key="Field.Organism">Organism</sys:String>
+    <sys:String x:Key="Field.AntibioticSymbol">Antibiotic symbol</sys:String>
+    <sys:String x:Key="Field.Reading">Reading</sys:String>
+    <sys:String x:Key="Field.FarmName">Farm name</sys:String>
+    <sys:String x:Key="Field.FarmId">Farm identifier</sys:String>
+    <sys:String x:Key="Field.IssuedAmount">Issued amount</sys:String>
+    <sys:String x:Key="Field.ReceivedAmount">Received amount</sys:String>
+    <sys:String x:Key="Field.Amount">Amount</sys:String>
+    <sys:String x:Key="Field.PaymentType">Payment type</sys:String>
+    <sys:String x:Key="Field.ReferringPartyCode">Referring party code</sys:String>
+    <sys:String x:Key="Field.TreatingPhysicianCode">Treating physician code</sys:String>
+    <sys:String x:Key="Field.PriceListName">Price list name</sys:String>
+    <sys:String x:Key="Field.PhysicianCode">Physician code</sys:String>
+    <sys:String x:Key="Field.PhysicianName">Physician name</sys:String>
+    <sys:String x:Key="Field.Phone">Phone</sys:String>
+    <sys:String x:Key="Field.ResultValue">Result value</sys:String>
+    <sys:String x:Key="Field.ResultUnit">Result unit</sys:String>
+    <sys:String x:Key="Field.Comment">Comment</sys:String>
+    <sys:String x:Key="Field.AdditionalResult">Additional result</sys:String>
+    <sys:String x:Key="Field.Slot">Slot</sys:String>
+    <sys:String x:Key="Field.DestinationLaboratory">Destination laboratory</sys:String>
+    <sys:String x:Key="Field.OutPrice">External price</sys:String>
+    <sys:String x:Key="Field.OutPriceBeforeDiscount">External price before discount</sys:String>
+    <sys:String x:Key="Field.Hemoglobin">Haemoglobin</sys:String>
+    <sys:String x:Key="Field.AgeYears">Age in years</sys:String>
+    <sys:String x:Key="Field.PatientProthrombinTime">Patient prothrombin time</sys:String>
+    <sys:String x:Key="Field.ControlProthrombinTime">Control prothrombin time</sys:String>
+    <sys:String x:Key="Field.NormalProthrombinTime">Normal prothrombin time</sys:String>
+    <sys:String x:Key="Field.ControlIndex">Control index</sys:String>
+    <sys:String x:Key="Field.ControlTime">Control time</sys:String>
+    <sys:String x:Key="Field.PicturePath">Picture file</sys:String>
+    <sys:String x:Key="Field.PageNumber">Page</sys:String>
+    <sys:String x:Key="Field.PageSize">Page size</sys:String>
+
+</ResourceDictionary>

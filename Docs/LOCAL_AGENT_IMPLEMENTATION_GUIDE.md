@@ -1,320 +1,467 @@
-# Local Agent Implementation Guide — Phase 4
+# Local Agent Implementation Guide — Phase 5
 
-**Project:** Ref Lab — Medical Laboratory Management System
-**Phase:** 4 — Branch removal (Part 1) and the persistence layer (Part 2)
-**Edition:** Phase 4 — supersedes the Phase 3 edition
-**Status:** complete — 0 build errors, 0 build warnings, 535 tests passing
+**Document ID:** `RL-P5-LOCAL-GUIDE-001`
+**Applies to:** `RefLab-Phase5-Presentation.zip`
+**Project root:** `C:\Users\LAP LINK\source\repos\Ref Lab`
+**Issued:** 2026-11-10
+**Edition:** Phase 5 — supersedes the Phase 4 edition
 
-> This guide is written for the agent or developer who applies the Phase 4
+> This guide is written for the agent or developer who applies the Phase 5
 > delivery on the owner machine. It is deliberately explicit about what to
-> delete, what to run, and what the result must look like, so that the
+> delete, what to run and what the result must look like, so that the
 > delivery can be applied without re-reading the implementation.
 
 ---
 
-## 0. What Phase 4 contains
+## ⚠ 0. Read this first — the `System.Windows.Application` collision
 
-Phase 4 has two parts.
+Inside `src/RefLab.Presentation`, the **namespace** `RefLab.Application` shadows the
+**WPF type** `System.Windows.Application`. Any unqualified reference to
+`Application` in that project resolves to the namespace and fails to compile
+with **CS0118**, and `TreatWarningsAsErrors=true` turns that into a build
+break.
 
-**Part 1 — the branch removal.** The laboratory is a single-site installation.
-Every trace of the legacy multi-branch product is removed from the Domain
-layer and from the Application layer, and the 13-character order identifier is
-re-laid-out so that it no longer carries a branch digit.
+**The rule:** whenever a file of the presentation layer needs the WPF type, it
+must be written in full:
 
-**Part 2 — the persistence layer.** The Infrastructure layer gains an Entity
-Framework Core context that implements `IAppDbContext` and `IUnitOfWork`, the
-fluent configuration of every table, the generated SQL Server migration, and
-the integration tests that prove the adapter works against a real database.
+```csharp
+public partial class App : System.Windows.Application
+```
 
----
+The delivered `App.xaml.cs` already does this. **Keep it that way in every new
+file.** This is the single most likely way to lose an hour on the first build.
 
-## 1. Part 1 — the files to delete
-
-These files are removed in their entirety. Do not merge them, do not keep a
-stub, and do not leave a partially-used version behind.
-
-| # | File | Reason |
-|---|---|---|
-| 1 | `src/RefLab.Domain/Identity/Branch.cs` | The branch entity itself. |
-| 2 | `src/RefLab.Application/Features/Branches/CreateBranch.cs` | The branch creation use case. |
-| 3 | `src/RefLab.Application/Features/Branches/GetBranches.cs` | The branch listing use case. |
-| 4 | `src/RefLab.Application/Features/Branches/Dtos.cs` | The branch DTOs. |
-| 5 | `src/RefLab.Application/Validation/BranchValidators.cs` | The branch validators. |
-| 6 | `src/RefLab.Application/Features/Billing/RunMultiBranchStockTake.cs` | The multi-branch stock-take use case. A single-site laboratory has one stock-take, already covered by `RunPeriodStockTake` and `RunStockTakeByPhysicianOrParty`. |
-| 7 | `tests/RefLab.Application.Tests/Features/Branches/BranchHandlerTests.cs` | The tests of the deleted use cases. |
-| 8 | `tests/RefLab.Domain.Tests/Identity/BranchTests.cs` | The tests of the deleted entity. |
-
-The two folders `src/RefLab.Application/Features/Branches/` and
-`tests/RefLab.Application.Tests/Features/Branches/` become empty and are
-removed with them.
-
-> If you are applying this delivery to a tree that still holds the Phase 3
-> code, deleting the eight files above is enough to remove the branch
-> capability. Everything else is an edit, listed in section 2.
+> ⚠ **The second build trap.** `RefLab.Application` also appears inside
+> `RefLab.Presentation` as the *namespace of the application layer*. Always
+> write `RefLab.Application.Abstractions.ICurrentUser` in full; never write
+> `Application.ICurrentUser`.
 
 ---
 
-## 2. Part 1 — the files to edit
+## 1. What Phase 5 contains
 
-### 2.1 The Domain layer
+Phase 5 adds the WPF presentation layer: the composition root, the shell, the
+fourteen screens, the two in-place panels, the navigation, the localisation
+resources and the presentation boundary guards.
 
-| File | Change |
+| | |
 |---|---|
-| `src/RefLab.Domain/ValueObjects/OrderIdentifier.cs` | **Rewritten.** The layout is now 1–2 leading segment · 3–4 person key · 5–9 middle segment · 10–12 display code · 13 trailing character. `BranchCode` is gone; `FromSegments` takes five arguments instead of six. |
-| `src/RefLab.Domain/Rules/IdentifierAllocator.cs` | **Rewritten.** `Allocate` no longer takes a `Branch`; the branch digit argument is dropped. |
-| `src/RefLab.Domain/Identity/Operator.cs` | The `BranchId` property and the `AssignToBranch` method are removed. |
-| `src/RefLab.Domain/Identity/Permission.cs` | `Permission.ManageBranches` is removed. The remaining permissions are renumbered 1–15 without a gap. |
-| `src/RefLab.Domain/Patients/PatientOrder.cs` | The `BranchId` property and the `branchId` argument of `Create` are removed, together with the branch range validation. |
-| `src/RefLab.Domain/Configuration/LaboratorySettings.cs` | `IsBranchScoped` and `SetBranchScoped` are removed. |
-| `src/RefLab.Domain/ClinicalKnowledge/TestDefinition.cs` | The `Branch` string property is removed. |
+| Screens | **14** windows and **2** in-place panels |
+| Use cases reached | **70 of 70** |
+| Files added | 77 files under `src/RefLab.Presentation`, plus the branding file, the boundary test and two documents |
+| Files replaced | 7 |
+| Files deleted | 6 |
+| Project files changed | **None** — `RefLab.sln`, `Directory.Build.props`, `global.json`, `.gitignore` and `scripts/generate_use_case_inventory.py` are untouched, and `RefLab.Presentation.csproj` is **unchanged** |
 
-### 2.2 The Application layer
-
-| File | Change |
-|---|---|
-| `src/RefLab.Application/Abstractions/ICurrentUser.cs` | `BranchId` is removed from the interface. |
-| `src/RefLab.Application/Features/Patients/AllocateOrderIdentifier.cs` | **Rewritten.** The query no longer reads the branch of the signed-in operator and the middle segment is five characters long. |
-| `src/RefLab.Application/Features/Patients/RegisterPatient.cs` | The branch identifier is no longer read from `ICurrentUser` and no longer passed to `PatientOrder.Create`. |
-| `src/RefLab.Application/Features/Patients/Dtos.cs` | `PatientOrderDto.BranchId` and `OrderIdentifierDto.BranchCode` are removed. |
-| `src/RefLab.Application/Features/Identity/CreateOperator.cs` | The `BranchId` argument and the `AssignToBranch` call are removed. |
-| `src/RefLab.Application/Features/Identity/UpdateOperator.cs` | The `BranchId` argument and the `AssignToBranch` call are removed. |
-| `src/RefLab.Application/Features/Identity/Dtos.cs` | `OperatorDto.BranchId` is removed. |
-| `src/RefLab.Application/Features/Configuration/ConfigureLaboratorySettings.cs` | The `IsBranchScoped` argument and the `SetBranchScoped` call are removed. |
-| `src/RefLab.Application/Features/Configuration/Dtos.cs` | `LaboratorySettingsDto.IsBranchScoped` is removed. |
-| `src/RefLab.Application/Features/Billing/Dtos.cs` | `StockTakeDto.BranchId` is removed. |
-| `src/RefLab.Application/Validation/BranchValidators.cs` | Deleted — see section 1. |
-| `src/RefLab.Application/Validation/BillingValidators.cs` | `RunMultiBranchStockTakeValidator` is removed. |
-| `src/RefLab.Application/Validation/IdentityValidators.cs` | The two branch range rules are removed. |
-| `src/RefLab.Application/Validation/PatientValidators.cs` | The middle segment is now five characters long. |
-
-### 2.3 The Infrastructure layer
-
-| File | Change |
-|---|---|
-| `src/RefLab.Infrastructure/Session/SessionCurrentUser.cs` | The branch field is removed and the session no longer carries a branch. |
-
-### 2.4 The test projects
-
-| File | Change |
-|---|---|
-| `tests/RefLab.Application.Tests/Fakes/TestData.cs` | `CreateOperator` and `CreateOrder` lose the branch argument; `CreateBranch` is deleted. |
-| `tests/RefLab.Application.Tests/Fakes/Fakes.cs` | The fake current user loses `BranchId`. |
-| `tests/RefLab.Application.Tests/Features/Branches/BranchHandlerTests.cs` | Deleted — see section 1. |
-| `tests/RefLab.Application.Tests/Features/Billing/AccountingTests.cs` | The two multi-branch stock-take tests are removed. |
-| `tests/RefLab.Application.Tests/Features/Configuration/SettingsTests.cs` | The `IsBranchScoped` argument and assertion are removed. |
-| `tests/RefLab.Application.Tests/Features/Identity/IdentityHandlerTests.cs` | The branch arguments and assertions are removed. |
-| `tests/RefLab.Application.Tests/Features/Identity/OperatorManagementTests.cs` | The branch argument, the branch assertion and the branch validation test are removed. |
-| `tests/RefLab.Application.Tests/Features/Patients/PatientHandlerTests.cs` | The branch assertion is removed. |
-| `tests/RefLab.Application.Tests/Features/Patients/PatientRecordsTests.cs` | The identifier tests are rewritten for the branchless layout. |
-| `tests/RefLab.Domain.Tests/Identity/BranchTests.cs` | Deleted — see section 1. |
-| `tests/RefLab.Domain.Tests/Identity/OperatorTests.cs` | The two branch tests are removed. |
-| `tests/RefLab.Domain.Tests/Identity/PermissionTests.cs` | The expected permission count becomes fifteen. |
-| `tests/RefLab.Domain.Tests/Patients/PatientOrderTests.cs` | The branch argument, the branch assertion and the branch validation test are removed. |
-| `tests/RefLab.Domain.Tests/Configuration/LaboratorySettingsTests.cs` | The branch digit test is removed. |
-| `tests/RefLab.Domain.Tests/Rules/IdentifierAllocatorTests.cs` | **Rewritten** for the branchless layout. |
-| `tests/RefLab.Domain.Tests/ValueObjects/OrderIdentifierTests.cs` | **Rewritten** for the branchless layout. |
-| `tests/RefLab.Application.Tests/DependencyInjectionTests.cs` | The expected handler and validator count becomes seventy. |
-| `tests/RefLab.Infrastructure.Tests/InfrastructureServiceTests.cs` | The branch assignment and the branch assertion are removed. |
+**The application layer, the domain layer and the migrations are not modified**,
+apart from the one scoped Infrastructure change of §4.2.
 
 ---
 
-## 3. The new order identifier
+## 2. Extraction procedure
 
-The identifier stays thirteen characters long. Two positions were established
-by the legacy analysis and are kept exactly where they were; one position
-became free and is absorbed by the adjacent segment whose meaning was never
-established.
+1. **Verify the archive before you extract it.** The SHA-256 of the archive is
+   published in the delivery report. Compare it with the file you received:
 
-| Position | Segment | Status |
-|---|---|---|
-| 1–2 | Leading segment | Semantics never established. |
-| 3–4 | **Person key** | Established by the legacy analysis (`MID(patientid,3,2)`). |
-| 5–9 | Middle segment | Semantics never established. **Absorbs the freed position.** |
-| 10–12 | **Display code** | Established by the legacy analysis (`MID(patientid,10,3)`). |
-| 13 | Trailing character | Semantics never established. |
+   ```powershell
+   Get-FileHash -Algorithm SHA256 .\RefLab-Phase5-Presentation.zip
+   ```
 
-The legacy branch digit was written into position 9. In the legacy system the
-middle segment ran from position 5 to position 8; it now runs from position 5
-to position 9.
+2. **Extract to a temporary folder, not over the working tree.** This lets you
+   compare and lets you roll back:
 
-**This layout is a hard data contract.** Reformatting it breaks the patient
-identity, the display code and the turnover reporting at the same time. Do not
-change it without owner approval.
+   ```powershell
+   $stage = "$env:TEMP\RefLab-Phase5"
+   Remove-Item -Recurse -Force $stage -ErrorAction SilentlyContinue
+   Expand-Archive -Path .\RefLab-Phase5-Presentation.zip -DestinationPath $stage
+   ```
 
----
+3. **Check the layout.** The archive contains a single root folder:
 
-## 4. Part 2 — the new files
+   ```
+   RefLab-Phase5-Presentation\
+       src\RefLab.Presentation\...
+       src\RefLab.Infrastructure\Reports\...
+       tests\RefLab.Application.Tests\Architecture\...
+       Docs\...
+       tools\verify_manifest.py
+   ```
 
-| Path | Content |
-|---|---|
-| `src/RefLab.Infrastructure/Persistence/RefLabDbContext.cs` | The context. Implements `IAppDbContext` and `IUnitOfWork` explicitly, so the Application layer sees only `IQueryable<T>`. |
-| `src/RefLab.Infrastructure/Persistence/RefLabDbContextFactory.cs` | The design-time factory the `dotnet ef` tools call. |
-| `src/RefLab.Infrastructure/Persistence/DatabaseInitializer.cs` | Applies the pending migrations. |
-| `src/RefLab.Infrastructure/Persistence/Configurations/*.cs` | One fluent configuration per aggregate, plus the shared value-object mappings. |
-| `src/RefLab.Infrastructure/Persistence/Converters/PersistenceConverters.cs` | The `PatientId`, permission, printer, susceptibility and JSON collection conversions, with the comparers that make the change tracker see a replaced collection. |
-| `src/RefLab.Infrastructure/Persistence/Migrations/*_InitialCreate.cs` | The generated SQL Server migration. |
-| `src/RefLab.Infrastructure/Persistence/Migrations/*_InitialCreate.Designer.cs` | The model snapshot of that migration. |
-| `src/RefLab.Infrastructure/Persistence/Migrations/RefLabDbContextModelSnapshot.cs` | The current model snapshot. |
-| `tests/RefLab.Infrastructure.Tests/Persistence/SqliteTestDatabase.cs` | The in-memory SQLite fixture. |
-| `tests/RefLab.Infrastructure.Tests/Persistence/RefLabDbContextTests.cs` | The schema tests, including the guard against a branch table or a branch column reappearing. |
-| `tests/RefLab.Infrastructure.Tests/Persistence/PersistenceIntegrationTests.cs` | The round-trip tests over a real database. |
-| `tests/RefLab.Infrastructure.Tests/Persistence/MigrationTests.cs` | The migration tests. |
-| `tests/RefLab.Infrastructure.Tests/Persistence/PersistenceRegistrationTests.cs` | The container registration tests. |
+   > ⚠ **Keep the capital `D` in `Docs`.** The repository folder is `Docs`,
+   > not `docs`. The Phase 4 manifest wrote `docs` in lower case, and on a
+   > case-sensitive file system that creates a second folder instead of
+   > overwriting the existing documents. The delivered paths use the real
+   > casing throughout.
 
-### 4.1 Files also edited in Part 2
+4. **Verify every file against the manifest** before you integrate anything:
 
-| Path | Change |
-|---|---|
-| `src/RefLab.Infrastructure/RefLab.Infrastructure.csproj` | `Microsoft.EntityFrameworkCore.Design` 8.0.33 is added, with `PrivateAssets=all`. |
-| `src/RefLab.Infrastructure/InfrastructureServiceCollectionExtensions.cs` | `AddPersistenceLayer` is added — one overload for a SQL Server connection string, one for a caller-chosen provider. |
-| `tests/RefLab.Infrastructure.Tests/RefLab.Infrastructure.Tests.csproj` | `Microsoft.EntityFrameworkCore.Sqlite` 8.0.33 is added, for the integration tests. |
-| `src/RefLab.Domain/ValueObjects/CriticalInterval.cs` | A private parameterless constructor is added, because the persistence layer fills the properties in. |
-| `src/RefLab.Domain/ValueObjects/ReferenceInterval.cs` | The same, plus the `CriticalInterval` property gains a private setter. |
-| `src/RefLab.Domain/Identity/Operator.cs` | `Permissions` becomes a writable property that **replaces** the collection instance on `Grant` and `Revoke`. |
-| `src/RefLab.Domain/Configuration/LaboratorySettings.cs` | `Printers` becomes a writable property that **replaces** the map instance on `BindPrinter` and `UnbindPrinter`. |
-| `src/RefLab.Domain/Microbiology/CultureResult.cs` | `Susceptibilities` becomes a writable property that **replaces** the list instance on add and remove. |
-| `src/RefLab.Domain/Patients/PatientHistory.cs` | `Slots` becomes a writable property that **replaces** the array instance on `SetSlot`. |
+   ```powershell
+   python "$stage\RefLab-Phase5-Presentation\tools\verify_manifest.py" `
+       --root "$stage\RefLab-Phase5-Presentation" `
+       --manifest "$stage\RefLab-Phase5-Presentation\Docs\RL-P5-MAN-001-Phase5-Delivery-Manifest.md"
+   ```
 
-> **Why the replacement matters.** The persistence layer maps these four
-> collections onto single columns and detects a change by comparing the stored
-> value with the current one. Mutating the same instance in place would leave
-> the comparison blind, and the change would never reach the database.
+   The tool recomputes the SHA-256 of every file and exits with a non-zero
+   code on the first mismatch.
 
 ---
 
-## 5. The commands to run
+## 3. Integration procedure
 
-### 5.1 Restore, build and test
+### 3.1 Back up first
 
 ```powershell
-cd <repository root>
+cd "C:\Users\LAP LINK\source\repos\Ref Lab"
+Copy-Item -Recurse src\RefLab.Presentation "$env:TEMP\RefLab.Presentation.backup"
+Copy-Item src\RefLab.Infrastructure\Reports\QuestPdfExporter.cs "$env:TEMP\QuestPdfExporter.cs.backup"
+Copy-Item Docs\ui-labels-verified.md "$env:TEMP\ui-labels-verified.md.backup"
+Copy-Item Docs\LOCAL_AGENT_IMPLEMENTATION_GUIDE.md "$env:TEMP\LOCAL_AGENT_IMPLEMENTATION_GUIDE.md.backup"
+```
 
+### 3.2 Copy the delivery over the project
+
+Copy the whole content of the staged `RefLab-Phase5-Presentation` folder over
+the project root, preserving the relative paths:
+
+```powershell
+$source = "$stage\RefLab-Phase5-Presentation\*"
+$target = "C:\Users\LAP LINK\source\repos\Ref Lab"
+Copy-Item -Path $source -Destination $target -Recurse -Force
+```
+
+This overwrites the replaced files, adds the new files and replaces the two
+documents. It does **not** touch anything else.
+
+### 3.3 Delete the six obsolete files
+
+These files belong to the SMS and NATIGH capability that the owner removed
+permanently. An archive cannot delete a file, so they are removed here.
+
+| # | Path | Why it is removed |
+|---:|---|---|
+| # | Path | Why it is removed |
+|---:|---|---|
+| 1 | `src/RefLab.Domain/Enums/DeliveryChannel.cs` | The SMS and NATIGH delivery channels — a permanently removed capability. |
+| 2 | `src/RefLab.Domain/Auditing/DeliveryRecord.cs` | The digital-delivery audit entity of a permanently removed capability. |
+| 3 | `src/RefLab.Application/Abstractions/ISmsGateway.cs` | The SMS port. No implementation, no registration, no consumer. |
+| 4 | `src/RefLab.Application/Abstractions/INatighGateway.cs` | The NATIGH.COM port. No implementation, no registration, no consumer. |
+| 5 | `src/RefLab.Application/Common/GatewayModels.cs` | The four SMS and NATIGH result models, consumed only by the two ports above. |
+| 6 | `tests/RefLab.Domain.Tests/Auditing/DeliveryRecordTests.cs` | Three tests of the removed delivery entity. |
+
+Delete them exactly:
+
+```powershell
+cd "C:\Users\LAP LINK\source\repos\Ref Lab"
+Remove-Item src\RefLab.Domain\Enums\DeliveryChannel.cs
+Remove-Item src\RefLab.Domain\Auditing\DeliveryRecord.cs
+Remove-Item src\RefLab.Application\Abstractions\ISmsGateway.cs
+Remove-Item src\RefLab.Application\Abstractions\INatighGateway.cs
+Remove-Item src\RefLab.Application\Common\GatewayModels.cs
+Remove-Item tests\RefLab.Domain.Tests\Auditing\DeliveryRecordTests.cs
+```
+
+**Why they are removed.** The Phase 4 handoff lists all six as deleted, but
+they were still present in the pinned commit
+`366aeb48a146efe02c05731773630cada143bda6`. They are the last remnants of the
+removed capability, and their presence is why the test suites differed by
+three tests between the build agent and the owner's machine. The removal is
+**closed**: nothing outside the six files refers to any of them, so no other
+file needs to change.
+
+### 3.4 Check that nothing else changed
+
+```powershell
+git status --short
+```
+
+The only paths that may appear are the ones listed in §4. If a path outside
+that list appears, restore it from the backup.
+
+---
+
+## 4. The file lists
+
+### 4.1 Files added
+
+| # | Path | Purpose |
+|---:|---|---|
+| 1 | `Docs/RL-P5-COR-001-Documentation-Corrigendum.md` | The correction of the two erroneous command and query figures in RL-HANDOFF-003. |
+| 2 | `src/RefLab.Infrastructure/Reports/ReportBranding.cs` | The Arabic and the English branding of every printed document, and the registration of an Arabic-capable font. |
+| 3 | `src/RefLab.Presentation/Bootstrap/CompositionRoot.cs` | The composition root. Registers the Application, Infrastructure and Presentation layers and shows the main window. |
+| 4 | `src/RefLab.Presentation/Bootstrap/PresentationServiceCollectionExtensions.cs` | The registration of the presentation layer: navigation, the request executor, the error presenter, the view models and the views. |
+| 5 | `src/RefLab.Presentation/Common/ErrorPresenter.cs` | The WPF implementation of the error presenter. |
+| 6 | `src/RefLab.Presentation/Common/IErrorPresenter.cs` | The abstraction that keeps a view model free of WPF dialogs. |
+| 7 | `src/RefLab.Presentation/Common/LabCurrency.cs` | The single declaration of the laboratory currency, EGP. |
+| 8 | `src/RefLab.Presentation/Common/OperatorSession.cs` | Establishes and clears the session of the signed-in operator. |
+| 9 | `src/RefLab.Presentation/Common/RequestExecutor.cs` | The only channel to the Application layer, and the translator of the Application exception hierarchy. |
+| 10 | `src/RefLab.Presentation/Common/UiExceptions.cs` | The two presentation-level exception types. |
+| 11 | `src/RefLab.Presentation/Common/ViewModelBase.cs` | The base class of every view model: the busy flag, the error message and the status message. |
+| 12 | `src/RefLab.Presentation/Navigation/INavigationAware.cs` | The contract a view model implements to receive a navigation parameter. |
+| 13 | `src/RefLab.Presentation/Navigation/INavigationService.cs` | The navigation abstraction of the shell. |
+| 14 | `src/RefLab.Presentation/Navigation/IViewLocator.cs` | The abstraction that maps a screen key onto a view. |
+| 15 | `src/RefLab.Presentation/Navigation/NavigationService.cs` | The navigation service, with a short history so that the shell can go back. |
+| 16 | `src/RefLab.Presentation/Navigation/ScreenKeys.cs` | The stable identifiers of the fourteen screens. |
+| 17 | `src/RefLab.Presentation/Navigation/ScreenRegistry.cs` | The navigation map of the application. |
+| 18 | `src/RefLab.Presentation/Navigation/ViewLocator.cs` | The view locator, which resolves a view from the container. |
+| 19 | `src/RefLab.Presentation/Resources/Converters/LabConverters.cs` | The value converters of the presentation layer. |
+| 20 | `src/RefLab.Presentation/Resources/Strings.ar.xaml` | The Arabic labels of the patient panel and of the Arabic action row. Every string is authorised by Docs/ui-labels-verified.md. |
+| 21 | `src/RefLab.Presentation/Resources/Strings.xaml` | The English labels of the whole application. |
+| 22 | `src/RefLab.Presentation/Resources/Themes/Dark.xaml` | The dark palette. |
+| 23 | `src/RefLab.Presentation/Resources/Themes/Light.xaml` | The light palette and the shared styles. |
+| 24 | `src/RefLab.Presentation/ViewModels/AccountingViewModel.cs` | The view model of the Accounting screen. |
+| 25 | `src/RefLab.Presentation/ViewModels/AuditViewModel.cs` | The view model of the Audit screen. |
+| 26 | `src/RefLab.Presentation/ViewModels/CatalogueAdministrationViewModel.cs` | The view model of the CatalogueAdministration screen. |
+| 27 | `src/RefLab.Presentation/ViewModels/CataloguePanelViewModel.cs` | The view model of the CataloguePanel screen. |
+| 28 | `src/RefLab.Presentation/ViewModels/EnumSource.cs` |  |
+| 29 | `src/RefLab.Presentation/ViewModels/LaboratorySettingsViewModel.cs` | The view model of the LaboratorySettings screen. |
+| 30 | `src/RefLab.Presentation/ViewModels/MicrobiologyViewModel.cs` | The view model of the Microbiology screen. |
+| 31 | `src/RefLab.Presentation/ViewModels/OperatorAdministrationViewModel.cs` | The view model of the OperatorAdministration screen. |
+| 32 | `src/RefLab.Presentation/ViewModels/Panels/DerivationPanelViewModel.cs` | The view model of the DerivationPanel screen. |
+| 33 | `src/RefLab.Presentation/ViewModels/Panels/MethodSheetPanelViewModel.cs` | The view model of the MethodSheetPanel screen. |
+| 34 | `src/RefLab.Presentation/ViewModels/PartiesPricingViewModel.cs` | The view model of the PartiesPricing screen. |
+| 35 | `src/RefLab.Presentation/ViewModels/PatientPanelViewModel.cs` | The view model of the PatientPanel screen. |
+| 36 | `src/RefLab.Presentation/ViewModels/PatientWorkViewModel.cs` | The view model of the PatientWork screen. |
+| 37 | `src/RefLab.Presentation/ViewModels/ReportSetupViewModel.cs` | The view model of the ReportSetup screen. |
+| 38 | `src/RefLab.Presentation/ViewModels/SendOutQueueViewModel.cs` | The view model of the SendOutQueue screen. |
+| 39 | `src/RefLab.Presentation/ViewModels/ShellViewModel.cs` | The view model of the Shell screen. |
+| 40 | `src/RefLab.Presentation/ViewModels/SignInViewModel.cs` | The view model of the SignIn screen. |
+| 41 | `src/RefLab.Presentation/ViewModels/StatisticsViewModel.cs` | The view model of the Statistics screen. |
+| 42 | `src/RefLab.Presentation/ViewModels/TestCatalogueViewModel.cs` | The view model of the TestCatalogue screen. |
+| 43 | `src/RefLab.Presentation/Views/AccountingView.xaml` | The markup of AccountingView. |
+| 44 | `src/RefLab.Presentation/Views/AccountingView.xaml.cs` | The code-behind of AccountingView.. |
+| 45 | `src/RefLab.Presentation/Views/AuditView.xaml` | The markup of AuditView. |
+| 46 | `src/RefLab.Presentation/Views/AuditView.xaml.cs` | The code-behind of AuditView.. |
+| 47 | `src/RefLab.Presentation/Views/CatalogueAdministrationView.xaml` | The markup of CatalogueAdministrationView. |
+| 48 | `src/RefLab.Presentation/Views/CatalogueAdministrationView.xaml.cs` | The code-behind of CatalogueAdministrationView.. |
+| 49 | `src/RefLab.Presentation/Views/Controls/CataloguePanelControl.xaml` | The markup of CataloguePanelControl. |
+| 50 | `src/RefLab.Presentation/Views/Controls/CataloguePanelControl.xaml.cs` | The code-behind of CataloguePanelControl.. |
+| 51 | `src/RefLab.Presentation/Views/Controls/PatientPanelControl.xaml` | The markup of PatientPanelControl. |
+| 52 | `src/RefLab.Presentation/Views/Controls/PatientPanelControl.xaml.cs` | The code-behind of PatientPanelControl.. |
+| 53 | `src/RefLab.Presentation/Views/Controls/ResultsGridControl.xaml` | The markup of ResultsGridControl. |
+| 54 | `src/RefLab.Presentation/Views/Controls/ResultsGridControl.xaml.cs` | The code-behind of ResultsGridControl.. |
+| 55 | `src/RefLab.Presentation/Views/LaboratorySettingsView.xaml` | The markup of LaboratorySettingsView. |
+| 56 | `src/RefLab.Presentation/Views/LaboratorySettingsView.xaml.cs` | The code-behind of LaboratorySettingsView.. |
+| 57 | `src/RefLab.Presentation/Views/MicrobiologyView.xaml` | The markup of MicrobiologyView. |
+| 58 | `src/RefLab.Presentation/Views/MicrobiologyView.xaml.cs` | The code-behind of MicrobiologyView.. |
+| 59 | `src/RefLab.Presentation/Views/OperatorAdministrationView.xaml` | The markup of OperatorAdministrationView. |
+| 60 | `src/RefLab.Presentation/Views/OperatorAdministrationView.xaml.cs` | The code-behind of OperatorAdministrationView.. |
+| 61 | `src/RefLab.Presentation/Views/Panels/DerivationPanelView.xaml` | The markup of DerivationPanelView. |
+| 62 | `src/RefLab.Presentation/Views/Panels/DerivationPanelView.xaml.cs` | The code-behind of DerivationPanelView.. |
+| 63 | `src/RefLab.Presentation/Views/Panels/MethodSheetPanelView.xaml` | The markup of MethodSheetPanelView. |
+| 64 | `src/RefLab.Presentation/Views/Panels/MethodSheetPanelView.xaml.cs` | The code-behind of MethodSheetPanelView.. |
+| 65 | `src/RefLab.Presentation/Views/PartiesPricingView.xaml` | The markup of PartiesPricingView. |
+| 66 | `src/RefLab.Presentation/Views/PartiesPricingView.xaml.cs` | The code-behind of PartiesPricingView.. |
+| 67 | `src/RefLab.Presentation/Views/PatientWorkView.xaml` | The markup of PatientWorkView. |
+| 68 | `src/RefLab.Presentation/Views/PatientWorkView.xaml.cs` | The code-behind of PatientWorkView.. |
+| 69 | `src/RefLab.Presentation/Views/ReportSetupView.xaml` | The markup of ReportSetupView. |
+| 70 | `src/RefLab.Presentation/Views/ReportSetupView.xaml.cs` | The code-behind of ReportSetupView.. |
+| 71 | `src/RefLab.Presentation/Views/SendOutQueueView.xaml` | The markup of SendOutQueueView. |
+| 72 | `src/RefLab.Presentation/Views/SendOutQueueView.xaml.cs` | The code-behind of SendOutQueueView.. |
+| 73 | `src/RefLab.Presentation/Views/SignInView.xaml` | The markup of SignInView. |
+| 74 | `src/RefLab.Presentation/Views/SignInView.xaml.cs` | The code-behind of SignInView.. |
+| 75 | `src/RefLab.Presentation/Views/StatisticsView.xaml` | The markup of StatisticsView. |
+| 76 | `src/RefLab.Presentation/Views/StatisticsView.xaml.cs` | The code-behind of StatisticsView.. |
+| 77 | `src/RefLab.Presentation/Views/TestCatalogueView.xaml` | The markup of TestCatalogueView. |
+| 78 | `src/RefLab.Presentation/Views/TestCatalogueView.xaml.cs` | The code-behind of TestCatalogueView.. |
+| 79 | `tests/RefLab.Application.Tests/Architecture/PresentationLayerBoundaryTests.cs` | The presentation boundary guards B1 to B9 and the Phase 5 architecture contract tests. |
+| 80 | `tools/verify_manifest.py` | Recomputes the SHA-256 of every file of the delivery over the extracted tree. |
+
+`Docs/RL-P5-MAN-001-Phase5-Delivery-Manifest.md` is the manifest itself. It
+carries the SHA-256 of every other file of the delivery; it cannot carry its
+own hash, and its own SHA-256 is published in the delivery report.
+
+### 4.2 Files replaced
+
+| # | Path | What changed |
+|---:|---|---|
+| 1 | `src/RefLab.Presentation/App.xaml` | The startup URI is removed — the main window is resolved from the container by the composition root — and the resource dictionaries are merged. |
+| 2 | `src/RefLab.Presentation/App.xaml.cs` | The application now builds the generic host, shows the main window from it and disposes the host on exit. The `System.Windows.Application` form is unchanged. |
+| 3 | `src/RefLab.Presentation/MainWindow.xaml` | The Phase 1 placeholder is replaced by the shell: the module toolbar, the operator identity strip, the status strip and the navigation region. |
+| 4 | `src/RefLab.Presentation/MainWindow.xaml.cs` | The window receives the shell view model from the container. |
+| 5 | `src/RefLab.Infrastructure/Reports/QuestPdfExporter.cs` | One wiring call is added: the branding block is applied to every document. **This is the whole of the Infrastructure change.** |
+| 6 | `Docs/ui-labels-verified.md` | Section 9 is added: the four owner-approved Arabic strings from the V2 corpus, each with its provenance. |
+| 7 | `Docs/LOCAL_AGENT_IMPLEMENTATION_GUIDE.md` | This guide replaces the Phase 4 edition. |
+
+**Unchanged on purpose:** `src/RefLab.Presentation/RefLab.Presentation.csproj`.
+The presentation project already referenced CommunityToolkit.Mvvm 8.4.2 and
+Microsoft.Extensions.Hosting 8.0.1, and already referenced the Application,
+Domain and Infrastructure projects. No package reference was added, so no
+dependency surface changed.
+
+### 4.3 Files deleted
+
+| # | Path | Why it is removed |
+|---:|---|---|
+| # | Path | Why it is removed |
+|---:|---|---|
+| 1 | `src/RefLab.Domain/Enums/DeliveryChannel.cs` | The SMS and NATIGH delivery channels — a permanently removed capability. |
+| 2 | `src/RefLab.Domain/Auditing/DeliveryRecord.cs` | The digital-delivery audit entity of a permanently removed capability. |
+| 3 | `src/RefLab.Application/Abstractions/ISmsGateway.cs` | The SMS port. No implementation, no registration, no consumer. |
+| 4 | `src/RefLab.Application/Abstractions/INatighGateway.cs` | The NATIGH.COM port. No implementation, no registration, no consumer. |
+| 5 | `src/RefLab.Application/Common/GatewayModels.cs` | The four SMS and NATIGH result models, consumed only by the two ports above. |
+| 6 | `tests/RefLab.Domain.Tests/Auditing/DeliveryRecordTests.cs` | Three tests of the removed delivery entity. |
+
+---
+
+## 5. Build steps
+
+Open `RefLab.sln` in Visual Studio 2022, restore and build. From the command
+line:
+
+```powershell
+cd "C:\Users\LAP LINK\source\repos\Ref Lab"
 dotnet restore RefLab.sln
 dotnet build   RefLab.sln -c Debug
 dotnet build   RefLab.sln -c Release
-dotnet test    RefLab.sln -c Release
 ```
 
-**Expected result:** 0 errors, 0 warnings, **535 tests passing**
-(270 domain, 204 application, 61 infrastructure).
+**Expected result: 0 errors and 0 warnings in both configurations.**
 
-### 5.2 The migration commands
+`TreatWarningsAsErrors=true` is in force for every project, so any warning
+fails the build. The two warnings that a Phase 5 delivery most easily provokes
+are:
 
-The `dotnet ef` tools need the design-time factory in
-`src/RefLab.Infrastructure/Persistence/RefLabDbContextFactory.cs`. Install the
-tool once:
-
-```powershell
-dotnet tool install --global dotnet-ef --version 8.*
-```
-
-Refresh the environment afterwards if the tool is not found:
-
-```powershell
-$env:PATH += ";$env:USERPROFILE\.dotnet\tools"
-```
-
-**To list the migrations:**
-
-```powershell
-dotnet ef migrations list `
-  --project src/RefLab.Infrastructure/RefLab.Infrastructure.csproj `
-  --startup-project src/RefLab.Infrastructure/RefLab.Infrastructure.csproj
-```
-
-**To add a migration** (only after a model change, and only when the owner has
-approved the schema):
-
-```powershell
-dotnet ef migrations add <MigrationName> `
-  --project src/RefLab.Infrastructure/RefLab.Infrastructure.csproj `
-  --startup-project src/RefLab.Infrastructure/RefLab.Infrastructure.csproj `
-  --output-dir Persistence/Migrations
-```
-
-**To generate the SQL script** without touching a database — this is the
-artefact the owner reviews before anything is applied:
-
-```powershell
-dotnet ef migrations script `
-  --project src/RefLab.Infrastructure/RefLab.Infrastructure.csproj `
-  --startup-project src/RefLab.Infrastructure/RefLab.Infrastructure.csproj `
-  --idempotent `
-  --output <path>\RefLab-InitialCreate.sql
-```
-
-**To apply the migration to a database** — this is the owner-gated step. It is
-run only after the generated schema has been reviewed and approved:
-
-```powershell
-$env:REFLAB_CONNECTION_STRING = "Server=<server>;Database=RefLab;User Id=<user>;Password=<password>;TrustServerCertificate=True"
-
-dotnet ef database update `
-  --project src/RefLab.Infrastructure/RefLab.Infrastructure.csproj `
-  --startup-project src/RefLab.Infrastructure/RefLab.Infrastructure.csproj
-```
-
-> **The schema approval gate still stands.** Phase 4 generates and reviews the
-> schema. It does not apply it to an installation that already holds data.
-
-### 5.3 The use-case inventory
-
-```powershell
-python scripts/generate_use_case_inventory.py
-```
-
-**Expected result:** `use cases found: 70 (expected 70)` and exit code 0.
+- **CS0118** — an unqualified `Application` inside the presentation layer.
+  See §0.
+- **CS0108** — a member that hides an inherited member. The Infrastructure
+  layer uses explicit interface implementations for exactly this reason; do
+  not "fix" a CS0108 by suppressing it.
 
 ---
 
-## 6. The expected numbers after the delivery
+## 6. Test steps
 
-| Measure | Phase 3 | Phase 4 |
-|---|---|---|
-| Use cases | 73 | **70** |
-| Validators | 73 | **70** |
-| Named permissions | 16 | **15** |
-| Domain source files | 64 | **63** (the `Branch` entity is gone) |
-| Infrastructure tables | — | **27** |
-| Tests | 504 | **535** |
-| Build warnings | 0 | **0** |
+```powershell
+dotnet test RefLab.sln -c Release
+```
 
-The use-case count falls by three: `CreateBranch`, `GetBranches` and
-`RunMultiBranchStockTake` were deleted because the capability they served no
-longer exists. The permission count falls by one: `Permission.ManageBranches`
-guarded the branch administration that has been removed.
+**Expected result:**
+
+| Suite | Tests | Result |
+|---|---:|---|
+| `RefLab.Domain.Tests` | 270 | passed |
+| `RefLab.Application.Tests` | 226 | passed — 204 pre-existing and 22 new Phase 5 guards |
+| `RefLab.Infrastructure.Tests` | 61 | passed |
+| **Total** | **557** | **0 failed, 0 skipped** |
+
+The **535 pre-existing tests** (270 + 204 + 61) must all still pass, unchanged.
+The 535 figure is the baseline the Phase 4 handoff records; it is reached
+again once the three obsolete `DeliveryRecordTests` are removed.
+
+> **If the build agent has no .NET 8 runtime**, the `net8.0` test host cannot
+> start. Set `DOTNET_ROLL_FORWARD=LatestMajor` for the test run. This is a
+> runtime roll-forward, not a code difference, and it does not affect the
+> Windows build.
+
+The use-case drift guard must still report the expected total:
+
+```powershell
+python scripts\generate_use_case_inventory.py
+```
+
+Expected: `use cases found: 70 (expected 70)`, exit code 0.
 
 ---
 
-## 7. How to verify the delivery
+## 7. Verification steps on the owner machine
 
-| Check | Expected |
+### 7.1 The database must be untouched
+
+The Phase 5 delivery changes **no** migration and **no** schema. Before the
+first launch, note the migration state:
+
+```powershell
+dotnet ef migrations list --project src\RefLab.Infrastructure\RefLab.Infrastructure.csproj --startup-project src\RefLab.Infrastructure\RefLab.Infrastructure.csproj
+```
+
+`20261110103458_InitialCreate` must already be applied to `RefLabDb`, as the
+Phase 4 handoff records.
+
+> ⚠ **Do not run `dotnet ef database update`.** The application never applies
+> a migration: the `DatabaseInitializer` is registered by the persistence layer
+> but is never resolved, and the presentation boundary test
+> `The_composition_root_never_resolves_the_database_initialiser` guards that.
+
+### 7.2 The connection string
+
+The application reads the SQL Server connection string from the
+`REFLAB_CONNECTION_STRING` environment variable:
+
+```powershell
+$env:REFLAB_CONNECTION_STRING = "Server=.;Database=RefLabDb;Trusted_Connection=True;TrustServerCertificate=True"
+```
+
+If the variable is not set, the application refuses to start with a clear
+message rather than guessing.
+
+### 7.3 The manual checklist
+
+| # | Check | Expected |
+|---:|---|---|
+| 1 | The application starts | The shell appears with the module toolbar and the sign-in screen. **No database write occurs at start-up.** |
+| 2 | Sign-in | A wrong password, an unknown operator and an inactive account each produce an operator-facing message, not a crash. |
+| 3 | The signed-in operator | The operator's name appears in the identity strip; the sign-out button ends the session and returns to the sign-in screen. |
+| 4 | **Every screen** | All fourteen screens open from the module toolbar: patient work, test catalogue, catalogue administration, send-out, microbiology, accounting, parties and pricing, report setup, laboratory settings, operator administration, statistics, audit. |
+| 5 | **The patient work screen** | The **Arabic patient panel is on the right and reads right to left**; the **English catalogue panel is on the left and reads left to right**. The two directions must differ inside the one window. |
+| 6 | **F8** | Reviews the selected result. The result becomes printable and the state column shows the reviewed state. |
+| 7 | **F9** | Saves the result that is being entered. |
+| 8 | **F11** | Prepares the print operation: the destination and the category are confirmed. |
+| 9 | **F12** | Produces the report. |
+| 10 | **F7** | Moves to the send-out queue. |
+| 11 | **A real print** | Choose a destination directory and press F12. The produced PDF **starts with `%PDF`**, carries the **Arabic branding** («ريال لاب سيستم», «التقرير المختبرى») and the **English branding**, and states **`Currency: EGP`**. |
+| 12 | **The print audit** | The print writes a `PrintAudit` row: the sequence number, the operator and the timestamp. |
+| 13 | **The classification** | The result column shows the classification the Application layer returned — it is never computed in the screen. |
+| 14 | **The identifier** | The order identifier is exactly **13 characters** and is displayed as the Application layer returned it. |
+| 15 | **The database** | The row counts and the schema are unchanged after the whole session. |
+
+### 7.4 A check of the delivered PDF
+
+```powershell
+pdftotext -enc UTF-8 .\produced-file.pdf - | Select-Object -First 8
+```
+
+The output must contain the English branding line, the line `Currency: EGP`,
+and the two Arabic branding lines.
+
+> **A note on reading the Arabic back.** A PDF stores Arabic in visual order,
+> so a text extractor returns the words of the Arabic branding in their visual
+> order: the word «لاب» comes back as «الب». The letters are identical and the
+> rendered document is correct; only the extracted ordering differs. Compare the
+> letters, not the byte order.
+
+---
+
+## 8. Required owner actions
+
+1. **Extract and verify** the archive (§2), and run `tools/verify_manifest.py`
+   before integrating anything.
+2. **Back up** the four presentation files, the exporter and the two documents
+   (§3.1).
+3. **Copy** the delivery over `C:\Users\LAP LINK\source\repos\Ref Lab` (§3.2).
+4. **Delete the six obsolete files** of §3.3. This is the only step that is
+   not a copy, and it is the step that completes the removal of the SMS and
+   NATIGH capability.
+5. **Set `REFLAB_CONNECTION_STRING`** (§7.2). It is not in the archive, because
+   a connection string with a password must never travel in a delivery.
+6. **Build** in Debug and Release and confirm 0 errors and 0 warnings (§5).
+7. **Run the tests** and confirm 557 passed (§6).
+8. **Run the manual checklist** (§7.3) and confirm the printed PDF carries the
+   Arabic branding and EGP, and that a print-audit row was written.
+9. **Confirm the database is unchanged** (§7.1).
+
+---
+
+## 9. What the delivery deliberately does **not** do
+
+| | Why |
 |---|---|
-| `dotnet build RefLab.sln -c Release` | 0 errors, 0 warnings |
-| `dotnet test RefLab.sln -c Release` | 535 passed, 0 failed |
-| `grep -ri branch src/ tests/` | Only the XML documentation that explains why the legacy branch position is free |
-| `dotnet ef migrations list` | Exactly one migration, `…_InitialCreate` |
-| `dotnet ef migrations script` | 27 `CREATE TABLE` statements, no `Branches` table |
-| `python scripts/generate_use_case_inventory.py` | 70 / 70, exit code 0 |
-
-The integration tests run against an **in-memory SQLite** database, because the
-build agent has no SQL Server. The migration itself targets SQL Server and is
-never applied by the test suite; the migration tests validate the generated
-SQL Server script instead. Applying the schema to a real SQL Server instance
-is the owner-gated step in section 5.2.
+| It does not modify the domain, the application or the migrations. | The migration is already applied to the owner's database and is never modified. The presentation layer is the only layer Phase 5 adds. |
+| It does not add a package reference. | The presentation project already had CommunityToolkit.Mvvm 8.4.2 and Microsoft.Extensions.Hosting 8.0.1. |
+| It does not change `RefLab.sln`. | The boundary guards live in the existing test project, so the solution keeps its seven projects. |
+| It does not migrate the print-sequence counter or the session singleton to a durable store. | Both are acknowledged open items; changing them is not a Phase 5 decision. |
+| It does not reproduce the legacy barcode-template editor or the legacy per-profile report layout designer. | The owner has placed both out of scope. They are recorded in the manifest as known legacy gaps and are Phase 7 candidates. |
+| It does not apply any migration. | Applying a migration is an owner-gated operation, and the application never does it. |
 
 ---
 
-## 8. The open items that Phase 4 did not close
-
-| Item | Note |
-|---|---|
-| The schema approval gate | The generated schema still has to be reviewed and approved by the laboratory owner before it is applied to an installation. |
-| The SQL Server smoke test | No SQL Server instance was available on the build agent. Applying the migration to a real instance remains a Phase 6 item. |
-| The International Sensitivity Index formula | The standard laboratory definition is used. The legacy formula was never recovered and still needs confirmation. |
-| The laboratory currency | A configuration decision, still open. |
-| The barcode format | Ref Lab's own format, still open. |
-| `PrintSequenceGenerator` and `SessionCurrentUser` | Both are process-scoped and in-memory. They need a durable store before a laboratory runs more than one terminal. |
-| The Arabic user-interface labels | They come from `ui-labels-verified.md` and are never invented. This is a Phase 5 concern. |
-
-Phase 5, 6 and 7 are out of scope for this delivery and have not been started.
+*End of the Phase 5 Local Agent Implementation Guide.*

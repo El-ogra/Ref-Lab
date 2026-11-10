@@ -1,0 +1,38 @@
+<UserControl x:Class="RefLab.Presentation.Views.Panels.MethodSheetPanelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels.Panels"
+             d:DataContext="{d:DesignInstance Type=vm:MethodSheetPanelViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource PanelBrush}">
+
+    <!--
+        The method sheet and critical values panel.
+
+        The panel is shown beside the result entry field of the patient work
+        screen. It is a panel and not a screen of its own.
+    -->
+    <DockPanel Margin="6">
+        <TextBlock DockPanel.Dock="Top" Text="Method sheet" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+
+        <StackPanel DockPanel.Dock="Top">
+            <TextBlock Text="{Binding MethodSheet.TestName}" Style="{StaticResource BaseTextStyle}" FontWeight="SemiBold" />
+            <TextBlock Text="{Binding MethodSheet.Description}" Style="{StaticResource MutedTextStyle}" />
+            <TextBlock Text="{Binding MethodSheet.Effect}" Style="{StaticResource MutedTextStyle}" />
+            <TextBlock Text="{Binding MethodSheet.Usage}" Style="{StaticResource MutedTextStyle}" />
+        </StackPanel>
+
+        <DataGrid ItemsSource="{Binding CriticalValues}"
+                  Style="{StaticResource LabDataGridStyle}"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{StaticResource Column.Result}" Binding="{Binding LowCriticalLimit}" Width="90" />
+                <DataGridTextColumn Header="{StaticResource Column.Status}" Binding="{Binding HighCriticalLimit}" Width="90" />
+                <DataGridTextColumn Header="{StaticResource Column.Notes}" Binding="{Binding Comment}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>

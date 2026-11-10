@@ -1,0 +1,57 @@
+<UserControl x:Class="RefLab.Presentation.Views.SignInView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             d:DataContext="{d:DesignInstance Type=vm:SignInViewModel}"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource SurfaceBrush}">
+
+    <Grid>
+        <Border Style="{StaticResource ChromePanelStyle}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="420"
+                Padding="24">
+            <StackPanel>
+                <TextBlock Text="{StaticResource App.Title}"
+                           Style="{StaticResource HeadingTextStyle}"
+                           Foreground="White" />
+
+                <TextBlock Text="Sign in to the laboratory"
+                           Style="{StaticResource MutedTextStyle}"
+                           Foreground="White"
+                           Margin="0,0,0,16" />
+
+                <TextBlock Text="{StaticResource Field.OperatorName}"
+                           Style="{StaticResource ArabicLabelStyle}"
+                           Foreground="White"
+                           HorizontalAlignment="Left" />
+                <TextBox Style="{StaticResource LabTextBoxStyle}"
+                         Text="{Binding OperatorName, UpdateSourceTrigger=PropertyChanged}"
+                         AutomationProperties.Name="Operator name" />
+
+                <TextBlock Text="{StaticResource Field.Password}"
+                           Style="{StaticResource ArabicLabelStyle}"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           Margin="0,8,0,0" />
+                <TextBox Style="{StaticResource LabTextBoxStyle}"
+                         Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
+                         AutomationProperties.Name="Password" />
+
+                <TextBlock Text="{Binding ErrorMessage}"
+                           Foreground="{StaticResource DangerBrush}"
+                           Margin="0,10,0,0" />
+
+                <Button Content="{StaticResource Command.Confirm}"
+                        Style="{StaticResource PrimaryActionButtonStyle}"
+                        Command="{Binding SignInAsyncCommand}"
+                        HorizontalAlignment="Right"
+                        Margin="0,14,0,0" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,178 @@
+<UserControl x:Class="RefLab.Presentation.Views.PatientWorkView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             xmlns:controls="clr-namespace:RefLab.Presentation.Views.Controls"
+             xmlns:panels="clr-namespace:RefLab.Presentation.Views.Panels"
+             d:DataContext="{d:DesignInstance Type=vm:PatientWorkViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource SurfaceBrush}">
+
+    <!--
+        The patient work screen.
+
+        The screen keeps the three surfaces the reference product held together
+        in one window: the English catalogue panel on the left, the Arabic
+        patient panel on the right, and the results of the ordered tests
+        underneath. The application chrome stays left to right; the direction
+        of the Arabic patient panel is set on the panel itself.
+
+        The binding keyboard shortcuts are declared here:
+          F8  review the selected result
+          F9  save the result that is being entered
+          F11 prepare the print operation
+          F12 produce the report
+        F7, the send-out shortcut, is bound on the shell because it moves to a
+        different screen.
+    -->
+    <UserControl.InputBindings>
+        <KeyBinding Key="F8" Command="{Binding ReviewAsyncCommand}" />
+        <KeyBinding Key="F9" Command="{Binding SaveResultAsyncCommand}" />
+        <KeyBinding Key="F11" Command="{Binding PreparePrintCommand}" />
+        <KeyBinding Key="F12" Command="{Binding PrintAsyncCommand}" />
+    </UserControl.InputBindings>
+
+    <DockPanel>
+
+        <!-- The top command bar -->
+        <Border DockPanel.Dock="Top" Style="{StaticResource ChromePanelStyle}">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="{StaticResource PatientPanel.RequestedTests}"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Command="{Binding ClearPatientCommand}" />
+                <Button Content="{StaticResource Command.Search}"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Command="{Binding SearchAsyncCommand}" />
+                <Button Content="{StaticResource Command.Edit}"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Command="{Binding OpenSelectedPatientAsyncCommand}" />
+                <Button Content="{StaticResource Command.Save}"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Command="{Binding RegisterAsyncCommand}" />
+                <Button Content="{StaticResource Command.Barcode}"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Command="{Binding GenerateBarcodeAsyncCommand}" />
+                <Button Content="{StaticResource Command.History}"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Command="{Binding LoadCasesAsyncCommand}" />
+                <Button Content="{StaticResource Command.FollowUpCase}"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Command="{Binding LoadCasesAsyncCommand}" />
+                <Button Content="{StaticResource Command.Print}"
+                        Style="{StaticResource PrimaryActionButtonStyle}"
+                        Command="{Binding PrintAsyncCommand}" />
+            </StackPanel>
+        </Border>
+
+        <!-- The working area -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="4" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+
+            <!-- The English catalogue panel -->
+            <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource PanelStyle}">
+                <controls:CataloguePanelControl DataContext="{Binding Catalogue}" />
+            </Border>
+
+            <!-- The Arabic patient panel -->
+            <Border Grid.Row="0" Grid.Column="2" Style="{StaticResource PanelStyle}">
+                <controls:PatientPanelControl DataContext="{Binding Patient}" />
+            </Border>
+
+            <!-- The search -->
+            <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource PanelStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{StaticResource Field.SearchTerm}" Style="{StaticResource BaseTextStyle}" VerticalAlignment="Center" />
+                    <TextBox Grid.Column="1" Style="{StaticResource LabTextBoxStyle}" Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Grid.Column="2" Text="{StaticResource Field.Phone}" Style="{StaticResource BaseTextStyle}" VerticalAlignment="Center" />
+                    <TextBox Grid.Column="3" Style="{StaticResource LabTextBoxStyle}" Text="{Binding SearchPhone, UpdateSourceTrigger=PropertyChanged}" />
+                    <Button Grid.Column="4" Content="{StaticResource Command.Search}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SearchAsyncCommand}" />
+                    <DataGrid Grid.Column="5" Style="{StaticResource LabDataGridStyle}"
+                              ItemsSource="{Binding SearchResults}"
+                              SelectedItem="{Binding SelectedPatient, Mode=TwoWay}"
+                              MaxHeight="120">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding Name}" Width="*" />
+                            <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding Id}" Width="180" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Border>
+
+            <!-- The results -->
+            <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource PanelStyle}">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Text="Results" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+                    <controls:ResultsGridControl />
+                </DockPanel>
+            </Border>
+
+            <!-- The result entry and the in-place panels -->
+            <Border Grid.Row="2" Grid.Column="2" Style="{StaticResource PanelStyle}">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Top">
+                        <TextBlock Text="{StaticResource Command.EnterResult}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+                        <TextBlock Text="{StaticResource Field.ResultValue}" Style="{StaticResource BaseTextStyle}" />
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ResultValue, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="{StaticResource Field.ResultUnit}" Style="{StaticResource BaseTextStyle}" />
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ResultUnit, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="{StaticResource Field.Comment}" Style="{StaticResource BaseTextStyle}" />
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ResultComment, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveResultAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Review}" Style="{StaticResource PrimaryActionButtonStyle}" Command="{Binding ReviewAsyncCommand}" />
+                            <Button Content="{StaticResource Command.HandOver}" Style="{StaticResource ActionButtonStyle}" Command="{Binding HandOverAsyncCommand}" />
+                        </StackPanel>
+
+                        <TextBlock Text="{StaticResource Field.DestinationDirectory}" Style="{StaticResource BaseTextStyle}" />
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding DestinationDirectory, UpdateSourceTrigger=PropertyChanged}" />
+                        <ComboBox Style="{StaticResource LabComboBoxStyle}"
+                                  ItemsSource="{x:Static vm:EnumSource.ReportCategoryValues}"
+                                  SelectedItem="{Binding ReportCategory}" />
+                    </StackPanel>
+
+                    <TabControl>
+                        <TabItem Header="Method sheet">
+                            <panels:MethodSheetPanelView DataContext="{Binding MethodSheet}" />
+                        </TabItem>
+                        <TabItem Header="Derivation">
+                            <panels:DerivationPanelView DataContext="{Binding Derivation}" />
+                        </TabItem>
+                    </TabControl>
+                </DockPanel>
+            </Border>
+        </Grid>
+
+        <!-- The bottom action row -->
+        <Border DockPanel.Dock="Bottom" Style="{StaticResource ChromePanelStyle}">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="{StaticResource Ar.PatientPanel.RequestedTests}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding OrderTestsAsyncCommand}" />
+                <Button Content="{StaticResource Ar.Command.Clear}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding ClearPatientCommand}" />
+                <Button Content="{StaticResource Ar.Command.Edit}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding LoadCatalogueAsyncCommand}" />
+                <Button Content="{StaticResource Ar.Command.Search}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding LoadOrderAsyncCommand}" />
+                <Button Content="{StaticResource Ar.Command.Print}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding PreparePrintCommand}" />
+                <Button Content="{StaticResource Ar.Command.Logout}" Style="{StaticResource ArabicActionButtonStyle}" />
+            </StackPanel>
+        </Border>
+    </DockPanel>
+</UserControl>

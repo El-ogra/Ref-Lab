@@ -1,0 +1,118 @@
+<UserControl x:Class="RefLab.Presentation.Views.CatalogueAdministrationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:CatalogueAdministrationViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource SurfaceBrush}">
+
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Style="{StaticResource ChromePanelStyle}">
+            <TextBlock Text="{StaticResource Screen.CatalogueAdministration}"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="SemiBold"
+                       VerticalAlignment="Center" />
+        </Border>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TabControl Margin="8">
+                <TabItem Header="Test definitions">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateTestAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Edit}" Style="{StaticResource ActionButtonStyle}" Command="{Binding UpdateTestAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                        </StackPanel>
+                        <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding TestDefinitions}" SelectedItem="{Binding SelectedTest, Mode=TwoWay}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding Code}" Width="70" />
+                                <DataGridTextColumn Header="{StaticResource Column.TestName}" Binding="{Binding Name}" Width="*" />
+                                <DataGridTextColumn Header="{StaticResource Column.SimpleName}" Binding="{Binding SimpleName}" Width="130" />
+                                <DataGridTextColumn Header="{StaticResource Column.SubGroupCode}" Binding="{Binding SubGroupCode}" Width="80" />
+                                <DataGridTextColumn Header="{StaticResource Column.PatientPrice}" Binding="{Binding PatientPrice}" Width="90" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </TabItem>
+
+                <TabItem Header="Reference ranges">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateReferenceRangeAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Edit}" Style="{StaticResource ActionButtonStyle}" Command="{Binding UpdateReferenceRangeAsyncCommand}" />
+                        </StackPanel>
+                        <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding ReferenceRanges}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{StaticResource Column.TestCode}" Binding="{Binding TestCode}" Width="80" />
+                                <DataGridTextColumn Header="{StaticResource Column.SexScope}" Binding="{Binding SexScope}" Width="90" />
+                                <DataGridTextColumn Header="{StaticResource Column.AgeUnit}" Binding="{Binding AgeUnit}" Width="90" />
+                                <DataGridTextColumn Header="{StaticResource Column.NormalRange}" Binding="{Binding RangeText}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </TabItem>
+
+                <TabItem Header="Units and conversions">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveUnitsAndConversionsAsyncCommand}" />
+                        </StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <DataGrid Grid.Column="0" Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Units}" Margin="0,0,4,0">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding Name}" Width="*" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <DataGrid Grid.Column="1" Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Conversions}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{StaticResource Column.TestName}" Binding="{Binding TestSimpleName}" Width="*" />
+                                    <DataGridTextColumn Header="{StaticResource Column.FromUnit}" Binding="{Binding FromUnit}" Width="90" />
+                                    <DataGridTextColumn Header="{StaticResource Column.ToUnit}" Binding="{Binding ToUnit}" Width="90" />
+                                    <DataGridTextColumn Header="{StaticResource Column.Factor}" Binding="{Binding Factor}" Width="80" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </DockPanel>
+                </TabItem>
+
+                <TabItem Header="Abbreviations">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateAbbreviationAsyncCommand}" />
+                        </StackPanel>
+                        <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Abbreviations}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{StaticResource Column.Abbreviation}" Binding="{Binding Text}" Width="*" />
+                                <DataGridTextColumn Header="{StaticResource Column.Meaning}" Binding="{Binding Meaning}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </TabItem>
+
+                <TabItem Header="Sub-groups">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateSubGroupAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                        </StackPanel>
+                        <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding SubGroups}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding Code}" Width="80" />
+                                <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding Name}" Width="*" />
+                                <DataGridTextColumn Header="{StaticResource Column.ArabicName}" Binding="{Binding ArabicName}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </TabItem>
+            </TabControl>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>
