@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>RefLab.Presentation</RootNamespace>
+    <AssemblyName>RefLab.Presentation</AssemblyName>
+    <Description>Ref Lab — WPF presentation layer implementing the MVVM pattern.</Description>
+    <!--
+      The target framework is versioned to Windows 10 build 1809 so that the
+      platform-compatibility baseline matches the supported operating system.
+      A bare "net8.0-windows" implies TargetPlatformVersion 7.0 and therefore
+      raises NETSDK1135 against any newer SupportedOSPlatformVersion.
+    -->
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <!-- Allows this WPF project to be compiled on a non-Windows build agent. -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RefLab.Application\RefLab.Application.csproj" />
+    <ProjectReference Include="..\RefLab.Domain\RefLab.Domain.csproj" />
+    <ProjectReference Include="..\RefLab.Infrastructure\RefLab.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

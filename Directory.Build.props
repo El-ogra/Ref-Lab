@@ -1,0 +1,37 @@
+<Project>
+
+  <!--
+    Ref Lab — shared build configuration for every project in the solution.
+    Loaded automatically by the .NET SDK before each project file.
+  -->
+
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <Deterministic>true</Deterministic>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!--
+      .NET 8 reaches end of support on 2026-11-10. IDEA.md fixes .NET 8 as the
+      mandated target framework, so NETSDK1138 is suppressed deliberately to keep
+      the build green while the framework-version decision stays with the owner.
+      Remove this line the moment the target framework is upgraded.
+    -->
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Product>Ref Lab</Product>
+    <Company>Ref Lab</Company>
+    <Authors>Ref Lab Engineering</Authors>
+    <Version>0.1.0</Version>
+    <NeutralLanguage>en</NeutralLanguage>
+    <SatelliteResourceLanguages>en;ar</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+</Project>

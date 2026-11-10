@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>RefLab.Application</RootNamespace>
+    <AssemblyName>RefLab.Application</AssemblyName>
+    <Description>Ref Lab — Application layer: CQRS commands and queries, MediatR handlers, DTOs, validation and use cases.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.5.0" />
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RefLab.Domain\RefLab.Domain.csproj" />
+  </ItemGroup>
+
+  <!--
+    ARCHITECTURAL INVARIANT — the Application layer must not reference a
+    persistence engine. IAppDbContext exposes IQueryable<T> rather than
+    DbSet<T> precisely so that the layer stays provider-agnostic and the
+    use cases can be tested without a database.
+  -->
+
+</Project>

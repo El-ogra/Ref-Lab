@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>RefLab.Domain</RootNamespace>
+    <AssemblyName>RefLab.Domain</AssemblyName>
+    <Description>Ref Lab — Domain layer: entities, value objects, enumerations, domain events and business rules.</Description>
+  </PropertyGroup>
+
+  <!--
+    ARCHITECTURAL INVARIANT — the Domain layer carries NO package references.
+    It must not depend on Entity Framework Core, MediatR, WPF or any other framework.
+    A reviewer finding a PackageReference here must reject the change.
+  -->
+
+</Project>
