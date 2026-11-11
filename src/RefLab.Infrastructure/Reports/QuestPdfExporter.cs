@@ -76,6 +76,15 @@ public sealed class QuestPdfExporter : IPdfExporter
                         column.Item().Text(document.HeaderText).FontSize(9);
                     }
 
+                    // The patient line identifies whose results the document
+                    // carries. It is printed directly under the header, so
+                    // that a report that is separated from its cover sheet
+                    // can still be attributed.
+                    if (!string.IsNullOrWhiteSpace(document.PatientLine))
+                    {
+                        column.Item().Text(document.PatientLine).FontSize(9);
+                    }
+
                     foreach (var section in document.Sections)
                     {
                         column.Item().Text(section.Name).FontSize(12).SemiBold();

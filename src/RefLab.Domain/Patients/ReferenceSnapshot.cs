@@ -61,8 +61,14 @@ public sealed class ReferenceSnapshot
             TestCode = testCode,
             TestSimpleName = testSimpleName.Trim(),
             SexScope = sexScope,
-            AgeBand = ageBand,
-            Interval = interval,
+
+            // The band and the interval are copied, never shared. Two orders
+            // may capture the same catalogue range, and a value object that
+            // belongs to two aggregates cannot be tracked independently: the
+            // persistence layer would have to re-key the very same instance
+            // from one owner to the other.
+            AgeBand = ageBand.Copy(),
+            Interval = interval.Copy(),
             CapturedAt = capturedAt,
         };
     }

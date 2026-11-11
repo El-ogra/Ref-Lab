@@ -29,7 +29,7 @@
                     <TextBlock DockPanel.Dock="Top" Text="{StaticResource Column.PrinterRole}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
                     <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                         <TextBox Style="{StaticResource LabTextBoxStyle}" Width="200" Text="{Binding PrinterName, UpdateSourceTrigger=PropertyChanged}" />
-                        <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding BindPrinterAsyncCommand}" />
+                        <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding BindPrinterCommand}" />
                     </StackPanel>
                     <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Printers}">
                         <DataGrid.Columns>
@@ -48,7 +48,7 @@
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding GlobalHeaderSecondaryText, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="{StaticResource Field.FooterText}" Style="{StaticResource BaseTextStyle}" />
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding FooterText, UpdateSourceTrigger=PropertyChanged}" />
-                    <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveHeaderFooterAsyncCommand}" />
+                    <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveHeaderFooterCommand}" />
                     <TextBlock Text="{StaticResource Field.LeftMargin}" Style="{StaticResource BaseTextStyle}" />
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding LeftMargin, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="{StaticResource Field.RightMargin}" Style="{StaticResource BaseTextStyle}" />
@@ -59,8 +59,8 @@
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding BottomMargin, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="{StaticResource Field.BackgroundColour}" Style="{StaticResource BaseTextStyle}" />
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding BackgroundColour, UpdateSourceTrigger=PropertyChanged}" />
-                    <Button Content="{StaticResource Command.Apply}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveLayoutAsyncCommand}" />
-                    <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                    <Button Content="{StaticResource Command.Apply}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveLayoutCommand}" />
+                    <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
                 </StackPanel>
             </Grid>
         </ScrollViewer>

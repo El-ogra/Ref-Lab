@@ -140,7 +140,12 @@ public sealed class ReferenceRange
             highComment ?? Interval.HighComment,
             rangeText ?? Interval.RangeText,
             Interval.Unit,
-            Interval.CriticalInterval);
+
+            // The new interval owns its own critical interval. Reusing the
+            // instance of the interval that is being replaced would leave one
+            // instance owned by two owners, and the persistence layer would
+            // then take it away from one of them.
+            Interval.CriticalInterval.Copy());
     }
 
     /// <summary>

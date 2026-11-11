@@ -51,6 +51,22 @@ public sealed class CriticalInterval : IEquatable<CriticalInterval>
         CriticalComment = criticalComment;
     }
 
+    /// <summary>
+    /// Creates a copy of this critical interval.
+    /// </summary>
+    /// <remarks>
+    /// A value object must never be shared between two aggregates. The
+    /// critical interval is captured onto the order row when a test is
+    /// ordered, and two orders may capture the same catalogue range.
+    /// </remarks>
+    /// <returns>An equal but independent critical interval.</returns>
+    public CriticalInterval Copy() => Create(
+        LowCriticalLimit,
+        HighCriticalLimit,
+        CriticalRangeText,
+        CriticalExceptionText,
+        CriticalComment);
+
     /// <summary>The value below which a result is critical.</summary>
     public decimal? LowCriticalLimit { get; }
 
@@ -91,8 +107,18 @@ public sealed class CriticalInterval : IEquatable<CriticalInterval>
             Normalize(criticalComment));
     }
 
-    /// <summary>An interval with no critical limits defined.</summary>
-    public static CriticalInterval None { get; } = new(null, null, null, null, null);
+    /// <summary>
+    /// An interval with no critical limits defined.
+    /// </summary>
+    /// <remarks>
+    /// The property returns a <em>new</em> instance on every call. A single
+    /// shared instance would belong to every interval that carries no
+    /// critical limits, and an owned value object may belong to exactly one
+    /// owner: the persistence layer would have to re-key the very same
+    /// instance from one owner to the other, which corrupts the owner that
+    /// loses it.
+    /// </remarks>
+    public static CriticalInterval None => new(null, null, null, null, null);
 
     private static string? Normalize(string? value) =>
         string.IsNullOrWhiteSpace(value) ? null : value.Trim();

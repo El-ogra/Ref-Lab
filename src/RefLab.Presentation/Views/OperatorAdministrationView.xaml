@@ -27,7 +27,7 @@
 
                 <DockPanel Grid.Column="0" Margin="0,0,8,0">
                     <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
-                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
                     </StackPanel>
                     <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Operators}" SelectedItem="{Binding SelectedOperator, Mode=TwoWay}">
                         <DataGrid.Columns>
@@ -47,16 +47,16 @@
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding RoleCaption, UpdateSourceTrigger=PropertyChanged}" />
                     <CheckBox Style="{StaticResource LabCheckBoxStyle}" Content="{StaticResource Field.IsAdministrator}" IsChecked="{Binding IsAdministrator}" />
                     <CheckBox Style="{StaticResource LabCheckBoxStyle}" Content="{StaticResource Field.IsActive}" IsChecked="{Binding IsActive}" />
-                    <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateAsyncCommand}" />
-                    <Button Content="{StaticResource Command.Edit}" Style="{StaticResource ActionButtonStyle}" Command="{Binding UpdateAsyncCommand}" />
+                    <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateCommand}" />
+                    <Button Content="{StaticResource Command.Edit}" Style="{StaticResource ActionButtonStyle}" Command="{Binding UpdateCommand}" />
                     <TextBlock Text="{StaticResource Column.Permissions}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
                     <ListBox ItemsSource="{Binding AvailablePermissions}" SelectionMode="Multiple" Height="140" />
-                    <Button Content="{StaticResource Command.Apply}" Style="{StaticResource ActionButtonStyle}" Command="{Binding AssignPermissionsAsyncCommand}" />
+                    <Button Content="{StaticResource Command.Apply}" Style="{StaticResource ActionButtonStyle}" Command="{Binding AssignPermissionsCommand}" />
                     <TextBlock Text="{StaticResource Field.CurrentPassword}" Style="{StaticResource BaseTextStyle}" />
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding CurrentPassword, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="{StaticResource Field.NewPassword}" Style="{StaticResource BaseTextStyle}" />
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding NewPassword, UpdateSourceTrigger=PropertyChanged}" />
-                    <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding ChangePasswordAsyncCommand}" />
+                    <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding ChangePasswordCommand}" />
                 </StackPanel>
             </Grid>
         </ScrollViewer>

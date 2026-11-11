@@ -28,7 +28,7 @@
                 <DockPanel Grid.Column="0" Margin="0,0,8,0">
                     <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
                         <TextBox Style="{StaticResource LabTextBoxStyle}" Width="240" Text="{Binding Filter, UpdateSourceTrigger=PropertyChanged}" />
-                        <Button Content="{StaticResource Command.Search}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                        <Button Content="{StaticResource Command.Search}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
                     </StackPanel>
                     <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Tests}" SelectedItem="{Binding SelectedTest, Mode=TwoWay}">
                         <DataGrid.Columns>
@@ -44,7 +44,7 @@
                 <DockPanel Grid.Column="1">
                     <TextBlock DockPanel.Dock="Top" Text="{StaticResource Column.NormalRange}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
                     <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
-                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadProfileAsyncCommand}" />
+                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadProfileCommand}" />
                     </StackPanel>
                     <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Profile}">
                         <DataGrid.Columns>

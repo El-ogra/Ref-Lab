@@ -23,7 +23,7 @@
                 <TabItem Header="Referring parties">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
-                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
                         </StackPanel>
                         <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding ReferringParties}" SelectedItem="{Binding SelectedParty, Mode=TwoWay}">
                             <DataGrid.Columns>
@@ -41,7 +41,7 @@
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="90" Text="{Binding PhysicianCode, UpdateSourceTrigger=PropertyChanged}" />
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="200" Text="{Binding PhysicianName, UpdateSourceTrigger=PropertyChanged}" />
-                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SavePhysicianAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SavePhysicianCommand}" />
                         </StackPanel>
                         <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding TreatingPhysicians}" SelectedItem="{Binding SelectedPhysician, Mode=TwoWay}">
                             <DataGrid.Columns>
@@ -60,8 +60,8 @@
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="180" Text="{Binding PriceListTestSimpleName, UpdateSourceTrigger=PropertyChanged}" />
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="100" Text="{Binding PriceListPrice, UpdateSourceTrigger=PropertyChanged}" />
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="260" Text="{Binding DestinationDirectory, UpdateSourceTrigger=PropertyChanged}" />
-                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SavePriceListAsyncCommand}" />
-                            <Button Content="{StaticResource Command.Print}" Style="{StaticResource ActionButtonStyle}" Command="{Binding PrintPriceListAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SavePriceListCommand}" />
+                            <Button Content="{StaticResource Command.Print}" Style="{StaticResource ActionButtonStyle}" Command="{Binding PrintPriceListCommand}" />
                         </StackPanel>
                         <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding PriceLists}">
                             <DataGrid.Columns>

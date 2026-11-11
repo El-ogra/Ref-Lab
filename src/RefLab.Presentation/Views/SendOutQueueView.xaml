@@ -28,7 +28,7 @@
                 <DockPanel Grid.Column="0" Margin="0,0,8,0">
                     <StackPanel DockPanel.Dock="Top">
                         <CheckBox Style="{StaticResource LabCheckBoxStyle}" Content="Pending only" IsChecked="{Binding PendingOnly}" />
-                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
                     </StackPanel>
                     <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Requests}" SelectedItem="{Binding SelectedRequest, Mode=TwoWay}">
                         <DataGrid.Columns>
@@ -48,9 +48,9 @@
                     <TextBlock Text="{StaticResource Field.OutPrice}" Style="{StaticResource BaseTextStyle}" />
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding OutPrice, UpdateSourceTrigger=PropertyChanged}" />
                     <StackPanel Orientation="Horizontal">
-                        <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateAsyncCommand}" />
-                        <Button Content="{StaticResource Command.Confirm}" Style="{StaticResource ActionButtonStyle}" Command="{Binding DispatchAsyncCommand}" />
-                        <Button Content="{StaticResource Command.Clear}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SettleAsyncCommand}" />
+                        <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateCommand}" />
+                        <Button Content="{StaticResource Command.Confirm}" Style="{StaticResource ActionButtonStyle}" Command="{Binding DispatchCommand}" />
+                        <Button Content="{StaticResource Command.Clear}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SettleCommand}" />
                     </StackPanel>
                     <TextBlock Text="{StaticResource Column.Sequence}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
                     <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Dispositions}" MaxHeight="160">

@@ -13,12 +13,20 @@ public sealed record ReportSection(string Name, IReadOnlyList<ReportRow> Rows);
 /// <summary>
 /// A rendered report, ready to be written to a file or a printer.
 /// </summary>
+/// <remarks>
+/// The patient line identifies whose results the document carries. It is part
+/// of the document rather than of a section, because a laboratory report that
+/// cannot be attributed to a patient is not a report. The property is
+/// optional, so a document that has no patient — an empty report, for
+/// instance — is still valid.
+/// </remarks>
 public sealed record ReportDocument(
     string Title,
     string? Subtitle,
     IReadOnlyList<ReportSection> Sections,
     string? HeaderText,
-    string? FooterText);
+    string? FooterText,
+    string? PatientLine = null);
 
 /// <summary>
 /// The data needed to render a laboratory report.

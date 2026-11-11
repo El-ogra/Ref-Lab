@@ -41,8 +41,14 @@ public sealed class SignInHandler : IRequestHandler<SignInCommand, SignInResultD
     {
         var normalizedName = request.OperatorName.Trim();
 
+        // The comparison is made on the upper-cased form of the name. EF Core
+        // cannot translate the string.Equals overload that takes a
+        // StringComparison into SQL, so the case-insensitive match is
+        // expressed in a form every provider can translate.
+        var comparisonName = normalizedName.ToUpper();
+
         var @operator = _db.Set<Operator>()
-            .FirstOrDefault(candidate => string.Equals(candidate.Name, normalizedName, StringComparison.OrdinalIgnoreCase));
+            .FirstOrDefault(candidate => candidate.Name.ToUpper() == comparisonName);
 
         if (@operator is null)
         {

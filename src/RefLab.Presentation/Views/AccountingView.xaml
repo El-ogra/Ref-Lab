@@ -27,7 +27,7 @@
 
                 <DockPanel Grid.Column="0" Margin="0,0,8,0">
                     <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
-                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
                     </StackPanel>
                     <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Payments}">
                         <DataGrid.Columns>
@@ -48,7 +48,7 @@
                         <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding Amount, UpdateSourceTrigger=PropertyChanged}" />
                         <TextBlock Text="{StaticResource Field.ReferringPartyCode}" Style="{StaticResource BaseTextStyle}" />
                         <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ReferringPartyCode, UpdateSourceTrigger=PropertyChanged}" />
-                        <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RecordPaymentAsyncCommand}" />
+                        <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RecordPaymentCommand}" />
                     </StackPanel>
                     <TextBlock DockPanel.Dock="Top" Text="{StaticResource Screen.Statistics}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
                     <StackPanel>
@@ -56,8 +56,8 @@
                         <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding StockTakeFrom, StringFormat=yyyy-MM-dd, UpdateSourceTrigger=PropertyChanged}" />
                         <TextBlock Text="{StaticResource Field.To}" Style="{StaticResource BaseTextStyle}" />
                         <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding StockTakeTo, StringFormat=yyyy-MM-dd, UpdateSourceTrigger=PropertyChanged}" />
-                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RunStockTakeAsyncCommand}" />
-                        <Button Content="{StaticResource Command.Confirm}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RunScopedStockTakeAsyncCommand}" />
+                        <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RunStockTakeCommand}" />
+                        <Button Content="{StaticResource Command.Confirm}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RunScopedStockTakeCommand}" />
                     </StackPanel>
                     <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding ReferringParties}" MaxHeight="180">
                         <DataGrid.Columns>

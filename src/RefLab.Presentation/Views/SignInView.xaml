@@ -48,7 +48,7 @@
 
                 <Button Content="{StaticResource Command.Confirm}"
                         Style="{StaticResource PrimaryActionButtonStyle}"
-                        Command="{Binding SignInAsyncCommand}"
+                        Command="{Binding SignInCommand}"
                         HorizontalAlignment="Right"
                         Margin="0,14,0,0" />
             </StackPanel>

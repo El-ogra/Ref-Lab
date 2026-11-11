@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RefLab.Application;
 using RefLab.Infrastructure;
+using RefLab.Presentation.Navigation;
 
 namespace RefLab.Presentation.Bootstrap;
 
@@ -65,6 +66,12 @@ public static class CompositionRoot
         var window = host.Services.GetRequiredService<MainWindow>();
 
         window.Show();
+
+        // The shell is the entry point of the application: it opens on the
+        // sign-in screen, which moves on to the patient work screen once the
+        // session has been established. The navigation happens here, after the
+        // window is shown, so the sign-in view model can reach the shell.
+        host.Services.GetRequiredService<INavigationService>().NavigateTo(ScreenKeys.SignIn);
     }
 
     private static string ResolveConnectionString(string? connectionString)

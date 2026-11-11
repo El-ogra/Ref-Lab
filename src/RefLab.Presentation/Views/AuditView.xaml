@@ -21,8 +21,8 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <DockPanel Margin="8">
                 <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-                    <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
-                    <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RecordAttendanceAsyncCommand}" />
+                    <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
+                    <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RecordAttendanceCommand}" />
                 </StackPanel>
 
                 <Grid>

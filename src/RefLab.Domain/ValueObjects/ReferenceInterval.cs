@@ -125,6 +125,27 @@ public sealed class ReferenceInterval : IEquatable<ReferenceInterval>
             criticalInterval ?? CriticalInterval.None);
     }
 
+    /// <summary>
+    /// Creates a copy of this interval.
+    /// </summary>
+    /// <remarks>
+    /// A value object must never be shared between two aggregates. The
+    /// reference interval is captured onto the order row when the test is
+    /// ordered, and two orders may capture the same catalogue range. Copying
+    /// the interval keeps the two aggregates independent.
+    /// </remarks>
+    /// <returns>An equal but independent interval.</returns>
+    public ReferenceInterval Copy() => Create(
+        LowLimit,
+        HighLimit,
+        LowExceptionText,
+        HighExceptionText,
+        LowComment,
+        HighComment,
+        RangeText,
+        Unit,
+        CriticalInterval.Copy());
+
     /// <summary>Returns the short exception text that applies to a classification.</summary>
     public string? ExceptionTextFor(ResultClassification classification) => classification switch
     {

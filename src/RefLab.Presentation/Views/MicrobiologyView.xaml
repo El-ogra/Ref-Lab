@@ -26,8 +26,8 @@
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="220" Text="{Binding CultureId, UpdateSourceTrigger=PropertyChanged}" />
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="220" Text="{Binding Organism, UpdateSourceTrigger=PropertyChanged}" />
                             <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding AddSusceptibilityCommand}" />
-                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RecordCultureAsyncCommand}" />
-                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCulturesAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RecordCultureCommand}" />
+                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCulturesCommand}" />
                         </StackPanel>
                         <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Cultures}">
                             <DataGrid.Columns>
@@ -43,7 +43,7 @@
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="160" Text="{Binding AntibioticSymbol, UpdateSourceTrigger=PropertyChanged}" />
-                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveAntibioticAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveAntibioticCommand}" />
                         </StackPanel>
                         <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Antibiotics}">
                             <DataGrid.Columns>
@@ -60,7 +60,7 @@
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="180" Text="{Binding FarmName, UpdateSourceTrigger=PropertyChanged}" />
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="140" Text="{Binding IssuedAmount, UpdateSourceTrigger=PropertyChanged}" />
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="140" Text="{Binding ReceivedAmount, UpdateSourceTrigger=PropertyChanged}" />
-                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveFarmResultAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveFarmResultCommand}" />
                         </StackPanel>
                         <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding FarmTransactions}">
                             <DataGrid.Columns>

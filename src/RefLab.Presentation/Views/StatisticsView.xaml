@@ -25,8 +25,8 @@
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Width="120" Text="{Binding From, StringFormat=yyyy-MM-dd, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="{StaticResource Field.To}" Style="{StaticResource BaseTextStyle}" VerticalAlignment="Center" />
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Width="120" Text="{Binding To, StringFormat=yyyy-MM-dd, UpdateSourceTrigger=PropertyChanged}" />
-                    <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RunLaboratoryStatisticsAsyncCommand}" />
-                    <Button Content="{StaticResource Command.Confirm}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RunPerformanceStatisticsAsyncCommand}" />
+                    <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RunLaboratoryStatisticsCommand}" />
+                    <Button Content="{StaticResource Command.Confirm}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RunPerformanceStatisticsCommand}" />
                 </StackPanel>
 
                 <Grid>

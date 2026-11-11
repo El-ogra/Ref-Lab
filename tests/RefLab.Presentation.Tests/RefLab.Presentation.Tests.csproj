@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--
+      The presentation test project of Ref Lab.
+
+      Section 8.1 of the Phase 0 discovery report defines five test levels, and
+      the fourth is the presentation level: every view model has a command
+      test. The three existing test projects cannot cover it, because the
+      presentation project targets net8.0-windows10.0.17763.0 and a plain
+      net8.0 test project cannot reference it — the restore fails with
+      NU1201. This project therefore targets the same platform as the
+      presentation layer.
+
+      The consequence is deliberate and is stated in the delivery report: the
+      project COMPILES on the Linux build agent, where the Windows desktop
+      runtime is absent, and it EXECUTES on the owner's Windows machine, where
+      the runtime is present. The build agent verifies that it compiles with
+      no error and no warning; only the Local Agent can execute it.
+    -->
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
+    <RootNamespace>RefLab.Presentation.Tests</RootNamespace>
+    <AssemblyName>RefLab.Presentation.Tests</AssemblyName>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- xunit v2 does not contribute implicit usings; declare the namespace once here. -->
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\RefLab.Presentation\RefLab.Presentation.csproj" />
+    <ProjectReference Include="..\..\src\RefLab.Application\RefLab.Application.csproj" />
+    <ProjectReference Include="..\..\src\RefLab.Domain\RefLab.Domain.csproj" />
+    <ProjectReference Include="..\..\src\RefLab.Infrastructure\RefLab.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -103,7 +103,8 @@ public sealed class QuestPdfReportRenderer : IReportRenderer
             request.Subtitle,
             sections,
             request.HeaderText,
-            request.FooterText);
+            request.FooterText,
+            BuildPatientLine(request));
     }
 
     private static string BuildPatientLine(ReportRenderRequest request)

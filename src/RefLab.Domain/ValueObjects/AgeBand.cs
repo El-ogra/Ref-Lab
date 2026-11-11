@@ -56,6 +56,18 @@ public sealed class AgeBand : IEquatable<AgeBand>
     }
 
     /// <summary>
+    /// Creates a copy of this age band.
+    /// </summary>
+    /// <remarks>
+    /// A value object must never be shared between two aggregates. The band is
+    /// captured onto the order row when a test is ordered, and two orders may
+    /// capture the same catalogue range. Copying the band keeps the two
+    /// aggregates independent.
+    /// </remarks>
+    /// <returns>An equal but independent band.</returns>
+    public AgeBand Copy() => Create(From, To, Unit);
+
+    /// <summary>
     /// Determines whether an age expressed in <paramref name="unit"/> falls inside this band.
     /// </summary>
     public bool Contains(decimal age, AgeUnit unit)

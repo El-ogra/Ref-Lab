@@ -29,10 +29,10 @@
         different screen.
     -->
     <UserControl.InputBindings>
-        <KeyBinding Key="F8" Command="{Binding ReviewAsyncCommand}" />
-        <KeyBinding Key="F9" Command="{Binding SaveResultAsyncCommand}" />
+        <KeyBinding Key="F8" Command="{Binding ReviewCommand}" />
+        <KeyBinding Key="F9" Command="{Binding SaveResultCommand}" />
         <KeyBinding Key="F11" Command="{Binding PreparePrintCommand}" />
-        <KeyBinding Key="F12" Command="{Binding PrintAsyncCommand}" />
+        <KeyBinding Key="F12" Command="{Binding PrintCommand}" />
     </UserControl.InputBindings>
 
     <DockPanel>
@@ -40,30 +40,30 @@
         <!-- The top command bar -->
         <Border DockPanel.Dock="Top" Style="{StaticResource ChromePanelStyle}">
             <StackPanel Orientation="Horizontal">
-                <Button Content="{StaticResource PatientPanel.RequestedTests}"
+                <Button Content="{StaticResource Ar.PatientPanel.RequestedTests}"
                         Style="{StaticResource ActionButtonStyle}"
                         Command="{Binding ClearPatientCommand}" />
                 <Button Content="{StaticResource Command.Search}"
                         Style="{StaticResource ActionButtonStyle}"
-                        Command="{Binding SearchAsyncCommand}" />
+                        Command="{Binding SearchCommand}" />
                 <Button Content="{StaticResource Command.Edit}"
                         Style="{StaticResource ActionButtonStyle}"
-                        Command="{Binding OpenSelectedPatientAsyncCommand}" />
+                        Command="{Binding OpenSelectedPatientCommand}" />
                 <Button Content="{StaticResource Command.Save}"
                         Style="{StaticResource ActionButtonStyle}"
-                        Command="{Binding RegisterAsyncCommand}" />
+                        Command="{Binding RegisterCommand}" />
                 <Button Content="{StaticResource Command.Barcode}"
                         Style="{StaticResource ActionButtonStyle}"
-                        Command="{Binding GenerateBarcodeAsyncCommand}" />
+                        Command="{Binding GenerateBarcodeCommand}" />
                 <Button Content="{StaticResource Command.History}"
                         Style="{StaticResource ActionButtonStyle}"
-                        Command="{Binding LoadCasesAsyncCommand}" />
+                        Command="{Binding LoadCasesCommand}" />
                 <Button Content="{StaticResource Command.FollowUpCase}"
                         Style="{StaticResource ActionButtonStyle}"
-                        Command="{Binding LoadCasesAsyncCommand}" />
+                        Command="{Binding LoadCasesCommand}" />
                 <Button Content="{StaticResource Command.Print}"
                         Style="{StaticResource PrimaryActionButtonStyle}"
-                        Command="{Binding PrintAsyncCommand}" />
+                        Command="{Binding PrintCommand}" />
             </StackPanel>
         </Border>
 
@@ -105,7 +105,7 @@
                     <TextBox Grid.Column="1" Style="{StaticResource LabTextBoxStyle}" Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Grid.Column="2" Text="{StaticResource Field.Phone}" Style="{StaticResource BaseTextStyle}" VerticalAlignment="Center" />
                     <TextBox Grid.Column="3" Style="{StaticResource LabTextBoxStyle}" Text="{Binding SearchPhone, UpdateSourceTrigger=PropertyChanged}" />
-                    <Button Grid.Column="4" Content="{StaticResource Command.Search}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SearchAsyncCommand}" />
+                    <Button Grid.Column="4" Content="{StaticResource Command.Search}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SearchCommand}" />
                     <DataGrid Grid.Column="5" Style="{StaticResource LabDataGridStyle}"
                               ItemsSource="{Binding SearchResults}"
                               SelectedItem="{Binding SelectedPatient, Mode=TwoWay}"
@@ -139,9 +139,9 @@
                         <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ResultComment, UpdateSourceTrigger=PropertyChanged}" />
 
                         <StackPanel Orientation="Horizontal">
-                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveResultAsyncCommand}" />
-                            <Button Content="{StaticResource Command.Review}" Style="{StaticResource PrimaryActionButtonStyle}" Command="{Binding ReviewAsyncCommand}" />
-                            <Button Content="{StaticResource Command.HandOver}" Style="{StaticResource ActionButtonStyle}" Command="{Binding HandOverAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveResultCommand}" />
+                            <Button Content="{StaticResource Command.Review}" Style="{StaticResource PrimaryActionButtonStyle}" Command="{Binding ReviewCommand}" />
+                            <Button Content="{StaticResource Command.HandOver}" Style="{StaticResource ActionButtonStyle}" Command="{Binding HandOverCommand}" />
                         </StackPanel>
 
                         <TextBlock Text="{StaticResource Field.DestinationDirectory}" Style="{StaticResource BaseTextStyle}" />
@@ -166,10 +166,10 @@
         <!-- The bottom action row -->
         <Border DockPanel.Dock="Bottom" Style="{StaticResource ChromePanelStyle}">
             <StackPanel Orientation="Horizontal">
-                <Button Content="{StaticResource Ar.PatientPanel.RequestedTests}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding OrderTestsAsyncCommand}" />
+                <Button Content="{StaticResource Ar.PatientPanel.RequestedTests}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding OrderTestsCommand}" />
                 <Button Content="{StaticResource Ar.Command.Clear}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding ClearPatientCommand}" />
-                <Button Content="{StaticResource Ar.Command.Edit}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding LoadCatalogueAsyncCommand}" />
-                <Button Content="{StaticResource Ar.Command.Search}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding LoadOrderAsyncCommand}" />
+                <Button Content="{StaticResource Ar.Command.Edit}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding LoadCatalogueCommand}" />
+                <Button Content="{StaticResource Ar.Command.Search}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding LoadOrderCommand}" />
                 <Button Content="{StaticResource Ar.Command.Print}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding PreparePrintCommand}" />
                 <Button Content="{StaticResource Ar.Command.Logout}" Style="{StaticResource ArabicActionButtonStyle}" />
             </StackPanel>

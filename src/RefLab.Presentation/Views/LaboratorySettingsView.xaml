@@ -30,13 +30,13 @@
                 <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding HistoryDisplayMode, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock Text="{StaticResource Field.DefaultAccountType}" Style="{StaticResource BaseTextStyle}" />
                 <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding DefaultAccountType, UpdateSourceTrigger=PropertyChanged}" />
-                <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveAsyncCommand}" />
+                <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveCommand}" />
                 <TextBlock Text="{StaticResource Field.ConnectionReceiptHeader}" Style="{StaticResource BaseTextStyle}" />
                 <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ConnectionReceiptHeader, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock Text="{StaticResource Field.ConnectionReceiptFooter}" Style="{StaticResource BaseTextStyle}" />
                 <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ConnectionReceiptFooter, UpdateSourceTrigger=PropertyChanged}" />
-                <Button Content="{StaticResource Command.Apply}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveConnectionReceiptAsyncCommand}" />
-                <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                <Button Content="{StaticResource Command.Apply}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveConnectionReceiptCommand}" />
+                <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
             </StackPanel>
         </ScrollViewer>
     </DockPanel>

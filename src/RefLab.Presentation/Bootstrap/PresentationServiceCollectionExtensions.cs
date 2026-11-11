@@ -34,10 +34,11 @@ public static class PresentationServiceCollectionExtensions
 
         services.AddSingleton<IErrorPresenter, ErrorPresenter>();
         services.AddSingleton<RequestExecutor>();
+        services.AddSingleton<OperatorSession>();
         services.AddSingleton<IViewLocator, ViewLocator>();
         services.AddSingleton<INavigationService, NavigationService>();
 
-        services.AddTransient<ShellViewModel>();
+        services.AddSingleton<ShellViewModel>();
         services.AddTransient<MethodSheetPanelViewModel>();
         services.AddTransient<DerivationPanelViewModel>();
         services.AddTransient<SignInViewModel>();
@@ -54,6 +55,7 @@ public static class PresentationServiceCollectionExtensions
         services.AddTransient<StatisticsViewModel>();
         services.AddTransient<AuditViewModel>();
 
+        services.AddTransient<MainWindow>();
         services.AddTransient<SignInView>();
         services.AddTransient<PatientWorkView>();
         services.AddTransient<TestCatalogueView>();

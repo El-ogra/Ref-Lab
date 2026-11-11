@@ -41,8 +41,12 @@ public sealed class ManageUnitsAndConversionsHandler : IRequestHandler<ManageUni
     {
         if (request.UnitName is not null)
         {
+            // See SignIn.cs: the upper-cased comparison is the form EF Core can
+            // translate, and it keeps the matching case-insensitive.
+            var comparisonName = request.UnitName.Trim().ToUpper();
+
             var existingUnit = _db.Set<TestUnit>()
-                .FirstOrDefault(unit => string.Equals(unit.Name, request.UnitName.Trim(), StringComparison.OrdinalIgnoreCase));
+                .FirstOrDefault(unit => unit.Name.ToUpper() == comparisonName);
 
             if (existingUnit is null)
             {

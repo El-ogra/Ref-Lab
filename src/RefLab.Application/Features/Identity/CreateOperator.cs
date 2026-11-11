@@ -53,8 +53,12 @@ public sealed class CreateOperatorHandler : IRequestHandler<CreateOperatorComman
 
         var normalizedName = request.Name.Trim();
 
+        // See SignIn.cs: the upper-cased comparison is the form EF Core can
+        // translate, and it keeps the matching case-insensitive.
+        var comparisonName = normalizedName.ToUpper();
+
         var duplicate = _db.Set<Operator>()
-            .Any(candidate => string.Equals(candidate.Name, normalizedName, StringComparison.OrdinalIgnoreCase));
+            .Any(candidate => candidate.Name.ToUpper() == comparisonName);
 
         if (duplicate)
         {

@@ -23,9 +23,9 @@
                 <TabItem Header="Test definitions">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
-                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateTestAsyncCommand}" />
-                            <Button Content="{StaticResource Command.Edit}" Style="{StaticResource ActionButtonStyle}" Command="{Binding UpdateTestAsyncCommand}" />
-                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateTestCommand}" />
+                            <Button Content="{StaticResource Command.Edit}" Style="{StaticResource ActionButtonStyle}" Command="{Binding UpdateTestCommand}" />
+                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
                         </StackPanel>
                         <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding TestDefinitions}" SelectedItem="{Binding SelectedTest, Mode=TwoWay}">
                             <DataGrid.Columns>
@@ -42,8 +42,8 @@
                 <TabItem Header="Reference ranges">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
-                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateReferenceRangeAsyncCommand}" />
-                            <Button Content="{StaticResource Command.Edit}" Style="{StaticResource ActionButtonStyle}" Command="{Binding UpdateReferenceRangeAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateReferenceRangeCommand}" />
+                            <Button Content="{StaticResource Command.Edit}" Style="{StaticResource ActionButtonStyle}" Command="{Binding UpdateReferenceRangeCommand}" />
                         </StackPanel>
                         <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding ReferenceRanges}">
                             <DataGrid.Columns>
@@ -59,7 +59,7 @@
                 <TabItem Header="Units and conversions">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
-                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveUnitsAndConversionsAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveUnitsAndConversionsCommand}" />
                         </StackPanel>
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -86,7 +86,7 @@
                 <TabItem Header="Abbreviations">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
-                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateAbbreviationAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateAbbreviationCommand}" />
                         </StackPanel>
                         <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Abbreviations}">
                             <DataGrid.Columns>
@@ -100,8 +100,8 @@
                 <TabItem Header="Sub-groups">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
-                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateSubGroupAsyncCommand}" />
-                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadAsyncCommand}" />
+                            <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateSubGroupCommand}" />
+                            <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
                         </StackPanel>
                         <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding SubGroups}">
                             <DataGrid.Columns>
