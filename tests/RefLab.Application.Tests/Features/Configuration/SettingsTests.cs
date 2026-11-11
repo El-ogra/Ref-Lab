@@ -1,5 +1,6 @@
 using RefLab.Application.Common;
 using RefLab.Application.Features.Configuration;
+using RefLab.Application.Features.Reporting;
 using RefLab.Application.Tests.Fakes;
 using RefLab.Domain.Configuration;
 
@@ -19,7 +20,30 @@ public class SettingsTests
         Assert.Equal(1m, result.LeftMargin);
         Assert.Equal(2.5m, result.BottomMargin);
         Assert.Equal("#FFFFFF", result.BackgroundColour);
-        Assert.Equal("LAYOUT", result.GlobalHeaderText);
+
+        // The layout text describes the report layout. It is not the global
+        // header, which carries the laboratory identity printed above the
+        // report titles, so configuring the layout must leave the identity
+        // header alone.
+        Assert.Equal("LAYOUT", result.LayoutText);
+        Assert.Null(result.GlobalHeaderText);
+    }
+
+    [Fact]
+    public async Task The_layout_text_does_not_overwrite_the_global_header()
+    {
+        using var host = new ApplicationTestHost();
+
+        await host.Sender.Send(
+            new ConfigureReportHeaderFooterCommand(GlobalHeaderText: "IDENTITY"),
+            CancellationToken.None);
+
+        var result = await host.Sender.Send(
+            new CustomiseReportLayoutCommand(null, null, null, null, null, "LAYOUT"),
+            CancellationToken.None);
+
+        Assert.Equal("LAYOUT", result.LayoutText);
+        Assert.Equal("IDENTITY", result.GlobalHeaderText);
     }
 
     [Fact]

@@ -151,4 +151,59 @@ public class ClinicalDerivationPolicyTests
         Assert.Throws<InvalidClinicalDerivationException>(() =>
             ClinicalDerivationPolicy.InterpolateControlConcentration(Array.Empty<ProthrombinControlPoint>(), 12m));
     }
+
+    [Fact]
+    public void The_derived_ratio_is_the_quotient_of_the_two_measurements()
+    {
+        var ratio = ClinicalDerivationPolicy.DeriveRatio("SGOT (AST)", "SGPT (ALT)", 41m, 12m);
+
+        Assert.Equal(3.42m, ratio.Value);
+        Assert.Equal("SGOT (AST)/SGPT (ALT)", ratio.DisplayName);
+    }
+
+    [Fact]
+    public void The_adult_factor_of_a_patient_of_unknown_sex_is_refused()
+    {
+        // The adult factors are sex-specific: 6.25 for a male and 6.75 for a
+        // female. There is no factor for a patient whose sex was never
+        // established, so the derivation is refused rather than guessed.
+        Assert.Throws<InvalidClinicalDerivationException>(() =>
+            ClinicalDerivationPolicy.SelectHemoglobinFactorSlot(Sex.Unknown, 30m));
+    }
+
+    [Theory]
+    [InlineData(Sex.Male)]
+    [InlineData(Sex.Female)]
+    [InlineData(Sex.Unknown)]
+    public void The_infant_factor_does_not_depend_on_the_sex(Sex sex)
+    {
+        // The slot is selected on the age in years, and five months is below
+        // the one-year limit.
+        var ageInYears = 5m / 12m;
+
+        var slot = ClinicalDerivationPolicy.SelectHemoglobinFactorSlot(sex, ageInYears);
+
+        Assert.Equal(ClinicalDerivationPolicy.InfantFactorSlot, slot);
+    }
+
+    [Theory]
+    [InlineData(Sex.Male)]
+    [InlineData(Sex.Female)]
+    [InlineData(Sex.Unknown)]
+    public void The_child_factor_does_not_depend_on_the_sex(Sex sex)
+    {
+        var slot = ClinicalDerivationPolicy.SelectHemoglobinFactorSlot(sex, 10m);
+
+        Assert.Equal(ClinicalDerivationPolicy.ChildFactorSlot, slot);
+    }
+
+    [Fact]
+    public void The_adult_factors_of_a_male_and_of_a_female_are_unchanged()
+    {
+        var maleSlot = ClinicalDerivationPolicy.SelectHemoglobinFactorSlot(Sex.Male, 30m);
+        var femaleSlot = ClinicalDerivationPolicy.SelectHemoglobinFactorSlot(Sex.Female, 30m);
+
+        Assert.Equal(ClinicalDerivationPolicy.AdultMaleFactorSlot, maleSlot);
+        Assert.Equal(ClinicalDerivationPolicy.AdultFemaleFactorSlot, femaleSlot);
+    }
 }

@@ -243,7 +243,10 @@ public class PresentationLayerBoundaryTests
 
         foreach (var file in AllSourceFiles())
         {
-            foreach (var literal in ExtractStringLiterals(RemoveComments(ReadFile(file))))
+            var source = RemoveComments(ReadFile(file));
+
+            foreach (var literal in ExtractStringLiterals(source)
+                .Concat(ExtractResourceElementText(source)))
             {
                 if (!arabic.IsMatch(literal))
                 {
@@ -259,6 +262,34 @@ public class PresentationLayerBoundaryTests
         }
 
         Assert.True(checked_ > 0, "No Arabic string was found; the guard would not be testing anything.");
+    }
+
+    /// <summary>
+    /// The text content of a XAML resource element, for example the body of
+    /// <c>&lt;sys:String&gt;…&lt;/sys:String&gt;</c>.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// The guard reads the quoted literals as well as the text of a resource
+    /// element. The text of a resource element is where the Arabic captions of
+    /// the application actually live, so a guard that read only the quoted
+    /// literals would not have seen them.
+    /// </para>
+    /// <para>
+    /// The guard was widened, never weakened: every literal it checked before
+    /// is still checked.
+    /// </para>
+    /// </remarks>
+    private static IEnumerable<string> ExtractResourceElementText(string text)
+    {
+        var pattern = new Regex(
+            @"<sys:String\b[^>]*>(?<value>[^<]*)</sys:String>",
+            RegexOptions.Compiled);
+
+        foreach (Match match in pattern.Matches(text))
+        {
+            yield return match.Groups["value"].Value;
+        }
     }
 
     /// <summary>

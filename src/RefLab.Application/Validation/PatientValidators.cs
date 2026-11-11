@@ -109,6 +109,10 @@ public sealed class RegisterPatientValidator : AbstractValidator<RegisterPatient
             .NotEmpty()
             .WithMessage("The patient name is required.");
 
+        RuleFor(request => request.Sex)
+            .IsInEnum()
+            .WithMessage("The patient's sex is not one of the recorded values.");
+
         RuleFor(request => request.Age)
             .GreaterThanOrEqualTo(0m)
             .When(request => request.Age.HasValue)
@@ -121,6 +125,24 @@ public sealed class RegisterPatientValidator : AbstractValidator<RegisterPatient
         RuleFor(request => request.CurrencyCode)
             .Matches("^[A-Za-z]{3}$")
             .WithMessage("The currency code must be three letters.");
+
+        // The legacy accession number is a fixed thirteen-character value.
+        // Its layout is a hard contract of the legacy system and is enforced
+        // again by the domain value object.
+        RuleFor(request => request.LegacyOrderIdentifier)
+            .Length(13)
+            .When(request => request.LegacyOrderIdentifier is not null)
+            .WithMessage("The legacy order identifier must be exactly 13 characters long.");
+
+        RuleFor(request => request.ReferringPartyCode)
+            .MaximumLength(16)
+            .When(request => request.ReferringPartyCode is not null)
+            .WithMessage("The referring party code cannot be longer than 16 characters.");
+
+        RuleFor(request => request.ReferringPhysicianCode)
+            .MaximumLength(16)
+            .When(request => request.ReferringPhysicianCode is not null)
+            .WithMessage("The physician code cannot be longer than 16 characters.");
     }
 }
 
@@ -167,5 +189,51 @@ public sealed class GetPatientHistoryValidator : AbstractValidator<GetPatientHis
         RuleFor(request => request.PatientId)
             .NotEmpty()
             .WithMessage("The patient identifier is required.");
+    }
+}
+
+/// <summary>
+/// Validates the attachment of the composite order identifier to an order.
+/// </summary>
+public sealed class AttachOrderIdentifierValidator : AbstractValidator<AttachOrderIdentifierCommand>
+{
+    /// <summary>Initialises a new validator.</summary>
+    public AttachOrderIdentifierValidator()
+    {
+        RuleFor(request => request.OrderId)
+            .NotEmpty()
+            .WithMessage("The order identifier is required.");
+
+        RuleFor(request => request.PersonKey)
+            .NotEmpty()
+            .WithMessage("The person key is required.");
+
+        RuleFor(request => request.PersonKey)
+            .Length(2)
+            .WithMessage("The person key must be exactly 2 characters long.");
+
+        RuleFor(request => request.LeadingSegment)
+            .NotEmpty()
+            .WithMessage("The leading segment is required.");
+
+        RuleFor(request => request.LeadingSegment)
+            .Length(2)
+            .WithMessage("The leading segment must be exactly 2 characters long.");
+
+        RuleFor(request => request.MiddleSegment)
+            .NotEmpty()
+            .WithMessage("The middle segment is required.");
+
+        RuleFor(request => request.MiddleSegment)
+            .Length(5)
+            .WithMessage("The middle segment must be exactly 5 characters long.");
+
+        RuleFor(request => request.DisplayCode)
+            .NotEmpty()
+            .WithMessage("The display code is required.");
+
+        RuleFor(request => request.DisplayCode)
+            .Length(3)
+            .WithMessage("The display code must be exactly 3 characters long.");
     }
 }

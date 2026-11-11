@@ -1,15 +1,35 @@
 <!--
     The light theme of the Ref Lab presentation layer.
 
-    The palette follows the reference product: a dark blue application chrome,
-    a light working surface, and a small number of saturated accent colours
-    used for the action buttons of the command rows.
+    This dictionary is the design system of the application. It holds the
+    palette, the typography and every shared control style, so that a screen
+    never defines a colour, a font or a control appearance of its own: it
+    composes the shared resources instead.
+
+    The visual language is the one the laboratory works in: a dark blue
+    application chrome around a light working surface, yellow header bands
+    that name each panel, a three-tier action colouring — green for a
+    standard action, orange for the primary action of a row, blue for a
+    secondary action — and grids whose column headers are blue.
+
+    Every style here is shared by the whole application. A screen-specific
+    style belongs to the screen; a style that more than one screen needs
+    belongs here.
 -->
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <!-- Palette -->
+    <!--
+        Palette.
+
+        The first block is the working palette the application already used.
+        The second block is the reference palette: the colours the laboratory's
+        own screens use for their header bands, their action tiers, their grid
+        headers and their data-entry fields. Both blocks are addressed by
+        role, never by literal colour, so that the dark theme can override a
+        role without touching a single style.
+    -->
     <Color x:Key="ChromeColor">#FF1F4E79</Color>
     <Color x:Key="PanelColor">#FFDCE6F1</Color>
     <Color x:Key="SurfaceColor">#FFFFFFFF</Color>
@@ -18,6 +38,17 @@
     <Color x:Key="DangerColor">#FFB71C1C</Color>
     <Color x:Key="TextColor">#FF1A1A1A</Color>
     <Color x:Key="MutedTextColor">#FF5A5A5A</Color>
+
+    <Color x:Key="HeaderBandColor">#FFFFC43D</Color>
+    <Color x:Key="ActionGreenColor">#FF7CB342</Color>
+    <Color x:Key="ActionOrangeColor">#FFF5A623</Color>
+    <Color x:Key="ActionBlueColor">#FF3E7CB1</Color>
+    <Color x:Key="GridHeaderColor">#FF2E75B6</Color>
+    <Color x:Key="FieldFillColor">#FFFFF59D</Color>
+    <Color x:Key="FieldLabelColor">#FF1F4E79</Color>
+    <Color x:Key="SurfaceAltColor">#FFF4F8FC</Color>
+    <Color x:Key="BorderColor">#FF1F4E79</Color>
+    <Color x:Key="ChromeDeepColor">#FF16324F</Color>
 
     <SolidColorBrush x:Key="ChromeBrush" Color="{StaticResource ChromeColor}" />
     <SolidColorBrush x:Key="PanelBrush" Color="{StaticResource PanelColor}" />
@@ -28,11 +59,39 @@
     <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}" />
     <SolidColorBrush x:Key="MutedTextBrush" Color="{StaticResource MutedTextColor}" />
 
+    <SolidColorBrush x:Key="HeaderBandBrush" Color="{StaticResource HeaderBandColor}" />
+    <SolidColorBrush x:Key="ActionGreenBrush" Color="{StaticResource ActionGreenColor}" />
+    <SolidColorBrush x:Key="ActionOrangeBrush" Color="{StaticResource ActionOrangeColor}" />
+    <SolidColorBrush x:Key="ActionBlueBrush" Color="{StaticResource ActionBlueColor}" />
+    <SolidColorBrush x:Key="GridHeaderBrush" Color="{StaticResource GridHeaderColor}" />
+    <SolidColorBrush x:Key="FieldFillBrush" Color="{StaticResource FieldFillColor}" />
+    <SolidColorBrush x:Key="FieldLabelBrush" Color="{StaticResource FieldLabelColor}" />
+    <SolidColorBrush x:Key="SurfaceAltBrush" Color="{StaticResource SurfaceAltColor}" />
+    <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}" />
+    <SolidColorBrush x:Key="ChromeDeepBrush" Color="{StaticResource ChromeDeepColor}" />
+
     <!-- Typography -->
     <FontFamily x:Key="UiFontFamily">Segoe UI</FontFamily>
     <FontFamily x:Key="ArabicFontFamily">Segoe UI</FontFamily>
     <sys:Double x:Key="UiFontSize">13</sys:Double>
     <sys:Double x:Key="HeadingFontSize">17</sys:Double>
+    <sys:Double x:Key="SubHeadingFontSize">14</sys:Double>
+
+    <!--
+        Spacing.
+
+        The screen paddings and gaps come from here rather than from literal
+        numbers in the views, so that a screen reads the same density as every
+        other screen.
+    -->
+    <sys:Double x:Key="SpaceXs">2</sys:Double>
+    <sys:Double x:Key="SpaceSm">4</sys:Double>
+    <sys:Double x:Key="SpaceMd">8</sys:Double>
+    <sys:Double x:Key="SpaceLg">12</sys:Double>
+    <Thickness x:Key="PanelPadding">8</Thickness>
+    <Thickness x:Key="ChromePadding">8,4</Thickness>
+    <Thickness x:Key="FieldPadding">3,2</Thickness>
+    <Thickness x:Key="ActionPadding">10,4</Thickness>
 
     <!-- Base text -->
     <Style x:Key="BaseTextStyle" TargetType="TextBlock">
@@ -48,8 +107,39 @@
         <Setter Property="Margin" Value="0,0,0,8" />
     </Style>
 
+    <Style x:Key="SubHeadingTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextStyle}">
+        <Setter Property="FontSize" Value="{StaticResource SubHeadingFontSize}" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Margin" Value="0,0,0,4" />
+    </Style>
+
     <Style x:Key="MutedTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextStyle}">
         <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}" />
+    </Style>
+
+    <!--
+        The panel header band.
+
+        A panel names itself on a yellow band, the way the laboratory's own
+        screens do. The band is a text block, so a panel header can carry any
+        content the screen needs.
+    -->
+    <Style x:Key="PanelHeaderStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextStyle}">
+        <Setter Property="Background" Value="{StaticResource HeaderBandBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource FieldLabelBrush}" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Padding" Value="6,3" />
+        <Setter Property="Margin" Value="0,0,0,6" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="PanelHeaderBorderStyle" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource HeaderBandBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="6,3" />
+        <Setter Property="Margin" Value="0,0,0,6" />
     </Style>
 
     <!-- Arabic surfaces: the Arabic panel of the patient work screen -->
@@ -59,42 +149,114 @@
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
+    <!--
+        The field label.
+
+        The laboratory labels a field on a blue chip beside the field itself.
+    -->
+    <Style x:Key="FieldLabelStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextStyle}">
+        <Setter Property="Background" Value="{StaticResource FieldLabelBrush}" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Padding" Value="6,2" />
+        <Setter Property="Margin" Value="0,0,4,0" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="ArabicFieldLabelStyle" TargetType="TextBlock" BasedOn="{StaticResource FieldLabelStyle}">
+        <Setter Property="FontFamily" Value="{StaticResource ArabicFontFamily}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+
+    <!--
+        The data-entry field.
+
+        The laboratory's own screens enter and read data in yellow fields, so
+        that the fields stand apart from the panels that hold them.
+    -->
+    <Style x:Key="LabFieldTextBoxStyle" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{StaticResource UiFontFamily}" />
+        <Setter Property="FontSize" Value="{StaticResource UiFontSize}" />
+        <Setter Property="Background" Value="{StaticResource FieldFillBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="{StaticResource FieldPadding}" />
+        <Setter Property="Margin" Value="4,2" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+
     <Style x:Key="ArabicValueStyle" TargetType="TextBox">
         <Setter Property="FontFamily" Value="{StaticResource ArabicFontFamily}" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Margin" Value="4,2" />
+        <Setter Property="Background" Value="{StaticResource FieldFillBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
     </Style>
 
     <!-- Containers -->
     <Style x:Key="PanelStyle" TargetType="Border">
         <Setter Property="Background" Value="{StaticResource PanelBrush}" />
-        <Setter Property="BorderBrush" Value="{StaticResource ChromeBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="Padding" Value="8" />
+        <Setter Property="Padding" Value="{StaticResource PanelPadding}" />
         <Setter Property="Margin" Value="0,0,8,8" />
     </Style>
 
     <Style x:Key="ChromePanelStyle" TargetType="Border">
         <Setter Property="Background" Value="{StaticResource ChromeBrush}" />
-        <Setter Property="Padding" Value="8,4" />
+        <Setter Property="Padding" Value="{StaticResource ChromePadding}" />
+    </Style>
+
+    <Style x:Key="DeepChromePanelStyle" TargetType="Border" BasedOn="{StaticResource ChromePanelStyle}">
+        <Setter Property="Background" Value="{StaticResource ChromeDeepBrush}" />
+    </Style>
+
+    <!--
+        The metric tile.
+
+        The statistics screen shows each indicator as a tile with a caption and
+        a chart action; the tile is the shared unit of that screen.
+    -->
+    <Style x:Key="MetricTileStyle" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource SurfaceBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="{StaticResource PanelPadding}" />
+        <Setter Property="Margin" Value="0,0,8,0" />
+    </Style>
+
+    <Style x:Key="MetricTileCaptionStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextStyle}">
+        <Setter Property="Background" Value="{StaticResource HeaderBandBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource FieldLabelBrush}" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Padding" Value="6,3" />
+        <Setter Property="Margin" Value="0,0,0,6" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="TextAlignment" Value="Center" />
     </Style>
 
     <!-- Inputs -->
     <Style x:Key="LabTextBoxStyle" TargetType="TextBox">
         <Setter Property="FontFamily" Value="{StaticResource UiFontFamily}" />
         <Setter Property="FontSize" Value="{StaticResource UiFontSize}" />
-        <Setter Property="Padding" Value="3,2" />
+        <Setter Property="Padding" Value="{StaticResource FieldPadding}" />
         <Setter Property="Margin" Value="4,2" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
     </Style>
 
     <Style x:Key="LabComboBoxStyle" TargetType="ComboBox">
         <Setter Property="FontFamily" Value="{StaticResource UiFontFamily}" />
         <Setter Property="FontSize" Value="{StaticResource UiFontSize}" />
-        <Setter Property="Padding" Value="3,2" />
+        <Setter Property="Padding" Value="{StaticResource FieldPadding}" />
         <Setter Property="Margin" Value="4,2" />
         <Setter Property="MinWidth" Value="120" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
     </Style>
 
     <Style x:Key="LabCheckBoxStyle" TargetType="CheckBox">
@@ -104,22 +266,45 @@
         <Setter Property="VerticalContentAlignment" Value="Center" />
     </Style>
 
-    <!-- Buttons: the action rows of the working screens -->
+    <!--
+        Buttons: the action rows of the working screens.
+
+        Three tiers, the way the laboratory's screens tier them: green for a
+        standard action, orange for the primary action of the row, blue for a
+        secondary action. A destructive action is red.
+    -->
     <Style x:Key="ActionButtonStyle" TargetType="Button">
         <Setter Property="FontFamily" Value="{StaticResource UiFontFamily}" />
         <Setter Property="FontSize" Value="{StaticResource UiFontSize}" />
-        <Setter Property="Padding" Value="10,4" />
+        <Setter Property="Padding" Value="{StaticResource ActionPadding}" />
         <Setter Property="Margin" Value="3" />
         <Setter Property="MinWidth" Value="86" />
-        <Setter Property="Background" Value="{StaticResource AccentBrush}" />
+        <Setter Property="Background" Value="{StaticResource ActionGreenBrush}" />
         <Setter Property="Foreground" Value="White" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="{StaticResource ChromeBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="0.88" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Opacity" Value="0.75" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="0.45" />
+                <Setter Property="Cursor" Value="Arrow" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <Style x:Key="PrimaryActionButtonStyle" TargetType="Button" BasedOn="{StaticResource ActionButtonStyle}">
-        <Setter Property="Background" Value="{StaticResource WarningBrush}" />
+        <Setter Property="Background" Value="{StaticResource ActionOrangeBrush}" />
         <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+
+    <Style x:Key="SecondaryActionButtonStyle" TargetType="Button" BasedOn="{StaticResource ActionButtonStyle}">
+        <Setter Property="Background" Value="{StaticResource ActionBlueBrush}" />
     </Style>
 
     <Style x:Key="DangerActionButtonStyle" TargetType="Button" BasedOn="{StaticResource ActionButtonStyle}">
@@ -131,7 +316,37 @@
         <Setter Property="FontFamily" Value="{StaticResource ArabicFontFamily}" />
     </Style>
 
-    <!-- Grids -->
+    <!-- Tabs -->
+    <Style x:Key="LabTabItemStyle" TargetType="TabItem">
+        <Setter Property="FontFamily" Value="{StaticResource UiFontFamily}" />
+        <Setter Property="FontSize" Value="{StaticResource UiFontSize}" />
+        <Setter Property="Padding" Value="10,4" />
+        <Setter Property="Margin" Value="2,0,2,0" />
+        <Setter Property="Background" Value="{StaticResource PanelBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+
+    <!--
+        Grids.
+
+        The column header is blue and carries the table's own headings, and
+        the rows alternate so that a long table can be read across.
+    -->
+    <Style x:Key="LabGridColumnHeaderStyle" TargetType="DataGridColumnHeader">
+        <Setter Property="Background" Value="{StaticResource GridHeaderBrush}" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontFamily" Value="{StaticResource UiFontFamily}" />
+        <Setter Property="FontSize" Value="{StaticResource UiFontSize}" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Padding" Value="6,4" />
+        <Setter Property="BorderBrush" Value="{StaticResource SurfaceBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+
     <Style x:Key="LabDataGridStyle" TargetType="DataGrid">
         <Setter Property="FontFamily" Value="{StaticResource UiFontFamily}" />
         <Setter Property="FontSize" Value="{StaticResource UiFontSize}" />
@@ -141,13 +356,41 @@
         <Setter Property="HeadersVisibility" Value="Column" />
         <Setter Property="RowHeaderWidth" Value="0" />
         <Setter Property="Background" Value="{StaticResource SurfaceBrush}" />
-        <Setter Property="AlternatingRowBackground" Value="#FFF4F8FC" />
+        <Setter Property="AlternatingRowBackground" Value="{StaticResource SurfaceAltBrush}" />
+        <Setter Property="ColumnHeaderStyle" Value="{StaticResource LabGridColumnHeaderStyle}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
     </Style>
 
     <Style x:Key="LabListViewStyle" TargetType="ListView">
         <Setter Property="FontFamily" Value="{StaticResource UiFontFamily}" />
         <Setter Property="FontSize" Value="{StaticResource UiFontSize}" />
         <Setter Property="Background" Value="{StaticResource SurfaceBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+
+    <!--
+        The result cells.
+
+        The reference result sheet shows the normal range of the analyte in
+        green and the high/low flag in amber, so that an abnormal row is
+        recognisable without reading it.
+    -->
+    <Style x:Key="LabRangeCellStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextStyle}">
+        <Setter Property="Foreground" Value="{StaticResource AccentBrush}" />
+    </Style>
+
+    <Style x:Key="LabFlagCellStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextStyle}">
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding LowHighFlag}" Value="High">
+                <Setter Property="Foreground" Value="{StaticResource WarningBrush}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding LowHighFlag}" Value="Low">
+                <Setter Property="Foreground" Value="{StaticResource WarningBrush}" />
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
 
 </ResourceDictionary>

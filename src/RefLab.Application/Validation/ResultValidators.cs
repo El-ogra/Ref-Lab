@@ -139,3 +139,41 @@ public sealed class HandOverResultsValidator : AbstractValidator<HandOverResults
             .WithMessage("The settled amount cannot be negative.");
     }
 }
+
+/// <summary>
+/// Validates the entry of a derived ratio result.
+/// </summary>
+public sealed class EnterDerivedRatioValidator : AbstractValidator<EnterDerivedRatioCommand>
+{
+    /// <summary>Initialises a new validator.</summary>
+    public EnterDerivedRatioValidator()
+    {
+        RuleFor(request => request.OrderId)
+            .NotEmpty()
+            .WithMessage("The order identifier is required.");
+
+        RuleFor(request => request.NumeratorTestCode)
+            .GreaterThan(0)
+            .WithMessage("The numerator test code must be positive.");
+
+        RuleFor(request => request.DenominatorTestCode)
+            .GreaterThan(0)
+            .WithMessage("The denominator test code must be positive.");
+
+        RuleFor(request => request.RatioTestCode)
+            .GreaterThan(0)
+            .WithMessage("The ratio test code must be positive.");
+
+        RuleFor(request => request.NumeratorTestCode)
+            .NotEqual(request => request.DenominatorTestCode)
+            .WithMessage("The numerator and the denominator must be different tests.");
+
+        RuleFor(request => request.RatioTestCode)
+            .NotEqual(request => request.NumeratorTestCode)
+            .WithMessage("The ratio must be entered on a different test than the numerator.");
+
+        RuleFor(request => request.RatioTestCode)
+            .NotEqual(request => request.DenominatorTestCode)
+            .WithMessage("The ratio must be entered on a different test than the denominator.");
+    }
+}

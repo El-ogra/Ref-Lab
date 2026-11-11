@@ -66,6 +66,9 @@ public sealed record EmptyReportDto(
 /// <summary>
 /// The invoice of a patient order.
 /// </summary>
+/// <summary>
+/// The invoice of a patient order.
+/// </summary>
 public sealed record InvoiceDto(
     Guid OrderId,
     string? LegacyIdentifier,
@@ -73,6 +76,7 @@ public sealed record InvoiceDto(
     string CurrencyCode,
     decimal TotalPrice,
     decimal Discount,
+    decimal AmountPaid,
     decimal AmountDue,
     IReadOnlyList<string> Lines,
     RenderedDocumentDto? Document);

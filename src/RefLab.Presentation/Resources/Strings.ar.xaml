@@ -45,6 +45,7 @@
     <sys:String x:Key="Ar.PatientPanel.Transfer">تحويل</sys:String>
     <sys:String x:Key="Ar.PatientPanel.NotificationState">حالة الاعلام</sys:String>
     <sys:String x:Key="Ar.PatientPanel.RequestedTests">الاختبارات المطلوبة</sys:String>
+    <sys:String x:Key="Ar.PatientPanel.ReferringParty">الجهة المحيلة</sys:String>
 
     <!-- Command labels -->
     <sys:String x:Key="Ar.Command.Save">حفظ</sys:String>

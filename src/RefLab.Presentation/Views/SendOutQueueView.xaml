@@ -27,7 +27,7 @@
 
                 <DockPanel Grid.Column="0" Margin="0,0,8,0">
                     <StackPanel DockPanel.Dock="Top">
-                        <CheckBox Style="{StaticResource LabCheckBoxStyle}" Content="Pending only" IsChecked="{Binding PendingOnly}" />
+                        <CheckBox Style="{StaticResource LabCheckBoxStyle}" Content="{StaticResource Command.PendingOnly}" IsChecked="{Binding PendingOnly}" />
                         <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
                     </StackPanel>
                     <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding Requests}" SelectedItem="{Binding SelectedRequest, Mode=TwoWay}">

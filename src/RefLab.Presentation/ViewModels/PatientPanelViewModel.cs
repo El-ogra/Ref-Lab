@@ -68,6 +68,19 @@ public sealed partial class PatientPanelViewModel : ObservableObject
     [ObservableProperty]
     private string? _referringPhysicianCode;
 
+    /// <summary>
+    /// The code of the referring party the order was received from.
+    /// </summary>
+    /// <remarks>
+    /// The referring party is the counterparty the laboratory received the
+    /// order from — a clinic, a practice or another laboratory. The commission
+    /// the laboratory pays on the order is computed on the base amount of the
+    /// orders it received from that party, so the code is recorded with the
+    /// order when the order is created.
+    /// </remarks>
+    [ObservableProperty]
+    private string? _referringPartyCode;
+
     /// <summary>The reception note of the patient.</summary>
     [ObservableProperty]
     private string? _receptionNote;

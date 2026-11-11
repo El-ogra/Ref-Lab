@@ -201,7 +201,8 @@ public sealed partial class PatientWorkViewModel : ViewModelBase, INavigationAwa
                 Patient.ReferringPhysicianCode,
                 Patient.ReceptionNote,
                 LabCurrency.Code,
-                CreateOrder: true));
+                CreateOrder: true,
+                ReferringPartyCode: Patient.ReferringPartyCode));
 
             OrderId = order.Id;
             PatientId = order.PatientId;
@@ -236,9 +237,20 @@ public sealed partial class PatientWorkViewModel : ViewModelBase, INavigationAwa
             return;
         }
 
+        if (OrderId is null)
+        {
+            ErrorMessage = "Register the patient before allocating the order identifier.";
+            return;
+        }
+
         await RunAsync(async () =>
         {
-            var identifier = await _executor.SendAsync(new AllocateOrderIdentifierQuery(
+            // The identifier is attached to the order itself, so that it is
+            // recorded rather than merely displayed: it is the accession
+            // number the laboratory files the visit under and the value
+            // printed on the specimen label as the barcode.
+            var identifier = await _executor.SendAsync(new AttachOrderIdentifierCommand(
+                OrderId!.Value,
                 value.Substring(2, 2),
                 value.Substring(0, 2),
                 value.Substring(4, 5),

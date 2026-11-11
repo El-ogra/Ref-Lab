@@ -53,7 +53,10 @@ public sealed record PatientOrderDto(
     string CurrencyCode,
     decimal? TotalPrice,
     decimal? TotalPriceAfterDiscount,
+    decimal? CommissionBaseAmount,
     string? Barcode,
+    int? ReferringPartyId,
+    string? TreatingPhysicianCode,
     bool IsComplete,
     RecordStatus Status,
     IReadOnlyList<OrderTestDto> Tests)
@@ -71,7 +74,10 @@ public sealed record PatientOrderDto(
             order.CurrencyCode,
             order.TotalPrice?.Amount,
             order.TotalPriceAfterDiscount?.Amount,
+            order.CommissionBaseAmount?.Amount,
             order.Barcode,
+            order.ReferringPartyId,
+            order.TreatingPhysicianCode,
             order.IsComplete,
             order.Status,
             order.Tests.Select(OrderTestDto.FromDomain).ToArray());
@@ -80,6 +86,15 @@ public sealed record PatientOrderDto(
 /// <summary>
 /// A requested test as presented to the application layer.
 /// </summary>
+/// <remarks>
+/// The reference range, the normal range and the high/low flag are carried
+/// separately because the result sheet shows them separately: a column for the
+/// flag that reads high or low, a column for the range that reads as the
+/// sentence the laboratory published ("Male Up To 40 U/L"), and a column for
+/// the critical range. All three are read from the reference snapshot frozen
+/// onto the order row, never from the live range table, so that a later change
+/// to the catalogue cannot alter a result that has already been reported.
+/// </remarks>
 public sealed record OrderTestDto(
     Guid Id,
     Guid OrderId,
@@ -96,6 +111,9 @@ public sealed record OrderTestDto(
     IReadOnlyList<string?> AdditionalResults,
     string? Classification,
     string? ClassificationText,
+    string? LowHighFlag,
+    string? NormalRangeText,
+    string? CriticalRangeText,
     ResultState State,
     bool IsReviewed,
     bool IsPrinted,
@@ -126,6 +144,18 @@ public sealed record OrderTestDto(
             test.Classification is null
                 ? null
                 : test.ReferenceSnapshot?.Interval.ExceptionTextFor(test.Classification.Value),
+
+            // The flag carries the two abnormal directions only. A normal or a
+            // critical result is shown through the classification and the
+            // exception text, not through a high/low flag.
+            test.Classification is ResultClassification.High or ResultClassification.Low
+                ? test.Classification.Value.ToString()
+                : null,
+
+            // The normal range is the human-readable sentence the laboratory
+            // published for the analyte, frozen onto the order row.
+            test.ReferenceSnapshot?.Interval.RangeText,
+            test.ReferenceSnapshot?.Interval.CriticalInterval.CriticalRangeText,
             test.State,
             test.IsResultReviewed,
             test.IsResultPrinted,

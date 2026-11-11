@@ -16,6 +16,11 @@
 
     <!-- Screen titles -->
     <sys:String x:Key="App.Title">Ref Lab</sys:String>
+    <sys:String x:Key="SignIn.Title">Sign in to the laboratory</sys:String>
+    <sys:String x:Key="Shell.Database">SQL DATABASE</sys:String>
+    <sys:String x:Key="Shell.UserName">User Name</sys:String>
+    <sys:String x:Key="Shell.LastLogin">Last Login</sys:String>
+    <sys:String x:Key="Shell.Today">Today</sys:String>
     <sys:String x:Key="Screen.SignIn">Sign-in</sys:String>
     <sys:String x:Key="Screen.PatientWork">Patient work</sys:String>
     <sys:String x:Key="Screen.TestCatalogue">Test catalogue</sys:String>
@@ -30,6 +35,35 @@
     <sys:String x:Key="Screen.Statistics">Statistics and performance</sys:String>
     <sys:String x:Key="Screen.Audit">Audit trail and attendance</sys:String>
 
+    <!--
+        Panel headings.
+
+        A panel names itself on a header band. The wording belongs to the
+        resource dictionary, like every other caption the application shows.
+    -->
+    <sys:String x:Key="Panel.CatalogueTitle">Routine test menu</sys:String>
+    <sys:String x:Key="Panel.RoutineTests">Routine Tests</sys:String>
+    <sys:String x:Key="Panel.SendOutOnly">Send-out only</sys:String>
+    <sys:String x:Key="Panel.SelectedTest">Selected Test</sys:String>
+    <sys:String x:Key="Panel.Results">Results</sys:String>
+    <sys:String x:Key="Panel.MethodSheet">Method sheet</sys:String>
+    <sys:String x:Key="Panel.Derivation">Derivation</sys:String>
+    <sys:String x:Key="Panel.EnterResult">Enter result</sys:String>
+    <sys:String x:Key="Panel.Statistics.ByMonth">By month</sys:String>
+    <sys:String x:Key="Panel.Statistics.BySex">By sex</sys:String>
+    <sys:String x:Key="Panel.Statistics.BySubGroup">By sub-group</sys:String>
+    <sys:String x:Key="Panel.TestDefinitions">Test definitions</sys:String>
+    <sys:String x:Key="Panel.ReferenceRanges">Reference ranges</sys:String>
+    <sys:String x:Key="Panel.UnitsAndConversions">Units and conversions</sys:String>
+    <sys:String x:Key="Panel.Abbreviations">Abbreviations</sys:String>
+    <sys:String x:Key="Panel.SubGroups">Sub-groups</sys:String>
+    <sys:String x:Key="Panel.Cultures">Cultures</sys:String>
+    <sys:String x:Key="Panel.Antibiotics">Antibiotics</sys:String>
+    <sys:String x:Key="Panel.Farms">Farms</sys:String>
+    <sys:String x:Key="Panel.ReferringParties">Referring parties</sys:String>
+    <sys:String x:Key="Panel.TreatingPhysicians">Treating physicians</sys:String>
+    <sys:String x:Key="Panel.PriceLists">Price lists</sys:String>
+
     <!-- Commands -->
     <sys:String x:Key="Command.Save">Save</sys:String>
     <sys:String x:Key="Command.Search">Search</sys:String>
@@ -40,6 +74,14 @@
     <sys:String x:Key="Command.Confirm">Confirm</sys:String>
     <sys:String x:Key="Command.Exit">Exit</sys:String>
     <sys:String x:Key="Command.Logout">Log out</sys:String>
+    <sys:String x:Key="Command.Login">Login</sys:String>
+    <sys:String x:Key="Command.All">All</sys:String>
+    <sys:String x:Key="Command.AddSelectTest">Add select test</sys:String>
+    <sys:String x:Key="Command.PendingOnly">Pending only</sys:String>
+    <sys:String x:Key="Command.DeriveHaematocrit">Haematocrit</sys:String>
+    <sys:String x:Key="Command.DeriveHaemoglobinPercentage">Haemoglobin %</sys:String>
+    <sys:String x:Key="Command.DeriveSensitivityIndex">Sensitivity index</sys:String>
+    <sys:String x:Key="Command.DeriveProthrombinControl">Prothrombin control</sys:String>
     <sys:String x:Key="Command.Refresh">Refresh</sys:String>
     <sys:String x:Key="Command.Add">Add</sys:String>
     <sys:String x:Key="Command.Apply">Apply</sys:String>
@@ -60,6 +102,9 @@
     <sys:String x:Key="Column.Result">Result</sys:String>
     <sys:String x:Key="Column.Status">Status</sys:String>
     <sys:String x:Key="Column.Unit">Unit</sys:String>
+    <sys:String x:Key="Column.LowOrHigh">L or H</sys:String>
+    <sys:String x:Key="Column.NormalRange">Normal Ranges</sys:String>
+    <sys:String x:Key="Column.CriticalRange">Critical Range</sys:String>
     <sys:String x:Key="Column.NormalRange">Normal range</sys:String>
     <sys:String x:Key="Column.Amount">Amount</sys:String>
     <sys:String x:Key="Column.Date">Date</sys:String>
@@ -74,6 +119,24 @@
     <sys:String x:Key="Column.Permissions">Permissions</sys:String>
     <sys:String x:Key="Column.SampleType">Sample type</sys:String>
     <sys:String x:Key="Column.DestinationLab">Destination laboratory</sys:String>
+
+    <!--
+        Column headings the catalogue, the parties and the report-setup views
+        use. These keys were asked for by the views but were never defined, so
+        the screens that use them could not be opened.
+    -->
+    <sys:String x:Key="Column.SimpleName">Simple Name</sys:String>
+    <sys:String x:Key="Column.SubGroupCode">Sub-group Code</sys:String>
+    <sys:String x:Key="Column.SubGroupName">Sub-group Name</sys:String>
+    <sys:String x:Key="Column.PatientPrice">Patient Price</sys:String>
+    <sys:String x:Key="Column.TestCode">Test Code</sys:String>
+    <sys:String x:Key="Column.SexScope">Sex Scope</sys:String>
+    <sys:String x:Key="Column.AgeUnit">Age Unit</sys:String>
+    <sys:String x:Key="Column.Abbreviation">Abbreviation</sys:String>
+    <sys:String x:Key="Column.ArabicName">Arabic Name</sys:String>
+    <sys:String x:Key="Column.Phone">Phone</sys:String>
+    <sys:String x:Key="Column.PrinterRole">Printer Role</sys:String>
+    <sys:String x:Key="Column.PrinterName">Printer Name</sys:String>
 
     <!-- Field labels -->
     <sys:String x:Key="Field.OperatorName">Operator name</sys:String>

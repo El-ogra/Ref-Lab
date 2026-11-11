@@ -5,6 +5,7 @@ using RefLab.Application.Behaviors;
 using RefLab.Domain.Identity;
 using RefLab.Domain.Billing;
 using RefLab.Domain.Patients;
+using RefLab.Domain.Rules;
 
 namespace RefLab.Application.Features.Billing;
 
@@ -74,6 +75,32 @@ public sealed class RunStockTakeByPhysicianOrPartyHandler : IRequestHandler<RunS
             .Where(order => order.TotalPriceAfterDiscount is not null)
             .Sum(order => order.TotalPriceAfterDiscount!.Amount);
 
+        // The commission is earned by the referring party on the base amount of
+        // the orders it referred. The rule itself belongs to the domain, so it
+        // is not re-implemented here.
+        var commission = 0m;
+
+        var parties = _db.Set<ReferringParty>().ToArray();
+
+        foreach (var order in orders)
+        {
+            if (order.ReferringPartyId is null || order.CommissionBaseAmount is null)
+            {
+                continue;
+            }
+
+            var party = parties.FirstOrDefault(candidate => candidate.Id == order.ReferringPartyId.Value);
+
+            if (party?.CommissionRate is null)
+            {
+                continue;
+            }
+
+            commission += CommissionCalculator
+                .Calculate(party.CommissionRate, order.CommissionBaseAmount)
+                .Amount;
+        }
+
         return Task.FromResult<StockTakeDto>(new StockTakeDto(
             request.From,
             request.To,
@@ -82,7 +109,7 @@ public sealed class RunStockTakeByPhysicianOrPartyHandler : IRequestHandler<RunS
             orders.Length,
             gross,
             discounted,
-            0m,
+            commission,
             request.CurrencyCode));
     }
 }

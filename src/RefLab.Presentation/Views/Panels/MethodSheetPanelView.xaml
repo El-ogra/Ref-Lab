@@ -16,7 +16,7 @@
         screen. It is a panel and not a screen of its own.
     -->
     <DockPanel Margin="6">
-        <TextBlock DockPanel.Dock="Top" Text="Method sheet" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+        <TextBlock DockPanel.Dock="Top" Text="{StaticResource Panel.MethodSheet}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
 
         <StackPanel DockPanel.Dock="Top">
             <TextBlock Text="{Binding MethodSheet.TestName}" Style="{StaticResource BaseTextStyle}" FontWeight="SemiBold" />

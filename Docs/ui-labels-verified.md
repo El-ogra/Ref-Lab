@@ -373,4 +373,70 @@ string:
 
 ---
 
+## 10. Registration from the foundational-phase execution (Phases 01, 02 and 03)
+
+**Document ID:** RL-UI-001 · Section 10
+**Added:** 2026-11-11
+**Approved by:** the project owner, in the foundational-phase execution directive
+
+The foundational phases introduced **no new Arabic user-interface literal**.
+Every Arabic caption they needed already existed in this document and was
+reused exactly as recorded here, in particular:
+
+| # | Arabic string | Where it is used in Ref Lab | Reused from |
+|---:|---|---|---|
+| 8 | «عالٍ» | The high flag of a result on the result sheet | Section 9.2 |
+| 9 | «منخفضة» | The low flag of a result on the result sheet | Section 9.2 |
+| 10 | «حرجة» | The critical flag of a result on the result sheet | Section 9.2 |
+| 11 | «رقم الحجز» | The reservation number of the patient panel | Section 7.1 |
+| 12 | «رقم الطلب» | The request number of the patient panel | Section 7.1 |
+| 13 | «حالة السجل» | The record status of the patient panel | Section 7.1 |
+| 14 | «الجنس» | The sex of the patient panel | Section 7.1 |
+| 15 | «العمر» | The age of the patient panel | Section 7.1 |
+| 16 | «سنوات» | The age unit of the patient panel | Section 7.1 |
+| 17 | «العنوان» | The address of the patient panel | Section 7.1 |
+| 18 | «ملاحظات» | The notes of the patient panel | Section 7.1 |
+| 19 | «رقم الهاتف» | The telephone number of the patient panel | Section 7.1 |
+| 20 | «اسم صاحب الحساب» | The account-holder name of the patient panel | Section 7.1 |
+| 21 | «تحويل» | The transfer flag of the patient panel | Section 7.1 |
+| 22 | «حالة الاعلام» | The notification state of the patient panel | Section 7.1 |
+| 23 | «الاختبارات المطلوبة» | The requested tests of the patient panel | Section 7.1 |
+| 24 | «بيانات المريض» | The title of the patient panel | Section 7.1 |
+
+### 10.1 A string the application shipped without being registered
+
+| # | Arabic string | Provenance | Where it is used in Ref Lab |
+|---:|---|---|---|
+| 25 | «باركود» | The **application itself** — the string has been in use in the patient panel since the patient panel was written, and the reference system labels the same field «باركود» on its own specimen label and patient panel. It was never recorded here, which left the inventory incomplete. | The barcode caption of the patient panel — the key `Ar.Command.Barcode` |
+
+> **Note.** This string was found by the strengthened `B9` guard, which now
+> also reads the text content of a XAML resource element. The guard used to
+> read only quoted literals, so the caption of a XAML string resource escaped
+> it entirely. The string is registered here, and the guard was widened rather
+> than the string removed, so that the safeguard covers the whole surface it
+> was written to protect.
+
+### 10.2 A new label the foundational phases needed
+
+| # | Arabic string | Provenance | Where it is used in Ref Lab |
+|---:|---|---|---|
+| 26 | «الجهة المحيلة» | **Formulated for this execution.** The reference system's patient panel does not carry a referring-party field, so the wording could not be transcribed from it. «الجهة المحيلة» is the term the laboratory's own documentation and the wider medical literature use for the referring party — the clinic, practice or laboratory that referred the order to the laboratory. It is consistent with the existing vocabulary of this document, which names the referring party in the printed report as `Ref. by`. | The referring-party caption of the patient panel — the key `Ar.PatientPanel.ReferringParty` |
+
+> **Note.** The referring party is the counterparty the laboratory received the
+> order from; the commission it pays is computed on the base amount of the
+> orders it received from that party. The order needed the field, so the
+> patient panel — the surface on which the order is captured — needed a label
+> for it.
+
+### 10.3 The strengthened B9 guard
+
+The `B9` guard in
+`tests/RefLab.Application.Tests/Architecture/PresentationLayerBoundaryTests.cs`
+now reads **both** quoted string literals and the text content of a XAML
+resource element (`<sys:String>…</sys:String>`). The guard was widened, never
+weakened: every Arabic literal it checked before is still checked, and the
+strings the resource dictionaries carry are now checked as well.
+
+---
+
 **End of UI Labels extraction.**

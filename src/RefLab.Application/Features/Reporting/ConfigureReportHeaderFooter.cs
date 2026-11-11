@@ -60,9 +60,12 @@ public sealed class ConfigureReportHeaderFooterHandler : IRequestHandler<Configu
                 request.GlobalHeaderSecondaryText ?? settings.GlobalHeaderSecondaryText);
         }
 
+        // The report footer belongs to the report. It is a document element of
+        // its own and must not overwrite the footer of the connection receipt,
+        // which is a different document.
         if (request.FooterText is not null)
         {
-            settings.SetConnectionReceipt(settings.ConnectionReceiptHeader, request.FooterText);
+            settings.SetReportFooterText(request.FooterText);
         }
 
         _unitOfWork.Update(settings);

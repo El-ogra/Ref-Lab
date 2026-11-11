@@ -16,6 +16,12 @@
         which were the raw storage flags of the order test row. Ref Lab keeps
         the state as a single value, ResultState, and shows it once; the three
         legacy flags are not reproduced as separate columns.
+
+        The sheet also shows the two columns the laboratory's own result sheet
+        shows beside the value: the high-or-low flag of the result and the
+        normal range that was in force for the analyte. Both are read from the
+        reference range frozen onto the order row, so they never change after
+        the result has been reported.
     -->
     <DataGrid Style="{StaticResource LabDataGridStyle}"
               ItemsSource="{Binding Tests}"
@@ -25,6 +31,10 @@
             <DataGridTextColumn Header="{StaticResource Column.TestAbbreviation}" Binding="{Binding TestSimpleName}" Width="140" />
             <DataGridTextColumn Header="{StaticResource Column.Result}" Binding="{Binding ResultText}" Width="110" />
             <DataGridTextColumn Header="{StaticResource Column.Unit}" Binding="{Binding TestUnit}" Width="90" />
+            <DataGridTextColumn Header="{StaticResource Column.LowOrHigh}" Binding="{Binding LowHighFlag}" Width="70"
+                                ElementStyle="{StaticResource LabFlagCellStyle}" />
+            <DataGridTextColumn Header="{StaticResource Column.NormalRange}" Binding="{Binding NormalRangeText}" Width="150"
+                                ElementStyle="{StaticResource LabRangeCellStyle}" />
             <DataGridTextColumn Header="{StaticResource Column.Status}" Binding="{Binding ClassificationText}" Width="110" />
             <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding State}" Width="90" />
             <DataGridTextColumn Header="{StaticResource Column.Amount}" Binding="{Binding Price}" Width="90" />

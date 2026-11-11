@@ -16,23 +16,30 @@
         to right, even when it sits beside the Arabic patient panel.
     -->
     <DockPanel Margin="8">
-        <TextBlock DockPanel.Dock="Top"
-                   Text="Routine test menu"
-                   Style="{StaticResource HeadingTextStyle}"
-                   HorizontalAlignment="Left" />
+        <!--
+            The panel names itself on a header band, the way the laboratory's
+            own catalogue panel does.
+        -->
+        <Border DockPanel.Dock="Top" Style="{StaticResource PanelHeaderBorderStyle}">
+            <TextBlock Text="{StaticResource Panel.CatalogueTitle}"
+                       Style="{StaticResource PanelHeaderStyle}" />
+        </Border>
 
         <Grid DockPanel.Dock="Top" Margin="0,0,0,6">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0"
-                     Style="{StaticResource LabTextBoxStyle}"
+            <TextBlock Grid.Column="0"
+                       Text="{StaticResource Panel.RoutineTests}"
+                       Style="{StaticResource FieldLabelStyle}" />
+            <TextBox Grid.Column="1"
+                     Style="{StaticResource LabFieldTextBoxStyle}"
                      Text="{Binding Filter, UpdateSourceTrigger=PropertyChanged}" />
-            <CheckBox Grid.Column="1"
+            <CheckBox Grid.Column="2"
                       Style="{StaticResource LabCheckBoxStyle}"
-                      Content="Send-out only"
+                      Content="{StaticResource Panel.SendOutOnly}"
                       IsChecked="{Binding SendOutOnly}" />
         </Grid>
 
@@ -60,7 +67,7 @@
 
             <!-- The selection -->
             <DockPanel Grid.Row="0" Grid.Column="1">
-                <TextBlock DockPanel.Dock="Top" Text="Selected Test" Style="{StaticResource BaseTextStyle}" FontWeight="SemiBold" />
+                <TextBlock DockPanel.Dock="Top" Text="{StaticResource Panel.SelectedTest}" Style="{StaticResource SubHeadingTextStyle}" />
                 <ListView ItemsSource="{Binding SelectedTests}"
                           Style="{StaticResource LabListViewStyle}">
                     <ListView.View>
@@ -75,9 +82,9 @@
                         Orientation="Horizontal"
                         HorizontalAlignment="Left"
                         Margin="0,6,0,0">
-                <Button Content="Add select test" Style="{StaticResource ActionButtonStyle}" />
-                <Button Content="Delete" Style="{StaticResource ActionButtonStyle}" />
-                <Button Content="All" Style="{StaticResource ActionButtonStyle}" />
+                <Button Content="{StaticResource Command.AddSelectTest}" Style="{StaticResource ActionButtonStyle}" />
+                <Button Content="{StaticResource Command.Delete}" Style="{StaticResource SecondaryActionButtonStyle}" />
+                <Button Content="{StaticResource Command.All}" Style="{StaticResource SecondaryActionButtonStyle}" />
             </StackPanel>
         </Grid>
     </DockPanel>

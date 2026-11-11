@@ -5,6 +5,7 @@ using RefLab.Application.Behaviors;
 using RefLab.Domain.Identity;
 using RefLab.Domain.Billing;
 using RefLab.Domain.Patients;
+using RefLab.Domain.Rules;
 
 namespace RefLab.Application.Features.Billing;
 
@@ -68,7 +69,9 @@ public sealed class RunPeriodStockTakeHandler : IRequestHandler<RunPeriodStockTa
                 continue;
             }
 
-            commission += party.CommissionRate.Apply(order.CommissionBaseAmount.Amount);
+            commission += CommissionCalculator
+                .Calculate(party.CommissionRate, order.CommissionBaseAmount)
+                .Amount;
         }
 
         return Task.FromResult<StockTakeDto>(new StockTakeDto(

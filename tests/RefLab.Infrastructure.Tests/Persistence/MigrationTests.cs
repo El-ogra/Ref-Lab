@@ -47,15 +47,54 @@ public class MigrationTests
             .ToArray();
 
     [Fact]
-    public void Exactly_one_initial_migration_exists()
+    public void The_baseline_migration_and_the_additive_migrations_exist()
     {
         using var database = new SqliteTestDatabase();
         using var context = database.CreateContext();
 
         var migrations = context.Database.GetMigrations().ToArray();
 
-        Assert.Single(migrations);
+        // The baseline migration creates the schema; every migration after it
+        // is additive — it adds a column or an index and never rewrites or
+        // drops what the baseline created. The assertion is deliberately
+        // explicit about that shape rather than merely counting migrations.
+        Assert.NotEmpty(migrations);
         Assert.EndsWith("_InitialCreate", migrations[0], StringComparison.Ordinal);
+
+        var additive = migrations.Skip(1).ToArray();
+
+        Assert.All(additive, migration =>
+            Assert.EndsWith("_AddReportFooterAndLayoutText", migration, StringComparison.Ordinal));
+    }
+
+    [Fact]
+    public void The_additive_migration_only_adds_columns()
+    {
+        using var context = CreateSqlServerContext();
+
+        var migrator = context.GetService<IMigrator>();
+
+        var migrations = context.Database.GetMigrations().ToArray();
+
+        Assert.True(migrations.Length >= 2, "The additive migration is missing.");
+
+        var script = migrator.GenerateScript(
+            fromMigration: migrations[0],
+            toMigration: migrations[^1]);
+
+        Assert.False(string.IsNullOrWhiteSpace(script));
+
+        // The additive migration must not rewrite or remove anything the
+        // baseline created: an existing laboratory database keeps every row
+        // it holds.
+        Assert.DoesNotContain("DROP COLUMN", script, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("DROP TABLE", script, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("RENAME COLUMN", script, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("ALTER COLUMN", script, StringComparison.OrdinalIgnoreCase);
+
+        // It adds exactly the two columns the model gained.
+        Assert.Contains("ADD [ReportFooterText]", script, StringComparison.Ordinal);
+        Assert.Contains("ADD [LayoutText]", script, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -179,7 +218,7 @@ public class MigrationTests
         using var database = new SqliteTestDatabase();
         using var context = database.CreateUninitializedContext();
 
-        var migrationId = context.Database.GetMigrations().Single();
+        var migrationIds = context.Database.GetMigrations().ToArray();
 
         // Stand in for an installation where the migration has already been
         // applied, so that the "nothing to do" path is exercised against a
@@ -188,10 +227,13 @@ public class MigrationTests
             "CREATE TABLE \"__EFMigrationsHistory\" (\"MigrationId\" TEXT NOT NULL "
             + "CONSTRAINT \"PK__EFMigrationsHistory\" PRIMARY KEY, \"ProductVersion\" TEXT NOT NULL);");
 
-        await context.Database.ExecuteSqlRawAsync(
-            "INSERT INTO \"__EFMigrationsHistory\" (\"MigrationId\", \"ProductVersion\") VALUES ({0}, {1});",
-            migrationId,
-            "8.0.33");
+        foreach (var migrationId in migrationIds)
+        {
+            await context.Database.ExecuteSqlRawAsync(
+                "INSERT INTO \"__EFMigrationsHistory\" (\"MigrationId\", \"ProductVersion\") VALUES ({0}, {1});",
+                migrationId,
+                "8.0.33");
+        }
 
         var initializer = new DatabaseInitializer(context);
 
@@ -208,7 +250,11 @@ public class MigrationTests
 
         var pending = (await context.Database.GetPendingMigrationsAsync()).ToArray();
 
-        Assert.Single(pending);
+        // The baseline migration creates the schema; the additive migration
+        // that follows it adds the two report columns. Both are pending on an
+        // empty database.
+        Assert.True(pending.Length >= 2, "The additive migration is missing.");
         Assert.EndsWith("_InitialCreate", pending[0], StringComparison.Ordinal);
+        Assert.EndsWith("_AddReportFooterAndLayoutText", pending[^1], StringComparison.Ordinal);
     }
 }

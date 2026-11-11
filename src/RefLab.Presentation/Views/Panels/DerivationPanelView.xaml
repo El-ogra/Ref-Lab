@@ -16,7 +16,7 @@
         displays what it returns; it never derives a value itself.
     -->
     <DockPanel Margin="6">
-        <TextBlock DockPanel.Dock="Top" Text="Derivation" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+        <TextBlock DockPanel.Dock="Top" Text="{StaticResource Panel.Derivation}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
 
         <StackPanel DockPanel.Dock="Top">
             <TextBlock Text="{StaticResource Field.Hemoglobin}" Style="{StaticResource BaseTextStyle}" />
@@ -28,8 +28,8 @@
                      Text="{Binding AgeYears, UpdateSourceTrigger=PropertyChanged}" />
 
             <StackPanel Orientation="Horizontal">
-                <Button Content="Haematocrit" Style="{StaticResource ActionButtonStyle}" Command="{Binding DeriveHematocritCommand}" />
-                <Button Content="Haemoglobin %" Style="{StaticResource ActionButtonStyle}" Command="{Binding DeriveHemoglobinPercentageCommand}" />
+                <Button Content="{StaticResource Command.DeriveHaematocrit}" Style="{StaticResource ActionButtonStyle}" Command="{Binding DeriveHematocritCommand}" />
+                <Button Content="{StaticResource Command.DeriveHaemoglobinPercentage}" Style="{StaticResource ActionButtonStyle}" Command="{Binding DeriveHemoglobinPercentageCommand}" />
             </StackPanel>
 
             <TextBlock Text="{StaticResource Field.PatientProthrombinTime}" Style="{StaticResource BaseTextStyle}" />
@@ -44,12 +44,12 @@
             <TextBlock Text="{StaticResource Field.ControlIndex}" Style="{StaticResource BaseTextStyle}" />
             <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ControlIndex, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Button Content="Sensitivity index" Style="{StaticResource ActionButtonStyle}" Command="{Binding DeriveInternationalSensitivityIndexCommand}" />
+            <Button Content="{StaticResource Command.DeriveSensitivityIndex}" Style="{StaticResource ActionButtonStyle}" Command="{Binding DeriveInternationalSensitivityIndexCommand}" />
 
             <TextBlock Text="{StaticResource Field.ControlTime}" Style="{StaticResource BaseTextStyle}" />
             <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ControlTime, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Button Content="Prothrombin control" Style="{StaticResource ActionButtonStyle}" Command="{Binding InterpolateProthrombinControlCommand}" />
+            <Button Content="{StaticResource Command.DeriveProthrombinControl}" Style="{StaticResource ActionButtonStyle}" Command="{Binding InterpolateProthrombinControlCommand}" />
         </StackPanel>
 
         <DataGrid ItemsSource="{Binding Results}" Style="{StaticResource LabDataGridStyle}" AutoGenerateColumns="False">

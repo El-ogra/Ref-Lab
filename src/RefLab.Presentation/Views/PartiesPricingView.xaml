@@ -20,7 +20,7 @@
 
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <TabControl Margin="8">
-                <TabItem Header="Referring parties">
+                <TabItem Header="{StaticResource Panel.ReferringParties}" Style="{StaticResource LabTabItemStyle}">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
@@ -36,7 +36,7 @@
                     </DockPanel>
                 </TabItem>
 
-                <TabItem Header="Treating physicians">
+                <TabItem Header="{StaticResource Panel.TreatingPhysicians}" Style="{StaticResource LabTabItemStyle}">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="90" Text="{Binding PhysicianCode, UpdateSourceTrigger=PropertyChanged}" />
@@ -53,7 +53,7 @@
                     </DockPanel>
                 </TabItem>
 
-                <TabItem Header="Price lists">
+                <TabItem Header="{StaticResource Panel.PriceLists}" Style="{StaticResource LabTabItemStyle}">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="180" Text="{Binding PriceListName, UpdateSourceTrigger=PropertyChanged}" />

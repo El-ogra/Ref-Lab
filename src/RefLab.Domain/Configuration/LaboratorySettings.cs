@@ -102,6 +102,30 @@ public sealed class LaboratorySettings
     /// <summary>The second global report header text.</summary>
     public string? GlobalHeaderSecondaryText { get; private set; }
 
+    /// <summary>
+    /// The footer text printed at the foot of every laboratory report.
+    /// </summary>
+    /// <remarks>
+    /// The report footer is a document element of its own. It was previously
+    /// written into <see cref="ConnectionReceiptFooter"/>, which is the footer
+    /// of the connection receipt — a different document — so configuring the
+    /// report silently destroyed the receipt footer. The two are now separate
+    /// settings.
+    /// </remarks>
+    public string? ReportFooterText { get; private set; }
+
+    /// <summary>
+    /// The layout text that accompanies the report body.
+    /// </summary>
+    /// <remarks>
+    /// The layout text is the text that describes the report layout itself. It
+    /// was previously written into <see cref="GlobalHeaderText"/>, which is the
+    /// laboratory identity printed above the report titles, so that configuring
+    /// the layout silently destroyed the identity header. The two are now
+    /// separate settings.
+    /// </remarks>
+    public string? LayoutText { get; private set; }
+
     /// <summary>The left report margin.</summary>
     public decimal LeftMargin { get; private set; }
 
@@ -183,6 +207,14 @@ public sealed class LaboratorySettings
         GlobalHeaderText = Normalize(header);
         GlobalHeaderSecondaryText = Normalize(secondaryHeader);
     }
+
+    /// <summary>Sets the footer text printed at the foot of every laboratory report.</summary>
+    public void SetReportFooterText(string? reportFooterText) =>
+        ReportFooterText = Normalize(reportFooterText);
+
+    /// <summary>Sets the layout text that accompanies the report body.</summary>
+    public void SetLayoutText(string? layoutText) =>
+        LayoutText = Normalize(layoutText);
 
     /// <summary>Sets the report margins.</summary>
     /// <exception cref="InvalidPatientOrderException">A margin is negative.</exception>

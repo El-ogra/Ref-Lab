@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.Globalization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using RefLab.Application.Abstractions;
@@ -58,6 +59,24 @@ public sealed partial class ShellViewModel : ViewModelBase
 
     /// <summary>Whether an operator is signed in.</summary>
     public bool IsAuthenticated => _currentUser.IsAuthenticated;
+
+    /// <summary>
+    /// The moment the operator signed in, as it is shown in the status strip.
+    /// </summary>
+    public string LastSignInText => _session.SignedInAt is null
+        ? string.Empty
+        : _session.SignedInAt.Value.ToLocalTime().ToString("ddd, dd MMM yyyy HH:mm", CultureInfo.CurrentCulture);
+
+    /// <summary>
+    /// The workstation's current date, as it is shown in the status strip.
+    /// </summary>
+    /// <remarks>
+    /// This is the date on the operator's own workstation, which is what the
+    /// laboratory's status strip shows. It is a display value rather than a
+    /// recorded fact, so it is read from the workstation clock rather than
+    /// from the laboratory's own clock.
+    /// </remarks>
+    public string TodayText => DateTime.Now.ToString("ddd, dd-MMM-yyyy HH:mm", CultureInfo.CurrentCulture);
 
     /// <summary>The key of the current screen.</summary>
     public string? CurrentScreenKey => _navigation.CurrentScreenKey;

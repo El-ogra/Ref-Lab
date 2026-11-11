@@ -127,10 +127,37 @@ public sealed class OrderTestsHandler : IRequestHandler<OrderTestsCommand, IRead
             created.Add(orderTest);
         }
 
+        // The order's totals are a property of the tests it carries, so they
+        // are recomputed whenever tests are added. The commission base is the
+        // net amount of the order, because the referring party is paid on what
+        // the patient actually owes.
+        ApplyOrderAmounts(order);
+
         _unitOfWork.Update(order);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
         return created.Select(OrderTestDto.FromDomain).ToArray();
+    }
+
+    /// <summary>
+    /// Recomputes the totals and the commission base of an order from the
+    /// prices of the tests it carries.
+    /// </summary>
+    private static void ApplyOrderAmounts(PatientOrder order)
+    {
+        var total = Money.Create(
+            order.Tests.Sum(test => test.Price?.Amount ?? 0m),
+            order.CurrencyCode);
+
+        var discount = order.Discount;
+
+        var discounted = discount is null
+            ? total
+            : Money.Create(
+                Math.Max(0m, total.Amount - discount.Apply(total.Amount)),
+                order.CurrencyCode);
+
+        order.SetAmounts(total, discounted, discounted, discount, order.Discount100);
     }
 }

@@ -5,6 +5,7 @@ using RefLab.Application.Behaviors;
 using RefLab.Domain.Identity;
 using RefLab.Application.Features.Results;
 using RefLab.Application.Features.Patients;
+using RefLab.Domain.Billing;
 using RefLab.Domain.Patients;
 
 namespace RefLab.Application.Features.Reporting;
@@ -63,7 +64,16 @@ public sealed class PrintPatientInvoiceHandler : IRequestHandler<PrintPatientInv
 
         var total = order.TotalPrice?.Amount ?? tests.Sum(test => test.Price?.Amount ?? 0m);
         var discounted = order.TotalPriceAfterDiscount?.Amount ?? total;
-        var due = discounted - tests.Select(test => test.Price?.Amount ?? 0m).Sum() * 0m;
+
+        // The amount still owed is what the patient has not paid yet. It is
+        // measured against the payments recorded against the order, so that
+        // an invoice shows the outstanding balance rather than the full
+        // amount whatever has already been settled.
+        var paid = _db.Set<Payment>()
+            .Where(payment => payment.OrderId == order.Id)
+            .Sum(payment => payment.Amount.Amount);
+
+        var due = Math.Max(0m, discounted - paid);
 
         var document = _reportRenderer.RenderLaboratoryReport(new ReportRenderRequest(
             "INVOICE",
@@ -87,6 +97,7 @@ public sealed class PrintPatientInvoiceHandler : IRequestHandler<PrintPatientInv
             order.CurrencyCode,
             total,
             total - discounted,
+            paid,
             due,
             lines,
             new RenderedDocumentDto(exported.FileName, exported.FullPath, exported.Category));

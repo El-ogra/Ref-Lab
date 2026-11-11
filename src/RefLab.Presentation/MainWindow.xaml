@@ -43,6 +43,10 @@
                             Style="{StaticResource ActionButtonStyle}"
                             Command="{Binding NavigateCommand}"
                             CommandParameter="TestCatalogue" />
+                    <Button Content="{StaticResource Screen.CatalogueAdministration}"
+                            Style="{StaticResource ActionButtonStyle}"
+                            Command="{Binding NavigateCommand}"
+                            CommandParameter="CatalogueAdministration" />
                     <Button Content="{StaticResource Screen.SendOut}"
                             Style="{StaticResource ActionButtonStyle}"
                             Command="{Binding NavigateCommand}"
@@ -94,7 +98,7 @@
         </Border>
 
         <!-- The status strip -->
-        <Border DockPanel.Dock="Bottom" Style="{StaticResource ChromePanelStyle}">
+        <Border DockPanel.Dock="Bottom" Style="{StaticResource DeepChromePanelStyle}">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -115,11 +119,58 @@
                            Foreground="{StaticResource DangerBrush}"
                            VerticalAlignment="Center" />
 
-                <TextBlock Grid.Column="2"
-                           Text="{Binding StatusMessage}"
-                           Foreground="White"
-                           VerticalAlignment="Center"
-                           Margin="10,0,4,0" />
+                <!--
+                    The operator and database strip.
+
+                    The laboratory's own screens carry the signed-in operator
+                    and the database they work against in a permanent strip,
+                    so that the operator can always see who is signed in and
+                    which database the work is going into.
+                -->
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <TextBlock Foreground="White"
+                               VerticalAlignment="Center"
+                               Margin="10,0,2,0">
+                        <Run Text="{StaticResource Shell.UserName}" />
+                        <Run Text=" :" />
+                    </TextBlock>
+                    <TextBlock Text="{Binding OperatorName}"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               Margin="0,0,14,0" />
+
+                    <TextBlock Foreground="White"
+                               VerticalAlignment="Center"
+                               Margin="0,0,2,0">
+                        <Run Text="{StaticResource Shell.LastLogin}" />
+                        <Run Text=" :" />
+                    </TextBlock>
+                    <TextBlock Text="{Binding LastSignInText}"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               Margin="0,0,14,0" />
+
+                    <TextBlock Text="{StaticResource Shell.Database}"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               Margin="0,0,14,0" />
+
+                    <TextBlock Foreground="White"
+                               VerticalAlignment="Center"
+                               Margin="0,0,2,0">
+                        <Run Text="{StaticResource Shell.Today}" />
+                        <Run Text=" :" />
+                    </TextBlock>
+                    <TextBlock Text="{Binding TodayText}"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               Margin="0,0,10,0" />
+
+                    <TextBlock Text="{Binding StatusMessage}"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               Margin="0,0,4,0" />
+                </StackPanel>
             </Grid>
         </Border>
 

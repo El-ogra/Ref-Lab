@@ -20,7 +20,7 @@
 
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <TabControl Margin="8">
-                <TabItem Header="Test definitions">
+                <TabItem Header="{StaticResource Panel.TestDefinitions}" Style="{StaticResource LabTabItemStyle}">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateTestCommand}" />
@@ -39,7 +39,7 @@
                     </DockPanel>
                 </TabItem>
 
-                <TabItem Header="Reference ranges">
+                <TabItem Header="{StaticResource Panel.ReferenceRanges}" Style="{StaticResource LabTabItemStyle}">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateReferenceRangeCommand}" />
@@ -56,7 +56,7 @@
                     </DockPanel>
                 </TabItem>
 
-                <TabItem Header="Units and conversions">
+                <TabItem Header="{StaticResource Panel.UnitsAndConversions}" Style="{StaticResource LabTabItemStyle}">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveUnitsAndConversionsCommand}" />
@@ -83,7 +83,7 @@
                     </DockPanel>
                 </TabItem>
 
-                <TabItem Header="Abbreviations">
+                <TabItem Header="{StaticResource Panel.Abbreviations}" Style="{StaticResource LabTabItemStyle}">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateAbbreviationCommand}" />
@@ -97,7 +97,7 @@
                     </DockPanel>
                 </TabItem>
 
-                <TabItem Header="Sub-groups">
+                <TabItem Header="{StaticResource Panel.SubGroups}" Style="{StaticResource LabTabItemStyle}">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <Button Content="{StaticResource Command.Add}" Style="{StaticResource ActionButtonStyle}" Command="{Binding CreateSubGroupCommand}" />

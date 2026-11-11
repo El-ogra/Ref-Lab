@@ -1,5 +1,6 @@
 using RefLab.Domain.ClinicalKnowledge;
 using RefLab.Domain.Enums;
+using RefLab.Domain.ValueObjects;
 
 namespace RefLab.Domain.Rules;
 
@@ -89,6 +90,10 @@ public static class ClinicalDerivationPolicy
     /// Selects the constant slot that holds the haemoglobin percentage factor
     /// for a patient of the given sex and age.
     /// </summary>
+    /// <exception cref="InvalidClinicalDerivationException">
+    /// The patient is an adult whose sex is not known. The adult factors are
+    /// sex-specific, so no factor can be selected.
+    /// </exception>
     public static int SelectHemoglobinFactorSlot(Sex sex, decimal age)
     {
         if (age < InfantAgeLimitYears)
@@ -101,8 +106,38 @@ public static class ClinicalDerivationPolicy
             return ChildFactorSlot;
         }
 
-        return sex == Sex.Male ? AdultMaleFactorSlot : AdultFemaleFactorSlot;
+        // The adult factors are sex-specific: 6.25 for a male and 6.75 for a
+        // female. There is no factor for a patient whose sex was never
+        // established, and applying the female factor to an unknown-sex
+        // patient would report a wrong number as though it were derived.
+        // The derivation is refused instead.
+        return sex switch
+        {
+            Sex.Male => AdultMaleFactorSlot,
+            Sex.Female => AdultFemaleFactorSlot,
+            _ => throw new InvalidClinicalDerivationException(
+                "The haemoglobin percentage cannot be derived for an adult whose sex is not known."),
+        };
     }
+
+    /// <summary>
+    /// Derives a ratio result from the two measurements it is computed from.
+    /// </summary>
+    /// <param name="numeratorAnalyte">The analyte the ratio is measured from.</param>
+    /// <param name="denominatorAnalyte">The analyte the ratio is measured against.</param>
+    /// <param name="numerator">The measured value of the numerator.</param>
+    /// <param name="denominator">The measured value of the denominator.</param>
+    /// <param name="unit">The unit the ratio is expressed in, when it has one.</param>
+    /// <exception cref="Exceptions.InvalidResultValueException">
+    /// An analyte name is blank, or the denominator is zero.
+    /// </exception>
+    public static RatioResult DeriveRatio(
+        string numeratorAnalyte,
+        string denominatorAnalyte,
+        decimal numerator,
+        decimal denominator,
+        string? unit = null) =>
+        RatioResult.Create(numeratorAnalyte, denominatorAnalyte, numerator, denominator, unit);
 
     /// <summary>
     /// Derives the international sensitivity index.

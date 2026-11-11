@@ -121,7 +121,13 @@
             <!-- The results -->
             <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource PanelStyle}">
                 <DockPanel>
-                    <TextBlock DockPanel.Dock="Top" Text="Results" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+                    <Border DockPanel.Dock="Top" Style="{StaticResource PanelHeaderBorderStyle}">
+                        <TextBlock Text="{StaticResource Panel.Results}"
+                                   Style="{StaticResource BaseTextStyle}"
+                                   FontWeight="SemiBold"
+                                   Foreground="{StaticResource FieldLabelBrush}"
+                                   TextAlignment="Center" />
+                    </Border>
                     <controls:ResultsGridControl />
                 </DockPanel>
             </Border>
@@ -130,7 +136,7 @@
             <Border Grid.Row="2" Grid.Column="2" Style="{StaticResource PanelStyle}">
                 <DockPanel>
                     <StackPanel DockPanel.Dock="Top">
-                        <TextBlock Text="{StaticResource Command.EnterResult}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+                        <TextBlock Text="{StaticResource Panel.EnterResult}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
                         <TextBlock Text="{StaticResource Field.ResultValue}" Style="{StaticResource BaseTextStyle}" />
                         <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ResultValue, UpdateSourceTrigger=PropertyChanged}" />
                         <TextBlock Text="{StaticResource Field.ResultUnit}" Style="{StaticResource BaseTextStyle}" />
@@ -152,10 +158,10 @@
                     </StackPanel>
 
                     <TabControl>
-                        <TabItem Header="Method sheet">
+                        <TabItem Header="{StaticResource Panel.MethodSheet}" Style="{StaticResource LabTabItemStyle}">
                             <panels:MethodSheetPanelView DataContext="{Binding MethodSheet}" />
                         </TabItem>
-                        <TabItem Header="Derivation">
+                        <TabItem Header="{StaticResource Panel.Derivation}" Style="{StaticResource LabTabItemStyle}">
                             <panels:DerivationPanelView DataContext="{Binding Derivation}" />
                         </TabItem>
                     </TabControl>

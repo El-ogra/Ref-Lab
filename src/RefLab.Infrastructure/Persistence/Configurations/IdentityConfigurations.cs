@@ -60,6 +60,8 @@ internal static class IdentityConfigurations
 
             builder.Property(settings => settings.GlobalHeaderText).HasMaxLength(ColumnWidths.Note);
             builder.Property(settings => settings.GlobalHeaderSecondaryText).HasMaxLength(ColumnWidths.Note);
+            builder.Property(settings => settings.ReportFooterText).HasMaxLength(ColumnWidths.Note);
+            builder.Property(settings => settings.LayoutText).HasMaxLength(ColumnWidths.Note);
             builder.Property(settings => settings.BackgroundColour).HasMaxLength(ColumnWidths.Short);
             builder.Property(settings => settings.DefaultAccountType).HasMaxLength(ColumnWidths.Short);
             builder.Property(settings => settings.ConnectionReceiptHeader).HasMaxLength(ColumnWidths.Note);

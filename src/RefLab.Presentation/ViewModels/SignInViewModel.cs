@@ -77,7 +77,7 @@ public sealed partial class SignInViewModel : ViewModelBase
         {
             var result = await _executor.SendAsync(new SignInCommand(OperatorName, Password));
 
-            _session.Establish(result.Operator);
+            _session.Establish(result.Operator, result.SignedInAt);
 
             _shell.OnSessionEstablished();
 

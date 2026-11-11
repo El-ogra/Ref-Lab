@@ -49,7 +49,11 @@ public sealed class OperatorSession
 
     /// <summary>Establishes the session for the signed-in operator.</summary>
     /// <param name="operator">The operator returned by the sign-in use case.</param>
-    public void Establish(OperatorDto @operator)
+    /// <param name="signedInAt">
+    /// The moment the operator signed in, when the caller knows it. The shell
+    /// shows it in the status strip.
+    /// </param>
+    public void Establish(OperatorDto @operator, DateTimeOffset? signedInAt = null)
     {
         ArgumentNullException.ThrowIfNull(@operator);
 
@@ -70,7 +74,7 @@ public sealed class OperatorSession
             }
         }
 
-        _session.SignIn(principal);
+        _session.SignIn(principal, signedInAt);
     }
 
     /// <summary>Ends the session.</summary>

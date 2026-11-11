@@ -28,10 +28,18 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0"
-                       Text="{StaticResource Ar.PatientPanel.Title}"
-                       Style="{StaticResource HeadingTextStyle}"
-                       HorizontalAlignment="Right" />
+            <!--
+                The panel names itself on a header band. The band is right to
+                left, like the panel it heads.
+            -->
+            <Border Grid.Row="0" Style="{StaticResource PanelHeaderBorderStyle}">
+                <TextBlock Text="{StaticResource Ar.PatientPanel.Title}"
+                           Style="{StaticResource BaseTextStyle}"
+                           FontFamily="{StaticResource ArabicFontFamily}"
+                           FontWeight="SemiBold"
+                           Foreground="{StaticResource FieldLabelBrush}"
+                           TextAlignment="Center" />
+            </Border>
 
             <!-- The order identity -->
             <Grid Grid.Row="1" Margin="0,0,0,8">
@@ -48,7 +56,7 @@
 
                 <TextBlock Grid.Row="0" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.ReservationNumber}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <TextBox Grid.Row="0" Grid.Column="1"
                          Style="{StaticResource ArabicValueStyle}"
                          FlowDirection="LeftToRight"
@@ -57,7 +65,7 @@
 
                 <TextBlock Grid.Row="1" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.RecordStatus}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <TextBox Grid.Row="1" Grid.Column="1"
                          Style="{StaticResource ArabicValueStyle}"
                          FlowDirection="LeftToRight"
@@ -66,7 +74,7 @@
 
                 <TextBlock Grid.Row="2" Grid.Column="0"
                            Text="{StaticResource Ar.Command.Barcode}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <TextBox Grid.Row="2" Grid.Column="1"
                          Style="{StaticResource ArabicValueStyle}"
                          FlowDirection="LeftToRight"
@@ -75,7 +83,7 @@
 
                 <TextBlock Grid.Row="3" Grid.Column="0"
                            Text="{StaticResource Column.Currency}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <TextBox Grid.Row="3" Grid.Column="1"
                          Style="{StaticResource ArabicValueStyle}"
                          FlowDirection="LeftToRight"
@@ -99,18 +107,19 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.Name}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <TextBox Grid.Row="0" Grid.Column="1"
                          Style="{StaticResource ArabicValueStyle}"
                          Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock Grid.Row="1" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.Sex}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <ComboBox Grid.Row="1" Grid.Column="1"
                           Style="{StaticResource LabComboBoxStyle}"
                           HorizontalAlignment="Stretch"
@@ -119,26 +128,26 @@
 
                 <TextBlock Grid.Row="2" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.Age}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
                     <TextBox Style="{StaticResource ArabicValueStyle}"
                              Width="70"
                              Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="{StaticResource Ar.PatientPanel.Years}"
-                               Style="{StaticResource ArabicLabelStyle}"
+                               Style="{StaticResource ArabicFieldLabelStyle}"
                                Margin="6,0,0,0" />
                 </StackPanel>
 
                 <TextBlock Grid.Row="3" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.Address}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <TextBox Grid.Row="3" Grid.Column="1"
                          Style="{StaticResource ArabicValueStyle}"
                          Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock Grid.Row="4" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.PhoneNumber}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <TextBox Grid.Row="4" Grid.Column="1"
                          Style="{StaticResource ArabicValueStyle}"
                          FlowDirection="LeftToRight"
@@ -146,7 +155,7 @@
 
                 <TextBlock Grid.Row="5" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.Transfer}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <CheckBox Grid.Row="5" Grid.Column="1"
                           Style="{StaticResource LabCheckBoxStyle}"
                           HorizontalAlignment="Right"
@@ -154,14 +163,14 @@
 
                 <TextBlock Grid.Row="6" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.NotificationState}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <ComboBox Grid.Row="6" Grid.Column="1"
                           Style="{StaticResource LabComboBoxStyle}"
                           HorizontalAlignment="Stretch" />
 
                 <TextBlock Grid.Row="7" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.Notes}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <TextBox Grid.Row="7" Grid.Column="1"
                          Style="{StaticResource ArabicValueStyle}"
                          AcceptsReturn="True"
@@ -171,11 +180,27 @@
 
                 <TextBlock Grid.Row="8" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.AccountHolderName}"
-                           Style="{StaticResource ArabicLabelStyle}" />
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
                 <TextBox Grid.Row="8" Grid.Column="1"
                          Style="{StaticResource ArabicValueStyle}"
                          FlowDirection="LeftToRight"
                          Text="{Binding ReferringPhysicianCode, UpdateSourceTrigger=PropertyChanged}" />
+
+                <!--
+                    The referring party.
+
+                    The counterparty the laboratory received the order from. The
+                    commission the laboratory pays is computed on the base
+                    amount of the orders it received from that party, so the
+                    code is recorded with the order when the order is created.
+                -->
+                <TextBlock Grid.Row="9" Grid.Column="0"
+                           Text="{StaticResource Ar.PatientPanel.ReferringParty}"
+                           Style="{StaticResource ArabicFieldLabelStyle}" />
+                <TextBox Grid.Row="9" Grid.Column="1"
+                         Style="{StaticResource ArabicValueStyle}"
+                         FlowDirection="LeftToRight"
+                         Text="{Binding ReferringPartyCode, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>
 
             <!-- The requested tests -->

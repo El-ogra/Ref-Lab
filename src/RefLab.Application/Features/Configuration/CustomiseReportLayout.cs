@@ -63,9 +63,12 @@ public sealed class CustomiseReportLayoutHandler : IRequestHandler<CustomiseRepo
             settings.SetBackgroundColour(request.BackgroundColour);
         }
 
+        // The layout text describes the report layout. It is not the global
+        // header, which carries the laboratory identity printed above the
+        // report titles, so the two are kept apart.
         if (request.LayoutText is not null)
         {
-            settings.SetGlobalHeaderTexts(request.LayoutText, settings.GlobalHeaderSecondaryText);
+            settings.SetLayoutText(request.LayoutText);
         }
 
         _unitOfWork.Update(settings);

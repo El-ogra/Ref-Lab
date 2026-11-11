@@ -619,6 +619,10 @@ namespace RefLab.Infrastructure.Persistence.Migrations
                     b.Property<bool>("IsWorkSheetPrinted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("LayoutText")
+                        .HasMaxLength(2048)
+                        .HasColumnType("nvarchar(2048)");
+
                     b.Property<decimal>("LeftMargin")
                         .HasPrecision(9, 4)
                         .HasColumnType("decimal(9,4)");
@@ -630,6 +634,10 @@ namespace RefLab.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Printers");
+
+                    b.Property<string>("ReportFooterText")
+                        .HasMaxLength(2048)
+                        .HasColumnType("nvarchar(2048)");
 
                     b.Property<int>("ReportSequenceStart")
                         .HasColumnType("int");

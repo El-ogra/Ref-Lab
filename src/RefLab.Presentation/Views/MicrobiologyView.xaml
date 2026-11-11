@@ -20,7 +20,7 @@
 
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <TabControl Margin="8">
-                <TabItem Header="Cultures">
+                <TabItem Header="{StaticResource Panel.Cultures}" Style="{StaticResource LabTabItemStyle}">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="220" Text="{Binding CultureId, UpdateSourceTrigger=PropertyChanged}" />
@@ -39,7 +39,7 @@
                     </DockPanel>
                 </TabItem>
 
-                <TabItem Header="Antibiotics">
+                <TabItem Header="{StaticResource Panel.Antibiotics}" Style="{StaticResource LabTabItemStyle}">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="160" Text="{Binding AntibioticSymbol, UpdateSourceTrigger=PropertyChanged}" />
@@ -54,7 +54,7 @@
                     </DockPanel>
                 </TabItem>
 
-                <TabItem Header="Farms">
+                <TabItem Header="{StaticResource Panel.Farms}" Style="{StaticResource LabTabItemStyle}">
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                             <TextBox Style="{StaticResource LabTextBoxStyle}" Width="180" Text="{Binding FarmName, UpdateSourceTrigger=PropertyChanged}" />

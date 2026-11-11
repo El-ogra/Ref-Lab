@@ -29,30 +29,59 @@
                     <Button Content="{StaticResource Command.Confirm}" Style="{StaticResource ActionButtonStyle}" Command="{Binding RunPerformanceStatisticsCommand}" />
                 </StackPanel>
 
+                <!--
+                    The three indicators of the screen, each one a tile that
+                    names itself on a caption band. The tiles are the shared
+                    unit the statistics screen is built from.
+                -->
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <DataGrid Grid.Column="0" Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding ByMonth}" Margin="0,0,4,0">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="{StaticResource Column.Period}" Binding="{Binding Period}" Width="*" />
-                            <DataGridTextColumn Header="{StaticResource Column.Count}" Binding="{Binding Count}" Width="70" />
-                        </DataGrid.Columns>
-                    </DataGrid>
-                    <DataGrid Grid.Column="1" Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding BySex}" Margin="0,0,4,0">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="{StaticResource Column.Period}" Binding="{Binding Period}" Width="*" />
-                            <DataGridTextColumn Header="{StaticResource Column.Count}" Binding="{Binding Count}" Width="70" />
-                        </DataGrid.Columns>
-                    </DataGrid>
-                    <DataGrid Grid.Column="2" Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding BySubGroup}">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="{StaticResource Column.Period}" Binding="{Binding Period}" Width="*" />
-                            <DataGridTextColumn Header="{StaticResource Column.Count}" Binding="{Binding Count}" Width="70" />
-                        </DataGrid.Columns>
-                    </DataGrid>
+
+                    <Border Grid.Column="0" Style="{StaticResource MetricTileStyle}" Margin="0,0,4,0">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top"
+                                       Text="{StaticResource Panel.Statistics.ByMonth}"
+                                       Style="{StaticResource MetricTileCaptionStyle}" />
+                            <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding ByMonth}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{StaticResource Column.Period}" Binding="{Binding Period}" Width="*" />
+                                    <DataGridTextColumn Header="{StaticResource Column.Count}" Binding="{Binding Count}" Width="70" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+                    </Border>
+
+                    <Border Grid.Column="1" Style="{StaticResource MetricTileStyle}" Margin="0,0,4,0">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top"
+                                       Text="{StaticResource Panel.Statistics.BySex}"
+                                       Style="{StaticResource MetricTileCaptionStyle}" />
+                            <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding BySex}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{StaticResource Column.Period}" Binding="{Binding Period}" Width="*" />
+                                    <DataGridTextColumn Header="{StaticResource Column.Count}" Binding="{Binding Count}" Width="70" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+                    </Border>
+
+                    <Border Grid.Column="2" Style="{StaticResource MetricTileStyle}">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top"
+                                       Text="{StaticResource Panel.Statistics.BySubGroup}"
+                                       Style="{StaticResource MetricTileCaptionStyle}" />
+                            <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding BySubGroup}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{StaticResource Column.Period}" Binding="{Binding Period}" Width="*" />
+                                    <DataGridTextColumn Header="{StaticResource Column.Count}" Binding="{Binding Count}" Width="70" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+                    </Border>
                 </Grid>
             </DockPanel>
         </ScrollViewer>
