@@ -56,6 +56,7 @@ public static class PresentationServiceCollectionExtensions
         services.AddTransient<AuditViewModel>();
 
         services.AddTransient<MainWindow>();
+        services.AddTransient<SignInWindow>();
         services.AddTransient<SignInView>();
         services.AddTransient<PatientWorkView>();
         services.AddTransient<TestCatalogueView>();

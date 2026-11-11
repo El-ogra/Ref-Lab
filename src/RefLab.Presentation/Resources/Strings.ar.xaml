@@ -56,6 +56,7 @@
     <sys:String x:Key="Ar.Command.Printing">الطباعة</sys:String>
     <sys:String x:Key="Ar.Command.Clear">مسح</sys:String>
     <sys:String x:Key="Ar.Command.Confirm">تأكيد</sys:String>
+    <sys:String x:Key="Ar.Command.Barcode">باركود</sys:String>
     <sys:String x:Key="Ar.Command.Logout">تسجيل خروج</sys:String>
 
     <!-- On-screen keypad -->

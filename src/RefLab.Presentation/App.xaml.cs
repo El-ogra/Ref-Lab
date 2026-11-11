@@ -34,7 +34,9 @@ public partial class App : System.Windows.Application
 
         _host = CompositionRoot.BuildHost();
 
-        CompositionRoot.ShowMainWindow(_host);
+        var signInWindow = _host.Services.GetRequiredService<SignInWindow>();
+        System.Windows.Application.Current.MainWindow = signInWindow;
+        signInWindow.Show();
     }
 
     /// <inheritdoc />

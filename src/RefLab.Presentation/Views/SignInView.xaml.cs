@@ -1,15 +1,11 @@
+using System.Windows;
 using System.Windows.Controls;
 using RefLab.Presentation.ViewModels;
 
 namespace RefLab.Presentation.Views;
 
-/// <summary>
-/// The start-up and sign-in screen.
-/// </summary>
 public partial class SignInView : UserControl
 {
-    /// <summary>Initialises a new instance.</summary>
-    /// <param name="viewModel">The view model.</param>
     public SignInView(SignInViewModel viewModel)
     {
         ArgumentNullException.ThrowIfNull(viewModel);
@@ -17,5 +13,24 @@ public partial class SignInView : UserControl
         InitializeComponent();
 
         DataContext = viewModel;
+
+        viewModel.PropertyChanged += (_, e) =>
+        {
+            if (e.PropertyName == nameof(SignInViewModel.Password))
+            {
+                if (MaskedPasswordBox.Password != viewModel.Password)
+                {
+                    MaskedPasswordBox.Password = viewModel.Password ?? string.Empty;
+                }
+            }
+        };
+    }
+
+    private void MaskedPasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+    {
+        if (DataContext is SignInViewModel viewModel)
+        {
+            viewModel.Password = MaskedPasswordBox.Password;
+        }
     }
 }

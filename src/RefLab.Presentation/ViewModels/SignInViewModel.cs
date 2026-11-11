@@ -44,6 +44,25 @@ public sealed partial class SignInViewModel : ViewModelBase
     [ObservableProperty]
     private string _password = string.Empty;
 
+    /// <summary>Whether the password is currently revealed.</summary>
+    [ObservableProperty]
+    private bool _isPasswordVisible;
+
+    /// <summary>The glyph shown on the password visibility toggle.</summary>
+    public string PasswordVisibilityGlyph => IsPasswordVisible ? "🙈" : "👁";
+
+    partial void OnIsPasswordVisibleChanged(bool value)
+    {
+        OnPropertyChanged(nameof(PasswordVisibilityGlyph));
+    }
+
+    /// <summary>Toggles password visibility.</summary>
+    [RelayCommand]
+    private void TogglePasswordVisibility()
+    {
+        IsPasswordVisible = !IsPasswordVisible;
+    }
+
     /// <summary>Signs the operator in.</summary>
     [RelayCommand]
     private async Task SignInAsync()

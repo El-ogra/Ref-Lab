@@ -74,6 +74,9 @@ public static class CompositionRoot
         host.Services.GetRequiredService<INavigationService>().NavigateTo(ScreenKeys.SignIn);
     }
 
+    private const string FallbackConnectionString =
+        "Server=(localdb)\\mssqllocaldb;Database=RefLab;Trusted_Connection=True;TrustServerCertificate=True";
+
     private static string ResolveConnectionString(string? connectionString)
     {
         var resolved = connectionString;
@@ -85,9 +88,7 @@ public static class CompositionRoot
 
         if (string.IsNullOrWhiteSpace(resolved))
         {
-            throw new InvalidOperationException(
-                $"A SQL Server connection string is required. Set the {ConnectionStringVariable} " +
-                "environment variable or pass the connection string explicitly.");
+            resolved = FallbackConnectionString;
         }
 
         return resolved;
