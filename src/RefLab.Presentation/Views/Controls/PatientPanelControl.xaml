@@ -128,15 +128,15 @@
                 -->
                 <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
                     <RadioButton GroupName="PatientSex"
-                                 Style="{StaticResource LabCheckBoxStyle}"
+                                 Style="{StaticResource LabRadioButtonStyle}"
                                  Content="Male"
                                  IsChecked="{Binding Sex, Converter={StaticResource EnumEquals}, ConverterParameter=Male}" />
                     <RadioButton GroupName="PatientSex"
-                                 Style="{StaticResource LabCheckBoxStyle}"
+                                 Style="{StaticResource LabRadioButtonStyle}"
                                  Content="Female"
                                  IsChecked="{Binding Sex, Converter={StaticResource EnumEquals}, ConverterParameter=Female}" />
                     <RadioButton GroupName="PatientSex"
-                                 Style="{StaticResource LabCheckBoxStyle}"
+                                 Style="{StaticResource LabRadioButtonStyle}"
                                  Content="Unknown"
                                  IsChecked="{Binding Sex, Converter={StaticResource EnumEquals}, ConverterParameter=Unknown}" />
                 </StackPanel>

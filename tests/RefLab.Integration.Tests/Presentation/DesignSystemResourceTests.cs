@@ -239,6 +239,204 @@ public sealed class DesignSystemResourceTests
             + string.Join(" | ", withoutArabic));
     }
 
+    private static readonly Regex StyleDefinitionPattern = new(
+        @"<Style\b(?<attributes>[^>]*)>",
+        RegexOptions.Compiled | RegexOptions.Singleline);
+
+    private static readonly Regex StyleUsePattern = new(
+        @"<(?<element>[A-Za-z_][A-Za-z0-9_.:]*)(?<attributes>[^>]*?)\bStyle\s*=\s*""\s*\{StaticResource\s+(?<key>[A-Za-z0-9_.]+)\s*\}""",
+        RegexOptions.Compiled | RegexOptions.Singleline);
+
+    private static readonly Regex TargetTypePattern = new(
+        @"TargetType\s*=\s*""(?<target>\{[^}]*\}\s*)?(?<type>[A-Za-z_][A-Za-z0-9_.]*)""",
+        RegexOptions.Compiled);
+
+    private static readonly Regex BasedOnPattern = new(
+        @"BasedOn\s*=\s*""\s*\{StaticResource\s+(?<key>[A-Za-z0-9_.]+)\s*\}""",
+        RegexOptions.Compiled);
+
+    /// <summary>
+    /// The base type of the WPF element types the design system styles.
+    /// </summary>
+    /// <remarks>
+    /// A WPF <c>Style</c> declares a <c>TargetType</c> and may only be applied
+    /// to an element of that type or of a type derived from it. The hierarchy
+    /// below lets a source check decide that relationship without the WPF
+    /// runtime, so a style borrowed by a sibling control — the check-box style
+    /// applied to a radio button — fails the build instead of the laboratory.
+    /// </remarks>
+    private static readonly Dictionary<string, string?> ElementBaseTypes = new(StringComparer.Ordinal)
+    {
+        ["FrameworkElement"] = "UIElement",
+        ["UIElement"] = null,
+
+        ["Control"] = "FrameworkElement",
+        ["ContentControl"] = "Control",
+        ["HeaderedContentControl"] = "ContentControl",
+        ["HeaderedItemsControl"] = "ItemsControl",
+        ["ItemsControl"] = "Control",
+        ["Selector"] = "ItemsControl",
+        ["MultiSelector"] = "Selector",
+        ["RangeBase"] = "Control",
+
+        ["ButtonBase"] = "ContentControl",
+        ["Button"] = "ButtonBase",
+        ["ToggleButton"] = "ButtonBase",
+        ["CheckBox"] = "ToggleButton",
+        ["RadioButton"] = "ToggleButton",
+        ["RepeatButton"] = "ButtonBase",
+
+        ["TextBoxBase"] = "Control",
+        ["TextBox"] = "TextBoxBase",
+        ["PasswordBox"] = "Control",
+        ["ComboBox"] = "Selector",
+        ["ListBox"] = "Selector",
+        ["ListView"] = "ListBox",
+        ["TabControl"] = "Selector",
+        ["TabItem"] = "HeaderedContentControl",
+        ["Label"] = "ContentControl",
+        ["DatePicker"] = "Control",
+        ["ProgressBar"] = "RangeBase",
+        ["DataGrid"] = "MultiSelector",
+        ["DataGridColumnHeader"] = "ButtonBase",
+        ["DataGridCell"] = "ContentControl",
+        ["ScrollViewer"] = "ContentControl",
+        ["UserControl"] = "ContentControl",
+        ["Window"] = "ContentControl",
+
+        ["Panel"] = "FrameworkElement",
+        ["Grid"] = "Panel",
+        ["DockPanel"] = "Panel",
+        ["StackPanel"] = "Panel",
+        ["WrapPanel"] = "Panel",
+
+        ["Decorator"] = "FrameworkElement",
+        ["Border"] = "Decorator",
+        ["TextBlock"] = "FrameworkElement",
+        ["Image"] = "FrameworkElement",
+    };
+
+    [Fact]
+    public void Every_style_a_view_applies_targets_a_compatible_element_type()
+    {
+        var root = RepositoryRoot();
+        var presentation = Path.Combine(root, "src", "RefLab.Presentation");
+
+        var definitions = new Dictionary<string, List<(string TargetType, string? BasedOn)>>(StringComparer.Ordinal);
+        var defects = new List<string>();
+
+        foreach (var file in XamlFiles(presentation))
+        {
+            var content = File.ReadAllText(file);
+
+            foreach (Match match in StyleDefinitionPattern.Matches(content))
+            {
+                var attributes = match.Groups["attributes"].Value;
+                var key = ResourceKeyPattern.Match(attributes);
+                var target = TargetTypePattern.Match(attributes);
+
+                if (!key.Success || !target.Success)
+                {
+                    continue;
+                }
+
+                var basedOn = BasedOnPattern.Match(attributes) is { Success: true } basedOnMatch
+                    ? basedOnMatch.Groups["key"].Value
+                    : null;
+
+                if (!definitions.TryGetValue(key.Groups[1].Value, out var targets))
+                {
+                    targets = new List<(string, string?)>();
+                    definitions[key.Groups[1].Value] = targets;
+                }
+
+                targets.Add((target.Groups["type"].Value, basedOn));
+            }
+        }
+
+        // A BasedOn relationship is only legal when the derived style's target
+        // is the base style's target or a type derived from it.
+        foreach (var (key, targets) in definitions)
+        {
+            foreach (var (targetType, basedOn) in targets)
+            {
+                if (basedOn is null || !definitions.TryGetValue(basedOn, out var bases))
+                {
+                    continue;
+                }
+
+                foreach (var (baseType, _) in bases)
+                {
+                    if (ElementBaseTypes.ContainsKey(targetType)
+                        && ElementBaseTypes.ContainsKey(baseType)
+                        && !IsAssignableTo(targetType, baseType))
+                    {
+                        defects.Add(
+                            $"The style '{key}' targets '{targetType}' but inherits from '{basedOn}', "
+                            + $"which targets '{baseType}'. A style may only inherit from a style whose "
+                            + "target is the same type or a base type.");
+                    }
+                }
+            }
+        }
+
+        foreach (var file in XamlFiles(presentation))
+        {
+            var content = File.ReadAllText(file);
+            var relative = Path.GetRelativePath(root, file);
+
+            foreach (Match match in StyleUsePattern.Matches(content))
+            {
+                var key = match.Groups["key"].Value;
+                var element = match.Groups["element"].Value;
+                var localElement = element.Contains(':') ? element[(element.IndexOf(':') + 1)..] : element;
+
+                if (!definitions.TryGetValue(key, out var targets)
+                    || !ElementBaseTypes.ContainsKey(localElement))
+                {
+                    continue;
+                }
+
+                foreach (var (targetType, _) in targets)
+                {
+                    if (!ElementBaseTypes.ContainsKey(targetType))
+                    {
+                        continue;
+                    }
+
+                    if (!IsAssignableTo(localElement, targetType))
+                    {
+                        defects.Add(
+                            $"{relative} applies the style '{key}' (TargetType '{targetType}') to "
+                            + $"<{element}>, which is not '{targetType}' or a type derived from it.");
+                    }
+                }
+            }
+        }
+
+        Assert.True(
+            defects.Count == 0,
+            "A style is applied to an incompatible element type:" + Environment.NewLine
+            + string.Join(Environment.NewLine, defects.Distinct(StringComparer.Ordinal)));
+    }
+
+    private static bool IsAssignableTo(string elementType, string styleTargetType)
+    {
+        var current = elementType;
+
+        while (current is not null)
+        {
+            if (string.Equals(current, styleTargetType, StringComparison.Ordinal))
+            {
+                return true;
+            }
+
+            current = ElementBaseTypes.TryGetValue(current, out var baseType) ? baseType : null;
+        }
+
+        return false;
+    }
+
     private static HashSet<string> DefinedKeys(string path) =>
         new(
             ResourceKeyPattern.Matches(File.ReadAllText(path))

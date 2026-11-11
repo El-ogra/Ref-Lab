@@ -268,12 +268,33 @@
         <Setter Property="Background" Value="{StaticResource FieldFillBrush}" />
     </Style>
 
-    <Style x:Key="LabCheckBoxStyle" TargetType="CheckBox">
+    <!--
+        The toggle controls.
+
+        The check box and the radio button are siblings that share a lineage —
+        both derive from ToggleButton — but they are not the same control: a
+        WPF Style carries a TargetType and may only be applied to an element of
+        that type or of a type derived from it. Applying the check-box style to
+        a radio button therefore parses cleanly and fails at run time, when the
+        element is first realised, with
+        "TargetType does not match type of element 'RadioButton'".
+
+        The shared typography and spacing of the two toggle controls live on a
+        ToggleButton base style, and each concrete control derives from it.
+        A future control type gets its own derived style rather than borrowing
+        the key of a sibling; the inheritance is expressed once, here, instead
+        of being copied from the check box into the radio button.
+    -->
+    <Style x:Key="LabToggleButtonStyle" TargetType="ToggleButton">
         <Setter Property="FontFamily" Value="{StaticResource UiFontFamily}" />
         <Setter Property="FontSize" Value="{StaticResource UiFontSize}" />
         <Setter Property="Margin" Value="4,2" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
     </Style>
+
+    <Style x:Key="LabCheckBoxStyle" TargetType="CheckBox" BasedOn="{StaticResource LabToggleButtonStyle}" />
+
+    <Style x:Key="LabRadioButtonStyle" TargetType="RadioButton" BasedOn="{StaticResource LabToggleButtonStyle}" />
 
     <!--
         Buttons: the action rows of the working screens.

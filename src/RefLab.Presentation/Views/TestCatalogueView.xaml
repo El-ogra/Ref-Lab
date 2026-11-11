@@ -42,7 +42,7 @@
                 </DockPanel>
 
                 <DockPanel Grid.Column="1">
-                    <TextBlock DockPanel.Dock="Top" Text="{StaticResource Column.NormalRange}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
+                    <TextBlock DockPanel.Dock="Top" Text="{StaticResource Column.Range}" Style="{StaticResource HeadingTextStyle}" HorizontalAlignment="Left" />
                     <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                         <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadProfileCommand}" />
                     </StackPanel>
@@ -50,7 +50,7 @@
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding SexScope}" Width="80" />
                             <DataGridTextColumn Header="{StaticResource Column.AgeUnit}" Binding="{Binding AgeUnit}" Width="80" />
-                            <DataGridTextColumn Header="{StaticResource Column.NormalRange}" Binding="{Binding RangeText}" Width="*" />
+                            <DataGridTextColumn Header="{StaticResource Column.Range}" Binding="{Binding RangeText}" Width="*" />
                             <DataGridTextColumn Header="{StaticResource Column.SendOut}" Binding="{Binding IsSendOut}" Width="70" />
                             <DataGridTextColumn Header="{StaticResource Column.SampleType}" Binding="{Binding SampleType}" Width="110" />
                         </DataGrid.Columns>
