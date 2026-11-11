@@ -136,6 +136,7 @@ internal static class PatientConfigurations
             builder.Property(test => test.HistoryName).HasMaxLength(ColumnWidths.Name);
             builder.Property(test => test.TestUnit).HasMaxLength(ColumnWidths.Short);
             builder.Property(test => test.ResultCasePrint).HasMaxLength(ColumnWidths.Short);
+            builder.Property(test => test.SampleTakenOutsideLab).IsRequired();
             builder.Property(test => test.OtherLabName).HasMaxLength(ColumnWidths.Name);
             builder.Property(test => test.Timeout).HasMaxLength(ColumnWidths.Short);
             builder.Property(test => test.Comment).HasMaxLength(ColumnWidths.Note);

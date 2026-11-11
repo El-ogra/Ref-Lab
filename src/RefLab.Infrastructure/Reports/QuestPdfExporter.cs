@@ -61,6 +61,16 @@ public sealed class QuestPdfExporter : IPdfExporter
                     // never assembles report content.
                     ReportBranding.Apply(column);
 
+                    // The laboratory logo, when the laboratory has set one. The
+                    // file is read from the path the laboratory configured; a
+                    // missing or unreadable file does not stop the document.
+                    var logo = ReadLogo(document.LabLogoPath);
+
+                    if (logo is not null)
+                    {
+                        column.Item().Image(logo).FitArea();
+                    }
+
                     if (!string.IsNullOrWhiteSpace(document.Title))
                     {
                         column.Item().Text(document.Title).FontSize(16).SemiBold();
@@ -113,13 +123,61 @@ public sealed class QuestPdfExporter : IPdfExporter
                     {
                         column.Item().Text(document.FooterText).FontSize(8);
                     }
+
+                    // The signature block. The reference system prints three
+                    // fixed lines at the foot of the clinical report; in Ref
+                    // Lab the laboratory owns them.
+                    if (!string.IsNullOrWhiteSpace(document.DoctorSignature))
+                    {
+                        column.Item().Text(document.DoctorSignature).FontSize(9);
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(document.DoctorName))
+                    {
+                        column.Item().Text(document.DoctorName).FontSize(9);
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(document.ThanksText))
+                    {
+                        column.Item().Text(document.ThanksText).FontSize(9);
+                    }
                 });
             }))
             .GeneratePdf();
 
         File.WriteAllBytes(path, bytes);
 
-        return Task.FromResult(new ExportedDocument(fileName, path, bytes, "Individual"));
+        // The category is the commercial classification the report is filed
+        // under. It travels on the document so that the exporter does not have
+        // to guess it.
+        return Task.FromResult(new ExportedDocument(fileName, path, bytes, document.Category.ToString()));
+    }
+
+    /// <summary>
+    /// Reads the laboratory logo, when the laboratory has configured one.
+    /// </summary>
+    /// <returns>The image bytes, or <see langword="null"/> when there is no logo or it cannot be read.</returns>
+    private static byte[]? ReadLogo(string? path)
+    {
+        if (string.IsNullOrWhiteSpace(path) || !File.Exists(path))
+        {
+            return null;
+        }
+
+        try
+        {
+            return File.ReadAllBytes(path);
+        }
+        catch (IOException)
+        {
+            // The logo could not be read; the document is still produced.
+            return null;
+        }
+        catch (UnauthorizedAccessException)
+        {
+            // The logo could not be read; the document is still produced.
+            return null;
+        }
     }
 
     private static string BuildFileName(ReportDocument document)

@@ -36,6 +36,8 @@
                             <DataGridTextColumn Header="{StaticResource Column.Dispatched}" Binding="{Binding IsDispatched}" Width="80" />
                             <DataGridTextColumn Header="{StaticResource Column.Settled}" Binding="{Binding IsSettled}" Width="80" />
                             <DataGridTextColumn Header="{StaticResource Column.Status}" Binding="{Binding State}" Width="90" />
+                            <DataGridTextColumn Header="{StaticResource Column.OutPrice}" Binding="{Binding OutPrice}" Width="90" />
+                            <DataGridTextColumn Header="{StaticResource Column.OutPriceBeforeDiscount}" Binding="{Binding OutPriceBeforeDiscount}" Width="110" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>

@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using RefLab.Application.Features.Configuration;
 using RefLab.Application.Features.Reporting;
 using RefLab.Domain.Configuration;
+using RefLab.Domain.Enums;
 using RefLab.Presentation.Common;
 
 namespace RefLab.Presentation.ViewModels;
@@ -84,6 +85,38 @@ public sealed partial class ReportSetupViewModel : ViewModelBase
     [ObservableProperty]
     private string? _layoutText;
 
+    /// <summary>The signature printed at the foot of every report.</summary>
+    [ObservableProperty]
+    private string? _doctorSignature;
+
+    /// <summary>The doctor's name printed at the foot of every report.</summary>
+    [ObservableProperty]
+    private string? _doctorName;
+
+    /// <summary>The line of thanks printed at the foot of every report.</summary>
+    [ObservableProperty]
+    private string? _thanksText;
+
+    /// <summary>The path of the laboratory logo.</summary>
+    [ObservableProperty]
+    private string? _labLogoPath;
+
+    /// <summary>The path of the report heading logo.</summary>
+    [ObservableProperty]
+    private string? _reportLogoPath;
+
+    /// <summary>The width, in pixels, the laboratory logo is printed at.</summary>
+    [ObservableProperty]
+    private int? _logoWidthPx;
+
+    /// <summary>The height, in pixels, the laboratory logo is printed at.</summary>
+    [ObservableProperty]
+    private int? _logoHeightPx;
+
+    /// <summary>Which results a printed report carries.</summary>
+    [ObservableProperty]
+    private ReportHeadingMode _headingMode = ReportHeadingMode.All;
+
     /// <summary>Reloads the settings.</summary>
     /// <remarks>
     /// The Application layer exposes no read-only settings query among the
@@ -146,7 +179,15 @@ public sealed partial class ReportSetupViewModel : ViewModelBase
                 TopMargin,
                 BottomMargin,
                 BackgroundColour,
-                LayoutText));
+                LayoutText,
+                DoctorSignature,
+                DoctorName,
+                ThanksText,
+                LabLogoPath,
+                ReportLogoPath,
+                LogoWidthPx,
+                LogoHeightPx,
+                HeadingMode));
 
             Apply(settings);
 
@@ -159,12 +200,22 @@ public sealed partial class ReportSetupViewModel : ViewModelBase
         PaperSize = settings.PaperSize;
         GlobalHeaderText = settings.GlobalHeaderText;
         GlobalHeaderSecondaryText = settings.GlobalHeaderSecondaryText;
-        FooterText = settings.ConnectionReceiptFooter;
+        // The report footer is its own setting. Reading the connection-receipt
+        // footer into it would show one document's footer on another.
+        FooterText = settings.ReportFooterText;
         LeftMargin = settings.LeftMargin;
         RightMargin = settings.RightMargin;
         TopMargin = settings.TopMargin;
         BottomMargin = settings.BottomMargin;
         BackgroundColour = settings.BackgroundColour;
+        DoctorSignature = settings.DoctorSignature;
+        DoctorName = settings.DoctorName;
+        ThanksText = settings.ThanksText;
+        LabLogoPath = settings.LabLogoPath;
+        ReportLogoPath = settings.ReportLogoPath;
+        LogoWidthPx = settings.LogoWidthPx;
+        LogoHeightPx = settings.LogoHeightPx;
+        HeadingMode = settings.HeadingMode;
 
         Printers.Clear();
 

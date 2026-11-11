@@ -181,5 +181,6 @@ public sealed class PatientWorkViewModelTests
             PrintedBy: null,
             PrintedAt: null,
             Comment: null,
+            SampleTakenOutsideLab: false,
             Price: 150m);
 }

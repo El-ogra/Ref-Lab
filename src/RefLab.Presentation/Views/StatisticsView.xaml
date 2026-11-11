@@ -83,6 +83,78 @@
                         </DockPanel>
                     </Border>
                 </Grid>
+
+                <!--
+                    The indicators the reference system documents: the patient
+                    count for a year sorted by month and by sex, the request
+                    rate of a test group and the number of samples received in
+                    the year.
+                -->
+                <Grid Margin="0,8,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0" Style="{StaticResource MetricTileStyle}" Margin="0,0,4,0">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top"
+                                       Text="{StaticResource Panel.Statistics.ByYear}"
+                                       Style="{StaticResource MetricTileCaptionStyle}" />
+                            <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding ByYear}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{StaticResource Column.Period}" Binding="{Binding Period}" Width="*" />
+                                    <DataGridTextColumn Header="{StaticResource Column.Count}" Binding="{Binding Count}" Width="70" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+                    </Border>
+
+                    <Border Grid.Column="1" Style="{StaticResource MetricTileStyle}" Margin="0,0,4,0">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top"
+                                       Text="{StaticResource Panel.Statistics.ByMonthAndSex}"
+                                       Style="{StaticResource MetricTileCaptionStyle}" />
+                            <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding ByMonthAndSex}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{StaticResource Column.Period}" Binding="{Binding Period}" Width="*" />
+                                    <DataGridTextColumn Header="{StaticResource Column.Count}" Binding="{Binding Count}" Width="70" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+                    </Border>
+
+                    <Border Grid.Column="2" Style="{StaticResource MetricTileStyle}" Margin="0,0,4,0">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top"
+                                       Text="{StaticResource Panel.Statistics.RequestRate}"
+                                       Style="{StaticResource MetricTileCaptionStyle}" />
+                            <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding RequestRates}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding SubGroupCode}" Width="70" />
+                                    <DataGridTextColumn Header="{StaticResource Column.Count}" Binding="{Binding RequestCount}" Width="70" />
+                                    <DataGridTextColumn Header="{StaticResource Column.Rate}" Binding="{Binding RequestsPerPatient}" Width="70" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+                    </Border>
+
+                    <Border Grid.Column="3" Style="{StaticResource MetricTileStyle}">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top"
+                                       Text="{StaticResource Panel.Statistics.SamplesByYear}"
+                                       Style="{StaticResource MetricTileCaptionStyle}" />
+                            <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding SamplesByYear}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{StaticResource Column.Year}" Binding="{Binding Year}" Width="*" />
+                                    <DataGridTextColumn Header="{StaticResource Column.Count}" Binding="{Binding SampleCount}" Width="70" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+                    </Border>
+                </Grid>
             </DockPanel>
         </ScrollViewer>
     </DockPanel>

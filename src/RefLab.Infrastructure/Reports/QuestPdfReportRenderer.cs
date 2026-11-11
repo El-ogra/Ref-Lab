@@ -50,6 +50,11 @@ public sealed class QuestPdfReportRenderer : IReportRenderer
                 {
                     column.Spacing(8);
 
+                    // The branding block comes first: the reference system
+                    // prints the product identity and the currency above
+                    // everything else on every document.
+                    ReportBranding.Apply(column);
+
                     if (!string.IsNullOrWhiteSpace(request.Title))
                     {
                         column.Item().Text(request.Title).FontSize(16).SemiBold();
@@ -57,7 +62,7 @@ public sealed class QuestPdfReportRenderer : IReportRenderer
 
                     if (!string.IsNullOrWhiteSpace(request.Subtitle))
                     {
-                        column.Item().Text(request.Subtitle).FontSize(11);
+                        column.Item().Text(request.Subtitle).FontSize(11).SemiBold();
                     }
 
                     column.Item().Text(BuildPatientLine(request)).FontSize(9);
@@ -87,6 +92,34 @@ public sealed class QuestPdfReportRenderer : IReportRenderer
                     }
                 });
 
+                // The signature block. The reference system prints three fixed
+                // lines at the foot of the clinical report; in Ref Lab the
+                // laboratory owns them.
+                if (!string.IsNullOrWhiteSpace(request.DoctorSignature) ||
+                    !string.IsNullOrWhiteSpace(request.DoctorName) ||
+                    !string.IsNullOrWhiteSpace(request.ThanksText))
+                {
+                    page.Footer().Column(column =>
+                    {
+                        column.Spacing(0);
+
+                        if (!string.IsNullOrWhiteSpace(request.DoctorSignature))
+                        {
+                            column.Item().Text(request.DoctorSignature).FontSize(9);
+                        }
+
+                        if (!string.IsNullOrWhiteSpace(request.DoctorName))
+                        {
+                            column.Item().Text(request.DoctorName).FontSize(9);
+                        }
+
+                        if (!string.IsNullOrWhiteSpace(request.ThanksText))
+                        {
+                            column.Item().Text(request.ThanksText).FontSize(9);
+                        }
+                    });
+                }
+
                 if (!string.IsNullOrWhiteSpace(request.FooterText))
                 {
                     page.Footer().Text(request.FooterText).FontSize(8);
@@ -104,7 +137,15 @@ public sealed class QuestPdfReportRenderer : IReportRenderer
             sections,
             request.HeaderText,
             request.FooterText,
-            BuildPatientLine(request));
+            BuildPatientLine(request),
+            request.Category,
+            request.DoctorSignature,
+            request.DoctorName,
+            request.ThanksText,
+            request.LabLogoPath,
+            request.ReportLogoPath,
+            request.LogoWidthPx,
+            request.LogoHeightPx);
     }
 
     private static string BuildPatientLine(ReportRenderRequest request)

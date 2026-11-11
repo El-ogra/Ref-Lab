@@ -4,6 +4,7 @@ using RefLab.Application.Behaviors;
 using RefLab.Application.Common;
 using RefLab.Application.Features.Patients;
 using RefLab.Domain.Auditing;
+using RefLab.Domain.Configuration;
 using RefLab.Domain.Enums;
 using RefLab.Domain.Identity;
 using RefLab.Domain.Patients;
@@ -28,6 +29,15 @@ public sealed record PrintResultReportCommand(
     ReportCategory Category,
     string DestinationDirectory) : IRequest<PrintResultReportDto>, IRequirePermission
 {
+    /// <summary>
+    /// The standard comment of a specimen that was taken outside the laboratory.
+    /// </summary>
+    /// <remarks>
+    /// The reference system prints exactly this sentence under the result of a
+    /// specimen that was collected away from the laboratory.
+    /// </remarks>
+    public const string SampleOutsideLabComment = "Sample taken outside lab.";
+
     /// <inheritdoc />
     public Permission Permission => Permission.PrintReports;
 }
@@ -86,30 +96,113 @@ public sealed class PrintResultReportHandler : IRequestHandler<PrintResultReport
         var now = _clock.UtcNow;
         var operatorName = _currentUser.OperatorName ?? "unknown";
 
+        // The laboratory settings carry the branding of the printed document.
+        var settings = _db.Set<LaboratorySettings>().FirstOrDefault();
+
+        var interval = orderTest.ReferenceSnapshot?.Interval;
+
+        var classification = orderTest.Classification;
+
+        // The report heading mode decides which results the document carries.
+        var included = settings?.HeadingMode switch
+        {
+            ReportHeadingMode.Normal => classification is ResultClassification.Normal,
+            ReportHeadingMode.Abnormal => classification is ResultClassification.High
+                or ResultClassification.Low
+                or ResultClassification.Critical,
+            _ => true,
+        };
+
+        var rows = new List<ReportRow>();
+
+        if (included)
+        {
+            rows.Add(new ReportRow(new[]
+            {
+                orderTest.TestName ?? orderTest.TestSimpleName,
+                orderTest.Result?.Text ?? string.Empty,
+                orderTest.TestUnit ?? string.Empty,
+                interval?.RangeText ?? string.Empty,
+                classification?.ToString() ?? string.Empty,
+                interval?.CriticalInterval.CriticalRangeText ?? string.Empty,
+            }));
+        }
+
+        var sections = new List<ReportSection>
+        {
+            new ReportSection(
+                "REFERENCE RESULT",
+                new[]
+                {
+                    new ReportRow(new[]
+                    {
+                        "Sex",
+                        patient.Sex.ToString(),
+                        "Age",
+                        patient.Age?.ToString(System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty,
+                        "Normal range for test",
+                        interval?.RangeText ?? string.Empty,
+                    }),
+                }),
+            new ReportSection(
+                orderTest.TestName ?? orderTest.TestSimpleName,
+                rows.ToArray()),
+        };
+
+        // The comment line. The reference system prints the comment of the
+        // result under the table, and the standard comment of a specimen taken
+        // outside the laboratory is its own entry.
+        var comments = new List<string>();
+
+        if (orderTest.SampleTakenOutsideLab)
+        {
+            comments.Add(PrintResultReportCommand.SampleOutsideLabComment);
+        }
+
+        if (!string.IsNullOrWhiteSpace(orderTest.Comment))
+        {
+            comments.Add(orderTest.Comment);
+        }
+
+        if (comments.Count > 0)
+        {
+            sections.Add(new ReportSection(
+                "Comment",
+                comments.Select(comment => new ReportRow(new[] { "Comment : " + comment })).ToArray()));
+        }
+
+        var reportingDate = now.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+
         var document = _reportRenderer.RenderLaboratoryReport(new ReportRenderRequest(
             "LABORATORY REPORT",
-            null,
+            orderTest.TestName ?? orderTest.TestSimpleName,
             patient.Name,
             order.LegacyIdentifier?.Value,
             patient.Sex.ToString(),
             patient.Age?.ToString(System.Globalization.CultureInfo.InvariantCulture),
             order.RequestDate.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture),
-            now.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture),
-            null,
-            null,
-            new[]
-            {
-                new ReportSection(
-                    orderTest.TestName ?? orderTest.TestSimpleName,
-                    new[] { new ReportRow(new[] { orderTest.Result?.Text ?? string.Empty, orderTest.TestUnit ?? string.Empty }) }),
-            }));
+            reportingDate,
+            settings?.GlobalHeaderText,
+            $"Issued on: {reportingDate}    Sent to: {patient.Name}",
+            sections,
+            settings?.DoctorSignature,
+            settings?.DoctorName,
+            settings?.ThanksText,
+            settings?.LabLogoPath,
+            settings?.ReportLogoPath,
+            settings?.LogoWidthPx,
+            settings?.LogoHeightPx,
+            request.Category,
+            settings?.HeadingMode ?? ReportHeadingMode.All));
+
+        // The sequence number is allocated before the document is produced, so
+        // that a gap in the series reveals a report that was never issued.
+        var sequenceNumber = _printSequence.Next();
 
         var exported = await _pdfExporter.ExportAsync(
             document,
             request.DestinationDirectory,
             cancellationToken);
-
-        var sequenceNumber = _printSequence.Next();
 
         orderTest.MarkPrinted(operatorName, now, sequenceNumber);
 

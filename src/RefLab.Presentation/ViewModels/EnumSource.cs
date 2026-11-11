@@ -31,6 +31,9 @@ public static class EnumSource
     /// <summary>The paper sizes.</summary>
     public static IReadOnlyList<PaperSize> PaperSizeValues { get; } = Enum.GetValues<PaperSize>();
 
+    /// <summary>The report heading modes.</summary>
+    public static IReadOnlyList<ReportHeadingMode> ReportHeadingModeValues { get; } = Enum.GetValues<ReportHeadingMode>();
+
     /// <summary>The sample disposition actions.</summary>
     public static IReadOnlyList<SampleDispositionAction> SampleDispositionActionValues { get; } =
         Enum.GetValues<SampleDispositionAction>();

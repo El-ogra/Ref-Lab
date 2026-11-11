@@ -1,4 +1,5 @@
 using RefLab.Domain.Configuration;
+using RefLab.Domain.Enums;
 
 namespace RefLab.Application.Features.Configuration;
 
@@ -15,6 +16,14 @@ public sealed record LaboratorySettingsDto(
     string? GlobalHeaderSecondaryText,
     string? ReportFooterText,
     string? LayoutText,
+    string? DoctorSignature,
+    string? DoctorName,
+    string? ThanksText,
+    string? LabLogoPath,
+    string? ReportLogoPath,
+    int? LogoWidthPx,
+    int? LogoHeightPx,
+    ReportHeadingMode HeadingMode,
     decimal LeftMargin,
     decimal RightMargin,
     decimal TopMargin,
@@ -37,6 +46,14 @@ public sealed record LaboratorySettingsDto(
             settings.GlobalHeaderSecondaryText,
             settings.ReportFooterText,
             settings.LayoutText,
+            settings.DoctorSignature,
+            settings.DoctorName,
+            settings.ThanksText,
+            settings.LabLogoPath,
+            settings.ReportLogoPath,
+            settings.LogoWidthPx,
+            settings.LogoHeightPx,
+            settings.HeadingMode,
             settings.LeftMargin,
             settings.RightMargin,
             settings.TopMargin,

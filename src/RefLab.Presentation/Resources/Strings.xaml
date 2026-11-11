@@ -34,6 +34,7 @@
     <sys:String x:Key="Screen.OperatorAdministration">Operator administration</sys:String>
     <sys:String x:Key="Screen.Statistics">Statistics and performance</sys:String>
     <sys:String x:Key="Screen.Audit">Audit trail and attendance</sys:String>
+    <sys:String x:Key="Screen.Reception">Reception</sys:String>
 
     <!--
         Panel headings.
@@ -57,6 +58,9 @@
     <sys:String x:Key="Panel.UnitsAndConversions">Units and conversions</sys:String>
     <sys:String x:Key="Panel.Abbreviations">Abbreviations</sys:String>
     <sys:String x:Key="Panel.SubGroups">Sub-groups</sys:String>
+    <sys:String x:Key="Panel.CustomTestGroups">Custom test groups</sys:String>
+    <sys:String x:Key="Panel.CustomGroups">Custom Groups</sys:String>
+    <sys:String x:Key="Panel.CustomTestGroupName">Custom test group name</sys:String>
     <sys:String x:Key="Panel.Cultures">Cultures</sys:String>
     <sys:String x:Key="Panel.Antibiotics">Antibiotics</sys:String>
     <sys:String x:Key="Panel.Farms">Farms</sys:String>
@@ -76,6 +80,7 @@
     <sys:String x:Key="Command.Logout">Log out</sys:String>
     <sys:String x:Key="Command.Login">Login</sys:String>
     <sys:String x:Key="Command.All">All</sys:String>
+    <sys:String x:Key="Command.AddAllTestsInGroup">Add all tests in group</sys:String>
     <sys:String x:Key="Command.AddSelectTest">Add select test</sys:String>
     <sys:String x:Key="Command.PendingOnly">Pending only</sys:String>
     <sys:String x:Key="Command.DeriveHaematocrit">Haematocrit</sys:String>
@@ -105,6 +110,17 @@
     <sys:String x:Key="Column.LowOrHigh">L or H</sys:String>
     <sys:String x:Key="Column.NormalRange">Normal Ranges</sys:String>
     <sys:String x:Key="Column.CriticalRange">Critical Range</sys:String>
+    <sys:String x:Key="Column.Verified">Verified</sys:String>
+    <sys:String x:Key="Column.Requested">Requested</sys:String>
+    <sys:String x:Key="Column.Reviewed">Reviewed</sys:String>
+    <sys:String x:Key="Column.HandedOver">Handed over</sys:String>
+    <sys:String x:Key="Column.NextAction">Next action</sys:String>
+    <sys:String x:Key="Column.Rate">Rate</sys:String>
+    <sys:String x:Key="Column.Year">Year</sys:String>
+    <sys:String x:Key="Column.OutPrice">External price</sys:String>
+    <sys:String x:Key="Column.OutPriceBeforeDiscount">External price before discount</sys:String>
+    <sys:String x:Key="Column.SendOut">Send-out</sys:String>
+    <sys:String x:Key="Column.Printed">Printed</sys:String>
     <sys:String x:Key="Column.NormalRange">Normal range</sys:String>
     <sys:String x:Key="Column.Amount">Amount</sys:String>
     <sys:String x:Key="Column.Date">Date</sys:String>
@@ -161,6 +177,14 @@
     <sys:String x:Key="Field.TopMargin">Top margin</sys:String>
     <sys:String x:Key="Field.BottomMargin">Bottom margin</sys:String>
     <sys:String x:Key="Field.BackgroundColour">Background colour</sys:String>
+    <sys:String x:Key="Field.DoctorSignature">Doctor's signature</sys:String>
+    <sys:String x:Key="Field.DoctorName">Dr. Doctor's Name</sys:String>
+    <sys:String x:Key="Field.ThanksText">Thanks</sys:String>
+    <sys:String x:Key="Field.LabLogoPath">Laboratory logo file</sys:String>
+    <sys:String x:Key="Field.ReportLogoPath">Report logo file</sys:String>
+    <sys:String x:Key="Field.LogoWidth">Logo width in pixels</sys:String>
+    <sys:String x:Key="Field.LogoHeight">Logo height in pixels</sys:String>
+    <sys:String x:Key="Field.HeadingMode">Report heading</sys:String>
     <sys:String x:Key="Field.DefaultAccountType">Default account type</sys:String>
     <sys:String x:Key="Field.ConnectionReceiptHeader">Connection receipt header</sys:String>
     <sys:String x:Key="Field.ConnectionReceiptFooter">Connection receipt footer</sys:String>
@@ -240,6 +264,19 @@
     <sys:String x:Key="Field.ResultValue">Result value</sys:String>
     <sys:String x:Key="Field.ResultUnit">Result unit</sys:String>
     <sys:String x:Key="Field.Comment">Comment</sys:String>
+    <sys:String x:Key="Field.SampleTakenOutsideLab">Sample taken outside lab</sys:String>
+    <sys:String x:Key="Field.CopyCount">Number of copies</sys:String>
+    <sys:String x:Key="Field.ReferringLaboratory">Referring laboratory</sys:String>
+    <sys:String x:Key="Panel.PrintSettings">Print settings</sys:String>
+    <sys:String x:Key="Panel.ReviewVerification">Review and verification</sys:String>
+    <sys:String x:Key="Panel.DocumentBranding">Document branding</sys:String>
+    <sys:String x:Key="Panel.Cases">Cases</sys:String>
+    <sys:String x:Key="Panel.OpenCasesOnly">Open cases only</sys:String>
+    <sys:String x:Key="Panel.PrintAuditTrail">Print audit trail</sys:String>
+    <sys:String x:Key="Panel.Statistics.ByYear">Patient count by year</sys:String>
+    <sys:String x:Key="Panel.Statistics.ByMonthAndSex">Patient count by month and sex</sys:String>
+    <sys:String x:Key="Panel.Statistics.RequestRate">Request rate by test group</sys:String>
+    <sys:String x:Key="Panel.Statistics.SamplesByYear">Samples by year</sys:String>
     <sys:String x:Key="Field.AdditionalResult">Additional result</sys:String>
     <sys:String x:Key="Field.Slot">Slot</sys:String>
     <sys:String x:Key="Field.DestinationLaboratory">Destination laboratory</sys:String>

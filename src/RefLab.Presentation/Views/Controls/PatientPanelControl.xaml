@@ -120,11 +120,26 @@
                 <TextBlock Grid.Row="1" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.Sex}"
                            Style="{StaticResource ArabicFieldLabelStyle}" />
-                <ComboBox Grid.Row="1" Grid.Column="1"
-                          Style="{StaticResource LabComboBoxStyle}"
-                          HorizontalAlignment="Stretch"
-                          ItemsSource="{x:Static vm:EnumSource.SexValues}"
-                          SelectedItem="{Binding Sex}" />
+                <!--
+                    The sex is chosen from the recorded values with a radio
+                    group, the way the reference system's own panel does. The
+                    options are the English tokens the reference system shows
+                    inside its Arabic panel.
+                -->
+                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                    <RadioButton GroupName="PatientSex"
+                                 Style="{StaticResource LabCheckBoxStyle}"
+                                 Content="Male"
+                                 IsChecked="{Binding Sex, Converter={StaticResource EnumEquals}, ConverterParameter=Male}" />
+                    <RadioButton GroupName="PatientSex"
+                                 Style="{StaticResource LabCheckBoxStyle}"
+                                 Content="Female"
+                                 IsChecked="{Binding Sex, Converter={StaticResource EnumEquals}, ConverterParameter=Female}" />
+                    <RadioButton GroupName="PatientSex"
+                                 Style="{StaticResource LabCheckBoxStyle}"
+                                 Content="Unknown"
+                                 IsChecked="{Binding Sex, Converter={StaticResource EnumEquals}, ConverterParameter=Unknown}" />
+                </StackPanel>
 
                 <TextBlock Grid.Row="2" Grid.Column="0"
                            Text="{StaticResource Ar.PatientPanel.Age}"

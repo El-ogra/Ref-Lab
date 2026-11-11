@@ -69,6 +69,7 @@
             <DockPanel Grid.Row="0" Grid.Column="1">
                 <TextBlock DockPanel.Dock="Top" Text="{StaticResource Panel.SelectedTest}" Style="{StaticResource SubHeadingTextStyle}" />
                 <ListView ItemsSource="{Binding SelectedTests}"
+                          SelectedItem="{Binding SelectedOrderTest, Mode=TwoWay}"
                           Style="{StaticResource LabListViewStyle}">
                     <ListView.View>
                         <GridView>
@@ -82,9 +83,15 @@
                         Orientation="Horizontal"
                         HorizontalAlignment="Left"
                         Margin="0,6,0,0">
-                <Button Content="{StaticResource Command.AddSelectTest}" Style="{StaticResource ActionButtonStyle}" />
-                <Button Content="{StaticResource Command.Delete}" Style="{StaticResource SecondaryActionButtonStyle}" />
-                <Button Content="{StaticResource Command.All}" Style="{StaticResource SecondaryActionButtonStyle}" />
+                <Button Content="{StaticResource Command.AddSelectTest}"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Command="{Binding AddSelectedTestCommand}" />
+                <Button Content="{StaticResource Command.Delete}"
+                        Style="{StaticResource SecondaryActionButtonStyle}"
+                        Command="{Binding RemoveSelectedTestCommand}" />
+                <Button Content="{StaticResource Command.All}"
+                        Style="{StaticResource SecondaryActionButtonStyle}"
+                        Command="{Binding AddAllTestsCommand}" />
             </StackPanel>
         </Grid>
     </DockPanel>

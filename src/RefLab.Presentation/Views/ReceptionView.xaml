@@ -1,0 +1,101 @@
+<UserControl x:Class="RefLab.Presentation.Views.ReceptionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:RefLab.Presentation.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:ReceptionViewModel}"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             Background="{StaticResource SurfaceBrush}">
+
+    <!--
+        The reception desk.
+
+        The working surface of the clerk who receives the patients: the cases
+        of the period, the state of each case, and the record of what has
+        already been printed for them.
+    -->
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Style="{StaticResource ChromePanelStyle}">
+            <TextBlock Text="{StaticResource Screen.Reception}"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="SemiBold"
+                       VerticalAlignment="Center" />
+        </Border>
+
+        <!-- The period -->
+        <Border DockPanel.Dock="Top" Style="{StaticResource PanelStyle}">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{StaticResource Field.From}" Style="{StaticResource BaseTextStyle}" VerticalAlignment="Center" />
+                <DatePicker Style="{StaticResource LabDatePickerStyle}"
+                            SelectedDate="{Binding From}" />
+                <TextBlock Text="{StaticResource Field.To}" Style="{StaticResource BaseTextStyle}" VerticalAlignment="Center" Margin="12,0,0,0" />
+                <DatePicker Style="{StaticResource LabDatePickerStyle}"
+                            SelectedDate="{Binding To}" />
+                <CheckBox Style="{StaticResource LabCheckBoxStyle}"
+                          Content="{StaticResource Panel.OpenCasesOnly}"
+                          IsChecked="{Binding OpenOnly}"
+                          VerticalAlignment="Center"
+                          Margin="12,0,0,0" />
+                <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
+            </StackPanel>
+        </Border>
+
+        <Grid Margin="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="8" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- The cases of the period -->
+            <Border Grid.Column="0" Style="{StaticResource PanelStyle}">
+                <DockPanel>
+                    <Border DockPanel.Dock="Top" Style="{StaticResource PanelHeaderBorderStyle}">
+                        <TextBlock Text="{StaticResource Panel.Cases}"
+                                   Style="{StaticResource BaseTextStyle}"
+                                   FontWeight="SemiBold"
+                                   Foreground="{StaticResource FieldLabelBrush}"
+                                   TextAlignment="Center" />
+                    </Border>
+                    <DataGrid Style="{StaticResource LabDataGridStyle}"
+                              ItemsSource="{Binding Cases}"
+                              SelectedItem="{Binding SelectedCase, Mode=TwoWay}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding PatientName}" Width="*" />
+                            <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding LegacyIdentifier}" Width="140" />
+                            <DataGridTextColumn Header="{StaticResource Column.Status}" Binding="{Binding Status}" Width="90" />
+                            <DataGridTextColumn Header="{StaticResource Column.Requested}" Binding="{Binding RequestedTestCount}" Width="70" />
+                            <DataGridTextColumn Header="{StaticResource Column.Reviewed}" Binding="{Binding ReviewedTestCount}" Width="70" />
+                            <DataGridTextColumn Header="{StaticResource Column.HandedOver}" Binding="{Binding HandedOverTestCount}" Width="80" />
+                            <DataGridTextColumn Header="{StaticResource Column.NextAction}" Binding="{Binding NextAction}" Width="*" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </Border>
+
+            <!-- What has been printed for the selected case -->
+            <Border Grid.Column="2" Style="{StaticResource PanelStyle}">
+                <DockPanel>
+                    <Border DockPanel.Dock="Top" Style="{StaticResource PanelHeaderBorderStyle}">
+                        <TextBlock Text="{StaticResource Panel.PrintAuditTrail}"
+                                   Style="{StaticResource BaseTextStyle}"
+                                   FontWeight="SemiBold"
+                                   Foreground="{StaticResource FieldLabelBrush}"
+                                   TextAlignment="Center" />
+                    </Border>
+                    <DataGrid Style="{StaticResource LabDataGridStyle}" ItemsSource="{Binding AuditTrail}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{StaticResource Column.Operator}" Binding="{Binding Operator}" Width="*" />
+                            <DataGridTextColumn Header="{StaticResource Column.PrintedAt}" Binding="{Binding PrintedAt}" Width="150" />
+                            <DataGridTextColumn Header="{StaticResource Column.SequenceNumber}" Binding="{Binding SequenceNumber}" Width="90" />
+                            <DataGridTextColumn Header="{StaticResource Column.Category}" Binding="{Binding Category}" Width="90" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </Border>
+        </Grid>
+    </DockPanel>
+</UserControl>

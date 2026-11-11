@@ -5,6 +5,7 @@ using RefLab.Application.Behaviors;
 using RefLab.Domain.Identity;
 using RefLab.Application.Features.Configuration;
 using RefLab.Domain.Configuration;
+using RefLab.Domain.Enums;
 
 namespace RefLab.Application.Features.Configuration;
 
@@ -14,7 +15,21 @@ namespace RefLab.Application.Features.Configuration;
 /// <remarks>
 /// Legacy evidence: the report margins are stored per profile, the background colour and the twenty colour keys are stored in the profile configuration, and the vendor guide documents the report customisation capability.
 /// </remarks>
-public sealed record CustomiseReportLayoutCommand(decimal? LeftMargin = null, decimal? RightMargin = null, decimal? TopMargin = null, decimal? BottomMargin = null, string? BackgroundColour = null, string? LayoutText = null) : IRequest<LaboratorySettingsDto>, IRequirePermission
+public sealed record CustomiseReportLayoutCommand(
+    decimal? LeftMargin = null,
+    decimal? RightMargin = null,
+    decimal? TopMargin = null,
+    decimal? BottomMargin = null,
+    string? BackgroundColour = null,
+    string? LayoutText = null,
+    string? DoctorSignature = null,
+    string? DoctorName = null,
+    string? ThanksText = null,
+    string? LabLogoPath = null,
+    string? ReportLogoPath = null,
+    int? LogoWidthPx = null,
+    int? LogoHeightPx = null,
+    ReportHeadingMode? HeadingMode = null) : IRequest<LaboratorySettingsDto>, IRequirePermission
 
 {
     /// <inheritdoc />
@@ -69,6 +84,26 @@ public sealed class CustomiseReportLayoutHandler : IRequestHandler<CustomiseRepo
         if (request.LayoutText is not null)
         {
             settings.SetLayoutText(request.LayoutText);
+        }
+
+        if (request.DoctorSignature is not null ||
+            request.DoctorName is not null ||
+            request.ThanksText is not null ||
+            request.LabLogoPath is not null ||
+            request.ReportLogoPath is not null ||
+            request.LogoWidthPx.HasValue ||
+            request.LogoHeightPx.HasValue ||
+            request.HeadingMode.HasValue)
+        {
+            settings.SetBranding(
+                request.DoctorSignature ?? settings.DoctorSignature,
+                request.DoctorName ?? settings.DoctorName,
+                request.ThanksText ?? settings.ThanksText,
+                request.LabLogoPath ?? settings.LabLogoPath,
+                request.ReportLogoPath ?? settings.ReportLogoPath,
+                request.LogoWidthPx ?? settings.LogoWidthPx,
+                request.LogoHeightPx ?? settings.LogoHeightPx,
+                request.HeadingMode ?? settings.HeadingMode);
         }
 
         _unitOfWork.Update(settings);

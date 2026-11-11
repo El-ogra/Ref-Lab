@@ -27,5 +27,6 @@ public static class ScreenRegistry
             [ScreenKeys.OperatorAdministration] = typeof(Views.OperatorAdministrationView),
             [ScreenKeys.Statistics] = typeof(Views.StatisticsView),
             [ScreenKeys.Audit] = typeof(Views.AuditView),
+            [ScreenKeys.Reception] = typeof(Views.ReceptionView),
         };
 }

@@ -112,6 +112,83 @@
                         </DataGrid>
                     </DockPanel>
                 </TabItem>
+
+                <!--
+                    The custom test-group editor.
+
+                    The reference system composes a new test group from the
+                    membership of an existing one: the operator picks the source
+                    group, copies its tests, removes the ones that do not
+                    belong, names the new group and saves it.
+                -->
+                <TabItem Header="{StaticResource Panel.CustomTestGroups}" Style="{StaticResource LabTabItemStyle}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="8" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- The groups that exist, and the one being copied from -->
+                        <DockPanel Grid.Column="0">
+                            <TextBlock DockPanel.Dock="Top"
+                                       Text="{StaticResource Panel.CustomGroups}"
+                                       Style="{StaticResource SubHeadingTextStyle}" />
+                            <DataGrid Style="{StaticResource LabDataGridStyle}"
+                                      ItemsSource="{Binding SubGroups}"
+                                      SelectedItem="{Binding SelectedSourceGroup, Mode=TwoWay}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding Code}" Width="80" />
+                                    <DataGridTextColumn Header="{StaticResource Column.Name}" Binding="{Binding Name}" Width="*" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+
+                        <!-- The group being composed -->
+                        <DockPanel Grid.Column="2">
+                            <TextBlock DockPanel.Dock="Top"
+                                       Text="{StaticResource Panel.SelectedTest}"
+                                       Style="{StaticResource SubHeadingTextStyle}" />
+
+                            <Grid DockPanel.Dock="Top" Margin="0,0,0,6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0"
+                                           Text="{StaticResource Panel.CustomTestGroupName}"
+                                           Style="{StaticResource FieldLabelStyle}" />
+                                <TextBox Grid.Column="1"
+                                         Style="{StaticResource LabFieldTextBoxStyle}"
+                                         Text="{Binding NewTestGroupName, UpdateSourceTrigger=PropertyChanged}" />
+                            </Grid>
+
+                            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                                <Button Content="{StaticResource Command.AddAllTestsInGroup}"
+                                        Style="{StaticResource ActionButtonStyle}"
+                                        Command="{Binding AddAllTestsInGroupCommand}" />
+                                <Button Content="{StaticResource Command.Delete}"
+                                        Style="{StaticResource SecondaryActionButtonStyle}"
+                                        Command="{Binding RemoveGroupTestCommand}" />
+                                <Button Content="{StaticResource Command.All}"
+                                        Style="{StaticResource SecondaryActionButtonStyle}"
+                                        Command="{Binding AddEveryTestToGroupCommand}" />
+                                <Button Content="{StaticResource Command.Save}"
+                                        Style="{StaticResource PrimaryActionButtonStyle}"
+                                        Command="{Binding CreateTestGroupCommand}" />
+                            </StackPanel>
+
+                            <DataGrid Style="{StaticResource LabDataGridStyle}"
+                                      ItemsSource="{Binding TestGroupTests}"
+                                      SelectedItem="{Binding SelectedGroupTest, Mode=TwoWay}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{StaticResource Column.TestCode}" Binding="{Binding Code}" Width="80" />
+                                    <DataGridTextColumn Header="{StaticResource Column.TestName}" Binding="{Binding Name}" Width="*" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+                    </Grid>
+                </TabItem>
             </TabControl>
         </ScrollViewer>
     </DockPanel>

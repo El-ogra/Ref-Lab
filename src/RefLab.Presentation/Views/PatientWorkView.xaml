@@ -144,18 +144,79 @@
                         <TextBlock Text="{StaticResource Field.Comment}" Style="{StaticResource BaseTextStyle}" />
                         <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ResultComment, UpdateSourceTrigger=PropertyChanged}" />
 
+                        <!--
+                            The specimen origin.
+
+                            The reference system records a specimen that was
+                            taken outside the laboratory as the standard comment
+                            of the result, and prints that comment under the
+                            analyte on the report.
+                        -->
+                        <CheckBox Style="{StaticResource LabCheckBoxStyle}"
+                                  Content="{StaticResource Field.SampleTakenOutsideLab}"
+                                  IsChecked="{Binding SampleTakenOutsideLab}" />
+
                         <StackPanel Orientation="Horizontal">
                             <Button Content="{StaticResource Command.Save}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveResultCommand}" />
                             <Button Content="{StaticResource Command.Review}" Style="{StaticResource PrimaryActionButtonStyle}" Command="{Binding ReviewCommand}" />
                             <Button Content="{StaticResource Command.HandOver}" Style="{StaticResource ActionButtonStyle}" Command="{Binding HandOverCommand}" />
                         </StackPanel>
 
+                        <!--
+                            The print settings.
+
+                            The reference system prints the destination, the
+                            output category and the number of copies on the
+                            working screen, beside the result entry.
+                        -->
+                        <Border Style="{StaticResource PanelHeaderBorderStyle}">
+                            <TextBlock Text="{StaticResource Panel.PrintSettings}"
+                                       Style="{StaticResource BaseTextStyle}"
+                                       FontWeight="SemiBold"
+                                       Foreground="{StaticResource FieldLabelBrush}"
+                                       TextAlignment="Center" />
+                        </Border>
+
                         <TextBlock Text="{StaticResource Field.DestinationDirectory}" Style="{StaticResource BaseTextStyle}" />
                         <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding DestinationDirectory, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <TextBlock Text="{StaticResource Field.CopyCount}" Style="{StaticResource BaseTextStyle}" />
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding CopyCount, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <TextBlock Text="{StaticResource Field.ReferringLaboratory}" Style="{StaticResource BaseTextStyle}" />
+                        <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding SelectedLaboratory, UpdateSourceTrigger=PropertyChanged}" />
+
                         <ComboBox Style="{StaticResource LabComboBoxStyle}"
                                   ItemsSource="{x:Static vm:EnumSource.ReportCategoryValues}"
                                   SelectedItem="{Binding ReportCategory}" />
                     </StackPanel>
+
+                    <!--
+                        The review-verification group.
+
+                        The reference system shows, beside the result entry, the
+                        state of every requested test, so that the operator can
+                        see at a glance which results are still unreviewed and
+                        which have already been released.
+                    -->
+                    <Border Style="{StaticResource PanelHeaderBorderStyle}">
+                        <TextBlock Text="{StaticResource Panel.ReviewVerification}"
+                                   Style="{StaticResource BaseTextStyle}"
+                                   FontWeight="SemiBold"
+                                   Foreground="{StaticResource FieldLabelBrush}"
+                                   TextAlignment="Center" />
+                    </Border>
+
+                    <DataGrid Style="{StaticResource LabDataGridStyle}"
+                              ItemsSource="{Binding Tests}"
+                              SelectedItem="{Binding SelectedTest, Mode=TwoWay}"
+                              MaxHeight="160">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{StaticResource Column.TestAbbreviation}" Binding="{Binding TestSimpleName}" Width="*" />
+                            <DataGridCheckBoxColumn Header="{StaticResource Column.Verified}" Binding="{Binding IsReviewed}" Width="70" />
+                            <DataGridCheckBoxColumn Header="{StaticResource Column.Printed}" Binding="{Binding IsPrinted}" Width="70" />
+                        </DataGrid.Columns>
+                    </DataGrid>
 
                     <TabControl>
                         <TabItem Header="{StaticResource Panel.MethodSheet}" Style="{StaticResource LabTabItemStyle}">
@@ -177,7 +238,9 @@
                 <Button Content="{StaticResource Ar.Command.Edit}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding LoadCatalogueCommand}" />
                 <Button Content="{StaticResource Ar.Command.Search}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding LoadOrderCommand}" />
                 <Button Content="{StaticResource Ar.Command.Print}" Style="{StaticResource ArabicActionButtonStyle}" Command="{Binding PreparePrintCommand}" />
-                <Button Content="{StaticResource Ar.Command.Logout}" Style="{StaticResource ArabicActionButtonStyle}" />
+                <Button Content="{StaticResource Ar.Command.Logout}"
+                        Style="{StaticResource ArabicActionButtonStyle}"
+                        Command="{Binding DataContext.SignOutCommand, RelativeSource={RelativeSource AncestorType=Window}}" />
             </StackPanel>
         </Border>
     </DockPanel>

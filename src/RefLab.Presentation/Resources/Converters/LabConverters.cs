@@ -63,18 +63,57 @@ public sealed class NotNullToVisibilityConverter : IValueConverter
 public sealed class EnumEqualsConverter : IValueConverter
 {
     /// <inheritdoc />
-    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture) =>
-        value is not null && parameter is not null && value.Equals(parameter);
+    /// <remarks>
+    /// The parameter is the name of the enumeration member the control stands
+    /// for — <c>ConverterParameter=Male</c> — so that the radio group of an
+    /// enumeration can be written in XAML without a code-behind.
+    /// </remarks>
+    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        if (value is null || parameter is null)
+        {
+            return false;
+        }
+
+        if (value.Equals(parameter))
+        {
+            return true;
+        }
+
+        return value is Enum
+            && string.Equals(value.ToString(), parameter.ToString(), StringComparison.Ordinal);
+    }
 
     /// <inheritdoc />
     public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
-        if (value is bool flag && flag && parameter is not null)
+        if (value is not bool flag || !flag || parameter is null)
+        {
+            return Binding.DoNothing;
+        }
+
+        // The control is bound to the enumeration itself, so the parameter —
+        // the name of the member — is parsed back into the member.
+        if (parameter is Enum)
         {
             return parameter;
         }
 
-        return Binding.DoNothing;
+        var name = parameter.ToString();
+
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            return Binding.DoNothing;
+        }
+
+        var enumType = Nullable.GetUnderlyingType(targetType) ?? targetType;
+
+        if (!enumType.IsEnum)
+        {
+            return Binding.DoNothing;
+        }
+
+        return Enum.Parse(enumType, name, ignoreCase: false);
     }
 }
 

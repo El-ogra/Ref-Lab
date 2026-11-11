@@ -59,6 +59,49 @@
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding BottomMargin, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="{StaticResource Field.BackgroundColour}" Style="{StaticResource BaseTextStyle}" />
                     <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding BackgroundColour, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <!--
+                        The branding of the printed document.
+
+                        The reference system prints the doctor's signature, the
+                        doctor's name and a line of thanks as fixed lines, and
+                        prints the laboratory's own logo. In Ref Lab the
+                        laboratory owns them, so they are settings.
+                    -->
+                    <Border Style="{StaticResource PanelHeaderBorderStyle}">
+                        <TextBlock Text="{StaticResource Panel.DocumentBranding}"
+                                   Style="{StaticResource BaseTextStyle}"
+                                   FontWeight="SemiBold"
+                                   Foreground="{StaticResource FieldLabelBrush}"
+                                   TextAlignment="Center" />
+                    </Border>
+
+                    <TextBlock Text="{StaticResource Field.DoctorSignature}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding DoctorSignature, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <TextBlock Text="{StaticResource Field.DoctorName}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding DoctorName, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <TextBlock Text="{StaticResource Field.ThanksText}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ThanksText, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <TextBlock Text="{StaticResource Field.LabLogoPath}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding LabLogoPath, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <TextBlock Text="{StaticResource Field.ReportLogoPath}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding ReportLogoPath, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <TextBlock Text="{StaticResource Field.LogoWidth}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding LogoWidthPx, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <TextBlock Text="{StaticResource Field.LogoHeight}" Style="{StaticResource BaseTextStyle}" />
+                    <TextBox Style="{StaticResource LabTextBoxStyle}" Text="{Binding LogoHeightPx, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <TextBlock Text="{StaticResource Field.HeadingMode}" Style="{StaticResource BaseTextStyle}" />
+                    <ComboBox Style="{StaticResource LabComboBoxStyle}"
+                              ItemsSource="{x:Static vm:EnumSource.ReportHeadingModeValues}"
+                              SelectedItem="{Binding HeadingMode}" />
+
                     <Button Content="{StaticResource Command.Apply}" Style="{StaticResource ActionButtonStyle}" Command="{Binding SaveLayoutCommand}" />
                     <Button Content="{StaticResource Command.Refresh}" Style="{StaticResource ActionButtonStyle}" Command="{Binding LoadCommand}" />
                 </StackPanel>

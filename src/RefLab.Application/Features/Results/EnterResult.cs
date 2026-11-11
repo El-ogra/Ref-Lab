@@ -16,7 +16,8 @@ public sealed record EnterResultCommand(
     Guid OrderTestId,
     string Value,
     string? Unit = null,
-    string? Comment = null) : IRequest<OrderTestDto>, IRequirePermission
+    string? Comment = null,
+    bool? SampleTakenOutsideLab = null) : IRequest<OrderTestDto>, IRequirePermission
 {
     /// <inheritdoc />
     public Permission Permission => Permission.EnterResults;
@@ -60,6 +61,11 @@ public sealed class EnterResultHandler : IRequestHandler<EnterResultCommand, Ord
         if (!string.IsNullOrWhiteSpace(request.Comment))
         {
             orderTest.SetComment(request.Comment, now, operatorName);
+        }
+
+        if (request.SampleTakenOutsideLab.HasValue)
+        {
+            orderTest.SetSampleTakenOutsideLab(request.SampleTakenOutsideLab.Value, now, operatorName);
         }
 
         _unitOfWork.Update(orderTest);

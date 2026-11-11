@@ -63,8 +63,14 @@ public class MigrationTests
 
         var additive = migrations.Skip(1).ToArray();
 
+        // Every migration after the baseline is additive: it adds the columns
+        // the laboratory settings and the order rows gained, and never
+        // rewrites or removes what the baseline created.
         Assert.All(additive, migration =>
-            Assert.EndsWith("_AddReportFooterAndLayoutText", migration, StringComparison.Ordinal));
+            Assert.True(
+                migration.EndsWith("_AddReportFooterAndLayoutText", StringComparison.Ordinal) ||
+                migration.EndsWith("_AddReportBrandingAndSampleOrigin", StringComparison.Ordinal),
+                $"{migration} is not a known additive migration."));
     }
 
     [Fact]
@@ -92,9 +98,18 @@ public class MigrationTests
         Assert.DoesNotContain("RENAME COLUMN", script, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("ALTER COLUMN", script, StringComparison.OrdinalIgnoreCase);
 
-        // It adds exactly the two columns the model gained.
+        // It adds exactly the columns the model gained.
         Assert.Contains("ADD [ReportFooterText]", script, StringComparison.Ordinal);
         Assert.Contains("ADD [LayoutText]", script, StringComparison.Ordinal);
+        Assert.Contains("ADD [DoctorSignature]", script, StringComparison.Ordinal);
+        Assert.Contains("ADD [DoctorName]", script, StringComparison.Ordinal);
+        Assert.Contains("ADD [ThanksText]", script, StringComparison.Ordinal);
+        Assert.Contains("ADD [LabLogoPath]", script, StringComparison.Ordinal);
+        Assert.Contains("ADD [ReportLogoPath]", script, StringComparison.Ordinal);
+        Assert.Contains("ADD [LogoWidthPx]", script, StringComparison.Ordinal);
+        Assert.Contains("ADD [LogoHeightPx]", script, StringComparison.Ordinal);
+        Assert.Contains("ADD [HeadingMode]", script, StringComparison.Ordinal);
+        Assert.Contains("ADD [SampleTakenOutsideLab]", script, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -253,8 +268,9 @@ public class MigrationTests
         // The baseline migration creates the schema; the additive migration
         // that follows it adds the two report columns. Both are pending on an
         // empty database.
-        Assert.True(pending.Length >= 2, "The additive migration is missing.");
+        Assert.True(pending.Length >= 3, "An additive migration is missing.");
         Assert.EndsWith("_InitialCreate", pending[0], StringComparison.Ordinal);
-        Assert.EndsWith("_AddReportFooterAndLayoutText", pending[^1], StringComparison.Ordinal);
+        Assert.EndsWith("_AddReportFooterAndLayoutText", pending[^2], StringComparison.Ordinal);
+        Assert.EndsWith("_AddReportBrandingAndSampleOrigin", pending[^1], StringComparison.Ordinal);
     }
 }

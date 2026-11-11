@@ -62,6 +62,12 @@ internal static class IdentityConfigurations
             builder.Property(settings => settings.GlobalHeaderSecondaryText).HasMaxLength(ColumnWidths.Note);
             builder.Property(settings => settings.ReportFooterText).HasMaxLength(ColumnWidths.Note);
             builder.Property(settings => settings.LayoutText).HasMaxLength(ColumnWidths.Note);
+            builder.Property(settings => settings.DoctorSignature).HasMaxLength(ColumnWidths.Description);
+            builder.Property(settings => settings.DoctorName).HasMaxLength(ColumnWidths.Name);
+            builder.Property(settings => settings.ThanksText).HasMaxLength(ColumnWidths.Description);
+            builder.Property(settings => settings.LabLogoPath).HasMaxLength(ColumnWidths.Note);
+            builder.Property(settings => settings.ReportLogoPath).HasMaxLength(ColumnWidths.Note);
+            builder.Property(settings => settings.HeadingMode).IsRequired();
             builder.Property(settings => settings.BackgroundColour).HasMaxLength(ColumnWidths.Short);
             builder.Property(settings => settings.DefaultAccountType).HasMaxLength(ColumnWidths.Short);
             builder.Property(settings => settings.ConnectionReceiptHeader).HasMaxLength(ColumnWidths.Note);

@@ -43,4 +43,7 @@ public static class ScreenKeys
 
     /// <summary>The audit trail and attendance screen.</summary>
     public const string Audit = "Audit";
+
+    /// <summary>The reception desk.</summary>
+    public const string Reception = "Reception";
 }

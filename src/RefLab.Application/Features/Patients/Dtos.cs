@@ -122,6 +122,7 @@ public sealed record OrderTestDto(
     string? PrintedBy,
     DateTimeOffset? PrintedAt,
     string? Comment,
+    bool SampleTakenOutsideLab,
     decimal? Price)
 {
     /// <summary>Projects a requested test onto its DTO.</summary>
@@ -164,6 +165,7 @@ public sealed record OrderTestDto(
             test.PrintedBy,
             test.PrintedAt,
             test.Comment,
+            test.SampleTakenOutsideLab,
             test.Price?.Amount);
 }
 

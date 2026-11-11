@@ -1,3 +1,5 @@
+using RefLab.Domain.Enums;
+
 namespace RefLab.Application.Common;
 
 /// <summary>
@@ -26,7 +28,15 @@ public sealed record ReportDocument(
     IReadOnlyList<ReportSection> Sections,
     string? HeaderText,
     string? FooterText,
-    string? PatientLine = null);
+    string? PatientLine = null,
+    ReportCategory Category = ReportCategory.Individual,
+    string? DoctorSignature = null,
+    string? DoctorName = null,
+    string? ThanksText = null,
+    string? LabLogoPath = null,
+    string? ReportLogoPath = null,
+    int? LogoWidthPx = null,
+    int? LogoHeightPx = null);
 
 /// <summary>
 /// The data needed to render a laboratory report.
@@ -42,7 +52,16 @@ public sealed record ReportRenderRequest(
     string? ReportingDate,
     string? HeaderText,
     string? FooterText,
-    IReadOnlyList<ReportSection> Sections);
+    IReadOnlyList<ReportSection> Sections,
+    string? DoctorSignature = null,
+    string? DoctorName = null,
+    string? ThanksText = null,
+    string? LabLogoPath = null,
+    string? ReportLogoPath = null,
+    int? LogoWidthPx = null,
+    int? LogoHeightPx = null,
+    ReportCategory Category = ReportCategory.Individual,
+    ReportHeadingMode HeadingMode = ReportHeadingMode.All);
 
 /// <summary>
 /// A PDF file produced by the exporter.

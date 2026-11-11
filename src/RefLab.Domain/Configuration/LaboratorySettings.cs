@@ -1,3 +1,4 @@
+using RefLab.Domain.Enums;
 using RefLab.Domain.Exceptions;
 
 namespace RefLab.Domain.Configuration;
@@ -115,6 +116,38 @@ public sealed class LaboratorySettings
     public string? ReportFooterText { get; private set; }
 
     /// <summary>
+    /// The signature the laboratory prints at the foot of every report.
+    /// </summary>
+    /// <remarks>
+    /// The reference system prints three fixed lines — the doctor's signature,
+    /// the doctor's name and a line of thanks — at the foot of the clinical
+    /// report. The laboratory that prints them is the one that owns them, so
+    /// Ref Lab makes them settings rather than fixed text.
+    /// </remarks>
+    public string? DoctorSignature { get; private set; }
+
+    /// <summary>The doctor's name, as printed at the foot of every report.</summary>
+    public string? DoctorName { get; private set; }
+
+    /// <summary>The line of thanks printed at the foot of every report.</summary>
+    public string? ThanksText { get; private set; }
+
+    /// <summary>The path of the laboratory logo printed on a document.</summary>
+    public string? LabLogoPath { get; private set; }
+
+    /// <summary>The path of the report heading logo printed on a document.</summary>
+    public string? ReportLogoPath { get; private set; }
+
+    /// <summary>The width, in pixels, the laboratory logo is printed at.</summary>
+    public int? LogoWidthPx { get; private set; }
+
+    /// <summary>The height, in pixels, the laboratory logo is printed at.</summary>
+    public int? LogoHeightPx { get; private set; }
+
+    /// <summary>Which results a printed report carries.</summary>
+    public ReportHeadingMode HeadingMode { get; private set; }
+
+    /// <summary>
     /// The layout text that accompanies the report body.
     /// </summary>
     /// <remarks>
@@ -215,6 +248,44 @@ public sealed class LaboratorySettings
     /// <summary>Sets the layout text that accompanies the report body.</summary>
     public void SetLayoutText(string? layoutText) =>
         LayoutText = Normalize(layoutText);
+
+    /// <summary>Sets the signature, the doctor's name and the line of thanks.</summary>
+    /// <exception cref="InvalidPatientOrderException">
+    /// A logo dimension is not positive.
+    /// </exception>
+    public void SetBranding(
+        string? doctorSignature,
+        string? doctorName,
+        string? thanksText,
+        string? labLogoPath,
+        string? reportLogoPath,
+        int? logoWidthPx,
+        int? logoHeightPx,
+        ReportHeadingMode? headingMode)
+    {
+        if (logoWidthPx is <= 0)
+        {
+            throw new InvalidPatientOrderException("The logo width must be a positive number of pixels.");
+        }
+
+        if (logoHeightPx is <= 0)
+        {
+            throw new InvalidPatientOrderException("The logo height must be a positive number of pixels.");
+        }
+
+        DoctorSignature = Normalize(doctorSignature);
+        DoctorName = Normalize(doctorName);
+        ThanksText = Normalize(thanksText);
+        LabLogoPath = Normalize(labLogoPath);
+        ReportLogoPath = Normalize(reportLogoPath);
+        LogoWidthPx = logoWidthPx;
+        LogoHeightPx = logoHeightPx;
+
+        if (headingMode.HasValue)
+        {
+            HeadingMode = headingMode.Value;
+        }
+    }
 
     /// <summary>Sets the report margins.</summary>
     /// <exception cref="InvalidPatientOrderException">A margin is negative.</exception>

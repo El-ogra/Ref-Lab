@@ -158,6 +158,25 @@ public sealed partial class CatalogueAdministrationViewModel : ViewModelBase
     [ObservableProperty]
     private string? _newConversionToUnit;
 
+    /// <summary>The name of the test group being composed.</summary>
+    [ObservableProperty]
+    private string _newTestGroupName = string.Empty;
+
+    /// <summary>The Arabic name of the test group being composed.</summary>
+    [ObservableProperty]
+    private string? _newTestGroupArabicName;
+
+    /// <summary>The group whose tests the operator is copying.</summary>
+    [ObservableProperty]
+    private ClinicalSubGroupDto? _selectedSourceGroup;
+
+    /// <summary>The test highlighted in the group being composed.</summary>
+    [ObservableProperty]
+    private TestDefinitionDto? _selectedGroupTest;
+
+    /// <summary>The tests of the group being composed.</summary>
+    public ObservableCollection<TestDefinitionDto> TestGroupTests { get; } = new();
+
     /// <summary>The factor of the conversion.</summary>
     [ObservableProperty]
     private decimal? _newConversionFactor;
@@ -316,6 +335,101 @@ public sealed partial class CatalogueAdministrationViewModel : ViewModelBase
             SubGroups.Add(created);
 
             StatusMessage = $"Sub-group {created.Code} was created.";
+        }).ConfigureAwait(true);
+    }
+
+    /// <summary>
+    /// Copies the tests of the selected group into the group being composed.
+    /// </summary>
+    /// <remarks>
+    /// The reference system's custom test-group editor offers
+    /// <c>Add all tests in group</c>, which copies the membership of the
+    /// selected group into the group that is being composed.
+    /// </remarks>
+    [RelayCommand]
+    private void AddAllTestsInGroup()
+    {
+        if (SelectedSourceGroup is null)
+        {
+            ErrorMessage = "Select a group first.";
+            return;
+        }
+
+        foreach (var test in TestDefinitions.Where(test => test.SubGroupCode == SelectedSourceGroup.Code))
+        {
+            if (!TestGroupTests.Any(member => member.Code == test.Code))
+            {
+                TestGroupTests.Add(test);
+            }
+        }
+
+        StatusMessage = $"{TestGroupTests.Count} test(s) selected.";
+    }
+
+    /// <summary>
+    /// Removes the highlighted test from the group being composed.
+    /// </summary>
+    [RelayCommand]
+    private void RemoveGroupTest()
+    {
+        if (SelectedGroupTest is null)
+        {
+            ErrorMessage = "Select a test first.";
+            return;
+        }
+
+        TestGroupTests.Remove(SelectedGroupTest);
+        SelectedGroupTest = null;
+    }
+
+    /// <summary>
+    /// Adds every test of the catalogue to the group being composed.
+    /// </summary>
+    [RelayCommand]
+    private void AddEveryTestToGroup()
+    {
+        foreach (var test in TestDefinitions)
+        {
+            if (!TestGroupTests.Any(member => member.Code == test.Code))
+            {
+                TestGroupTests.Add(test);
+            }
+        }
+
+        StatusMessage = $"{TestGroupTests.Count} test(s) selected.";
+    }
+
+    /// <summary>
+    /// Creates the test group from the tests that have been selected.
+    /// </summary>
+    [RelayCommand]
+    private async Task CreateTestGroupAsync()
+    {
+        if (string.IsNullOrWhiteSpace(NewTestGroupName))
+        {
+            ErrorMessage = "A test group name is required.";
+            return;
+        }
+
+        if (TestGroupTests.Count == 0)
+        {
+            ErrorMessage = "Select at least one test for the group.";
+            return;
+        }
+
+        await RunAsync(async () =>
+        {
+            var created = await _executor.SendAsync(new CreateTestGroupCommand(
+                NewTestGroupName,
+                TestGroupTests.Select(test => test.Code).ToArray(),
+                NewTestGroupArabicName));
+
+            SubGroups.Add(created);
+
+            TestGroupTests.Clear();
+            NewTestGroupName = string.Empty;
+
+            StatusMessage = $"Test group {created.Code} was created.";
         }).ConfigureAwait(true);
     }
 

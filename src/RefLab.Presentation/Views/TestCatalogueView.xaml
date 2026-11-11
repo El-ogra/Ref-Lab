@@ -51,6 +51,8 @@
                             <DataGridTextColumn Header="{StaticResource Column.Code}" Binding="{Binding SexScope}" Width="80" />
                             <DataGridTextColumn Header="{StaticResource Column.AgeUnit}" Binding="{Binding AgeUnit}" Width="80" />
                             <DataGridTextColumn Header="{StaticResource Column.NormalRange}" Binding="{Binding RangeText}" Width="*" />
+                            <DataGridTextColumn Header="{StaticResource Column.SendOut}" Binding="{Binding IsSendOut}" Width="70" />
+                            <DataGridTextColumn Header="{StaticResource Column.SampleType}" Binding="{Binding SampleType}" Width="110" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>

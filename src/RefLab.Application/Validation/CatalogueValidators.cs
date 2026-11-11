@@ -242,3 +242,29 @@ public sealed class GetReferenceRangeForPatientValidator : AbstractValidator<Get
             .WithMessage("The test code must be a positive integer.");
     }
 }
+
+/// <summary>
+/// Validates the creation of a clinical test group.
+/// </summary>
+public sealed class CreateTestGroupValidator : AbstractValidator<CreateTestGroupCommand>
+{
+    /// <summary>Initialises a new validator.</summary>
+    public CreateTestGroupValidator()
+    {
+        RuleFor(request => request.Name)
+            .NotEmpty()
+            .WithMessage("The test group name is required.");
+
+        RuleFor(request => request.Name)
+            .MaximumLength(128)
+            .WithMessage("The test group name cannot be longer than 128 characters.");
+
+        RuleFor(request => request.TestCodes)
+            .NotEmpty()
+            .WithMessage("A test group must contain at least one test.");
+
+        RuleFor(request => request.TestCodes)
+            .Must(codes => codes.Distinct().Count() == codes.Count)
+            .WithMessage("A test group cannot list the same test twice.");
+    }
+}

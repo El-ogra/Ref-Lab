@@ -29,6 +29,22 @@ public sealed partial class StatisticsViewModel : ViewModelBase
     /// <summary>The request counts by sub-group.</summary>
     public ObservableCollection<PatientCountDto> BySubGroup { get; } = new();
 
+    /// <summary>The patient counts by year.</summary>
+    public ObservableCollection<PatientCountDto> ByYear { get; } = new();
+
+    /// <summary>The patient counts by month and by sex.</summary>
+    public ObservableCollection<PatientCountDto> ByMonthAndSex { get; } = new();
+
+    /// <summary>The request rate of each clinical test group.</summary>
+    public ObservableCollection<TestGroupRateDto> RequestRates { get; } = new();
+
+    /// <summary>The number of samples received in each year.</summary>
+    public ObservableCollection<SampleCountDto> SamplesByYear { get; } = new();
+
+    /// <summary>The clinical test group the request rate is reported for.</summary>
+    [ObservableProperty]
+    private int? _subGroupCode;
+
     /// <summary>The last laboratory statistics.</summary>
     [ObservableProperty]
     private LaboratoryStatisticsDto? _statistics;
@@ -54,7 +70,7 @@ public sealed partial class StatisticsViewModel : ViewModelBase
             var from = new DateTimeOffset(DateOnly.FromDateTime(From.Date), TimeOnly.MinValue, TimeSpan.Zero);
             var to = new DateTimeOffset(DateOnly.FromDateTime(To.Date), TimeOnly.MaxValue, TimeSpan.Zero);
 
-            Statistics = await _executor.SendAsync(new GetLaboratoryStatisticsQuery(from, to));
+            Statistics = await _executor.SendAsync(new GetLaboratoryStatisticsQuery(from, to, SubGroupCode));
 
             ByMonth.Clear();
 
@@ -75,6 +91,34 @@ public sealed partial class StatisticsViewModel : ViewModelBase
             foreach (var item in Statistics.BySubGroup)
             {
                 BySubGroup.Add(item);
+            }
+
+            ByYear.Clear();
+
+            foreach (var item in Statistics.ByYear)
+            {
+                ByYear.Add(item);
+            }
+
+            ByMonthAndSex.Clear();
+
+            foreach (var item in Statistics.ByMonthAndSex)
+            {
+                ByMonthAndSex.Add(item);
+            }
+
+            RequestRates.Clear();
+
+            foreach (var item in Statistics.RequestRates)
+            {
+                RequestRates.Add(item);
+            }
+
+            SamplesByYear.Clear();
+
+            foreach (var item in Statistics.SamplesByYear)
+            {
+                SamplesByYear.Add(item);
             }
 
             StatusMessage = $"{Statistics.PatientCount} patient(s) in the period.";

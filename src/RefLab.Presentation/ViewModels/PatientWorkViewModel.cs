@@ -130,6 +130,24 @@ public sealed partial class PatientWorkViewModel : ViewModelBase, INavigationAwa
     [ObservableProperty]
     private string? _additionalResultValue;
 
+    /// <summary>
+    /// Whether the specimen of the selected test was taken outside the laboratory.
+    /// </summary>
+    /// <remarks>
+    /// The reference system carries this as the standard comment of a result and
+    /// prints it under the analyte on the report.
+    /// </remarks>
+    [ObservableProperty]
+    private bool _sampleTakenOutsideLab;
+
+    /// <summary>The number of copies the print operation produces.</summary>
+    [ObservableProperty]
+    private int _copyCount = 1;
+
+    /// <summary>The laboratory the sample was referred to.</summary>
+    [ObservableProperty]
+    private string? _selectedLaboratory;
+
     /// <summary>The amount settled when the results are handed over.</summary>
     [ObservableProperty]
     private decimal? _handOverAmount;
@@ -364,6 +382,27 @@ public sealed partial class PatientWorkViewModel : ViewModelBase, INavigationAwa
         }).ConfigureAwait(true);
     }
 
+    /// <summary>
+    /// Loads the selected row into the entry fields.
+    /// </summary>
+    /// <remarks>
+    /// The result sheet of the reference system edits one row at a time: the
+    /// row that is highlighted carries its own value, its own unit and its own
+    /// comment into the entry area.
+    /// </remarks>
+    partial void OnSelectedTestChanged(OrderTestDto? value)
+    {
+        if (value is null)
+        {
+            return;
+        }
+
+        ResultValue = value.ResultText;
+        ResultUnit = value.TestUnit;
+        ResultComment = value.Comment;
+        SampleTakenOutsideLab = value.SampleTakenOutsideLab;
+    }
+
     /// <summary>Saves the result that is being entered.</summary>
     [RelayCommand]
     private async Task SaveResultAsync()
@@ -384,14 +423,19 @@ public sealed partial class PatientWorkViewModel : ViewModelBase, INavigationAwa
         {
             var updated = await _executor.SendAsync(new EnterResultCommand(
                 SelectedTest.Id,
-                ResultValue,
+                ResultValue ?? string.Empty,
                 ResultUnit,
-                ResultComment));
+                ResultComment,
+                SampleTakenOutsideLab)).ConfigureAwait(true);
 
             ReplaceTest(updated);
 
-            ResultValue = string.Empty;
-            ResultComment = string.Empty;
+            // The entry keeps the row it just saved, so that the operator can
+            // see what is on the sheet without selecting the row again.
+            ResultValue = updated.ResultText;
+            ResultUnit = updated.TestUnit;
+            ResultComment = updated.Comment;
+            SampleTakenOutsideLab = updated.SampleTakenOutsideLab;
 
             StatusMessage = "The result was saved.";
         }).ConfigureAwait(true);
@@ -615,38 +659,6 @@ public sealed partial class PatientWorkViewModel : ViewModelBase, INavigationAwa
         }).ConfigureAwait(true);
     }
 
-    /// <summary>Adds the selected catalogue test to the current order.</summary>
-    [RelayCommand]
-    private void AddSelectedTest()
-    {
-        if (Catalogue.SelectedTest is null)
-        {
-            ErrorMessage = "Select a test first.";
-            return;
-        }
-
-        if (!Catalogue.SelectedTests.Any(test => test.Code == Catalogue.SelectedTest.Code))
-        {
-            Catalogue.SelectedTests.Add(Catalogue.SelectedTest);
-        }
-    }
-
-    /// <summary>Removes the selected catalogue test from the current order.</summary>
-    [RelayCommand]
-    private void RemoveSelectedTest()
-    {
-        if (Catalogue.SelectedTest is null)
-        {
-            return;
-        }
-
-        var existing = Catalogue.SelectedTests.FirstOrDefault(test => test.Code == Catalogue.SelectedTest.Code);
-
-        if (existing is not null)
-        {
-            Catalogue.SelectedTests.Remove(existing);
-        }
-    }
 
     /// <summary>Clears the patient panel and the results.</summary>
     [RelayCommand]

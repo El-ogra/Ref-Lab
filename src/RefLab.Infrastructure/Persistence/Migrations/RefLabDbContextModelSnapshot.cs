@@ -602,6 +602,14 @@ namespace RefLab.Infrastructure.Persistence.Migrations
                         .HasMaxLength(16)
                         .HasColumnType("nvarchar(16)");
 
+                    b.Property<string>("DoctorName")
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<string>("DoctorSignature")
+                        .HasMaxLength(512)
+                        .HasColumnType("nvarchar(512)");
+
                     b.Property<string>("GlobalHeaderSecondaryText")
                         .HasMaxLength(2048)
                         .HasColumnType("nvarchar(2048)");
@@ -609,6 +617,9 @@ namespace RefLab.Infrastructure.Persistence.Migrations
                     b.Property<string>("GlobalHeaderText")
                         .HasMaxLength(2048)
                         .HasColumnType("nvarchar(2048)");
+
+                    b.Property<int>("HeadingMode")
+                        .HasColumnType("int");
 
                     b.Property<int>("HistoryDisplayMode")
                         .HasColumnType("int");
@@ -619,6 +630,10 @@ namespace RefLab.Infrastructure.Persistence.Migrations
                     b.Property<bool>("IsWorkSheetPrinted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("LabLogoPath")
+                        .HasMaxLength(2048)
+                        .HasColumnType("nvarchar(2048)");
+
                     b.Property<string>("LayoutText")
                         .HasMaxLength(2048)
                         .HasColumnType("nvarchar(2048)");
@@ -626,6 +641,12 @@ namespace RefLab.Infrastructure.Persistence.Migrations
                     b.Property<decimal>("LeftMargin")
                         .HasPrecision(9, 4)
                         .HasColumnType("decimal(9,4)");
+
+                    b.Property<int?>("LogoHeightPx")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("LogoWidthPx")
+                        .HasColumnType("int");
 
                     b.Property<int>("PaperSize")
                         .HasColumnType("int");
@@ -639,12 +660,20 @@ namespace RefLab.Infrastructure.Persistence.Migrations
                         .HasMaxLength(2048)
                         .HasColumnType("nvarchar(2048)");
 
+                    b.Property<string>("ReportLogoPath")
+                        .HasMaxLength(2048)
+                        .HasColumnType("nvarchar(2048)");
+
                     b.Property<int>("ReportSequenceStart")
                         .HasColumnType("int");
 
                     b.Property<decimal>("RightMargin")
                         .HasPrecision(9, 4)
                         .HasColumnType("decimal(9,4)");
+
+                    b.Property<string>("ThanksText")
+                        .HasMaxLength(512)
+                        .HasColumnType("nvarchar(512)");
 
                     b.Property<decimal>("TopMargin")
                         .HasPrecision(9, 4)
@@ -999,6 +1028,9 @@ namespace RefLab.Infrastructure.Persistence.Migrations
                     b.Property<string>("ResultCasePrint")
                         .HasMaxLength(16)
                         .HasColumnType("nvarchar(16)");
+
+                    b.Property<bool>("SampleTakenOutsideLab")
+                        .HasColumnType("bit");
 
                     b.Property<int>("SubGroupCode")
                         .HasColumnType("int");

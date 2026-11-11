@@ -24,7 +24,29 @@ public sealed record LaboratoryStatisticsDto(
     int RequestedTestCount,
     IReadOnlyList<PatientCountDto> ByMonth,
     IReadOnlyList<PatientCountDto> BySex,
-    IReadOnlyList<PatientCountDto> BySubGroup);
+    IReadOnlyList<PatientCountDto> BySubGroup,
+    IReadOnlyList<PatientCountDto> ByYear,
+    IReadOnlyList<PatientCountDto> ByMonthAndSex,
+    IReadOnlyList<TestGroupRateDto> RequestRates,
+    IReadOnlyList<SampleCountDto> SamplesByYear);
+
+/// <summary>
+/// The request rate of a clinical test group.
+/// </summary>
+/// <remarks>
+/// The reference system counts the request rate of a test group: how many
+/// requests the group received, against how many patients asked for them.
+/// </remarks>
+public sealed record TestGroupRateDto(
+    string SubGroupCode,
+    int RequestCount,
+    int PatientCount,
+    decimal RequestsPerPatient);
+
+/// <summary>
+/// The number of samples a laboratory received in a year.
+/// </summary>
+public sealed record SampleCountDto(string Year, int SampleCount);
 
 /// <summary>
 /// The performance monitoring figures of the laboratory.

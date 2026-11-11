@@ -83,6 +83,10 @@
                             Style="{StaticResource ActionButtonStyle}"
                             Command="{Binding NavigateCommand}"
                             CommandParameter="Audit" />
+                    <Button Content="{StaticResource Screen.Reception}"
+                            Style="{StaticResource ActionButtonStyle}"
+                            Command="{Binding NavigateCommand}"
+                            CommandParameter="Reception" />
                 </StackPanel>
 
                 <StackPanel Grid.Column="2" Orientation="Horizontal">

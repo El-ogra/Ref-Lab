@@ -107,6 +107,25 @@ public sealed class OrderTest
     /// <summary>Legacy <c>RESULTCASEPRINT</c> — the printed case style.</summary>
     public string? ResultCasePrint { get; private set; }
 
+    /// <summary>
+    /// Whether the specimen was taken outside the laboratory.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// The reference system carries this as the standard comment of a result:
+    /// the printed report shows <c>Comment : Sample taken outside lab.</c>
+    /// when the specimen was collected away from the laboratory.
+    /// </para>
+    /// <para>
+    /// The flag is recorded here rather than only as free text, so that the
+    /// report can print the laboratory's own wording of it, and so that a
+    /// laboratory can tell the two cases apart when it reads its own data.
+    /// It is orthogonal to the result state machine: it survives every
+    /// transition and gates none of them.
+    /// </para>
+    /// </remarks>
+    public bool SampleTakenOutsideLab { get; private set; }
+
     /// <summary>The price charged for the test.</summary>
     public Money? Price { get; private set; }
 
@@ -380,6 +399,15 @@ public sealed class OrderTest
     public void SetComment(string? comment, DateTimeOffset at, string editedBy)
     {
         Comment = string.IsNullOrWhiteSpace(comment) ? null : comment.Trim();
+        RecordAmendment(editedBy, at);
+    }
+
+    /// <summary>
+    /// Records whether the specimen was taken outside the laboratory.
+    /// </summary>
+    public void SetSampleTakenOutsideLab(bool takenOutsideLab, DateTimeOffset at, string editedBy)
+    {
+        SampleTakenOutsideLab = takenOutsideLab;
         RecordAmendment(editedBy, at);
     }
 

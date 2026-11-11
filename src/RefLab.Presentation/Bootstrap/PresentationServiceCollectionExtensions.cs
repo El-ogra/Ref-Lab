@@ -54,6 +54,7 @@ public static class PresentationServiceCollectionExtensions
         services.AddTransient<OperatorAdministrationViewModel>();
         services.AddTransient<StatisticsViewModel>();
         services.AddTransient<AuditViewModel>();
+        services.AddTransient<ReceptionViewModel>();
 
         services.AddTransient<MainWindow>();
         services.AddTransient<SignInWindow>();
@@ -70,6 +71,7 @@ public static class PresentationServiceCollectionExtensions
         services.AddTransient<OperatorAdministrationView>();
         services.AddTransient<StatisticsView>();
         services.AddTransient<AuditView>();
+        services.AddTransient<ReceptionView>();
         services.AddTransient<MethodSheetPanelView>();
         services.AddTransient<DerivationPanelView>();
 
