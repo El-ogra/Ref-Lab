@@ -60,21 +60,41 @@ Ref Lab/
 │   │   │   ├── Converters/      Value-object and collection conversions
 │   │   │   └── Migrations/      The generated SQL Server migration
 │   └── RefLab.Presentation/     WPF views and view models (MVVM)
-├── docs/
-│   ├── USE_CASE_INVENTORY.md    Generated from the source — 70 use cases
+├── Docs/
+│   ├── KB/                        The AI knowledge base — start at Docs/KB/START-HERE.md
+│   │   ├── START-HERE.md         The single entry point
+│   │   ├── CONVENTIONS.md        The traps
+│   │   ├── ARCHITECTURE.md       Layers, wiring, guards, recipes
+│   │   ├── OPERATIONS.md         Build, test, run, migrations
+│   │   ├── DOMAIN-RULES.md       The eight domain policies
+│   │   ├── DATA-MODEL.md         The 27 tables
+│   │   ├── features/             One file per functional area (14)
+│   │   └── generated/             Machine-generated indexes — never hand-edited
+│   ├── USE_CASE_INVENTORY.md    Generated from the source — 73 use cases
 │   ├── RL-P3-Completion-Report.md
 │   ├── RL-P4-Completion-Report.md
 │   └── LOCAL_AGENT_IMPLEMENTATION_GUIDE.md
 ├── scripts/
-│   └── generate_use_case_inventory.py
+│   ├── generate_use_case_inventory.py
+│   ├── kb_build.py               Regenerates Docs/KB/generated from the source
+│   └── kb_check.py               Validates the knowledge base against the source
 └── tests/
     ├── RefLab.Domain.Tests/         Domain unit tests and architecture guards
     ├── RefLab.Application.Tests/    Application use-case tests and architecture guards
-    └── RefLab.Infrastructure.Tests/ Persistence integration tests, QuestPDF, hashing, session
+    ├── RefLab.Infrastructure.Tests/ Persistence integration tests, QuestPDF, hashing, session
+    ├── RefLab.Integration.Tests/    End-to-end workflow, clinical safety, persistence mapping
+    └── RefLab.Presentation.Tests/   View-model and navigation tests
 ```
 
-**Phase 4 status: 70 / 70 use cases implemented, 70 / 70 with a validator,
-70 / 70 covered by a test, 535 tests passing, 0 build warnings.**
+**Status at commit `f4daec94396796076082442e1cdcb81917293910`:
+73 / 73 use cases implemented, 73 / 73 with a validator,
+73 / 73 covered by a test, 722 tests passing (plus 16 Presentation tests that
+require Windows), 0 build warnings.**
+
+> The earlier figure of "70 / 70 … 535 tests" was the Phase 4 baseline of the
+> three test projects that existed then. The count was corrected on 2026-11-14
+> when the use-case drift guard was repaired and the Application layer was found
+> to define three further use cases. See `Docs/KB/history/PHASES.md` §5.
 
 **The laboratory is a single-site installation.** The legacy `Labbranch` table,
 the branch column of the operator table, the branch digit at position 9 of the
@@ -225,13 +245,44 @@ change.
 
 ## 9. Project documentation
 
+### Start here
+
 | Document | Content |
 |---|---|
-| `RL-P0-RPT-001` — Phase 0 Discovery Report | Input verification, architectural assessment, roadmap |
-| `RL-P4-Completion-Report.md` — Phase 4 Completion Report | Branch removal, the persistence layer, the schema and the migration |
+| **`Docs/KB/START-HERE.md`** | **The entry point for any AI agent or new developer** — the four layers, the fourteen functional areas, and the task-to-document routing table |
+| `Docs/KB/CONVENTIONS.md` | The traps: the `Application` name collision, `Docs` casing, migration rules, permissions |
+| `Docs/KB/ARCHITECTURE.md` | Layers, the composition root, the request pipeline, the eighteen architecture guards, recipes for adding a use case, a screen or a table |
+| `Docs/KB/OPERATIONS.md` | Build, test, run, migrations, the knowledge-base tooling |
+| `Docs/KB/DOMAIN-RULES.md` | The eight domain policies, with their formulas and their legacy provenance |
+| `Docs/KB/DATA-MODEL.md` | The 27 tables, the relationships, the owned value objects and the migration lineage |
+| `Docs/KB/features/*.md` | One file per functional area — 14 files |
+| `Docs/KB/generated/*.csv` | Machine-generated indexes of files, symbols, use cases, tables, screens and dependencies |
+
+Keep the knowledge base honest:
+
+```powershell
+python scripts/kb_build.py    # regenerate the indexes from the source
+python scripts/kb_check.py    # fail if any index is stale or any link is broken
+```
+
+### Specification and evidence
+
+| Document | Content |
+|---|---|
 | `IDEA.md` | Authoritative project specification |
 | `ui-labels-verified.md` | Verified Arabic user-interface labels |
-| `Data_Model_and_Workflow_Entities_V2.md` | Verified data model (40 entities, 19 observed relationships) |
-| `Business_Rules_V2.md` | 45 verified business rules |
-| `Functional_Specification_V2.md` | 48 functions and 7 workflows |
+| `RL-P0-RPT-001` — Phase 0 Discovery Report | Input verification, architectural assessment, roadmap |
+| `RL-P4-Completion-Report.md` — Phase 4 Completion Report | Branch removal, the persistence layer, the schema and the migration |
+| `Docs/KB/history/PHASES.md` | Phase-by-phase index, owner decisions, known gaps |
+
+### Legacy evidence — describes the *old* systems, not this one
+
+| Document | Content |
+|---|---|
+| `Data_Model_and_Workflow_Entities_V2.md` | Verified legacy data model (40 entities, 19 observed relationships) |
+| `Business_Rules_V2.md` | 45 verified legacy business rules |
+| `Functional_Specification_V2.md` | 48 legacy functions and 7 workflows |
 | `Functionality_Requirements_Matrix_V2.md` | 48 functions mapped to 72 requirements |
+| `Database documentation.md` | The legacy `Patients.mdb` (103 tables) |
+| `Documenting the Executable File.md` | The legacy `real lab system.exe` (VB6) |
+| `ReferenceIndex/` | An index of the legacy evidence archives — **not** an index of the code (see `ReferenceIndex/README.md`) |

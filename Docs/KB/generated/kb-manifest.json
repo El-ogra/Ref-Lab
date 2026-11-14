@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-14T14:27:56Z",
+  "generator": "scripts/kb_build.py",
+  "source_tree_fingerprint": "fcf01a5c08806c9dab84f2f3ba1a003d4c4811aada9c7025d6179eeb8007f6a7",
+  "verified_against_commit": "f4daec94396796076082442e1cdcb81917293910",
+  "counts": {
+    "source_files": 408,
+    "symbols": 475,
+    "use_cases": 73,
+    "tables": 27,
+    "screens": 14,
+    "panels": 2,
+    "dependency_edges": 244,
+    "feature_areas": 14
+  },
+  "provenance_classes": {
+    "authoritative-source": "The source code itself. It is the only authority.",
+    "generated": "Emitted by scripts/kb_build.py from the source tree.",
+    "curated-verified": "Hand-written analysis, checked against a named commit.",
+    "historical": "An accepted record of a past state. Read as history.",
+    "legacy-evidence": "Describes the old reference systems, not this one.",
+    "process": "Governance, ownership and working rules.",
+    "environment-local": "Describes one workstation. Not portable."
+  },
+  "generated_index": [
+    "Docs/KB/generated/db-entity-index.csv",
+    "Docs/KB/generated/dependency-edges.csv",
+    "Docs/KB/generated/file-inventory.csv",
+    "Docs/KB/generated/kb-manifest.json",
+    "Docs/KB/generated/legacy-corpus-index.csv",
+    "Docs/KB/generated/screen-index.csv",
+    "Docs/KB/generated/symbol-index.csv",
+    "Docs/KB/generated/usecase-index.csv"
+  ],
+  "curated_documents": [
+    {
+      "path": "AGENTS.md",
+      "provenance": "curated-verified",
+      "bytes": 2147,
+      "characters": 1483,
+      "sha256": "043319679712e9379bd23a6194e66f33238867fae98870ecc5d810dd60eb35a1",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "Docs/KB/ARCHITECTURE.md",
+      "provenance": "curated-verified",
+      "bytes": 17573,
+      "characters": 15002,
+      "sha256": "1f2836daac2755eb842500cfcb5acf615e2ec973cf695d32ab818065abcc9d01",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "Docs/KB/CONVENTIONS.md",
+      "provenance": "curated-verified",
+      "bytes": 11491,
+      "characters": 8290,
+      "sha256": "f197e5948fa6e5bd8a09fc090e13c6a05d097b7fd3c563e9ad23173ca3e99387",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "Docs/KB/DATA-MODEL.md",
+      "provenance": "curated-verified",
+      "bytes": 8616,
+      "characters": 6670,
+      "sha256": "3962db19dd191e4227f3d0f268178605a26ad89c1d30b1cadf9c13774f2543a4",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "Docs/KB/DOMAIN-RULES.md",
+      "provenance": "curated-verified",
+      "bytes": 10959,
+      "characters": 8075,
+      "sha256": "f5cbcdb529abc44beb06387e91676502f8df432a4272f22dd73c6e503195adb4",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "Docs/KB/OPERATIONS.md",
+      "provenance": "curated-verified",
+      "bytes": 8083,
+      "characters": 6219,
+      "sha256": "b71992a3edde25c9306b709fae7b57686e044cd8fb1e83f7d750e4388ac18391",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "Docs/KB/START-HERE.md",
+      "provenance": "curated-verified",
+      "bytes": 8929,
+      "characters": 6442,
+      "sha256": "09d8f91a24c4f5242be4dd834019b76549f25d15454052e644795e8f6078dcd7",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "Docs/KB/history/PHASES.md",
+      "provenance": "historical",
+      "bytes": 5651,
+      "characters": 4092,
+      "sha256": "6f6c3d60857037c3833a0c62984964d698b43f8ad2bb433497e77807280c9962",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "IDEA.md",
+      "provenance": "process",
+      "bytes": 13192,
+      "characters": 13190,
+      "sha256": "c8b8a9753e87f3bf675bb07b1ae0ead4534c866708a3f29d774fdd43e320810f",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "README.md",
+      "provenance": "curated-verified",
+      "bytes": 15087,
+      "characters": 14434,
+      "sha256": "0b9d743db990a117888a46e33e61e7d3de4c886fa584a299d469754dd0f05f9b",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "ReferenceIndex/README.md",
+      "provenance": "curated-verified",
+      "bytes": 3748,
+      "characters": 2546,
+      "sha256": "a366de9e338c5578a954217f77a21e3219475123d3122d7b429e29f4df248934",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "ReferenceIndex/RefLab_V2_COMPLETE_INDEX.md",
+      "provenance": "legacy-evidence",
+      "bytes": 36896,
+      "characters": 36411,
+      "sha256": "6fb465c75ee495cc05e019844b79d74cf2c7a2bb5febe6a49a7eed0f666fe450",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "ReferenceIndex/RefLab_V2_FILE_INVENTORY.csv",
+      "provenance": "legacy-evidence",
+      "bytes": 78345,
+      "characters": 69810,
+      "sha256": "d85b32b47e92e8119687bf6bb1d0eaf63ad92295033b259309d15d9f8184b86c",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    },
+    {
+      "path": "ReferenceIndex/RefLab_V2_OPEN_ITEMS_MAP.csv",
+      "provenance": "legacy-evidence",
+      "bytes": 45428,
+      "characters": 45428,
+      "sha256": "3eb0920e4dedc07e571b0975db21b37df78bdb3db6851ddce1be37988a6afcf0",
+      "verified_against": "f4daec94396796076082442e1cdcb81917293910"
+    }
+  ],
+  "feature_files": [
+    "Docs/KB/features/Auditing.md",
+    "Docs/KB/features/Billing.md",
+    "Docs/KB/features/Catalogue.md",
+    "Docs/KB/features/Configuration.md",
+    "Docs/KB/features/Derivation.md",
+    "Docs/KB/features/Identity.md",
+    "Docs/KB/features/Microbiology.md",
+    "Docs/KB/features/Parties.md",
+    "Docs/KB/features/Patients.md",
+    "Docs/KB/features/Reporting.md",
+    "Docs/KB/features/Results.md",
+    "Docs/KB/features/SendOut.md",
+    "Docs/KB/features/Statistics.md",
+    "Docs/KB/features/Worksheets.md"
+  ]
+}

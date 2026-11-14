@@ -6,8 +6,14 @@ cannot drift from the implementation. Run it from the repository root:
 
     python scripts/generate_use_case_inventory.py
 
-It writes docs/USE_CASE_INVENTORY.md and exits non-zero when the number of
+It writes Docs/USE_CASE_INVENTORY.md and exits non-zero when the number of
 use cases is not the expected total.
+
+The output directory is `Docs` with a capital D — the same casing as the
+repository folder. An earlier revision of this script wrote to a lowercase
+`docs`, which is invisible on a case-insensitive Windows file system but
+creates a *second* folder on a case-sensitive one, leaving the tracked
+document untouched. Do not reintroduce that.
 """
 import os
 import re
@@ -18,7 +24,7 @@ FEATURES = os.path.join(ROOT, "src", "RefLab.Application", "Features")
 VALIDATION = os.path.join(ROOT, "src", "RefLab.Application", "Validation")
 TESTS = os.path.join(ROOT, "tests", "RefLab.Application.Tests", "Features")
 
-EXPECTED_TOTAL = 70
+EXPECTED_TOTAL = 73
 
 # The legacy requirement each Ref Lab use case satisfies. Several legacy
 # requirements are split into more than one use case; the SMS and NATIGH.COM
@@ -28,6 +34,7 @@ LEGACY = {
     "CreateOperator": "V2-REQ-032", "UpdateOperator": "V2-REQ-032",
     "AssignOperatorPermissions": "V2-REQ-032", "GetOperators": "V2-REQ-032",
     "RegisterPatient": "V2-REQ-007", "AllocateOrderIdentifier": "V2-REQ-008",
+    "AttachOrderIdentifier": "V2-REQ-008",
     "GeneratePatientBarcode": "V2-REQ-009", "SearchPatients": "V2-REQ-010",
     "GetPatientOrder": "V2-REQ-011", "GetPatientHistory": "V2-REQ-011",
     "AttachPatientPicture": "V2-REQ-038", "FollowUpCase": "V2-REQ-071",
@@ -38,11 +45,13 @@ LEGACY = {
     "DeriveHematocrit": "V2-REQ-015", "DeriveHemoglobinPercentage": "V2-REQ-015",
     "DeriveInternationalSensitivityIndex": "V2-REQ-015",
     "InterpolateProthrombinControl": "V2-REQ-015",
+    "EnterDerivedRatio": "V2-REQ-015",
     "GetTestCatalogue": "V2-REQ-020", "CreateTestDefinition": "V2-REQ-020",
     "UpdateTestDefinition": "V2-REQ-020", "CreateReferenceRange": "V2-REQ-021",
     "UpdateReferenceRange": "V2-REQ-021", "GetReferenceRangeForPatient": "V2-REQ-022",
     "ManageUnitsAndConversions": "V2-REQ-029", "ManageAbbreviations": "V2-REQ-030",
     "ManageClinicalSubGroups": "V2-REQ-031",
+    "CreateTestGroup": "V2-REQ-031",
     "PrintResultReport": "V2-REQ-041, V2-REQ-043", "GetPrintAuditTrail": "V2-REQ-041",
     "ProduceConsolidatedReport": "V2-REQ-062", "ProduceEmptyReport": "V2-REQ-063",
     "PrintPatientInvoice": "V2-REQ-042", "PrintPatientIdCard": "V2-REQ-042",
@@ -299,7 +308,7 @@ def main():
         lines.append(f"| {req} | SMS notification, recipients and templates | Removed by owner decision |")
     lines.append("")
 
-    output = os.path.join(ROOT, "docs", "USE_CASE_INVENTORY.md")
+    output = os.path.join(ROOT, "Docs", "USE_CASE_INVENTORY.md")
     os.makedirs(os.path.dirname(output), exist_ok=True)
     with open(output, "w", encoding="utf-8") as handle:
         handle.write("\n".join(lines) + "\n")

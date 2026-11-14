@@ -10,12 +10,12 @@
 
 | Metric | Value |
 |---|---:|
-| Use cases implemented | **70** |
-| Commands | 45 |
+| Use cases implemented | **73** |
+| Commands | 48 |
 | Queries | 25 |
-| With a FluentValidation validator | 70 |
-| Requiring a permission | 44 |
-| Referenced by a test | 70 |
+| With a FluentValidation validator | 73 |
+| Requiring a permission | 47 |
+| Referenced by a test | 73 |
 | Feature areas | 14 |
 
 ## 2. Inventory
@@ -33,65 +33,68 @@
 | 9 | UC-009 | `SetDefaultAccountTypeCommand` | Billing | Command | ManageAccounting | SetDefaultAccountTypeValidator | V2-REQ-066 |
 | 10 | UC-010 | `CreateReferenceRangeCommand` | Catalogue | Command | ManageReferenceRanges | CreateReferenceRangeValidator | V2-REQ-021 |
 | 11 | UC-011 | `CreateTestDefinitionCommand` | Catalogue | Command | ManageTestCatalogue | CreateTestDefinitionValidator | V2-REQ-020 |
-| 12 | UC-012 | `GetReferenceRangeForPatientQuery` | Catalogue | Query | — | GetReferenceRangeForPatientValidator | V2-REQ-022 |
-| 13 | UC-013 | `GetTestCatalogueQuery` | Catalogue | Query | — | GetTestCatalogueValidator | V2-REQ-020 |
-| 14 | UC-014 | `GetTestProfileQuery` | Catalogue | Query | — | GetTestProfileValidator | V2-REQ-012 |
-| 15 | UC-015 | `ManageAbbreviationsCommand` | Catalogue | Command | ManageTestCatalogue | ManageAbbreviationsValidator | V2-REQ-030 |
-| 16 | UC-016 | `ManageClinicalSubGroupsCommand` | Catalogue | Command | ManageTestCatalogue | ManageClinicalSubGroupsValidator | V2-REQ-031 |
-| 17 | UC-017 | `ManageUnitsAndConversionsCommand` | Catalogue | Command | ManageTestCatalogue | ManageUnitsAndConversionsValidator | V2-REQ-029 |
-| 18 | UC-018 | `UpdateReferenceRangeCommand` | Catalogue | Command | ManageReferenceRanges | UpdateReferenceRangeValidator | V2-REQ-021 |
-| 19 | UC-019 | `UpdateTestDefinitionCommand` | Catalogue | Command | ManageTestCatalogue | UpdateTestDefinitionValidator | V2-REQ-020 |
-| 20 | UC-020 | `ConfigureConnectionReceiptCommand` | Configuration | Command | ManageSettings | ConfigureConnectionReceiptValidator | V2-REQ-067 |
-| 21 | UC-021 | `ConfigureLaboratorySettingsCommand` | Configuration | Command | ManageSettings | ConfigureLaboratorySettingsValidator | V2-REQ-035 |
-| 22 | UC-022 | `CustomiseReportLayoutCommand` | Configuration | Command | ManageSettings | CustomiseReportLayoutValidator | V2-REQ-023, V2-REQ-036 |
-| 23 | UC-023 | `DeriveHematocritQuery` | Derivation | Query | — | DeriveHematocritValidator | V2-REQ-015 |
-| 24 | UC-024 | `DeriveHemoglobinPercentageQuery` | Derivation | Query | — | DeriveHemoglobinPercentageValidator | V2-REQ-015 |
-| 25 | UC-025 | `DeriveInternationalSensitivityIndexQuery` | Derivation | Query | — | DeriveInternationalSensitivityIndexValidator | V2-REQ-015 |
-| 26 | UC-026 | `InterpolateProthrombinControlQuery` | Derivation | Query | — | InterpolateProthrombinControlValidator | V2-REQ-015 |
-| 27 | UC-027 | `AssignOperatorPermissionsCommand` | Identity | Command | ManageOperators | AssignOperatorPermissionsValidator | V2-REQ-032 |
-| 28 | UC-028 | `ChangePasswordCommand` | Identity | Command | — | ChangePasswordValidator | V2-REQ-033 |
-| 29 | UC-029 | `CreateOperatorCommand` | Identity | Command | ManageOperators | CreateOperatorValidator | V2-REQ-032 |
-| 30 | UC-030 | `GetOperatorsQuery` | Identity | Query | — | GetOperatorsValidator | V2-REQ-032 |
-| 31 | UC-031 | `SignInCommand` | Identity | Command | — | SignInValidator | V2-REQ-004 |
-| 32 | UC-032 | `UpdateOperatorCommand` | Identity | Command | ManageOperators | UpdateOperatorValidator | V2-REQ-032 |
-| 33 | UC-033 | `GetCultureResultsQuery` | Microbiology | Query | — | GetCultureResultsValidator | V2-REQ-016 |
-| 34 | UC-034 | `ManageAntibioticCatalogueCommand` | Microbiology | Command | ManageTestCatalogue | ManageAntibioticCatalogueValidator | V2-REQ-060 |
-| 35 | UC-035 | `ManageFarmResultsCommand` | Microbiology | Command | EnterResults | ManageFarmResultsValidator | V2-REQ-059 |
-| 36 | UC-036 | `RecordCultureResultCommand` | Microbiology | Command | EnterResults | RecordCultureResultValidator | V2-REQ-016 |
-| 37 | UC-037 | `ManagePriceListsCommand` | Parties | Command | ManagePricing | ManagePriceListsValidator | V2-REQ-064 |
-| 38 | UC-038 | `ManageTreatingPhysiciansCommand` | Parties | Command | ManagePricing | ManageTreatingPhysiciansValidator | V2-REQ-037 |
-| 39 | UC-039 | `PrintPriceListCommand` | Parties | Command | ManagePricing | PrintPriceListValidator | V2-REQ-065 |
-| 40 | UC-040 | `AllocateOrderIdentifierQuery` | Patients | Query | — | AllocateOrderIdentifierValidator | V2-REQ-008 |
-| 41 | UC-041 | `AttachPatientPictureCommand` | Patients | Command | EditPatient | AttachPatientPictureValidator | V2-REQ-038 |
-| 42 | UC-042 | `FollowUpCaseQuery` | Patients | Query | — | FollowUpCaseValidator | V2-REQ-071 |
-| 43 | UC-043 | `GeneratePatientBarcodeCommand` | Patients | Command | RegisterPatient | GeneratePatientBarcodeValidator | V2-REQ-009 |
-| 44 | UC-044 | `GetPatientHistoryQuery` | Patients | Query | — | GetPatientHistoryValidator | V2-REQ-011 |
-| 45 | UC-045 | `GetPatientOrderQuery` | Patients | Query | — | GetPatientOrderValidator | V2-REQ-011 |
-| 46 | UC-046 | `RegisterPatientCommand` | Patients | Command | RegisterPatient | RegisterPatientValidator | V2-REQ-007 |
-| 47 | UC-047 | `SearchPatientsQuery` | Patients | Query | — | SearchPatientsValidator | V2-REQ-010 |
-| 48 | UC-048 | `ConfigurePrintersCommand` | Reporting | Command | ManageSettings | ConfigurePrintersValidator | V2-REQ-034 |
-| 49 | UC-049 | `ConfigureReportHeaderFooterCommand` | Reporting | Command | ManageSettings | ConfigureReportHeaderFooterValidator | V2-REQ-035, V2-REQ-070 |
-| 50 | UC-050 | `PrintPatientIdCardCommand` | Reporting | Command | PrintReports | PrintPatientIdCardValidator | V2-REQ-042 |
-| 51 | UC-051 | `PrintPatientInvoiceCommand` | Reporting | Command | HandOverResults | PrintPatientInvoiceValidator | V2-REQ-042 |
-| 52 | UC-052 | `ProduceConsolidatedReportCommand` | Reporting | Command | PrintReports | ProduceConsolidatedReportValidator | V2-REQ-062 |
-| 53 | UC-053 | `ProduceEmptyReportCommand` | Reporting | Command | PrintReports | ProduceEmptyReportValidator | V2-REQ-063 |
-| 54 | UC-054 | `EnterAdditionalResultCommand` | Results | Command | EnterResults | EnterAdditionalResultValidator | V2-REQ-013 |
-| 55 | UC-055 | `EnterResultCommand` | Results | Command | EnterResults | EnterResultValidator | V2-REQ-013 |
-| 56 | UC-056 | `GetCriticalValuesQuery` | Results | Query | — | GetCriticalValuesValidator | V2-REQ-039 |
-| 57 | UC-057 | `GetMethodSheetQuery` | Results | Query | — | GetMethodSheetValidator | V2-REQ-039 |
-| 58 | UC-058 | `HandOverResultsCommand` | Results | Command | HandOverResults | HandOverResultsValidator | V2-REQ-018 |
-| 59 | UC-059 | `OrderTestsCommand` | Results | Command | OrderTests | OrderTestsValidator | V2-REQ-007 |
-| 60 | UC-060 | `PrintResultReportCommand` | Results | Command | PrintReports | PrintResultReportValidator | V2-REQ-041, V2-REQ-043 |
-| 61 | UC-061 | `ReviewResultCommand` | Results | Command | ReviewResults | ReviewResultValidator | V2-REQ-017 |
-| 62 | UC-062 | `CreateSendOutRequestCommand` | SendOut | Command | ManageAccounting | CreateSendOutRequestValidator | V2-REQ-024 |
-| 63 | UC-063 | `DispatchSendOutSampleCommand` | SendOut | Command | ManageAccounting | DispatchSendOutSampleValidator | V2-REQ-024 |
-| 64 | UC-064 | `GetSendOutQueueQuery` | SendOut | Query | — | GetSendOutQueueValidator | V2-REQ-024 |
-| 65 | UC-065 | `SettleSendOutSampleCommand` | SendOut | Command | ManageAccounting | SettleSendOutSampleValidator | V2-REQ-024 |
-| 66 | UC-066 | `SplitOrWithdrawSampleCommand` | SendOut | Command | ManageAccounting | SplitOrWithdrawSampleValidator | V2-REQ-061 |
-| 67 | UC-067 | `GetLaboratoryStatisticsQuery` | Statistics | Query | — | GetLaboratoryStatisticsValidator | V2-REQ-054 |
-| 68 | UC-068 | `GetPerformanceStatisticsQuery` | Statistics | Query | — | GetPerformanceStatisticsValidator | V2-REQ-055 |
-| 69 | UC-069 | `BuildPatientGroupWorkSheetCommand` | Worksheets | Command | PrintReports | BuildPatientGroupWorkSheetValidator | V2-REQ-057 |
-| 70 | UC-070 | `BuildTestGroupWorkSheetCommand` | Worksheets | Command | PrintReports | BuildTestGroupWorkSheetValidator | V2-REQ-058 |
+| 12 | UC-012 | `CreateTestGroupCommand` | Catalogue | Command | ManageTestCatalogue | CreateTestGroupValidator | V2-REQ-031 |
+| 13 | UC-013 | `GetReferenceRangeForPatientQuery` | Catalogue | Query | — | GetReferenceRangeForPatientValidator | V2-REQ-022 |
+| 14 | UC-014 | `GetTestCatalogueQuery` | Catalogue | Query | — | GetTestCatalogueValidator | V2-REQ-020 |
+| 15 | UC-015 | `GetTestProfileQuery` | Catalogue | Query | — | GetTestProfileValidator | V2-REQ-012 |
+| 16 | UC-016 | `ManageAbbreviationsCommand` | Catalogue | Command | ManageTestCatalogue | ManageAbbreviationsValidator | V2-REQ-030 |
+| 17 | UC-017 | `ManageClinicalSubGroupsCommand` | Catalogue | Command | ManageTestCatalogue | ManageClinicalSubGroupsValidator | V2-REQ-031 |
+| 18 | UC-018 | `ManageUnitsAndConversionsCommand` | Catalogue | Command | ManageTestCatalogue | ManageUnitsAndConversionsValidator | V2-REQ-029 |
+| 19 | UC-019 | `UpdateReferenceRangeCommand` | Catalogue | Command | ManageReferenceRanges | UpdateReferenceRangeValidator | V2-REQ-021 |
+| 20 | UC-020 | `UpdateTestDefinitionCommand` | Catalogue | Command | ManageTestCatalogue | UpdateTestDefinitionValidator | V2-REQ-020 |
+| 21 | UC-021 | `ConfigureConnectionReceiptCommand` | Configuration | Command | ManageSettings | ConfigureConnectionReceiptValidator | V2-REQ-067 |
+| 22 | UC-022 | `ConfigureLaboratorySettingsCommand` | Configuration | Command | ManageSettings | ConfigureLaboratorySettingsValidator | V2-REQ-035 |
+| 23 | UC-023 | `CustomiseReportLayoutCommand` | Configuration | Command | ManageSettings | CustomiseReportLayoutValidator | V2-REQ-023, V2-REQ-036 |
+| 24 | UC-024 | `DeriveHematocritQuery` | Derivation | Query | — | DeriveHematocritValidator | V2-REQ-015 |
+| 25 | UC-025 | `DeriveHemoglobinPercentageQuery` | Derivation | Query | — | DeriveHemoglobinPercentageValidator | V2-REQ-015 |
+| 26 | UC-026 | `DeriveInternationalSensitivityIndexQuery` | Derivation | Query | — | DeriveInternationalSensitivityIndexValidator | V2-REQ-015 |
+| 27 | UC-027 | `InterpolateProthrombinControlQuery` | Derivation | Query | — | InterpolateProthrombinControlValidator | V2-REQ-015 |
+| 28 | UC-028 | `AssignOperatorPermissionsCommand` | Identity | Command | ManageOperators | AssignOperatorPermissionsValidator | V2-REQ-032 |
+| 29 | UC-029 | `ChangePasswordCommand` | Identity | Command | — | ChangePasswordValidator | V2-REQ-033 |
+| 30 | UC-030 | `CreateOperatorCommand` | Identity | Command | ManageOperators | CreateOperatorValidator | V2-REQ-032 |
+| 31 | UC-031 | `GetOperatorsQuery` | Identity | Query | — | GetOperatorsValidator | V2-REQ-032 |
+| 32 | UC-032 | `SignInCommand` | Identity | Command | — | SignInValidator | V2-REQ-004 |
+| 33 | UC-033 | `UpdateOperatorCommand` | Identity | Command | ManageOperators | UpdateOperatorValidator | V2-REQ-032 |
+| 34 | UC-034 | `GetCultureResultsQuery` | Microbiology | Query | — | GetCultureResultsValidator | V2-REQ-016 |
+| 35 | UC-035 | `ManageAntibioticCatalogueCommand` | Microbiology | Command | ManageTestCatalogue | ManageAntibioticCatalogueValidator | V2-REQ-060 |
+| 36 | UC-036 | `ManageFarmResultsCommand` | Microbiology | Command | EnterResults | ManageFarmResultsValidator | V2-REQ-059 |
+| 37 | UC-037 | `RecordCultureResultCommand` | Microbiology | Command | EnterResults | RecordCultureResultValidator | V2-REQ-016 |
+| 38 | UC-038 | `ManagePriceListsCommand` | Parties | Command | ManagePricing | ManagePriceListsValidator | V2-REQ-064 |
+| 39 | UC-039 | `ManageTreatingPhysiciansCommand` | Parties | Command | ManagePricing | ManageTreatingPhysiciansValidator | V2-REQ-037 |
+| 40 | UC-040 | `PrintPriceListCommand` | Parties | Command | ManagePricing | PrintPriceListValidator | V2-REQ-065 |
+| 41 | UC-041 | `AllocateOrderIdentifierQuery` | Patients | Query | — | AllocateOrderIdentifierValidator | V2-REQ-008 |
+| 42 | UC-042 | `AttachOrderIdentifierCommand` | Patients | Command | RegisterPatient | AttachOrderIdentifierValidator | V2-REQ-008 |
+| 43 | UC-043 | `AttachPatientPictureCommand` | Patients | Command | EditPatient | AttachPatientPictureValidator | V2-REQ-038 |
+| 44 | UC-044 | `FollowUpCaseQuery` | Patients | Query | — | FollowUpCaseValidator | V2-REQ-071 |
+| 45 | UC-045 | `GeneratePatientBarcodeCommand` | Patients | Command | RegisterPatient | GeneratePatientBarcodeValidator | V2-REQ-009 |
+| 46 | UC-046 | `GetPatientHistoryQuery` | Patients | Query | — | GetPatientHistoryValidator | V2-REQ-011 |
+| 47 | UC-047 | `GetPatientOrderQuery` | Patients | Query | — | GetPatientOrderValidator | V2-REQ-011 |
+| 48 | UC-048 | `RegisterPatientCommand` | Patients | Command | RegisterPatient | RegisterPatientValidator | V2-REQ-007 |
+| 49 | UC-049 | `SearchPatientsQuery` | Patients | Query | — | SearchPatientsValidator | V2-REQ-010 |
+| 50 | UC-050 | `ConfigurePrintersCommand` | Reporting | Command | ManageSettings | ConfigurePrintersValidator | V2-REQ-034 |
+| 51 | UC-051 | `ConfigureReportHeaderFooterCommand` | Reporting | Command | ManageSettings | ConfigureReportHeaderFooterValidator | V2-REQ-035, V2-REQ-070 |
+| 52 | UC-052 | `PrintPatientIdCardCommand` | Reporting | Command | PrintReports | PrintPatientIdCardValidator | V2-REQ-042 |
+| 53 | UC-053 | `PrintPatientInvoiceCommand` | Reporting | Command | HandOverResults | PrintPatientInvoiceValidator | V2-REQ-042 |
+| 54 | UC-054 | `ProduceConsolidatedReportCommand` | Reporting | Command | PrintReports | ProduceConsolidatedReportValidator | V2-REQ-062 |
+| 55 | UC-055 | `ProduceEmptyReportCommand` | Reporting | Command | PrintReports | ProduceEmptyReportValidator | V2-REQ-063 |
+| 56 | UC-056 | `EnterAdditionalResultCommand` | Results | Command | EnterResults | EnterAdditionalResultValidator | V2-REQ-013 |
+| 57 | UC-057 | `EnterDerivedRatioCommand` | Results | Command | EnterResults | EnterDerivedRatioValidator | V2-REQ-015 |
+| 58 | UC-058 | `EnterResultCommand` | Results | Command | EnterResults | EnterResultValidator | V2-REQ-013 |
+| 59 | UC-059 | `GetCriticalValuesQuery` | Results | Query | — | GetCriticalValuesValidator | V2-REQ-039 |
+| 60 | UC-060 | `GetMethodSheetQuery` | Results | Query | — | GetMethodSheetValidator | V2-REQ-039 |
+| 61 | UC-061 | `HandOverResultsCommand` | Results | Command | HandOverResults | HandOverResultsValidator | V2-REQ-018 |
+| 62 | UC-062 | `OrderTestsCommand` | Results | Command | OrderTests | OrderTestsValidator | V2-REQ-007 |
+| 63 | UC-063 | `PrintResultReportCommand` | Results | Command | PrintReports | PrintResultReportValidator | V2-REQ-041, V2-REQ-043 |
+| 64 | UC-064 | `ReviewResultCommand` | Results | Command | ReviewResults | ReviewResultValidator | V2-REQ-017 |
+| 65 | UC-065 | `CreateSendOutRequestCommand` | SendOut | Command | ManageAccounting | CreateSendOutRequestValidator | V2-REQ-024 |
+| 66 | UC-066 | `DispatchSendOutSampleCommand` | SendOut | Command | ManageAccounting | DispatchSendOutSampleValidator | V2-REQ-024 |
+| 67 | UC-067 | `GetSendOutQueueQuery` | SendOut | Query | — | GetSendOutQueueValidator | V2-REQ-024 |
+| 68 | UC-068 | `SettleSendOutSampleCommand` | SendOut | Command | ManageAccounting | SettleSendOutSampleValidator | V2-REQ-024 |
+| 69 | UC-069 | `SplitOrWithdrawSampleCommand` | SendOut | Command | ManageAccounting | SplitOrWithdrawSampleValidator | V2-REQ-061 |
+| 70 | UC-070 | `GetLaboratoryStatisticsQuery` | Statistics | Query | — | GetLaboratoryStatisticsValidator | V2-REQ-054 |
+| 71 | UC-071 | `GetPerformanceStatisticsQuery` | Statistics | Query | — | GetPerformanceStatisticsValidator | V2-REQ-055 |
+| 72 | UC-072 | `BuildPatientGroupWorkSheetCommand` | Worksheets | Command | PrintReports | BuildPatientGroupWorkSheetValidator | V2-REQ-057 |
+| 73 | UC-073 | `BuildTestGroupWorkSheetCommand` | Worksheets | Command | PrintReports | BuildTestGroupWorkSheetValidator | V2-REQ-058 |
 
 ## 3. Contracts
 
@@ -108,6 +111,7 @@
 | `SetDefaultAccountTypeCommand` | `(string? AccountType = null)` | `LaboratorySettingsDto` | `SetDefaultAccountTypeHandler` |
 | `CreateReferenceRangeCommand` | `(int TestCode, string TestSimpleName, int SubGroupCode, SexScope SexScope, AgeUnit AgeUnit, decimal? AgeFrom = null, decimal? AgeTo = null, decimal? LowLimit = null, decimal? HighLimit = null, string? LowExceptionText = null, string? HighExceptionText = null, string? RangeText = null, string? Unit = null)` | `ReferenceRangeDto` | `CreateReferenceRangeHandler` |
 | `CreateTestDefinitionCommand` | `(int Code, string Name, string SimpleName, int SubGroupCode, decimal PatientPrice, decimal LabPrice, decimal OtherLabPrice, string? SampleType = null, string? ArabicName = null, string? Abbreviation = null)` | `TestDefinitionDto` | `CreateTestDefinitionHandler` |
+| `CreateTestGroupCommand` | `(string Name, IReadOnlyList<int> TestCodes, string? ArabicName = null)` | `ClinicalSubGroupDto` | `CreateTestGroupHandler` |
 | `GetReferenceRangeForPatientQuery` | `(Guid PatientId, int TestCode)` | `ReferenceRangeDto` | `GetReferenceRangeForPatientHandler` |
 | `GetTestCatalogueQuery` | `(string? Name = null, int? SubGroupCode = null, bool ActiveOnly = true, PageRequest? Page = null)` | `PagedResult<TestDefinitionDto>` | `GetTestCatalogueHandler` |
 | `GetTestProfileQuery` | `(int TestCode)` | `TestProfileDto` | `GetTestProfileHandler` |
@@ -118,7 +122,7 @@
 | `UpdateTestDefinitionCommand` | `(int Code, string? Name = null, string? SimpleName = null, string? Abbreviation = null, string? ArabicName = null, string? SampleType = null, string? Description = null, decimal? PatientPrice = null, decimal? LabPrice = null, decimal? OtherLabPrice = null, bool? IsActive = null)` | `TestDefinitionDto` | `UpdateTestDefinitionHandler` |
 | `ConfigureConnectionReceiptCommand` | `(string? Header = null, string? Footer = null)` | `LaboratorySettingsDto` | `ConfigureConnectionReceiptHandler` |
 | `ConfigureLaboratorySettingsCommand` | `(PaperSize? PaperSize = null, int? ReportSequenceStart = null, bool? IsBarcodeAutoCreated = null, bool? IsWorkSheetPrinted = null, int? HistoryDisplayMode = null, string? DefaultAccountType = null)` | `LaboratorySettingsDto` | `ConfigureLaboratorySettingsHandler` |
-| `CustomiseReportLayoutCommand` | `(decimal? LeftMargin = null, decimal? RightMargin = null, decimal? TopMargin = null, decimal? BottomMargin = null, string? BackgroundColour = null, string? LayoutText = null)` | `LaboratorySettingsDto` | `CustomiseReportLayoutHandler` |
+| `CustomiseReportLayoutCommand` | `(decimal? LeftMargin = null, decimal? RightMargin = null, decimal? TopMargin = null, decimal? BottomMargin = null, string? BackgroundColour = null, string? LayoutText = null, string? DoctorSignature = null, string? DoctorName = null, string? ThanksText = null, string? LabLogoPath = null, string? ReportLogoPath = null, int? LogoWidthPx = null, int? LogoHeightPx = null, ReportHeadingMode? HeadingMode = null)` | `LaboratorySettingsDto` | `CustomiseReportLayoutHandler` |
 | `DeriveHematocritQuery` | `(decimal Hemoglobin)` | `DerivationResultDto` | `DeriveHematocritHandler` |
 | `DeriveHemoglobinPercentageQuery` | `(decimal Hemoglobin, Sex Sex, decimal AgeYears)` | `DerivationResultDto` | `DeriveHemoglobinPercentageHandler` |
 | `DeriveInternationalSensitivityIndexQuery` | `(decimal PatientProthrombinTime, decimal ControlProthrombinTime, decimal NormalProthrombinTime, decimal ControlIndex)` | `DerivationResultDto` | `DeriveInternationalSensitivityIndexHandler` |
@@ -137,12 +141,13 @@
 | `ManageTreatingPhysiciansCommand` | `(int Id, string Code, string Name, string? Phone = null)` | `TreatingPhysicianDto` | `ManageTreatingPhysiciansHandler` |
 | `PrintPriceListCommand` | `(string PriceListName, string DestinationDirectory)` | `RenderedDocumentDto` | `PrintPriceListHandler` |
 | `AllocateOrderIdentifierQuery` | `(string PersonKey, string LeadingSegment, string MiddleSegment, string DisplayCode, char TrailingCharacter = '0')` | `OrderIdentifierDto` | `AllocateOrderIdentifierHandler` |
+| `AttachOrderIdentifierCommand` | `(Guid OrderId, string LeadingSegment, string PersonKey, string MiddleSegment, string DisplayCode, char TrailingCharacter = '0')` | `OrderIdentifierDto` | `AttachOrderIdentifierHandler` |
 | `AttachPatientPictureCommand` | `(Guid PatientId, int Slot, string ImagePath, string? Caption = null, Guid? OrderId = null, int? TestCode = null)` | `PatientPictureDto` | `AttachPatientPictureHandler` |
 | `FollowUpCaseQuery` | `(DateTimeOffset? From = null, DateTimeOffset? To = null, bool OpenOnly = false)` | `IReadOnlyList<CaseFollowUpDto>` | `FollowUpCaseHandler` |
 | `GeneratePatientBarcodeCommand` | `(Guid OrderId)` | `BarcodeDto` | `GeneratePatientBarcodeHandler` |
 | `GetPatientHistoryQuery` | `(Guid PatientId)` | `IReadOnlyList<PatientHistoryDto>` | `GetPatientHistoryHandler` |
 | `GetPatientOrderQuery` | `(Guid OrderId)` | `PatientOrderDto` | `GetPatientOrderHandler` |
-| `RegisterPatientCommand` | `(string Name, Sex Sex, decimal? Age, AgeUnit? AgeUnit, DateOnly? BirthDate, string? Address, string? Phone, string? Mobile, string? Fax, string? Email, string? ReferringPhysicianCode, string? ReceptionNote, string CurrencyCode, bool CreateOrder)` | `PatientOrderDto` | `RegisterPatientHandler` |
+| `RegisterPatientCommand` | `(string Name, Sex Sex, decimal? Age, AgeUnit? AgeUnit, DateOnly? BirthDate, string? Address, string? Phone, string? Mobile, string? Fax, string? Email, string? ReferringPhysicianCode, string? ReceptionNote, string CurrencyCode, bool CreateOrder, string? LegacyOrderIdentifier = null, string? ReferringPartyCode = null)` | `PatientOrderDto` | `RegisterPatientHandler` |
 | `SearchPatientsQuery` | `(string? Name, string? Phone, PageRequest Page)` | `PagedResult<PatientDto>` | `SearchPatientsHandler` |
 | `ConfigurePrintersCommand` | `(PrinterRole Role, string? PrinterName = null)` | `LaboratorySettingsDto` | `ConfigurePrintersHandler` |
 | `ConfigureReportHeaderFooterCommand` | `(PaperSize? PaperSize = null, string? GlobalHeaderText = null, string? GlobalHeaderSecondaryText = null, string? FooterText = null)` | `LaboratorySettingsDto` | `ConfigureReportHeaderFooterHandler` |
@@ -151,7 +156,8 @@
 | `ProduceConsolidatedReportCommand` | `(DateTimeOffset From, DateTimeOffset To, string DestinationDirectory, Guid? OrderId = null)` | `ConsolidatedReportDto` | `ProduceConsolidatedReportHandler` |
 | `ProduceEmptyReportCommand` | `(string Title, IReadOnlyList<string> ColumnNames, string DestinationDirectory, string? Subtitle = null)` | `EmptyReportDto` | `ProduceEmptyReportHandler` |
 | `EnterAdditionalResultCommand` | `(Guid OrderTestId, int SlotIndex, string? Value)` | `OrderTestDto` | `EnterAdditionalResultHandler` |
-| `EnterResultCommand` | `(Guid OrderTestId, string Value, string? Unit = null, string? Comment = null)` | `OrderTestDto` | `EnterResultHandler` |
+| `EnterDerivedRatioCommand` | `(Guid OrderId, int NumeratorTestCode, int DenominatorTestCode, int RatioTestCode, string? Comment = null)` | `OrderTestDto` | `EnterDerivedRatioHandler` |
+| `EnterResultCommand` | `(Guid OrderTestId, string Value, string? Unit = null, string? Comment = null, bool? SampleTakenOutsideLab = null)` | `OrderTestDto` | `EnterResultHandler` |
 | `GetCriticalValuesQuery` | `(int TestCode)` | `CriticalValueDto` | `GetCriticalValuesHandler` |
 | `GetMethodSheetQuery` | `(int TestCode)` | `MethodSheetDto` | `GetMethodSheetHandler` |
 | `HandOverResultsCommand` | `(Guid OrderId, decimal? Amount = null, int PaymentType = 0)` | `IReadOnlyList<OrderTestDto>` | `HandOverResultsHandler` |
@@ -163,7 +169,7 @@
 | `GetSendOutQueueQuery` | `(bool PendingOnly = false, Guid? OrderTestId = null)` | `IReadOnlyList<SendOutRequestDto>` | `GetSendOutQueueHandler` |
 | `SettleSendOutSampleCommand` | `(Guid SendOutRequestId)` | `SendOutState` | `SettleSendOutSampleHandler` |
 | `SplitOrWithdrawSampleCommand` | `(Guid OrderTestId, SampleDispositionAction Action, string? DestinationLabName = null)` | `SampleDispositionDto` | `SplitOrWithdrawSampleHandler` |
-| `GetLaboratoryStatisticsQuery` | `(DateTimeOffset From, DateTimeOffset To)` | `LaboratoryStatisticsDto` | `GetLaboratoryStatisticsHandler` |
+| `GetLaboratoryStatisticsQuery` | `(DateTimeOffset From, DateTimeOffset To, int? SubGroupCode = null, int? Year = null)` | `LaboratoryStatisticsDto` | `GetLaboratoryStatisticsHandler` |
 | `GetPerformanceStatisticsQuery` | `(DateTimeOffset From, DateTimeOffset To)` | `PerformanceStatisticsDto` | `GetPerformanceStatisticsHandler` |
 | `BuildPatientGroupWorkSheetCommand` | `(DateTimeOffset From, DateTimeOffset To, IReadOnlyList<Guid> PatientIds, string DestinationDirectory)` | `WorkSheetDto` | `BuildPatientGroupWorkSheetHandler` |
 | `BuildTestGroupWorkSheetCommand` | `(DateTimeOffset From, DateTimeOffset To, string DestinationDirectory, int? TestCode = null, int? SubGroupCode = null)` | `WorkSheetDto` | `BuildTestGroupWorkSheetHandler` |
@@ -178,11 +184,12 @@
 | `GetPaymentsQuery` | `tests/RefLab.Application.Tests/Features/Billing/AccountingTests.cs` |
 | `GetReferringPartiesQuery` | `tests/RefLab.Application.Tests/Features/Billing/BillingHandlerTests.cs` |
 | `RecordPaymentCommand` | `tests/RefLab.Application.Tests/Features/Billing/BillingHandlerTests.cs` |
-| `RunPeriodStockTakeQuery` | `tests/RefLab.Application.Tests/Features/Billing/AccountingTests.cs` |
-| `RunStockTakeByPhysicianOrPartyQuery` | `tests/RefLab.Application.Tests/Features/Billing/AccountingTests.cs` |
+| `RunPeriodStockTakeQuery` | `tests/RefLab.Application.Tests/Features/Billing/AccountingTests.cs`<br>`tests/RefLab.Application.Tests/Features/Billing/CommissionTests.cs` |
+| `RunStockTakeByPhysicianOrPartyQuery` | `tests/RefLab.Application.Tests/Features/Billing/AccountingTests.cs`<br>`tests/RefLab.Application.Tests/Features/Billing/CommissionTests.cs` |
 | `SetDefaultAccountTypeCommand` | `tests/RefLab.Application.Tests/Features/Billing/AccountingTests.cs` |
 | `CreateReferenceRangeCommand` | `tests/RefLab.Application.Tests/Features/Catalogue/CatalogueManagementTests.cs` |
 | `CreateTestDefinitionCommand` | `tests/RefLab.Application.Tests/Features/Catalogue/CatalogueManagementTests.cs` |
+| `CreateTestGroupCommand` | `tests/RefLab.Application.Tests/Features/Catalogue/CreateTestGroupTests.cs` |
 | `GetReferenceRangeForPatientQuery` | `tests/RefLab.Application.Tests/Features/Catalogue/CatalogueHandlerTests.cs` |
 | `GetTestCatalogueQuery` | `tests/RefLab.Application.Tests/Features/Catalogue/CatalogueHandlerTests.cs` |
 | `GetTestProfileQuery` | `tests/RefLab.Application.Tests/Features/Catalogue/CatalogueHandlerTests.cs` |
@@ -191,9 +198,9 @@
 | `ManageUnitsAndConversionsCommand` | `tests/RefLab.Application.Tests/Features/Catalogue/CatalogueManagementTests.cs` |
 | `UpdateReferenceRangeCommand` | `tests/RefLab.Application.Tests/Features/Catalogue/CatalogueManagementTests.cs` |
 | `UpdateTestDefinitionCommand` | `tests/RefLab.Application.Tests/Features/Catalogue/CatalogueManagementTests.cs` |
-| `ConfigureConnectionReceiptCommand` | `tests/RefLab.Application.Tests/Features/Configuration/SettingsTests.cs` |
+| `ConfigureConnectionReceiptCommand` | `tests/RefLab.Application.Tests/Features/Configuration/SettingsTests.cs`<br>`tests/RefLab.Application.Tests/Features/Reporting/ReportFooterTests.cs` |
 | `ConfigureLaboratorySettingsCommand` | `tests/RefLab.Application.Tests/Features/Configuration/SettingsTests.cs` |
-| `CustomiseReportLayoutCommand` | `tests/RefLab.Application.Tests/Features/Configuration/SettingsTests.cs` |
+| `CustomiseReportLayoutCommand` | `tests/RefLab.Application.Tests/Features/Configuration/SettingsTests.cs`<br>`tests/RefLab.Application.Tests/Features/Reporting/ReportFooterTests.cs` |
 | `DeriveHematocritQuery` | `tests/RefLab.Application.Tests/Features/Derivation/DerivationTests.cs` |
 | `DeriveHemoglobinPercentageQuery` | `tests/RefLab.Application.Tests/Features/Derivation/DerivationTests.cs` |
 | `DeriveInternationalSensitivityIndexQuery` | `tests/RefLab.Application.Tests/Features/Derivation/DerivationTests.cs` |
@@ -212,25 +219,27 @@
 | `ManageTreatingPhysiciansCommand` | `tests/RefLab.Application.Tests/Features/Parties/PartiesAndPricesTests.cs` |
 | `PrintPriceListCommand` | `tests/RefLab.Application.Tests/Features/Parties/PartiesAndPricesTests.cs` |
 | `AllocateOrderIdentifierQuery` | `tests/RefLab.Application.Tests/Features/Patients/PatientRecordsTests.cs` |
+| `AttachOrderIdentifierCommand` | `tests/RefLab.Application.Tests/Features/Patients/OrderIdentityTests.cs` |
 | `AttachPatientPictureCommand` | `tests/RefLab.Application.Tests/Features/Patients/PatientRecordsTests.cs` |
 | `FollowUpCaseQuery` | `tests/RefLab.Application.Tests/Features/Patients/PatientRecordsTests.cs` |
-| `GeneratePatientBarcodeCommand` | `tests/RefLab.Application.Tests/Features/Patients/PatientRecordsTests.cs` |
+| `GeneratePatientBarcodeCommand` | `tests/RefLab.Application.Tests/Features/Patients/OrderIdentityTests.cs`<br>`tests/RefLab.Application.Tests/Features/Patients/PatientRecordsTests.cs` |
 | `GetPatientHistoryQuery` | `tests/RefLab.Application.Tests/Features/Patients/PatientHandlerTests.cs` |
 | `GetPatientOrderQuery` | `tests/RefLab.Application.Tests/Features/Patients/PatientHandlerTests.cs` |
-| `RegisterPatientCommand` | `tests/RefLab.Application.Tests/Features/Patients/PatientHandlerTests.cs` |
+| `RegisterPatientCommand` | `tests/RefLab.Application.Tests/Features/Patients/OrderIdentityTests.cs`<br>`tests/RefLab.Application.Tests/Features/Patients/PatientHandlerTests.cs` |
 | `SearchPatientsQuery` | `tests/RefLab.Application.Tests/Features/Patients/PatientHandlerTests.cs` |
 | `ConfigurePrintersCommand` | `tests/RefLab.Application.Tests/Features/Reporting/ReportingTests.cs` |
-| `ConfigureReportHeaderFooterCommand` | `tests/RefLab.Application.Tests/Features/Reporting/ReportingTests.cs` |
+| `ConfigureReportHeaderFooterCommand` | `tests/RefLab.Application.Tests/Features/Configuration/SettingsTests.cs`<br>`tests/RefLab.Application.Tests/Features/Reporting/ReportFooterTests.cs`<br>`tests/RefLab.Application.Tests/Features/Reporting/ReportingTests.cs` |
 | `PrintPatientIdCardCommand` | `tests/RefLab.Application.Tests/Features/Reporting/ReportingTests.cs` |
-| `PrintPatientInvoiceCommand` | `tests/RefLab.Application.Tests/Features/Reporting/ReportingTests.cs` |
+| `PrintPatientInvoiceCommand` | `tests/RefLab.Application.Tests/Features/Reporting/InvoiceTests.cs`<br>`tests/RefLab.Application.Tests/Features/Reporting/ReportingTests.cs` |
 | `ProduceConsolidatedReportCommand` | `tests/RefLab.Application.Tests/Features/Reporting/ReportingTests.cs` |
 | `ProduceEmptyReportCommand` | `tests/RefLab.Application.Tests/Features/Reporting/ReportingTests.cs` |
 | `EnterAdditionalResultCommand` | `tests/RefLab.Application.Tests/Features/Results/ResultEntryTests.cs` |
-| `EnterResultCommand` | `tests/RefLab.Application.Tests/Features/Results/ResultHandlerTests.cs` |
+| `EnterDerivedRatioCommand` | `tests/RefLab.Application.Tests/Features/Results/EnterDerivedRatioTests.cs` |
+| `EnterResultCommand` | `tests/RefLab.Application.Tests/Features/Results/ResultHandlerTests.cs`<br>`tests/RefLab.Application.Tests/Features/Results/ResultOutsideLabTests.cs` |
 | `GetCriticalValuesQuery` | `tests/RefLab.Application.Tests/Features/Results/ResultEntryTests.cs` |
 | `GetMethodSheetQuery` | `tests/RefLab.Application.Tests/Features/Results/ResultEntryTests.cs` |
 | `HandOverResultsCommand` | `tests/RefLab.Application.Tests/Features/Results/ResultHandlerTests.cs` |
-| `OrderTestsCommand` | `tests/RefLab.Application.Tests/Features/Results/ResultHandlerTests.cs` |
+| `OrderTestsCommand` | `tests/RefLab.Application.Tests/Features/Results/OrderAmountsTests.cs`<br>`tests/RefLab.Application.Tests/Features/Results/ResultHandlerTests.cs` |
 | `PrintResultReportCommand` | `tests/RefLab.Application.Tests/Features/Results/ResultHandlerTests.cs` |
 | `ReviewResultCommand` | `tests/RefLab.Application.Tests/Features/Results/ResultHandlerTests.cs` |
 | `CreateSendOutRequestCommand` | `tests/RefLab.Application.Tests/Features/SendOut/SendOutWorkflowTests.cs` |
@@ -238,7 +247,7 @@
 | `GetSendOutQueueQuery` | `tests/RefLab.Application.Tests/Features/SendOut/SendOutWorkflowTests.cs` |
 | `SettleSendOutSampleCommand` | `tests/RefLab.Application.Tests/Features/SendOut/SendOutHandlerTests.cs` |
 | `SplitOrWithdrawSampleCommand` | `tests/RefLab.Application.Tests/Features/SendOut/SendOutWorkflowTests.cs` |
-| `GetLaboratoryStatisticsQuery` | `tests/RefLab.Application.Tests/Features/Statistics/StatisticsTests.cs` |
+| `GetLaboratoryStatisticsQuery` | `tests/RefLab.Application.Tests/Features/Statistics/StatisticsIndicatorsTests.cs`<br>`tests/RefLab.Application.Tests/Features/Statistics/StatisticsTests.cs` |
 | `GetPerformanceStatisticsQuery` | `tests/RefLab.Application.Tests/Features/Statistics/StatisticsTests.cs` |
 | `BuildPatientGroupWorkSheetCommand` | `tests/RefLab.Application.Tests/Features/Worksheets/WorksheetTests.cs` |
 | `BuildTestGroupWorkSheetCommand` | `tests/RefLab.Application.Tests/Features/Worksheets/WorksheetTests.cs` |
