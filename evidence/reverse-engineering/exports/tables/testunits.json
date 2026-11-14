@@ -1,0 +1,330 @@
+{
+  "table": "testunits",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 70,
+  "records_exported": 70,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "unitsid",
+      "position": null,
+      "adox_type": 3,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "unitsname",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "unitsid": 1,
+      "unitsname": "%"
+    },
+    {
+      "unitsid": 2,
+      "unitsname": "µg/mL"
+    },
+    {
+      "unitsid": 3,
+      "unitsname": "AU"
+    },
+    {
+      "unitsid": 4,
+      "unitsname": "Au/ml"
+    },
+    {
+      "unitsid": 5,
+      "unitsname": "Eu/ml"
+    },
+    {
+      "unitsid": 6,
+      "unitsname": "fmol/L"
+    },
+    {
+      "unitsid": 7,
+      "unitsname": "gm/dL"
+    },
+    {
+      "unitsid": 8,
+      "unitsname": "GPL U/ml"
+    },
+    {
+      "unitsid": 9,
+      "unitsname": "GPL/ml"
+    },
+    {
+      "unitsid": 10,
+      "unitsname": "Index"
+    },
+    {
+      "unitsid": 11,
+      "unitsname": "IU/mL"
+    },
+    {
+      "unitsid": 12,
+      "unitsname": "mEq/L"
+    },
+    {
+      "unitsid": 13,
+      "unitsname": "mg/24hrs"
+    },
+    {
+      "unitsid": 63,
+      "unitsname": "ng/mL/hr"
+    },
+    {
+      "unitsid": 15,
+      "unitsname": "mg/day"
+    },
+    {
+      "unitsid": 16,
+      "unitsname": "mg/dL"
+    },
+    {
+      "unitsid": 17,
+      "unitsname": "mg/L"
+    },
+    {
+      "unitsid": 18,
+      "unitsname": "min"
+    },
+    {
+      "unitsid": 19,
+      "unitsname": "mIU/mL"
+    },
+    {
+      "unitsid": 20,
+      "unitsname": "ml/min"
+    },
+    {
+      "unitsid": 21,
+      "unitsname": "mm"
+    },
+    {
+      "unitsid": 22,
+      "unitsname": "Mm/L"
+    },
+    {
+      "unitsid": 23,
+      "unitsname": "mmol/L"
+    },
+    {
+      "unitsid": 24,
+      "unitsname": "mOsm/kg"
+    },
+    {
+      "unitsid": 25,
+      "unitsname": "MPL U/ml"
+    },
+    {
+      "unitsid": 26,
+      "unitsname": "MPL/mL"
+    },
+    {
+      "unitsid": 27,
+      "unitsname": "mU/100ul"
+    },
+    {
+      "unitsid": 28,
+      "unitsname": "ng/dL"
+    },
+    {
+      "unitsid": 29,
+      "unitsname": "ng/L"
+    },
+    {
+      "unitsid": 30,
+      "unitsname": "ng/mL"
+    },
+    {
+      "unitsid": 31,
+      "unitsname": "nmol/L"
+    },
+    {
+      "unitsid": 32,
+      "unitsname": "pg/dL"
+    },
+    {
+      "unitsid": 33,
+      "unitsname": "pg/mL"
+    },
+    {
+      "unitsid": 34,
+      "unitsname": "pmoI/L"
+    },
+    {
+      "unitsid": 35,
+      "unitsname": "Second"
+    },
+    {
+      "unitsid": 36,
+      "unitsname": "U/gm"
+    },
+    {
+      "unitsid": 37,
+      "unitsname": "U/L"
+    },
+    {
+      "unitsid": 38,
+      "unitsname": "U/mL"
+    },
+    {
+      "unitsid": 39,
+      "unitsname": "UECA"
+    },
+    {
+      "unitsid": 40,
+      "unitsname": "ug/dL"
+    },
+    {
+      "unitsid": 41,
+      "unitsname": "ug/L"
+    },
+    {
+      "unitsid": 43,
+      "unitsname": "ulU/mL"
+    },
+    {
+      "unitsid": 44,
+      "unitsname": "umol/l"
+    },
+    {
+      "unitsid": 45,
+      "unitsname": "Unit"
+    },
+    {
+      "unitsid": 46,
+      "unitsname": "Uu/ml"
+    },
+    {
+      "unitsid": 50,
+      "unitsname": "U/gm HB."
+    },
+    {
+      "unitsid": 51,
+      "unitsname": "U/dL"
+    },
+    {
+      "unitsid": 52,
+      "unitsname": "Ul/mL"
+    },
+    {
+      "unitsid": 53,
+      "unitsname": "m. Osmol/kg"
+    },
+    {
+      "unitsid": 54,
+      "unitsname": "mEq/24h"
+    },
+    {
+      "unitsid": 55,
+      "unitsname": "mmol/24hr"
+    },
+    {
+      "unitsid": 56,
+      "unitsname": "mlU/mL"
+    },
+    {
+      "unitsid": 57,
+      "unitsname": "g/mL"
+    },
+    {
+      "unitsid": 58,
+      "unitsname": "mcg/L"
+    },
+    {
+      "unitsid": 59,
+      "unitsname": "copies/ml"
+    },
+    {
+      "unitsid": 60,
+      "unitsname": "ug/day"
+    },
+    {
+      "unitsid": 61,
+      "unitsname": "mcg/mL"
+    },
+    {
+      "unitsid": 62,
+      "unitsname": "ug/24hrs"
+    },
+    {
+      "unitsid": 64,
+      "unitsname": "gm/day"
+    },
+    {
+      "unitsid": 65,
+      "unitsname": "mL/day"
+    },
+    {
+      "unitsid": 66,
+      "unitsname": "IU"
+    },
+    {
+      "unitsid": 67,
+      "unitsname": "x 100³ Cells/µL"
+    },
+    {
+      "unitsid": 68,
+      "unitsname": "µm³"
+    },
+    {
+      "unitsid": 70,
+      "unitsname": "x 10³/mm³"
+    },
+    {
+      "unitsid": 71,
+      "unitsname": "mms"
+    },
+    {
+      "unitsid": 73,
+      "unitsname": "g/dL"
+    },
+    {
+      "unitsid": 78,
+      "unitsname": "Ug/mL"
+    },
+    {
+      "unitsid": 79,
+      "unitsname": "K/µL"
+    },
+    {
+      "unitsid": 80,
+      "unitsname": "mL/min/1.73*m²"
+    },
+    {
+      "unitsid": 81,
+      "unitsname": "mg alb/mg creat"
+    }
+  ]
+}

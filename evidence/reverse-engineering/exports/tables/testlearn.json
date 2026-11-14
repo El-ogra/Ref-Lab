@@ -1,0 +1,213 @@
+{
+  "table": "testlearn",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 29,
+  "records_exported": 29,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "testcode",
+      "position": null,
+      "adox_type": 2,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "testlearnid",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 0,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "testsimp",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "testcode": 8,
+      "testsimp": "SGPT (ALT)",
+      "testlearnid": "008"
+    },
+    {
+      "testcode": 9,
+      "testsimp": "SGOT (AST)",
+      "testlearnid": "009"
+    },
+    {
+      "testcode": 420,
+      "testsimp": "Antithrombin III (AT-III)",
+      "testlearnid": "420"
+    },
+    {
+      "testcode": 6,
+      "testsimp": "Alkaline Phosphatase (ALP)",
+      "testlearnid": "006"
+    },
+    {
+      "testcode": 7,
+      "testsimp": "Albumin (ALB)",
+      "testlearnid": "007"
+    },
+    {
+      "testcode": 15,
+      "testsimp": "Bilirubin",
+      "testlearnid": "015"
+    },
+    {
+      "testcode": 20,
+      "testsimp": "A/G Ratio",
+      "testlearnid": "020"
+    },
+    {
+      "testcode": 23,
+      "testsimp": "Ammonia",
+      "testlearnid": "023"
+    },
+    {
+      "testcode": 57,
+      "testsimp": "Bleeding Time (BT)",
+      "testlearnid": "057"
+    },
+    {
+      "testcode": 311,
+      "testsimp": "Alpha-Fetoprotein (AFP)",
+      "testlearnid": "311"
+    },
+    {
+      "testcode": 295,
+      "testsimp": "Aldosterone",
+      "testlearnid": "295"
+    },
+    {
+      "testcode": 79,
+      "testsimp": "ASOT",
+      "testlearnid": "079"
+    },
+    {
+      "testcode": 70,
+      "testsimp": "Arterial Blood Gases (ABGs)",
+      "testlearnid": "070"
+    },
+    {
+      "testcode": 102,
+      "testsimp": "Blood Cultures",
+      "testlearnid": "102"
+    },
+    {
+      "testcode": 13,
+      "testsimp": "Blood Urea Nitrogen (BUN)",
+      "testlearnid": "013"
+    },
+    {
+      "testcode": 77,
+      "testsimp": "C-reactive Protein (CRP)",
+      "testlearnid": "077"
+    },
+    {
+      "testcode": 315,
+      "testsimp": "CA 15.3",
+      "testlearnid": "315"
+    },
+    {
+      "testcode": 316,
+      "testsimp": "CA 19.9",
+      "testlearnid": "316"
+    },
+    {
+      "testcode": 317,
+      "testsimp": "CA 125",
+      "testlearnid": "317"
+    },
+    {
+      "testcode": 175,
+      "testsimp": "Calcium, Ionized",
+      "testlearnid": "175"
+    },
+    {
+      "testcode": 176,
+      "testsimp": "Calcium,Total",
+      "testlearnid": "176"
+    },
+    {
+      "testcode": 310,
+      "testsimp": "Carcinoembryonic Antigen (CEA)",
+      "testlearnid": "310"
+    },
+    {
+      "testcode": 38,
+      "testsimp": "Coombs Direct",
+      "testlearnid": "038"
+    },
+    {
+      "testcode": 39,
+      "testsimp": "Coombs Indirect",
+      "testlearnid": "039"
+    },
+    {
+      "testcode": 56,
+      "testsimp": "Complete Blood Count (CBC)",
+      "testlearnid": "056"
+    },
+    {
+      "testcode": 495,
+      "testsimp": "Complement C3 and C4",
+      "testlearnid": "495"
+    },
+    {
+      "testcode": 500,
+      "testsimp": "Coagulation Factors",
+      "testlearnid": "500"
+    },
+    {
+      "testcode": 30,
+      "testsimp": "Cholesterol",
+      "testlearnid": "030"
+    },
+    {
+      "testcode": 180,
+      "testsimp": "Chloride (Cl)",
+      "testlearnid": "180"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "table": "pricelist",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 6,
+  "records_exported": 6,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "pricelistname",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "pricenum",
+      "position": null,
+      "adox_type": 3,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "testprice",
+      "position": null,
+      "adox_type": 5,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 3,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "testsimp",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "pricenum": 1,
+      "testsimp": "F.B.G.",
+      "pricelistname": "price list 1",
+      "testprice": 3.0
+    },
+    {
+      "pricenum": 2,
+      "testsimp": "ABO",
+      "pricelistname": "price list 1",
+      "testprice": 4.0
+    },
+    {
+      "pricenum": 3,
+      "testsimp": "ACTH (10 PM)",
+      "pricelistname": "price list 2",
+      "testprice": 22.0
+    },
+    {
+      "pricenum": 4,
+      "testsimp": "Urea",
+      "pricelistname": "price list 2",
+      "testprice": 3.0
+    },
+    {
+      "pricenum": 5,
+      "testsimp": "ABO",
+      "pricelistname": "price list 2",
+      "testprice": 7.0
+    },
+    {
+      "pricenum": 6,
+      "testsimp": "Urine",
+      "pricelistname": "seed",
+      "testprice": 1.0
+    }
+  ]
+}

@@ -647,7 +647,7 @@ loca=E:\Lab_data
 DataSource=DESKELTEL
 PersistSecurityInfo=True
 UserID=sa
-Password=12345678
+Password=[REDACTED]
 InitialCatalog=Patients
 [Initial]
 Initialw=123
@@ -674,13 +674,13 @@ Initial File Name=D:\Lab_data\bf6500.db.mdf
 ```ini
 [oledb]
 Provider=MSDataShape.1;Persist Security Info=True;
-User ID=sa;Password=12345678;
+User ID=sa;Password=[REDACTED];
 Initial Catalog=Patients;
 Data Provider=SQLOLEDB.1;Data Source=REAL_LAB
 ```
 
 > **★ `BF6500` / `AUTOMATIC HEMATOLOGY ANALYZER` reveals the pre-rebranding product
-> name.** The same credential (`sa` / `12345678`) and the same
+> name.** The same credential (`sa` / `[REDACTED]`) and the same
 > `PersistSecurityInfo=True` are present in Version 2 as in Version 1.
 
 ### 5.4 Persistence mechanisms
@@ -988,7 +988,7 @@ lockout.
 
 | ID | Finding | Evidence | Classification |
 |---|---|---|---|
-| RL-V2-SEC-01 | **Database password in clear text** in `BASE.ini` and `data_connection1.udl` (`12345678`), still present in the 2019 payload | `analysis/BATCH-07/`, `analysis/BATCH-10/` | CONFIRMED |
+| RL-V2-SEC-01 | **Database password in clear text** in `BASE.ini` and `data_connection1.udl` (`[REDACTED]`), still present in the 2019 payload | `analysis/BATCH-07/`, `analysis/BATCH-10/` | CONFIRMED |
 | RL-V2-SEC-02 | Application connects as `sa` | same files | CONFIRMED |
 | RL-V2-SEC-03 | `PersistSecurityInfo=True` | `BASE.ini` | CONFIRMED |
 | RL-V2-SEC-04 | **SQL Server Express 2005 is installed and listens on the network** | `Setup*.bat` | CONFIRMED |

@@ -1,0 +1,190 @@
+{
+  "table": "barcodes",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 35,
+  "records_exported": 35,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "barcode",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 0,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "barcodeid",
+      "position": null,
+      "adox_type": 3,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "barcode": "24hrs Urine",
+      "barcodeid": 1
+    },
+    {
+      "barcode": "Biobsy",
+      "barcodeid": 2
+    },
+    {
+      "barcode": "Body Fluid",
+      "barcodeid": 4
+    },
+    {
+      "barcode": "Bone marrow",
+      "barcodeid": 21
+    },
+    {
+      "barcode": "Citrated Blood 0.4",
+      "barcodeid": 5
+    },
+    {
+      "barcode": "Citrated Plasma 0.2",
+      "barcodeid": 6
+    },
+    {
+      "barcode": "CSF",
+      "barcodeid": 7
+    },
+    {
+      "barcode": "EDTA Blood",
+      "barcodeid": 8
+    },
+    {
+      "barcode": "Film",
+      "barcodeid": 29
+    },
+    {
+      "barcode": "Gastric biopsy",
+      "barcodeid": 30
+    },
+    {
+      "barcode": "Hair scrap",
+      "barcodeid": 22
+    },
+    {
+      "barcode": "Heparinized Blood",
+      "barcodeid": 9
+    },
+    {
+      "barcode": "Heparinized Plasma",
+      "barcodeid": 10
+    },
+    {
+      "barcode": "Liver Biobsy",
+      "barcodeid": 35
+    },
+    {
+      "barcode": "Nipple discharge",
+      "barcodeid": 32
+    },
+    {
+      "barcode": "Pleural Fluid",
+      "barcodeid": 31
+    },
+    {
+      "barcode": "Semen",
+      "barcodeid": 11
+    },
+    {
+      "barcode": "Serum",
+      "barcodeid": 12
+    },
+    {
+      "barcode": "Serum 0.5hr",
+      "barcodeid": 34
+    },
+    {
+      "barcode": "Serum 1.5hr",
+      "barcodeid": 25
+    },
+    {
+      "barcode": "Serum 1hr",
+      "barcodeid": 24
+    },
+    {
+      "barcode": "Serum 2hr",
+      "barcodeid": 26
+    },
+    {
+      "barcode": "Serum 3hr",
+      "barcodeid": 27
+    },
+    {
+      "barcode": "Serum Fasting",
+      "barcodeid": 13
+    },
+    {
+      "barcode": "Serum Postprandial",
+      "barcodeid": 14
+    },
+    {
+      "barcode": "Skin scrap",
+      "barcodeid": 28
+    },
+    {
+      "barcode": "Slide",
+      "barcodeid": 23
+    },
+    {
+      "barcode": "Sputum",
+      "barcodeid": 15
+    },
+    {
+      "barcode": "Stone",
+      "barcodeid": 18
+    },
+    {
+      "barcode": "Stool",
+      "barcodeid": 16
+    },
+    {
+      "barcode": "Urine",
+      "barcodeid": 17
+    },
+    {
+      "barcode": "Urine AM",
+      "barcodeid": 19
+    },
+    {
+      "barcode": "Urine PM",
+      "barcodeid": 20
+    },
+    {
+      "barcode": "Vaginal Swab",
+      "barcodeid": 33
+    },
+    {
+      "barcode": "Whole blood",
+      "barcodeid": 3
+    }
+  ]
+}

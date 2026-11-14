@@ -1,0 +1,3318 @@
+{
+  "table": "abbreviations",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 650,
+  "records_exported": 650,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "abbid",
+      "position": null,
+      "adox_type": 3,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "abbre",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "mean",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "abbid": 1,
+      "abbre": "A&E",
+      "mean": "accident & emergency"
+    },
+    {
+      "abbid": 2,
+      "abbre": "AAFB",
+      "mean": "acid and alcohol fast bacilli"
+    },
+    {
+      "abbid": 3,
+      "abbre": "Ab",
+      "mean": "antibody"
+    },
+    {
+      "abbid": 4,
+      "abbre": "ABGs",
+      "mean": "arterial blood gases"
+    },
+    {
+      "abbid": 5,
+      "abbre": "ACD",
+      "mean": "anaemia of chronic disease"
+    },
+    {
+      "abbid": 6,
+      "abbre": "ACE",
+      "mean": "angiotensin converting enzyme"
+    },
+    {
+      "abbid": 7,
+      "abbre": "ACh",
+      "mean": "acetylcholine"
+    },
+    {
+      "abbid": 8,
+      "abbre": "ACL",
+      "mean": "anticardiolipin antibody"
+    },
+    {
+      "abbid": 9,
+      "abbre": "ACR",
+      "mean": "acetylcholine receptor"
+    },
+    {
+      "abbid": 10,
+      "abbre": "ACS",
+      "mean": "acute coronary syndrome"
+    },
+    {
+      "abbid": 11,
+      "abbre": "ADA",
+      "mean": "American Diabetes Association"
+    },
+    {
+      "abbid": 12,
+      "abbre": "ADH",
+      "mean": "antidiuretic hormone"
+    },
+    {
+      "abbid": 13,
+      "abbre": "ADP",
+      "mean": "adenosine 5-diphosphate"
+    },
+    {
+      "abbid": 14,
+      "abbre": "AECG",
+      "mean": "ambulatory ECG"
+    },
+    {
+      "abbid": 15,
+      "abbre": "AF",
+      "mean": "atrial fibrillation"
+    },
+    {
+      "abbid": 16,
+      "abbre": "Ag",
+      "mean": "antigen"
+    },
+    {
+      "abbid": 17,
+      "abbre": "AIDS",
+      "mean": "acquired immunodeficiency syndrome"
+    },
+    {
+      "abbid": 18,
+      "abbre": "AIHA",
+      "mean": "autoimmune haemolytic anaemia"
+    },
+    {
+      "abbid": 19,
+      "abbre": "AKA",
+      "mean": "alcoholic ketoacidosis"
+    },
+    {
+      "abbid": 20,
+      "abbre": "ALL",
+      "mean": "acute lymphoblastic leukaemia"
+    },
+    {
+      "abbid": 21,
+      "abbre": "ALP",
+      "mean": "alkaline phosphatase"
+    },
+    {
+      "abbid": 22,
+      "abbre": "ALT",
+      "mean": "alanine aminotransferase"
+    },
+    {
+      "abbid": 23,
+      "abbre": "AMI",
+      "mean": "acute myocardial infarction"
+    },
+    {
+      "abbid": 24,
+      "abbre": "AML",
+      "mean": "acute myeloid leukaemia"
+    },
+    {
+      "abbid": 25,
+      "abbre": "ANA",
+      "mean": "antinuclear antibodies"
+    },
+    {
+      "abbid": 26,
+      "abbre": "ANAE",
+      "mean": "alpha naphthyl acetate esterase"
+    },
+    {
+      "abbid": 27,
+      "abbre": "ANCA",
+      "mean": "antineutrophil cytoplasmic antibody"
+    },
+    {
+      "abbid": 28,
+      "abbre": "ANF",
+      "mean": "antinuclear factor"
+    },
+    {
+      "abbid": 29,
+      "abbre": "APCR",
+      "mean": "activated protein C resistance"
+    },
+    {
+      "abbid": 30,
+      "abbre": "APL",
+      "mean": "antiphospholipid antibody"
+    },
+    {
+      "abbid": 31,
+      "abbre": "APML",
+      "mean": "APML"
+    },
+    {
+      "abbid": 32,
+      "abbre": "APS",
+      "mean": "antiphospholipid syndrome"
+    },
+    {
+      "abbid": 33,
+      "abbre": "APTR",
+      "mean": "activated partial thromboplastin time ratio"
+    },
+    {
+      "abbid": 34,
+      "abbre": "APTT",
+      "mean": "activated partial thromboplastin time"
+    },
+    {
+      "abbid": 35,
+      "abbre": "ARF",
+      "mean": "acute renal failure"
+    },
+    {
+      "abbid": 36,
+      "abbre": "AT (ATIII)",
+      "mean": "antithrombin III"
+    },
+    {
+      "abbid": 37,
+      "abbre": "ATLL",
+      "mean": "adult T cell leukaemia/lymphoma"
+    },
+    {
+      "abbid": 38,
+      "abbre": "ATP",
+      "mean": "adenosine triphosphate"
+    },
+    {
+      "abbid": 39,
+      "abbre": "AXR",
+      "mean": "abdominal x-ray"
+    },
+    {
+      "abbid": 40,
+      "abbre": "BBB",
+      "mean": "blood–brain barrier"
+    },
+    {
+      "abbid": 41,
+      "abbre": "B-CLL",
+      "mean": "B-cell chronic lymphocytic leukaemia"
+    },
+    {
+      "abbid": 42,
+      "abbre": "bd",
+      "mean": "bis die (twice daily)"
+    },
+    {
+      "abbid": 43,
+      "abbre": "BJP",
+      "mean": "Bence-Jones protein"
+    },
+    {
+      "abbid": 44,
+      "abbre": "BM",
+      "mean": "bone marrow"
+    },
+    {
+      "abbid": 45,
+      "abbre": "BMJ",
+      "mean": "British Medical Journal"
+    },
+    {
+      "abbid": 46,
+      "abbre": "BMT",
+      "mean": "bone marrow transplant(ation)"
+    },
+    {
+      "abbid": 47,
+      "abbre": "BP",
+      "mean": "blood pressure"
+    },
+    {
+      "abbid": 48,
+      "abbre": "Bx",
+      "mean": "biopsy"
+    },
+    {
+      "abbid": 49,
+      "abbre": "C1 INH",
+      "mean": "C1 esterase inhibitor"
+    },
+    {
+      "abbid": 50,
+      "abbre": "C3Nef",
+      "mean": "complement C3 nephritic factor"
+    },
+    {
+      "abbid": 51,
+      "abbre": "C&S",
+      "mean": "culture & sensitivity"
+    },
+    {
+      "abbid": 52,
+      "abbre": "Ca",
+      "mean": "carcinoma"
+    },
+    {
+      "abbid": 53,
+      "abbre": "Ca¥£",
+      "mean": "calcium"
+    },
+    {
+      "abbid": 54,
+      "abbre": "CABG",
+      "mean": "coronary artery bypass graft"
+    },
+    {
+      "abbid": 55,
+      "abbre": "CAH",
+      "mean": "congenital adrenal hyperplasia"
+    },
+    {
+      "abbid": 56,
+      "abbre": "cALL",
+      "mean": "common acute lymphoblastic leukaemia"
+    },
+    {
+      "abbid": 58,
+      "abbre": "CCF",
+      "mean": "congestive cardiac failure"
+    },
+    {
+      "abbid": 59,
+      "abbre": "CCK",
+      "mean": "cholecystokinin"
+    },
+    {
+      "abbid": 60,
+      "abbre": "CCU",
+      "mean": "coronary care unit"
+    },
+    {
+      "abbid": 61,
+      "abbre": "CD",
+      "mean": "cluster designation"
+    },
+    {
+      "abbid": 62,
+      "abbre": "cDNA",
+      "mean": "complementary DNA"
+    },
+    {
+      "abbid": 63,
+      "abbre": "CEA",
+      "mean": "carcinoembryonic antigen"
+    },
+    {
+      "abbid": 64,
+      "abbre": "CF",
+      "mean": "cystic fibrosis or complement fixation"
+    },
+    {
+      "abbid": 65,
+      "abbre": "cfu",
+      "mean": "colony-forming units"
+    },
+    {
+      "abbid": 66,
+      "abbre": "CGL",
+      "mean": "chronic granulocytic leukaemia"
+    },
+    {
+      "abbid": 67,
+      "abbre": "CHAD",
+      "mean": "cold haemagglutinin disease"
+    },
+    {
+      "abbid": 68,
+      "abbre": "CHD",
+      "mean": "coronary heart disease"
+    },
+    {
+      "abbid": 69,
+      "abbre": "CJD",
+      "mean": "Creutzfeldt-Jacob disease (v = new variant)"
+    },
+    {
+      "abbid": 70,
+      "abbre": "CK",
+      "mean": "creatine kinase"
+    },
+    {
+      "abbid": 71,
+      "abbre": "CL§",
+      "mean": "chloride"
+    },
+    {
+      "abbid": 72,
+      "abbre": "CLL",
+      "mean": "chronic lymphocytic (‘lymphatic’) leukaemia"
+    },
+    {
+      "abbid": 73,
+      "abbre": "CLO test",
+      "mean": "Campylobacter-like organism"
+    },
+    {
+      "abbid": 74,
+      "abbre": "CML",
+      "mean": "chronic myeloid leukaemia"
+    },
+    {
+      "abbid": 75,
+      "abbre": "CMML",
+      "mean": "chronic myelomonocytic leukaemia"
+    },
+    {
+      "abbid": 76,
+      "abbre": "CMV",
+      "mean": "cytomegalovirus"
+    },
+    {
+      "abbid": 77,
+      "abbre": "CNS",
+      "mean": "central nervous system"
+    },
+    {
+      "abbid": 78,
+      "abbre": "CO¼",
+      "mean": "carbon dioxide"
+    },
+    {
+      "abbid": 79,
+      "abbre": "COPD",
+      "mean": "chronic obstructive pulmonary disease"
+    },
+    {
+      "abbid": 80,
+      "abbre": "CPAP",
+      "mean": "continuous positive airways pressure"
+    },
+    {
+      "abbid": 81,
+      "abbre": "CREST",
+      "mean": "calcinosis, Raynaud’s syndrome, (o)esophageal motility dysfunction, sclerodactyly and telangiectasi"
+    },
+    {
+      "abbid": 57,
+      "abbre": "CBC",
+      "mean": "complete blood count (American term for FBC)"
+    },
+    {
+      "abbid": 82,
+      "abbre": "CRF",
+      "mean": "chronic renal failure"
+    },
+    {
+      "abbid": 83,
+      "abbre": "CRP",
+      "mean": "C-reactive protein"
+    },
+    {
+      "abbid": 84,
+      "abbre": "CSF",
+      "mean": "cerebrospinal fluid"
+    },
+    {
+      "abbid": 85,
+      "abbre": "CT",
+      "mean": "computed tomography"
+    },
+    {
+      "abbid": 86,
+      "abbre": "CTLp",
+      "mean": "cytotoxic T lymphocyte precursor assay"
+    },
+    {
+      "abbid": 87,
+      "abbre": "CVA",
+      "mean": "cerebrovascular accident (stroke)"
+    },
+    {
+      "abbid": 88,
+      "abbre": "CVD",
+      "mean": "cardiovascular disease"
+    },
+    {
+      "abbid": 89,
+      "abbre": "CVS",
+      "mean": "cardiovascular system or chorionic villus sampling  or clean voided specimen"
+    },
+    {
+      "abbid": 90,
+      "abbre": "CXR",
+      "mean": "chest x-ray"
+    },
+    {
+      "abbid": 91,
+      "abbre": "DAT",
+      "mean": "direct antiglobulin test ,, daunorubicin, cytosine (Ara-C), thioguanine"
+    },
+    {
+      "abbid": 92,
+      "abbre": "dATP",
+      "mean": "deoxy ATP"
+    },
+    {
+      "abbid": 93,
+      "abbre": "DCCT",
+      "mean": "Diabetes Control and Complications Trial"
+    },
+    {
+      "abbid": 94,
+      "abbre": "DCT",
+      "mean": "direct Coombs’ test"
+    },
+    {
+      "abbid": 95,
+      "abbre": "DDAVP",
+      "mean": "desamino D-arginyl vasopressin"
+    },
+    {
+      "abbid": 96,
+      "abbre": "DE",
+      "mean": "evoked potential"
+    },
+    {
+      "abbid": 97,
+      "abbre": "DIC",
+      "mean": "disseminated intravascular coagulation"
+    },
+    {
+      "abbid": 98,
+      "abbre": "DIDMOAD",
+      "mean": "diabetes insipidus, diabetes mellitus, optic atrophy and deafness"
+    },
+    {
+      "abbid": 99,
+      "abbre": "DKA",
+      "mean": "diabetic ketoacidosis"
+    },
+    {
+      "abbid": 100,
+      "abbre": "dL",
+      "mean": "decilitre"
+    },
+    {
+      "abbid": 101,
+      "abbre": "DM",
+      "mean": "diabetes mellitus"
+    },
+    {
+      "abbid": 102,
+      "abbre": "DNA",
+      "mean": "deoxyribonucleic acid"
+    },
+    {
+      "abbid": 103,
+      "abbre": "2,3-DPG",
+      "mean": "2,3-diphosphoglycerate"
+    },
+    {
+      "abbid": 104,
+      "abbre": "dRVVT",
+      "mean": "dilute Russell’s viper venom test"
+    },
+    {
+      "abbid": 105,
+      "abbre": "DTT",
+      "mean": "dilute thromboplastin time"
+    },
+    {
+      "abbid": 106,
+      "abbre": "DU",
+      "mean": "duodenal ulcer"
+    },
+    {
+      "abbid": 107,
+      "abbre": "DVT",
+      "mean": "deep vein thrombosis"
+    },
+    {
+      "abbid": 108,
+      "abbre": "DXT",
+      "mean": "radiotherapy"
+    },
+    {
+      "abbid": 109,
+      "abbre": "EBV",
+      "mean": "Epstein-Barr virus"
+    },
+    {
+      "abbid": 110,
+      "abbre": "ECG",
+      "mean": "electrocardiograph"
+    },
+    {
+      "abbid": 111,
+      "abbre": "EDH",
+      "mean": "extradural haemorrhage"
+    },
+    {
+      "abbid": 112,
+      "abbre": "EDTA",
+      "mean": "ethylenediamine tetraacetic acid"
+    },
+    {
+      "abbid": 113,
+      "abbre": "EEG",
+      "mean": "electroencephalogram"
+    },
+    {
+      "abbid": 114,
+      "abbre": "ELISA",
+      "mean": "enzyme-linked immunosorbent assay"
+    },
+    {
+      "abbid": 115,
+      "abbre": "EMG",
+      "mean": "electromyogram"
+    },
+    {
+      "abbid": 116,
+      "abbre": "Epo",
+      "mean": "erythropoietin"
+    },
+    {
+      "abbid": 117,
+      "abbre": "ERCP",
+      "mean": "endoscopic retrograde cholangiopancreatography"
+    },
+    {
+      "abbid": 118,
+      "abbre": "ESR",
+      "mean": "erythrocyte sedimentation rate"
+    },
+    {
+      "abbid": 119,
+      "abbre": "ESREF",
+      "mean": "end-stage renal failure"
+    },
+    {
+      "abbid": 120,
+      "abbre": "ET",
+      "mean": "essential thrombocythaemia"
+    },
+    {
+      "abbid": 121,
+      "abbre": "etOH",
+      "mean": "ethanol"
+    },
+    {
+      "abbid": 122,
+      "abbre": "FAB",
+      "mean": "French–American–British"
+    },
+    {
+      "abbid": 123,
+      "abbre": "FACS",
+      "mean": "fluorescence-activated cell sorter"
+    },
+    {
+      "abbid": 148,
+      "abbre": "GvHD",
+      "mean": "graft versus host disease"
+    },
+    {
+      "abbid": 149,
+      "abbre": "h",
+      "mean": "hour"
+    },
+    {
+      "abbid": 150,
+      "abbre": "HAV",
+      "mean": "hepatitis A virus"
+    },
+    {
+      "abbid": 151,
+      "abbre": "Hb",
+      "mean": "haemoglobin"
+    },
+    {
+      "abbid": 152,
+      "abbre": "HbA",
+      "mean": "haemoglobin A ( ? 2  ; 2 )"
+    },
+    {
+      "abbid": 153,
+      "abbre": "HbA½©",
+      "mean": "haemoglobin A1c"
+    },
+    {
+      "abbid": 154,
+      "abbre": "HbA¼",
+      "mean": "haemoglobin A2 ( ? 2  | 2)"
+    },
+    {
+      "abbid": 155,
+      "abbre": "HbF",
+      "mean": "haemoglobin F (fetal Hb, ? 2  @ 2)"
+    },
+    {
+      "abbid": 156,
+      "abbre": "HbH",
+      "mean": "haemoglobin H ( ; 4 )"
+    },
+    {
+      "abbid": 188,
+      "abbre": "Ig",
+      "mean": "immunoglobulin"
+    },
+    {
+      "abbid": 189,
+      "abbre": "IgA",
+      "mean": "immunoglobulin A"
+    },
+    {
+      "abbid": 190,
+      "abbre": "IgD",
+      "mean": "immunoglobulin D"
+    },
+    {
+      "abbid": 191,
+      "abbre": "IgE",
+      "mean": "immunoglobulin E"
+    },
+    {
+      "abbid": 192,
+      "abbre": "IgG",
+      "mean": "immunoglobulin G"
+    },
+    {
+      "abbid": 193,
+      "abbre": "IgM",
+      "mean": "immunoglobulin M"
+    },
+    {
+      "abbid": 194,
+      "abbre": "IIF",
+      "mean": "indirect immunofluorescence"
+    },
+    {
+      "abbid": 195,
+      "abbre": "IM",
+      "mean": "intramuscular"
+    },
+    {
+      "abbid": 196,
+      "abbre": "INR",
+      "mean": "international normalized ratio"
+    },
+    {
+      "abbid": 197,
+      "abbre": "ITP",
+      "mean": "idiopathic thrombocytopenic purpura"
+    },
+    {
+      "abbid": 198,
+      "abbre": "ITU",
+      "mean": "intensive therapy unit"
+    },
+    {
+      "abbid": 199,
+      "abbre": "iu/IU",
+      "mean": "international units"
+    },
+    {
+      "abbid": 200,
+      "abbre": "IV",
+      "mean": "intravenous"
+    },
+    {
+      "abbid": 201,
+      "abbre": "IVI",
+      "mean": "intravenous infusion"
+    },
+    {
+      "abbid": 202,
+      "abbre": "IVU",
+      "mean": "intravenous urogram"
+    },
+    {
+      "abbid": 203,
+      "abbre": "JCA",
+      "mean": "juvenile chronic arthritis"
+    },
+    {
+      "abbid": 204,
+      "abbre": "JVP",
+      "mean": "jugular venous pressure"
+    },
+    {
+      "abbid": 205,
+      "abbre": "K£",
+      "mean": "potassium"
+    },
+    {
+      "abbid": 206,
+      "abbre": "KCCT",
+      "mean": "kaolin cephalin clotting time (= APTT)"
+    },
+    {
+      "abbid": 207,
+      "abbre": "kDa",
+      "mean": "kiloDaltons"
+    },
+    {
+      "abbid": 208,
+      "abbre": "kg",
+      "mean": "kilogram"
+    },
+    {
+      "abbid": 209,
+      "abbre": "KUB",
+      "mean": "kidney, ureter, bladder (x-ray)"
+    },
+    {
+      "abbid": 210,
+      "abbre": "L",
+      "mean": "litre or left"
+    },
+    {
+      "abbid": 211,
+      "abbre": "LA",
+      "mean": "lupus anticoagulant or lactic acidosis or local anaesthetic"
+    },
+    {
+      "abbid": 212,
+      "abbre": "LAP",
+      "mean": "leucocyte alkaline phosphatase (score)"
+    },
+    {
+      "abbid": 213,
+      "abbre": "LBBB",
+      "mean": "left bundle branch block"
+    },
+    {
+      "abbid": 214,
+      "abbre": "LCM",
+      "mean": "left costal margin"
+    },
+    {
+      "abbid": 215,
+      "abbre": "LDH",
+      "mean": "lactate dehydrogenase"
+    },
+    {
+      "abbid": 216,
+      "abbre": "LFTs",
+      "mean": "liver function tests"
+    },
+    {
+      "abbid": 217,
+      "abbre": "LIF",
+      "mean": "left iliac fossa"
+    },
+    {
+      "abbid": 218,
+      "abbre": "LKM",
+      "mean": "liver/kidney microsomal"
+    },
+    {
+      "abbid": 219,
+      "abbre": "LP",
+      "mean": "lumbar puncture"
+    },
+    {
+      "abbid": 220,
+      "abbre": "LUQ",
+      "mean": "left upper quadrant"
+    },
+    {
+      "abbid": 221,
+      "abbre": "LVF",
+      "mean": "left ventricular failure"
+    },
+    {
+      "abbid": 257,
+      "abbre": "NRBC",
+      "mean": "nucleated red blood cells"
+    },
+    {
+      "abbid": 258,
+      "abbre": "NSAIDs",
+      "mean": "non-steroidal anti-inflammatory drugs"
+    },
+    {
+      "abbid": 259,
+      "abbre": "NSTEMI",
+      "mean": "non-ST-elevation myocardial infarction"
+    },
+    {
+      "abbid": 260,
+      "abbre": "OA",
+      "mean": "osteoarthritis"
+    },
+    {
+      "abbid": 261,
+      "abbre": "OCP",
+      "mean": "oral contraceptive pill"
+    },
+    {
+      "abbid": 262,
+      "abbre": "od",
+      "mean": "omni die (once daily)"
+    },
+    {
+      "abbid": 263,
+      "abbre": "OGD",
+      "mean": "oesophagogastroduodenoscopy"
+    },
+    {
+      "abbid": 264,
+      "abbre": "OGTT",
+      "mean": "oral glucose tolerance test"
+    },
+    {
+      "abbid": 266,
+      "abbre": "PA",
+      "mean": "posteroanterior or pernicious anaemia or pulmonary artery"
+    },
+    {
+      "abbid": 297,
+      "abbre": "PV",
+      "mean": "plasma volume or polycythaemia vera"
+    },
+    {
+      "abbid": 298,
+      "abbre": "qds",
+      "mean": "quater die sumendus (to be taken 4 times a day)"
+    },
+    {
+      "abbid": 299,
+      "abbre": "RA",
+      "mean": "refractory anaemia or rheumatoid arthritis"
+    },
+    {
+      "abbid": 300,
+      "abbre": "RAS",
+      "mean": "renal angiotensin system or renal artery stenosis"
+    },
+    {
+      "abbid": 301,
+      "abbre": "RBBB",
+      "mean": "right bundle branch block"
+    },
+    {
+      "abbid": 302,
+      "abbre": "RBCs",
+      "mean": "red blood cells"
+    },
+    {
+      "abbid": 303,
+      "abbre": "RCC",
+      "mean": "red blood cell count"
+    },
+    {
+      "abbid": 304,
+      "abbre": "RDW",
+      "mean": "red cell distribution width"
+    },
+    {
+      "abbid": 305,
+      "abbre": "Rh",
+      "mean": "Rhesus"
+    },
+    {
+      "abbid": 306,
+      "abbre": "RhF or RF",
+      "mean": "rheumatoid factor"
+    },
+    {
+      "abbid": 307,
+      "abbre": "RIA",
+      "mean": "radioimmunoassay"
+    },
+    {
+      "abbid": 308,
+      "abbre": "RiCoF",
+      "mean": "ristocetin cofactor"
+    },
+    {
+      "abbid": 309,
+      "abbre": "RIF",
+      "mean": "right iliac fossa"
+    },
+    {
+      "abbid": 310,
+      "abbre": "RIPA",
+      "mean": "ristocetin-induced platelet aggregation"
+    },
+    {
+      "abbid": 311,
+      "abbre": "RNP",
+      "mean": "ribonucleoprotein"
+    },
+    {
+      "abbid": 312,
+      "abbre": "RPGN",
+      "mean": "rapidly progressive glomerulonephritis"
+    },
+    {
+      "abbid": 313,
+      "abbre": "RT-PCR",
+      "mean": "reverse transcriptase polymerase chain reaction"
+    },
+    {
+      "abbid": 314,
+      "abbre": "RUQ",
+      "mean": "right upper quadrant"
+    },
+    {
+      "abbid": 315,
+      "abbre": "s",
+      "mean": "seconds"
+    },
+    {
+      "abbid": 316,
+      "abbre": "SAECG",
+      "mean": "signal-averaged ECG"
+    },
+    {
+      "abbid": 317,
+      "abbre": "SAH",
+      "mean": "subarachnoid haemorrhage"
+    },
+    {
+      "abbid": 318,
+      "abbre": "SC",
+      "mean": "subcutaneous"
+    },
+    {
+      "abbid": 319,
+      "abbre": "SCA",
+      "mean": "sickle cell anaemia"
+    },
+    {
+      "abbid": 320,
+      "abbre": "SCD",
+      "mean": "sickle cell disease"
+    },
+    {
+      "abbid": 321,
+      "abbre": "SDH",
+      "mean": "subdural haemorrhage"
+    },
+    {
+      "abbid": 322,
+      "abbre": "SHBG",
+      "mean": "sex-hormone-binding globulin"
+    },
+    {
+      "abbid": 323,
+      "abbre": "SLE",
+      "mean": "systemic lupus erythematosus"
+    },
+    {
+      "abbid": 324,
+      "abbre": "SmIg",
+      "mean": "surface membrane immunoglobulin"
+    },
+    {
+      "abbid": 325,
+      "abbre": "SOB",
+      "mean": "short of breath"
+    },
+    {
+      "abbid": 326,
+      "abbre": "SOL",
+      "mean": "space-occupying lesion"
+    },
+    {
+      "abbid": 327,
+      "abbre": "SM",
+      "mean": "smooth muscle"
+    },
+    {
+      "abbid": 328,
+      "abbre": "SPECT",
+      "mean": "single photon emission computed tomography"
+    },
+    {
+      "abbid": 329,
+      "abbre": "stat",
+      "mean": "statim (immediate; as initial dose)"
+    },
+    {
+      "abbid": 330,
+      "abbre": "STEMI",
+      "mean": "ST-elevation myocardial infarction"
+    },
+    {
+      "abbid": 331,
+      "abbre": "sTfR",
+      "mean": "soluble transferrin receptor assay"
+    },
+    {
+      "abbid": 332,
+      "abbre": "SVC",
+      "mean": "superior vena cava"
+    },
+    {
+      "abbid": 333,
+      "abbre": "SVCO",
+      "mean": "superior vena caval obstruction"
+    },
+    {
+      "abbid": 334,
+      "abbre": "SXR",
+      "mean": "skull x-ray"
+    },
+    {
+      "abbid": 335,
+      "abbre": "T°",
+      "mean": "temperature"
+    },
+    {
+      "abbid": 373,
+      "abbre": "vWFAg",
+      "mean": "von Willebrand factor antigen"
+    },
+    {
+      "abbid": 631,
+      "abbre": "M/!L",
+      "mean": "million per microliter"
+    },
+    {
+      "abbid": 632,
+      "abbre": "mcg/dL",
+      "mean": "microgram per deciliter"
+    },
+    {
+      "abbid": 633,
+      "abbre": "mg/gCR",
+      "mean": "microgram per gram creatinine"
+    },
+    {
+      "abbid": 634,
+      "abbre": "mg Hb/",
+      "mean": "microgram hemoglobin per"
+    },
+    {
+      "abbid": 635,
+      "abbre": "MIC",
+      "mean": "minimum inhibitory concentration"
+    },
+    {
+      "abbid": 636,
+      "abbre": "mIU/hr",
+      "mean": "milli international units per hour"
+    },
+    {
+      "abbid": 637,
+      "abbre": "mmol",
+      "mean": "millimole"
+    },
+    {
+      "abbid": 638,
+      "abbre": "mmol/d",
+      "mean": "millimoles per day"
+    },
+    {
+      "abbid": 639,
+      "abbre": "mmol/mol crt",
+      "mean": "crt millimoles per mole creatinine"
+    },
+    {
+      "abbid": 640,
+      "abbre": "mOsm/kg",
+      "mean": "milliosmoles per kilogram"
+    },
+    {
+      "abbid": 641,
+      "abbre": "MPL",
+      "mean": "IgM phospholipid units"
+    },
+    {
+      "abbid": 642,
+      "abbre": "mPOL",
+      "mean": "milli polarization unit"
+    },
+    {
+      "abbid": 643,
+      "abbre": "mU/mL",
+      "mean": "milliunits per milliliter"
+    },
+    {
+      "abbid": 644,
+      "abbre": "NCCLS",
+      "mean": "National Committee Clinical Laboratory Standards (now Clinical and Laboratory Standards Institute)"
+    },
+    {
+      "abbid": 645,
+      "abbre": "ng/mL/hr",
+      "mean": "nanograms per milliliter per hour"
+    },
+    {
+      "abbid": 646,
+      "abbre": "OD~",
+      "mean": "optical density (equivalent to absorbance)"
+    },
+    {
+      "abbid": 647,
+      "abbre": "pg/mL",
+      "mean": "picograms per milliliter"
+    },
+    {
+      "abbid": 648,
+      "abbre": "PPM",
+      "mean": "parts per million"
+    },
+    {
+      "abbid": 649,
+      "abbre": "PST",
+      "mean": "plasma separator tube"
+    },
+    {
+      "abbid": 650,
+      "abbre": "PPT",
+      "mean": "Plasma Preparation Tube™"
+    },
+    {
+      "abbid": 651,
+      "abbre": "RPR",
+      "mean": "rapid plasma reagin"
+    },
+    {
+      "abbid": 652,
+      "abbre": "UHCL",
+      "mean": "University Hospital Clinical Laboratory"
+    },
+    {
+      "abbid": 143,
+      "abbre": "GPC",
+      "mean": "gastric parietal cell"
+    },
+    {
+      "abbid": 144,
+      "abbre": "G6PD",
+      "mean": "glucose-6-phosphate dehydrogenase"
+    },
+    {
+      "abbid": 145,
+      "abbre": "GPI",
+      "mean": "general paralysis of the insane"
+    },
+    {
+      "abbid": 146,
+      "abbre": "GTN",
+      "mean": "glyceryl trinitrate"
+    },
+    {
+      "abbid": 147,
+      "abbre": "GU",
+      "mean": "gastric ulcer"
+    },
+    {
+      "abbid": 157,
+      "abbre": "HBsAg",
+      "mean": "hepatitis B surface antigen"
+    },
+    {
+      "abbid": 158,
+      "abbre": "HBV",
+      "mean": "hepatitis B virus"
+    },
+    {
+      "abbid": 159,
+      "abbre": "hCG",
+      "mean": "human chorionic gonadotrophin"
+    },
+    {
+      "abbid": 160,
+      "abbre": "HCO¾§",
+      "mean": "bicarbonate"
+    },
+    {
+      "abbid": 161,
+      "abbre": "Hct",
+      "mean": "haematocrit"
+    },
+    {
+      "abbid": 162,
+      "abbre": "HCV",
+      "mean": "hepatitis C virus"
+    },
+    {
+      "abbid": 163,
+      "abbre": "HDN",
+      "mean": "haemolytic disease of the newborn"
+    },
+    {
+      "abbid": 164,
+      "abbre": "HE",
+      "mean": "hereditary elliptocytosis"
+    },
+    {
+      "abbid": 165,
+      "abbre": "HELLP",
+      "mean": "haemolysis, elevated liver enzymes and low platelet count"
+    },
+    {
+      "abbid": 166,
+      "abbre": "HIV",
+      "mean": "human immunodeficiency virus"
+    },
+    {
+      "abbid": 167,
+      "abbre": "HLA",
+      "mean": "human leucocyte antigen"
+    },
+    {
+      "abbid": 168,
+      "abbre": "HNA",
+      "mean": "heparin neutralising activity"
+    },
+    {
+      "abbid": 169,
+      "abbre": "HONK",
+      "mean": "hyperosmolar non-ketotic syndrome"
+    },
+    {
+      "abbid": 170,
+      "abbre": "HPA",
+      "mean": "human platelet antigen"
+    },
+    {
+      "abbid": 171,
+      "abbre": "HPFH",
+      "mean": "hereditary persistence of fetal haemoglobin"
+    },
+    {
+      "abbid": 172,
+      "abbre": "HPLC",
+      "mean": "high-performance liquid chromatography"
+    },
+    {
+      "abbid": 173,
+      "abbre": "HPOA",
+      "mean": "hypertrophic pulmonary osteoarthropathy"
+    },
+    {
+      "abbid": 174,
+      "abbre": "HPP",
+      "mean": "hereditary pyropoikilocytosis"
+    },
+    {
+      "abbid": 175,
+      "abbre": "HTLV",
+      "mean": "human T-lymphotropic virus"
+    },
+    {
+      "abbid": 176,
+      "abbre": "IAGT or IAT",
+      "mean": "indirect antiglobulin test"
+    },
+    {
+      "abbid": 177,
+      "abbre": "IBS",
+      "mean": "irritable bowel syndrome"
+    },
+    {
+      "abbid": 178,
+      "abbre": "ICA",
+      "mean": "islet cell antibodies"
+    },
+    {
+      "abbid": 179,
+      "abbre": "ICH",
+      "mean": "intracranial haemorrhage"
+    },
+    {
+      "abbid": 180,
+      "abbre": "IDA",
+      "mean": "iron deficiency anaemia"
+    },
+    {
+      "abbid": 181,
+      "abbre": "IDDM",
+      "mean": "insulin dependent (type 1) diabetes mellitus"
+    },
+    {
+      "abbid": 182,
+      "abbre": "IEF",
+      "mean": "isoelectric focusing"
+    },
+    {
+      "abbid": 183,
+      "abbre": "IFG",
+      "mean": "impaired fasting glucose"
+    },
+    {
+      "abbid": 184,
+      "abbre": "IFN-\\",
+      "mean": "interferon alpha"
+    },
+    {
+      "abbid": 185,
+      "abbre": "IGT",
+      "mean": "impaired glucose tolerance"
+    },
+    {
+      "abbid": 186,
+      "abbre": "IHD",
+      "mean": "ischaemic heart disease"
+    },
+    {
+      "abbid": 378,
+      "abbre": "2-CDA",
+      "mean": "2-chlorodeoxyadenosine"
+    },
+    {
+      "abbid": 379,
+      "abbre": "?2-M",
+      "mean": "alpha¼ microglobulin"
+    },
+    {
+      "abbid": 380,
+      "abbre": "6-MP",
+      "mean": "6-mercaptopurine"
+    },
+    {
+      "abbid": 381,
+      "abbre": "AA",
+      "mean": "aplastic anaemia or reactive amyloidosis"
+    },
+    {
+      "abbid": 382,
+      "abbre": "ABVD",
+      "mean": "adriamycin (doxorubicin), bleomycin, vinblastine, dacarbazine"
+    },
+    {
+      "abbid": 383,
+      "abbre": "ACML",
+      "mean": "atypical chronic myeloid leukaemia"
+    },
+    {
+      "abbid": 384,
+      "abbre": "ADE",
+      "mean": "cytosine arabinoside (Ara-C) daunorubicin etoposide"
+    },
+    {
+      "abbid": 385,
+      "abbre": "AIN",
+      "mean": "autoimmune neutropenia"
+    },
+    {
+      "abbid": 386,
+      "abbre": "AL",
+      "mean": "(primary) amyloidosis"
+    },
+    {
+      "abbid": 387,
+      "abbre": "ALB",
+      "mean": "serum albumin"
+    },
+    {
+      "abbid": 388,
+      "abbre": "ALG",
+      "mean": "anti-lymphocyte globulin"
+    },
+    {
+      "abbid": 389,
+      "abbre": "ALIPs",
+      "mean": "abnormal localisation of immature myeloid precursors"
+    },
+    {
+      "abbid": 390,
+      "abbre": "ALS",
+      "mean": "advanced life support"
+    },
+    {
+      "abbid": 391,
+      "abbre": "AMP",
+      "mean": "adenosine monophosphate"
+    },
+    {
+      "abbid": 392,
+      "abbre": "APC",
+      "mean": "activated protein C"
+    },
+    {
+      "abbid": 394,
+      "abbre": "ARMS",
+      "mean": "amplification refractory mutation system"
+    },
+    {
+      "abbid": 395,
+      "abbre": "AST",
+      "mean": "aspartate aminotranferase"
+    },
+    {
+      "abbid": 396,
+      "abbre": "ASCT",
+      "mean": "autologous stem cell transplantation"
+    },
+    {
+      "abbid": 397,
+      "abbre": "ATCML",
+      "mean": "Adult-type chronic myeloid (granulocytic) leukaemia"
+    },
+    {
+      "abbid": 398,
+      "abbre": "ATG",
+      "mean": "anti-thymocyte globulin"
+    },
+    {
+      "abbid": 440,
+      "abbre": "DMSO",
+      "mean": "dimethyl sulphoxide"
+    },
+    {
+      "abbid": 448,
+      "abbre": "EPOCH",
+      "mean": "doxorubicin/epirubicin,vincristine,etoposide over96h IVI with bolus cyclophosphamide,oral prednisolo"
+    },
+    {
+      "abbid": 449,
+      "abbre": "ESHAP",
+      "mean": "etoposide, methylprednisolone, cytarabine, platinum"
+    },
+    {
+      "abbid": 450,
+      "abbre": "FCM",
+      "mean": "fludarabine, cyclophosphamide, melphalan"
+    },
+    {
+      "abbid": 451,
+      "abbre": "FDG-PET",
+      "mean": "2^18 fluoro–D–2–deoxyglucose positron emission tomography"
+    },
+    {
+      "abbid": 452,
+      "abbre": "FEIBA",
+      "mean": "factor eight inhibitor bypassing activity"
+    },
+    {
+      "abbid": 453,
+      "abbre": "FFP",
+      "mean": "fresh frozen plasma"
+    },
+    {
+      "abbid": 454,
+      "abbre": "FFS",
+      "mean": "failure-free survival"
+    },
+    {
+      "abbid": 455,
+      "abbre": "FH",
+      "mean": "family history"
+    },
+    {
+      "abbid": 456,
+      "abbre": "FITC",
+      "mean": "fluorescein isothiocyanate"
+    },
+    {
+      "abbid": 457,
+      "abbre": "FL~",
+      "mean": "follicular lymphoma"
+    },
+    {
+      "abbid": 458,
+      "abbre": "FNA",
+      "mean": "fine needle aspirate"
+    },
+    {
+      "abbid": 459,
+      "abbre": "?FP",
+      "mean": "alpha-fetoprotein"
+    },
+    {
+      "abbid": 460,
+      "abbre": "GA",
+      "mean": "general anaesthetic"
+    },
+    {
+      "abbid": 461,
+      "abbre": "G-CSF",
+      "mean": "granulocyte colony stimulating factor"
+    },
+    {
+      "abbid": 462,
+      "abbre": "GM-CSF",
+      "mean": "granulocyte macrophage colony stimulating factor"
+    },
+    {
+      "abbid": 463,
+      "abbre": "GvL",
+      "mean": "graft versus leukaemia"
+    },
+    {
+      "abbid": 464,
+      "abbre": "HCII",
+      "mean": "heparin cofactor II"
+    },
+    {
+      "abbid": 472,
+      "abbre": "HL",
+      "mean": "Hodgkin’s lymphoma (Hodgkin’s disease)"
+    },
+    {
+      "abbid": 473,
+      "abbre": "HLH",
+      "mean": "haemophagocytic lymphohistiocytosis"
+    },
+    {
+      "abbid": 474,
+      "abbre": "H/LMW",
+      "mean": "high/low molecular weight"
+    },
+    {
+      "abbid": 475,
+      "abbre": "HMP",
+      "mean": "hexose monophosphate shunt"
+    },
+    {
+      "abbid": 476,
+      "abbre": "HMWK",
+      "mean": "high molecular weight kininogen"
+    },
+    {
+      "abbid": 477,
+      "abbre": "HRT",
+      "mean": "hormone replacement therapy"
+    },
+    {
+      "abbid": 478,
+      "abbre": "HS",
+      "mean": "hereditary spherocytosis"
+    },
+    {
+      "abbid": 479,
+      "abbre": "HUS",
+      "mean": "haemolytic uraemic syndrome"
+    },
+    {
+      "abbid": 465,
+      "abbre": "HCD",
+      "mean": "heavy chain disease"
+    },
+    {
+      "abbid": 466,
+      "abbre": "HCL",
+      "mean": "hairy cell leukaemia"
+    },
+    {
+      "abbid": 467,
+      "abbre": "HDM",
+      "mean": "high dose melphalan"
+    },
+    {
+      "abbid": 468,
+      "abbre": "HDT",
+      "mean": "high dose therapy"
+    },
+    {
+      "abbid": 469,
+      "abbre": "HES",
+      "mean": "hypereosinophilic syndrome"
+    },
+    {
+      "abbid": 470,
+      "abbre": "HHT",
+      "mean": "hereditary haemorrhagic telangiectasia"
+    },
+    {
+      "abbid": 471,
+      "abbre": "HIT(T)",
+      "mean": "heparin-induced thrombocytopenia (with thrombosis)"
+    },
+    {
+      "abbid": 625,
+      "abbre": "IU/24",
+      "mean": "international units per 24 hours"
+    },
+    {
+      "abbid": 626,
+      "abbre": "kU/L",
+      "mean": "kilounits per liter"
+    },
+    {
+      "abbid": 627,
+      "abbre": "LOINC",
+      "mean": "Logical Observation Identifier Names and Codes"
+    },
+    {
+      "abbid": 628,
+      "abbre": "LIA",
+      "mean": "Microlatex Particle-Mediated Immunoassay"
+    },
+    {
+      "abbid": 629,
+      "abbre": "LI",
+      "mean": "Lyme Index"
+    },
+    {
+      "abbid": 630,
+      "abbre": "LIV",
+      "mean": "Lyme Index Value"
+    },
+    {
+      "abbid": 227,
+      "abbre": "MCH",
+      "mean": "mean cell haemoglobin"
+    },
+    {
+      "abbid": 228,
+      "abbre": "MCHC",
+      "mean": "mean corpuscular haemoglobin concentration"
+    },
+    {
+      "abbid": 229,
+      "abbre": "MCV",
+      "mean": "mean cell volume"
+    },
+    {
+      "abbid": 230,
+      "abbre": "MDS",
+      "mean": "myelodysplastic syndrome"
+    },
+    {
+      "abbid": 231,
+      "abbre": "MELAS",
+      "mean": "myelopathy, encephalopathy, lactic acidosis and strokelike episodes"
+    },
+    {
+      "abbid": 232,
+      "abbre": "mg",
+      "mean": "milligram (10§¶ gram)"
+    },
+    {
+      "abbid": 233,
+      "abbre": "MGUS",
+      "mean": "monoclonal gammopathy of undetermined significance"
+    },
+    {
+      "abbid": 234,
+      "abbre": "MHC",
+      "mean": "major histocompatibility complex"
+    },
+    {
+      "abbid": 235,
+      "abbre": "MI",
+      "mean": "myocardial infarction"
+    },
+    {
+      "abbid": 236,
+      "abbre": "min",
+      "mean": "minutes"
+    },
+    {
+      "abbid": 237,
+      "abbre": "MoAb",
+      "mean": "monoclonal antibody"
+    },
+    {
+      "abbid": 238,
+      "abbre": "MODY",
+      "mean": "maturity onset diabetes of the young"
+    },
+    {
+      "abbid": 239,
+      "abbre": "mOsm",
+      "mean": "milliosmole"
+    },
+    {
+      "abbid": 240,
+      "abbre": "MPD",
+      "mean": "myeloproliferative disease"
+    },
+    {
+      "abbid": 241,
+      "abbre": "MPV",
+      "mean": "mean platelet volume"
+    },
+    {
+      "abbid": 242,
+      "abbre": "MRI",
+      "mean": "magnetic resonance imaging"
+    },
+    {
+      "abbid": 243,
+      "abbre": "mRNA",
+      "mean": "messenger ribonucleic acid"
+    },
+    {
+      "abbid": 244,
+      "abbre": "MS",
+      "mean": "multiple sclerosis or mass spectroscopy"
+    },
+    {
+      "abbid": 245,
+      "abbre": "MSU",
+      "mean": "mid-stream urine"
+    },
+    {
+      "abbid": 246,
+      "abbre": "MTP",
+      "mean": "metatarsophalangeal"
+    },
+    {
+      "abbid": 247,
+      "abbre": "MUD",
+      "mean": "matched unrelated donor (transplant)"
+    },
+    {
+      "abbid": 248,
+      "abbre": "!g",
+      "mean": "microgram (10§± gram)"
+    },
+    {
+      "abbid": 249,
+      "abbre": "Na£",
+      "mean": "sodium"
+    },
+    {
+      "abbid": 250,
+      "abbre": "NaCl",
+      "mean": "sodium chloride"
+    },
+    {
+      "abbid": 251,
+      "abbre": "NADP",
+      "mean": "nicotinamide adenine diphosphate"
+    },
+    {
+      "abbid": 267,
+      "abbre": "PACWP",
+      "mean": "pulmonary artery capillary wedge pressure"
+    },
+    {
+      "abbid": 268,
+      "abbre": "PAD",
+      "mean": "peripheral arterial disease"
+    },
+    {
+      "abbid": 269,
+      "abbre": "PAN",
+      "mean": "polyarteritis nodosa"
+    },
+    {
+      "abbid": 270,
+      "abbre": "PaO¼",
+      "mean": "partial pressure of O¼ in arterial blood"
+    },
+    {
+      "abbid": 271,
+      "abbre": "PAS",
+      "mean": "periodic acid-Schiff"
+    },
+    {
+      "abbid": 272,
+      "abbre": "PB",
+      "mean": "peripheral blood"
+    },
+    {
+      "abbid": 273,
+      "abbre": "PBC",
+      "mean": "primary biliary cirrhosis"
+    },
+    {
+      "abbid": 274,
+      "abbre": "PC",
+      "mean": "protein C or provocation concentration"
+    },
+    {
+      "abbid": 275,
+      "abbre": "PCH",
+      "mean": "paroxysmal cold haemoglobinuria"
+    },
+    {
+      "abbid": 276,
+      "abbre": "PCI",
+      "mean": "percutaneous coronary intervention"
+    },
+    {
+      "abbid": 277,
+      "abbre": "PCL",
+      "mean": "plasma cell leukaemia"
+    },
+    {
+      "abbid": 278,
+      "abbre": "PCP",
+      "mean": "Pneumocystis carinii pneumonia"
+    },
+    {
+      "abbid": 279,
+      "abbre": "PCR",
+      "mean": "polymerase chain reaction"
+    },
+    {
+      "abbid": 280,
+      "abbre": "PCT",
+      "mean": "proximal convoluted tubule"
+    },
+    {
+      "abbid": 281,
+      "abbre": "PCV",
+      "mean": "packed cell volume"
+    },
+    {
+      "abbid": 282,
+      "abbre": "PDA",
+      "mean": "patent ductus arteriosus"
+    },
+    {
+      "abbid": 283,
+      "abbre": "PE",
+      "mean": "pulmonary embolism"
+    },
+    {
+      "abbid": 284,
+      "abbre": "PEFR",
+      "mean": "peak expiratory flow rate"
+    },
+    {
+      "abbid": 285,
+      "abbre": "PET",
+      "mean": "positron emission tomography"
+    },
+    {
+      "abbid": 286,
+      "abbre": "Ph",
+      "mean": "Philadelphia chromosome"
+    },
+    {
+      "abbid": 287,
+      "abbre": "PIFT",
+      "mean": "platelet immunofluorescence test"
+    },
+    {
+      "abbid": 288,
+      "abbre": "PK",
+      "mean": "pyruvate kinase"
+    },
+    {
+      "abbid": 289,
+      "abbre": "PO",
+      "mean": "per os (by mouth)"
+    },
+    {
+      "abbid": 290,
+      "abbre": "POµ¶§",
+      "mean": "phosphate"
+    },
+    {
+      "abbid": 291,
+      "abbre": "PR",
+      "mean": "per rectum"
+    },
+    {
+      "abbid": 292,
+      "abbre": "PRL",
+      "mean": "prolactin"
+    },
+    {
+      "abbid": 293,
+      "abbre": "PRV",
+      "mean": "polycythaemia rubra vera"
+    },
+    {
+      "abbid": 294,
+      "abbre": "PS",
+      "mean": "protein S or Parkinson’s syndrome"
+    },
+    {
+      "abbid": 295,
+      "abbre": "PSA",
+      "mean": "prostate-specific antigen"
+    },
+    {
+      "abbid": 296,
+      "abbre": "PT",
+      "mean": "prothrombin time"
+    },
+    {
+      "abbid": 336,
+      "abbre": "t1/2",
+      "mean": "half-life"
+    },
+    {
+      "abbid": 337,
+      "abbre": "T4",
+      "mean": "thyroxine"
+    },
+    {
+      "abbid": 338,
+      "abbre": "TA",
+      "mean": "temporal arteritis"
+    },
+    {
+      "abbid": 339,
+      "abbre": "TB",
+      "mean": "tuberculosis"
+    },
+    {
+      "abbid": 340,
+      "abbre": "tds",
+      "mean": "ter die sumendum (to be taken 3 times a day)"
+    },
+    {
+      "abbid": 341,
+      "abbre": "TdT",
+      "mean": "terminal deoxynucleotidyl transferase"
+    },
+    {
+      "abbid": 342,
+      "abbre": "TENS",
+      "mean": "transcutaneous nerve stimulation"
+    },
+    {
+      "abbid": 343,
+      "abbre": "TFT",
+      "mean": "thyroid function test(s)"
+    },
+    {
+      "abbid": 344,
+      "abbre": "TIAs",
+      "mean": "transient ischaemic attacks"
+    },
+    {
+      "abbid": 345,
+      "abbre": "TIBC",
+      "mean": "total iron binding capacity"
+    },
+    {
+      "abbid": 346,
+      "abbre": "TN",
+      "mean": "trigeminal neuralgia"
+    },
+    {
+      "abbid": 347,
+      "abbre": "TNF",
+      "mean": "tumour necrosis factor"
+    },
+    {
+      "abbid": 348,
+      "abbre": "TOE",
+      "mean": "transoesophageal echocardiogram"
+    },
+    {
+      "abbid": 349,
+      "abbre": "TPA",
+      "mean": "tissue plasminogen activator"
+    },
+    {
+      "abbid": 350,
+      "abbre": "TPO",
+      "mean": "thyroid peroxidase"
+    },
+    {
+      "abbid": 351,
+      "abbre": "TRAB",
+      "mean": "thyrotropin receptor antibodies"
+    },
+    {
+      "abbid": 352,
+      "abbre": "TRALI",
+      "mean": "transfusion-associated lung injury"
+    },
+    {
+      "abbid": 353,
+      "abbre": "TRAP",
+      "mean": "tartrate-resistant acid phosphatase"
+    },
+    {
+      "abbid": 354,
+      "abbre": "TSH",
+      "mean": "thyroid-stimulating hormone"
+    },
+    {
+      "abbid": 355,
+      "abbre": "TT",
+      "mean": "thrombin time"
+    },
+    {
+      "abbid": 356,
+      "abbre": "TTE",
+      "mean": "transthoracic echocardiography"
+    },
+    {
+      "abbid": 357,
+      "abbre": "TTP",
+      "mean": "thrombotic thrombocytopenic purpura"
+    },
+    {
+      "abbid": 358,
+      "abbre": "TXA",
+      "mean": "tranexamic acid"
+    },
+    {
+      "abbid": 359,
+      "abbre": "u/U",
+      "mean": "units"
+    },
+    {
+      "abbid": 360,
+      "abbre": "UC",
+      "mean": "ulcerative colitis"
+    },
+    {
+      "abbid": 361,
+      "abbre": "U&E",
+      "mean": "urea and electrolytes"
+    },
+    {
+      "abbid": 362,
+      "abbre": "UKPDS",
+      "mean": "United Kingdom Prospective Diabetes Study"
+    },
+    {
+      "abbid": 363,
+      "abbre": "URTI",
+      "mean": "upper respiratory tract infection"
+    },
+    {
+      "abbid": 364,
+      "abbre": "UTI",
+      "mean": "urinary tract infection"
+    },
+    {
+      "abbid": 365,
+      "abbre": "USS",
+      "mean": "ultrasound scan"
+    },
+    {
+      "abbid": 366,
+      "abbre": "VIII:C",
+      "mean": "factor VIII clotting activity"
+    },
+    {
+      "abbid": 367,
+      "abbre": "VIP",
+      "mean": "vasoactive intestinal peptide"
+    },
+    {
+      "abbid": 368,
+      "abbre": "Vit K",
+      "mean": "vitamin K"
+    },
+    {
+      "abbid": 369,
+      "abbre": "VSD",
+      "mean": "ventricular septal defect"
+    },
+    {
+      "abbid": 370,
+      "abbre": "VTE",
+      "mean": "venous thromboembolism"
+    },
+    {
+      "abbid": 371,
+      "abbre": "vWD",
+      "mean": "von Willebrand’s disease"
+    },
+    {
+      "abbid": 571,
+      "abbre": "TF",
+      "mean": "tissue factor"
+    },
+    {
+      "abbid": 572,
+      "abbre": "TGF-;",
+      "mean": "transforming growth factor-;"
+    },
+    {
+      "abbid": 573,
+      "abbre": "tiw",
+      "mean": "three times in a week"
+    },
+    {
+      "abbid": 574,
+      "abbre": "topo II",
+      "mean": "topoisomerase II"
+    },
+    {
+      "abbid": 124,
+      "abbre": "FBC",
+      "mean": "full blood count (aka complete blood count, CBC)"
+    },
+    {
+      "abbid": 125,
+      "abbre": "FDPs",
+      "mean": "fibrin degradation products"
+    },
+    {
+      "abbid": 126,
+      "abbre": "Fe",
+      "mean": "iron"
+    },
+    {
+      "abbid": 127,
+      "abbre": "FeSOµ",
+      "mean": "ferrous sulphate"
+    },
+    {
+      "abbid": 128,
+      "abbre": "FISH",
+      "mean": "fluorescence in situ hybridisation"
+    },
+    {
+      "abbid": 129,
+      "abbre": "FIX",
+      "mean": "factor IX"
+    },
+    {
+      "abbid": 130,
+      "abbre": "fL",
+      "mean": "femtolitres"
+    },
+    {
+      "abbid": 131,
+      "abbre": "FMRI",
+      "mean": "functional MRI"
+    },
+    {
+      "abbid": 132,
+      "abbre": "FOB",
+      "mean": "faecal occult blood"
+    },
+    {
+      "abbid": 133,
+      "abbre": "FPG",
+      "mean": "fasting plasma glucose"
+    },
+    {
+      "abbid": 134,
+      "abbre": "FUO",
+      "mean": "fever of unknown origin (like PUO)"
+    },
+    {
+      "abbid": 135,
+      "abbre": "FVIII",
+      "mean": "factor VIII"
+    },
+    {
+      "abbid": 136,
+      "abbre": "FVL",
+      "mean": "factor V Leiden"
+    },
+    {
+      "abbid": 137,
+      "abbre": "g",
+      "mean": "gram"
+    },
+    {
+      "abbid": 138,
+      "abbre": "G&S",
+      "mean": "group & save serum"
+    },
+    {
+      "abbid": 139,
+      "abbre": "GAD",
+      "mean": "glutamic acid decarboxylase"
+    },
+    {
+      "abbid": 140,
+      "abbre": "GGT",
+      "mean": "Gamma-glutamyl transpeptidase"
+    },
+    {
+      "abbid": 141,
+      "abbre": "GBM",
+      "mean": "glomerular basement membrane"
+    },
+    {
+      "abbid": 142,
+      "abbre": "GIT",
+      "mean": "gastrointestinal tract"
+    },
+    {
+      "abbid": 252,
+      "abbre": "NADPH",
+      "mean": "nicotinamide adenine diphosphate (reduced)"
+    },
+    {
+      "abbid": 253,
+      "abbre": "NAP",
+      "mean": "neutrophil alkaline phosphatase"
+    },
+    {
+      "abbid": 254,
+      "abbre": "NEJM",
+      "mean": "New England Journal of Medicine"
+    },
+    {
+      "abbid": 255,
+      "abbre": "NH¾",
+      "mean": "ammonia"
+    },
+    {
+      "abbid": 256,
+      "abbre": "NHL",
+      "mean": "non-Hodgkin’s lymphoma"
+    },
+    {
+      "abbid": 372,
+      "abbre": "vWF",
+      "mean": "von Willebrand factor"
+    },
+    {
+      "abbid": 393,
+      "abbre": "ARDS",
+      "mean": "adult respiratory distress syndrome"
+    },
+    {
+      "abbid": 480,
+      "abbre": "IAHS",
+      "mean": "Infection-associated haemophagocytic syndrome"
+    },
+    {
+      "abbid": 481,
+      "abbre": "ICE",
+      "mean": "ifosfamide, carboplatin, etoposide"
+    },
+    {
+      "abbid": 482,
+      "abbre": "IF",
+      "mean": "involved field [radiotherapy]"
+    },
+    {
+      "abbid": 483,
+      "abbre": "IFA",
+      "mean": "intrinsic factor antibody"
+    },
+    {
+      "abbid": 484,
+      "abbre": "IL-1",
+      "mean": "interleukin-1"
+    },
+    {
+      "abbid": 485,
+      "abbre": "IMF",
+      "mean": "idiopathic myelofibrosis"
+    },
+    {
+      "abbid": 486,
+      "abbre": "inv",
+      "mean": "chromosomal inversion"
+    },
+    {
+      "abbid": 487,
+      "abbre": "IPI",
+      "mean": "International Prognostic Index"
+    },
+    {
+      "abbid": 488,
+      "abbre": "IPSS",
+      "mean": "International Prognostic Scoring System"
+    },
+    {
+      "abbid": 489,
+      "abbre": "IT",
+      "mean": "intrathecal"
+    },
+    {
+      "abbid": 490,
+      "abbre": "IUT",
+      "mean": "intrauterine transfusion"
+    },
+    {
+      "abbid": 491,
+      "abbre": "IVIg",
+      "mean": "intravenous immunoglobulin"
+    },
+    {
+      "abbid": 492,
+      "abbre": "JCMML",
+      "mean": "juvenile chronic myelomonocytic leukaemia"
+    },
+    {
+      "abbid": 493,
+      "abbre": "JML",
+      "mean": "juvenile myelomonocytic leukaemia"
+    },
+    {
+      "abbid": 494,
+      "abbre": "LC",
+      "mean": "light chain"
+    },
+    {
+      "abbid": 495,
+      "abbre": "LFS",
+      "mean": "leukaemia free survival"
+    },
+    {
+      "abbid": 496,
+      "abbre": "LGL",
+      "mean": "large granular lymphocyte"
+    },
+    {
+      "abbid": 497,
+      "abbre": "LLN",
+      "mean": "lower limit of normal"
+    },
+    {
+      "abbid": 498,
+      "abbre": "LMWH",
+      "mean": "low molecular weight heparin"
+    },
+    {
+      "abbid": 500,
+      "abbre": "LPD",
+      "mean": "lymphoproliferative disorder"
+    },
+    {
+      "abbid": 501,
+      "abbre": "LSCS",
+      "mean": "lower segment Caesarian section"
+    },
+    {
+      "abbid": 502,
+      "abbre": "M&P",
+      "mean": "melphalan and prednisolone"
+    },
+    {
+      "abbid": 503,
+      "abbre": "MACOP-B",
+      "mean": "methotrexate, doxorubicin, cyclophosphamide, vincristine, bleomycin, prednisolone"
+    },
+    {
+      "abbid": 504,
+      "abbre": "MAHA",
+      "mean": "microangiopathic haemolytic anaemia"
+    },
+    {
+      "abbid": 505,
+      "abbre": "MALT",
+      "mean": "mucosa-associated lymphoid tissue"
+    },
+    {
+      "abbid": 506,
+      "abbre": "m-BACOD",
+      "mean": "methotrexate, bleomycin, adriamycin (doxorubicin), cyclophosphamide, vincristine, dexamethasone"
+    },
+    {
+      "abbid": 507,
+      "abbre": "MC",
+      "mean": "mast cell(s)"
+    },
+    {
+      "abbid": 508,
+      "abbre": "MCL",
+      "mean": "mantle cell lymphoma"
+    },
+    {
+      "abbid": 509,
+      "abbre": "MCP",
+      "mean": "mitoxantrone, chlorambucil, prednisolone"
+    },
+    {
+      "abbid": 510,
+      "abbre": "MCR",
+      "mean": "major cytogenetic response"
+    },
+    {
+      "abbid": 511,
+      "abbre": "M-CSF",
+      "mean": "macrophage colony stimulating factor"
+    },
+    {
+      "abbid": 512,
+      "abbre": "MetHb",
+      "mean": "methaemoglobin"
+    },
+    {
+      "abbid": 513,
+      "abbre": "MF",
+      "mean": "myelofibrosis"
+    },
+    {
+      "abbid": 514,
+      "abbre": "MM",
+      "mean": "multiple myeloma"
+    },
+    {
+      "abbid": 515,
+      "abbre": "MMC",
+      "mean": "mitomycin C"
+    },
+    {
+      "abbid": 516,
+      "abbre": "MNC",
+      "mean": "mononuclear cell(s)"
+    },
+    {
+      "abbid": 517,
+      "abbre": "MO",
+      "mean": "month(s)"
+    },
+    {
+      "abbid": 518,
+      "abbre": "MPO",
+      "mean": "myeloperoxidase"
+    },
+    {
+      "abbid": 519,
+      "abbre": "MPS",
+      "mean": "mononuclear phagocytic system"
+    },
+    {
+      "abbid": 520,
+      "abbre": "MRD",
+      "mean": "minimal residual disease"
+    },
+    {
+      "abbid": 521,
+      "abbre": "MRSA",
+      "mean": "methicillin-resistant Staphylococcus aureus"
+    },
+    {
+      "abbid": 522,
+      "abbre": "MT",
+      "mean": "mass: thoracic"
+    },
+    {
+      "abbid": 523,
+      "abbre": "MTX",
+      "mean": "methotrexate"
+    },
+    {
+      "abbid": 524,
+      "abbre": "NAIT",
+      "mean": "neonatal alloimmune thrombocytopenia"
+    },
+    {
+      "abbid": 525,
+      "abbre": "NBT",
+      "mean": "nitro blue tetrazolium"
+    },
+    {
+      "abbid": 526,
+      "abbre": "NS",
+      "mean": "non-secretory [myeloma]"
+    },
+    {
+      "abbid": 527,
+      "abbre": "NSE",
+      "mean": "non-specific esterase"
+    },
+    {
+      "abbid": 528,
+      "abbre": "OPG",
+      "mean": "orthopantomogram"
+    },
+    {
+      "abbid": 529,
+      "abbre": "OR",
+      "mean": "overall response"
+    },
+    {
+      "abbid": 530,
+      "abbre": "OS",
+      "mean": "overall survival"
+    },
+    {
+      "abbid": 531,
+      "abbre": "PAI",
+      "mean": "plasminogen activator inhibitor"
+    },
+    {
+      "abbid": 532,
+      "abbre": "PCC",
+      "mean": "prothrombin complex concentrate"
+    },
+    {
+      "abbid": 533,
+      "abbre": "PDGF",
+      "mean": "platelet-derived growth factor"
+    },
+    {
+      "abbid": 534,
+      "abbre": "PDW",
+      "mean": "platelet distribution width"
+    },
+    {
+      "abbid": 535,
+      "abbre": "PEP",
+      "mean": "post-expoure prophylaxis"
+    },
+    {
+      "abbid": 536,
+      "abbre": "PF",
+      "mean": "platelet factor"
+    },
+    {
+      "abbid": 537,
+      "abbre": "PFA",
+      "mean": "platelet function analysis"
+    },
+    {
+      "abbid": 538,
+      "abbre": "PFK",
+      "mean": "phosphofructokinase"
+    },
+    {
+      "abbid": 539,
+      "abbre": "PFS",
+      "mean": "progression-free survival"
+    },
+    {
+      "abbid": 540,
+      "abbre": "PGD2",
+      "mean": "prostaglandin D2"
+    },
+    {
+      "abbid": 541,
+      "abbre": "PGE1",
+      "mean": "prostaglandin E1"
+    },
+    {
+      "abbid": 542,
+      "abbre": "PGK",
+      "mean": "phosphoglycerate kinase"
+    },
+    {
+      "abbid": 543,
+      "abbre": "PIG",
+      "mean": "phosphatidylinositol glycoproteins"
+    },
+    {
+      "abbid": 544,
+      "abbre": "PIVKA",
+      "mean": "protein induced by vitamin K absence"
+    },
+    {
+      "abbid": 545,
+      "abbre": "PLL",
+      "mean": "prolymphocytic leukaemia"
+    },
+    {
+      "abbid": 546,
+      "abbre": "PML",
+      "mean": "promyelocytic leukaemia"
+    },
+    {
+      "abbid": 547,
+      "abbre": "PNET",
+      "mean": "primitive neuroectodermal tumour"
+    },
+    {
+      "abbid": 548,
+      "abbre": "PNH",
+      "mean": "paroxysmal nocturnal haemoglobinuria"
+    },
+    {
+      "abbid": 549,
+      "abbre": "PPH",
+      "mean": "post-partum haomorrhage"
+    },
+    {
+      "abbid": 550,
+      "abbre": "PPI",
+      "mean": "proton pump inhibitor"
+    },
+    {
+      "abbid": 551,
+      "abbre": "PPP",
+      "mean": "primary proliferative polycythaemia"
+    },
+    {
+      "abbid": 552,
+      "abbre": "PRCA",
+      "mean": "pure red cell aplasia"
+    },
+    {
+      "abbid": 553,
+      "abbre": "PRN",
+      "mean": "as required"
+    },
+    {
+      "abbid": 554,
+      "abbre": "ProMACE",
+      "mean": "prednisolone, doxorubicin, cyclophosphamide, etoposide"
+    },
+    {
+      "abbid": 555,
+      "abbre": "PTP",
+      "mean": "post-transfusion purpura"
+    },
+    {
+      "abbid": 556,
+      "abbre": "PUVA",
+      "mean": "phototherapy with psoralen plus UV-A"
+    },
+    {
+      "abbid": 557,
+      "abbre": "PVO",
+      "mean": "pyrexia of unknown origin"
+    },
+    {
+      "abbid": 558,
+      "abbre": "QoL",
+      "mean": "quality of life"
+    },
+    {
+      "abbid": 559,
+      "abbre": "GP",
+      "mean": "glycoprotein"
+    },
+    {
+      "abbid": 560,
+      "abbre": "SE",
+      "mean": "secondary erythrocytosis"
+    },
+    {
+      "abbid": 561,
+      "abbre": "SEP",
+      "mean": "extramedullary plasmacytoma"
+    },
+    {
+      "abbid": 562,
+      "abbre": "SLL",
+      "mean": "small lymphocytic lymphoma"
+    },
+    {
+      "abbid": 563,
+      "abbre": "SLVL",
+      "mean": "splenic lymphoma with villous lymphocytes"
+    },
+    {
+      "abbid": 564,
+      "abbre": "SPB",
+      "mean": "solitary plasmacytoma of bone"
+    },
+    {
+      "abbid": 565,
+      "abbre": "SPD",
+      "mean": "storage pool deficiency"
+    },
+    {
+      "abbid": 566,
+      "abbre": "TAM",
+      "mean": "transient abnormal myelopoiesis"
+    },
+    {
+      "abbid": 567,
+      "abbre": "TAR",
+      "mean": "thrombocytopenia with absent radius"
+    },
+    {
+      "abbid": 568,
+      "abbre": "TBI",
+      "mean": "total body irradiation"
+    },
+    {
+      "abbid": 569,
+      "abbre": "TCR",
+      "mean": "T-cell receptor"
+    },
+    {
+      "abbid": 570,
+      "abbre": "TEC",
+      "mean": "transient erythroblastopenia of childhood"
+    },
+    {
+      "abbid": 609,
+      "abbre": "crt",
+      "mean": "creatinine"
+    },
+    {
+      "abbid": 610,
+      "abbre": "deg C",
+      "mean": "degree Centigrade"
+    },
+    {
+      "abbid": 611,
+      "abbre": "EIA",
+      "mean": "enzyme immunoassay"
+    },
+    {
+      "abbid": 222,
+      "abbre": "LVH",
+      "mean": "left ventricular hypertrophy"
+    },
+    {
+      "abbid": 223,
+      "abbre": "MAG",
+      "mean": "myelin-associated glycoprotein"
+    },
+    {
+      "abbid": 224,
+      "abbre": "MAIPA",
+      "mean": "monoclonal antibody immobilisation of platelet antigens"
+    },
+    {
+      "abbid": 225,
+      "abbre": "MAOI",
+      "mean": "monoamine oxidase inhibitor"
+    },
+    {
+      "abbid": 226,
+      "abbre": "MC&S",
+      "mean": "microscopy, culture & sensitivity"
+    },
+    {
+      "abbid": 374,
+      "abbre": "WBC",
+      "mean": "white blood count or white blood cells"
+    },
+    {
+      "abbid": 375,
+      "abbre": "WHO",
+      "mean": "World Health Organisation"
+    },
+    {
+      "abbid": 376,
+      "abbre": "WM",
+      "mean": "Waldenstrِm’s macroglobulinaemia"
+    },
+    {
+      "abbid": 377,
+      "abbre": "XDPs",
+      "mean": "cross-linked fibrin degradation products"
+    },
+    {
+      "abbid": 575,
+      "abbre": "TORCH",
+      "mean": "toxoplasmosis, rubella, cytomegalovirus, herpes simplex"
+    },
+    {
+      "abbid": 576,
+      "abbre": "TPI",
+      "mean": "triphosphate isomerase"
+    },
+    {
+      "abbid": 577,
+      "abbre": "TPN",
+      "mean": "total parenteral nutrition"
+    },
+    {
+      "abbid": 578,
+      "abbre": "TPR",
+      "mean": "temperature, pulse, respiration"
+    },
+    {
+      "abbid": 579,
+      "abbre": "TRM",
+      "mean": "treatment related mortality"
+    },
+    {
+      "abbid": 580,
+      "abbre": "TXA2",
+      "mean": "thromboxane A2"
+    },
+    {
+      "abbid": 581,
+      "abbre": "UFH",
+      "mean": "unfractionated heparin"
+    },
+    {
+      "abbid": 582,
+      "abbre": "VAD",
+      "mean": "vincristine adriamycin dexamethasone regimen"
+    },
+    {
+      "abbid": 583,
+      "abbre": "VBAP",
+      "mean": "vincristine, carmustine (BCNU), doxorubicin\r\n(adriamycin), prednisolone"
+    },
+    {
+      "abbid": 584,
+      "abbre": "VBMCP",
+      "mean": "vincristine, carmustine, melphalan, cyclophosphamide, prednisolone"
+    },
+    {
+      "abbid": 589,
+      "abbre": "%Total",
+      "mean": "percent total"
+    },
+    {
+      "abbid": 590,
+      "abbre": "/uL",
+      "mean": "per microliter"
+    },
+    {
+      "abbid": 591,
+      "abbre": "ALC",
+      "mean": "alcohol"
+    },
+    {
+      "abbid": 592,
+      "abbre": "AMA",
+      "mean": "American Medical Association"
+    },
+    {
+      "abbid": 593,
+      "abbre": "ASHI",
+      "mean": "American Society for Histocompatibility and Immunogenetics"
+    },
+    {
+      "abbid": 594,
+      "abbre": "AU",
+      "mean": "arbitrary units"
+    },
+    {
+      "abbid": 595,
+      "abbre": "AU/mL",
+      "mean": "arbitrary units per milliliter"
+    },
+    {
+      "abbid": 596,
+      "abbre": "CAE",
+      "mean": "complement activity enzyme"
+    },
+    {
+      "abbid": 597,
+      "abbre": "CAP",
+      "mean": "College of American Pathologists"
+    },
+    {
+      "abbid": 598,
+      "abbre": "CDC",
+      "mean": "Centers for Disease Control and Prevention"
+    },
+    {
+      "abbid": 599,
+      "abbre": "CFU/mL",
+      "mean": "colony forming units per milliliter"
+    },
+    {
+      "abbid": 600,
+      "abbre": "CLSI",
+      "mean": "Clinical and Laboratory Standards Institute"
+    },
+    {
+      "abbid": 601,
+      "abbre": "cm",
+      "mean": "centimeter"
+    },
+    {
+      "abbid": 602,
+      "abbre": "cmm",
+      "mean": "cubic millimeter"
+    },
+    {
+      "abbid": 603,
+      "abbre": "CMS",
+      "mean": "Centers for Medicare & Medicaid Services"
+    },
+    {
+      "abbid": 604,
+      "abbre": "cP",
+      "mean": "centipoise unit"
+    },
+    {
+      "abbid": 605,
+      "abbre": "CPM",
+      "mean": "counts per minute"
+    },
+    {
+      "abbid": 606,
+      "abbre": "CPT",
+      "mean": "Current Procedural Terminology"
+    },
+    {
+      "abbid": 607,
+      "abbre": "cPU",
+      "mean": "centipoise unit"
+    },
+    {
+      "abbid": 608,
+      "abbre": "cpy/mL",
+      "mean": "copies per milliliter"
+    },
+    {
+      "abbid": 399,
+      "abbre": "ATRA",
+      "mean": "all-trans retinoic acid"
+    },
+    {
+      "abbid": 400,
+      "abbre": "A-V",
+      "mean": "arteriovenous"
+    },
+    {
+      "abbid": 401,
+      "abbre": "BAL",
+      "mean": "broncho-alveolar lavage"
+    },
+    {
+      "abbid": 402,
+      "abbre": "BEAC",
+      "mean": "BCNU, etoposide, cytosine & cyclophosphamide"
+    },
+    {
+      "abbid": 403,
+      "abbre": "BEAM",
+      "mean": "BCNU, etoposide, cytarabine (ara-C), melphalan"
+    },
+    {
+      "abbid": 404,
+      "abbre": ";2-M",
+      "mean": ";2-microglobulin"
+    },
+    {
+      "abbid": 405,
+      "abbre": "BFU-E",
+      "mean": "burst-forming unit-erythroid"
+    },
+    {
+      "abbid": 406,
+      "abbre": "BNF",
+      "mean": "British National Formulary"
+    },
+    {
+      "abbid": 407,
+      "abbre": "BPL",
+      "mean": "BioProducts Laboratory"
+    },
+    {
+      "abbid": 408,
+      "abbre": "BSS",
+      "mean": "Bernard–Soulier syndrome"
+    },
+    {
+      "abbid": 409,
+      "abbre": "BU",
+      "mean": "Bethesda Units"
+    },
+    {
+      "abbid": 410,
+      "abbre": "CBA",
+      "mean": "collagen binding activity"
+    },
+    {
+      "abbid": 411,
+      "abbre": "CBV",
+      "mean": "cyclophosphamide, carmustine (BCNU), etoposide (VP16)"
+    },
+    {
+      "abbid": 412,
+      "abbre": "CCR",
+      "mean": "complete cytogenetic response"
+    },
+    {
+      "abbid": 413,
+      "abbre": "CDA",
+      "mean": "congenital dyserythropoietic anaemia"
+    },
+    {
+      "abbid": 414,
+      "abbre": "CEL",
+      "mean": "chronic eosinophilic leukaemia"
+    },
+    {
+      "abbid": 415,
+      "abbre": "CHOP",
+      "mean": "cyclophosphamide, adriamycin, vincristine, prednisolone"
+    },
+    {
+      "abbid": 416,
+      "abbre": "C/I",
+      "mean": "consolidation/intensification"
+    },
+    {
+      "abbid": 417,
+      "abbre": "CLD",
+      "mean": "chronic liver disease"
+    },
+    {
+      "abbid": 418,
+      "abbre": "CMC",
+      "mean": "chronic mucocutaneous candidiasis"
+    },
+    {
+      "abbid": 419,
+      "abbre": "COAD",
+      "mean": "chronic obstructive airways disease"
+    },
+    {
+      "abbid": 420,
+      "abbre": "COC",
+      "mean": "combined oral contraceptive"
+    },
+    {
+      "abbid": 421,
+      "abbre": "COMP",
+      "mean": "cyclophosphamide, vincristine, methotrexate,\r\nprednisolone"
+    },
+    {
+      "abbid": 422,
+      "abbre": "CR",
+      "mean": "complete remission"
+    },
+    {
+      "abbid": 423,
+      "abbre": "CRVT",
+      "mean": "central retinal renous thrombosis"
+    },
+    {
+      "abbid": 424,
+      "abbre": "CTZ",
+      "mean": "chemoreceptor trigger zone"
+    },
+    {
+      "abbid": 425,
+      "abbre": "CVP",
+      "mean": "cyclophosphamide, vincristine, prednisolone or central venous pressure"
+    },
+    {
+      "abbid": 426,
+      "abbre": "CyA",
+      "mean": "cyclosporin A"
+    },
+    {
+      "abbid": 427,
+      "abbre": "CytaBOM",
+      "mean": "cytarabine, bleomycin, vincristine, methotrexate"
+    },
+    {
+      "abbid": 428,
+      "abbre": "d",
+      "mean": "day"
+    },
+    {
+      "abbid": 429,
+      "abbre": "DAGT",
+      "mean": "direct antiglobulin test"
+    },
+    {
+      "abbid": 430,
+      "abbre": "DBA",
+      "mean": "Diamond–Blackfan anaemia"
+    },
+    {
+      "abbid": 431,
+      "abbre": "DC",
+      "mean": "dyskeratosis congenita"
+    },
+    {
+      "abbid": 432,
+      "abbre": "DCS",
+      "mean": "dendritic cell system"
+    },
+    {
+      "abbid": 433,
+      "abbre": "DEAFF",
+      "mean": "detection of early antigen fluorescent foci"
+    },
+    {
+      "abbid": 434,
+      "abbre": "DEB",
+      "mean": "diepoxy butane"
+    },
+    {
+      "abbid": 435,
+      "abbre": "DFS",
+      "mean": "disease-free survival"
+    },
+    {
+      "abbid": 436,
+      "abbre": "DHAP",
+      "mean": "dexamethasone, cytarabine, cisplatin"
+    },
+    {
+      "abbid": 437,
+      "abbre": "DI",
+      "mean": "delayed intensification"
+    },
+    {
+      "abbid": 438,
+      "abbre": "DLBCL",
+      "mean": "diffuse large B-cell lymphoma"
+    },
+    {
+      "abbid": 439,
+      "abbre": "DLI",
+      "mean": "donor leucocyte/lymphocyte infusion"
+    },
+    {
+      "abbid": 441,
+      "abbre": "DOB",
+      "mean": "date of birth"
+    },
+    {
+      "abbid": 442,
+      "abbre": "DPG",
+      "mean": "diphosphoglycerate"
+    },
+    {
+      "abbid": 443,
+      "abbre": "EACA",
+      "mean": "epsilon aminocaproic acid"
+    },
+    {
+      "abbid": 444,
+      "abbre": "EBVP",
+      "mean": "etoposide bleomycin vinblastine prednisolone"
+    },
+    {
+      "abbid": 445,
+      "abbre": "ECOG",
+      "mean": "European Co-operative Oncology Group"
+    },
+    {
+      "abbid": 446,
+      "abbre": "EFS",
+      "mean": "event-free survival"
+    },
+    {
+      "abbid": 447,
+      "abbre": "EGF",
+      "mean": "epidermal growth factor"
+    },
+    {
+      "abbid": 499,
+      "abbre": "LN",
+      "mean": "lymph node(s)"
+    },
+    {
+      "abbid": 585,
+      "abbre": "VDRL",
+      "mean": "screening test for syphilis (Venereal Disease Research Laboratory)"
+    },
+    {
+      "abbid": 586,
+      "abbre": "VF",
+      "mean": "ventricular fibrillation"
+    },
+    {
+      "abbid": 587,
+      "abbre": "VMCP",
+      "mean": "vincristine, melphalan, cyclophosphamide, prednisolone"
+    },
+    {
+      "abbid": 588,
+      "abbre": "X match",
+      "mean": "cross-match"
+    },
+    {
+      "abbid": 612,
+      "abbre": "EIU",
+      "mean": "enzyme immunoassay unit"
+    },
+    {
+      "abbid": 613,
+      "abbre": "ETU/mL",
+      "mean": "endotoxin units per milliliter"
+    },
+    {
+      "abbid": 614,
+      "abbre": "EU",
+      "mean": "ELISA units"
+    },
+    {
+      "abbid": 615,
+      "abbre": "EV",
+      "mean": "ELISA value"
+    },
+    {
+      "abbid": 616,
+      "abbre": "fmol/L",
+      "mean": "femtomole per liter"
+    },
+    {
+      "abbid": 617,
+      "abbre": "g/5 hrs",
+      "mean": "hrs grams per 5 hours"
+    },
+    {
+      "abbid": 618,
+      "abbre": "g/24 hrs",
+      "mean": "hrs grams per 24 hours"
+    },
+    {
+      "abbid": 619,
+      "abbre": "g/d",
+      "mean": "grams per day"
+    },
+    {
+      "abbid": 620,
+      "abbre": "g/dL",
+      "mean": "grams per deciliter"
+    },
+    {
+      "abbid": 621,
+      "abbre": "g/g",
+      "mean": "grams per gram"
+    },
+    {
+      "abbid": 622,
+      "abbre": "g/L",
+      "mean": "grams per liter"
+    },
+    {
+      "abbid": 623,
+      "abbre": "HIPAA",
+      "mean": "Health Insurance Portability and Accountability"
+    },
+    {
+      "abbid": 624,
+      "abbre": "ISR",
+      "mean": "immune status ratio"
+    }
+  ]
+}

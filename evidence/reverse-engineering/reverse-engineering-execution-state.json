@@ -1,0 +1,132 @@
+{
+  "mission": {
+    "id": "RELAB-V2-DB-EXE-2026-11",
+    "title": "Forensic reverse engineering of Patients.mdb and real lab system.exe (RefLab V2, version 1.605)",
+    "phase": "Stage 2 - controlled read-only source investigation",
+    "started": "2026-11-14",
+    "updated": "2026-11-14",
+    "solution_root": "C:\\Users\\LAP LINK\\source\\repos\\Ref Lab",
+    "authorized_source": "F:\\REAL_LAB_COPY",
+    "baseline_archive": "RefLab_Reference_V2_Consolidated.zip",
+    "baseline_sha256": "735FC05AF545E534880B2E29C04C640641A0BA49D0AB0C461E446774F9ACA0B1"
+  },
+  "environment": {
+    "host": "DESKELTEL / LAP LINK - Windows 10 Pro 10.0.19045 x64 (the audited workstation itself)",
+    "shell": "PowerShell 7.6.10",
+    "dotnet_sdks": ["8.0.428", "9.0.321"],
+    "python": "3.13.1",
+    "node": "24.19.0",
+    "java": "OpenJDK 21.0.13 (JAVA_HOME unset by default)",
+    "rea": {
+      "package": "rea-agents",
+      "version": "6.7.0",
+      "cli": "C:\\Users\\LAP LINK\\npm-global\\rea.ps1",
+      "mcp_tools_registered": 207,
+      "ghidra": "12.1.4 - healthy once JAVA_HOME is set for the invocation (audit reported it blocked by an unset JAVA_HOME)",
+      "not_configured": ["hopper", "ida", "jadx", "kuna"]
+    },
+    "audit_source": "Comprehensive Local Development Environment, Tools, Runtime, and Database Infrastructure Audit.md (read in full)"
+  },
+  "targets": [
+    {
+      "id": "A",
+      "subject": "Patients.mdb",
+      "expected_path": "F:\\REAL_LAB_COPY\\RL_CD2019Access\\bin\\Patients.mdb",
+      "actual_path": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+      "bytes": 2682880,
+      "sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+      "format": "Jet 4 / Access 2000 (.mdb), not encrypted",
+      "status": "COMPLETED AND VERIFIED",
+      "deliverable": "Database documentation.md"
+    },
+    {
+      "id": "B",
+      "subject": "real lab system.exe",
+      "expected_path": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\System\\real lab system.exe",
+      "actual_path": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\System\\real lab system.exe",
+      "bytes": 76292096,
+      "sha256": "C54CE6C8C98A679EFC5AB485BC4B313B452026D6A40F9BDA36ECA7EA18DF93C0",
+      "format": "PE32 x86 native, Visual Basic 6 (MSVBVM60.DLL), linker 6.0, entry RVA 0x7142c, PE timestamp 1595435962 (2020-07-22)",
+      "status": "IN PROGRESS",
+      "deliverable": "Documenting the Executable File.md"
+    }
+  ],
+  "phases": {
+    "1_environment_audit_read": "COMPLETED",
+    "2_environment_verified": "COMPLETED",
+    "3_rea_capabilities_verified": "COMPLETED",
+    "4_historical_documentation_reviewed": "COMPLETED (cumulative V2 specification + index files reviewed)",
+    "5_tracking_established": "COMPLETED",
+    "6_database_identity_verified": "COMPLETED",
+    "7_database_structural_examination": "COMPLETED",
+    "8_database_record_extraction": "COMPLETED",
+    "9_database_documentation": "COMPLETED",
+    "10_executable_identity_verified": "COMPLETED",
+    "11_executable_static_reverse_engineering": "IN PROGRESS (delegated workstream)",
+    "12_dynamic_analysis": "NOT PERFORMED - not authorised; static evidence is sufficient for the open questions",
+    "13_executable_documentation": "PENDING",
+    "14_cumulative_knowledge_reconciliation": "PENDING",
+    "15_evidence_and_accountability_updates": "PENDING",
+    "16_independent_verification": "PENDING",
+    "17_final_report": "PENDING"
+  },
+  "extraction_totals": {
+    "database_user_tables": 103,
+    "database_catalog_objects": 114,
+    "database_columns": 1682,
+    "database_indexes": 72,
+    "database_declared_relationships": 0,
+    "database_saved_queries": 0,
+    "database_records_expected": 3809,
+    "database_records_extracted": 3809,
+    "database_records_failed": 0,
+    "database_export_files": 103,
+    "database_nonempty_tables": 41,
+    "database_empty_tables": 62
+  },
+  "tool_availability_results": [
+    {"tool": "Microsoft.ACE.OLEDB.12.0", "available": true, "verified_by": "live read-only connection, ServerVersion/Provider read", "result": "record extraction and COUNT(*) succeeded on all 103 tables"},
+    {"tool": "ADOX.Catalog", "available": true, "verified_by": "Catalog.Tables.Count", "result": "114 objects, 0 procedures, 0 relations"},
+    {"tool": "Python 3.13.1", "available": true, "verified_by": "python --version", "result": "independent reconciliation and quality analysis"},
+    {"tool": "rea CLI 6.7.0", "available": true, "verified_by": "rea --version / rea doctor", "result": "healthy after setting JAVA_HOME for the invocation; Ghidra 12.1.4 provider enabled"},
+    {"tool": "REA MCP (207 tools)", "available": true, "verified_by": "tool registry present in this session", "result": "used for the executable workstream"},
+    {"tool": "mdbtools (external)", "available": false, "verified_by": "Get-Command mdb-schema", "result": "not installed; the independent schema dump already present in the evidence archive was used instead"},
+    {"tool": "Jet object-catalogue reader (forms/reports/macros)", "available": false, "verified_by": "ADOX exposes no such object class for this provider", "result": "documented as limitation L-DB-01"},
+    {"tool": "Wine / Windows analysis host for native execution", "available": false, "verified_by": "environment audit section 14", "result": "dynamic analysis not performed - not authorised and not needed for the answered questions"}
+  ],
+  "generated_artifacts": [
+    {"path": "Database documentation.md", "bytes": 194764, "status": "COMPLETE"},
+    {"path": "evidence/reverse-engineering/exports/tables/*.json", "count": 103, "status": "COMPLETE"},
+    {"path": "evidence/reverse-engineering/metadata/*.csv", "count": 7, "status": "COMPLETE"},
+    {"path": "evidence/reverse-engineering/scripts/*", "count": 5, "status": "COMPLETE"},
+    {"path": "evidence/reverse-engineering/reverse-engineering-file-accountability.csv", "status": "COMPLETE"},
+    {"path": "Documenting the Executable File.md", "status": "PENDING"},
+    {"path": "evidence/reverse-engineering/reverse-engineering-evidence-register.csv", "status": "PENDING"},
+    {"path": "evidence/reverse-engineering/reverse-engineering-unresolved-issues.md", "status": "PENDING"},
+    {"path": "evidence/reverse-engineering/reverse-engineering-progress.md", "status": "PENDING"},
+    {"path": "evidence/reverse-engineering/reverse-engineering-execution-state.json", "status": "THIS FILE"}
+  ],
+  "pending_verification": [
+    "Executable workstream outcome and deliverable",
+    "Cumulative knowledge-base reconciliation pass",
+    "Final acceptance audit of all deliverables"
+  ],
+  "outstanding_issues": [
+    "DQ-09 SMSSender.patientid semantics",
+    "DQ-10 normalrange.subgroupcode = 0 sentinel or dangling reference",
+    "DQ-11 provenance of the 16 residual patient identifiers in the shipped image",
+    "L-DB-01 forms/reports/macros/modules not exposed by the available tooling",
+    "ISS-07 dynamic behaviour not established (no authorised execution)"
+  ],
+  "next_actions": [
+    "Collect the executable workstream result and verify it against the original binary",
+    "Write 'Documenting the Executable File.md'",
+    "Reconcile the new findings into the cumulative V2 specification (RefLab_Reference_V2_Consolidated.zip)",
+    "Finalise the evidence register, unresolved-issues register and the final Arabic report"
+  ],
+  "integrity_notes": [
+    "No file under F:\\REAL_LAB_COPY was modified: the newest source timestamp remains 2026-11-09 13:48:33.",
+    "The three reference index files are unmodified (timestamps 2026-11-13).",
+    "Bulk exports are pseudonymised/redacted before publication; the unredacted extract stays outside the repository."
+  ]
+}

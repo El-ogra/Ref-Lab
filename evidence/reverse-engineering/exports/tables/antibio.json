@@ -1,0 +1,430 @@
+{
+  "table": "antibio",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 95,
+  "records_exported": 95,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "antisymbol",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 0,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "scientificname",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "antisymbol": "AMX",
+      "scientificname": "Amoxicillin"
+    },
+    {
+      "antisymbol": "AMC",
+      "scientificname": "Amoxicillin + Clavulanic Acid"
+    },
+    {
+      "antisymbol": "AM",
+      "scientificname": "Ampicillin"
+    },
+    {
+      "antisymbol": "SAM",
+      "scientificname": "Ampicillin + Sulbactam"
+    },
+    {
+      "antisymbol": "AZM",
+      "scientificname": "Azithromycin"
+    },
+    {
+      "antisymbol": "ATM",
+      "scientificname": "Aztreonam"
+    },
+    {
+      "antisymbol": "B",
+      "scientificname": "Bacitracin"
+    },
+    {
+      "antisymbol": "CB",
+      "scientificname": "Carbenicillin"
+    },
+    {
+      "antisymbol": "CEC ",
+      "scientificname": "Cefaclor"
+    },
+    {
+      "antisymbol": "CN",
+      "scientificname": "Cefalexin"
+    },
+    {
+      "antisymbol": "MA",
+      "scientificname": "Cefamandole"
+    },
+    {
+      "antisymbol": "CZ",
+      "scientificname": "Cefazolin"
+    },
+    {
+      "antisymbol": "FEP",
+      "scientificname": "Cefepime"
+    },
+    {
+      "antisymbol": "CFEP",
+      "scientificname": "Cefepime + Clavulanic Acid"
+    },
+    {
+      "antisymbol": "CFM",
+      "scientificname": "Cefixime"
+    },
+    {
+      "antisymbol": "CFP",
+      "scientificname": "Cefoperazone"
+    },
+    {
+      "antisymbol": "SCF",
+      "scientificname": "Cefoperazone + Sulbactam"
+    },
+    {
+      "antisymbol": "CTX",
+      "scientificname": "Cefotaxime"
+    },
+    {
+      "antisymbol": "CCTX",
+      "scientificname": "Cefotaxime + Clavulanic Acid"
+    },
+    {
+      "antisymbol": "CTT",
+      "scientificname": "Cefotetan"
+    },
+    {
+      "antisymbol": "FOX",
+      "scientificname": "Cefoxitin"
+    },
+    {
+      "antisymbol": "CPO",
+      "scientificname": "Cefpirome"
+    },
+    {
+      "antisymbol": "CDP",
+      "scientificname": "Cefpodoxime"
+    },
+    {
+      "antisymbol": "CPR",
+      "scientificname": "Cefprozil"
+    },
+    {
+      "antisymbol": "CFS",
+      "scientificname": "Cefsulodin"
+    },
+    {
+      "antisymbol": "CAZ",
+      "scientificname": "Ceftazidime"
+    },
+    {
+      "antisymbol": "CCAZ",
+      "scientificname": "Ceftazidime + Clavulanic Acid"
+    },
+    {
+      "antisymbol": "CTB",
+      "scientificname": "Ceftibuten"
+    },
+    {
+      "antisymbol": "XNL",
+      "scientificname": "Ceftiofur"
+    },
+    {
+      "antisymbol": "CRO",
+      "scientificname": "Ceftriaxone"
+    },
+    {
+      "antisymbol": "CXM",
+      "scientificname": "Cefuroxime"
+    },
+    {
+      "antisymbol": "CF",
+      "scientificname": "Cephalothin"
+    },
+    {
+      "antisymbol": "C",
+      "scientificname": "Chloramphenicol"
+    },
+    {
+      "antisymbol": "CIP",
+      "scientificname": "Ciprofloxacin"
+    },
+    {
+      "antisymbol": "CLR",
+      "scientificname": "Clarithromycin"
+    },
+    {
+      "antisymbol": "CM",
+      "scientificname": "Clindamycin"
+    },
+    {
+      "antisymbol": "CS",
+      "scientificname": "Colistin"
+    },
+    {
+      "antisymbol": "DO",
+      "scientificname": "Doxycycline"
+    },
+    {
+      "antisymbol": "ENR",
+      "scientificname": "Enrofloxacin"
+    },
+    {
+      "antisymbol": "ETP",
+      "scientificname": "Ertapenem"
+    },
+    {
+      "antisymbol": "E",
+      "scientificname": "Erythromycin"
+    },
+    {
+      "antisymbol": "UB",
+      "scientificname": "Flumequine"
+    },
+    {
+      "antisymbol": "FOS",
+      "scientificname": "Fosfomycin"
+    },
+    {
+      "antisymbol": "FA",
+      "scientificname": "Fusidic Acid"
+    },
+    {
+      "antisymbol": "GM",
+      "scientificname": "Gentamicin"
+    },
+    {
+      "antisymbol": "GEN",
+      "scientificname": "Gentamicin (high load)"
+    },
+    {
+      "antisymbol": "IPM",
+      "scientificname": "Imipenem"
+    },
+    {
+      "antisymbol": "ISP",
+      "scientificname": "Isepamicin"
+    },
+    {
+      "antisymbol": "K",
+      "scientificname": "Kanamycin"
+    },
+    {
+      "antisymbol": "KAN",
+      "scientificname": "Kanamycin (high load)"
+    },
+    {
+      "antisymbol": "LOM",
+      "scientificname": "Levofloxacin"
+    },
+    {
+      "antisymbol": "L",
+      "scientificname": "Lincomycin"
+    },
+    {
+      "antisymbol": "LZD",
+      "scientificname": "Linezolid"
+    },
+    {
+      "antisymbol": "MAR",
+      "scientificname": "Marbofloxacin"
+    },
+    {
+      "antisymbol": "MEC",
+      "scientificname": "Mecillinam"
+    },
+    {
+      "antisymbol": "MEM",
+      "scientificname": "Meropenem"
+    },
+    {
+      "antisymbol": "MTR",
+      "scientificname": "Metronidazole"
+    },
+    {
+      "antisymbol": "MZ",
+      "scientificname": "Mezlocillin"
+    },
+    {
+      "antisymbol": "MNO",
+      "scientificname": "Minocyclin"
+    },
+    {
+      "antisymbol": "MOX",
+      "scientificname": "Moxalactam"
+    },
+    {
+      "antisymbol": "MXF",
+      "scientificname": "Moxifloxacin"
+    },
+    {
+      "antisymbol": "MUP",
+      "scientificname": "Mupirocin"
+    },
+    {
+      "antisymbol": "NA",
+      "scientificname": "Nalidixic Acid"
+    },
+    {
+      "antisymbol": "N",
+      "scientificname": "Neomycin"
+    },
+    {
+      "antisymbol": "NET",
+      "scientificname": "Netilmicin"
+    },
+    {
+      "antisymbol": "FT",
+      "scientificname": "Nitrofurantoin"
+    },
+    {
+      "antisymbol": "NI",
+      "scientificname": "Nitroxolin"
+    },
+    {
+      "antisymbol": "NOR",
+      "scientificname": "Norfloxacin"
+    },
+    {
+      "antisymbol": "OFX",
+      "scientificname": "Ofloxacin"
+    },
+    {
+      "antisymbol": "OX",
+      "scientificname": "Oxacillin"
+    },
+    {
+      "antisymbol": "OA",
+      "scientificname": "Oxolinic Acid"
+    },
+    {
+      "antisymbol": "PEF",
+      "scientificname": "Pefloxacin"
+    },
+    {
+      "antisymbol": "P",
+      "scientificname": "Penicillin"
+    },
+    {
+      "antisymbol": "PI",
+      "scientificname": "Pipemidic Acid"
+    },
+    {
+      "antisymbol": "PIP",
+      "scientificname": "Piperacillin"
+    },
+    {
+      "antisymbol": "TZP",
+      "scientificname": "Piperacillin + Tazobactam"
+    },
+    {
+      "antisymbol": "PB",
+      "scientificname": "Polymixin"
+    },
+    {
+      "antisymbol": "PT",
+      "scientificname": "Pristinamycin"
+    },
+    {
+      "antisymbol": "RA",
+      "scientificname": "Rifampin"
+    },
+    {
+      "antisymbol": "SPX",
+      "scientificname": "Sparfloxacin"
+    },
+    {
+      "antisymbol": "SPT",
+      "scientificname": "Spectinomycin"
+    },
+    {
+      "antisymbol": "SP",
+      "scientificname": "Spiramycin"
+    },
+    {
+      "antisymbol": "S",
+      "scientificname": "Streptomycin"
+    },
+    {
+      "antisymbol": "STR",
+      "scientificname": "Streptomycin (high load)"
+    },
+    {
+      "antisymbol": "SSS",
+      "scientificname": "Sulphonamides"
+    },
+    {
+      "antisymbol": "TEC",
+      "scientificname": "Teicoplanin"
+    },
+    {
+      "antisymbol": "TEL",
+      "scientificname": "Telithromycin"
+    },
+    {
+      "antisymbol": "TE",
+      "scientificname": "Tetracycline"
+    },
+    {
+      "antisymbol": "TIC",
+      "scientificname": "Ticarcillin"
+    },
+    {
+      "antisymbol": "TCC",
+      "scientificname": "Ticarcillin + Clavulanic Acid"
+    },
+    {
+      "antisymbol": "TGC",
+      "scientificname": "Tigecycline"
+    },
+    {
+      "antisymbol": "TM",
+      "scientificname": "Tobramycin"
+    },
+    {
+      "antisymbol": "SXT",
+      "scientificname": "Trimethoprim-Sulfamethoxazole  (co-trimoxazole)"
+    },
+    {
+      "antisymbol": "TMP",
+      "scientificname": "Trimethoprim"
+    },
+    {
+      "antisymbol": "VA",
+      "scientificname": "Vancomycin"
+    }
+  ]
+}

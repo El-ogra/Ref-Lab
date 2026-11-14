@@ -1,0 +1,82 @@
+{
+  "table": "loggroup",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 8,
+  "records_exported": 8,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "logid",
+      "position": null,
+      "adox_type": 3,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "logname",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 0,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "logid": 1,
+      "logname": "Automated Chemistry"
+    },
+    {
+      "logid": 2,
+      "logname": "Manual Chemistry"
+    },
+    {
+      "logid": 3,
+      "logname": "Microbiology"
+    },
+    {
+      "logid": 4,
+      "logname": "CBC"
+    },
+    {
+      "logid": 5,
+      "logname": "Elisa"
+    },
+    {
+      "logid": 6,
+      "logname": "Hormones"
+    },
+    {
+      "logid": 7,
+      "logname": "PCR"
+    },
+    {
+      "logid": 8,
+      "logname": "Sent out"
+    }
+  ]
+}

@@ -224,7 +224,7 @@ Eight inputs were supplied and all were verified before any design work began:
 | The reference range is **frozen onto the order row** | `patienttest.normalrang`, `lowlimit`, `highlimit`, `nolowexe`, `nohighexe`; 112 of 222 rows carry a frozen range | `ReferenceSnapshot` value object |
 | Clinical constants are **data, not code** | `constanttable`: `CBCCONS` = 3.3 / 6.25 / 6.75 / 7.5 / 8.25, `PTCONS` = 12 / 35 / 1.33 / `2CVJW` | `ClinicalConstant` + `ClinicalDerivationPolicy` |
 | The PDF path is a **hard-coded external driver** | UTF-16LE literal `Bullzip PDF Printer` at `0x6A2486`; `Bullzip PDF Printer 11.1 - Create File` at `0x6A255E` | Replace wholesale with QuestPDF behind `IPdfExporter` |
-| Credentials are stored **in clear text** | `BASE.ini` / `data_connection1.udl` → `UserID=sa` / `Password=12345678`; `patients.patientword` in clear; `MyLabSetting.accuntpw` in clear | One of the two approved categories of correction |
+| Credentials are stored **in clear text** | `BASE.ini` / `data_connection1.udl` → `UserID=sa` / `Password=[REDACTED]`; `patients.patientword` in clear; `MyLabSetting.accuntpw` in clear | One of the two approved categories of correction |
 | The shipped database is a **partial deployment** of the executable's schema | 109 of 132 added columns applied; `FMF`, `LBC`, `useraccounts`, `IgEallergy` absent entirely | Do not copy the legacy schema; design it independently |
 | The Arabic interface is **deliberately bilingual** | `ui-labels-verified.md`: patient panel Arabic, test catalogue English, printed report English headings + Arabic branding | Preserve the localisation boundary exactly |
 

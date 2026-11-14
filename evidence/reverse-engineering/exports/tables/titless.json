@@ -1,0 +1,143 @@
+{
+  "table": "titless",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 15,
+  "records_exported": 15,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "titlename",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "titlenum",
+      "position": null,
+      "adox_type": 3,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "titlesex",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "titlenum": 1,
+      "titlesex": "Male",
+      "titlename": "السيد/ "
+    },
+    {
+      "titlenum": 2,
+      "titlesex": "Female",
+      "titlename": "السيدة/ "
+    },
+    {
+      "titlenum": 3,
+      "titlesex": "Male",
+      "titlename": "الأستاذ/ "
+    },
+    {
+      "titlenum": 4,
+      "titlesex": "Female",
+      "titlename": "الأستاذة/ "
+    },
+    {
+      "titlenum": 5,
+      "titlesex": "Female",
+      "titlename": "الطفلة/ "
+    },
+    {
+      "titlenum": 6,
+      "titlesex": "Male",
+      "titlename": "الطفل/ "
+    },
+    {
+      "titlenum": 7,
+      "titlesex": "Female",
+      "titlename": "الأنسة/ "
+    },
+    {
+      "titlenum": 8,
+      "titlesex": "Male",
+      "titlename": "الحاج/ "
+    },
+    {
+      "titlenum": 9,
+      "titlesex": "Female",
+      "titlename": "الحاجة/ "
+    },
+    {
+      "titlenum": 10,
+      "titlesex": "Male",
+      "titlename": "المهندس/ "
+    },
+    {
+      "titlenum": 11,
+      "titlesex": "Female",
+      "titlename": "المهندسة/ "
+    },
+    {
+      "titlenum": 14,
+      "titlesex": "Female",
+      "titlename": "مدام/ "
+    },
+    {
+      "titlenum": 15,
+      "titlesex": "Male",
+      "titlename": "الدكتور/ "
+    },
+    {
+      "titlenum": 16,
+      "titlesex": "Female",
+      "titlename": "الدكتورة/ "
+    },
+    {
+      "titlenum": 27,
+      "titlesex": "Male",
+      "titlename": "أ.د/ "
+    }
+  ]
+}

@@ -989,7 +989,7 @@ CONFIRMED · STRONGLY SUPPORTED · INFERRED · UNKNOWN · CONFLICTING
 | **Rule name** | The database credential is shared, static and stored in clear text |
 | **Arabic label** | «اسم وقـمة مرور المستخدم ويمنع تغيرها وهى خاصة ببيانات الاتصال بخادم قواعد البيانات» |
 | **Domain** | Security |
-| **Description** | The application connects with `UserID=sa` / `Password=12345678`, read from `BASE.ini` and `data_connection1.udl`, with `PersistSecurityInfo=True`. The manual states the database identity **must not be changed** and that it is the same on every client. |
+| **Description** | The application connects with `UserID=sa` / `Password=[REDACTED]`, read from `BASE.ini` and `data_connection1.udl`, with `PersistSecurityInfo=True`. The manual states the database identity **must not be changed** and that it is the same on every client. |
 | **Business purpose** | *(none — a defect)* |
 | **Trigger / applicable event** | Every database connection |
 | **Preconditions** | — |

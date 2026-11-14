@@ -1,0 +1,132 @@
+{
+  "table": "comments",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 4,
+  "records_exported": 4,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "commentid",
+      "position": null,
+      "adox_type": 3,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "comments",
+      "position": null,
+      "adox_type": 203,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "subgroupcode",
+      "position": null,
+      "adox_type": 2,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 3,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "testcode",
+      "position": null,
+      "adox_type": 2,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 3,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "testsimp",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "commentid": 9,
+      "testcode": 300,
+      "subgroupcode": "",
+      "testsimp": "Semen",
+      "comments": "No sperms could be detected in whole sediment material after centrifugation of this sample\r\nThree Successive Semen Samples Are Recommended"
+    },
+    {
+      "commentid": 10,
+      "testcode": 80,
+      "subgroupcode": "",
+      "testsimp": "Bilharzias Antibodies",
+      "comments": "Diagnostic Significance For Bilharzias Test:\r\nDiagnostically significant titers are present in the case of serum dilutions of 1/160 or highly.\r\n\r\nMean serum titers of persons suffering from Schistosomiasis are between 1/256 to 1/1024.\r\n\r\nLow positive serum titers up to 1 / 640 should only be assessed together with the positive  \r\nresult of second diagnostic method ."
+    },
+    {
+      "commentid": 11,
+      "testcode": 453,
+      "subgroupcode": "",
+      "testsimp": "HCV - RNA (Quantitative) by PCR",
+      "comments": "Below detection limit"
+    },
+    {
+      "commentid": 12,
+      "testcode": 43,
+      "subgroupcode": "",
+      "testsimp": "PT",
+      "comments": "In patient undergoing oral anticoaqulant therapy ( Coumarin / Warfarin / Coumadin ) due to\r\nMechanical heart valves, the therapeutic ranges recommended by experts: INR  2.5  -  3.5"
+    }
+  ]
+}

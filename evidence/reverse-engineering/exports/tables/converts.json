@@ -1,0 +1,1458 @@
+{
+  "table": "converts",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 167,
+  "records_exported": 167,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "Factors",
+      "position": null,
+      "adox_type": 5,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 3,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "Ffix",
+      "position": null,
+      "adox_type": 2,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 3,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "Funit",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "Sfix",
+      "position": null,
+      "adox_type": 2,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 3,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "Sunit",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "testsimp",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "testsimp": "Acetaminophen",
+      "Funit": "!g/mL",
+      "Sunit": "!mol/L",
+      "Factors": 6.62,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Acetoacetic acid",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.098,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Acetone",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.172,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Alanine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 112.2,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Albumin",
+      "Funit": "g/dL",
+      "Sunit": "g/L",
+      "Factors": 10.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Aldosterone",
+      "Funit": "ng/dL",
+      "Sunit": "nmol/L",
+      "Factors": 0.0277,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Aluminum",
+      "Funit": "ng/mL",
+      "Sunit": "!mol/L",
+      "Factors": 0.0371,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Aminobutyric acid",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 97.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Amitriptyline",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 3.61,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Ammonia (as NH¾)",
+      "Funit": "!g/dL",
+      "Sunit": "!mol/L",
+      "Factors": 0.587,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Androstenedione",
+      "Funit": "ng/dL",
+      "Sunit": "nmol/L",
+      "Factors": 0.0349,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Angiotensin I",
+      "Funit": "pg/mL",
+      "Sunit": "pmol/L",
+      "Factors": 0.772,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Angiotensin II",
+      "Funit": "pg/mL",
+      "Sunit": "pmol/L",
+      "Factors": 0.957,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Anion gap",
+      "Funit": "mEq/L",
+      "Sunit": "mmol/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Antidiuretic hormone",
+      "Funit": "pg/mL",
+      "Sunit": "pmol/L",
+      "Factors": 0.923,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Antithrombin III",
+      "Funit": "mg/dL",
+      "Sunit": "mg/L",
+      "Factors": 10.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "alpha½-Antitrypsin",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 0.184,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Apolipoprotein A",
+      "Funit": "mg/dL",
+      "Sunit": "g/L",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Apolipoprotein B",
+      "Funit": "mg/dL",
+      "Sunit": "g/L",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Arginine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 57.4,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Asparagine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 75.7,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Bicarbonate",
+      "Funit": "mEq/L",
+      "Sunit": "mmol/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Bilirubin",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 17.1,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Bromide",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.125,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "C-peptide",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 0.333,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "C1 esterase inhibitor",
+      "Funit": "mg/dL",
+      "Sunit": "mg/L",
+      "Factors": 10.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "C3 complement",
+      "Funit": "mg/mL",
+      "Sunit": "g/L",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "C4 complement",
+      "Funit": "mg/mL",
+      "Sunit": "g/L",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Calcitonin",
+      "Funit": "pg/mL",
+      "Sunit": "ng/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Calcium mg/dL",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.25,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Calcium mEq/L",
+      "Funit": "mEq/L",
+      "Sunit": "mmol/L",
+      "Factors": 0.5,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Carbon dioxide",
+      "Funit": "mEq/L",
+      "Sunit": "mmoI/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Carotene",
+      "Funit": "!g/dL",
+      "Sunit": "!mol/L",
+      "Factors": 0.0186,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Ceruloplasmin",
+      "Funit": "mg/dL",
+      "Sunit": "mg/L",
+      "Factors": 10.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Chloride",
+      "Funit": "mEq/L",
+      "Sunit": "mmol/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Cholesterol",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.0259,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Citrate",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 52.05,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Copper",
+      "Funit": "!g/dL",
+      "Sunit": "!moI/L",
+      "Factors": 0.157,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Coproporphyrins (urine)",
+      "Funit": "!g/24 hr",
+      "Sunit": "nmol/d",
+      "Factors": 1.527,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Corticotropin (ACTH)",
+      "Funit": "pg/mL",
+      "Sunit": "pmol/L",
+      "Factors": 0.22,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Cortisol",
+      "Funit": "!g/dL",
+      "Sunit": "nmol/L",
+      "Factors": 27.59,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Cotinine",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 5.68,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Creatine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 76.26,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Creatinine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 88.4,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Creatinine clearance",
+      "Funit": "mL/min",
+      "Sunit": "mL/s",
+      "Factors": 0.0167,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Cyanide",
+      "Funit": "mg/L",
+      "Sunit": "!mol/L",
+      "Factors": 23.24,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Dehydroepiandrosterone (DHEA)",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 3.47,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Desipramine",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 3.75,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Diazepam",
+      "Funit": "!g/mL",
+      "Sunit": "!mol/L",
+      "Factors": 3.512,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Digoxin",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 1.281,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Epinephrine",
+      "Funit": "pg/mL",
+      "Sunit": "pmol/L",
+      "Factors": 5.46,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Estradiol",
+      "Funit": "pg/mL",
+      "Sunit": "pmol/L",
+      "Factors": 3.671,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Estriol",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 3.467,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Estrone",
+      "Funit": "ng/dL",
+      "Sunit": "pmoI/L",
+      "Factors": 37.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Ethanol (ethyl alcohol)",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.217,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Ethylene glycol",
+      "Funit": "mg/L",
+      "Sunit": "!mol/L",
+      "Factors": 16.11,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Ferritin",
+      "Funit": "ng/mL",
+      "Sunit": "pmol/L",
+      "Factors": 2.247,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "alpha -Fetoprotein",
+      "Funit": "ng/mL",
+      "Sunit": "!g/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Fibrinogen",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 0.0294,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Fluoride",
+      "Funit": "!g/mL",
+      "Sunit": "!mol/L",
+      "Factors": 52.6,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Folate",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 2.266,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Follicle-stimulating hormone",
+      "Funit": "mIU/mL",
+      "Sunit": "IU/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Fructose",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 55.5,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Galactose",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 55.506,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Glucagon",
+      "Funit": "pg/mL",
+      "Sunit": "ng/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Glucose",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.0555,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Glutamine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 68.42,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Glycated hemoglobin (glycosylated hemoglobin A½, A½©)",
+      "Funit": "% of total hemoglobin",
+      "Sunit": "Proportion of total hemoglobin",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Glycerol (free)",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 108.59,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Glycine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 133.3,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Haptoglobin",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 0.1,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Hematocrit",
+      "Funit": "%",
+      "Sunit": "Proportion of 1.0",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Hemoglobin (whole blood) Mass concentration",
+      "Funit": "g/dL",
+      "Sunit": "g/L",
+      "Factors": 10.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "High-density lipoprotein cholesterol (HDL-C)",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.0259,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Histidine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 64.45,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Homocysteine (total)",
+      "Funit": "mg/L",
+      "Sunit": "!mol/L",
+      "Factors": 7.397,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Human chorionic gonadotropin (HCG)",
+      "Funit": "mlU/mL",
+      "Sunit": "IU/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Hydroxybutyric acid",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 96.05,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Hydroxyproline",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 76.3,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Immunoglobulin A (IgA)",
+      "Funit": "mg/dL",
+      "Sunit": "g/L",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Immunoglobulin D (IgD)",
+      "Funit": "mg/dL",
+      "Sunit": "mg/L",
+      "Factors": 10.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Immunoglobulin E (IgE)",
+      "Funit": "mg/dL",
+      "Sunit": "mg/L",
+      "Factors": 10.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Immunoglobulin G (IgG)",
+      "Funit": "mg/dL",
+      "Sunit": "g/L",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Immunoglobulin M (IgM)",
+      "Funit": "mg/dL",
+      "Sunit": "g/L",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Insulin",
+      "Funit": "!IU/mL",
+      "Sunit": "pmol/L",
+      "Factors": 6.945,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Iron, total",
+      "Funit": "!g/dL",
+      "Sunit": "!mol/L",
+      "Factors": 0.179,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Iron binding capacity, total",
+      "Funit": "!g/dL",
+      "Sunit": "!mol/L",
+      "Factors": 0.179,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "lsoleucine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 76.24,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "lsopropanol",
+      "Funit": "mg/L",
+      "Sunit": "mmol/L",
+      "Factors": 0.0166,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Lactate (lactic acid)",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.111,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Lactate dehydrogenase isoenzymes (LD½-LD½)",
+      "Funit": "%",
+      "Sunit": "Proportion of 1.0",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Lead",
+      "Funit": "!g/dL",
+      "Sunit": "!mol/L",
+      "Factors": 0.0483,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Leucine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 76.237,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Lipids (total)",
+      "Funit": "mg/dL",
+      "Sunit": "g/L",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Lipoprotein (a)",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 0.0357,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Lithium",
+      "Funit": "mEq/L",
+      "Sunit": "mmol/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Low-density lipoprotein cholesterol (LDL-C)",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.0259,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Lysine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 68.5,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Magnesium mg/dL",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.411,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Magnesium mEq/L",
+      "Funit": "mEq/L",
+      "Sunit": "mmol/L",
+      "Factors": 0.5,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Manganese",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 18.2,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Methanol",
+      "Funit": "mg/L",
+      "Sunit": "mmol/L",
+      "Factors": 0.0312,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Methionine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 67.02,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Myoglobin",
+      "Funit": "!g/L",
+      "Sunit": "nmol/L",
+      "Factors": 0.0571,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Nicotine",
+      "Funit": "mg/L",
+      "Sunit": "!mol/L",
+      "Factors": 6.164,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Nitrogen, nonprotein",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.714,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Norepinephrine",
+      "Funit": "pg/mL",
+      "Sunit": "nmol/L",
+      "Factors": 0.00591,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Ornithine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 75.67,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Osteocalcin",
+      "Funit": "!g/L",
+      "Sunit": "nmol/L",
+      "Factors": 0.171,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Oxalate",
+      "Funit": "mg/L",
+      "Sunit": "!mol/L",
+      "Factors": 11.1,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Parathyroid hormone",
+      "Funit": "pg/mL",
+      "Sunit": "ng/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Phenobarbital",
+      "Funit": "mg/L",
+      "Sunit": "!mol/L",
+      "Factors": 4.31,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Phenylalanine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 60.54,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Phenytoin",
+      "Funit": "!g/mL",
+      "Sunit": "!moI/L",
+      "Factors": 3.96,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Phosphorus",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.323,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Plasminogen",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 0.113,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Plasminogen activator inhibitor",
+      "Funit": "mIU/mL",
+      "Sunit": "IU/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Platelets (thrombocytes)",
+      "Funit": "x 10¶/!L",
+      "Sunit": "x 10¦/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Potassium",
+      "Funit": "mEq/L",
+      "Sunit": "mmoI/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Pregnanetriol (urine)",
+      "Funit": "mg/24 h",
+      "Sunit": "!mol/d",
+      "Factors": 2.97,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Progesterone",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 3.18,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Prolactin",
+      "Funit": "!g/L",
+      "Sunit": "pmol",
+      "Factors": 43.478,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Proline",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 86.86,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Prostate-specific antigen",
+      "Funit": "ng/mL",
+      "Sunit": "!g/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Protein, total",
+      "Funit": "g/dL",
+      "Sunit": "g/L",
+      "Factors": 10.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Prothrombin",
+      "Funit": "g/L",
+      "Sunit": "!mol/L",
+      "Factors": 13.889,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Protoporphyrin, erythrocyte",
+      "Funit": "!g/dL",
+      "Sunit": "!mol/L",
+      "Factors": 0.01777,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Pyruvate",
+      "Funit": "mg/dL",
+      "Sunit": "!moI/L",
+      "Factors": 113.6,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Quinidine",
+      "Funit": "!g/mL",
+      "Sunit": "!mol/L",
+      "Factors": 3.08,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Red blood cell count",
+      "Funit": "x 10±/!L",
+      "Sunit": "x 10¬¥/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Renin",
+      "Funit": "pg/mL",
+      "Sunit": "pmol/L",
+      "Factors": 0.0237,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Salicylate",
+      "Funit": "mg/L",
+      "Sunit": "mmol/L",
+      "Factors": 0.00724,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Serine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 95.2,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Serotonin (5-hydroxytryptamine)",
+      "Funit": "ng/mL",
+      "Sunit": "!mol/L",
+      "Factors": 0.00568,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Sodium",
+      "Funit": "mEq/L",
+      "Sunit": "mmol/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Somatomedin-C (insulinlike growth factor)",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L (coagulation factor II)",
+      "Factors": 0.131,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Somatostatin",
+      "Funit": "pg/mL",
+      "Sunit": "pmol/L",
+      "Factors": 0.611,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Testosterone",
+      "Funit": "ng/dL",
+      "Sunit": "nmol/L",
+      "Factors": 0.0347,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Theophylline",
+      "Funit": "!g/mL",
+      "Sunit": "!mol/L",
+      "Factors": 5.55,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Thiocyanate",
+      "Funit": "mg/L",
+      "Sunit": "!mol/L",
+      "Factors": 17.2,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Threonine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 83.95,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Thyroglobulin",
+      "Funit": "ng/mL",
+      "Sunit": "!g/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Thyroxine, free (T4)",
+      "Funit": "ng/dL",
+      "Sunit": "pmol/L",
+      "Factors": 12.87,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Thyroxine, total (T4)",
+      "Funit": "!g/dL",
+      "Sunit": "nmol/L",
+      "Factors": 12.87,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Transferrin",
+      "Funit": "mg/dL",
+      "Sunit": "g/L",
+      "Factors": 0.01,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Triglycerides",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.0113,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Triiodothyronine, Free (T3)",
+      "Funit": "pg/dL",
+      "Sunit": "pmol/L",
+      "Factors": 0.0154,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Triiodothyronine, Total (T3)",
+      "Funit": "ng/dL",
+      "Sunit": "nmol/L",
+      "Factors": 0.0154,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Troponin I (cardiac)",
+      "Funit": "ng/mL",
+      "Sunit": "!g/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Troponin T (cardiac)",
+      "Funit": "ng/mL",
+      "Sunit": "!g/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Tryptophan",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 48.97,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Tyrosine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 55.19,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Urea nitrogen",
+      "Funit": "mg/dL",
+      "Sunit": "mmol/L",
+      "Factors": 0.357,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Uric acid",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 59.48,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Valine",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 85.5,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Vasoactive intestinal polypeptide",
+      "Funit": "pg/mL",
+      "Sunit": "ng/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Vitamin A (retinol)",
+      "Funit": "!g/dL",
+      "Sunit": "!moI/L",
+      "Factors": 0.0349,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Vitamin B6 (pyridoxine)",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 4.046,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Vitamin B12 (cyanocobalamin)",
+      "Funit": "pg/mL",
+      "Sunit": "pmol/L",
+      "Factors": 0.738,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Vitamin C (ascorbic acid)",
+      "Funit": "mg/dL",
+      "Sunit": "!mol/L",
+      "Factors": 56.78,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Vitamin D 1,25-Dihydroxyvitamin D",
+      "Funit": "pg/mL",
+      "Sunit": "pmol/L",
+      "Factors": 2.6,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Vitamin D  25-Hydroxyvitamin D",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 2.496,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Vitamin E",
+      "Funit": "mg/dL",
+      "Sunit": "!moI/L",
+      "Factors": 23.22,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Vitamin K",
+      "Funit": "ng/mL",
+      "Sunit": "nmol/L",
+      "Factors": 2.22,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Warfarin",
+      "Funit": "!g/mL",
+      "Sunit": "!mol/L",
+      "Factors": 3.247,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "White blood cell count",
+      "Funit": "x 10¶/!L",
+      "Sunit": "x 10¦/L",
+      "Factors": 1.0,
+      "Ffix": 2,
+      "Sfix": 2
+    },
+    {
+      "testsimp": "Zinc",
+      "Funit": "!g/dL",
+      "Sunit": "!moI/L",
+      "Factors": 0.153,
+      "Ffix": 2,
+      "Sfix": 2
+    }
+  ]
+}

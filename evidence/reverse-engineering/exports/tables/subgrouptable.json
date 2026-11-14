@@ -1,0 +1,374 @@
+{
+  "table": "subgrouptable",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 48,
+  "records_exported": 48,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "arname",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "deleteprotect",
+      "position": null,
+      "adox_type": 11,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "subgroupcode",
+      "position": null,
+      "adox_type": 3,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "subgroupname",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "subgroupcode": 1,
+      "subgroupname": "BLOOD GLUCOSE",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 2,
+      "subgroupname": "KIDNEY FUNCTIONS",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 3,
+      "subgroupname": "LIVER FUNCTIONS",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 4,
+      "subgroupname": "LIPIDS PROFILE",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 5,
+      "subgroupname": "URINE EXAMINATION",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 6,
+      "subgroupname": "STOOL EXAMINATION",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 7,
+      "subgroupname": "Autoimmune diseases",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 8,
+      "subgroupname": "BLOOD GROUP",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 9,
+      "subgroupname": "Erythrocyte Sedimentation Rate",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 10,
+      "subgroupname": "CULTURE AND SENSITIVITY",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 11,
+      "subgroupname": "BLOOD PICTURE",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 12,
+      "subgroupname": "SERODIAGNOSIS",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 13,
+      "subgroupname": "Hepatitis Markers",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 14,
+      "subgroupname": "TOXOPLASMOSOIS",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 15,
+      "subgroupname": "HEMATOLOGY",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 16,
+      "subgroupname": "Thyroid Hormones",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 17,
+      "subgroupname": "Antiphospholipid antibody syndrome",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 18,
+      "subgroupname": "Cardiac Markers",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 19,
+      "subgroupname": "TORCH Screen",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 20,
+      "subgroupname": "Coagulation Profile",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 21,
+      "subgroupname": "Pancreas Hormones",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 22,
+      "subgroupname": "Separate",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 23,
+      "subgroupname": "Semen Examination",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 24,
+      "subgroupname": "Tumors Markers",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 25,
+      "subgroupname": "Serum Electrolytes",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 26,
+      "subgroupname": "Urine Electrolytes",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 27,
+      "subgroupname": "CSF Electrolytes",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 28,
+      "subgroupname": "Vitamins",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 29,
+      "subgroupname": "Trace Elements",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 30,
+      "subgroupname": "Iron Tests",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 31,
+      "subgroupname": "Pregnancy Tests",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 32,
+      "subgroupname": "Fertlity Hormones",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 33,
+      "subgroupname": "Suprarenal Hormones",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 34,
+      "subgroupname": "VIROLOGY",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 35,
+      "subgroupname": "MOLECULAR BIOLOGY",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 37,
+      "subgroupname": "Drug Monitoring",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 38,
+      "subgroupname": "Drugs of Abuse",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 39,
+      "subgroupname": "Coagulation Factors",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 40,
+      "subgroupname": "Immunoglobulins",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 41,
+      "subgroupname": "Blood Gases",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 42,
+      "subgroupname": "Hemoglobin electrophoresis",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 43,
+      "subgroupname": "Protein electrophoresis",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 44,
+      "subgroupname": "Aminogram",
+      "arname": "",
+      "deleteprotect": true
+    },
+    {
+      "subgroupcode": 45,
+      "subgroupname": "WBCs function",
+      "arname": "",
+      "deleteprotect": false
+    },
+    {
+      "subgroupcode": 47,
+      "subgroupname": "Renal Failure",
+      "arname": "",
+      "deleteprotect": false
+    },
+    {
+      "subgroupcode": 48,
+      "subgroupname": "Diabetes profile",
+      "arname": "",
+      "deleteprotect": false
+    },
+    {
+      "subgroupcode": 49,
+      "subgroupname": "Allergy Screen",
+      "arname": "",
+      "deleteprotect": false
+    },
+    {
+      "subgroupcode": 50,
+      "subgroupname": "CYTOPATHOLOGY",
+      "arname": "",
+      "deleteprotect": false
+    }
+  ]
+}

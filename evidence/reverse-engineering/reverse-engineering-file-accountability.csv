@@ -1,0 +1,27 @@
+Kind,Path,Bytes,SHA256,Status,Description
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\bin\Patients.mdb,2682880,98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3,READ-ONLY - unmodified,Target A - V2 clinical database (read-only)
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\System\real lab system.exe,76292096,C54CE6C8C98A679EFC5AB485BC4B313B452026D6A40F9BDA36ECA7EA18DF93C0,READ-ONLY - unmodified,Target B - V2 application executable (read-only)
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\bin\BASE.ini,381,723EEBD58278C5A9D2C09864FDFE33C60E7110FD3CB07242FED3C71943CCBC90,READ-ONLY - unmodified,Dependency - OLEDB connection configuration
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\bin\SETING.ini,4886,9249DF5EE1AE6426ED6801030DA797BA9C5E7896F41D6781527C10DBED4E119F,READ-ONLY - unmodified,"Dependency - application settings (printer roles, check flags)"
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\bin\NOTE.ini,76,C169D6C2C3CE986C37C14F27E80B36B375682056632A6120E92CC20B736EBDA3,READ-ONLY - unmodified,Dependency - notification record
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\bin\data_connection1.udl,430,66D80D6EE1542296A3CE7E57CD08BE9B02742A44811772499DDFD57A3D92B415,READ-ONLY - unmodified,Dependency - UDL connection string
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\Data\data_emp\R.ini,1824,C0AC220F214D09A6E2598EBE4B815BB4DEAAA5A883681EB0370A2F1E4517A617,READ-ONLY - unmodified,Dependency - report template
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\Data\data_emp\R_S.ini,1775,3CAE813787C1C2497E6181B2B2E9704B7530FC400B8C921C404CC9787CDD29CC,READ-ONLY - unmodified,Dependency - report template
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\Data\data_emp\PCR.ini,1687,77DB60439E0F2E6606290CF12FEA0CBEE159D2650291D026BF716E1A18E56095,READ-ONLY - unmodified,Dependency - report template
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\Data\data_emp\PNT.ini,1152,6DBF985B2AD5FE6B3A70DF6C61FDD993A66FAEEC0D302023351555F8B9F895D1,READ-ONLY - unmodified,Dependency - report template
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\Data\data_emp\PNT2.ini,1721,B02025B968E0223662C11F45BE21DA1FF1DBF7FDB3CAC675373F08F984A65ACC,READ-ONLY - unmodified,Dependency - report template
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\System\Setup.bat,1669,7C35B4616D306E6C344AFCFECDEBF0C50AA7A1A53DC58666DC0D70EBED33A1A0,READ-ONLY - unmodified,Dependency - installer script
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\System\SetupPZ.bat,825,AD7983143D59E21EB6673F24CA0FD04C4D9CB6CDC848FE656BF3B460B1B02288,READ-ONLY - unmodified,Dependency - print-stack install script
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\System\PDF\SetupFN4.bat,456,CFFCF9C5D009FBF6B991715E4916B0CAA755AE322F7CF0B723D75E6AC673763D,READ-ONLY - unmodified,Dependency - orphaned .NET install script
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\WIN7\real lab system.CAB,7211180,7CDC7C1FE6CE7B5EA5C1566F6A180D07664F59FA8CD81D126E86B403E63CB7FD,READ-ONLY - unmodified,Dependency - OS-target cabinet (WIN7)
+SOURCE,F:\REAL_LAB_COPY\real lab system\RL_CD2019Access\WINXP\real lab system.CAB,7057945,EFFF7639BBA8E311501548055277BD048BA38C249EDAF33B2C98941988DB38FB,READ-ONLY - unmodified,Dependency - OS-target cabinet (WINXP)
+DELIVERABLE,Database documentation.md,194764,CBB167AAB235842DB422C715B0C62F2B393F495F8321633C365C454AAD3B1B60,GENERATED,Deliverable 1 - database technical documentation
+DELIVERABLE,Documenting the Executable File.md,,,PENDING,Deliverable 2 - executable reverse-engineering documentation
+DELIVERABLE,evidence/reverse-engineering/exports/tables,2667982,directory - 103 files,GENERATED,Companion export directory - 103 per-table JSON extracts
+DELIVERABLE,evidence/reverse-engineering/metadata,118860,directory - 7 files,GENERATED,"Companion metadata CSVs (catalog, columns, indexes, ledger, row counts)"
+DELIVERABLE,evidence/reverse-engineering/scripts,24954,directory - 5 files,GENERATED,Reproduction scripts
+DELIVERABLE,evidence/reverse-engineering/reverse-engineering-execution-state.json,,,PENDING,Execution state
+DELIVERABLE,evidence/reverse-engineering/reverse-engineering-progress.md,,,PENDING,Progress log
+DELIVERABLE,evidence/reverse-engineering/reverse-engineering-evidence-register.csv,,,PENDING,Evidence register
+DELIVERABLE,evidence/reverse-engineering/reverse-engineering-file-accountability.csv,,,PENDING,File accountability ledger
+DELIVERABLE,evidence/reverse-engineering/reverse-engineering-unresolved-issues.md,,,PENDING,Unresolved issues register

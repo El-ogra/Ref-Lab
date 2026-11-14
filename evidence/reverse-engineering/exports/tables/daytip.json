@@ -1,0 +1,126 @@
+{
+  "table": "daytip",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 19,
+  "records_exported": 19,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "daytip2",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "daytipnum",
+      "position": null,
+      "adox_type": 2,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "daytipnum": 1,
+      "daytip2": "للإنتقال الى لوحة البحث عن مريض من خلال اى نافذة من نوافذ البرنامج الرئيسية يمكنك الضغط على ( F3 )"
+    },
+    {
+      "daytipnum": 2,
+      "daytip2": "للإنتقال الى لوحة ادخال المرضى من خلال اى نافذة من نوافذ البرنامج الرئيسية يمكنك الضغط على ( F2 )"
+    },
+    {
+      "daytipnum": 3,
+      "daytip2": ""
+    },
+    {
+      "daytipnum": 4,
+      "daytip2": "للإنتقال الى لوحة العينات المرسلة للخارج من خلال اى نافذة من نوافذ البرنامج الرئيسية يمكنك الضغط على ( F7 )"
+    },
+    {
+      "daytipnum": 5,
+      "daytip2": ""
+    },
+    {
+      "daytipnum": 6,
+      "daytip2": "فى حالة اضافة مريض جديد عند وضع كود المعمل لمريض سبق له ان حلل بالمعمل فى خانة كود المعمل تظهر كل بياناته الشخصية والصحية المسجلة بالنظام"
+    },
+    {
+      "daytipnum": 7,
+      "daytip2": "يمكنك البحث من خلال نافذة ادخال النتائج بأى كود للمريض او البحث فى مرضى اليوم فقط بالإسم او بترتيب الحضور للمعمل"
+    },
+    {
+      "daytipnum": 8,
+      "daytip2": ""
+    },
+    {
+      "daytipnum": 9,
+      "daytip2": ""
+    },
+    {
+      "daytipnum": 10,
+      "daytip2": ""
+    },
+    {
+      "daytipnum": 11,
+      "daytip2": "للإنتقال الى لوحة ادخال النتائج من خلال اى نافذة من نوافذ البرنامج الرئيسية يمكنك الضغط على ( F4 )"
+    },
+    {
+      "daytipnum": 12,
+      "daytip2": ""
+    },
+    {
+      "daytipnum": 13,
+      "daytip2": ""
+    },
+    {
+      "daytipnum": 14,
+      "daytip2": ""
+    },
+    {
+      "daytipnum": 15,
+      "daytip2": ""
+    },
+    {
+      "daytipnum": 16,
+      "daytip2": ""
+    },
+    {
+      "daytipnum": 17,
+      "daytip2": "للإنتقال الى لوحة ادخال تسليم النتائج من خلال اى نافذة من نوافذ البرنامج الرئيسية يمكنك الضغط على ( F6 )"
+    },
+    {
+      "daytipnum": 18,
+      "daytip2": ""
+    },
+    {
+      "daytipnum": 19,
+      "daytip2": ""
+    }
+  ]
+}

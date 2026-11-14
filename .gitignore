@@ -549,3 +549,6 @@ $RECYCLE.BIN/
 *.bak
 appsettings.Development.json
 secrets.json
+
+# Local-only artifacts (never push)
+Docs/Outside the Cloud/

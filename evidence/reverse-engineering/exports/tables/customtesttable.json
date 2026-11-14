@@ -1,0 +1,482 @@
+{
+  "table": "customtesttable",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 54,
+  "records_exported": 54,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "customgroupcode",
+      "position": null,
+      "adox_type": 2,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "patientprice",
+      "position": null,
+      "adox_type": 5,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 3,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "testcode",
+      "position": null,
+      "adox_type": 2,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "testnum",
+      "position": null,
+      "adox_type": 3,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "testsimp",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "testnum": 1,
+      "customgroupcode": 1,
+      "testcode": 4,
+      "testsimp": "Urine",
+      "patientprice": 4.0
+    },
+    {
+      "testnum": 2,
+      "customgroupcode": 1,
+      "testcode": 5,
+      "testsimp": "Stool          ",
+      "patientprice": 4.0
+    },
+    {
+      "testnum": 3,
+      "customgroupcode": 1,
+      "testcode": 8,
+      "testsimp": "SGPT (ALT)",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 4,
+      "customgroupcode": 1,
+      "testcode": 9,
+      "testsimp": "SGOT (AST)",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 5,
+      "customgroupcode": 2,
+      "testcode": 11,
+      "testsimp": "Creatinine",
+      "patientprice": 9.0
+    },
+    {
+      "testnum": 17,
+      "customgroupcode": 2,
+      "testcode": 4,
+      "testsimp": "Urine",
+      "patientprice": 3.0
+    },
+    {
+      "testnum": 12,
+      "customgroupcode": 1,
+      "testcode": 1,
+      "testsimp": "F.Bl.G.",
+      "patientprice": 5.0
+    },
+    {
+      "testnum": 13,
+      "customgroupcode": 1,
+      "testcode": 15,
+      "testsimp": "Bilirubin Total",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 14,
+      "customgroupcode": 1,
+      "testcode": 11,
+      "testsimp": "Creatinine",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 15,
+      "customgroupcode": 1,
+      "testcode": 56,
+      "testsimp": "CBC",
+      "patientprice": 20.0
+    },
+    {
+      "testnum": 18,
+      "customgroupcode": 2,
+      "testcode": 5,
+      "testsimp": "Stool",
+      "patientprice": 3.0
+    },
+    {
+      "testnum": 50,
+      "customgroupcode": 2,
+      "testcode": 80,
+      "testsimp": "Bilharzias Antibodies",
+      "patientprice": 20.0
+    },
+    {
+      "testnum": 51,
+      "customgroupcode": 3,
+      "testcode": 80,
+      "testsimp": "Bilharzias Antibodies",
+      "patientprice": 20.0
+    },
+    {
+      "testnum": 54,
+      "customgroupcode": 3,
+      "testcode": 7,
+      "testsimp": "Albumin",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 55,
+      "customgroupcode": 3,
+      "testcode": 10,
+      "testsimp": "Uric Acid",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 19,
+      "customgroupcode": 2,
+      "testcode": 8,
+      "testsimp": "SGPT (ALT)",
+      "patientprice": 9.0
+    },
+    {
+      "testnum": 20,
+      "customgroupcode": 2,
+      "testcode": 9,
+      "testsimp": "SGOT (AST)",
+      "patientprice": 9.0
+    },
+    {
+      "testnum": 21,
+      "customgroupcode": 2,
+      "testcode": 1,
+      "testsimp": "F.B.G.          ",
+      "patientprice": 6.0
+    },
+    {
+      "testnum": 22,
+      "customgroupcode": 2,
+      "testcode": 15,
+      "testsimp": "Bilirubin Total",
+      "patientprice": 9.0
+    },
+    {
+      "testnum": 25,
+      "customgroupcode": 3,
+      "testcode": 20,
+      "testsimp": "A/G Ratio                       20",
+      "patientprice": 6.0
+    },
+    {
+      "testnum": 24,
+      "customgroupcode": 2,
+      "testcode": 56,
+      "testsimp": "CBC",
+      "patientprice": 17.0
+    },
+    {
+      "testnum": 27,
+      "customgroupcode": 3,
+      "testcode": 5,
+      "testsimp": "Stool",
+      "patientprice": 3.0
+    },
+    {
+      "testnum": 28,
+      "customgroupcode": 3,
+      "testcode": 8,
+      "testsimp": "SGPT (ALT)",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 29,
+      "customgroupcode": 3,
+      "testcode": 9,
+      "testsimp": "SGOT (AST)",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 30,
+      "customgroupcode": 3,
+      "testcode": 11,
+      "testsimp": "Creatinine",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 31,
+      "customgroupcode": 3,
+      "testcode": 15,
+      "testsimp": "Bilirubin Total",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 32,
+      "customgroupcode": 3,
+      "testcode": 56,
+      "testsimp": "CBC",
+      "patientprice": 20.0
+    },
+    {
+      "testnum": 33,
+      "customgroupcode": 4,
+      "testcode": 1,
+      "testsimp": "F.Bl.G.",
+      "patientprice": 6.0
+    },
+    {
+      "testnum": 34,
+      "customgroupcode": 4,
+      "testcode": 4,
+      "testsimp": "Urine",
+      "patientprice": 3.0
+    },
+    {
+      "testnum": 35,
+      "customgroupcode": 4,
+      "testcode": 5,
+      "testsimp": "Stool",
+      "patientprice": 3.0
+    },
+    {
+      "testnum": 36,
+      "customgroupcode": 4,
+      "testcode": 8,
+      "testsimp": "SGPT (ALT)",
+      "patientprice": 9.0
+    },
+    {
+      "testnum": 37,
+      "customgroupcode": 4,
+      "testcode": 9,
+      "testsimp": "SGOT (AST)",
+      "patientprice": 9.0
+    },
+    {
+      "testnum": 40,
+      "customgroupcode": 4,
+      "testcode": 56,
+      "testsimp": "CBC",
+      "patientprice": 17.0
+    },
+    {
+      "testnum": 42,
+      "customgroupcode": 7,
+      "testcode": 4,
+      "testsimp": "Urine",
+      "patientprice": 3.0
+    },
+    {
+      "testnum": 44,
+      "customgroupcode": 7,
+      "testcode": 5,
+      "testsimp": "Stool",
+      "patientprice": 3.0
+    },
+    {
+      "testnum": 45,
+      "customgroupcode": 7,
+      "testcode": 8,
+      "testsimp": "SGPT (ALT)",
+      "patientprice": 9.0
+    },
+    {
+      "testnum": 46,
+      "customgroupcode": 7,
+      "testcode": 9,
+      "testsimp": "SGOT (AST)",
+      "patientprice": 9.0
+    },
+    {
+      "testnum": 47,
+      "customgroupcode": 7,
+      "testcode": 11,
+      "testsimp": "Creatinine",
+      "patientprice": 9.0
+    },
+    {
+      "testnum": 49,
+      "customgroupcode": 7,
+      "testcode": 56,
+      "testsimp": "CBC",
+      "patientprice": 17.0
+    },
+    {
+      "testnum": 59,
+      "customgroupcode": 7,
+      "testcode": 10,
+      "testsimp": "Uric Acid",
+      "patientprice": 9.0
+    },
+    {
+      "testnum": 61,
+      "customgroupcode": 1,
+      "testcode": 7,
+      "testsimp": "Albumin",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 62,
+      "customgroupcode": 1,
+      "testcode": 10,
+      "testsimp": "Uric Acid",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 63,
+      "customgroupcode": 1,
+      "testcode": 208,
+      "testsimp": "HCV antibodies",
+      "patientprice": 40.0
+    },
+    {
+      "testnum": 64,
+      "customgroupcode": 1,
+      "testcode": 202,
+      "testsimp": "HBsAg",
+      "patientprice": 15.0
+    },
+    {
+      "testnum": 65,
+      "customgroupcode": 1,
+      "testcode": 80,
+      "testsimp": "Bilharzias Antibodies",
+      "patientprice": 20.0
+    },
+    {
+      "testnum": 66,
+      "customgroupcode": 1,
+      "testcode": 30,
+      "testsimp": "Cholesterol          ",
+      "patientprice": 15.0
+    },
+    {
+      "testnum": 67,
+      "customgroupcode": 1,
+      "testcode": 31,
+      "testsimp": "Triglyceride",
+      "patientprice": 15.0
+    },
+    {
+      "testnum": 68,
+      "customgroupcode": 2,
+      "testcode": 208,
+      "testsimp": "HCV antibodies",
+      "patientprice": 50.0
+    },
+    {
+      "testnum": 69,
+      "customgroupcode": 2,
+      "testcode": 202,
+      "testsimp": "HBsAg",
+      "patientprice": 20.0
+    },
+    {
+      "testnum": 70,
+      "customgroupcode": 2,
+      "testcode": 7,
+      "testsimp": "Albumin",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 71,
+      "customgroupcode": 2,
+      "testcode": 10,
+      "testsimp": "Uric Acid",
+      "patientprice": 10.0
+    },
+    {
+      "testnum": 75,
+      "customgroupcode": 4,
+      "testcode": 80,
+      "testsimp": "Bilharzias Antibodies (serum)",
+      "patientprice": 20.0
+    },
+    {
+      "testnum": 76,
+      "customgroupcode": 4,
+      "testcode": 11,
+      "testsimp": "Creatinine (Serum)",
+      "patientprice": 12.0
+    },
+    {
+      "testnum": 77,
+      "customgroupcode": 3,
+      "testcode": 4,
+      "testsimp": "Urine                        ",
+      "patientprice": 3.0
+    }
+  ]
+}

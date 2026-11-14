@@ -1,0 +1,128 @@
+{
+  "table": "culturesec",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 12,
+  "records_exported": 12,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "secabre",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "secname",
+      "position": null,
+      "adox_type": 202,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 2,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "secnum",
+      "position": null,
+      "adox_type": 2,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 3,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "secnum": 1,
+      "secabre": "HA",
+      "secname": "Highly For (Organism A)"
+    },
+    {
+      "secnum": 2,
+      "secabre": "MA",
+      "secname": "Moderate For (Organism A)"
+    },
+    {
+      "secnum": 4,
+      "secabre": "RA",
+      "secname": "Resistant For (Organism A)"
+    },
+    {
+      "secnum": 5,
+      "secabre": "HB",
+      "secname": "Highly For (Organism B)"
+    },
+    {
+      "secnum": 6,
+      "secabre": "MB",
+      "secname": "Moderate For (Organism B)"
+    },
+    {
+      "secnum": 8,
+      "secabre": "RB",
+      "secname": "Resistant For (Organism B)"
+    },
+    {
+      "secnum": 3,
+      "secabre": "LA",
+      "secname": "Low For (Organism A)"
+    },
+    {
+      "secnum": 7,
+      "secabre": "LB",
+      "secname": "Low For (Organism B)"
+    },
+    {
+      "secnum": 9,
+      "secabre": "HC",
+      "secname": "Highly For (Organism C)"
+    },
+    {
+      "secnum": 10,
+      "secabre": "MC",
+      "secname": "Moderate For (Organism C)"
+    },
+    {
+      "secnum": 11,
+      "secabre": "LC",
+      "secname": "Low For (Organism C)"
+    },
+    {
+      "secnum": 12,
+      "secabre": "RC",
+      "secname": "Resistant For (Organism C)"
+    }
+  ]
+}

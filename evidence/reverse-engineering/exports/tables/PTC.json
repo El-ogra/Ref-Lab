@@ -1,0 +1,243 @@
+{
+  "table": "PTC",
+  "source_file": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "source_sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "extracted_with": "Microsoft.ACE.OLEDB.12.0 (read-only) via ADO; ADOX for metadata",
+  "records_expected": 35,
+  "records_exported": 35,
+  "records_failed": 0,
+  "error": "",
+  "columns": [
+    {
+      "name": "concent",
+      "position": null,
+      "adox_type": 5,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "ConstID",
+      "position": null,
+      "adox_type": 3,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    },
+    {
+      "name": "control",
+      "position": null,
+      "adox_type": 5,
+      "size": null,
+      "required": null,
+      "allow_zero_length": null,
+      "default": null,
+      "validation_rule": null,
+      "validation_text": null,
+      "format": null,
+      "input_mask": null,
+      "attributes": 1,
+      "numeric_precision": null,
+      "numeric_scale": 0,
+      "auto_increment": null,
+      "owned": null
+    }
+  ],
+  "rows": [
+    {
+      "control": 17.1,
+      "concent": 52.5,
+      "ConstID": 1
+    },
+    {
+      "control": 12.5,
+      "concent": 92.0,
+      "ConstID": 2
+    },
+    {
+      "control": 12.7,
+      "concent": 88.0,
+      "ConstID": 3
+    },
+    {
+      "control": 13.0,
+      "concent": 84.0,
+      "ConstID": 4
+    },
+    {
+      "control": 13.3,
+      "concent": 80.0,
+      "ConstID": 5
+    },
+    {
+      "control": 13.7,
+      "concent": 76.0,
+      "ConstID": 6
+    },
+    {
+      "control": 14.0,
+      "concent": 72.0,
+      "ConstID": 7
+    },
+    {
+      "control": 14.4,
+      "concent": 69.0,
+      "ConstID": 8
+    },
+    {
+      "control": 14.8,
+      "concent": 64.0,
+      "ConstID": 9
+    },
+    {
+      "control": 15.6,
+      "concent": 60.0,
+      "ConstID": 10
+    },
+    {
+      "control": 16.2,
+      "concent": 56.0,
+      "ConstID": 11
+    },
+    {
+      "control": 17.1,
+      "concent": 52.0,
+      "ConstID": 12
+    },
+    {
+      "control": 18.0,
+      "concent": 48.0,
+      "ConstID": 13
+    },
+    {
+      "control": 19.2,
+      "concent": 44.0,
+      "ConstID": 14
+    },
+    {
+      "control": 20.6,
+      "concent": 40.0,
+      "ConstID": 15
+    },
+    {
+      "control": 22.4,
+      "concent": 36.0,
+      "ConstID": 16
+    },
+    {
+      "control": 23.5,
+      "concent": 34.0,
+      "ConstID": 17
+    },
+    {
+      "control": 24.8,
+      "concent": 32.0,
+      "ConstID": 18
+    },
+    {
+      "control": 26.3,
+      "concent": 30.0,
+      "ConstID": 19
+    },
+    {
+      "control": 28.0,
+      "concent": 28.0,
+      "ConstID": 20
+    },
+    {
+      "control": 29.0,
+      "concent": 27.0,
+      "ConstID": 21
+    },
+    {
+      "control": 30.0,
+      "concent": 26.0,
+      "ConstID": 22
+    },
+    {
+      "control": 31.2,
+      "concent": 26.0,
+      "ConstID": 23
+    },
+    {
+      "control": 32.5,
+      "concent": 24.0,
+      "ConstID": 24
+    },
+    {
+      "control": 34.0,
+      "concent": 23.0,
+      "ConstID": 25
+    },
+    {
+      "control": 35.6,
+      "concent": 22.0,
+      "ConstID": 26
+    },
+    {
+      "control": 37.4,
+      "concent": 21.0,
+      "ConstID": 27
+    },
+    {
+      "control": 39.4,
+      "concent": 20.0,
+      "ConstID": 28
+    },
+    {
+      "control": 41.7,
+      "concent": 19.0,
+      "ConstID": 29
+    },
+    {
+      "control": 44.3,
+      "concent": 18.0,
+      "ConstID": 30
+    },
+    {
+      "control": 47.3,
+      "concent": 17.0,
+      "ConstID": 31
+    },
+    {
+      "control": 55.0,
+      "concent": 15.0,
+      "ConstID": 32
+    },
+    {
+      "control": 12.2,
+      "concent": 96.0,
+      "ConstID": 33
+    },
+    {
+      "control": 13.7,
+      "concent": 76.2,
+      "ConstID": 34
+    },
+    {
+      "control": 12.0,
+      "concent": 100.0,
+      "ConstID": 37
+    }
+  ]
+}
