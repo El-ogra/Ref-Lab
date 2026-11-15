@@ -10,6 +10,65 @@
 > another engineer can understand the structure, locate every object, inspect every record, and reproduce the
 > principal discovery and extraction operations without repeating the investigation.
 
+## 1. Executive technical overview
+
+`Patients.mdb` is the **live local data store of the RealLab V-CD-2019 clinical laboratory system**
+(version 1.605) — a **Microsoft Access database in the Jet 4 / Access 2000 container format**, unencrypted,
+2,682,880 bytes, SHA-256 `98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3`. It is the
+primary of the product's stores and the one the application opens by default
+(`D:\real lab system\bin\Patients.mdb`); `Patients_backup.mdb`, `Branch_Data.mdb` and `data.mdb` ship
+alongside it, and the same logical schema also exists in a SQL Server `Patients` catalog.
+
+**The shape of the database, established by direct read-only inspection:**
+
+| Layer | Finding | Class |
+|---|---|---|
+| Container | Jet 4 (Access 2000 `.mdb`), **not encrypted**, no corruption indicators | VERIFIED FACT |
+| Catalog | **114** objects — 103 user tables + 11 `MSys*` system tables | VERIFIED FACT |
+| Columns | **1,682** across the 103 user tables | VERIFIED FACT |
+| Indexes | **72** | VERIFIED FACT |
+| **Declared relationships** | **ZERO** — no foreign keys, no cascade rules, no relationship objects | VERIFIED FACT |
+| **Saved queries** | **ZERO** — the application issues every statement as text | VERIFIED FACT |
+| Records | **3,809** extracted in full, **0 failures**; 41 populated tables, 62 empty | VERIFIED FACT |
+| Referenced by the application | **101 of 103** live tables are addressed by its SQL | VERIFIED FACT |
+
+**Three findings dominate the engineering picture.**
+
+1. **The schema is versioned at run time.** The executable carries 241 `ALTER TABLE … ADD COLUMN` and
+   22 `CREATE TABLE` statements, so the database is **not** fixed at install time: the application creates
+   and widens its own tables. This is why the shipped file and the code's expectations can legitimately
+   diverge, and it is the single most important fact for any replacement to reproduce.
+2. **The database carries no referential structure of its own.** With zero declared relationships and zero
+   saved queries, every join, every constraint and every report is expressed in SQL text inside the
+   executable. The database is a *data container*; the *rules* live in the code.
+3. **The shipped image carries live secrets and residual patient identifiers.** The SQL Server account and
+   password are stored **inside** the database (`reportview.strip3` / `strip4`), the operator passwords are
+   stored in `patients.patientword` / `SecWord` in obfuscated form, the SMS gateway credential is stored
+   in clear text in `MyLabSetting`, and sixteen patient identifiers survive in nine tables. The published
+   exports therefore carry a declared per-column transformation (§23.4); the untransformed extract was
+   written only to the restricted local workspace and is **not** inside the repository.
+
+**What the database is not.** It is a **template**, not a populated operational store: `patientinfo` and
+`patienttest` — the patient master and the order/result tables — hold **zero** rows, as do 60 further
+per-profile result tables. The shipped content is essentially *reference data* (609 tests, 1,152 reference
+ranges, 650 abbreviations, 612 antibiotic entries, 167 unit conversions, 48 profile groups) plus
+*configuration* (5 lab settings, 4 branches, 35 quality-control curves, 1 report-strip layout). Row-level
+behaviour of the live system — ordering, result entry, billing, notification — **cannot be observed from
+this file** and is documented from the executable instead.
+
+**Corrections to previously published figures.** Two catalogue figures are contradicted by the live store and
+are registered as conflicts **C-18** and **C-19** in the cumulative specification: `normalrange` holds
+**1,152** rows, not 852, and `antibiotic` holds **612** rows, not 38. `testtable` (609), `abbreviations`
+(650) and `converts` (167) agree exactly with the catalogue. A third finding is material to the business
+rules: **`CBCCONS.constant1` holds `0`, not `3.3`** — the `Hct = Hgb × 3.3` factor published in the V2
+manual is not stored in the database at all.
+
+**Confidence statement.** Every figure in this document was produced by direct read-only inspection of the
+shipped file and reconciled against a second source; the record extraction reconciles three ways with zero
+mismatches. The two areas that remain outside the evidence are disclosed explicitly in §29 and §30 and are
+not inferred around: the absence of a Jet object-catalogue reader (so any form or report definitions stored
+*inside* the `.mdb` cannot be listed), and the absence of any dynamic observation.
+
 ## 2. Database identity
 
 | Attribute | Value | Class |
@@ -230,6 +289,11 @@ All 103 user tables, with their record count, column count and index count.
 **Totals:** 103 tables · 1682 columns · 72 indexes · 3,809 records in 41 populated tables, 62 empty tables.
 
 ## 11-12. Detailed table schemas and complete field definitions
+
+## 12. Complete field definitions
+
+Every field of every table is documented in the field-definition table that follows each table's schema in the section above: field name, ordinal position, Access type and width, nullability, default value, validation rule, validation text, format and input mask. The ADOX type code and the required/nullable flag are cross-referenced through `metadata/adox_columns.csv`. See `Database documentation.md` §11 for the per-table blocks.
+
 
 Every column of every table, in ordinal position, with its Access type and width, nullability, default,
 validation rule, format, input mask and attributes. `Type` is the Access type recovered from an independent
@@ -2989,7 +3053,7 @@ extract was written only to the restricted local analysis workspace and is not p
 | Column class | Columns | Transformation in the published export |
 |---|---|---|
 | Credentials | `patients.patientword`, `patients.SecWord`, `MyLabSetting.accuntpw`, `MyLabSetting.SMSbakey`, `MyLabSetting.accuntID`, `reportview.strip3`, `reportview.strip4` | non-empty values replaced with `<REDACTED:TYPE>`; empty cells stay empty |
-| Patient identifiers | `ratios.patientid`, `history.column1` and every other `patientid` column carrying a 13-digit identifier | stable pseudonym `<PID-nnnn>` / `<REF-nnnn>`; mapping retained only in the restricted workspace |
+| Patient identifiers | **Any value that is exactly 13 digits**, wherever it appears — regardless of column name. This is a value-shape rule, not a column-name rule: it covers every `patientid` column in the 9 tables that carry them AND the `testname.testsimp` column, which held **two residual 13-digit identifiers** that the earlier column-name policy missed. (The `history.column1` values `SGPT`, `45` and `34` are **test references, not patient identifiers**, and are published verbatim.) | stable pseudonym `<PID-nnnn>`; mapping retained only in the restricted workspace (18 distinct values) |
 | Personal telephone numbers | `smslist.smsphone`, `MyLabSetting.phoneNo1..6` | non-empty values replaced with `<MASKED:PHONE>` |
 | Everything else | — | verbatim |
 
@@ -3029,7 +3093,7 @@ Read-only logical analysis over the exported records. Nothing was repaired, norm
 |---:|---|---|
 | DQ-09 | Whether `SMSSender.patientid` is also read as a patient key by application code | the executable's SQL must be inspected for `patientid` usage against `SMSSender` |
 | DQ-10 | Whether the `0` subgroup code in `normalrange` is a deliberate “no subgroup” marker or a dangling reference | requires the application's range-lookup logic |
-| DQ-11 | Whether the 16 patient identifiers left in the shipped image are test data or real records | cannot be determined from the image alone; it should be confirmed before any image is put into service |
+| DQ-11 | Whether the 18 patient identifiers left in the shipped image are test data or real records | cannot be determined from the image alone; it should be confirmed before any image is put into service |
 
 ## 25. External dependencies
 
@@ -3271,7 +3335,7 @@ The extraction scripts used for this investigation are stored with the evidence 
 
 | # | Question | Status |
 |---:|---|---|
-| UQ-01 | Which of the 16 patient identifiers left in the shipped image are test data and which are real? | OPEN — requires the publisher or a live installation to answer |
+| UQ-01 | Which of the 18 patient identifiers left in the shipped image are test data and which are real? | OPEN — requires the publisher or a live installation to answer |
 | UQ-02 | Does the application store form/report/macro definitions inside the `.mdb`? | OPEN — no catalogue reader available (§29, L-DB-01) |
 | UQ-03 | Is `normalrange.subgroupcode = 0` a deliberate “no subgroup” sentinel? | OPEN — needs the range-lookup logic from the executable |
 | UQ-04 | Is `SMSSender.patientid` read as a patient key anywhere in the code? | OPEN — needs the executable's SQL against that table |

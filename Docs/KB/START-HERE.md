@@ -107,6 +107,7 @@ dotnet test    RefLab.sln -c Release     # 722 ناجح (Presentation.Tests يح
 | `Docs/KB/OPERATIONS.md` | البناء · الاختبار · التشغيل · الترحيلات · صلاحيات المالك |
 | `Docs/KB/DOMAIN-RULES.md` | القواعد الثماني في `Domain/Rules/` بصيغها وإثباتها |
 | `Docs/KB/DATA-MODEL.md` | 27 جدولاً · العلاقات · كائنات القيمة المملوكة · الترحيلات |
+| `Docs/KB/legacy/INDEX.md` | **النظام القديم** — نقطة دخول قاعدة المعرفة القديمة (V-ROOT-1.00 و V-CD-2019): البنية · البيانات · القواعد · الأمان · النشر · PDF |
 | `Docs/KB/features/*.md` | ملف لكل مجال: الغرض · الحالات · الملفات · الفخاخ |
 | `Docs/KB/history/PHASES.md` | ماذا نُجزّم في كل مرحلة |
 

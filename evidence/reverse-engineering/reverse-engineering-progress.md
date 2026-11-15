@@ -125,3 +125,74 @@ cumulative specification exactly.
 reference · `DQ-11` provenance of the 16 residual patient identifiers in the shipped image ·
 `L-DB-01` forms/reports/macros/modules not exposed by the available tooling · `ISS-07` dynamic behaviour
 not established.
+
+
+---
+
+## Stage 3 - forensic investigation of the two targets (2026-11-14 / 15)
+
+The Stage 3 work read the authorised V1.605 source **read-only** and produced the two required
+deliverables plus a reconciliation of the cumulative specification.
+
+| Phase | Operation | Status | Result |
+|---|---|---|---|
+| 10 | Verify `real lab system.exe` identity | `COMPLETED` | 76,292,096 B; SHA-256 `C54CE6C8...DF93C0`; PE32 x86 native VB6; entry RVA `0x7142C`; PE timestamp `1595435962` (2020-07-22) |
+| 11 | Executable static reverse engineering | `COMPLETED WITH LIMITATIONS` | 210 VB6 objects decoded from the file; 349 prologue-verified code entries; 11,280 member descriptors; 101,812 classified strings / 15,143 unique; 2,375 SQL statements; 12 resource entries; 231 imports; **no decompilation** |
+| 12 | Dynamic analysis | `NOT PERFORMED` | Not authorised, not safe (the app resolves its store to the real patient database), and not required |
+| 13 | `Documenting the Executable File.md` | `COMPLETED` | 172,287 bytes, 32 sections + 6 appendices |
+| 14 | Cumulative reconciliation | `COMPLETED` | All 10 members annotated **in place**; GAP-10 closed; GAP-32...GAP-37 opened; C-18/C-19 added; COR-15...COR-17 added; DEC-13 added; 120 verification checks passed |
+| 15 | Evidence and accountability | `COMPLETED` | 36 evidence entries; 28 accountability rows; unresolved-issues register (20 open issues, 5 tooling limits, 5 deliberate non-actions) |
+| 16 | Independent verification | `COMPLETED` | 3-way extraction reconciliation; archive `testzip()` OK; every member byte-identical to its working copy; 16 source hashes unchanged |
+| 17 | Final Arabic report | `COMPLETED` | This mission's final disclosure |
+
+### Stage 3 milestone log (continued)
+
+**M9 - The database was fully extracted.** 103 user tables, **3,809 records, 0 failures**, reconciled three
+ways (engine `COUNT(*)` / extraction ledger / export-file content) with zero mismatches. The first pass
+failed on 41 rows because Jet date/time columns surface as `adDouble`; the conversion was made
+value-driven and the pass re-run to zero failures.
+
+**M10 - A confidentiality policy was applied rather than assumed.** The shipped image contains no
+patient rows in `patientinfo` or `patienttest`, but it does carry **16 residual patient identifiers**
+across nine tables and **hard-coded credentials in four places**. The published exports therefore carry
+a declared per-column transformation; the untransformed extract was written only to the restricted
+local workspace and is **not** inside the repository.
+
+**M11 - Two catalogue figures are contradicted by the live store.** `normalrange` holds **1,152** rows,
+not 852; `antibiotic` holds **612** rows, not 38. `testtable` (609), `abbreviations` (650) and `converts`
+(167) agree exactly. Registered as **C-18** / **C-19** and **COR-15** / **COR-16**.
+
+**M12 - `CBCCONS.constant1` holds `0`, not `3.3`.** The V2 manual's `Hct = Hgb x 3.3` factor is **not
+stored in the database**; the table carries only 6.25 / 6.75 / 7.5 / 8.25 and the 100 denominator. A
+replacement reading the factor from `constant1` would read zero. Registered as **COR-17**.
+
+**M13 - The SQL Server credential is inside the database.** The one-row `reportview` table holds it in
+`strip3` (2 characters) and `strip4` (8 characters) - the lengths of the `sa` account and the
+`12345678` password already documented at six file locations. This is a **seventh** location and the only
+one that travels with the data file. Routed to the new **DEC-13**.
+
+**M14 - The `admin` literal's role is established.** The single UTF-16LE `admin` at file offset
+`0x2DA262` belongs to the phrase *"On win7 right click on file and press run as administrator"*. It is
+**not** an account-name string. This closes the Stage 2 open item; the account lives in the database, not
+the binary.
+
+**M15 - The shipped `patients` table carries two live accounts.** `admin` has `patientad` = true with
+**all 17 `grant` flags false** - so the administrator is authorised by the **administrator flag**, not by
+the grant bits. `user` has 10 of the 17 set. Neither `patientword` equals the account name, and both are
+**obfuscated** (non-ASCII, length-preserving) while `SecWord` is plain ASCII.
+
+**M16 - The executable's structure was decoded independently and reproduces the archive's object model
+exactly.** 210 objects, 132 forms, 66 report templates, 9 modules, 3 classes, 8,026 members, project GUID
+`{AF67146C-22A0-4591-9ED3-52BEB9D44D32}`. The archive's figures came from a preserved extraction; these
+came from the shipped file. Both agree.
+
+**M17 - Decompilation is a negative result.** Four REA/Ghidra runs failed: startup deadline exceeded;
+twice `Unknown Ghidra analyzer for this program`; and a 7,200,000 ms deadline that **timed out**. The REA
+MCP path additionally rejects the 76 MB file against a 64 MiB budget and its server process has no
+`JAVA_HOME`. Recorded as **GAP-35** / **TL-01** / **L-EXE-01**.
+
+**M18 - The cumulative specification was reconciled, not rewritten.** All ten members were annotated **in
+place**, following the convention Stage 2 introduced in document `06`. No Stage 1 or Stage 2 conclusion was
+deleted. The archive was rebuilt in place: **12 members**, `testzip()` OK, every member byte-identical to
+its working copy. The Stage 2 archive was backed up first, and the Stage 1 baseline hash inside member
+`09` was preserved rather than overwritten.

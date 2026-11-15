@@ -1,0 +1,3127 @@
+{
+ "target": {
+  "path": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\System\\real lab system.exe",
+  "size_bytes": 76292096,
+  "sha256": "c54ce6c8c98a679efc5ab485bc4b313b452026d6a40f9bda36eca7ea18df93c0",
+  "sha256_expected": "C54CE6C8C98A679EFC5AB485BC4B313B452026D6A40F9BDA36ECA7EA18DF93C0",
+  "sha256_match": true,
+  "hash_algorithm": "SHA-256"
+ },
+ "pe": {
+  "machine": "0x14c",
+  "machine_name": "IMAGE_FILE_MACHINE_I386 (x86)",
+  "format": "PE32 (32-bit)",
+  "native_or_managed": "NATIVE (no CLI/COM descriptor)",
+  "number_of_sections": 3,
+  "characteristics": "0x10f",
+  "timestamp_unix": 1595435962,
+  "timestamp_utc": "2020-07-22T16:39:22Z",
+  "magic": "0x10b",
+  "image_base": "0x400000",
+  "entry_point_rva": "0x7142c",
+  "entry_point_va": "0x47142c",
+  "section_alignment": "0x1000",
+  "file_alignment": "0x1000",
+  "size_of_image": "0x490c000",
+  "size_of_headers": "0x1000",
+  "subsystem": 2,
+  "subsystem_name": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+  "dll_characteristics": "0x0",
+  "linker_version": "6.0",
+  "os_version": "4.0",
+  "subsystem_version": "4.0",
+  "checksum": "0x48c804d",
+  "relocation_entry_count": 0,
+  "is_dotnet": false,
+  "sections": [
+   {
+    "name": ".text",
+    "virtual_address": "0x1000",
+    "virtual_size": 76119116,
+    "raw_size": 76120064,
+    "raw_offset": 4096,
+    "characteristics": "0x60000020",
+    "entropy": 6.23,
+    "file_end": 76124160
+   },
+   {
+    "name": ".data",
+    "virtual_address": "0x4899000",
+    "virtual_size": 304852,
+    "raw_size": 4096,
+    "raw_offset": 76124160,
+    "characteristics": "0xc0000040",
+    "entropy": 0.0,
+    "file_end": 76128256
+   },
+   {
+    "name": ".rsrc",
+    "virtual_address": "0x48e4000",
+    "virtual_size": 161682,
+    "raw_size": 163840,
+    "raw_offset": 76128256,
+    "characteristics": "0x40000040",
+    "entropy": 6.361,
+    "file_end": 76292096
+   }
+  ],
+  "data_directories": [
+   {
+    "index": 0,
+    "name": "IMAGE_DIRECTORY_ENTRY_EXPORT",
+    "rva": "0x0",
+    "size": 0
+   },
+   {
+    "index": 1,
+    "name": "IMAGE_DIRECTORY_ENTRY_IMPORT",
+    "rva": "0x4897d04",
+    "size": 40
+   },
+   {
+    "index": 2,
+    "name": "IMAGE_DIRECTORY_ENTRY_RESOURCE",
+    "rva": "0x48e4000",
+    "size": 161682
+   },
+   {
+    "index": 3,
+    "name": "IMAGE_DIRECTORY_ENTRY_EXCEPTION",
+    "rva": "0x0",
+    "size": 0
+   },
+   {
+    "index": 4,
+    "name": "IMAGE_DIRECTORY_ENTRY_SECURITY",
+    "rva": "0x0",
+    "size": 0
+   },
+   {
+    "index": 5,
+    "name": "IMAGE_DIRECTORY_ENTRY_BASERELOC",
+    "rva": "0x0",
+    "size": 0
+   },
+   {
+    "index": 6,
+    "name": "IMAGE_DIRECTORY_ENTRY_DEBUG",
+    "rva": "0x0",
+    "size": 0
+   },
+   {
+    "index": 7,
+    "name": "IMAGE_DIRECTORY_ENTRY_COPYRIGHT",
+    "rva": "0x0",
+    "size": 0
+   },
+   {
+    "index": 8,
+    "name": "IMAGE_DIRECTORY_ENTRY_GLOBALPTR",
+    "rva": "0x0",
+    "size": 0
+   },
+   {
+    "index": 9,
+    "name": "IMAGE_DIRECTORY_ENTRY_TLS",
+    "rva": "0x0",
+    "size": 0
+   },
+   {
+    "index": 10,
+    "name": "IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG",
+    "rva": "0x0",
+    "size": 0
+   },
+   {
+    "index": 11,
+    "name": "IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT",
+    "rva": "0x228",
+    "size": 32
+   },
+   {
+    "index": 12,
+    "name": "IMAGE_DIRECTORY_ENTRY_IAT",
+    "rva": "0x1000",
+    "size": 928
+   },
+   {
+    "index": 13,
+    "name": "IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT",
+    "rva": "0x0",
+    "size": 0
+   },
+   {
+    "index": 14,
+    "name": "IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR",
+    "rva": "0x0",
+    "size": 0
+   },
+   {
+    "index": 15,
+    "name": "IMAGE_DIRECTORY_ENTRY_RESERVED",
+    "rva": "0x0",
+    "size": 0
+   }
+  ]
+ },
+ "resources": {
+  "entry_count": 12,
+  "by_type": {
+   "RT_GROUP_ICON": 1,
+   "RT_ICON": 10,
+   "RT_VERSION": 1
+  },
+  "entries": [
+   {
+    "type": "RT_GROUP_ICON",
+    "type_id": 14,
+    "name_id": 1,
+    "name": "1",
+    "lang": 0,
+    "lang_name": "NEUTRAL",
+    "rva": "0x48e45c4",
+    "file_offset": "0x489a5c4",
+    "size": 146,
+    "code_page": 0,
+    "sha256": "7e320f50e1b6a1693e9384b5992d6f5a8a07fff333bf5753f0a8d8df3886b429",
+    "magic": "000001000a002020",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_GROUP_ICON_1_0.grp"
+   },
+   {
+    "type": "RT_ICON",
+    "type_id": 3,
+    "name_id": 30001,
+    "name": "30001",
+    "lang": 0,
+    "lang_name": "NEUTRAL",
+    "rva": "0x490b4aa",
+    "file_offset": "0x48c14aa",
+    "size": 744,
+    "code_page": 0,
+    "sha256": "0f3155254f1faedc0782aef4c1b0adac0e2d297e90b2415612de08c071f26831",
+    "magic": "2800000020000000",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_ICON_30001_0.ico"
+   },
+   {
+    "type": "RT_ICON",
+    "type_id": 3,
+    "name_id": 30002,
+    "name": "30002",
+    "lang": 0,
+    "lang_name": "NEUTRAL",
+    "rva": "0x490b382",
+    "file_offset": "0x48c1382",
+    "size": 296,
+    "code_page": 0,
+    "sha256": "b9689c2910e13de8088058f084c690986ebf379142269c42a596f8851103ec8c",
+    "magic": "2800000010000000",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_ICON_30002_0.ico"
+   },
+   {
+    "type": "RT_ICON",
+    "type_id": 3,
+    "name_id": 30003,
+    "name": "30003",
+    "lang": 0,
+    "lang_name": "NEUTRAL",
+    "rva": "0x490a4da",
+    "file_offset": "0x48c04da",
+    "size": 3752,
+    "code_page": 0,
+    "sha256": "74372ebd83690d74a6b75a34a979e4b50c32770be351e18e9898dc2d63505a1d",
+    "magic": "2800000030000000",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_ICON_30003_0.ico"
+   },
+   {
+    "type": "RT_ICON",
+    "type_id": 3,
+    "name_id": 30004,
+    "name": "30004",
+    "lang": 0,
+    "lang_name": "NEUTRAL",
+    "rva": "0x4909c32",
+    "file_offset": "0x48bfc32",
+    "size": 2216,
+    "code_page": 0,
+    "sha256": "2dc5e0f5870d9434e0039197a705b404b586c6c42bafb5993b4b99307bc49352",
+    "magic": "2800000020000000",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_ICON_30004_0.ico"
+   },
+   {
+    "type": "RT_ICON",
+    "type_id": 3,
+    "name_id": 30005,
+    "name": "30005",
+    "lang": 0,
+    "lang_name": "NEUTRAL",
+    "rva": "0x49096ca",
+    "file_offset": "0x48bf6ca",
+    "size": 1384,
+    "code_page": 0,
+    "sha256": "82d65e41655502c9441a53bd1c73a94e6b7bef8d278e9f7431edf7a7a51ebfc1",
+    "magic": "2800000010000000",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_ICON_30005_0.ico"
+   },
+   {
+    "type": "RT_ICON",
+    "type_id": 3,
+    "name_id": 30006,
+    "name": "30006",
+    "lang": 0,
+    "lang_name": "NEUTRAL",
+    "rva": "0x48f8936",
+    "file_offset": "0x48ae936",
+    "size": 69012,
+    "code_page": 0,
+    "sha256": "4f0fea0eae8035d536b5c2f1f38d5bc595a1aba9dba4f6b0801ee3438f73bc9a",
+    "magic": "89504e470d0a1a0a",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_ICON_30006_0.ico"
+   },
+   {
+    "type": "RT_ICON",
+    "type_id": 3,
+    "name_id": 30007,
+    "name": "30007",
+    "lang": 0,
+    "lang_name": "NEUTRAL",
+    "rva": "0x48e810e",
+    "file_offset": "0x489e10e",
+    "size": 67624,
+    "code_page": 0,
+    "sha256": "c0b58290f3fd464ae6c7413bded23fd6260c021297663bd9015b10e6480fc6e0",
+    "magic": "2800000080000000",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_ICON_30007_0.ico"
+   },
+   {
+    "type": "RT_ICON",
+    "type_id": 3,
+    "name_id": 30008,
+    "name": "30008",
+    "lang": 0,
+    "lang_name": "NEUTRAL",
+    "rva": "0x48e5b66",
+    "file_offset": "0x489bb66",
+    "size": 9640,
+    "code_page": 0,
+    "sha256": "23e3481ff110ab77cb6dc6ee05615fd967da691d139bc07f7d152de364f21af4",
+    "magic": "2800000030000000",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_ICON_30008_0.ico"
+   },
+   {
+    "type": "RT_ICON",
+    "type_id": 3,
+    "name_id": 30009,
+    "name": "30009",
+    "lang": 0,
+    "lang_name": "NEUTRAL",
+    "rva": "0x48e4abe",
+    "file_offset": "0x489aabe",
+    "size": 4264,
+    "code_page": 0,
+    "sha256": "eb700b729088815f657f7fb496bb14c445b26bf5c90023ddc54b265a74357abf",
+    "magic": "2800000020000000",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_ICON_30009_0.ico"
+   },
+   {
+    "type": "RT_ICON",
+    "type_id": 3,
+    "name_id": 30010,
+    "name": "30010",
+    "lang": 0,
+    "lang_name": "NEUTRAL",
+    "rva": "0x48e4656",
+    "file_offset": "0x489a656",
+    "size": 1128,
+    "code_page": 0,
+    "sha256": "372b32ebf8c814507915786900725131fe2ea1789c5204c1c14cb29739cddb52",
+    "magic": "2800000010000000",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_ICON_30010_0.ico"
+   },
+   {
+    "type": "RT_VERSION",
+    "type_id": 16,
+    "name_id": 1,
+    "name": "1",
+    "lang": 1033,
+    "lang_name": "en-US",
+    "rva": "0x48e42a0",
+    "file_offset": "0x489a2a0",
+    "size": 804,
+    "code_page": 0,
+    "sha256": "8683fe0deee1ceb3f21e492b7a149b0cdd3093ef6c9903c72ed2663bb295443f",
+    "magic": "2403340000005600",
+    "extracted_file": "C:\\Users\\LAP LINK\\AppData\\Local\\Temp\\opencode\\reflabv2\\exe\\resources\\RT_VERSION_1_1033.ver"
+   }
+  ]
+ },
+ "version_info": {
+  "var:?": [],
+  "Comments": "ais_soft_group@yahoo",
+  "CompanyName": "RealLab",
+  "FileDescription": "RLS 1.605",
+  "LegalCopyright": "RealLab",
+  "LegalTrademarks": "RealLab",
+  "ProductName": "real lab system",
+  "FileVersion": "1.605",
+  "ProductVersion": "1.605",
+  "InternalName": "real lab system",
+  "OriginalFilename": "real lab system.exe"
+ },
+ "imports": {
+  "dll_count": 1,
+  "total_functions": 231,
+  "dlls": {
+   "MSVBVM60.DLL": {
+    "count": 231,
+    "functions": [
+     "EVENT_SINK_GetIDsOfNames",
+     "__vbaVarTstGt",
+     "__vbaVarSub",
+     "__vbaStrI2",
+     "_CIcos",
+     "_adj_fptan",
+     "__vbaStrI4",
+     "__vbaVarMove",
+     "__vbaVarVargNofree",
+     "__vbaFreeVar",
+     "__vbaLateIdCall",
+     "__vbaStrVarMove",
+     "__vbaLenBstr",
+     null,
+     "__vbaFreeVarList",
+     "__vbaEnd",
+     "_adj_fdiv_m64",
+     "EVENT_SINK_Invoke",
+     "__vbaNextEachVar",
+     "__vbaLineInputVar",
+     "__vbaFreeObjList",
+     null,
+     "__vbaVarFix",
+     "__vbaStrErrVarCopy",
+     "_adj_fprem1",
+     "__vbaRecAnsiToUni",
+     null,
+     "__vbaForEachCollAd",
+     "__vbaStrCat",
+     "__vbaVarCmpNe",
+     null,
+     "__vbaLsetFixstr",
+     null,
+     null,
+     "__vbaRecDestruct",
+     "__vbaStrDate",
+     "__vbaSetSystemError",
+     "__vbaNameFile",
+     "__vbaHresultCheckObj",
+     "__vbaLenVar",
+     "_adj_fdiv_m32",
+     "__vbaVarTstLe",
+     "__vbaAryVar",
+     null,
+     null,
+     "Zombie_GetTypeInfo",
+     "__vbaVarCmpGe",
+     "__vbaAryDestruct",
+     "__vbaVarIndexLoadRefLock",
+     "__vbaLateMemSt",
+     null,
+     null,
+     "__vbaForEachCollObj",
+     "__vbaBoolStr",
+     "__vbaExitProc",
+     "__vbaVarForInit",
+     null,
+     null,
+     "__vbaObjSet",
+     "__vbaOnError",
+     null,
+     "_adj_fdiv_m16i",
+     null,
+     "__vbaObjSetAddref",
+     "_adj_fdivr_m16i",
+     null,
+     "__vbaVarIndexLoad",
+     null,
+     "__vbaBoolVar",
+     null,
+     "__vbaFPFix",
+     "__vbaRefVarAry",
+     "__vbaVarTstLt",
+     "__vbaFpR8",
+     "__vbaBoolVarNull",
+     "_CIsin",
+     "__vbaErase",
+     null,
+     null,
+     "__vbaNextEachCollObj",
+     "__vbaVarCmpGt",
+     null,
+     "__vbaLateMemStAd",
+     "__vbaChkstk",
+     "__vbaFileClose",
+     "EVENT_SINK_AddRef",
+     "__vbaVarAbs",
+     "__vbaGenerateBoundsError",
+     "__vbaExitEachColl",
+     "__vbaStrCmp",
+     null,
+     "__vbaVarTstEq",
+     "__vbaAryConstruct2",
+     "__vbaDateR8",
+     null,
+     "__vbaObjVar",
+     "DllFunctionCall",
+     "__vbaVarLateMemSt",
+     "__vbaVarOr",
+     "__vbaCastObjVar",
+     "__vbaRedimPreserve",
+     "__vbaStrR4",
+     "__vbaLbound",
+     "_adj_fpatan",
+     "__vbaR4Var",
+     "__vbaFixstrConstruct",
+     "__vbaLateIdCallLd",
+     "Zombie_GetTypeInfoCount",
+     "__vbaRedim",
+     "__vbaStrR8",
+     "__vbaRecUniToAnsi",
+     "EVENT_SINK_Release",
+     "__vbaNew",
+     null,
+     "_CIsqrt",
+     "__vbaObjIs",
+     "__vbaLateIdCallSt",
+     "__vbaVarAnd",
+     "EVENT_SINK_QueryInterface",
+     "__vbaStrUI1",
+     "__vbaVarMul",
+     "__vbaExceptHandler",
+     null,
+     null,
+     "__vbaStrToUnicode",
+     "__vbaPrintFile",
+     null,
+     "__vbaDateStr",
+     "_adj_fprem",
+     "_adj_fdivr_m64",
+     null,
+     "__vbaVarDiv",
+     "__vbaI2Str",
+     null,
+     "__vbaLateIdStAd",
+     null,
+     null,
+     "__vbaVarCmpLe",
+     null,
+     null,
+     "__vbaFPException",
+     "__vbaInStrVar",
+     null,
+     "__vbaUbound",
+     "__vbaStrVarVal",
+     null,
+     "__vbaVarCat",
+     "__vbaCheckType",
+     null,
+     "__vbaDateVar",
+     "__vbaI2Var",
+     null,
+     null,
+     null,
+     "_CIlog",
+     "__vbaFileOpen",
+     "__vbaR8Str",
+     "__vbaVarLateMemCallLdRf",
+     "__vbaInStr",
+     "__vbaNew2",
+     null,
+     "__vbaVarInt",
+     "_adj_fdiv_m32i",
+     "_adj_fdivr_m32i",
+     null,
+     "__vbaStrCopy",
+     "__vbaVarSetObj",
+     null,
+     "__vbaVarCmpLt",
+     "__vbaFreeStrList",
+     null,
+     "_adj_fdivr_m32",
+     "__vbaPowerR8",
+     "__vbaR8Var",
+     "_adj_fdiv_r",
+     null,
+     null,
+     "__vbaVarTstNe",
+     "__vbaVarSetVar",
+     "__vbaI4Var",
+     "__vbaVarCmpEq",
+     null,
+     "__vbaAryLock",
+     "__vbaVarAdd",
+     "__vbaLateMemCall",
+     null,
+     "__vbaStrToAnsi",
+     "__vbaVarDup",
+     null,
+     null,
+     "__vbaVerifyVarObj",
+     "__vbaOnGoCheck",
+     "__vbaFpI2",
+     "__vbaCheckTypeVar",
+     "__vbaVarMod",
+     null,
+     "__vbaVarTstGe",
+     "__vbaFpI4",
+     "__vbaVarLateMemCallLd",
+     "__vbaVarCopy",
+     "__vbaRecDestructAnsi",
+     "__vbaR8IntI2",
+     null,
+     "__vbaLateMemCallLd",
+     "_CIatan",
+     "__vbaI2ErrVar",
+     "__vbaAryCopy",
+     "__vbaStrMove",
+     "__vbaCastObj",
+     null,
+     "__vbaStrVarCopy",
+     "__vbaForEachVar",
+     null,
+     null,
+     null,
+     "_allmul",
+     "__vbaVarLateMemCallSt",
+     null,
+     "__vbaLateIdSt",
+     null,
+     "_CItan",
+     "__vbaNextEachCollAd",
+     null,
+     "__vbaAryUnlock",
+     "__vbaFPInt",
+     null,
+     "__vbaVarForNext",
+     "_CIexp",
+     "__vbaFreeObj",
+     "__vbaFreeStr",
+     null
+    ]
+   }
+  },
+  "delay_imports": []
+ },
+ "vb6": {
+  "runtime": "MSVBVM60.DLL (Visual Basic 6 native-compiled)",
+  "header_signature_file_offset": "0xb8e80",
+  "header_signature_va": "0x004b8e80",
+  "header_magic": "VB5!",
+  "runtime_build": 9782,
+  "runtime_revision": 10,
+  "lcid": "0x409 (en-US)",
+  "entry_point_pushes_header_va": "0x004b8e80 (push 0x4b8e80; call ThunRTMain) @ file offset 0x7142c",
+  "project_data_va": "0x004bd64c",
+  "form_count_header": 198,
+  "external_count_header": 25,
+  "thunk_count_header": 233,
+  "object_table_file_offset": "0x260b98",
+  "object_table_stride_bytes": 48,
+  "object_count_parsed": 210,
+  "objects": [
+   {
+    "index": 0,
+    "name": "labmain",
+    "member_count": 71,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260bec",
+    "lpObjectInfo": "0x60c5c8",
+    "lpPublicBytes": "0x66c620"
+   },
+   {
+    "index": 1,
+    "name": "labxxyyzz",
+    "member_count": 3,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260c1c",
+    "lpObjectInfo": "0x4bdb5c",
+    "lpPublicBytes": "0x66ed80"
+   },
+   {
+    "index": 2,
+    "name": "patientmain",
+    "member_count": 84,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260c4c",
+    "lpObjectInfo": "0x5fa670",
+    "lpPublicBytes": "0x66e820"
+   },
+   {
+    "index": 3,
+    "name": "labdb",
+    "member_count": 24,
+    "object_type": "0x18001",
+    "record_file_offset": "0x260c7c",
+    "lpObjectInfo": "0x4b8d1c",
+    "lpPublicBytes": "0x66c9d8"
+   },
+   {
+    "index": 4,
+    "name": "frm_money",
+    "member_count": 38,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260cac",
+    "lpObjectInfo": "0x5395b4",
+    "lpPublicBytes": "0x66dfe8"
+   },
+   {
+    "index": 5,
+    "name": "tools",
+    "member_count": 1,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260cdc",
+    "lpObjectInfo": "0x4be3cc",
+    "lpPublicBytes": "0x6a16b8"
+   },
+   {
+    "index": 6,
+    "name": "Resultliver",
+    "member_count": 101,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260d0c",
+    "lpObjectInfo": "0x5b8ce8",
+    "lpPublicBytes": "0x68d8d0"
+   },
+   {
+    "index": 7,
+    "name": "moneypaid",
+    "member_count": 18,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260d3c",
+    "lpObjectInfo": "0x4c88e0",
+    "lpPublicBytes": "0x6a54b8"
+   },
+   {
+    "index": 8,
+    "name": "addpatient",
+    "member_count": 192,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260d6c",
+    "lpObjectInfo": "0x64628c",
+    "lpPublicBytes": "0x66d680"
+   },
+   {
+    "index": 9,
+    "name": "Resulturine",
+    "member_count": 167,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260d9c",
+    "lpObjectInfo": "0x5f4ae0",
+    "lpPublicBytes": "0x68d170"
+   },
+   {
+    "index": 10,
+    "name": "Reporturine",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x260dcc",
+    "lpObjectInfo": "0x4ba09c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 11,
+    "name": "Reportliver",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x260dfc",
+    "lpObjectInfo": "0x4bab44",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 12,
+    "name": "tqrermog",
+    "member_count": 41,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260e2c",
+    "lpObjectInfo": "0x4f3fe8",
+    "lpPublicBytes": "0x6792d4"
+   },
+   {
+    "index": 13,
+    "name": "ReportFatora",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x260e5c",
+    "lpObjectInfo": "0x4bb6e4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 14,
+    "name": "Reporttotal",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x260e8c",
+    "lpObjectInfo": "0x4bbf9c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 15,
+    "name": "Reporthistory",
+    "member_count": 1,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x260ebc",
+    "lpObjectInfo": "0x4bcd64",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 16,
+    "name": "barcode",
+    "member_count": 76,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260eec",
+    "lpObjectInfo": "0x4fe9a8",
+    "lpPublicBytes": "0x6ace64"
+   },
+   {
+    "index": 17,
+    "name": "phone",
+    "member_count": 33,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260f1c",
+    "lpObjectInfo": "0x500e24",
+    "lpPublicBytes": "0x6720b8"
+   },
+   {
+    "index": 18,
+    "name": "testmain",
+    "member_count": 30,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260f4c",
+    "lpObjectInfo": "0x5243f0",
+    "lpPublicBytes": "0x670f1c"
+   },
+   {
+    "index": 19,
+    "name": "Resultsugar",
+    "member_count": 61,
+    "object_type": "0x18083",
+    "record_file_offset": "0x260f7c",
+    "lpObjectInfo": "0x5469ac",
+    "lpPublicBytes": "0x68ceb0"
+   },
+   {
+    "index": 20,
+    "name": "labdb1",
+    "member_count": 20,
+    "object_type": "0x18001",
+    "record_file_offset": "0x260fac",
+    "lpObjectInfo": "0x4b8dc4",
+    "lpPublicBytes": "0x66eccc"
+   },
+   {
+    "index": 21,
+    "name": "Reportworkp",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x260fdc",
+    "lpObjectInfo": "0x4b9404",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 22,
+    "name": "workpaper",
+    "member_count": 17,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26100c",
+    "lpObjectInfo": "0x4d54f8",
+    "lpPublicBytes": "0x6710ec"
+   },
+   {
+    "index": 23,
+    "name": "Reportwp",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26103c",
+    "lpObjectInfo": "0x4bb8d4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 24,
+    "name": "Resultstool",
+    "member_count": 139,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26106c",
+    "lpObjectInfo": "0x5c32d8",
+    "lpPublicBytes": "0x68d568"
+   },
+   {
+    "index": 25,
+    "name": "testrange",
+    "member_count": 17,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26109c",
+    "lpObjectInfo": "0x4ea500",
+    "lpPublicBytes": "0x671dac"
+   },
+   {
+    "index": 26,
+    "name": "ReportSugar",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2610cc",
+    "lpObjectInfo": "0x4b9cbc",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 27,
+    "name": "Resultkidney",
+    "member_count": 117,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2610fc",
+    "lpObjectInfo": "0x5eef88",
+    "lpPublicBytes": "0x68d994"
+   },
+   {
+    "index": 28,
+    "name": "resultculutre",
+    "member_count": 115,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26112c",
+    "lpObjectInfo": "0x5c87cc",
+    "lpPublicBytes": "0x68ed90"
+   },
+   {
+    "index": 29,
+    "name": "Resultlipids",
+    "member_count": 81,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26115c",
+    "lpObjectInfo": "0x58647c",
+    "lpPublicBytes": "0x68da08"
+   },
+   {
+    "index": 30,
+    "name": "ais",
+    "member_count": 0,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26118c",
+    "lpObjectInfo": "0x4c0e10",
+    "lpPublicBytes": "0x6bffd4"
+   },
+   {
+    "index": 31,
+    "name": "reportculutre",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2611bc",
+    "lpObjectInfo": "0x4bc37c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 32,
+    "name": "Resultsemen",
+    "member_count": 222,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2611ec",
+    "lpObjectInfo": "0x65766c",
+    "lpPublicBytes": "0x68ff80"
+   },
+   {
+    "index": 33,
+    "name": "resultABO",
+    "member_count": 47,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26121c",
+    "lpObjectInfo": "0x51bf18",
+    "lpPublicBytes": "0x68daa0"
+   },
+   {
+    "index": 34,
+    "name": "resultwidal",
+    "member_count": 41,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26124c",
+    "lpObjectInfo": "0x52cf6c",
+    "lpPublicBytes": "0x68e890"
+   },
+   {
+    "index": 35,
+    "name": "resulthepatitis",
+    "member_count": 187,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26127c",
+    "lpObjectInfo": "0x62eaac",
+    "lpPublicBytes": "0x68f99c"
+   },
+   {
+    "index": 36,
+    "name": "ReportFatoraS",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2612ac",
+    "lpObjectInfo": "0x4ba384",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 37,
+    "name": "ResultESR",
+    "member_count": 32,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2612dc",
+    "lpObjectInfo": "0x5032e4",
+    "lpPublicBytes": "0x68db14"
+   },
+   {
+    "index": 38,
+    "name": "resultcbc",
+    "member_count": 172,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26130c",
+    "lpObjectInfo": "0x64e698",
+    "lpPublicBytes": "0x68e3a4"
+   },
+   {
+    "index": 39,
+    "name": "repotrwidal",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26133c",
+    "lpObjectInfo": "0x4ba47c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 40,
+    "name": "Reporthistory2",
+    "member_count": 1,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26136c",
+    "lpObjectInfo": "0x4bcb3c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 41,
+    "name": "ResultTORCH",
+    "member_count": 123,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26139c",
+    "lpObjectInfo": "0x59c09c",
+    "lpPublicBytes": "0x68eef0"
+   },
+   {
+    "index": 42,
+    "name": "resultcrp",
+    "member_count": 97,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2613cc",
+    "lpObjectInfo": "0x58eb78",
+    "lpPublicBytes": "0x68e934"
+   },
+   {
+    "index": 43,
+    "name": "resultpt",
+    "member_count": 110,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2613fc",
+    "lpObjectInfo": "0x5e94b0",
+    "lpPublicBytes": "0x68dcf8"
+   },
+   {
+    "index": 44,
+    "name": "resulthormon",
+    "member_count": 116,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26142c",
+    "lpObjectInfo": "0x5e3b24",
+    "lpPublicBytes": "0x68fb18"
+   },
+   {
+    "index": 45,
+    "name": "Reportinstrument",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26145c",
+    "lpObjectInfo": "0x4bc094",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 46,
+    "name": "patient",
+    "member_count": 58,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26148c",
+    "lpObjectInfo": "0x51eb2c",
+    "lpPublicBytes": "0x66f4a4"
+   },
+   {
+    "index": 47,
+    "name": "Reportshareka",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2614bc",
+    "lpObjectInfo": "0x4bb3fc",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 48,
+    "name": "patientview",
+    "member_count": 33,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2614ec",
+    "lpObjectInfo": "0x505810",
+    "lpPublicBytes": "0x670e10"
+   },
+   {
+    "index": 49,
+    "name": "outtest",
+    "member_count": 11,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26151c",
+    "lpObjectInfo": "0x4db1e8",
+    "lpPublicBytes": "0x6722cc"
+   },
+   {
+    "index": 50,
+    "name": "setup",
+    "member_count": 16,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26154c",
+    "lpObjectInfo": "0x4e4d64",
+    "lpPublicBytes": "0x6708e8"
+   },
+   {
+    "index": 51,
+    "name": "anyreport",
+    "member_count": 16,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26157c",
+    "lpObjectInfo": "0x5270d0",
+    "lpPublicBytes": "0x6888c8"
+   },
+   {
+    "index": 52,
+    "name": "calctest",
+    "member_count": 2,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2615ac",
+    "lpObjectInfo": "0x4bdf3c",
+    "lpPublicBytes": "0x66ed80"
+   },
+   {
+    "index": 53,
+    "name": "statisReport",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2615dc",
+    "lpObjectInfo": "0x4bbac4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 54,
+    "name": "Reportwpm",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26160c",
+    "lpObjectInfo": "0x4bbea4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 55,
+    "name": "Reportwpt",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26163c",
+    "lpObjectInfo": "0x4bc18c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 56,
+    "name": "Reportwpot",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26166c",
+    "lpObjectInfo": "0x4baf24",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 57,
+    "name": "barcodeform",
+    "member_count": 0,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26169c",
+    "lpObjectInfo": "0x4be8d4",
+    "lpPublicBytes": "0x6b1524"
+   },
+   {
+    "index": 58,
+    "name": "ResultInsulin",
+    "member_count": 92,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2616cc",
+    "lpObjectInfo": "0x597744",
+    "lpPublicBytes": "0x68faa4"
+   },
+   {
+    "index": 59,
+    "name": "start",
+    "member_count": 10,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2616fc",
+    "lpObjectInfo": "0x4c2138",
+    "lpPublicBytes": "0x691098"
+   },
+   {
+    "index": 60,
+    "name": "Resultbilharzias",
+    "member_count": 64,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26172c",
+    "lpObjectInfo": "0x53fd54",
+    "lpPublicBytes": "0x68e9a8"
+   },
+   {
+    "index": 61,
+    "name": "Reportcross",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26175c",
+    "lpObjectInfo": "0x4bbbbc",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 62,
+    "name": "Reportmony1",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26178c",
+    "lpObjectInfo": "0x4b911c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 63,
+    "name": "Reportsemen",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2617bc",
+    "lpObjectInfo": "0x4bc474",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 64,
+    "name": "Reportanyreport",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2617ec",
+    "lpObjectInfo": "0x4bb9cc",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 65,
+    "name": "BCWFonts",
+    "member_count": 7,
+    "object_type": "0x18001",
+    "record_file_offset": "0x26181c",
+    "lpObjectInfo": "0x4b8bd8",
+    "lpPublicBytes": "0x66eccc"
+   },
+   {
+    "index": 66,
+    "name": "reportsetup",
+    "member_count": 113,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26184c",
+    "lpObjectInfo": "0x5d892c",
+    "lpPublicBytes": "0x6a32b0"
+   },
+   {
+    "index": 67,
+    "name": "patienthistory",
+    "member_count": 22,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26187c",
+    "lpObjectInfo": "0x4e87b4",
+    "lpPublicBytes": "0x683ad8"
+   },
+   {
+    "index": 68,
+    "name": "resultselectro",
+    "member_count": 144,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2618ac",
+    "lpObjectInfo": "0x612e2c",
+    "lpPublicBytes": "0x68f81c"
+   },
+   {
+    "index": 69,
+    "name": "resultcardiac",
+    "member_count": 66,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2618dc",
+    "lpObjectInfo": "0x54d850",
+    "lpPublicBytes": "0x68ea1c"
+   },
+   {
+    "index": 70,
+    "name": "resultTumors",
+    "member_count": 100,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26190c",
+    "lpObjectInfo": "0x5a5484",
+    "lpPublicBytes": "0x690060"
+   },
+   {
+    "index": 71,
+    "name": "resultVitamins",
+    "member_count": 110,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26193c",
+    "lpObjectInfo": "0x5bde18",
+    "lpPublicBytes": "0x6900e0"
+   },
+   {
+    "index": 72,
+    "name": "resultTrace",
+    "member_count": 183,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26196c",
+    "lpObjectInfo": "0x63612c",
+    "lpPublicBytes": "0x6901d8"
+   },
+   {
+    "index": 73,
+    "name": "resultanytest",
+    "member_count": 33,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26199c",
+    "lpObjectInfo": "0x51420c",
+    "lpPublicBytes": "0x6908c4"
+   },
+   {
+    "index": 74,
+    "name": "Resultpregnancy",
+    "member_count": 44,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2619cc",
+    "lpObjectInfo": "0x50f188",
+    "lpPublicBytes": "0x68fc00"
+   },
+   {
+    "index": 75,
+    "name": "pricelists",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2619fc",
+    "lpObjectInfo": "0x4baa4c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 76,
+    "name": "resultiron",
+    "member_count": 62,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261a2c",
+    "lpObjectInfo": "0x5432d8",
+    "lpPublicBytes": "0x68ee7c"
+   },
+   {
+    "index": 77,
+    "name": "reportsetup2",
+    "member_count": 69,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261a5c",
+    "lpObjectInfo": "0x55f5f4",
+    "lpPublicBytes": "0x6dde84"
+   },
+   {
+    "index": 78,
+    "name": "labfunction",
+    "member_count": 25,
+    "object_type": "0x18001",
+    "record_file_offset": "0x261a8c",
+    "lpObjectInfo": "0x4b8c10",
+    "lpPublicBytes": "0x66db90"
+   },
+   {
+    "index": 79,
+    "name": "ResultFertlity",
+    "member_count": 125,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261abc",
+    "lpObjectInfo": "0x60022c",
+    "lpPublicBytes": "0x68fb8c"
+   },
+   {
+    "index": 80,
+    "name": "ResultSuprarenal",
+    "member_count": 117,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261aec",
+    "lpObjectInfo": "0x5de20c",
+    "lpPublicBytes": "0x68fc54"
+   },
+   {
+    "index": 81,
+    "name": "server",
+    "member_count": 17,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261b1c",
+    "lpObjectInfo": "0x4cd584",
+    "lpPublicBytes": "0x691138"
+   },
+   {
+    "index": 82,
+    "name": "users",
+    "member_count": 57,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261b4c",
+    "lpObjectInfo": "0x529fb8",
+    "lpPublicBytes": "0x66dd4c"
+   },
+   {
+    "index": 83,
+    "name": "login",
+    "member_count": 13,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261b7c",
+    "lpObjectInfo": "0x4bf578",
+    "lpPublicBytes": "0x670994"
+   },
+   {
+    "index": 84,
+    "name": "userspw",
+    "member_count": 12,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261bac",
+    "lpObjectInfo": "0x4c16e4",
+    "lpPublicBytes": "0x66e164"
+   },
+   {
+    "index": 85,
+    "name": "Reportlog",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x261bdc",
+    "lpObjectInfo": "0x4bb7dc",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 86,
+    "name": "z_units",
+    "member_count": 14,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261c0c",
+    "lpObjectInfo": "0x4c527c",
+    "lpPublicBytes": "0x671a1c"
+   },
+   {
+    "index": 87,
+    "name": "z_barcodes",
+    "member_count": 14,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261c3c",
+    "lpObjectInfo": "0x4c7b04",
+    "lpPublicBytes": "0x671b28"
+   },
+   {
+    "index": 88,
+    "name": "z_branchs",
+    "member_count": 14,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261c6c",
+    "lpObjectInfo": "0x4c5fe4",
+    "lpPublicBytes": "0x671a1c"
+   },
+   {
+    "index": 89,
+    "name": "z_logs",
+    "member_count": 14,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261c9c",
+    "lpObjectInfo": "0x4c37ac",
+    "lpPublicBytes": "0x671a1c"
+   },
+   {
+    "index": 90,
+    "name": "z_gehats",
+    "member_count": 56,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261ccc",
+    "lpObjectInfo": "0x516a70",
+    "lpPublicBytes": "0x66e100"
+   },
+   {
+    "index": 91,
+    "name": "z_pricelists",
+    "member_count": 27,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261cfc",
+    "lpObjectInfo": "0x4d19ac",
+    "lpPublicBytes": "0x680c34"
+   },
+   {
+    "index": 92,
+    "name": "z_titles",
+    "member_count": 15,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261d2c",
+    "lpObjectInfo": "0x4cc580",
+    "lpPublicBytes": "0x671b74"
+   },
+   {
+    "index": 93,
+    "name": "labtolab",
+    "member_count": 32,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261d5c",
+    "lpObjectInfo": "0x4f8238",
+    "lpPublicBytes": "0x670780"
+   },
+   {
+    "index": 94,
+    "name": "sarfz",
+    "member_count": 26,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261d8c",
+    "lpObjectInfo": "0x4d3f0c",
+    "lpPublicBytes": "0x66f310"
+   },
+   {
+    "index": 95,
+    "name": "instrument",
+    "member_count": 29,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261dbc",
+    "lpObjectInfo": "0x533158",
+    "lpPublicBytes": "0x6811d8"
+   },
+   {
+    "index": 96,
+    "name": "Reportmony2",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x261dec",
+    "lpObjectInfo": "0x4b8f2c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 97,
+    "name": "Reportmony3",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x261e1c",
+    "lpObjectInfo": "0x4b9eac",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 98,
+    "name": "zarf",
+    "member_count": 1,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x261e4c",
+    "lpObjectInfo": "0x4bcc50",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 99,
+    "name": "aaaClass",
+    "member_count": 15,
+    "object_type": "0x118003",
+    "record_file_offset": "0x261e7c",
+    "lpObjectInfo": "0x4bd0dc",
+    "lpPublicBytes": "0x671568"
+   },
+   {
+    "index": 100,
+    "name": "static1",
+    "member_count": 30,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261eac",
+    "lpObjectInfo": "0x5119c0",
+    "lpPublicBytes": "0x670ca0"
+   },
+   {
+    "index": 101,
+    "name": "reportstatic1",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x261edc",
+    "lpObjectInfo": "0x4ba85c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 102,
+    "name": "static2",
+    "member_count": 26,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261f0c",
+    "lpObjectInfo": "0x50ca38",
+    "lpPublicBytes": "0x670cec"
+   },
+   {
+    "index": 103,
+    "name": "static3",
+    "member_count": 15,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261f3c",
+    "lpObjectInfo": "0x4e6a74",
+    "lpPublicBytes": "0x670bd4"
+   },
+   {
+    "index": 104,
+    "name": "noteic",
+    "member_count": 10,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261f6c",
+    "lpObjectInfo": "0x4c6d4c",
+    "lpPublicBytes": "0x671ef4"
+   },
+   {
+    "index": 105,
+    "name": "z_group",
+    "member_count": 14,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261f9c",
+    "lpObjectInfo": "0x4c4514",
+    "lpPublicBytes": "0x671a1c"
+   },
+   {
+    "index": 106,
+    "name": "antibioticfrm",
+    "member_count": 29,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261fcc",
+    "lpObjectInfo": "0x4f1ff0",
+    "lpPublicBytes": "0x671bfc"
+   },
+   {
+    "index": 107,
+    "name": "Frmcomment",
+    "member_count": 17,
+    "object_type": "0x18083",
+    "record_file_offset": "0x261ffc",
+    "lpObjectInfo": "0x4c97b4",
+    "lpPublicBytes": "0x671c48"
+   },
+   {
+    "index": 108,
+    "name": "static4",
+    "member_count": 18,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26202c",
+    "lpObjectInfo": "0x4f60b0",
+    "lpPublicBytes": "0x670d38"
+   },
+   {
+    "index": 109,
+    "name": "z_customgroup",
+    "member_count": 31,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26205c",
+    "lpObjectInfo": "0x4d8300",
+    "lpPublicBytes": "0x680df8"
+   },
+   {
+    "index": 110,
+    "name": "Reportsemen1",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26208c",
+    "lpObjectInfo": "0x4bb114",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 111,
+    "name": "commentsetup",
+    "member_count": 5,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2620bc",
+    "lpObjectInfo": "0x4e31c8",
+    "lpPublicBytes": "0x6c3094"
+   },
+   {
+    "index": 112,
+    "name": "abbrevi",
+    "member_count": 41,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2620ec",
+    "lpObjectInfo": "0x4ec280",
+    "lpPublicBytes": "0x671dac"
+   },
+   {
+    "index": 113,
+    "name": "learntest",
+    "member_count": 6,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26211c",
+    "lpObjectInfo": "0x4c2bc0",
+    "lpPublicBytes": "0x671e98"
+   },
+   {
+    "index": 114,
+    "name": "converter",
+    "member_count": 14,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26214c",
+    "lpObjectInfo": "0x4ca6ac",
+    "lpPublicBytes": "0x671f48"
+   },
+   {
+    "index": 115,
+    "name": "shoppingfrm",
+    "member_count": 15,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26217c",
+    "lpObjectInfo": "0x4ce5a8",
+    "lpPublicBytes": "0x671fa0"
+   },
+   {
+    "index": 116,
+    "name": "frmTip",
+    "member_count": 5,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2621ac",
+    "lpObjectInfo": "0x4bee70",
+    "lpPublicBytes": "0x70b720"
+   },
+   {
+    "index": 117,
+    "name": "workpaper2",
+    "member_count": 18,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2621dc",
+    "lpObjectInfo": "0x4de1fc",
+    "lpPublicBytes": "0x672140"
+   },
+   {
+    "index": 118,
+    "name": "Reportsemen2",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26220c",
+    "lpObjectInfo": "0x4b98dc",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 119,
+    "name": "resultabuse",
+    "member_count": 95,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26223c",
+    "lpObjectInfo": "0x576334",
+    "lpPublicBytes": "0x690290"
+   },
+   {
+    "index": 120,
+    "name": "resultdrugs",
+    "member_count": 98,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26226c",
+    "lpObjectInfo": "0x5aa1c0",
+    "lpPublicBytes": "0x690304"
+   },
+   {
+    "index": 121,
+    "name": "resultcoagfactor",
+    "member_count": 79,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26229c",
+    "lpObjectInfo": "0x5822b0",
+    "lpPublicBytes": "0x6907a0"
+   },
+   {
+    "index": 122,
+    "name": "resultImmunoglob",
+    "member_count": 72,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2622cc",
+    "lpObjectInfo": "0x566e94",
+    "lpPublicBytes": "0x69071c"
+   },
+   {
+    "index": 123,
+    "name": "resultimmun",
+    "member_count": 138,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2622fc",
+    "lpObjectInfo": "0x605fac",
+    "lpPublicBytes": "0x690814"
+   },
+   {
+    "index": 124,
+    "name": "resulthgbelec",
+    "member_count": 51,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26232c",
+    "lpObjectInfo": "0x52ffd8",
+    "lpPublicBytes": "0x68e4dc"
+   },
+   {
+    "index": 125,
+    "name": "resultprotelec",
+    "member_count": 61,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26235c",
+    "lpObjectInfo": "0x554954",
+    "lpPublicBytes": "0x68e550"
+   },
+   {
+    "index": 126,
+    "name": "resultbloodgas",
+    "member_count": 81,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26238c",
+    "lpObjectInfo": "0x5aef60",
+    "lpPublicBytes": "0x68e468"
+   },
+   {
+    "index": 127,
+    "name": "resultcrossm",
+    "member_count": 140,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2623bc",
+    "lpObjectInfo": "0x5d3324",
+    "lpPublicBytes": "0x68e824"
+   },
+   {
+    "index": 128,
+    "name": "resultsugacurve",
+    "member_count": 78,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2623ec",
+    "lpObjectInfo": "0x593018",
+    "lpPublicBytes": "0x690420"
+   },
+   {
+    "index": 129,
+    "name": "resultstone",
+    "member_count": 72,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26241c",
+    "lpObjectInfo": "0x558268",
+    "lpPublicBytes": "0x68dea0"
+   },
+   {
+    "index": 130,
+    "name": "resultprostata",
+    "member_count": 113,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26244c",
+    "lpObjectInfo": "0x5cdd78",
+    "lpPublicBytes": "0x68de20"
+   },
+   {
+    "index": 131,
+    "name": "resultcsf",
+    "member_count": 83,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26247c",
+    "lpObjectInfo": "0x58a7b0",
+    "lpPublicBytes": "0x68ead0"
+   },
+   {
+    "index": 132,
+    "name": "resultzn",
+    "member_count": 36,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2624ac",
+    "lpObjectInfo": "0x51936c",
+    "lpPublicBytes": "0x68f418"
+   },
+   {
+    "index": 133,
+    "name": "resultTUBERCULIN",
+    "member_count": 32,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2624dc",
+    "lpObjectInfo": "0x4f0024",
+    "lpPublicBytes": "0x68f318"
+   },
+   {
+    "index": 134,
+    "name": "resultmarrow",
+    "member_count": 64,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26250c",
+    "lpObjectInfo": "0x57a254",
+    "lpPublicBytes": "0x68f498"
+   },
+   {
+    "index": 135,
+    "name": "resultpostcoital",
+    "member_count": 60,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26253c",
+    "lpObjectInfo": "0x536350",
+    "lpPublicBytes": "0x68f518"
+   },
+   {
+    "index": 136,
+    "name": "moenysharekat",
+    "member_count": 27,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26256c",
+    "lpObjectInfo": "0x4fa3c0",
+    "lpPublicBytes": "0x673fe0"
+   },
+   {
+    "index": 137,
+    "name": "resultrenal",
+    "member_count": 80,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26259c",
+    "lpObjectInfo": "0x57e1e4",
+    "lpPublicBytes": "0x690608"
+   },
+   {
+    "index": 138,
+    "name": "patienthistory2",
+    "member_count": 17,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2625cc",
+    "lpObjectInfo": "0x4cb5b4",
+    "lpPublicBytes": "0x671c48"
+   },
+   {
+    "index": 139,
+    "name": "qcfrm",
+    "member_count": 27,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2625fc",
+    "lpObjectInfo": "0x4dc9ac",
+    "lpPublicBytes": "0x6722cc"
+   },
+   {
+    "index": 140,
+    "name": "printerselect",
+    "member_count": 11,
+    "object_type": "0x18001",
+    "record_file_offset": "0x26262c",
+    "lpObjectInfo": "0x4b8ccc",
+    "lpPublicBytes": "0x66eccc"
+   },
+   {
+    "index": 141,
+    "name": "z_labaccount",
+    "member_count": 18,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26265c",
+    "lpObjectInfo": "0x4d2be4",
+    "lpPublicBytes": "0x67416c"
+   },
+   {
+    "index": 142,
+    "name": "static5",
+    "member_count": 21,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26268c",
+    "lpObjectInfo": "0x4e164c",
+    "lpPublicBytes": "0x670b3c"
+   },
+   {
+    "index": 143,
+    "name": "logindetect",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2626bc",
+    "lpObjectInfo": "0x4b9fa4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 144,
+    "name": "logindete",
+    "member_count": 6,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2626ec",
+    "lpObjectInfo": "0x4bfd5c",
+    "lpPublicBytes": "0x6742d4"
+   },
+   {
+    "index": 145,
+    "name": "Reportqc",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26271c",
+    "lpObjectInfo": "0x4ba194",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 146,
+    "name": "Reportlivers",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26274c",
+    "lpObjectInfo": "0x4ba954",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 147,
+    "name": "setup1",
+    "member_count": 56,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26277c",
+    "lpObjectInfo": "0x55bba0",
+    "lpPublicBytes": "0x6cee20"
+   },
+   {
+    "index": 148,
+    "name": "setup2",
+    "member_count": 58,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2627ac",
+    "lpObjectInfo": "0x551070",
+    "lpPublicBytes": "0x6d8238"
+   },
+   {
+    "index": 149,
+    "name": "setup3",
+    "member_count": 42,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2627dc",
+    "lpObjectInfo": "0x5b3e0c",
+    "lpPublicBytes": "0x6d8138"
+   },
+   {
+    "index": 150,
+    "name": "normal_test",
+    "member_count": 36,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26280c",
+    "lpObjectInfo": "0x4cf64c",
+    "lpPublicBytes": "0x671c48"
+   },
+   {
+    "index": 151,
+    "name": "Reporturines",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26283c",
+    "lpObjectInfo": "0x4ba764",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 152,
+    "name": "ReportSugars",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26286c",
+    "lpObjectInfo": "0x4b96ec",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 153,
+    "name": "Reporttotals",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26289c",
+    "lpObjectInfo": "0x4bad34",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 154,
+    "name": "Reportanyreports",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2628cc",
+    "lpObjectInfo": "0x4bc664",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 155,
+    "name": "repotrwidals",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2628fc",
+    "lpObjectInfo": "0x4b9bc4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 156,
+    "name": "Reportcrosss",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26292c",
+    "lpObjectInfo": "0x4ba28c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 157,
+    "name": "reportculutres",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26295c",
+    "lpObjectInfo": "0x4bc94c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 158,
+    "name": "Reportsemen1s",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26298c",
+    "lpObjectInfo": "0x4bc284",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 159,
+    "name": "Reportsemen2s",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2629bc",
+    "lpObjectInfo": "0x4bb304",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 160,
+    "name": "Reportmony4",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2629ec",
+    "lpObjectInfo": "0x4b9acc",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 161,
+    "name": "moenymozafeen",
+    "member_count": 27,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262a1c",
+    "lpObjectInfo": "0x4fc6b4",
+    "lpPublicBytes": "0x673fe0"
+   },
+   {
+    "index": 162,
+    "name": "resultha1c",
+    "member_count": 39,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262a4c",
+    "lpObjectInfo": "0x50a350",
+    "lpPublicBytes": "0x690378"
+   },
+   {
+    "index": 163,
+    "name": "resultwidal2",
+    "member_count": 51,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262a7c",
+    "lpObjectInfo": "0x563240",
+    "lpPublicBytes": "0x68ee08"
+   },
+   {
+    "index": 164,
+    "name": "Frm_pic",
+    "member_count": 55,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262aac",
+    "lpObjectInfo": "0x4d9a54",
+    "lpPublicBytes": "0x6ade98"
+   },
+   {
+    "index": 165,
+    "name": "CRect",
+    "member_count": 20,
+    "object_type": "0x118003",
+    "record_file_offset": "0x262adc",
+    "lpObjectInfo": "0x4bd448",
+    "lpPublicBytes": "0x72a7a8"
+   },
+   {
+    "index": 166,
+    "name": "rpttotaliss",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262b0c",
+    "lpObjectInfo": "0x4bca44",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 167,
+    "name": "rpttotalisss",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262b3c",
+    "lpObjectInfo": "0x4bbcb4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 168,
+    "name": "Frm_pic2",
+    "member_count": 31,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262b6c",
+    "lpObjectInfo": "0x4d6bb4",
+    "lpPublicBytes": "0x6ae038"
+   },
+   {
+    "index": 169,
+    "name": "resultretios",
+    "member_count": 97,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262b9c",
+    "lpObjectInfo": "0x5a0a54",
+    "lpPublicBytes": "0x68fa30"
+   },
+   {
+    "index": 170,
+    "name": "ReportFatoraC",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262bcc",
+    "lpObjectInfo": "0x4bc75c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 171,
+    "name": "resulthpylori",
+    "member_count": 83,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262bfc",
+    "lpObjectInfo": "0x54a080",
+    "lpPublicBytes": "0x68ee7c"
+   },
+   {
+    "index": 172,
+    "name": "Frmac",
+    "member_count": 26,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262c2c",
+    "lpObjectInfo": "0x4dfb28",
+    "lpPublicBytes": "0x671dac"
+   },
+   {
+    "index": 173,
+    "name": "Reportmony5",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262c5c",
+    "lpObjectInfo": "0x4b930c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 174,
+    "name": "saveIOtemp",
+    "member_count": 10,
+    "object_type": "0x18001",
+    "record_file_offset": "0x262c8c",
+    "lpObjectInfo": "0x4b8c4c",
+    "lpPublicBytes": "0x66c738"
+   },
+   {
+    "index": 175,
+    "name": "CardFrm",
+    "member_count": 0,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262cbc",
+    "lpObjectInfo": "0x4bd888",
+    "lpPublicBytes": "0x6a55a0"
+   },
+   {
+    "index": 176,
+    "name": "CardFrmSetx",
+    "member_count": 22,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262cec",
+    "lpObjectInfo": "0x4d07f8",
+    "lpPublicBytes": "0x6d7c00"
+   },
+   {
+    "index": 177,
+    "name": "Resultsemen5",
+    "member_count": 216,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262d1c",
+    "lpObjectInfo": "0x63e184",
+    "lpPublicBytes": "0x68fff8"
+   },
+   {
+    "index": 178,
+    "name": "Patient_samples",
+    "member_count": 89,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262d4c",
+    "lpObjectInfo": "0x56aaf8",
+    "lpPublicBytes": "0x66f1a8"
+   },
+   {
+    "index": 179,
+    "name": "ReportFatorareset",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262d7c",
+    "lpObjectInfo": "0x4bc854",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 180,
+    "name": "ReportPatPhone",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262dac",
+    "lpObjectInfo": "0x4b95f4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 181,
+    "name": "pricelistsN",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262ddc",
+    "lpObjectInfo": "0x4ba574",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 182,
+    "name": "SMSfrmsenderos",
+    "member_count": 139,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262e0c",
+    "lpObjectInfo": "0x619a00",
+    "lpPublicBytes": "0x6706e0"
+   },
+   {
+    "index": 183,
+    "name": "BiosData",
+    "member_count": 8,
+    "object_type": "0x118003",
+    "record_file_offset": "0x262e3c",
+    "lpObjectInfo": "0x4bcf8c",
+    "lpPublicBytes": "0x735dec"
+   },
+   {
+    "index": 184,
+    "name": "boisais",
+    "member_count": 16,
+    "object_type": "0x18001",
+    "record_file_offset": "0x262e6c",
+    "lpObjectInfo": "0x4b8d70",
+    "lpPublicBytes": "0x6efb64"
+   },
+   {
+    "index": 185,
+    "name": "ReportSMS",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262e9c",
+    "lpObjectInfo": "0x4b99d4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 186,
+    "name": "Reportmony11",
+    "member_count": 1,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262ecc",
+    "lpObjectInfo": "0x4bce78",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 187,
+    "name": "Reportliver7his",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262efc",
+    "lpObjectInfo": "0x4bbdac",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 188,
+    "name": "Reportlivers7his",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262f2c",
+    "lpObjectInfo": "0x4bb4f4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 189,
+    "name": "mInputbox",
+    "member_count": 12,
+    "object_type": "0x18001",
+    "record_file_offset": "0x262f5c",
+    "lpObjectInfo": "0x4b8e20",
+    "lpPublicBytes": "0x66dab0"
+   },
+   {
+    "index": 190,
+    "name": "ReportTestTime",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262f8c",
+    "lpObjectInfo": "0x4ba66c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 191,
+    "name": "RPTPatientVisit",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x262fbc",
+    "lpObjectInfo": "0x4b94fc",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 192,
+    "name": "static6",
+    "member_count": 24,
+    "object_type": "0x18083",
+    "record_file_offset": "0x262fec",
+    "lpObjectInfo": "0x507d74",
+    "lpPublicBytes": "0x670c40"
+   },
+   {
+    "index": 193,
+    "name": "ReportPCR",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26301c",
+    "lpObjectInfo": "0x4bb5ec",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 194,
+    "name": "ReportFatorareset8",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26304c",
+    "lpObjectInfo": "0x4bc56c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 195,
+    "name": "ResultPCR",
+    "member_count": 37,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26307c",
+    "lpObjectInfo": "0x53c828",
+    "lpPublicBytes": "0x690568"
+   },
+   {
+    "index": 196,
+    "name": "labmainTools",
+    "member_count": 6,
+    "object_type": "0x18083",
+    "record_file_offset": "0x2630ac",
+    "lpObjectInfo": "0x4c0584",
+    "lpPublicBytes": "0x735408"
+   },
+   {
+    "index": 197,
+    "name": "ReportPCRs",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2630dc",
+    "lpObjectInfo": "0x4b97e4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 198,
+    "name": "ResultFMF",
+    "member_count": 48,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26310c",
+    "lpObjectInfo": "0x56e81c",
+    "lpPublicBytes": "0x68ee08"
+   },
+   {
+    "index": 199,
+    "name": "resultLBC",
+    "member_count": 33,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26313c",
+    "lpObjectInfo": "0x4ee0a8",
+    "lpPublicBytes": "0x69067c"
+   },
+   {
+    "index": 200,
+    "name": "ReportLBC",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26316c",
+    "lpObjectInfo": "0x4bb20c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 201,
+    "name": "ReportLBCs",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26319c",
+    "lpObjectInfo": "0x4bb01c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 202,
+    "name": "ReportZN",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2631cc",
+    "lpObjectInfo": "0x4bae2c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 203,
+    "name": "ReportZNs",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2631fc",
+    "lpObjectInfo": "0x4bac3c",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 204,
+    "name": "Reportmony01",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26322c",
+    "lpObjectInfo": "0x4b9db4",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 205,
+    "name": "resultIgeAllergy",
+    "member_count": 231,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26325c",
+    "lpObjectInfo": "0x62771c",
+    "lpPublicBytes": "0x68f29c"
+   },
+   {
+    "index": 206,
+    "name": "ReportIGE1",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x26328c",
+    "lpObjectInfo": "0x4b9214",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 207,
+    "name": "ReportIGE1s",
+    "member_count": 0,
+    "object_type": "0x1018083",
+    "record_file_offset": "0x2632bc",
+    "lpObjectInfo": "0x4b9024",
+    "lpPublicBytes": "0x66e8e8"
+   },
+   {
+    "index": 208,
+    "name": "otherfun",
+    "member_count": 2,
+    "object_type": "0x18001",
+    "record_file_offset": "0x2632ec",
+    "lpObjectInfo": "0x4b8c8c",
+    "lpPublicBytes": "0x66eccc"
+   },
+   {
+    "index": 209,
+    "name": "ResulturineAuto",
+    "member_count": 184,
+    "object_type": "0x18083",
+    "record_file_offset": "0x26331c",
+    "lpObjectInfo": "0x620754",
+    "lpPublicBytes": "0x68d3b4"
+   }
+  ],
+  "member_descriptor_tables": 247,
+  "member_descriptor_records": 11280,
+  "member_descriptor_stride_bytes": 40,
+  "literal_pool_region_file_offsets": [
+   "0x269000",
+   "0x1780000"
+  ],
+  "object_name_blob_file_offsets": [
+   "0x26aebc",
+   "0x26b980"
+  ],
+  "object_type_flag_distribution": {
+   "0x18083": 132,
+   "0x18001": 9,
+   "0x1018083": 66,
+   "0x118003": 3
+  },
+  "member_count_stats": {
+   "min": 0,
+   "max": 231,
+   "sum": 8026,
+   "objects_with_zero_members": 65
+  },
+  "report_forms": [
+   "Reporturine",
+   "Reportliver",
+   "ReportFatora",
+   "Reporttotal",
+   "Reporthistory",
+   "Reportworkp",
+   "Reportwp",
+   "ReportSugar",
+   "reportculutre",
+   "ReportFatoraS",
+   "Reporthistory2",
+   "Reportinstrument",
+   "Reportshareka",
+   "Reportwpm",
+   "Reportwpt",
+   "Reportwpot",
+   "Reportcross",
+   "Reportmony1",
+   "Reportsemen",
+   "Reportanyreport",
+   "reportsetup",
+   "reportsetup2",
+   "Reportlog",
+   "Reportmony2",
+   "Reportmony3",
+   "reportstatic1",
+   "Reportsemen1",
+   "Reportsemen2",
+   "Reportqc",
+   "Reportlivers",
+   "Reporturines",
+   "ReportSugars",
+   "Reporttotals",
+   "Reportanyreports",
+   "Reportcrosss",
+   "reportculutres",
+   "Reportsemen1s",
+   "Reportsemen2s",
+   "Reportmony4",
+   "rpttotaliss",
+   "rpttotalisss",
+   "ReportFatoraC",
+   "Reportmony5",
+   "ReportFatorareset",
+   "ReportPatPhone",
+   "ReportSMS",
+   "Reportmony11",
+   "Reportliver7his",
+   "Reportlivers7his",
+   "ReportTestTime",
+   "RPTPatientVisit",
+   "ReportPCR",
+   "ReportFatorareset8",
+   "ReportPCRs",
+   "ReportLBC",
+   "ReportLBCs",
+   "ReportZN",
+   "ReportZNs",
+   "Reportmony01",
+   "ReportIGE1",
+   "ReportIGE1s"
+  ],
+  "result_forms": [
+   "Resultliver",
+   "Resulturine",
+   "Resultsugar",
+   "Resultstool",
+   "Resultkidney",
+   "resultculutre",
+   "Resultlipids",
+   "Resultsemen",
+   "resultABO",
+   "resultwidal",
+   "resulthepatitis",
+   "ResultESR",
+   "resultcbc",
+   "ResultTORCH",
+   "resultcrp",
+   "resultpt",
+   "resulthormon",
+   "ResultInsulin",
+   "Resultbilharzias",
+   "resultselectro",
+   "resultcardiac",
+   "resultTumors",
+   "resultVitamins",
+   "resultTrace",
+   "resultanytest",
+   "Resultpregnancy",
+   "resultiron",
+   "ResultFertlity",
+   "ResultSuprarenal",
+   "resultabuse",
+   "resultdrugs",
+   "resultcoagfactor",
+   "resultImmunoglob",
+   "resultimmun",
+   "resulthgbelec",
+   "resultprotelec",
+   "resultbloodgas",
+   "resultcrossm",
+   "resultsugacurve",
+   "resultstone",
+   "resultprostata",
+   "resultcsf",
+   "resultzn",
+   "resultTUBERCULIN",
+   "resultmarrow",
+   "resultpostcoital",
+   "resultrenal",
+   "resultha1c",
+   "resultwidal2",
+   "resultretios",
+   "resulthpylori",
+   "Resultsemen5",
+   "ResultPCR",
+   "ResultFMF",
+   "resultLBC",
+   "resultIgeAllergy",
+   "ResulturineAuto"
+  ],
+  "module_objects": [
+   "labdb",
+   "labdb1",
+   "BCWFonts",
+   "labfunction",
+   "printerselect",
+   "saveIOtemp",
+   "boisais",
+   "mInputbox",
+   "otherfun"
+  ],
+  "class_objects": [
+   "aaaClass",
+   "CRect",
+   "BiosData"
+  ],
+  "project_data_file_offset": "0xbd64c",
+  "object_table_va": "0x00660b98",
+  "object_table_guid": "{AF67146C-22A0-4591-9ED3-52BEB9D44D32}",
+  "object_table_wObjectCount": 210,
+  "object_table_wCompiledCount": 210,
+  "object_table_wObjectsInUse": 212,
+  "object_array_va": "0x00660bec",
+  "object_array_file_offset": "0x260bec",
+  "project_name": "Real_lab_system",
+  "compiled_code_entry_table_va": "0x00460b98",
+  "compiled_code_entry_table_file_offset": "0x60b98",
+  "compiled_code_entry_count": 349,
+  "compiled_code_entries_with_vb6_prologue": 349,
+  "object_type_distribution": {
+   "0x18083": 132,
+   "0x18001": 9,
+   "0x1018083": 66,
+   "0x118003": 3
+  }
+ },
+ "strings": {
+  "pool_region_file_offsets": [
+   "0x269000",
+   "0x1780000"
+  ],
+  "total_extracted": 369877,
+  "retained": 101812,
+  "skipped_noise_in_pool": 34745,
+  "retained_outside_pool": 40,
+  "unique_texts": 15143
+ },
+ "database": {
+  "unique_sql_strings": 2375,
+  "distinct_table_identifiers": 127,
+  "distinct_qualified_table_column_pairs": 508,
+  "distinct_column_tokens": 921,
+  "known_103_tables_referenced": [
+   "ESR",
+   "Helicobacter",
+   "Labbranch",
+   "MyLabSetting",
+   "PTC",
+   "SMSSender",
+   "SMStemplate",
+   "TORCH",
+   "abbreviations",
+   "antibio",
+   "antibiotic",
+   "anyreport",
+   "barcodes",
+   "comments",
+   "constanttable",
+   "converts",
+   "cultures",
+   "culturesec",
+   "customgrouptable",
+   "customtesttable",
+   "daytip",
+   "hba1c",
+   "history",
+   "insulin",
+   "loggroup",
+   "normalrange",
+   "patientinfo",
+   "patients",
+   "patienttest",
+   "pictures",
+   "pricelist",
+   "pricemenu",
+   "ratios",
+   "reportview",
+   "smsgroups",
+   "smslist",
+   "subgrouptable",
+   "testlearn",
+   "testtable",
+   "testtemp",
+   "testunits",
+   "titless"
+  ],
+  "known_103_tables_referenced_count": 42,
+  "known_103_not_referenced": [
+   "Paste Errors"
+  ],
+  "additional_table_identifiers_not_in_supplied_list": [
+   [
+    "ABO",
+    2
+   ],
+   [
+    "Abuse",
+    7
+   ],
+   [
+    "BILH",
+    2
+   ],
+   [
+    "BONEMAR",
+    2
+   ],
+   [
+    "BloodGases",
+    10
+   ],
+   [
+    "CBC",
+    1
+   ],
+   [
+    "CRP",
+    2
+   ],
+   [
+    "CSFT",
+    6
+   ],
+   [
+    "CoagFactors",
+    3
+   ],
+   [
+    "Drugs",
+    3
+   ],
+   [
+    "Electrolytes",
+    3
+   ],
+   [
+    "FMF",
+    2
+   ],
+   [
+    "Fertlity",
+    3
+   ],
+   [
+    "GLUCOSETOLERANCE",
+    3
+   ],
+   [
+    "Gehats",
+    24
+   ],
+   [
+    "Hgbectrophoresis",
+    3
+   ],
+   [
+    "IMMUNOLOGY",
+    3
+   ],
+   [
+    "IgEallergy",
+    8
+   ],
+   [
+    "Immunoglobulin",
+    3
+   ],
+   [
+    "Kidney",
+    3
+   ],
+   [
+    "LBC",
+    4
+   ],
+   [
+    "Pancreas",
+    3
+   ],
+   [
+    "Proelectrophoresis",
+    7
+   ],
+   [
+    "SUGAR",
+    1
+   ],
+   [
+    "Samples",
+    1
+   ],
+   [
+    "Sugar",
+    1
+   ],
+   [
+    "Suprarenal",
+    3
+   ],
+   [
+    "TUBERCULINT",
+    2
+   ],
+   [
+    "Tumors",
+    3
+   ],
+   [
+    "Urine",
+    1
+   ],
+   [
+    "Vitamins",
+    3
+   ],
+   [
+    "Win32_Processor",
+    1
+   ],
+   [
+    "ZN",
+    1
+   ],
+   [
+    "abo",
+    1
+   ],
+   [
+    "bilh",
+    1
+   ],
+   [
+    "bloodgases",
+    1
+   ],
+   [
+    "cardiac",
+    3
+   ],
+   [
+    "cbc",
+    19
+   ],
+   [
+    "crossmat",
+    3
+   ],
+   [
+    "crp",
+    1
+   ],
+   [
+    "csft",
+    1
+   ],
+   [
+    "cultureanti",
+    7
+   ],
+   [
+    "hepatitis",
+    3
+   ],
+   [
+    "hormones",
+    3
+   ],
+   [
+    "instrument",
+    5
+   ],
+   [
+    "iron",
+    2
+   ],
+   [
+    "kidney",
+    2
+   ],
+   [
+    "lipids",
+    3
+   ],
+   [
+    "liver",
+    3
+   ],
+   [
+    "loger",
+    5
+   ],
+   [
+    "noteic",
+    5
+   ],
+   [
+    "patienttotal",
+    10
+   ],
+   [
+    "payment",
+    28
+   ],
+   [
+    "phone",
+    11
+   ],
+   [
+    "postcoitalt",
+    2
+   ],
+   [
+    "pregnancy",
+    5
+   ],
+   [
+    "prostaticx",
+    14
+   ],
+   [
+    "pt",
+    3
+   ],
+   [
+    "renalfailure",
+    3
+   ],
+   [
+    "samples",
+    3
+   ],
+   [
+    "sarfeda3",
+    2
+   ],
+   [
+    "seana",
+    7
+   ],
+   [
+    "semen",
+    5
+   ],
+   [
+    "sharekat",
+    5
+   ],
+   [
+    "sharekathesab",
+    19
+   ],
+   [
+    "shopping",
+    6
+   ],
+   [
+    "stone",
+    2
+   ],
+   [
+    "stool",
+    8
+   ],
+   [
+    "sugar",
+    1
+   ],
+   [
+    "tasgel",
+    6
+   ],
+   [
+    "testname",
+    6
+   ],
+   [
+    "trace",
+    3
+   ],
+   [
+    "urine",
+    5
+   ],
+   [
+    "useraccounts",
+    9
+   ],
+   [
+    "wasl",
+    19
+   ],
+   [
+    "widal",
+    2
+   ],
+   [
+    "widal2",
+    2
+   ],
+   [
+    "zn",
+    1
+   ]
+  ]
+ },
+ "printing": {
+  "printer_roles": {
+   "reportprinter": "0x2d6194",
+   "reportprinterx": "0x2821b4",
+   "zarfprinter": "0x285150",
+   "barcodeprinter": "0x2b175c",
+   "waslprinter": "0x2ab334",
+   "IDprinter": "0x2a5ea4"
+  },
+  "pdf_stack": [
+   "Bullzip PDF Printer (0x2a24c8)",
+   "Bullzip PDF Printer 11.1 - Create File (0x2a25a0)",
+   "winspool.drv (0x26e924)",
+   "EnumPrintersA (0x26eb1c)",
+   "SetDefaultPrinterA (0x26ebb0)"
+  ],
+  "pdf_output_directories": [
+   "D:\\PDF (0x28237c)",
+   "D:\\PDF\\ (0x282390)",
+   "D:\\PDF\\Free\\ (0x298e88)",
+   "D:\\PDF\\Contracts\\ (0x2a2384)",
+   "D:\\PDF\\Individual\\ (0x2a2510)",
+   "D:\\PDF\\LabToLab\\ (0x2a2570)"
+  ]
+ },
+ "authentication": {
+  "hard_coded_credential_literals_found": 0,
+  "notes": "29 credential-related strings, all UI captions / control names / INI keys. No password, PIN, hash, DPB/CMG blob or Password= connection-string clause found. SQL Server strings use Integrated Security=SSPI or Persist Security Info=True without credentials.",
+  "ini_password_keys": [
+   "IDPasswordL (0x2a5f50)",
+   "IDPasswordT (0x2a5f6c)",
+   "IDPasswordF (0x2a5f88)",
+   "IDPasswordB (0x2a5fa4)",
+   "IDPasswordS (0x2a5fc0)",
+   "IDPasswordV (0x2a5fdc)",
+   "IDPasswordA (0x2a5ff8)"
+  ]
+ },
+ "tooling_notes": {
+  "rea_version": "6.7.0",
+  "ghidra_version": "12.1.4",
+  "jdk": "21.0.13.21-hotspot",
+  "rea_mcp_inspect_pe_resources": "blocked: max_file_bytes 67108864 < target size 76292096",
+  "rea_mcp_open_binary": "blocked: REA MCP server process has no JAVA_HOME; resolves java.exe as a relative command",
+  "ghidra_analysis": "see tool_log.md"
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "e_lfanew": "0xb8",
+ "pe_header_file_offset": "0xb8",
+ "coff_header_offset": "0xbc",
+ "optional_header_offset": "0xd0",
+ "section_table_offset": "0x1b0",
+ "export_dir": "0x0 size 0",
+ "import_dir_rva": "0x4897d04 size 40",
+ "import_dir_file_offset": "0x4897d04",
+ "resource_dir_rva": "0x48e4000 size 161682",
+ "resource_dir_file_offset": "0x489a000",
+ "exception_dir": "0x0",
+ "security_dir": "0x0 size 0",
+ "basereloc_dir_rva": "0x0 size 0",
+ "debug_dir_rva": "0x0 size 0",
+ "iat_dir_rva": "0x1000 size 928",
+ "clr_dir_rva": "0x0 size 0",
+ "entry_point_file_offset": "0x7142c"
+}

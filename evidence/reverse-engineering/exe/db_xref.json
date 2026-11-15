@@ -1,0 +1,407 @@
+{
+ "known_103_matched_via_sql": {
+  "patientinfo": 447,
+  "reportview": 2,
+  "insulin": 23,
+  "subgrouptable": 14,
+  "testtable": 62,
+  "normalrange": 99,
+  "testtemp": 7,
+  "SMSSender": 15,
+  "culturesec": 11,
+  "MyLabSetting": 2,
+  "smsgroups": 10,
+  "smslist": 13,
+  "SMStemplate": 6,
+  "patienttest": 304,
+  "cultures": 25,
+  "PTC": 8,
+  "pictures": 88,
+  "hba1c": 3,
+  "ratios": 5,
+  "Helicobacter": 7,
+  "constanttable": 3,
+  "ESR": 5,
+  "comments": 28,
+  "history": 13,
+  "TORCH": 4,
+  "anyreport": 5,
+  "pricelist": 9,
+  "customtesttable": 8,
+  "customgrouptable": 6,
+  "titless": 10,
+  "barcodes": 7,
+  "loggroup": 7,
+  "Labbranch": 7,
+  "testunits": 7,
+  "antibiotic": 13,
+  "patients": 28,
+  "pricemenu": 2,
+  "antibio": 2,
+  "abbreviations": 6,
+  "testlearn": 2,
+  "converts": 2,
+  "daytip": 2
+ },
+ "unknown_table_identifiers": [
+  [
+   "ABO",
+   2
+  ],
+  [
+   "Abuse",
+   7
+  ],
+  [
+   "BILH",
+   2
+  ],
+  [
+   "BONEMAR",
+   2
+  ],
+  [
+   "BloodGases",
+   10
+  ],
+  [
+   "CBC",
+   1
+  ],
+  [
+   "CRP",
+   2
+  ],
+  [
+   "CSFT",
+   6
+  ],
+  [
+   "CoagFactors",
+   3
+  ],
+  [
+   "Drugs",
+   3
+  ],
+  [
+   "Electrolytes",
+   3
+  ],
+  [
+   "FMF",
+   2
+  ],
+  [
+   "Fertlity",
+   3
+  ],
+  [
+   "GLUCOSETOLERANCE",
+   3
+  ],
+  [
+   "Gehats",
+   24
+  ],
+  [
+   "Hgbectrophoresis",
+   3
+  ],
+  [
+   "IMMUNOLOGY",
+   3
+  ],
+  [
+   "IgEallergy",
+   8
+  ],
+  [
+   "Immunoglobulin",
+   3
+  ],
+  [
+   "Kidney",
+   3
+  ],
+  [
+   "LBC",
+   4
+  ],
+  [
+   "Pancreas",
+   3
+  ],
+  [
+   "Proelectrophoresis",
+   7
+  ],
+  [
+   "SUGAR",
+   1
+  ],
+  [
+   "Samples",
+   1
+  ],
+  [
+   "Sugar",
+   1
+  ],
+  [
+   "Suprarenal",
+   3
+  ],
+  [
+   "TUBERCULINT",
+   2
+  ],
+  [
+   "Tumors",
+   3
+  ],
+  [
+   "Urine",
+   1
+  ],
+  [
+   "Vitamins",
+   3
+  ],
+  [
+   "Win32_Processor",
+   1
+  ],
+  [
+   "ZN",
+   1
+  ],
+  [
+   "abo",
+   1
+  ],
+  [
+   "bilh",
+   1
+  ],
+  [
+   "bloodgases",
+   1
+  ],
+  [
+   "cardiac",
+   3
+  ],
+  [
+   "cbc",
+   19
+  ],
+  [
+   "crossmat",
+   3
+  ],
+  [
+   "crp",
+   1
+  ],
+  [
+   "csft",
+   1
+  ],
+  [
+   "cultureanti",
+   7
+  ],
+  [
+   "hepatitis",
+   3
+  ],
+  [
+   "hormones",
+   3
+  ],
+  [
+   "instrument",
+   5
+  ],
+  [
+   "iron",
+   2
+  ],
+  [
+   "kidney",
+   2
+  ],
+  [
+   "lipids",
+   3
+  ],
+  [
+   "liver",
+   3
+  ],
+  [
+   "loger",
+   5
+  ],
+  [
+   "noteic",
+   5
+  ],
+  [
+   "patienttotal",
+   10
+  ],
+  [
+   "payment",
+   28
+  ],
+  [
+   "phone",
+   11
+  ],
+  [
+   "postcoitalt",
+   2
+  ],
+  [
+   "pregnancy",
+   5
+  ],
+  [
+   "prostaticx",
+   14
+  ],
+  [
+   "pt",
+   3
+  ],
+  [
+   "renalfailure",
+   3
+  ],
+  [
+   "samples",
+   3
+  ],
+  [
+   "sarfeda3",
+   2
+  ],
+  [
+   "seana",
+   7
+  ],
+  [
+   "semen",
+   5
+  ],
+  [
+   "sharekat",
+   5
+  ],
+  [
+   "sharekathesab",
+   19
+  ],
+  [
+   "shopping",
+   6
+  ],
+  [
+   "stone",
+   2
+  ],
+  [
+   "stool",
+   8
+  ],
+  [
+   "sugar",
+   1
+  ],
+  [
+   "tasgel",
+   6
+  ],
+  [
+   "testname",
+   6
+  ],
+  [
+   "trace",
+   3
+  ],
+  [
+   "urine",
+   5
+  ],
+  [
+   "useraccounts",
+   9
+  ],
+  [
+   "wasl",
+   19
+  ],
+  [
+   "widal",
+   2
+  ],
+  [
+   "widal2",
+   2
+  ],
+  [
+   "zn",
+   1
+  ]
+ ],
+ "known_standalone_string_hits": {
+  "patients": {
+   "occurrences": 1,
+   "first_offset": "0x26fb60",
+   "example": "Patients"
+  },
+  "patienttest": {
+   "occurrences": 3,
+   "first_offset": "0x284404",
+   "example": "patienttest"
+  },
+  "abbreviations": {
+   "occurrences": 1,
+   "first_offset": "0x401362",
+   "example": "Abbreviations"
+  },
+  "comments": {
+   "occurrences": 2,
+   "first_offset": "0x2a22a8",
+   "example": "Comments"
+  },
+  "ratios": {
+   "occurrences": 2,
+   "first_offset": "0x2ca260",
+   "example": "ratios"
+  },
+  "hba1c": {
+   "occurrences": 2,
+   "first_offset": "0x32d0f8",
+   "example": "hba1c"
+  },
+  "insulin": {
+   "occurrences": 2,
+   "first_offset": "0x2716cc",
+   "example": "insulin"
+  },
+  "loggroup": {
+   "occurrences": 3,
+   "first_offset": "0x2a9860",
+   "example": "loggroup"
+  },
+  "anyreport": {
+   "occurrences": 2,
+   "first_offset": "0x26b140",
+   "example": "anyreport"
+  }
+ }
+}

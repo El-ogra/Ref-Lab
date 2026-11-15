@@ -1,0 +1,1638 @@
+{
+ "import_table_directory": {
+  "rva": "0x4897d04",
+  "size": 40
+ },
+ "dll_count": 1,
+ "total_imported_functions": 231,
+ "delay_imports": [],
+ "bound_imports": [],
+ "dlls": {
+  "MSVBVM60.DLL": {
+   "dll": "MSVBVM60.DLL",
+   "descriptor_file_offset": "0x4897d04",
+   "original_first_thunk_rva": "0x4897d2c",
+   "first_thunk_rva": "0x1000",
+   "count": 231,
+   "functions": [
+    {
+     "name": "EVENT_SINK_GetIDsOfNames",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1000",
+     "thunk_file_offset": "0x1000"
+    },
+    {
+     "name": "__vbaVarTstGt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1004",
+     "thunk_file_offset": "0x1004"
+    },
+    {
+     "name": "__vbaVarSub",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1008",
+     "thunk_file_offset": "0x1008"
+    },
+    {
+     "name": "__vbaStrI2",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x100c",
+     "thunk_file_offset": "0x100c"
+    },
+    {
+     "name": "_CIcos",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1010",
+     "thunk_file_offset": "0x1010"
+    },
+    {
+     "name": "_adj_fptan",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1014",
+     "thunk_file_offset": "0x1014"
+    },
+    {
+     "name": "__vbaStrI4",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1018",
+     "thunk_file_offset": "0x1018"
+    },
+    {
+     "name": "__vbaVarMove",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x101c",
+     "thunk_file_offset": "0x101c"
+    },
+    {
+     "name": "__vbaVarVargNofree",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1020",
+     "thunk_file_offset": "0x1020"
+    },
+    {
+     "name": "__vbaFreeVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1024",
+     "thunk_file_offset": "0x1024"
+    },
+    {
+     "name": "__vbaLateIdCall",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1028",
+     "thunk_file_offset": "0x1028"
+    },
+    {
+     "name": "__vbaStrVarMove",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x102c",
+     "thunk_file_offset": "0x102c"
+    },
+    {
+     "name": "__vbaLenBstr",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1030",
+     "thunk_file_offset": "0x1030"
+    },
+    {
+     "name": null,
+     "ordinal": 696,
+     "hint": null,
+     "thunk_rva": "0x1034",
+     "thunk_file_offset": "0x1034"
+    },
+    {
+     "name": "__vbaFreeVarList",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1038",
+     "thunk_file_offset": "0x1038"
+    },
+    {
+     "name": "__vbaEnd",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x103c",
+     "thunk_file_offset": "0x103c"
+    },
+    {
+     "name": "_adj_fdiv_m64",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1040",
+     "thunk_file_offset": "0x1040"
+    },
+    {
+     "name": "EVENT_SINK_Invoke",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1044",
+     "thunk_file_offset": "0x1044"
+    },
+    {
+     "name": "__vbaNextEachVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1048",
+     "thunk_file_offset": "0x1048"
+    },
+    {
+     "name": "__vbaLineInputVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x104c",
+     "thunk_file_offset": "0x104c"
+    },
+    {
+     "name": "__vbaFreeObjList",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1050",
+     "thunk_file_offset": "0x1050"
+    },
+    {
+     "name": null,
+     "ordinal": 516,
+     "hint": null,
+     "thunk_rva": "0x1054",
+     "thunk_file_offset": "0x1054"
+    },
+    {
+     "name": "__vbaVarFix",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1058",
+     "thunk_file_offset": "0x1058"
+    },
+    {
+     "name": "__vbaStrErrVarCopy",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x105c",
+     "thunk_file_offset": "0x105c"
+    },
+    {
+     "name": "_adj_fprem1",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1060",
+     "thunk_file_offset": "0x1060"
+    },
+    {
+     "name": "__vbaRecAnsiToUni",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1064",
+     "thunk_file_offset": "0x1064"
+    },
+    {
+     "name": null,
+     "ordinal": 626,
+     "hint": null,
+     "thunk_rva": "0x1068",
+     "thunk_file_offset": "0x1068"
+    },
+    {
+     "name": "__vbaForEachCollAd",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x106c",
+     "thunk_file_offset": "0x106c"
+    },
+    {
+     "name": "__vbaStrCat",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1070",
+     "thunk_file_offset": "0x1070"
+    },
+    {
+     "name": "__vbaVarCmpNe",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1074",
+     "thunk_file_offset": "0x1074"
+    },
+    {
+     "name": null,
+     "ordinal": 552,
+     "hint": null,
+     "thunk_rva": "0x1078",
+     "thunk_file_offset": "0x1078"
+    },
+    {
+     "name": "__vbaLsetFixstr",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x107c",
+     "thunk_file_offset": "0x107c"
+    },
+    {
+     "name": null,
+     "ordinal": 660,
+     "hint": null,
+     "thunk_rva": "0x1080",
+     "thunk_file_offset": "0x1080"
+    },
+    {
+     "name": null,
+     "ordinal": 553,
+     "hint": null,
+     "thunk_rva": "0x1084",
+     "thunk_file_offset": "0x1084"
+    },
+    {
+     "name": "__vbaRecDestruct",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1088",
+     "thunk_file_offset": "0x1088"
+    },
+    {
+     "name": "__vbaStrDate",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x108c",
+     "thunk_file_offset": "0x108c"
+    },
+    {
+     "name": "__vbaSetSystemError",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1090",
+     "thunk_file_offset": "0x1090"
+    },
+    {
+     "name": "__vbaNameFile",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1094",
+     "thunk_file_offset": "0x1094"
+    },
+    {
+     "name": "__vbaHresultCheckObj",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1098",
+     "thunk_file_offset": "0x1098"
+    },
+    {
+     "name": "__vbaLenVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x109c",
+     "thunk_file_offset": "0x109c"
+    },
+    {
+     "name": "_adj_fdiv_m32",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10a0",
+     "thunk_file_offset": "0x10a0"
+    },
+    {
+     "name": "__vbaVarTstLe",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10a4",
+     "thunk_file_offset": "0x10a4"
+    },
+    {
+     "name": "__vbaAryVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10a8",
+     "thunk_file_offset": "0x10a8"
+    },
+    {
+     "name": null,
+     "ordinal": 666,
+     "hint": null,
+     "thunk_rva": "0x10ac",
+     "thunk_file_offset": "0x10ac"
+    },
+    {
+     "name": null,
+     "ordinal": 667,
+     "hint": null,
+     "thunk_rva": "0x10b0",
+     "thunk_file_offset": "0x10b0"
+    },
+    {
+     "name": "Zombie_GetTypeInfo",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10b4",
+     "thunk_file_offset": "0x10b4"
+    },
+    {
+     "name": "__vbaVarCmpGe",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10b8",
+     "thunk_file_offset": "0x10b8"
+    },
+    {
+     "name": "__vbaAryDestruct",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10bc",
+     "thunk_file_offset": "0x10bc"
+    },
+    {
+     "name": "__vbaVarIndexLoadRefLock",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10c0",
+     "thunk_file_offset": "0x10c0"
+    },
+    {
+     "name": "__vbaLateMemSt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10c4",
+     "thunk_file_offset": "0x10c4"
+    },
+    {
+     "name": null,
+     "ordinal": 592,
+     "hint": null,
+     "thunk_rva": "0x10c8",
+     "thunk_file_offset": "0x10c8"
+    },
+    {
+     "name": null,
+     "ordinal": 593,
+     "hint": null,
+     "thunk_rva": "0x10cc",
+     "thunk_file_offset": "0x10cc"
+    },
+    {
+     "name": "__vbaForEachCollObj",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10d0",
+     "thunk_file_offset": "0x10d0"
+    },
+    {
+     "name": "__vbaBoolStr",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10d4",
+     "thunk_file_offset": "0x10d4"
+    },
+    {
+     "name": "__vbaExitProc",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10d8",
+     "thunk_file_offset": "0x10d8"
+    },
+    {
+     "name": "__vbaVarForInit",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10dc",
+     "thunk_file_offset": "0x10dc"
+    },
+    {
+     "name": null,
+     "ordinal": 594,
+     "hint": null,
+     "thunk_rva": "0x10e0",
+     "thunk_file_offset": "0x10e0"
+    },
+    {
+     "name": null,
+     "ordinal": 595,
+     "hint": null,
+     "thunk_rva": "0x10e4",
+     "thunk_file_offset": "0x10e4"
+    },
+    {
+     "name": "__vbaObjSet",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10e8",
+     "thunk_file_offset": "0x10e8"
+    },
+    {
+     "name": "__vbaOnError",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10ec",
+     "thunk_file_offset": "0x10ec"
+    },
+    {
+     "name": null,
+     "ordinal": 596,
+     "hint": null,
+     "thunk_rva": "0x10f0",
+     "thunk_file_offset": "0x10f0"
+    },
+    {
+     "name": "_adj_fdiv_m16i",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10f4",
+     "thunk_file_offset": "0x10f4"
+    },
+    {
+     "name": null,
+     "ordinal": 597,
+     "hint": null,
+     "thunk_rva": "0x10f8",
+     "thunk_file_offset": "0x10f8"
+    },
+    {
+     "name": "__vbaObjSetAddref",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x10fc",
+     "thunk_file_offset": "0x10fc"
+    },
+    {
+     "name": "_adj_fdivr_m16i",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1100",
+     "thunk_file_offset": "0x1100"
+    },
+    {
+     "name": null,
+     "ordinal": 598,
+     "hint": null,
+     "thunk_rva": "0x1104",
+     "thunk_file_offset": "0x1104"
+    },
+    {
+     "name": "__vbaVarIndexLoad",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1108",
+     "thunk_file_offset": "0x1108"
+    },
+    {
+     "name": null,
+     "ordinal": 599,
+     "hint": null,
+     "thunk_rva": "0x110c",
+     "thunk_file_offset": "0x110c"
+    },
+    {
+     "name": "__vbaBoolVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1110",
+     "thunk_file_offset": "0x1110"
+    },
+    {
+     "name": null,
+     "ordinal": 520,
+     "hint": null,
+     "thunk_rva": "0x1114",
+     "thunk_file_offset": "0x1114"
+    },
+    {
+     "name": "__vbaFPFix",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1118",
+     "thunk_file_offset": "0x1118"
+    },
+    {
+     "name": "__vbaRefVarAry",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x111c",
+     "thunk_file_offset": "0x111c"
+    },
+    {
+     "name": "__vbaVarTstLt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1120",
+     "thunk_file_offset": "0x1120"
+    },
+    {
+     "name": "__vbaFpR8",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1124",
+     "thunk_file_offset": "0x1124"
+    },
+    {
+     "name": "__vbaBoolVarNull",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1128",
+     "thunk_file_offset": "0x1128"
+    },
+    {
+     "name": "_CIsin",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x112c",
+     "thunk_file_offset": "0x112c"
+    },
+    {
+     "name": "__vbaErase",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1130",
+     "thunk_file_offset": "0x1130"
+    },
+    {
+     "name": null,
+     "ordinal": 631,
+     "hint": null,
+     "thunk_rva": "0x1134",
+     "thunk_file_offset": "0x1134"
+    },
+    {
+     "name": null,
+     "ordinal": 525,
+     "hint": null,
+     "thunk_rva": "0x1138",
+     "thunk_file_offset": "0x1138"
+    },
+    {
+     "name": "__vbaNextEachCollObj",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x113c",
+     "thunk_file_offset": "0x113c"
+    },
+    {
+     "name": "__vbaVarCmpGt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1140",
+     "thunk_file_offset": "0x1140"
+    },
+    {
+     "name": null,
+     "ordinal": 632,
+     "hint": null,
+     "thunk_rva": "0x1144",
+     "thunk_file_offset": "0x1144"
+    },
+    {
+     "name": "__vbaLateMemStAd",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1148",
+     "thunk_file_offset": "0x1148"
+    },
+    {
+     "name": "__vbaChkstk",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x114c",
+     "thunk_file_offset": "0x114c"
+    },
+    {
+     "name": "__vbaFileClose",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1150",
+     "thunk_file_offset": "0x1150"
+    },
+    {
+     "name": "EVENT_SINK_AddRef",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1154",
+     "thunk_file_offset": "0x1154"
+    },
+    {
+     "name": "__vbaVarAbs",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1158",
+     "thunk_file_offset": "0x1158"
+    },
+    {
+     "name": "__vbaGenerateBoundsError",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x115c",
+     "thunk_file_offset": "0x115c"
+    },
+    {
+     "name": "__vbaExitEachColl",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1160",
+     "thunk_file_offset": "0x1160"
+    },
+    {
+     "name": "__vbaStrCmp",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1164",
+     "thunk_file_offset": "0x1164"
+    },
+    {
+     "name": null,
+     "ordinal": 529,
+     "hint": null,
+     "thunk_rva": "0x1168",
+     "thunk_file_offset": "0x1168"
+    },
+    {
+     "name": "__vbaVarTstEq",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x116c",
+     "thunk_file_offset": "0x116c"
+    },
+    {
+     "name": "__vbaAryConstruct2",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1170",
+     "thunk_file_offset": "0x1170"
+    },
+    {
+     "name": "__vbaDateR8",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1174",
+     "thunk_file_offset": "0x1174"
+    },
+    {
+     "name": null,
+     "ordinal": 560,
+     "hint": null,
+     "thunk_rva": "0x1178",
+     "thunk_file_offset": "0x1178"
+    },
+    {
+     "name": "__vbaObjVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x117c",
+     "thunk_file_offset": "0x117c"
+    },
+    {
+     "name": "DllFunctionCall",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1180",
+     "thunk_file_offset": "0x1180"
+    },
+    {
+     "name": "__vbaVarLateMemSt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1184",
+     "thunk_file_offset": "0x1184"
+    },
+    {
+     "name": "__vbaVarOr",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1188",
+     "thunk_file_offset": "0x1188"
+    },
+    {
+     "name": "__vbaCastObjVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x118c",
+     "thunk_file_offset": "0x118c"
+    },
+    {
+     "name": "__vbaRedimPreserve",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1190",
+     "thunk_file_offset": "0x1190"
+    },
+    {
+     "name": "__vbaStrR4",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1194",
+     "thunk_file_offset": "0x1194"
+    },
+    {
+     "name": "__vbaLbound",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1198",
+     "thunk_file_offset": "0x1198"
+    },
+    {
+     "name": "_adj_fpatan",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x119c",
+     "thunk_file_offset": "0x119c"
+    },
+    {
+     "name": "__vbaR4Var",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11a0",
+     "thunk_file_offset": "0x11a0"
+    },
+    {
+     "name": "__vbaFixstrConstruct",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11a4",
+     "thunk_file_offset": "0x11a4"
+    },
+    {
+     "name": "__vbaLateIdCallLd",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11a8",
+     "thunk_file_offset": "0x11a8"
+    },
+    {
+     "name": "Zombie_GetTypeInfoCount",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11ac",
+     "thunk_file_offset": "0x11ac"
+    },
+    {
+     "name": "__vbaRedim",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11b0",
+     "thunk_file_offset": "0x11b0"
+    },
+    {
+     "name": "__vbaStrR8",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11b4",
+     "thunk_file_offset": "0x11b4"
+    },
+    {
+     "name": "__vbaRecUniToAnsi",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11b8",
+     "thunk_file_offset": "0x11b8"
+    },
+    {
+     "name": "EVENT_SINK_Release",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11bc",
+     "thunk_file_offset": "0x11bc"
+    },
+    {
+     "name": "__vbaNew",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11c0",
+     "thunk_file_offset": "0x11c0"
+    },
+    {
+     "name": null,
+     "ordinal": 600,
+     "hint": null,
+     "thunk_rva": "0x11c4",
+     "thunk_file_offset": "0x11c4"
+    },
+    {
+     "name": "_CIsqrt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11c8",
+     "thunk_file_offset": "0x11c8"
+    },
+    {
+     "name": "__vbaObjIs",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11cc",
+     "thunk_file_offset": "0x11cc"
+    },
+    {
+     "name": "__vbaLateIdCallSt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11d0",
+     "thunk_file_offset": "0x11d0"
+    },
+    {
+     "name": "__vbaVarAnd",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11d4",
+     "thunk_file_offset": "0x11d4"
+    },
+    {
+     "name": "EVENT_SINK_QueryInterface",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11d8",
+     "thunk_file_offset": "0x11d8"
+    },
+    {
+     "name": "__vbaStrUI1",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11dc",
+     "thunk_file_offset": "0x11dc"
+    },
+    {
+     "name": "__vbaVarMul",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11e0",
+     "thunk_file_offset": "0x11e0"
+    },
+    {
+     "name": "__vbaExceptHandler",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11e4",
+     "thunk_file_offset": "0x11e4"
+    },
+    {
+     "name": null,
+     "ordinal": 711,
+     "hint": null,
+     "thunk_rva": "0x11e8",
+     "thunk_file_offset": "0x11e8"
+    },
+    {
+     "name": null,
+     "ordinal": 712,
+     "hint": null,
+     "thunk_rva": "0x11ec",
+     "thunk_file_offset": "0x11ec"
+    },
+    {
+     "name": "__vbaStrToUnicode",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11f0",
+     "thunk_file_offset": "0x11f0"
+    },
+    {
+     "name": "__vbaPrintFile",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11f4",
+     "thunk_file_offset": "0x11f4"
+    },
+    {
+     "name": null,
+     "ordinal": 606,
+     "hint": null,
+     "thunk_rva": "0x11f8",
+     "thunk_file_offset": "0x11f8"
+    },
+    {
+     "name": "__vbaDateStr",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x11fc",
+     "thunk_file_offset": "0x11fc"
+    },
+    {
+     "name": "_adj_fprem",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1200",
+     "thunk_file_offset": "0x1200"
+    },
+    {
+     "name": "_adj_fdivr_m64",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1204",
+     "thunk_file_offset": "0x1204"
+    },
+    {
+     "name": null,
+     "ordinal": 607,
+     "hint": null,
+     "thunk_rva": "0x1208",
+     "thunk_file_offset": "0x1208"
+    },
+    {
+     "name": "__vbaVarDiv",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x120c",
+     "thunk_file_offset": "0x120c"
+    },
+    {
+     "name": "__vbaI2Str",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1210",
+     "thunk_file_offset": "0x1210"
+    },
+    {
+     "name": null,
+     "ordinal": 714,
+     "hint": null,
+     "thunk_rva": "0x1214",
+     "thunk_file_offset": "0x1214"
+    },
+    {
+     "name": "__vbaLateIdStAd",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1218",
+     "thunk_file_offset": "0x1218"
+    },
+    {
+     "name": null,
+     "ordinal": 715,
+     "hint": null,
+     "thunk_rva": "0x121c",
+     "thunk_file_offset": "0x121c"
+    },
+    {
+     "name": null,
+     "ordinal": 608,
+     "hint": null,
+     "thunk_rva": "0x1220",
+     "thunk_file_offset": "0x1220"
+    },
+    {
+     "name": "__vbaVarCmpLe",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1224",
+     "thunk_file_offset": "0x1224"
+    },
+    {
+     "name": null,
+     "ordinal": 716,
+     "hint": null,
+     "thunk_rva": "0x1228",
+     "thunk_file_offset": "0x1228"
+    },
+    {
+     "name": null,
+     "ordinal": 531,
+     "hint": null,
+     "thunk_rva": "0x122c",
+     "thunk_file_offset": "0x122c"
+    },
+    {
+     "name": "__vbaFPException",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1230",
+     "thunk_file_offset": "0x1230"
+    },
+    {
+     "name": "__vbaInStrVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1234",
+     "thunk_file_offset": "0x1234"
+    },
+    {
+     "name": null,
+     "ordinal": 319,
+     "hint": null,
+     "thunk_rva": "0x1238",
+     "thunk_file_offset": "0x1238"
+    },
+    {
+     "name": "__vbaUbound",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x123c",
+     "thunk_file_offset": "0x123c"
+    },
+    {
+     "name": "__vbaStrVarVal",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1240",
+     "thunk_file_offset": "0x1240"
+    },
+    {
+     "name": null,
+     "ordinal": 534,
+     "hint": null,
+     "thunk_rva": "0x1244",
+     "thunk_file_offset": "0x1244"
+    },
+    {
+     "name": "__vbaVarCat",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1248",
+     "thunk_file_offset": "0x1248"
+    },
+    {
+     "name": "__vbaCheckType",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x124c",
+     "thunk_file_offset": "0x124c"
+    },
+    {
+     "name": null,
+     "ordinal": 535,
+     "hint": null,
+     "thunk_rva": "0x1250",
+     "thunk_file_offset": "0x1250"
+    },
+    {
+     "name": "__vbaDateVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1254",
+     "thunk_file_offset": "0x1254"
+    },
+    {
+     "name": "__vbaI2Var",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1258",
+     "thunk_file_offset": "0x1258"
+    },
+    {
+     "name": null,
+     "ordinal": 644,
+     "hint": null,
+     "thunk_rva": "0x125c",
+     "thunk_file_offset": "0x125c"
+    },
+    {
+     "name": null,
+     "ordinal": 537,
+     "hint": null,
+     "thunk_rva": "0x1260",
+     "thunk_file_offset": "0x1260"
+    },
+    {
+     "name": null,
+     "ordinal": 645,
+     "hint": null,
+     "thunk_rva": "0x1264",
+     "thunk_file_offset": "0x1264"
+    },
+    {
+     "name": "_CIlog",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1268",
+     "thunk_file_offset": "0x1268"
+    },
+    {
+     "name": "__vbaFileOpen",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x126c",
+     "thunk_file_offset": "0x126c"
+    },
+    {
+     "name": "__vbaR8Str",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1270",
+     "thunk_file_offset": "0x1270"
+    },
+    {
+     "name": "__vbaVarLateMemCallLdRf",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1274",
+     "thunk_file_offset": "0x1274"
+    },
+    {
+     "name": "__vbaInStr",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1278",
+     "thunk_file_offset": "0x1278"
+    },
+    {
+     "name": "__vbaNew2",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x127c",
+     "thunk_file_offset": "0x127c"
+    },
+    {
+     "name": null,
+     "ordinal": 571,
+     "hint": null,
+     "thunk_rva": "0x1280",
+     "thunk_file_offset": "0x1280"
+    },
+    {
+     "name": "__vbaVarInt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1284",
+     "thunk_file_offset": "0x1284"
+    },
+    {
+     "name": "_adj_fdiv_m32i",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1288",
+     "thunk_file_offset": "0x1288"
+    },
+    {
+     "name": "_adj_fdivr_m32i",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x128c",
+     "thunk_file_offset": "0x128c"
+    },
+    {
+     "name": null,
+     "ordinal": 573,
+     "hint": null,
+     "thunk_rva": "0x1290",
+     "thunk_file_offset": "0x1290"
+    },
+    {
+     "name": "__vbaStrCopy",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1294",
+     "thunk_file_offset": "0x1294"
+    },
+    {
+     "name": "__vbaVarSetObj",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1298",
+     "thunk_file_offset": "0x1298"
+    },
+    {
+     "name": null,
+     "ordinal": 681,
+     "hint": null,
+     "thunk_rva": "0x129c",
+     "thunk_file_offset": "0x129c"
+    },
+    {
+     "name": "__vbaVarCmpLt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12a0",
+     "thunk_file_offset": "0x12a0"
+    },
+    {
+     "name": "__vbaFreeStrList",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12a4",
+     "thunk_file_offset": "0x12a4"
+    },
+    {
+     "name": null,
+     "ordinal": 576,
+     "hint": null,
+     "thunk_rva": "0x12a8",
+     "thunk_file_offset": "0x12a8"
+    },
+    {
+     "name": "_adj_fdivr_m32",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12ac",
+     "thunk_file_offset": "0x12ac"
+    },
+    {
+     "name": "__vbaPowerR8",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12b0",
+     "thunk_file_offset": "0x12b0"
+    },
+    {
+     "name": "__vbaR8Var",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12b4",
+     "thunk_file_offset": "0x12b4"
+    },
+    {
+     "name": "_adj_fdiv_r",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12b8",
+     "thunk_file_offset": "0x12b8"
+    },
+    {
+     "name": null,
+     "ordinal": 685,
+     "hint": null,
+     "thunk_rva": "0x12bc",
+     "thunk_file_offset": "0x12bc"
+    },
+    {
+     "name": null,
+     "ordinal": 100,
+     "hint": null,
+     "thunk_rva": "0x12c0",
+     "thunk_file_offset": "0x12c0"
+    },
+    {
+     "name": "__vbaVarTstNe",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12c4",
+     "thunk_file_offset": "0x12c4"
+    },
+    {
+     "name": "__vbaVarSetVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12c8",
+     "thunk_file_offset": "0x12c8"
+    },
+    {
+     "name": "__vbaI4Var",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12cc",
+     "thunk_file_offset": "0x12cc"
+    },
+    {
+     "name": "__vbaVarCmpEq",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12d0",
+     "thunk_file_offset": "0x12d0"
+    },
+    {
+     "name": null,
+     "ordinal": 610,
+     "hint": null,
+     "thunk_rva": "0x12d4",
+     "thunk_file_offset": "0x12d4"
+    },
+    {
+     "name": "__vbaAryLock",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12d8",
+     "thunk_file_offset": "0x12d8"
+    },
+    {
+     "name": "__vbaVarAdd",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12dc",
+     "thunk_file_offset": "0x12dc"
+    },
+    {
+     "name": "__vbaLateMemCall",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12e0",
+     "thunk_file_offset": "0x12e0"
+    },
+    {
+     "name": null,
+     "ordinal": 320,
+     "hint": null,
+     "thunk_rva": "0x12e4",
+     "thunk_file_offset": "0x12e4"
+    },
+    {
+     "name": "__vbaStrToAnsi",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12e8",
+     "thunk_file_offset": "0x12e8"
+    },
+    {
+     "name": "__vbaVarDup",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12ec",
+     "thunk_file_offset": "0x12ec"
+    },
+    {
+     "name": null,
+     "ordinal": 612,
+     "hint": null,
+     "thunk_rva": "0x12f0",
+     "thunk_file_offset": "0x12f0"
+    },
+    {
+     "name": null,
+     "ordinal": 321,
+     "hint": null,
+     "thunk_rva": "0x12f4",
+     "thunk_file_offset": "0x12f4"
+    },
+    {
+     "name": "__vbaVerifyVarObj",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12f8",
+     "thunk_file_offset": "0x12f8"
+    },
+    {
+     "name": "__vbaOnGoCheck",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x12fc",
+     "thunk_file_offset": "0x12fc"
+    },
+    {
+     "name": "__vbaFpI2",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1300",
+     "thunk_file_offset": "0x1300"
+    },
+    {
+     "name": "__vbaCheckTypeVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1304",
+     "thunk_file_offset": "0x1304"
+    },
+    {
+     "name": "__vbaVarMod",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1308",
+     "thunk_file_offset": "0x1308"
+    },
+    {
+     "name": null,
+     "ordinal": 616,
+     "hint": null,
+     "thunk_rva": "0x130c",
+     "thunk_file_offset": "0x130c"
+    },
+    {
+     "name": "__vbaVarTstGe",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1310",
+     "thunk_file_offset": "0x1310"
+    },
+    {
+     "name": "__vbaFpI4",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1314",
+     "thunk_file_offset": "0x1314"
+    },
+    {
+     "name": "__vbaVarLateMemCallLd",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1318",
+     "thunk_file_offset": "0x1318"
+    },
+    {
+     "name": "__vbaVarCopy",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x131c",
+     "thunk_file_offset": "0x131c"
+    },
+    {
+     "name": "__vbaRecDestructAnsi",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1320",
+     "thunk_file_offset": "0x1320"
+    },
+    {
+     "name": "__vbaR8IntI2",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1324",
+     "thunk_file_offset": "0x1324"
+    },
+    {
+     "name": null,
+     "ordinal": 617,
+     "hint": null,
+     "thunk_rva": "0x1328",
+     "thunk_file_offset": "0x1328"
+    },
+    {
+     "name": "__vbaLateMemCallLd",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x132c",
+     "thunk_file_offset": "0x132c"
+    },
+    {
+     "name": "_CIatan",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1330",
+     "thunk_file_offset": "0x1330"
+    },
+    {
+     "name": "__vbaI2ErrVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1334",
+     "thunk_file_offset": "0x1334"
+    },
+    {
+     "name": "__vbaAryCopy",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1338",
+     "thunk_file_offset": "0x1338"
+    },
+    {
+     "name": "__vbaStrMove",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x133c",
+     "thunk_file_offset": "0x133c"
+    },
+    {
+     "name": "__vbaCastObj",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1340",
+     "thunk_file_offset": "0x1340"
+    },
+    {
+     "name": null,
+     "ordinal": 541,
+     "hint": null,
+     "thunk_rva": "0x1344",
+     "thunk_file_offset": "0x1344"
+    },
+    {
+     "name": "__vbaStrVarCopy",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1348",
+     "thunk_file_offset": "0x1348"
+    },
+    {
+     "name": "__vbaForEachVar",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x134c",
+     "thunk_file_offset": "0x134c"
+    },
+    {
+     "name": null,
+     "ordinal": 619,
+     "hint": null,
+     "thunk_rva": "0x1350",
+     "thunk_file_offset": "0x1350"
+    },
+    {
+     "name": null,
+     "ordinal": 542,
+     "hint": null,
+     "thunk_rva": "0x1354",
+     "thunk_file_offset": "0x1354"
+    },
+    {
+     "name": null,
+     "ordinal": 543,
+     "hint": null,
+     "thunk_rva": "0x1358",
+     "thunk_file_offset": "0x1358"
+    },
+    {
+     "name": "_allmul",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x135c",
+     "thunk_file_offset": "0x135c"
+    },
+    {
+     "name": "__vbaVarLateMemCallSt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1360",
+     "thunk_file_offset": "0x1360"
+    },
+    {
+     "name": null,
+     "ordinal": 544,
+     "hint": null,
+     "thunk_rva": "0x1364",
+     "thunk_file_offset": "0x1364"
+    },
+    {
+     "name": "__vbaLateIdSt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1368",
+     "thunk_file_offset": "0x1368"
+    },
+    {
+     "name": null,
+     "ordinal": 545,
+     "hint": null,
+     "thunk_rva": "0x136c",
+     "thunk_file_offset": "0x136c"
+    },
+    {
+     "name": "_CItan",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1370",
+     "thunk_file_offset": "0x1370"
+    },
+    {
+     "name": "__vbaNextEachCollAd",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1374",
+     "thunk_file_offset": "0x1374"
+    },
+    {
+     "name": null,
+     "ordinal": 546,
+     "hint": null,
+     "thunk_rva": "0x1378",
+     "thunk_file_offset": "0x1378"
+    },
+    {
+     "name": "__vbaAryUnlock",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x137c",
+     "thunk_file_offset": "0x137c"
+    },
+    {
+     "name": "__vbaFPInt",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1380",
+     "thunk_file_offset": "0x1380"
+    },
+    {
+     "name": null,
+     "ordinal": 547,
+     "hint": null,
+     "thunk_rva": "0x1384",
+     "thunk_file_offset": "0x1384"
+    },
+    {
+     "name": "__vbaVarForNext",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1388",
+     "thunk_file_offset": "0x1388"
+    },
+    {
+     "name": "_CIexp",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x138c",
+     "thunk_file_offset": "0x138c"
+    },
+    {
+     "name": "__vbaFreeObj",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1390",
+     "thunk_file_offset": "0x1390"
+    },
+    {
+     "name": "__vbaFreeStr",
+     "ordinal": null,
+     "hint": 0,
+     "thunk_rva": "0x1394",
+     "thunk_file_offset": "0x1394"
+    },
+    {
+     "name": null,
+     "ordinal": 581,
+     "hint": null,
+     "thunk_rva": "0x1398",
+     "thunk_file_offset": "0x1398"
+    }
+   ]
+  }
+ }
+}

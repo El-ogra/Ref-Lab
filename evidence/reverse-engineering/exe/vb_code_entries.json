@@ -1,0 +1,2450 @@
+{
+ "file_offset": "0x60b98",
+ "va": "0x460b98",
+ "count": 349,
+ "entries": [
+  {
+   "index": 0,
+   "code_va": "0x45e8140",
+   "code_rva": "0x41e8140",
+   "code_file_offset": "0x41e8140",
+   "vb6_prologue": true
+  },
+  {
+   "index": 1,
+   "code_va": "0x45e83a1",
+   "code_rva": "0x41e83a1",
+   "code_file_offset": "0x41e83a1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 2,
+   "code_va": "0x45e8602",
+   "code_rva": "0x41e8602",
+   "code_file_offset": "0x41e8602",
+   "vb6_prologue": true
+  },
+  {
+   "index": 3,
+   "code_va": "0x45e881e",
+   "code_rva": "0x41e881e",
+   "code_file_offset": "0x41e881e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 4,
+   "code_va": "0x45e88a6",
+   "code_rva": "0x41e88a6",
+   "code_file_offset": "0x41e88a6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 5,
+   "code_va": "0x45e88a6",
+   "code_rva": "0x41e88a6",
+   "code_file_offset": "0x41e88a6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 6,
+   "code_va": "0x45e8a30",
+   "code_rva": "0x41e8a30",
+   "code_file_offset": "0x41e8a30",
+   "vb6_prologue": true
+  },
+  {
+   "index": 7,
+   "code_va": "0x45e8c71",
+   "code_rva": "0x41e8c71",
+   "code_file_offset": "0x41e8c71",
+   "vb6_prologue": true
+  },
+  {
+   "index": 8,
+   "code_va": "0x45e8eb0",
+   "code_rva": "0x41e8eb0",
+   "code_file_offset": "0x41e8eb0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 9,
+   "code_va": "0x45e90ef",
+   "code_rva": "0x41e90ef",
+   "code_file_offset": "0x41e90ef",
+   "vb6_prologue": true
+  },
+  {
+   "index": 10,
+   "code_va": "0x45e9350",
+   "code_rva": "0x41e9350",
+   "code_file_offset": "0x41e9350",
+   "vb6_prologue": true
+  },
+  {
+   "index": 11,
+   "code_va": "0x45e95b1",
+   "code_rva": "0x41e95b1",
+   "code_file_offset": "0x41e95b1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 12,
+   "code_va": "0x45e9812",
+   "code_rva": "0x41e9812",
+   "code_file_offset": "0x41e9812",
+   "vb6_prologue": true
+  },
+  {
+   "index": 13,
+   "code_va": "0x45e9a2e",
+   "code_rva": "0x41e9a2e",
+   "code_file_offset": "0x41e9a2e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 14,
+   "code_va": "0x45e9ab6",
+   "code_rva": "0x41e9ab6",
+   "code_file_offset": "0x41e9ab6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 15,
+   "code_va": "0x45e9ab6",
+   "code_rva": "0x41e9ab6",
+   "code_file_offset": "0x41e9ab6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 16,
+   "code_va": "0x45e9c40",
+   "code_rva": "0x41e9c40",
+   "code_file_offset": "0x41e9c40",
+   "vb6_prologue": true
+  },
+  {
+   "index": 17,
+   "code_va": "0x45e9e81",
+   "code_rva": "0x41e9e81",
+   "code_file_offset": "0x41e9e81",
+   "vb6_prologue": true
+  },
+  {
+   "index": 18,
+   "code_va": "0x45ea0c0",
+   "code_rva": "0x41ea0c0",
+   "code_file_offset": "0x41ea0c0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 19,
+   "code_va": "0x45ea2ff",
+   "code_rva": "0x41ea2ff",
+   "code_file_offset": "0x41ea2ff",
+   "vb6_prologue": true
+  },
+  {
+   "index": 20,
+   "code_va": "0x45ea560",
+   "code_rva": "0x41ea560",
+   "code_file_offset": "0x41ea560",
+   "vb6_prologue": true
+  },
+  {
+   "index": 21,
+   "code_va": "0x45ea7c1",
+   "code_rva": "0x41ea7c1",
+   "code_file_offset": "0x41ea7c1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 22,
+   "code_va": "0x45eaa22",
+   "code_rva": "0x41eaa22",
+   "code_file_offset": "0x41eaa22",
+   "vb6_prologue": true
+  },
+  {
+   "index": 23,
+   "code_va": "0x45eac3e",
+   "code_rva": "0x41eac3e",
+   "code_file_offset": "0x41eac3e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 24,
+   "code_va": "0x45eacc6",
+   "code_rva": "0x41eacc6",
+   "code_file_offset": "0x41eacc6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 25,
+   "code_va": "0x45eacc6",
+   "code_rva": "0x41eacc6",
+   "code_file_offset": "0x41eacc6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 26,
+   "code_va": "0x45eae50",
+   "code_rva": "0x41eae50",
+   "code_file_offset": "0x41eae50",
+   "vb6_prologue": true
+  },
+  {
+   "index": 27,
+   "code_va": "0x45eb091",
+   "code_rva": "0x41eb091",
+   "code_file_offset": "0x41eb091",
+   "vb6_prologue": true
+  },
+  {
+   "index": 28,
+   "code_va": "0x45eb2d0",
+   "code_rva": "0x41eb2d0",
+   "code_file_offset": "0x41eb2d0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 29,
+   "code_va": "0x45eb50f",
+   "code_rva": "0x41eb50f",
+   "code_file_offset": "0x41eb50f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 30,
+   "code_va": "0x45eb770",
+   "code_rva": "0x41eb770",
+   "code_file_offset": "0x41eb770",
+   "vb6_prologue": true
+  },
+  {
+   "index": 31,
+   "code_va": "0x45eb9d1",
+   "code_rva": "0x41eb9d1",
+   "code_file_offset": "0x41eb9d1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 32,
+   "code_va": "0x45ebc32",
+   "code_rva": "0x41ebc32",
+   "code_file_offset": "0x41ebc32",
+   "vb6_prologue": true
+  },
+  {
+   "index": 33,
+   "code_va": "0x45ebe4e",
+   "code_rva": "0x41ebe4e",
+   "code_file_offset": "0x41ebe4e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 34,
+   "code_va": "0x45ebed6",
+   "code_rva": "0x41ebed6",
+   "code_file_offset": "0x41ebed6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 35,
+   "code_va": "0x45ebed6",
+   "code_rva": "0x41ebed6",
+   "code_file_offset": "0x41ebed6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 36,
+   "code_va": "0x45ec060",
+   "code_rva": "0x41ec060",
+   "code_file_offset": "0x41ec060",
+   "vb6_prologue": true
+  },
+  {
+   "index": 37,
+   "code_va": "0x45ec2a1",
+   "code_rva": "0x41ec2a1",
+   "code_file_offset": "0x41ec2a1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 38,
+   "code_va": "0x45ec4e0",
+   "code_rva": "0x41ec4e0",
+   "code_file_offset": "0x41ec4e0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 39,
+   "code_va": "0x45ec71f",
+   "code_rva": "0x41ec71f",
+   "code_file_offset": "0x41ec71f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 40,
+   "code_va": "0x45ec980",
+   "code_rva": "0x41ec980",
+   "code_file_offset": "0x41ec980",
+   "vb6_prologue": true
+  },
+  {
+   "index": 41,
+   "code_va": "0x45ecbe1",
+   "code_rva": "0x41ecbe1",
+   "code_file_offset": "0x41ecbe1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 42,
+   "code_va": "0x45ece42",
+   "code_rva": "0x41ece42",
+   "code_file_offset": "0x41ece42",
+   "vb6_prologue": true
+  },
+  {
+   "index": 43,
+   "code_va": "0x45ed05e",
+   "code_rva": "0x41ed05e",
+   "code_file_offset": "0x41ed05e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 44,
+   "code_va": "0x45ed0e6",
+   "code_rva": "0x41ed0e6",
+   "code_file_offset": "0x41ed0e6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 45,
+   "code_va": "0x45ed0e6",
+   "code_rva": "0x41ed0e6",
+   "code_file_offset": "0x41ed0e6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 46,
+   "code_va": "0x45ed270",
+   "code_rva": "0x41ed270",
+   "code_file_offset": "0x41ed270",
+   "vb6_prologue": true
+  },
+  {
+   "index": 47,
+   "code_va": "0x45ed4b1",
+   "code_rva": "0x41ed4b1",
+   "code_file_offset": "0x41ed4b1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 48,
+   "code_va": "0x45ed6f0",
+   "code_rva": "0x41ed6f0",
+   "code_file_offset": "0x41ed6f0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 49,
+   "code_va": "0x45ed92f",
+   "code_rva": "0x41ed92f",
+   "code_file_offset": "0x41ed92f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 50,
+   "code_va": "0x45edb90",
+   "code_rva": "0x41edb90",
+   "code_file_offset": "0x41edb90",
+   "vb6_prologue": true
+  },
+  {
+   "index": 51,
+   "code_va": "0x45eddf1",
+   "code_rva": "0x41eddf1",
+   "code_file_offset": "0x41eddf1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 52,
+   "code_va": "0x45ee052",
+   "code_rva": "0x41ee052",
+   "code_file_offset": "0x41ee052",
+   "vb6_prologue": true
+  },
+  {
+   "index": 53,
+   "code_va": "0x45ee26e",
+   "code_rva": "0x41ee26e",
+   "code_file_offset": "0x41ee26e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 54,
+   "code_va": "0x45ee2f6",
+   "code_rva": "0x41ee2f6",
+   "code_file_offset": "0x41ee2f6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 55,
+   "code_va": "0x45ee2f6",
+   "code_rva": "0x41ee2f6",
+   "code_file_offset": "0x41ee2f6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 56,
+   "code_va": "0x45ee480",
+   "code_rva": "0x41ee480",
+   "code_file_offset": "0x41ee480",
+   "vb6_prologue": true
+  },
+  {
+   "index": 57,
+   "code_va": "0x45ee6c1",
+   "code_rva": "0x41ee6c1",
+   "code_file_offset": "0x41ee6c1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 58,
+   "code_va": "0x45ee900",
+   "code_rva": "0x41ee900",
+   "code_file_offset": "0x41ee900",
+   "vb6_prologue": true
+  },
+  {
+   "index": 59,
+   "code_va": "0x45eeb3f",
+   "code_rva": "0x41eeb3f",
+   "code_file_offset": "0x41eeb3f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 60,
+   "code_va": "0x45eeda0",
+   "code_rva": "0x41eeda0",
+   "code_file_offset": "0x41eeda0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 61,
+   "code_va": "0x45ef001",
+   "code_rva": "0x41ef001",
+   "code_file_offset": "0x41ef001",
+   "vb6_prologue": true
+  },
+  {
+   "index": 62,
+   "code_va": "0x45ef262",
+   "code_rva": "0x41ef262",
+   "code_file_offset": "0x41ef262",
+   "vb6_prologue": true
+  },
+  {
+   "index": 63,
+   "code_va": "0x45ef47e",
+   "code_rva": "0x41ef47e",
+   "code_file_offset": "0x41ef47e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 64,
+   "code_va": "0x45ef506",
+   "code_rva": "0x41ef506",
+   "code_file_offset": "0x41ef506",
+   "vb6_prologue": true
+  },
+  {
+   "index": 65,
+   "code_va": "0x45ef506",
+   "code_rva": "0x41ef506",
+   "code_file_offset": "0x41ef506",
+   "vb6_prologue": true
+  },
+  {
+   "index": 66,
+   "code_va": "0x45ef690",
+   "code_rva": "0x41ef690",
+   "code_file_offset": "0x41ef690",
+   "vb6_prologue": true
+  },
+  {
+   "index": 67,
+   "code_va": "0x45ef8d1",
+   "code_rva": "0x41ef8d1",
+   "code_file_offset": "0x41ef8d1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 68,
+   "code_va": "0x45efb10",
+   "code_rva": "0x41efb10",
+   "code_file_offset": "0x41efb10",
+   "vb6_prologue": true
+  },
+  {
+   "index": 69,
+   "code_va": "0x45efd4f",
+   "code_rva": "0x41efd4f",
+   "code_file_offset": "0x41efd4f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 70,
+   "code_va": "0x45effb0",
+   "code_rva": "0x41effb0",
+   "code_file_offset": "0x41effb0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 71,
+   "code_va": "0x45f0211",
+   "code_rva": "0x41f0211",
+   "code_file_offset": "0x41f0211",
+   "vb6_prologue": true
+  },
+  {
+   "index": 72,
+   "code_va": "0x45f0472",
+   "code_rva": "0x41f0472",
+   "code_file_offset": "0x41f0472",
+   "vb6_prologue": true
+  },
+  {
+   "index": 73,
+   "code_va": "0x45f068e",
+   "code_rva": "0x41f068e",
+   "code_file_offset": "0x41f068e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 74,
+   "code_va": "0x45f0716",
+   "code_rva": "0x41f0716",
+   "code_file_offset": "0x41f0716",
+   "vb6_prologue": true
+  },
+  {
+   "index": 75,
+   "code_va": "0x45f0716",
+   "code_rva": "0x41f0716",
+   "code_file_offset": "0x41f0716",
+   "vb6_prologue": true
+  },
+  {
+   "index": 76,
+   "code_va": "0x45f08a0",
+   "code_rva": "0x41f08a0",
+   "code_file_offset": "0x41f08a0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 77,
+   "code_va": "0x45f0ae1",
+   "code_rva": "0x41f0ae1",
+   "code_file_offset": "0x41f0ae1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 78,
+   "code_va": "0x45f0d20",
+   "code_rva": "0x41f0d20",
+   "code_file_offset": "0x41f0d20",
+   "vb6_prologue": true
+  },
+  {
+   "index": 79,
+   "code_va": "0x45f0f5f",
+   "code_rva": "0x41f0f5f",
+   "code_file_offset": "0x41f0f5f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 80,
+   "code_va": "0x45f11c0",
+   "code_rva": "0x41f11c0",
+   "code_file_offset": "0x41f11c0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 81,
+   "code_va": "0x45f1421",
+   "code_rva": "0x41f1421",
+   "code_file_offset": "0x41f1421",
+   "vb6_prologue": true
+  },
+  {
+   "index": 82,
+   "code_va": "0x45f1682",
+   "code_rva": "0x41f1682",
+   "code_file_offset": "0x41f1682",
+   "vb6_prologue": true
+  },
+  {
+   "index": 83,
+   "code_va": "0x45f189e",
+   "code_rva": "0x41f189e",
+   "code_file_offset": "0x41f189e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 84,
+   "code_va": "0x45f1926",
+   "code_rva": "0x41f1926",
+   "code_file_offset": "0x41f1926",
+   "vb6_prologue": true
+  },
+  {
+   "index": 85,
+   "code_va": "0x45f1926",
+   "code_rva": "0x41f1926",
+   "code_file_offset": "0x41f1926",
+   "vb6_prologue": true
+  },
+  {
+   "index": 86,
+   "code_va": "0x45f1ab0",
+   "code_rva": "0x41f1ab0",
+   "code_file_offset": "0x41f1ab0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 87,
+   "code_va": "0x45f1cf1",
+   "code_rva": "0x41f1cf1",
+   "code_file_offset": "0x41f1cf1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 88,
+   "code_va": "0x45f1f30",
+   "code_rva": "0x41f1f30",
+   "code_file_offset": "0x41f1f30",
+   "vb6_prologue": true
+  },
+  {
+   "index": 89,
+   "code_va": "0x45f216f",
+   "code_rva": "0x41f216f",
+   "code_file_offset": "0x41f216f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 90,
+   "code_va": "0x45f23d0",
+   "code_rva": "0x41f23d0",
+   "code_file_offset": "0x41f23d0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 91,
+   "code_va": "0x45f2631",
+   "code_rva": "0x41f2631",
+   "code_file_offset": "0x41f2631",
+   "vb6_prologue": true
+  },
+  {
+   "index": 92,
+   "code_va": "0x45f2892",
+   "code_rva": "0x41f2892",
+   "code_file_offset": "0x41f2892",
+   "vb6_prologue": true
+  },
+  {
+   "index": 93,
+   "code_va": "0x45f2aae",
+   "code_rva": "0x41f2aae",
+   "code_file_offset": "0x41f2aae",
+   "vb6_prologue": true
+  },
+  {
+   "index": 94,
+   "code_va": "0x45f2b36",
+   "code_rva": "0x41f2b36",
+   "code_file_offset": "0x41f2b36",
+   "vb6_prologue": true
+  },
+  {
+   "index": 95,
+   "code_va": "0x45f2b36",
+   "code_rva": "0x41f2b36",
+   "code_file_offset": "0x41f2b36",
+   "vb6_prologue": true
+  },
+  {
+   "index": 96,
+   "code_va": "0x45f2cc0",
+   "code_rva": "0x41f2cc0",
+   "code_file_offset": "0x41f2cc0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 97,
+   "code_va": "0x45f2f01",
+   "code_rva": "0x41f2f01",
+   "code_file_offset": "0x41f2f01",
+   "vb6_prologue": true
+  },
+  {
+   "index": 98,
+   "code_va": "0x45f3140",
+   "code_rva": "0x41f3140",
+   "code_file_offset": "0x41f3140",
+   "vb6_prologue": true
+  },
+  {
+   "index": 99,
+   "code_va": "0x45f337f",
+   "code_rva": "0x41f337f",
+   "code_file_offset": "0x41f337f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 100,
+   "code_va": "0x45f35e0",
+   "code_rva": "0x41f35e0",
+   "code_file_offset": "0x41f35e0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 101,
+   "code_va": "0x45f3841",
+   "code_rva": "0x41f3841",
+   "code_file_offset": "0x41f3841",
+   "vb6_prologue": true
+  },
+  {
+   "index": 102,
+   "code_va": "0x45f3aa2",
+   "code_rva": "0x41f3aa2",
+   "code_file_offset": "0x41f3aa2",
+   "vb6_prologue": true
+  },
+  {
+   "index": 103,
+   "code_va": "0x45f3cbe",
+   "code_rva": "0x41f3cbe",
+   "code_file_offset": "0x41f3cbe",
+   "vb6_prologue": true
+  },
+  {
+   "index": 104,
+   "code_va": "0x45f3d46",
+   "code_rva": "0x41f3d46",
+   "code_file_offset": "0x41f3d46",
+   "vb6_prologue": true
+  },
+  {
+   "index": 105,
+   "code_va": "0x45f3d46",
+   "code_rva": "0x41f3d46",
+   "code_file_offset": "0x41f3d46",
+   "vb6_prologue": true
+  },
+  {
+   "index": 106,
+   "code_va": "0x45f3ed0",
+   "code_rva": "0x41f3ed0",
+   "code_file_offset": "0x41f3ed0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 107,
+   "code_va": "0x45f4111",
+   "code_rva": "0x41f4111",
+   "code_file_offset": "0x41f4111",
+   "vb6_prologue": true
+  },
+  {
+   "index": 108,
+   "code_va": "0x45f4350",
+   "code_rva": "0x41f4350",
+   "code_file_offset": "0x41f4350",
+   "vb6_prologue": true
+  },
+  {
+   "index": 109,
+   "code_va": "0x45f458f",
+   "code_rva": "0x41f458f",
+   "code_file_offset": "0x41f458f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 110,
+   "code_va": "0x45f47f0",
+   "code_rva": "0x41f47f0",
+   "code_file_offset": "0x41f47f0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 111,
+   "code_va": "0x45f4a51",
+   "code_rva": "0x41f4a51",
+   "code_file_offset": "0x41f4a51",
+   "vb6_prologue": true
+  },
+  {
+   "index": 112,
+   "code_va": "0x45f4cb2",
+   "code_rva": "0x41f4cb2",
+   "code_file_offset": "0x41f4cb2",
+   "vb6_prologue": true
+  },
+  {
+   "index": 113,
+   "code_va": "0x45f4ece",
+   "code_rva": "0x41f4ece",
+   "code_file_offset": "0x41f4ece",
+   "vb6_prologue": true
+  },
+  {
+   "index": 114,
+   "code_va": "0x45f4f56",
+   "code_rva": "0x41f4f56",
+   "code_file_offset": "0x41f4f56",
+   "vb6_prologue": true
+  },
+  {
+   "index": 115,
+   "code_va": "0x45f4f56",
+   "code_rva": "0x41f4f56",
+   "code_file_offset": "0x41f4f56",
+   "vb6_prologue": true
+  },
+  {
+   "index": 116,
+   "code_va": "0x45f50e0",
+   "code_rva": "0x41f50e0",
+   "code_file_offset": "0x41f50e0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 117,
+   "code_va": "0x45f5321",
+   "code_rva": "0x41f5321",
+   "code_file_offset": "0x41f5321",
+   "vb6_prologue": true
+  },
+  {
+   "index": 118,
+   "code_va": "0x45f5560",
+   "code_rva": "0x41f5560",
+   "code_file_offset": "0x41f5560",
+   "vb6_prologue": true
+  },
+  {
+   "index": 119,
+   "code_va": "0x45f579f",
+   "code_rva": "0x41f579f",
+   "code_file_offset": "0x41f579f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 120,
+   "code_va": "0x45f5a00",
+   "code_rva": "0x41f5a00",
+   "code_file_offset": "0x41f5a00",
+   "vb6_prologue": true
+  },
+  {
+   "index": 121,
+   "code_va": "0x45f5c61",
+   "code_rva": "0x41f5c61",
+   "code_file_offset": "0x41f5c61",
+   "vb6_prologue": true
+  },
+  {
+   "index": 122,
+   "code_va": "0x45f5ec2",
+   "code_rva": "0x41f5ec2",
+   "code_file_offset": "0x41f5ec2",
+   "vb6_prologue": true
+  },
+  {
+   "index": 123,
+   "code_va": "0x45f60de",
+   "code_rva": "0x41f60de",
+   "code_file_offset": "0x41f60de",
+   "vb6_prologue": true
+  },
+  {
+   "index": 124,
+   "code_va": "0x45f6166",
+   "code_rva": "0x41f6166",
+   "code_file_offset": "0x41f6166",
+   "vb6_prologue": true
+  },
+  {
+   "index": 125,
+   "code_va": "0x45f6166",
+   "code_rva": "0x41f6166",
+   "code_file_offset": "0x41f6166",
+   "vb6_prologue": true
+  },
+  {
+   "index": 126,
+   "code_va": "0x45f62f0",
+   "code_rva": "0x41f62f0",
+   "code_file_offset": "0x41f62f0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 127,
+   "code_va": "0x45f6531",
+   "code_rva": "0x41f6531",
+   "code_file_offset": "0x41f6531",
+   "vb6_prologue": true
+  },
+  {
+   "index": 128,
+   "code_va": "0x45f6770",
+   "code_rva": "0x41f6770",
+   "code_file_offset": "0x41f6770",
+   "vb6_prologue": true
+  },
+  {
+   "index": 129,
+   "code_va": "0x45f69af",
+   "code_rva": "0x41f69af",
+   "code_file_offset": "0x41f69af",
+   "vb6_prologue": true
+  },
+  {
+   "index": 130,
+   "code_va": "0x45f6c10",
+   "code_rva": "0x41f6c10",
+   "code_file_offset": "0x41f6c10",
+   "vb6_prologue": true
+  },
+  {
+   "index": 131,
+   "code_va": "0x45f6e71",
+   "code_rva": "0x41f6e71",
+   "code_file_offset": "0x41f6e71",
+   "vb6_prologue": true
+  },
+  {
+   "index": 132,
+   "code_va": "0x45f70d2",
+   "code_rva": "0x41f70d2",
+   "code_file_offset": "0x41f70d2",
+   "vb6_prologue": true
+  },
+  {
+   "index": 133,
+   "code_va": "0x45f72ee",
+   "code_rva": "0x41f72ee",
+   "code_file_offset": "0x41f72ee",
+   "vb6_prologue": true
+  },
+  {
+   "index": 134,
+   "code_va": "0x45f7376",
+   "code_rva": "0x41f7376",
+   "code_file_offset": "0x41f7376",
+   "vb6_prologue": true
+  },
+  {
+   "index": 135,
+   "code_va": "0x45f7376",
+   "code_rva": "0x41f7376",
+   "code_file_offset": "0x41f7376",
+   "vb6_prologue": true
+  },
+  {
+   "index": 136,
+   "code_va": "0x45f7500",
+   "code_rva": "0x41f7500",
+   "code_file_offset": "0x41f7500",
+   "vb6_prologue": true
+  },
+  {
+   "index": 137,
+   "code_va": "0x45f7741",
+   "code_rva": "0x41f7741",
+   "code_file_offset": "0x41f7741",
+   "vb6_prologue": true
+  },
+  {
+   "index": 138,
+   "code_va": "0x45f7980",
+   "code_rva": "0x41f7980",
+   "code_file_offset": "0x41f7980",
+   "vb6_prologue": true
+  },
+  {
+   "index": 139,
+   "code_va": "0x45f7bbf",
+   "code_rva": "0x41f7bbf",
+   "code_file_offset": "0x41f7bbf",
+   "vb6_prologue": true
+  },
+  {
+   "index": 140,
+   "code_va": "0x45f7e20",
+   "code_rva": "0x41f7e20",
+   "code_file_offset": "0x41f7e20",
+   "vb6_prologue": true
+  },
+  {
+   "index": 141,
+   "code_va": "0x45f8081",
+   "code_rva": "0x41f8081",
+   "code_file_offset": "0x41f8081",
+   "vb6_prologue": true
+  },
+  {
+   "index": 142,
+   "code_va": "0x45f82e2",
+   "code_rva": "0x41f82e2",
+   "code_file_offset": "0x41f82e2",
+   "vb6_prologue": true
+  },
+  {
+   "index": 143,
+   "code_va": "0x45f84fe",
+   "code_rva": "0x41f84fe",
+   "code_file_offset": "0x41f84fe",
+   "vb6_prologue": true
+  },
+  {
+   "index": 144,
+   "code_va": "0x45f8586",
+   "code_rva": "0x41f8586",
+   "code_file_offset": "0x41f8586",
+   "vb6_prologue": true
+  },
+  {
+   "index": 145,
+   "code_va": "0x45f8586",
+   "code_rva": "0x41f8586",
+   "code_file_offset": "0x41f8586",
+   "vb6_prologue": true
+  },
+  {
+   "index": 146,
+   "code_va": "0x45f8710",
+   "code_rva": "0x41f8710",
+   "code_file_offset": "0x41f8710",
+   "vb6_prologue": true
+  },
+  {
+   "index": 147,
+   "code_va": "0x45f8951",
+   "code_rva": "0x41f8951",
+   "code_file_offset": "0x41f8951",
+   "vb6_prologue": true
+  },
+  {
+   "index": 148,
+   "code_va": "0x45f8b90",
+   "code_rva": "0x41f8b90",
+   "code_file_offset": "0x41f8b90",
+   "vb6_prologue": true
+  },
+  {
+   "index": 149,
+   "code_va": "0x45f8dcf",
+   "code_rva": "0x41f8dcf",
+   "code_file_offset": "0x41f8dcf",
+   "vb6_prologue": true
+  },
+  {
+   "index": 150,
+   "code_va": "0x45f9030",
+   "code_rva": "0x41f9030",
+   "code_file_offset": "0x41f9030",
+   "vb6_prologue": true
+  },
+  {
+   "index": 151,
+   "code_va": "0x45f9291",
+   "code_rva": "0x41f9291",
+   "code_file_offset": "0x41f9291",
+   "vb6_prologue": true
+  },
+  {
+   "index": 152,
+   "code_va": "0x45f94f2",
+   "code_rva": "0x41f94f2",
+   "code_file_offset": "0x41f94f2",
+   "vb6_prologue": true
+  },
+  {
+   "index": 153,
+   "code_va": "0x45f970e",
+   "code_rva": "0x41f970e",
+   "code_file_offset": "0x41f970e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 154,
+   "code_va": "0x45f9796",
+   "code_rva": "0x41f9796",
+   "code_file_offset": "0x41f9796",
+   "vb6_prologue": true
+  },
+  {
+   "index": 155,
+   "code_va": "0x45f9796",
+   "code_rva": "0x41f9796",
+   "code_file_offset": "0x41f9796",
+   "vb6_prologue": true
+  },
+  {
+   "index": 156,
+   "code_va": "0x45f9920",
+   "code_rva": "0x41f9920",
+   "code_file_offset": "0x41f9920",
+   "vb6_prologue": true
+  },
+  {
+   "index": 157,
+   "code_va": "0x45f9b61",
+   "code_rva": "0x41f9b61",
+   "code_file_offset": "0x41f9b61",
+   "vb6_prologue": true
+  },
+  {
+   "index": 158,
+   "code_va": "0x45f9da0",
+   "code_rva": "0x41f9da0",
+   "code_file_offset": "0x41f9da0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 159,
+   "code_va": "0x45f9fdf",
+   "code_rva": "0x41f9fdf",
+   "code_file_offset": "0x41f9fdf",
+   "vb6_prologue": true
+  },
+  {
+   "index": 160,
+   "code_va": "0x45fa240",
+   "code_rva": "0x41fa240",
+   "code_file_offset": "0x41fa240",
+   "vb6_prologue": true
+  },
+  {
+   "index": 161,
+   "code_va": "0x45fa4a1",
+   "code_rva": "0x41fa4a1",
+   "code_file_offset": "0x41fa4a1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 162,
+   "code_va": "0x45fa702",
+   "code_rva": "0x41fa702",
+   "code_file_offset": "0x41fa702",
+   "vb6_prologue": true
+  },
+  {
+   "index": 163,
+   "code_va": "0x45fa91e",
+   "code_rva": "0x41fa91e",
+   "code_file_offset": "0x41fa91e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 164,
+   "code_va": "0x45fa9a6",
+   "code_rva": "0x41fa9a6",
+   "code_file_offset": "0x41fa9a6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 165,
+   "code_va": "0x45fa9a6",
+   "code_rva": "0x41fa9a6",
+   "code_file_offset": "0x41fa9a6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 166,
+   "code_va": "0x45fab30",
+   "code_rva": "0x41fab30",
+   "code_file_offset": "0x41fab30",
+   "vb6_prologue": true
+  },
+  {
+   "index": 167,
+   "code_va": "0x45fad71",
+   "code_rva": "0x41fad71",
+   "code_file_offset": "0x41fad71",
+   "vb6_prologue": true
+  },
+  {
+   "index": 168,
+   "code_va": "0x45fafb0",
+   "code_rva": "0x41fafb0",
+   "code_file_offset": "0x41fafb0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 169,
+   "code_va": "0x45fb1ef",
+   "code_rva": "0x41fb1ef",
+   "code_file_offset": "0x41fb1ef",
+   "vb6_prologue": true
+  },
+  {
+   "index": 170,
+   "code_va": "0x45fb450",
+   "code_rva": "0x41fb450",
+   "code_file_offset": "0x41fb450",
+   "vb6_prologue": true
+  },
+  {
+   "index": 171,
+   "code_va": "0x45fb6b1",
+   "code_rva": "0x41fb6b1",
+   "code_file_offset": "0x41fb6b1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 172,
+   "code_va": "0x45fb912",
+   "code_rva": "0x41fb912",
+   "code_file_offset": "0x41fb912",
+   "vb6_prologue": true
+  },
+  {
+   "index": 173,
+   "code_va": "0x45fbb2e",
+   "code_rva": "0x41fbb2e",
+   "code_file_offset": "0x41fbb2e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 174,
+   "code_va": "0x45fbbb6",
+   "code_rva": "0x41fbbb6",
+   "code_file_offset": "0x41fbbb6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 175,
+   "code_va": "0x45fbbb6",
+   "code_rva": "0x41fbbb6",
+   "code_file_offset": "0x41fbbb6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 176,
+   "code_va": "0x45fbd40",
+   "code_rva": "0x41fbd40",
+   "code_file_offset": "0x41fbd40",
+   "vb6_prologue": true
+  },
+  {
+   "index": 177,
+   "code_va": "0x45fbf81",
+   "code_rva": "0x41fbf81",
+   "code_file_offset": "0x41fbf81",
+   "vb6_prologue": true
+  },
+  {
+   "index": 178,
+   "code_va": "0x45fc1c0",
+   "code_rva": "0x41fc1c0",
+   "code_file_offset": "0x41fc1c0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 179,
+   "code_va": "0x45fc3ff",
+   "code_rva": "0x41fc3ff",
+   "code_file_offset": "0x41fc3ff",
+   "vb6_prologue": true
+  },
+  {
+   "index": 180,
+   "code_va": "0x45fc660",
+   "code_rva": "0x41fc660",
+   "code_file_offset": "0x41fc660",
+   "vb6_prologue": true
+  },
+  {
+   "index": 181,
+   "code_va": "0x45fc8c1",
+   "code_rva": "0x41fc8c1",
+   "code_file_offset": "0x41fc8c1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 182,
+   "code_va": "0x45fcb22",
+   "code_rva": "0x41fcb22",
+   "code_file_offset": "0x41fcb22",
+   "vb6_prologue": true
+  },
+  {
+   "index": 183,
+   "code_va": "0x45fcd3e",
+   "code_rva": "0x41fcd3e",
+   "code_file_offset": "0x41fcd3e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 184,
+   "code_va": "0x45fcdc6",
+   "code_rva": "0x41fcdc6",
+   "code_file_offset": "0x41fcdc6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 185,
+   "code_va": "0x45fcdc6",
+   "code_rva": "0x41fcdc6",
+   "code_file_offset": "0x41fcdc6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 186,
+   "code_va": "0x45fcf50",
+   "code_rva": "0x41fcf50",
+   "code_file_offset": "0x41fcf50",
+   "vb6_prologue": true
+  },
+  {
+   "index": 187,
+   "code_va": "0x45fd191",
+   "code_rva": "0x41fd191",
+   "code_file_offset": "0x41fd191",
+   "vb6_prologue": true
+  },
+  {
+   "index": 188,
+   "code_va": "0x45fd3d0",
+   "code_rva": "0x41fd3d0",
+   "code_file_offset": "0x41fd3d0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 189,
+   "code_va": "0x45fd60f",
+   "code_rva": "0x41fd60f",
+   "code_file_offset": "0x41fd60f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 190,
+   "code_va": "0x45fd870",
+   "code_rva": "0x41fd870",
+   "code_file_offset": "0x41fd870",
+   "vb6_prologue": true
+  },
+  {
+   "index": 191,
+   "code_va": "0x45fdad1",
+   "code_rva": "0x41fdad1",
+   "code_file_offset": "0x41fdad1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 192,
+   "code_va": "0x45fdd32",
+   "code_rva": "0x41fdd32",
+   "code_file_offset": "0x41fdd32",
+   "vb6_prologue": true
+  },
+  {
+   "index": 193,
+   "code_va": "0x45fdf4e",
+   "code_rva": "0x41fdf4e",
+   "code_file_offset": "0x41fdf4e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 194,
+   "code_va": "0x45fdfd6",
+   "code_rva": "0x41fdfd6",
+   "code_file_offset": "0x41fdfd6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 195,
+   "code_va": "0x45fdfd6",
+   "code_rva": "0x41fdfd6",
+   "code_file_offset": "0x41fdfd6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 196,
+   "code_va": "0x45fe160",
+   "code_rva": "0x41fe160",
+   "code_file_offset": "0x41fe160",
+   "vb6_prologue": true
+  },
+  {
+   "index": 197,
+   "code_va": "0x45fe3a1",
+   "code_rva": "0x41fe3a1",
+   "code_file_offset": "0x41fe3a1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 198,
+   "code_va": "0x45fe5e0",
+   "code_rva": "0x41fe5e0",
+   "code_file_offset": "0x41fe5e0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 199,
+   "code_va": "0x45fe81f",
+   "code_rva": "0x41fe81f",
+   "code_file_offset": "0x41fe81f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 200,
+   "code_va": "0x45fea80",
+   "code_rva": "0x41fea80",
+   "code_file_offset": "0x41fea80",
+   "vb6_prologue": true
+  },
+  {
+   "index": 201,
+   "code_va": "0x45fece1",
+   "code_rva": "0x41fece1",
+   "code_file_offset": "0x41fece1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 202,
+   "code_va": "0x45fef42",
+   "code_rva": "0x41fef42",
+   "code_file_offset": "0x41fef42",
+   "vb6_prologue": true
+  },
+  {
+   "index": 203,
+   "code_va": "0x45ff15e",
+   "code_rva": "0x41ff15e",
+   "code_file_offset": "0x41ff15e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 204,
+   "code_va": "0x45ff1e6",
+   "code_rva": "0x41ff1e6",
+   "code_file_offset": "0x41ff1e6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 205,
+   "code_va": "0x45ff1e6",
+   "code_rva": "0x41ff1e6",
+   "code_file_offset": "0x41ff1e6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 206,
+   "code_va": "0x45ff370",
+   "code_rva": "0x41ff370",
+   "code_file_offset": "0x41ff370",
+   "vb6_prologue": true
+  },
+  {
+   "index": 207,
+   "code_va": "0x45ff5b1",
+   "code_rva": "0x41ff5b1",
+   "code_file_offset": "0x41ff5b1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 208,
+   "code_va": "0x45ff7f0",
+   "code_rva": "0x41ff7f0",
+   "code_file_offset": "0x41ff7f0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 209,
+   "code_va": "0x45ffa2f",
+   "code_rva": "0x41ffa2f",
+   "code_file_offset": "0x41ffa2f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 210,
+   "code_va": "0x45ffc90",
+   "code_rva": "0x41ffc90",
+   "code_file_offset": "0x41ffc90",
+   "vb6_prologue": true
+  },
+  {
+   "index": 211,
+   "code_va": "0x45ffef1",
+   "code_rva": "0x41ffef1",
+   "code_file_offset": "0x41ffef1",
+   "vb6_prologue": true
+  },
+  {
+   "index": 212,
+   "code_va": "0x4600152",
+   "code_rva": "0x4200152",
+   "code_file_offset": "0x4200152",
+   "vb6_prologue": true
+  },
+  {
+   "index": 213,
+   "code_va": "0x460036e",
+   "code_rva": "0x420036e",
+   "code_file_offset": "0x420036e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 214,
+   "code_va": "0x46003f6",
+   "code_rva": "0x42003f6",
+   "code_file_offset": "0x42003f6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 215,
+   "code_va": "0x46003f6",
+   "code_rva": "0x42003f6",
+   "code_file_offset": "0x42003f6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 216,
+   "code_va": "0x4600580",
+   "code_rva": "0x4200580",
+   "code_file_offset": "0x4200580",
+   "vb6_prologue": true
+  },
+  {
+   "index": 217,
+   "code_va": "0x4600752",
+   "code_rva": "0x4200752",
+   "code_file_offset": "0x4200752",
+   "vb6_prologue": true
+  },
+  {
+   "index": 218,
+   "code_va": "0x46007da",
+   "code_rva": "0x42007da",
+   "code_file_offset": "0x42007da",
+   "vb6_prologue": true
+  },
+  {
+   "index": 219,
+   "code_va": "0x46007da",
+   "code_rva": "0x42007da",
+   "code_file_offset": "0x42007da",
+   "vb6_prologue": true
+  },
+  {
+   "index": 220,
+   "code_va": "0x4600a19",
+   "code_rva": "0x4200a19",
+   "code_file_offset": "0x4200a19",
+   "vb6_prologue": true
+  },
+  {
+   "index": 221,
+   "code_va": "0x4600c58",
+   "code_rva": "0x4200c58",
+   "code_file_offset": "0x4200c58",
+   "vb6_prologue": true
+  },
+  {
+   "index": 222,
+   "code_va": "0x4600e97",
+   "code_rva": "0x4200e97",
+   "code_file_offset": "0x4200e97",
+   "vb6_prologue": true
+  },
+  {
+   "index": 223,
+   "code_va": "0x46010dc",
+   "code_rva": "0x42010dc",
+   "code_file_offset": "0x42010dc",
+   "vb6_prologue": true
+  },
+  {
+   "index": 224,
+   "code_va": "0x4601318",
+   "code_rva": "0x4201318",
+   "code_file_offset": "0x4201318",
+   "vb6_prologue": true
+  },
+  {
+   "index": 225,
+   "code_va": "0x4601534",
+   "code_rva": "0x4201534",
+   "code_file_offset": "0x4201534",
+   "vb6_prologue": true
+  },
+  {
+   "index": 226,
+   "code_va": "0x4601534",
+   "code_rva": "0x4201534",
+   "code_file_offset": "0x4201534",
+   "vb6_prologue": true
+  },
+  {
+   "index": 227,
+   "code_va": "0x46016be",
+   "code_rva": "0x42016be",
+   "code_file_offset": "0x42016be",
+   "vb6_prologue": true
+  },
+  {
+   "index": 228,
+   "code_va": "0x4601890",
+   "code_rva": "0x4201890",
+   "code_file_offset": "0x4201890",
+   "vb6_prologue": true
+  },
+  {
+   "index": 229,
+   "code_va": "0x4601918",
+   "code_rva": "0x4201918",
+   "code_file_offset": "0x4201918",
+   "vb6_prologue": true
+  },
+  {
+   "index": 230,
+   "code_va": "0x4601918",
+   "code_rva": "0x4201918",
+   "code_file_offset": "0x4201918",
+   "vb6_prologue": true
+  },
+  {
+   "index": 231,
+   "code_va": "0x4601b57",
+   "code_rva": "0x4201b57",
+   "code_file_offset": "0x4201b57",
+   "vb6_prologue": true
+  },
+  {
+   "index": 232,
+   "code_va": "0x4601d96",
+   "code_rva": "0x4201d96",
+   "code_file_offset": "0x4201d96",
+   "vb6_prologue": true
+  },
+  {
+   "index": 233,
+   "code_va": "0x4601fd5",
+   "code_rva": "0x4201fd5",
+   "code_file_offset": "0x4201fd5",
+   "vb6_prologue": true
+  },
+  {
+   "index": 234,
+   "code_va": "0x460221a",
+   "code_rva": "0x420221a",
+   "code_file_offset": "0x420221a",
+   "vb6_prologue": true
+  },
+  {
+   "index": 235,
+   "code_va": "0x4602456",
+   "code_rva": "0x4202456",
+   "code_file_offset": "0x4202456",
+   "vb6_prologue": true
+  },
+  {
+   "index": 236,
+   "code_va": "0x4602672",
+   "code_rva": "0x4202672",
+   "code_file_offset": "0x4202672",
+   "vb6_prologue": true
+  },
+  {
+   "index": 237,
+   "code_va": "0x4602672",
+   "code_rva": "0x4202672",
+   "code_file_offset": "0x4202672",
+   "vb6_prologue": true
+  },
+  {
+   "index": 238,
+   "code_va": "0x46027fc",
+   "code_rva": "0x42027fc",
+   "code_file_offset": "0x42027fc",
+   "vb6_prologue": true
+  },
+  {
+   "index": 239,
+   "code_va": "0x46029ce",
+   "code_rva": "0x42029ce",
+   "code_file_offset": "0x42029ce",
+   "vb6_prologue": true
+  },
+  {
+   "index": 240,
+   "code_va": "0x4602a56",
+   "code_rva": "0x4202a56",
+   "code_file_offset": "0x4202a56",
+   "vb6_prologue": true
+  },
+  {
+   "index": 241,
+   "code_va": "0x4602a56",
+   "code_rva": "0x4202a56",
+   "code_file_offset": "0x4202a56",
+   "vb6_prologue": true
+  },
+  {
+   "index": 242,
+   "code_va": "0x4602c95",
+   "code_rva": "0x4202c95",
+   "code_file_offset": "0x4202c95",
+   "vb6_prologue": true
+  },
+  {
+   "index": 243,
+   "code_va": "0x4602ed4",
+   "code_rva": "0x4202ed4",
+   "code_file_offset": "0x4202ed4",
+   "vb6_prologue": true
+  },
+  {
+   "index": 244,
+   "code_va": "0x4603113",
+   "code_rva": "0x4203113",
+   "code_file_offset": "0x4203113",
+   "vb6_prologue": true
+  },
+  {
+   "index": 245,
+   "code_va": "0x4603358",
+   "code_rva": "0x4203358",
+   "code_file_offset": "0x4203358",
+   "vb6_prologue": true
+  },
+  {
+   "index": 246,
+   "code_va": "0x4603594",
+   "code_rva": "0x4203594",
+   "code_file_offset": "0x4203594",
+   "vb6_prologue": true
+  },
+  {
+   "index": 247,
+   "code_va": "0x46037b0",
+   "code_rva": "0x42037b0",
+   "code_file_offset": "0x42037b0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 248,
+   "code_va": "0x46037b0",
+   "code_rva": "0x42037b0",
+   "code_file_offset": "0x42037b0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 249,
+   "code_va": "0x460393a",
+   "code_rva": "0x420393a",
+   "code_file_offset": "0x420393a",
+   "vb6_prologue": true
+  },
+  {
+   "index": 250,
+   "code_va": "0x4603b0c",
+   "code_rva": "0x4203b0c",
+   "code_file_offset": "0x4203b0c",
+   "vb6_prologue": true
+  },
+  {
+   "index": 251,
+   "code_va": "0x4603b94",
+   "code_rva": "0x4203b94",
+   "code_file_offset": "0x4203b94",
+   "vb6_prologue": true
+  },
+  {
+   "index": 252,
+   "code_va": "0x4603b94",
+   "code_rva": "0x4203b94",
+   "code_file_offset": "0x4203b94",
+   "vb6_prologue": true
+  },
+  {
+   "index": 253,
+   "code_va": "0x4603dd3",
+   "code_rva": "0x4203dd3",
+   "code_file_offset": "0x4203dd3",
+   "vb6_prologue": true
+  },
+  {
+   "index": 254,
+   "code_va": "0x4604012",
+   "code_rva": "0x4204012",
+   "code_file_offset": "0x4204012",
+   "vb6_prologue": true
+  },
+  {
+   "index": 255,
+   "code_va": "0x4604251",
+   "code_rva": "0x4204251",
+   "code_file_offset": "0x4204251",
+   "vb6_prologue": true
+  },
+  {
+   "index": 256,
+   "code_va": "0x4604496",
+   "code_rva": "0x4204496",
+   "code_file_offset": "0x4204496",
+   "vb6_prologue": true
+  },
+  {
+   "index": 257,
+   "code_va": "0x46046d2",
+   "code_rva": "0x42046d2",
+   "code_file_offset": "0x42046d2",
+   "vb6_prologue": true
+  },
+  {
+   "index": 258,
+   "code_va": "0x46048ee",
+   "code_rva": "0x42048ee",
+   "code_file_offset": "0x42048ee",
+   "vb6_prologue": true
+  },
+  {
+   "index": 259,
+   "code_va": "0x46048ee",
+   "code_rva": "0x42048ee",
+   "code_file_offset": "0x42048ee",
+   "vb6_prologue": true
+  },
+  {
+   "index": 260,
+   "code_va": "0x4604a78",
+   "code_rva": "0x4204a78",
+   "code_file_offset": "0x4204a78",
+   "vb6_prologue": true
+  },
+  {
+   "index": 261,
+   "code_va": "0x4604c4a",
+   "code_rva": "0x4204c4a",
+   "code_file_offset": "0x4204c4a",
+   "vb6_prologue": true
+  },
+  {
+   "index": 262,
+   "code_va": "0x4604cd2",
+   "code_rva": "0x4204cd2",
+   "code_file_offset": "0x4204cd2",
+   "vb6_prologue": true
+  },
+  {
+   "index": 263,
+   "code_va": "0x4604cd2",
+   "code_rva": "0x4204cd2",
+   "code_file_offset": "0x4204cd2",
+   "vb6_prologue": true
+  },
+  {
+   "index": 264,
+   "code_va": "0x4604f11",
+   "code_rva": "0x4204f11",
+   "code_file_offset": "0x4204f11",
+   "vb6_prologue": true
+  },
+  {
+   "index": 265,
+   "code_va": "0x4605150",
+   "code_rva": "0x4205150",
+   "code_file_offset": "0x4205150",
+   "vb6_prologue": true
+  },
+  {
+   "index": 266,
+   "code_va": "0x460538f",
+   "code_rva": "0x420538f",
+   "code_file_offset": "0x420538f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 267,
+   "code_va": "0x46055d4",
+   "code_rva": "0x42055d4",
+   "code_file_offset": "0x42055d4",
+   "vb6_prologue": true
+  },
+  {
+   "index": 268,
+   "code_va": "0x4605810",
+   "code_rva": "0x4205810",
+   "code_file_offset": "0x4205810",
+   "vb6_prologue": true
+  },
+  {
+   "index": 269,
+   "code_va": "0x4605a2c",
+   "code_rva": "0x4205a2c",
+   "code_file_offset": "0x4205a2c",
+   "vb6_prologue": true
+  },
+  {
+   "index": 270,
+   "code_va": "0x4605a2c",
+   "code_rva": "0x4205a2c",
+   "code_file_offset": "0x4205a2c",
+   "vb6_prologue": true
+  },
+  {
+   "index": 271,
+   "code_va": "0x4605bb6",
+   "code_rva": "0x4205bb6",
+   "code_file_offset": "0x4205bb6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 272,
+   "code_va": "0x4605d88",
+   "code_rva": "0x4205d88",
+   "code_file_offset": "0x4205d88",
+   "vb6_prologue": true
+  },
+  {
+   "index": 273,
+   "code_va": "0x4605e10",
+   "code_rva": "0x4205e10",
+   "code_file_offset": "0x4205e10",
+   "vb6_prologue": true
+  },
+  {
+   "index": 274,
+   "code_va": "0x4605e10",
+   "code_rva": "0x4205e10",
+   "code_file_offset": "0x4205e10",
+   "vb6_prologue": true
+  },
+  {
+   "index": 275,
+   "code_va": "0x460604f",
+   "code_rva": "0x420604f",
+   "code_file_offset": "0x420604f",
+   "vb6_prologue": true
+  },
+  {
+   "index": 276,
+   "code_va": "0x460628e",
+   "code_rva": "0x420628e",
+   "code_file_offset": "0x420628e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 277,
+   "code_va": "0x46064cd",
+   "code_rva": "0x42064cd",
+   "code_file_offset": "0x42064cd",
+   "vb6_prologue": true
+  },
+  {
+   "index": 278,
+   "code_va": "0x4606712",
+   "code_rva": "0x4206712",
+   "code_file_offset": "0x4206712",
+   "vb6_prologue": true
+  },
+  {
+   "index": 279,
+   "code_va": "0x460694e",
+   "code_rva": "0x420694e",
+   "code_file_offset": "0x420694e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 280,
+   "code_va": "0x4606b6a",
+   "code_rva": "0x4206b6a",
+   "code_file_offset": "0x4206b6a",
+   "vb6_prologue": true
+  },
+  {
+   "index": 281,
+   "code_va": "0x4606b6a",
+   "code_rva": "0x4206b6a",
+   "code_file_offset": "0x4206b6a",
+   "vb6_prologue": true
+  },
+  {
+   "index": 282,
+   "code_va": "0x4606cf4",
+   "code_rva": "0x4206cf4",
+   "code_file_offset": "0x4206cf4",
+   "vb6_prologue": true
+  },
+  {
+   "index": 283,
+   "code_va": "0x4606ec6",
+   "code_rva": "0x4206ec6",
+   "code_file_offset": "0x4206ec6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 284,
+   "code_va": "0x4606f4e",
+   "code_rva": "0x4206f4e",
+   "code_file_offset": "0x4206f4e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 285,
+   "code_va": "0x4606f4e",
+   "code_rva": "0x4206f4e",
+   "code_file_offset": "0x4206f4e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 286,
+   "code_va": "0x460718d",
+   "code_rva": "0x420718d",
+   "code_file_offset": "0x420718d",
+   "vb6_prologue": true
+  },
+  {
+   "index": 287,
+   "code_va": "0x46073cc",
+   "code_rva": "0x42073cc",
+   "code_file_offset": "0x42073cc",
+   "vb6_prologue": true
+  },
+  {
+   "index": 288,
+   "code_va": "0x460760b",
+   "code_rva": "0x420760b",
+   "code_file_offset": "0x420760b",
+   "vb6_prologue": true
+  },
+  {
+   "index": 289,
+   "code_va": "0x4607850",
+   "code_rva": "0x4207850",
+   "code_file_offset": "0x4207850",
+   "vb6_prologue": true
+  },
+  {
+   "index": 290,
+   "code_va": "0x4607a8c",
+   "code_rva": "0x4207a8c",
+   "code_file_offset": "0x4207a8c",
+   "vb6_prologue": true
+  },
+  {
+   "index": 291,
+   "code_va": "0x4607ca8",
+   "code_rva": "0x4207ca8",
+   "code_file_offset": "0x4207ca8",
+   "vb6_prologue": true
+  },
+  {
+   "index": 292,
+   "code_va": "0x4607ca8",
+   "code_rva": "0x4207ca8",
+   "code_file_offset": "0x4207ca8",
+   "vb6_prologue": true
+  },
+  {
+   "index": 293,
+   "code_va": "0x4607e32",
+   "code_rva": "0x4207e32",
+   "code_file_offset": "0x4207e32",
+   "vb6_prologue": true
+  },
+  {
+   "index": 294,
+   "code_va": "0x4608004",
+   "code_rva": "0x4208004",
+   "code_file_offset": "0x4208004",
+   "vb6_prologue": true
+  },
+  {
+   "index": 295,
+   "code_va": "0x460808c",
+   "code_rva": "0x420808c",
+   "code_file_offset": "0x420808c",
+   "vb6_prologue": true
+  },
+  {
+   "index": 296,
+   "code_va": "0x460808c",
+   "code_rva": "0x420808c",
+   "code_file_offset": "0x420808c",
+   "vb6_prologue": true
+  },
+  {
+   "index": 297,
+   "code_va": "0x46082cb",
+   "code_rva": "0x42082cb",
+   "code_file_offset": "0x42082cb",
+   "vb6_prologue": true
+  },
+  {
+   "index": 298,
+   "code_va": "0x460850a",
+   "code_rva": "0x420850a",
+   "code_file_offset": "0x420850a",
+   "vb6_prologue": true
+  },
+  {
+   "index": 299,
+   "code_va": "0x4608749",
+   "code_rva": "0x4208749",
+   "code_file_offset": "0x4208749",
+   "vb6_prologue": true
+  },
+  {
+   "index": 300,
+   "code_va": "0x460898e",
+   "code_rva": "0x420898e",
+   "code_file_offset": "0x420898e",
+   "vb6_prologue": true
+  },
+  {
+   "index": 301,
+   "code_va": "0x4608bca",
+   "code_rva": "0x4208bca",
+   "code_file_offset": "0x4208bca",
+   "vb6_prologue": true
+  },
+  {
+   "index": 302,
+   "code_va": "0x4608de6",
+   "code_rva": "0x4208de6",
+   "code_file_offset": "0x4208de6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 303,
+   "code_va": "0x4608de6",
+   "code_rva": "0x4208de6",
+   "code_file_offset": "0x4208de6",
+   "vb6_prologue": true
+  },
+  {
+   "index": 304,
+   "code_va": "0x4608f70",
+   "code_rva": "0x4208f70",
+   "code_file_offset": "0x4208f70",
+   "vb6_prologue": true
+  },
+  {
+   "index": 305,
+   "code_va": "0x4609142",
+   "code_rva": "0x4209142",
+   "code_file_offset": "0x4209142",
+   "vb6_prologue": true
+  },
+  {
+   "index": 306,
+   "code_va": "0x46091ca",
+   "code_rva": "0x42091ca",
+   "code_file_offset": "0x42091ca",
+   "vb6_prologue": true
+  },
+  {
+   "index": 307,
+   "code_va": "0x46091ca",
+   "code_rva": "0x42091ca",
+   "code_file_offset": "0x42091ca",
+   "vb6_prologue": true
+  },
+  {
+   "index": 308,
+   "code_va": "0x4609409",
+   "code_rva": "0x4209409",
+   "code_file_offset": "0x4209409",
+   "vb6_prologue": true
+  },
+  {
+   "index": 309,
+   "code_va": "0x4609648",
+   "code_rva": "0x4209648",
+   "code_file_offset": "0x4209648",
+   "vb6_prologue": true
+  },
+  {
+   "index": 310,
+   "code_va": "0x4609887",
+   "code_rva": "0x4209887",
+   "code_file_offset": "0x4209887",
+   "vb6_prologue": true
+  },
+  {
+   "index": 311,
+   "code_va": "0x4609acc",
+   "code_rva": "0x4209acc",
+   "code_file_offset": "0x4209acc",
+   "vb6_prologue": true
+  },
+  {
+   "index": 312,
+   "code_va": "0x4609d08",
+   "code_rva": "0x4209d08",
+   "code_file_offset": "0x4209d08",
+   "vb6_prologue": true
+  },
+  {
+   "index": 313,
+   "code_va": "0x4609f24",
+   "code_rva": "0x4209f24",
+   "code_file_offset": "0x4209f24",
+   "vb6_prologue": true
+  },
+  {
+   "index": 314,
+   "code_va": "0x4609f24",
+   "code_rva": "0x4209f24",
+   "code_file_offset": "0x4209f24",
+   "vb6_prologue": true
+  },
+  {
+   "index": 315,
+   "code_va": "0x460a0ae",
+   "code_rva": "0x420a0ae",
+   "code_file_offset": "0x420a0ae",
+   "vb6_prologue": true
+  },
+  {
+   "index": 316,
+   "code_va": "0x460a280",
+   "code_rva": "0x420a280",
+   "code_file_offset": "0x420a280",
+   "vb6_prologue": true
+  },
+  {
+   "index": 317,
+   "code_va": "0x460a308",
+   "code_rva": "0x420a308",
+   "code_file_offset": "0x420a308",
+   "vb6_prologue": true
+  },
+  {
+   "index": 318,
+   "code_va": "0x460a308",
+   "code_rva": "0x420a308",
+   "code_file_offset": "0x420a308",
+   "vb6_prologue": true
+  },
+  {
+   "index": 319,
+   "code_va": "0x460a547",
+   "code_rva": "0x420a547",
+   "code_file_offset": "0x420a547",
+   "vb6_prologue": true
+  },
+  {
+   "index": 320,
+   "code_va": "0x460a786",
+   "code_rva": "0x420a786",
+   "code_file_offset": "0x420a786",
+   "vb6_prologue": true
+  },
+  {
+   "index": 321,
+   "code_va": "0x460a9c5",
+   "code_rva": "0x420a9c5",
+   "code_file_offset": "0x420a9c5",
+   "vb6_prologue": true
+  },
+  {
+   "index": 322,
+   "code_va": "0x460ac0a",
+   "code_rva": "0x420ac0a",
+   "code_file_offset": "0x420ac0a",
+   "vb6_prologue": true
+  },
+  {
+   "index": 323,
+   "code_va": "0x460ae46",
+   "code_rva": "0x420ae46",
+   "code_file_offset": "0x420ae46",
+   "vb6_prologue": true
+  },
+  {
+   "index": 324,
+   "code_va": "0x460b062",
+   "code_rva": "0x420b062",
+   "code_file_offset": "0x420b062",
+   "vb6_prologue": true
+  },
+  {
+   "index": 325,
+   "code_va": "0x460b062",
+   "code_rva": "0x420b062",
+   "code_file_offset": "0x420b062",
+   "vb6_prologue": true
+  },
+  {
+   "index": 326,
+   "code_va": "0x460b1ec",
+   "code_rva": "0x420b1ec",
+   "code_file_offset": "0x420b1ec",
+   "vb6_prologue": true
+  },
+  {
+   "index": 327,
+   "code_va": "0x460b3be",
+   "code_rva": "0x420b3be",
+   "code_file_offset": "0x420b3be",
+   "vb6_prologue": true
+  },
+  {
+   "index": 328,
+   "code_va": "0x460b446",
+   "code_rva": "0x420b446",
+   "code_file_offset": "0x420b446",
+   "vb6_prologue": true
+  },
+  {
+   "index": 329,
+   "code_va": "0x460b446",
+   "code_rva": "0x420b446",
+   "code_file_offset": "0x420b446",
+   "vb6_prologue": true
+  },
+  {
+   "index": 330,
+   "code_va": "0x460b685",
+   "code_rva": "0x420b685",
+   "code_file_offset": "0x420b685",
+   "vb6_prologue": true
+  },
+  {
+   "index": 331,
+   "code_va": "0x460b8c4",
+   "code_rva": "0x420b8c4",
+   "code_file_offset": "0x420b8c4",
+   "vb6_prologue": true
+  },
+  {
+   "index": 332,
+   "code_va": "0x460bb03",
+   "code_rva": "0x420bb03",
+   "code_file_offset": "0x420bb03",
+   "vb6_prologue": true
+  },
+  {
+   "index": 333,
+   "code_va": "0x460bd48",
+   "code_rva": "0x420bd48",
+   "code_file_offset": "0x420bd48",
+   "vb6_prologue": true
+  },
+  {
+   "index": 334,
+   "code_va": "0x460bf84",
+   "code_rva": "0x420bf84",
+   "code_file_offset": "0x420bf84",
+   "vb6_prologue": true
+  },
+  {
+   "index": 335,
+   "code_va": "0x460c1a0",
+   "code_rva": "0x420c1a0",
+   "code_file_offset": "0x420c1a0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 336,
+   "code_va": "0x460c1a0",
+   "code_rva": "0x420c1a0",
+   "code_file_offset": "0x420c1a0",
+   "vb6_prologue": true
+  },
+  {
+   "index": 337,
+   "code_va": "0x460c32a",
+   "code_rva": "0x420c32a",
+   "code_file_offset": "0x420c32a",
+   "vb6_prologue": true
+  },
+  {
+   "index": 338,
+   "code_va": "0x460c4fc",
+   "code_rva": "0x420c4fc",
+   "code_file_offset": "0x420c4fc",
+   "vb6_prologue": true
+  },
+  {
+   "index": 339,
+   "code_va": "0x460c584",
+   "code_rva": "0x420c584",
+   "code_file_offset": "0x420c584",
+   "vb6_prologue": true
+  },
+  {
+   "index": 340,
+   "code_va": "0x460c584",
+   "code_rva": "0x420c584",
+   "code_file_offset": "0x420c584",
+   "vb6_prologue": true
+  },
+  {
+   "index": 341,
+   "code_va": "0x460c7c3",
+   "code_rva": "0x420c7c3",
+   "code_file_offset": "0x420c7c3",
+   "vb6_prologue": true
+  },
+  {
+   "index": 342,
+   "code_va": "0x460ca02",
+   "code_rva": "0x420ca02",
+   "code_file_offset": "0x420ca02",
+   "vb6_prologue": true
+  },
+  {
+   "index": 343,
+   "code_va": "0x460cc41",
+   "code_rva": "0x420cc41",
+   "code_file_offset": "0x420cc41",
+   "vb6_prologue": true
+  },
+  {
+   "index": 344,
+   "code_va": "0x460ce86",
+   "code_rva": "0x420ce86",
+   "code_file_offset": "0x420ce86",
+   "vb6_prologue": true
+  },
+  {
+   "index": 345,
+   "code_va": "0x460d0c2",
+   "code_rva": "0x420d0c2",
+   "code_file_offset": "0x420d0c2",
+   "vb6_prologue": true
+  },
+  {
+   "index": 346,
+   "code_va": "0x460d2de",
+   "code_rva": "0x420d2de",
+   "code_file_offset": "0x420d2de",
+   "vb6_prologue": true
+  },
+  {
+   "index": 347,
+   "code_va": "0x460d2de",
+   "code_rva": "0x420d2de",
+   "code_file_offset": "0x420d2de",
+   "vb6_prologue": true
+  },
+  {
+   "index": 348,
+   "code_va": "0x460d2de",
+   "code_rva": "0x420d2de",
+   "code_file_offset": "0x420d2de",
+   "vb6_prologue": true
+  }
+ ]
+}

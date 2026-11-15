@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Validates the Ref Lab knowledge base against the source tree.
 
 The knowledge base is only useful if it never lies about the code. This
@@ -65,6 +65,27 @@ CURATED_DOCS = [
     "Docs/KB/OPERATIONS.md",
     "Docs/KB/DOMAIN-RULES.md",
     "Docs/KB/DATA-MODEL.md",
+    "Docs/KB/legacy/INDEX.md",
+    "Docs/KB/legacy/VERSIONS.md",
+    "Docs/KB/legacy/MAINTENANCE.md",
+    "Docs/KB/legacy/architecture/OVERVIEW.md",
+    "Docs/KB/legacy/architecture/DEPLOYMENT.md",
+    "Docs/KB/legacy/architecture/CONFIGURATION.md",
+    "Docs/KB/legacy/architecture/PDF-PRINTING.md",
+    "Docs/KB/legacy/data/MODEL.md",
+    "Docs/KB/legacy/data/MIGRATION.md",
+    "Docs/KB/legacy/data/IDENTIFIERS.md",
+    "Docs/KB/legacy/data/BRANCHES.md",
+    "Docs/KB/legacy/clinical/RULES.md",
+    "Docs/KB/legacy/clinical/KNOWLEDGE-LAYER.md",
+    "Docs/KB/legacy/clinical/PROFILES.md",
+    "Docs/KB/legacy/business/WORKFLOWS.md",
+    "Docs/KB/legacy/business/SECURITY.md",
+    "Docs/KB/legacy/business/CAPABILITIES.md",
+    "Docs/KB/legacy/evidence/EVIDENCE-REGISTER.md",
+    "Docs/KB/legacy/evidence/CONTRADICTIONS.md",
+    "Docs/KB/legacy/evidence/UNRESOLVED.md",
+    "Docs/KB/legacy/mapping/LEGACY-TO-MODERN.md",
 ]
 
 # The budgets are counted in CHARACTERS, not bytes. The knowledge base is
@@ -80,6 +101,27 @@ BUDGETS = {
     "Docs/KB/ARCHITECTURE.md": 16000,
     "Docs/KB/DOMAIN-RULES.md": 16000,
     "Docs/KB/DATA-MODEL.md": 16000,
+    "Docs/KB/legacy/INDEX.md": 7500,
+    "Docs/KB/legacy/VERSIONS.md": 13500,
+    "Docs/KB/legacy/MAINTENANCE.md": 6500,
+    "Docs/KB/legacy/architecture/OVERVIEW.md": 11000,
+    "Docs/KB/legacy/architecture/DEPLOYMENT.md": 9000,
+    "Docs/KB/legacy/architecture/CONFIGURATION.md": 8000,
+    "Docs/KB/legacy/architecture/PDF-PRINTING.md": 10000,
+    "Docs/KB/legacy/data/MODEL.md": 11000,
+    "Docs/KB/legacy/data/MIGRATION.md": 8000,
+    "Docs/KB/legacy/data/IDENTIFIERS.md": 6000,
+    "Docs/KB/legacy/data/BRANCHES.md": 6000,
+    "Docs/KB/legacy/clinical/RULES.md": 10500,
+    "Docs/KB/legacy/clinical/KNOWLEDGE-LAYER.md": 8000,
+    "Docs/KB/legacy/clinical/PROFILES.md": 8000,
+    "Docs/KB/legacy/business/WORKFLOWS.md": 10000,
+    "Docs/KB/legacy/business/SECURITY.md": 10000,
+    "Docs/KB/legacy/business/CAPABILITIES.md": 8000,
+    "Docs/KB/legacy/evidence/EVIDENCE-REGISTER.md": 8000,
+    "Docs/KB/legacy/evidence/CONTRADICTIONS.md": 12000,
+    "Docs/KB/legacy/evidence/UNRESOLVED.md": 12000,
+    "Docs/KB/legacy/mapping/LEGACY-TO-MODERN.md": 17500,
 }
 
 # Cues that a line states the ABSENCE of something. A name mentioned on such
@@ -585,11 +627,34 @@ def check_convention_guards(texts: list[tuple[str, str]]) -> None:
 
     if not missing:
         print("  V10 convention guards OK  every cited guard test still exists")
+    check_legacy_evidence_paths(texts)
 
 
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
+
+
+# ---------------------------------------------------------------------------
+# V11 - legacy evidence path validation
+# ---------------------------------------------------------------------------
+
+
+def check_legacy_evidence_paths(texts: list[tuple[str, str]]) -> None:
+    """Legacy docs may reference repository paths (Docs/, evidence/, src/) and
+    explicitly labelled EXTERNAL sources. Repository paths must resolve; EXTERNAL
+    references are recorded but not treated as local files or broken links."""
+    local_refs = 0
+    for relative, text in texts:
+        if not relative.startswith("Docs/KB/legacy/"):
+            continue
+        for match in sorted(set(PATH_PATTERN.findall(text))):
+            candidate = match
+            if candidate.startswith(("src/", "tests/", "Docs/", "scripts/", "tools/", "evidence/", "ReferenceIndex/")):
+                local_refs += 1
+                if not os.path.exists(os.path.join(ROOT, candidate)):
+                    fail("V11", "%s names a legacy evidence path that does not exist: %s" % (relative, candidate))
+    print("  V11 legacy evidence paths OK  (%d local refs checked)" % local_refs)
 
 
 def main() -> int:
