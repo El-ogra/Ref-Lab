@@ -1,0 +1,16 @@
+relationship_id,from,to,relationship,evidence_basis,evidence_types,confidence
+REL-001,real lab system.exe,MSVBVM60.DLL,depends_on,PE import table,Type_1,High
+REL-002,real lab system.exe,SQL Server 'Patients',reads_writes_via,ADO 2.7 / SQLOLEDB.1,Type_1+Type_2,High
+REL-003,real lab system.exe,Patients.mdb (Access),reads_writes_via,offline/branch mirror (Jet 4),Type_1+Type_2,High
+REL-004,Result* forms,per-test profile tables,reads_writes,patientid+requestdate+analytes,Type_1+Type_2,High
+REL-005,Report* DataReports,RTF template corpus (228),renders,layout templates,Type_1,High
+REL-006,Report* DataReports,Data\*.ini (146),configures,reportmaintitle/fonts/print flags,Type_1,High
+REL-007,testtable,Result*/Report* per discipline,catalogues,subgroup->discipline mapping,Type_1+Type_2,Medium
+REL-008,normalrange,result entry forms,validates,sex/age-stratified ranges,Type_2+Type_1,High
+REL-009,operator table 'patients' (grant1-12),Result*/Report* access,authorizes,coarse per-patient grants,Type_2+Type_3,Medium
+REL-010,RealLab E-Mail Sender.exe,SMTP relay,sends_mail_via,System.Net.Mail,Type_1,Medium
+REL-011,real lab system.exe,smsmisr.com,sends_sms_via,cleartext HTTP query string,Type_1+Type_3,High
+REL-012,real lab system.exe,MSCOMM32.OCX / analysers,communicates_via,serial port; BF6500 hematology,Type_1,Medium
+REL-013,real lab system.exe,schema-migration engine,runs_DDL_at_startup,CREATE TABLE etc.,Type_3,Medium
+REL-014,Setup*.bat scripts,SQL Server / Access / PDF printer / Avira,install_configure,unverified payloads; D:\Lab_data attach,Type_3+Type_1,High
+REL-015,V-ROOT-1.00,V-CD-2019 (v1.605),version_precedes,190 files changed / 168 identical,Type_3,High

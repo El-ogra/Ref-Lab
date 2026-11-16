@@ -1,0 +1,151 @@
+{
+  "stage": 2,
+  "evidence_type": 2,
+  "evidence_type_name": "Database & Data Evidence",
+  "generated_utc": "2026-11-16T00:00:00Z",
+  "method": "static parsing of Access/Jet schema exports, SQL statement dumps and redacted data samples; no database opened live",
+  "scope": {
+    "files_total": 180,
+    "bytes_total": 1014215,
+    "note": "All 180 files catalogued, hashed, format-identified. Per-table statistics in type2_tables.csv."
+  },
+  "findings": [
+    {
+      "id": "FIND-T2-001",
+      "title": "Four Microsoft Access 'Jet 4' (Access 2000) MDB databases make up the local data layer",
+      "domain": "database",
+      "class": 1,
+      "confidence": "high",
+      "detail": "db-summary.csv reports: Patients.mdb (93 tables, 1527 columns, 3123 rows, primary patient+test store), Patients_backup.mdb (90 tables, 1381 cols, 2786 rows), Branch_Data.mdb (49 tables, 969 cols, 0 rows), data.mdb (3 tables, 34 cols, 0 rows). All four report jet_version = 'Jet 4 (Access 2000/MDB 4.0)'. These are the Access/Jet offline/branch mirror described in Type 1; the primary system-of-record is SQL Server (Type 1 FIND-T1-005).",
+      "evidence": ["db-summary.csv"],
+      "locations": ["db-summary.csv"]
+    },
+    {
+      "id": "FIND-T2-002",
+      "title": "Schema is a master/configuration core plus ~96 per-test 'profile' result tables",
+      "domain": "database",
+      "class": 1,
+      "confidence": "high",
+      "detail": "cumulative-schema.csv covers 133 tables. Roles: 96 'per-test result table (profile)', 33 'configuration / master data', 1 'generic 20-column dynamic history table', 1 'patient master', 1 'test order / result index', 1 'work-analysis list with prices'. Branch_Data.mdb holds 49 profile tables (0 rows) as branch templates.",
+      "evidence": ["cumulative-schema.csv", "branch-data.json", "db-summary.csv"],
+      "locations": ["cumulative-schema.csv:role", "branch-data.json:names"]
+    },
+    {
+      "id": "FIND-T2-003",
+      "title": "Naming trap: the Access table 'patients' is the OPERATOR/user account table, not patient demographics",
+      "domain": "database",
+      "class": 1,
+      "confidence": "high",
+      "detail": "patients.csv columns are patientusid, patientusname, lastvisit, patientuscap, patientword, patientad, patientus, grant1..grant12, showtip, tipnum, startwork, endwork, breakyorn, breaktime, khasmlimit (26 cols). tables.csv shows the SQL is 'select startwork,endwork,breakyorn,breaktime from patients where patientusname=...'. This is an operator login + 12 permission-grant slots + shift schedule table. Patient demographics live in patientinfo; test orders in patienttest.",
+      "evidence": ["patients.csv", "tables.csv", "columns.csv"],
+      "locations": ["patients.csv:header", "tables.csv:patients"]
+    },
+    {
+      "id": "FIND-T2-004",
+      "title": "Core master tables: patientinfo (demographics), patienttest (orders/results), testtable (catalogue), normalrange (ranges)",
+      "domain": "database",
+      "class": 1,
+      "confidence": "high",
+      "detail": "SQL-reference ranking (statements.csv) is led by testtable (352 statements), patientinfo (307), patienttest (216), normalrange (52). Top referenced columns: patientinfo.patientid (273), patientinfo.patientnamear (233), patientinfo.labid (198), patienttest.patientid (71), patientinfo.requestdate (58). testtable sample columns (37): testcode, arrangnum, subgroupcode, testsimp, testabrev, testname, waslname, historyname, barcodesymb, testnamear, subgroupname, loggroup, active, inotherlab, otherlabprice, patientprice, labprice, testdiscr, testeffect, testusage, typeofsample, deleteprotect, testtime, barcode1-3, branch, seereport, normaltype, addorno, testorno, REFRANGE.",
+      "evidence": ["tables.csv", "columns.csv", "statements.csv", "testtable.csv"],
+      "locations": ["tables.csv", "columns.csv", "statements.csv"]
+    },
+    {
+      "id": "FIND-T2-005",
+      "title": "SQL access pattern: 1,337 ADO statements, SELECT-dominated with SHAPE hierarchies and DELETE maintenance",
+      "domain": "data-access",
+      "class": 1,
+      "confidence": "high",
+      "detail": "statements.csv parses to 1,337 statements: SELECT 1220, DELETE FROM 72, SHAPE 20, OTHER 25. SHAPE statements build hierarchical (parent-child) result sets for reports, e.g. SHAPE {SELECT ... FROM subgrouptable ...} AS cmdbill APPEND ({SELECT * FROM testtable ...} ... RELATE subgroupcode TO subgroupcode). This is VB6 ADO/MSDataShape data access with a DataEnvironment/DataReport style.",
+      "evidence": ["statements.csv"],
+      "locations": ["statements.csv:verb"]
+    },
+    {
+      "id": "FIND-T2-006",
+      "title": "Test catalogue: 609 tests in 48 subgroups; 591 priced; 605 delete-protected; category-driven",
+      "domain": "business",
+      "class": 1,
+      "confidence": "high",
+      "detail": "testtable-stats.json: total_tests 609, active 94, sent_out_to_other_lab 1, with_patient_price 591, delete_protected 605, distinct_subgroups_used 48. Subgroups include BLOOD PICTURE, SERODIAGNOSIS, Trace Elements, Autoimmune diseases, KIDNEY FUNCTIONS, MOLECULAR BIOLOGY, CULTURE AND SENSITIVITY, Hepatitis Markers, LIVER FUNCTION, etc. These map onto the clinical disciplines seen in Type 1 (Result*/Report* forms).",
+      "evidence": ["testtable-stats.json", "testtable.csv", "subgrouptable.csv", "grouptable.csv"],
+      "locations": ["testtable-stats.json"]
+    },
+    {
+      "id": "FIND-T2-007",
+      "title": "Reference ranges: 852 rows across 304 tests, sex- and age-stratified",
+      "domain": "business",
+      "class": 1,
+      "confidence": "high",
+      "detail": "normalrange-stats.json: total_ranges 852, distinct_tests_with_ranges 304; sex breakdown Male 422 / Female 421 / All 5; age units Years 708 / Days 70 / Mons. 65; 459 ranges with numeric low limit, 643 with numeric high limit. normalrange.csv columns (18): normalid, testcode, testsimp, subgroupcode, sex, firstold, secondold, ageunit, ... Reference data is not patient data and is not redacted.",
+      "evidence": ["normalrange-stats.json", "normalrange.csv"],
+      "locations": ["normalrange-stats.json", "normalrange.csv:header"]
+    },
+    {
+      "id": "FIND-T2-008",
+      "title": "Schema evolution V1 (Jet) -> V2019 (DDL): 103 table/column deltas",
+      "domain": "database",
+      "class": 1,
+      "confidence": "high",
+      "detail": "column-evolution.csv has 103 rows comparing in_v1_jet vs in_v2019_ddl, listing added_in_v2019 and removed_in_v2019 columns per table. created-tables.csv and added-columns.csv record specific DDL additions (e.g. new tables FMF, Helicobacter; columns such as Abuse.tramadol/ecstasy, BloodGases.pO2AA1/ctCO2). This documents how the schema changed between the two shipped versions.",
+      "evidence": ["column-evolution.csv", "created-tables.csv", "added-columns.csv"],
+      "locations": ["column-evolution.csv", "created-tables.csv"]
+    },
+    {
+      "id": "FIND-T2-009",
+      "title": "Derived-value constants table (PTCONS, CBCCONS) supports coagulation/CBC calculations",
+      "domain": "business",
+      "class": 2,
+      "confidence": "medium",
+      "detail": "constanttable.csv (7 cols: constantdiscrp, constant1..6) holds rows such as PTCONS = 12, 35, 1.33, 2CVJW and CBCCONS = 3.3, 6.25, 6.75, 7.5, 8.25. The row keys indicate calibration/derivation constants for prothrombin-time (PT/INR) and CBC formulae; the exact formula use is not proven from data alone (Class 2).",
+      "evidence": ["constanttable.csv"],
+      "locations": ["constanttable.csv"]
+    },
+    {
+      "id": "FIND-T2-010",
+      "title": "Patient data in samples is redacted; reference/config data is not",
+      "domain": "privacy",
+      "class": 1,
+      "confidence": "high",
+      "detail": "patients.csv, patientinfo.csv, patienttest.csv, testtable.csv, pricelist.csv, grouptable.csv etc. contain <redacted> tokens in place of personal values. normalrange.csv and constanttable.csv are unredacted because they contain only clinical reference/config values. This confirms the batch was sanitized before analysis.",
+      "evidence": ["patients.csv", "normalrange.csv", "constanttable.csv"],
+      "locations": ["patients.csv", "normalrange.csv"]
+    },
+    {
+      "id": "FIND-T2-011",
+      "title": "Branch_Data.mdb is a 0-row structural template; Patients.mdb is the live store",
+      "domain": "database",
+      "class": 2,
+      "confidence": "medium",
+      "detail": "Branch_Data.mdb has 49 tables / 969 columns but 0 rows (db-summary + rowcounts), while Patients.mdb has 3123 rows. Branch_Data therefore appears to be a branch-configuration/template store (structure without patient data) rather than a live patient store.",
+      "evidence": ["db-summary.csv", "branch-data.json", "rowcounts.csv"],
+      "locations": ["db-summary.csv", "branch-data.json"]
+    },
+    {
+      "id": "FIND-T2-012",
+      "title": "data.mdb holds the shared master data (3 tables, 34 columns)",
+      "domain": "database",
+      "class": 2,
+      "confidence": "medium",
+      "detail": "db-summary.csv reports data.mdb = 3 tables / 34 columns / 0 rows, described as 'system data: test catalogue, normal ranges, constants, prices'. This aligns with the master-data tables seen in Patients.mdb (testtable, normalrange, constanttable, pricelist).",
+      "evidence": ["db-summary.csv", "constanttable.csv"],
+      "locations": ["db-summary.csv"]
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "CON-001",
+      "subject": "Access MDB format version",
+      "claim_a": "Jet 4 (Access 2000) — db-summary.csv reads the MDB header directly (4 databases all report 'Jet 4 (Access 2000/MDB 4.0)')",
+      "claim_b": "Jet 3 / Access 97 — dependency-inventory.json (Type 1) states 'Microsoft Access (Jet 3 / Access 97)'",
+      "evidence_quality": "A is a direct MDB-header observation; B is a general component-name statement",
+      "resolution": "Resolved in favour of A (Jet 4). The MDB header is authoritative for the files present; B is a loose characterisation. Recorded, not discarded.",
+      "confidence": "High"
+    }
+  ],
+  "limitations": [
+    "No live database was opened; all schema/data facts come from prior exports in the batch.",
+    "Several sample exports have partially redacted column headers (patientinfo, patienttest); full column lists are reconstructed from columns__[...].csv and columns.csv.",
+    "Row counts describe the shipped sample/backup MDBs, not a production database.",
+    "Formula use of constanttable rows (PTCONS/CBCCONS) is inferred, not proven (Class 2)."
+  ]
+}

@@ -303,3 +303,38 @@ in the source docs is "NOT ESTABLISHED" — treated as OPEN here.
 - `Docs/KB/legacy/mapping/LEGACY-TO-MODERN.md` — legacy vs modern.
 - Original source evidence: `LEGACY_SYSTEM_UNDERSTANDING_REPORT.md` §6,
   `Docs/Business_Rules_V2.md` (conflicts noted inline), `evidence/reverse-engineering/reverse-engineering-unresolved-issues.md`.
+
+
+---
+
+## Evidence Batch 02 (2026-11-16) — New Contradictions
+
+### C-16 ? Access MDB format version (Jet 3 vs Jet 4)
+- **Subject:** Jet version of the four Access databases.
+- **Conflicting claims:** Type 1 (dependency-inventory.json) stated "Jet 3 / Access 97"; Type 2 (db-summary.csv, read from the MDB header) states "Jet 4 (Access 2000/MDB 4.0)" for all four MDBs.
+- **Resolution:** RESOLVED in favour of Jet 4 — the MDB header is authoritative for the files present; the Type 1 statement was a loose characterisation. (CON-001)
+- **Evidence:** `Docs/KB/legacy/evidence-batch-02/D06_Unified_Registries/contradiction_registry.csv`, `db-summary.csv`.
+
+### C-17 ? VB6 object/form count (169 vs 212)
+- **Subject:** Number of VB6 objects in the main executable.
+- **Conflicting claims:** B1 reported 169 objects (163 forms) for V-ROOT-1.00; vb6-objects.json reports 212 objects (132 forms + 66 DataReports) for v1.605.
+- **Resolution:** PROVISIONAL — most plausible explanation is a version difference between V1.00 and v1.605 (CON-002). Requires comparing both object tables to confirm.
+- **Evidence:** `Docs/KB/legacy/evidence-batch-02/D03_Type1_Analysis/Stage1_Technical_Findings.md` (FIND-T1-003), `findings_register.csv` (F-02).
+
+### C-18 ? Embedded SELECT statement count (1,337 vs 1,370)
+- **Subject:** Number of embedded SQL SELECT statements.
+- **Conflicting claims:** statements.csv parses 1,337 statements (1,220 SELECT); UNR-008 text cites ~1,370 embedded SELECTs.
+- **Resolution:** RESOLVED — two different extraction passes; delta is immaterial. (CON-003)
+- **Evidence:** `statements.csv`, `Docs/KB/legacy/evidence-batch-02/D05_Type3_Analysis/Stage3_Technical_Findings.md`.
+
+### C-19 ? p-code vs native code
+- **Subject:** VB6 compilation mode.
+- **Conflicting claims:** Type 1 left p-code/native unresolved from the static header; B1 F-01 proves native code via 6 independent evidence lines.
+- **Resolution:** RESOLVED — native code (CON-004).
+- **Evidence:** `findings_register.csv` (F-01), `pe-structure.json`.
+
+### C-20 ? External component count vs names recovered (25 vs 20)
+- **Subject:** VB6 external component count.
+- **Conflicting claims:** VBHeader external_component_count = 25; string corpus names only 20.
+- **Resolution:** RESOLVED — 25 declared in header, 20 named from strings, 5 unnamed (UNR-009). Not a conflict. (CON-005)
+- **Evidence:** `vb6-objects.json`, `dependency-inventory.json`.

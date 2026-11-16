@@ -1,0 +1,4133 @@
+{
+  "generated_utc": "2026-11-16T00:00:00Z",
+  "method": "static parsing of Access/Jet schema exports, SQL statements and redacted data samples; no DB opened live",
+  "databases": [
+    {
+      "database": "Patients.mdb",
+      "path": "real lab system\\bin\\Patients.mdb",
+      "label": "primary patient + test store",
+      "size_bytes": "2531328",
+      "jet_version": "Jet 4 (Access 2000/MDB 4.0)",
+      "table_count": "93",
+      "column_count": "1527",
+      "total_rows": "3123"
+    },
+    {
+      "database": "Patients_backup.mdb",
+      "path": "real lab system\\bin\\Patients_backup.mdb",
+      "label": "backup of the patient store (byte-identical to the 2019 CD copy)",
+      "size_bytes": "2146304",
+      "jet_version": "Jet 4 (Access 2000/MDB 4.0)",
+      "table_count": "90",
+      "column_count": "1381",
+      "total_rows": "2786"
+    },
+    {
+      "database": "Branch_Data.mdb",
+      "path": "real lab system\\bin\\Branch_Data.mdb",
+      "label": "branch / multi-branch configuration",
+      "size_bytes": "970752",
+      "jet_version": "Jet 4 (Access 2000/MDB 4.0)",
+      "table_count": "49",
+      "column_count": "969",
+      "total_rows": "0"
+    },
+    {
+      "database": "data.mdb",
+      "path": "real lab system\\bin\\data.mdb",
+      "label": "system data: test catalogue, normal ranges, constants, prices",
+      "size_bytes": "249856",
+      "jet_version": "Jet 4 (Access 2000/MDB 4.0)",
+      "table_count": "3",
+      "column_count": "34",
+      "total_rows": "0"
+    }
+  ],
+  "cumulative_schema_table_count": 133,
+  "cumulative_schema_roles": {
+    "per-test result table (profile)": 96,
+    "configuration / master data": 33,
+    "generic 20-column dynamic history table": 1,
+    "patient master": 1,
+    "test order / result index": 1,
+    "work-analysis list with prices": 1
+  },
+  "tables_with_sql": [
+    [
+      "testtable",
+      352,
+      "23"
+    ],
+    [
+      "patientinfo",
+      307,
+      "22"
+    ],
+    [
+      "patienttest",
+      216,
+      "31"
+    ],
+    [
+      "normalrange",
+      52,
+      "4"
+    ],
+    [
+      "comments",
+      25,
+      "0"
+    ],
+    [
+      "gehats",
+      16,
+      "2"
+    ],
+    [
+      "sharekathesab",
+      15,
+      "0"
+    ],
+    [
+      "payment",
+      13,
+      "6"
+    ],
+    [
+      "history",
+      12,
+      "0"
+    ],
+    [
+      "patients",
+      12,
+      "0"
+    ],
+    [
+      "patienttotal",
+      12,
+      "1"
+    ],
+    [
+      "phone",
+      11,
+      "0"
+    ],
+    [
+      "pricelist",
+      11,
+      "4"
+    ],
+    [
+      "cbc",
+      10,
+      "18"
+    ],
+    [
+      "subgrouptable",
+      10,
+      "2"
+    ],
+    [
+      "titless",
+      10,
+      "0"
+    ],
+    [
+      "abuse",
+      9,
+      "11"
+    ],
+    [
+      "bloodgases",
+      9,
+      "9"
+    ],
+    [
+      "cardiac",
+      9,
+      "8"
+    ],
+    [
+      "coagfactors",
+      9,
+      "10"
+    ],
+    [
+      "crp",
+      9,
+      "10"
+    ],
+    [
+      "customtesttable",
+      9,
+      "4"
+    ],
+    [
+      "drugs",
+      9,
+      "13"
+    ],
+    [
+      "fertlity",
+      9,
+      "16"
+    ],
+    [
+      "glucosetolerance",
+      9,
+      "7"
+    ],
+    [
+      "hgbectrophoresis",
+      9,
+      "7"
+    ],
+    [
+      "hormones",
+      9,
+      "15"
+    ],
+    [
+      "immunoglobulin",
+      9,
+      "9"
+    ],
+    [
+      "iron",
+      9,
+      "8"
+    ],
+    [
+      "kidney",
+      9,
+      "13"
+    ],
+    [
+      "lipids",
+      9,
+      "10"
+    ],
+    [
+      "liver",
+      9,
+      "13"
+    ],
+    [
+      "pancreas",
+      9,
+      "12"
+    ],
+    [
+      "pregnancy",
+      9,
+      "5"
+    ],
+    [
+      "proelectrophoresis",
+      9,
+      "7"
+    ],
+    [
+      "pt",
+      9,
+      "9"
+    ],
+    [
+      "renalfailure",
+      9,
+      "10"
+    ],
+    [
+      "sugar",
+      9,
+      "5"
+    ],
+    [
+      "torch",
+      9,
+      "12"
+    ],
+    [
+      "tumors",
+      9,
+      "13"
+    ]
+  ],
+  "top_referenced_columns": [
+    {
+      "qualified_column": "patientinfo.patientid",
+      "references": "273"
+    },
+    {
+      "qualified_column": "patientinfo.patientnamear",
+      "references": "233"
+    },
+    {
+      "qualified_column": "patientinfo.labid",
+      "references": "198"
+    },
+    {
+      "qualified_column": "patienttest.patientid",
+      "references": "71"
+    },
+    {
+      "qualified_column": "patientinfo.requestdate",
+      "references": "58"
+    },
+    {
+      "qualified_column": "patientinfo.referredbyname",
+      "references": "32"
+    },
+    {
+      "qualified_column": "patienttest.requestdate",
+      "references": "24"
+    },
+    {
+      "qualified_column": "patienttest.testsimp",
+      "references": "24"
+    },
+    {
+      "qualified_column": "patientinfo.patientsex",
+      "references": "23"
+    },
+    {
+      "qualified_column": "patientinfo.patientageunit",
+      "references": "23"
+    },
+    {
+      "qualified_column": "patientinfo.patientage",
+      "references": "23"
+    },
+    {
+      "qualified_column": "patientinfo.barcode",
+      "references": "22"
+    },
+    {
+      "qualified_column": "patienttest.testcode",
+      "references": "21"
+    },
+    {
+      "qualified_column": "patientinfo.completes",
+      "references": "16"
+    },
+    {
+      "qualified_column": "normalrange.testcode",
+      "references": "16"
+    },
+    {
+      "qualified_column": "patientinfo.totalpricedisc",
+      "references": "13"
+    },
+    {
+      "qualified_column": "patienttest.resultt",
+      "references": "12"
+    },
+    {
+      "qualified_column": "patienttest.testpriceout",
+      "references": "12"
+    },
+    {
+      "qualified_column": "cbc.patientid",
+      "references": "12"
+    },
+    {
+      "qualified_column": "patienttest.resultcaseprint",
+      "references": "11"
+    },
+    {
+      "qualified_column": "testtable.testabrev",
+      "references": "11"
+    },
+    {
+      "qualified_column": "testtable.testname",
+      "references": "11"
+    },
+    {
+      "qualified_column": "testtable.testcode",
+      "references": "10"
+    },
+    {
+      "qualified_column": "testtable.testsimp",
+      "references": "10"
+    },
+    {
+      "qualified_column": "subgrouptable.subgroupname",
+      "references": "9"
+    }
+  ],
+  "sql_statement_count": 1337,
+  "sql_verbs": {
+    "SHAPE": 20,
+    "SELECT": 1220,
+    "DELETE FROM": 72,
+    "OTHER": 25
+  },
+  "sql_top_tables": [
+    [
+      "testtable",
+      352
+    ],
+    [
+      "patientinfo",
+      307
+    ],
+    [
+      "patienttest",
+      216
+    ],
+    [
+      "normalrange",
+      52
+    ],
+    [
+      "comments",
+      25
+    ],
+    [
+      "gehats",
+      16
+    ],
+    [
+      "sharekathesab",
+      15
+    ],
+    [
+      "payment",
+      13
+    ],
+    [
+      "history",
+      12
+    ],
+    [
+      "patienttotal",
+      12
+    ],
+    [
+      "patients",
+      12
+    ],
+    [
+      "pricelist",
+      11
+    ],
+    [
+      "phone",
+      11
+    ],
+    [
+      "subgrouptable",
+      10
+    ],
+    [
+      "cbc",
+      10
+    ],
+    [
+      "titless",
+      10
+    ],
+    [
+      "liver",
+      9
+    ],
+    [
+      "abuse",
+      9
+    ],
+    [
+      "cardiac",
+      9
+    ],
+    [
+      "coagfactors",
+      9
+    ],
+    [
+      "crp",
+      9
+    ],
+    [
+      "drugs",
+      9
+    ],
+    [
+      "fertlity",
+      9
+    ],
+    [
+      "iron",
+      9
+    ],
+    [
+      "lipids",
+      9
+    ]
+  ],
+  "profile_tables": [
+    {
+      "profile_table": "ABO",
+      "column_count": "8",
+      "analytes": "patientid|requestdate|abo|rhfactor|direct|indirect|rhtitre|comment",
+      "analyte_count": "5"
+    },
+    {
+      "profile_table": "Abuse",
+      "column_count": "10",
+      "analytes": "patientid|requestdate|Alcohol|Cannabinoid|Opitate|Cocaine|Barbtiurate|Benzodiazipine|Amphetamine|comment",
+      "analyte_count": "7"
+    },
+    {
+      "profile_table": "BILH",
+      "column_count": "9",
+      "analytes": "patientid|requestdate|bilh|fasc|amob|hydat|bilhagurine|bilhagserum|comment",
+      "analyte_count": "6"
+    },
+    {
+      "profile_table": "BONEMAR",
+      "column_count": "23",
+      "analytes": "patientid|requestdate|T01|T02|T03|T04|T05|T06|T07|T08|T09|T10|T11|T12|T13|T14|T15|T16|T17|T18|T19|T20|comment",
+      "analyte_count": "20"
+    },
+    {
+      "profile_table": "BloodGases",
+      "column_count": "10",
+      "analytes": "patientid|requestdate|pH|PaO2|PaCO2|O2|HCO3|SO2|BaseExcess|comment",
+      "analyte_count": "7"
+    },
+    {
+      "profile_table": "CRP",
+      "column_count": "11",
+      "analytes": "patientid|requestdate|aso|crp|rf|Rosewaller|Monospot|VDRL|rpr|THPA|comment",
+      "analyte_count": "8"
+    },
+    {
+      "profile_table": "CSFT",
+      "column_count": "22",
+      "analytes": "patientid|requestdate|materi|color|aspect|deposit|Viscos|clotting|PH|SG|gluc|prot|chlorid|ldh|wbc|rbc|epithi|other|gramdfilm|znfilm|Lishman|comment",
+      "analyte_count": "19"
+    },
+    {
+      "profile_table": "CoagFactors",
+      "column_count": "11",
+      "analytes": "patientid|requestdate|FactVIII|FactIX|FactXI|FactXII|FactII|FactV|FactVII|FactX|comment",
+      "analyte_count": "8"
+    },
+    {
+      "profile_table": "Drugs",
+      "column_count": "14",
+      "analytes": "patientid|requestdate|Digoxin|Tegretol|Phenytoin|Depakene|Phenobarbitone|Tacrolimus|Theophylline|Cyclosporin|Methotrexate|Lithium|Vancomycin|comment",
+      "analyte_count": "11"
+    },
+    {
+      "profile_table": "ESR",
+      "column_count": "5",
+      "analytes": "patientid|requestdate|Fhour|Shour|comment",
+      "analyte_count": "2"
+    },
+    {
+      "profile_table": "Electrolytes",
+      "column_count": "20",
+      "analytes": "patientid|requestdate|scatot|scaion|sph|sna|sk|scl|smg|sosmolality|una|uk|ucl|uca|uph|umg|uosmolality|csfmg|csfcl|comment",
+      "analyte_count": "17"
+    },
+    {
+      "profile_table": "Fertlity",
+      "column_count": "17",
+      "analytes": "patientid|requestdate|FSH|LH|Prolactin|TestostT|TestostF|DHT|Progesterone|E1|E2|E3|DHEAS|DHEA|SHBG|Androstendione|comment",
+      "analyte_count": "14"
+    },
+    {
+      "profile_table": "GLUCOSETOLERANCE",
+      "column_count": "25",
+      "analytes": "patientid|requestdate|given|FBG|FBGG|FBGA|bg30|bg30g|bg30a|bg1|bg1g|bg1a|bg2|bg2g|bg2a|bg3|bg3g|bg3a|bg15|bg15g|bg15a|bg25|bg25g|bg25a|comment",
+      "analyte_count": "22"
+    },
+    {
+      "profile_table": "Hgbectrophoresis",
+      "column_count": "8",
+      "analytes": "patientid|requestdate|A1|A2|F|C|S|Comment",
+      "analyte_count": "5"
+    },
+    {
+      "profile_table": "IMMUNOLOGY",
+      "column_count": "19",
+      "analytes": "patientid|requestdate|ANA|DNA|LKM|SSA|SSB|AntSmith|AntCentromere|ANCA|RNP|AntScl|ASMA|AMA|AntKeratin|AntReticulin|AntSperm|AntJo1|comment",
+      "analyte_count": "16"
+    },
+    {
+      "profile_table": "Immunoglobulin",
+      "column_count": "10",
+      "analytes": "patientid|requestdate|IgG|IgA|IgM|IgE|IgD|C3|C4|comment",
+      "analyte_count": "7"
+    },
+    {
+      "profile_table": "Lipids",
+      "column_count": "11",
+      "analytes": "patientid|requestdate|cholest|trig|hdl|ldl|risk1|risk2|vldl|totallipids|comment",
+      "analyte_count": "8"
+    },
+    {
+      "profile_table": "Pancreas",
+      "column_count": "13",
+      "analytes": "patientid|requestdate|InsulinFast|Insulin30|Insulin60|Insulin120|Insulin180|Cpeptidefast|CpeptidePP|Cpeptideurine|Glucagon|Gastrin|comment",
+      "analyte_count": "10"
+    },
+    {
+      "profile_table": "Proelectrophoresis",
+      "column_count": "8",
+      "analytes": "patientid|requestdate|Albumin|Alpha1|Alpha2|Beta|Gamma|comment",
+      "analyte_count": "5"
+    },
+    {
+      "profile_table": "Suprarenal",
+      "column_count": "16",
+      "analytes": "patientid|requestdate|ACTH9AM|ACTH10PM|Cortisol9AM|Cortisol10PM|CortisolUrine|CatecholUrine|Adrenaline|Noradrenaline|Dopamine|Renin|Aldosterone|Progesterone17OH|VMAUrine|comment",
+      "analyte_count": "13"
+    },
+    {
+      "profile_table": "TORCH",
+      "column_count": "13",
+      "analytes": "patientid|requestdate|Toxoigm|Toxoigg|RubellaIgM|RubellaIgG|CMVIgM|CMVIgG|HerpesIgMI|HerpesIgGI|HerpesIgMII|HerpesIgGII|comment",
+      "analyte_count": "10"
+    },
+    {
+      "profile_table": "TUBERCULINT",
+      "column_count": "6",
+      "analytes": "patientid|requestdate|Dose|Diameter|Resultr|comment",
+      "analyte_count": "3"
+    },
+    {
+      "profile_table": "Tumors",
+      "column_count": "14",
+      "analytes": "patientid|requestdate|CEA|AFP|PSAT|PSAF|PSAR|CA15|CA19|CA125|SMicroglobulin|UMicroglobulin|NSE|comment",
+      "analyte_count": "11"
+    },
+    {
+      "profile_table": "Vitamins",
+      "column_count": "15",
+      "analytes": "patientid|requestdate|VitaminA|VitaminD|VitaminD3|VitaminE|VitaminK|VitaminB1|VitaminB2|VitaminB6|VitaminB12|Folic|Biotin|VitaminC|comment",
+      "analyte_count": "12"
+    },
+    {
+      "profile_table": "ZN",
+      "column_count": "8",
+      "analytes": "patientid|requestdate|sample|Specimen|Stainfilm|Numberbacilli|resultr|comment",
+      "analyte_count": "5"
+    },
+    {
+      "profile_table": "cardiac",
+      "column_count": "9",
+      "analytes": "patientid|requestdate|ldh|cktotal|ckmb|Troponin|TroponinT|Homocystein|comment",
+      "analyte_count": "6"
+    },
+    {
+      "profile_table": "cbc",
+      "column_count": "20",
+      "analytes": "patientid|requestdate|hgb|rbc|hct|plt|hgbper|mcv|mch|mchc|pct|mpv|wbc|neut|lymph|mono|eosino|baso|othercell|comment",
+      "analyte_count": "17"
+    },
+    {
+      "profile_table": "crossmat",
+      "column_count": "84",
+      "analytes": "patientid|requestdate|patabo|patrh|donname1|donname2|donname3|donname4|donname5|donname6|donname7|donname8|donname9|donname10|donabo1|donabo2|donabo3|donabo4|donabo5|donabo6|donabo7|donabo8|donabo9|donabo10|donrh1|donrh2|donrh3|donrh4|donrh5|donrh6|donrh7|donrh8|donrh9|donrh10|doncom1|doncom2|doncom3|doncom4|doncom5|doncom6|doncom7|doncom8|doncom9|doncom10|donhcv1|donhcv2|donhcv3|donhcv4|donhcv5|donhcv6|donhcv7|donhcv8|donhcv9|donhcv10|donhbv1|donhbv2|donhbv3|donhbv4|donhbv5|donhbv6|donhbv7|donhbv8|donhbv9|donhbv10|donhiv1|donhiv2|donhiv3|donhiv4|donhiv5|donhiv6|donhiv7|donhiv8|donhiv9|donhiv10|dontf2|dontf3|dontf4|dontf5|dontf6|dontf7|dontf8|dontf9|dontf10|comment",
+      "analyte_count": "81"
+    },
+    {
+      "profile_table": "cultureanti",
+      "column_count": "12",
+      "analytes": "antinum|patientid|culutrenum|antiid|atisens|arrangnum|antisymbol|scientificname|anticomname|Sensitivityvalue|Sensitiveunit|Sensitivity",
+      "analyte_count": "11"
+    },
+    {
+      "profile_table": "cultures",
+      "column_count": "25",
+      "analytes": "patientid|requestdate|cultid|sample|organism|organism2|condition|colony|reactions|pus1|pus2|rbc1|rbc2|epeth|fungi|cryst|bact|other|few1|few2|few3|few4|direct1|direct2|comment",
+      "analyte_count": "22"
+    },
+    {
+      "profile_table": "hepatitis",
+      "column_count": "20",
+      "analytes": "patientid|requestdate|havigm|havigg|hbsag|hbsab|hbeag|hbeab|hbcigm|hbcigg|hcvigg|hcvigm|hdvtotal|hdvigm|hdvigg|hevigg|hevigm|hcvigg2|hiv|comment",
+      "analyte_count": "17"
+    },
+    {
+      "profile_table": "hormones",
+      "column_count": "16",
+      "analytes": "patientid|requestdate|t3|t4|freet3|freet4|tsh|fti|t3up|pbi|ThyroidAuto|AntiMicrosomal|PTH|Calcitonin|Thyroglobulin|comment",
+      "analyte_count": "13"
+    },
+    {
+      "profile_table": "iron",
+      "column_count": "9",
+      "analytes": "patientid|requestdate|iron|tibc|uibc|Saturation|STransferrin|Ferritin|comment",
+      "analyte_count": "6"
+    },
+    {
+      "profile_table": "kidney",
+      "column_count": "14",
+      "analytes": "patientid|requestdate|creat|uric|urea|bun|UVolume|Creatu|CreatClear|Microalbu|Proteinu|Bencejp|Stonecal|comment",
+      "analyte_count": "11"
+    },
+    {
+      "profile_table": "liver",
+      "column_count": "15",
+      "analytes": "patientid|requestdate|sgpt|sgot|ASTALT|Alp|ggt|totbil|dirbil|indbil|tp|alb|glob|agratio|comment1",
+      "analyte_count": "13"
+    },
+    {
+      "profile_table": "patientinfo",
+      "column_count": "33",
+      "analytes": "patientsefa|patientnamear|patientsex|patientaddress|patientphone|requestdate|outdate|timein|referredbyname|pricemethod|totalprice|elmadfoo3|patientageunit|elbakyma3mal|totalpricedisc|patientid|labid|patientage|discount100|discount|mowzaf|editdate|completes|referredbysefa|recepnote|moreinfo|barcode|patienttel|email|kawmy|edituser2|editdate2|editnum",
+      "analyte_count": "30"
+    },
+    {
+      "profile_table": "patienttest",
+      "column_count": "44",
+      "analytes": "requestdate|patientid|testcode|testsimp|subgroupcode|testtime|testprice|printwith|resultfinsh|resultprint|testpriceout|RESULTCASEPRINT|RESULTT|resultt1|resultt2|resultt3|resultt4|arrangnum|give|edituser|printuser|editdate|printdate|printnum|prevuser|prevdate|taslimuser|taslimdate|loggroup|resultreview|sentout|otherlabname|testpriceoutmadfo|send|commentx|testabrev|testname|historyname|normalrang|testunit|lowlimit|highlimit|nolowexe|nohighexe",
+      "analyte_count": "41"
+    },
+    {
+      "profile_table": "postcoitalt",
+      "column_count": "17",
+      "analytes": "patientid|requestdate|T01|T02|T03|T04|T05|T06|T07|T08|T09|T009|T10|T010|T11|T12|comment",
+      "analyte_count": "14"
+    },
+    {
+      "profile_table": "pregnancy",
+      "column_count": "6",
+      "analytes": "patientid|requestdate|urine|serum|bhcg|comment",
+      "analyte_count": "3"
+    },
+    {
+      "profile_table": "prostaticx",
+      "column_count": "45",
+      "analytes": "patientid|requestdate|wbc11|wbc12|wbc21|wbc22|wbc31|wbc32|rbc11|rbc12|rbc21|rbc22|rbc31|rbc32|Trichom|Monilia|Epith1|Epith2|Epith3|Other1|Other2|Other3|Other01|Other02|Other03|Other1t|Other2t|Other3t|Otherr1|Otherr2|Otherr3|Otherr01|Otherr02|Otherr03|Crystal1|Crystal2|Crystal01|Crystal02|Crystal1t|Crystal2t|Crystalr1|Crystalr2|Crystalr01|Crystalr02|comment",
+      "analyte_count": "42"
+    },
+    {
+      "profile_table": "pt",
+      "column_count": "16",
+      "analytes": "patientid|requestdate|bleedingm|bleedings|bleeding|clottingm|clottings|clotting|pt|concent|inr|ratios|ptt|fibro|fdp|comment",
+      "analyte_count": "13"
+    },
+    {
+      "profile_table": "renalfailure",
+      "column_count": "11",
+      "analytes": "patientid|requestdate|creatbef|creataft|ureabef|ureaaft|nare|kre|care|hgbre|comment",
+      "analyte_count": "8"
+    },
+    {
+      "profile_table": "semen",
+      "column_count": "59",
+      "analytes": "requestdate|patientid|collection|period|timeofcollec|volume|color|Consistency|Liquefaction|Reaction|Viscosity|Concentration|totalsperm|rbc1|rbc2|agglutination|Spermatogenic|Spermatogenic2|Epithelial|wbc1|wbc2|after30|after1|after2|after3|after4|Concentration2|fgradea|fgradeb|fgradec|fgraded|fgradeab|sgradea|sgradeb|sgradec|sgraded|sgradeab|fdead|sdead|abnormal|head|mid|tail|micro|comment|abnx1|abnx2|abnx3|abnx4|abnx5|abnx6|abnx7|abnx8|abnx9|abnx10|abnx11|abnx12|abnx13|fructos",
+      "analyte_count": "56"
+    },
+    {
+      "profile_table": "stone",
+      "column_count": "19",
+      "analytes": "patientid|requestdate|type|shape|color|size|texture|consis|fibr|cyst|Ammon|uric|calc|oxal|mag|phos|Carb|urat|comment",
+      "analyte_count": "16"
+    },
+    {
+      "profile_table": "stool",
+      "column_count": "58",
+      "analytes": "requestdate|patientid|t01|t02|t03|t04|t05|t06|t07|t08|t09|t10|t11|t12|t13|t14|t15|t16|t17|t18|t19|t20|t21|t22|t23|t24|t25|t26|t27|t28|t29|t30|t31|t32|t33|t34|t35|t36|t37|t38|t39|t40|t41|t42|t43|t44|t45|t46|t47|t48|t49|t50|t51|t52|t53|t54|t55|tcomment",
+      "analyte_count": "56"
+    },
+    {
+      "profile_table": "sugar",
+      "column_count": "12",
+      "analytes": "patientid|requestdate|FBG|PBG|RBG|glo1|glo2|glo3|act1|act2|act3|comment",
+      "analyte_count": "9"
+    },
+    {
+      "profile_table": "trace",
+      "column_count": "25",
+      "analytes": "patientid|requestdate|sAluminium|uAluminium|sArsenic|uArsenic|sCadmium|uCadmium|sChromium|uChromium|sCobalt|uCobalt|sCopper|uCopper|sLead|uLead|sMercury|uMercury|sNickel|uNickel|sZinc|uZinc|sSelenium|uSelenium|comment",
+      "analyte_count": "22"
+    },
+    {
+      "profile_table": "urine",
+      "column_count": "58",
+      "analytes": "requestdate|patientid|t01|t02|t03|t04|t05|t06|t07|t08|t09|t10|t11|t12|t13|t14|t15|t16|t17|t18|t19|t20|t21|t22|t23|t24|t25|t26|t27|t28|t29|t30|t31|t32|t33|t34|t35|t36|t37|t38|t39|t40|t41|t42|t43|t44|t45|t46|t47|t48|t49|t50|t51|t52|t53|t54|t55|tcomment",
+      "analyte_count": "56"
+    },
+    {
+      "profile_table": "widal",
+      "column_count": "16",
+      "analytes": "patientid|requestdate|widal1a|widal1b|widal2a|widal2b|widal3a|widal3b|widal4a|widal4b|bruc1a|bruc1b|bruc2a|bruc2b|widalresult|comment",
+      "analyte_count": "13"
+    }
+  ],
+  "testtable_stats": {
+    "total_tests": 609,
+    "active": 94,
+    "sent_out_to_other_lab": 1,
+    "with_patient_price": 591,
+    "delete_protected": 605,
+    "distinct_subgroups_used": 48,
+    "tests_per_subgroup": {
+      "?0": 118,
+      "Separate": 50,
+      "BLOOD PICTURE": 39,
+      "SERODIAGNOSIS": 37,
+      "Trace Elements": 22,
+      "Autoimmune diseases": 20,
+      "KIDNEY FUNCTIONS": 19,
+      "MOLECULAR BIOLOGY": 18,
+      "CULTURE AND SENSITIVITY": 16,
+      "Hepatitis Markers": 16,
+      "LIVER FUNCTIONS": 14,
+      "Fertlity Hormones": 14,
+      "Thyroid Hormones": 13,
+      "Suprarenal Hormones": 13,
+      "Vitamins": 12,
+      "Drug Monitoring": 12,
+      "Tumors Markers": 11,
+      "BLOOD GLUCOSE": 10,
+      "TORCH Screen": 10,
+      "Pancreas Hormones": 10,
+      "Coagulation Profile": 9,
+      "LIPIDS PROFILE": 8,
+      "Blood Gases": 8,
+      "Serum Electrolytes": 8,
+      "Drugs of Abuse": 8,
+      "Renal Failure": 8,
+      "Coagulation Factors": 8,
+      "Urine Electrolytes": 7,
+      "Immunoglobulins": 7,
+      "Hemoglobin electrophoresis": 6,
+      "Protein electrophoresis": 6,
+      "Cardiac Markers": 6,
+      "Iron Tests": 6,
+      "?": 6,
+      "BLOOD GROUP": 5,
+      "Antiphospholipid antibody syndrome": 5,
+      "Erythrocyte Sedimentation Rate": 3,
+      "Pregnancy Tests": 3,
+      "Semen Examination": 3,
+      "HEMATOLOGY": 2,
+      "CSF Electrolytes": 2,
+      "Diabetes profile": 2,
+      "VIROLOGY": 2,
+      "Aminogram": 2,
+      "WBCs function": 2,
+      "URINE EXAMINATION": 1,
+      "STOOL EXAMINATION": 1,
+      "TOXOPLASMOSOIS": 1
+    },
+    "tests_with_clinical_description": 1,
+    "tests_with_sample_type": 292,
+    "tests_with_ref_range_flag": 13,
+    "tests_with_normal_type": 0,
+    "tests_with_otherlab_price": 591,
+    "tests_with_arabic_name": 6
+  },
+  "normalrange_stats": {
+    "total_ranges": 852,
+    "distinct_tests_with_ranges": 304,
+    "sex_breakdown": {
+      "Male": 422,
+      "Female": 421,
+      "All": 5,
+      "": 4
+    },
+    "age_unit_breakdown": {
+      "Years": 708,
+      "": 9,
+      "Days": 70,
+      "Mons.": 65
+    },
+    "ranges_with_numeric_low_limit": 459,
+    "ranges_with_numeric_high_limit": 643,
+    "ranges_with_low_exception_text": 511,
+    "ranges_with_high_exception_text": 581,
+    "ranges_with_low_comment": 19,
+    "ranges_with_high_comment": 19,
+    "ranges_with_pregnancy_smoking_factor": 852,
+    "distinct_test_units": 51,
+    "age_band_min_max": {
+      "Years": [
+        0.0,
+        120.0
+      ],
+      "": [
+        0.0,
+        0.0
+      ],
+      "Days": [
+        1.0,
+        120.0
+      ],
+      "Mons.": [
+        0.0,
+        24.0
+      ]
+    }
+  },
+  "schema_evolution_rows": 103,
+  "schema_evolution_added": [
+    {
+      "table": "abbreviations",
+      "added_in_v2019": ""
+    },
+    {
+      "table": "abo",
+      "added_in_v2019": ""
+    },
+    {
+      "table": "abuse",
+      "added_in_v2019": ""
+    },
+    {
+      "table": "antibio",
+      "added_in_v2019": ""
+    },
+    {
+      "table": "antibiotic",
+      "added_in_v2019": ""
+    },
+    {
+      "table": "anyreport",
+      "added_in_v2019": ""
+    },
+    {
+      "table": "barcodes",
+      "added_in_v2019": ""
+    }
+  ],
+  "base_table_samples": {
+    "ABO": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 8,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "Abuse": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 10,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "BATCH-01-files": {
+      "columns": [
+        "relative_path",
+        "filename",
+        "size_bytes",
+        "sha256",
+        "version_id",
+        "component_tag",
+        "file_version",
+        "product_name",
+        "extension"
+      ],
+      "n_columns": 9,
+      "sample_rows": 46,
+      "redacted": false
+    },
+    "BATCH-02-files": {
+      "columns": [
+        "relative_path",
+        "filename",
+        "size_bytes",
+        "size_human",
+        "sha256",
+        "version_id",
+        "component_tag",
+        "extension",
+        "role",
+        "inventory_id"
+      ],
+      "n_columns": 10,
+      "sample_rows": 305,
+      "redacted": false
+    },
+    "BATCH-03-files": {
+      "columns": [
+        "relative_path",
+        "filename",
+        "size_bytes",
+        "size_human",
+        "sha256",
+        "version_id",
+        "component_tag",
+        "extension",
+        "role",
+        "inventory_id"
+      ],
+      "n_columns": 10,
+      "sample_rows": 13,
+      "redacted": false
+    },
+    "BATCH-04-files": {
+      "columns": [
+        "relative_path",
+        "filename",
+        "size_bytes",
+        "size_human",
+        "sha256",
+        "version_id",
+        "component_tag",
+        "extension",
+        "role",
+        "inventory_id"
+      ],
+      "n_columns": 10,
+      "sample_rows": 13,
+      "redacted": false
+    },
+    "BATCH-05-files": {
+      "columns": [
+        "relative_path",
+        "filename",
+        "size_bytes",
+        "size_human",
+        "sha256",
+        "version_id",
+        "component_tag",
+        "extension",
+        "role",
+        "inventory_id"
+      ],
+      "n_columns": 10,
+      "sample_rows": 4,
+      "redacted": false
+    },
+    "BATCH-06-files": {
+      "columns": [
+        "relative_path",
+        "filename",
+        "size_bytes",
+        "size_human",
+        "sha256",
+        "version_id",
+        "component_tag",
+        "extension",
+        "role",
+        "inventory_id"
+      ],
+      "n_columns": 10,
+      "sample_rows": 1,
+      "redacted": false
+    },
+    "BATCH-07-files": {
+      "columns": [
+        "relative_path",
+        "filename",
+        "size_bytes",
+        "size_human",
+        "sha256",
+        "version_id",
+        "component_tag",
+        "extension",
+        "role",
+        "inventory_id"
+      ],
+      "n_columns": 10,
+      "sample_rows": 326,
+      "redacted": false
+    },
+    "BATCH-09-files": {
+      "columns": [
+        "relative_path",
+        "filename",
+        "size_bytes",
+        "size_human",
+        "sha256",
+        "version_id",
+        "component_tag",
+        "extension",
+        "role",
+        "inventory_id"
+      ],
+      "n_columns": 10,
+      "sample_rows": 13,
+      "redacted": false
+    },
+    "BATCH-10-files": {
+      "columns": [
+        "relative_path",
+        "filename",
+        "size_bytes",
+        "size_human",
+        "sha256",
+        "version_id",
+        "component_tag",
+        "extension",
+        "role",
+        "inventory_id"
+      ],
+      "n_columns": 10,
+      "sample_rows": 80,
+      "redacted": false
+    },
+    "BATCH-11-files": {
+      "columns": [
+        "relative_path",
+        "filename",
+        "size_bytes",
+        "size_human",
+        "sha256",
+        "version_id",
+        "component_tag",
+        "extension",
+        "role",
+        "inventory_id"
+      ],
+      "n_columns": 10,
+      "sample_rows": 7,
+      "redacted": false
+    },
+    "BILH": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 9,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "BONEMAR": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 23,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "BloodGases": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 10,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "CRP": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 11,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "CSFT": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 22,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "CoagFactors": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 11,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "Drugs": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 14,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "ESR": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 5,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "Electrolytes": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 20,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "Fertlity": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 17,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "GLUCOSETOLERANCE": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 25,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "Gehats": {
+      "columns": [
+        "gehahid",
+        "gehahsefa",
+        "gehahname",
+        "masolsefa",
+        "masolname",
+        "madina",
+        "addressxc",
+        "phone",
+        "mobil",
+        "fax",
+        "mail",
+        "web",
+        "flose",
+        "khasm",
+        "omola",
+        "morsel",
+        "pricemethod",
+        "masolphone",
+        "printorno"
+      ],
+      "n_columns": 19,
+      "sample_rows": 10,
+      "redacted": true
+    },
+    "Hgbectrophoresis": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 8,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "IMMUNOLOGY": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 19,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "Immunoglobulin": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 10,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "Labbranch": {
+      "columns": [
+        "branchid",
+        "branchname"
+      ],
+      "n_columns": 2,
+      "sample_rows": 4,
+      "redacted": true
+    },
+    "Lipids": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 11,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "PTC": {
+      "columns": [
+        "control",
+        "concent"
+      ],
+      "n_columns": 2,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "Pancreas": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 13,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "Proelectrophoresis": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 8,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "Suprarenal": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 16,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "TORCH": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 13,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "TUBERCULINT": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 6,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "Tumors": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 14,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "Vitamins": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 15,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "ZN": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 8,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "abbreviations": {
+      "columns": [
+        "abbid",
+        "abbre",
+        "mean"
+      ],
+      "n_columns": 3,
+      "sample_rows": 650,
+      "redacted": false
+    },
+    "added-columns": {
+      "columns": [
+        "table",
+        "added_column",
+        "sql_type"
+      ],
+      "n_columns": 3,
+      "sample_rows": 228,
+      "redacted": false
+    },
+    "antibio": {
+      "columns": [
+        "antisymbol",
+        "scientificname"
+      ],
+      "n_columns": 2,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "antibiotic": {
+      "columns": [
+        "antiid",
+        "culutrenum",
+        "culutretype",
+        "antisymbol",
+        "scientificname",
+        "anticomname1",
+        "anticomname2",
+        "anticomname3",
+        "anticomname4",
+        "anticomname5",
+        "anticomname6",
+        "anticomname7",
+        "anticomname8",
+        "anticomprint1",
+        "anticomprint2",
+        "anticomprint3",
+        "anticomprint4",
+        "anticomprint5",
+        "anticomprint6",
+        "anticomprint7",
+        "anticomprint8",
+        "prgnancy",
+        "child",
+        "Sensitivity",
+        "Sensitiveunit"
+      ],
+      "n_columns": 25,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "anyreport": {
+      "columns": [
+        "patientid",
+        "requestdate",
+        "testcode",
+        "testcodex",
+        "text1",
+        "text2",
+        "text3",
+        "text4",
+        "text5",
+        "text6",
+        "text7",
+        "text8",
+        "text9",
+        "text10",
+        "text11",
+        "text12",
+        "text13",
+        "text14",
+        "text15",
+        "text16",
+        "text17",
+        "text18",
+        "text19",
+        "text20",
+        "text21",
+        "text22"
+      ],
+      "n_columns": 26,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "barcodes": {
+      "columns": [
+        "barcode",
+        "barcodeid"
+      ],
+      "n_columns": 2,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "batches": {
+      "columns": [
+        "batch_id",
+        "archive_name",
+        "target_version",
+        "file_count",
+        "uncompressed_bytes",
+        "estimated_zip_bytes",
+        "groups",
+        "title_en"
+      ],
+      "n_columns": 8,
+      "sample_rows": 11,
+      "redacted": false
+    },
+    "branch-profile-schemas": {
+      "columns": [
+        "profile_table",
+        "column_count",
+        "analytes",
+        "analyte_count"
+      ],
+      "n_columns": 4,
+      "sample_rows": 49,
+      "redacted": false
+    },
+    "cab-inventory": {
+      "columns": [
+        "target",
+        "member",
+        "member_lc",
+        "bytes",
+        "sha256",
+        "cross_target",
+        "name_case_differs"
+      ],
+      "n_columns": 7,
+      "sample_rows": 96,
+      "redacted": false
+    },
+    "capability-inventory": {
+      "columns": [
+        "capability_id",
+        "name_ar",
+        "documented_in_chm",
+        "chm_topics",
+        "chm_topic_titles",
+        "description_ar",
+        "vb6_objects",
+        "vb6_object_count",
+        "db_evidence",
+        "evidence_grade"
+      ],
+      "n_columns": 10,
+      "sample_rows": 15,
+      "redacted": false
+    },
+    "cardiac": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 9,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "cbc": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 20,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "column-evolution": {
+      "columns": [
+        "table",
+        "in_v1_jet",
+        "in_v2019_ddl",
+        "v1_columns",
+        "v2019_columns",
+        "added_in_v2019",
+        "removed_in_v2019"
+      ],
+      "n_columns": 7,
+      "sample_rows": 103,
+      "redacted": false
+    },
+    "columns": {
+      "columns": [
+        "qualified_column",
+        "references"
+      ],
+      "n_columns": 2,
+      "sample_rows": 480,
+      "redacted": false
+    },
+    "comments": {
+      "columns": [
+        "commentid",
+        "testcode",
+        "subgroupcode",
+        "testsimp",
+        "comments"
+      ],
+      "n_columns": 5,
+      "sample_rows": 5,
+      "redacted": true
+    },
+    "constants-mapped": {
+      "columns": [
+        "group",
+        "slot",
+        "value",
+        "documented_formula",
+        "condition",
+        "matches_manual"
+      ],
+      "n_columns": 6,
+      "sample_rows": 9,
+      "redacted": false
+    },
+    "constanttable": {
+      "columns": [
+        "constantdiscrp",
+        "constant1",
+        "constant2",
+        "constant3",
+        "constant4",
+        "constant5",
+        "constant6"
+      ],
+      "n_columns": 7,
+      "sample_rows": 2,
+      "redacted": false
+    },
+    "converts": {
+      "columns": [
+        "testsimp",
+        "Funit",
+        "Sunit",
+        "Factors",
+        "Ffix",
+        "Sfix"
+      ],
+      "n_columns": 6,
+      "sample_rows": 167,
+      "redacted": false
+    },
+    "coverage_matrix": {
+      "columns": [
+        "batch",
+        "file_category",
+        "files",
+        "uploaded",
+        "extracted",
+        "hashed",
+        "deeply_analysed",
+        "structurally_analysed",
+        "partial_or_limited",
+        "method",
+        "status",
+        "notes"
+      ],
+      "n_columns": 12,
+      "sample_rows": 16,
+      "redacted": false
+    },
+    "created-tables": {
+      "columns": [
+        "table",
+        "column",
+        "sql_type",
+        "column_count_in_table"
+      ],
+      "n_columns": 4,
+      "sample_rows": 70,
+      "redacted": false
+    },
+    "cross-batch-correlation-matrix": {
+      "columns": [
+        "sha256",
+        "present_in",
+        "count_of_sets",
+        "paths"
+      ],
+      "n_columns": 4,
+      "sample_rows": 434,
+      "redacted": false
+    },
+    "cross-version-matrix (2)": {
+      "columns": [
+        "relative_path",
+        "relative_to_version_root",
+        "partner_in_other_version",
+        "cross_class",
+        "version_id",
+        "component_tag",
+        "extension",
+        "size_bytes",
+        "sha256",
+        "integrity_status",
+        "present_in_v1",
+        "present_in_v2019",
+        "cross_version",
+        "batch_id",
+        "analysis_status"
+      ],
+      "n_columns": 15,
+      "sample_rows": 837,
+      "redacted": false
+    },
+    "cross-version-matrix": {
+      "columns": [
+        "relative_path",
+        "relative_to_version_root",
+        "partner_in_other_version",
+        "cross_class",
+        "version_id",
+        "component_tag",
+        "extension",
+        "size_bytes",
+        "sha256",
+        "integrity_status",
+        "present_in_v1",
+        "present_in_v2019",
+        "cross_version",
+        "batch_id",
+        "analysis_status"
+      ],
+      "n_columns": 15,
+      "sample_rows": 837,
+      "redacted": false
+    },
+    "crossmat": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 84,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "cultureanti": {
+      "columns": [
+        "antinum",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 12,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "cultures": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 25,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "culturesec": {
+      "columns": [
+        "secnum",
+        "secabre",
+        "secname"
+      ],
+      "n_columns": 3,
+      "sample_rows": 6,
+      "redacted": true
+    },
+    "cumulative-schema": {
+      "columns": [
+        "table",
+        "in_patients_mdb",
+        "rows_patients_mdb",
+        "in_branch_data_mdb",
+        "columns_branch_data_mdb",
+        "sql_statement_count",
+        "role"
+      ],
+      "n_columns": 7,
+      "sample_rows": 133,
+      "redacted": false
+    },
+    "customgrouptable": {
+      "columns": [
+        "customgroupcode",
+        "customgroupname"
+      ],
+      "n_columns": 2,
+      "sample_rows": 5,
+      "redacted": true
+    },
+    "customtesttable": {
+      "columns": [
+        "testnum",
+        "customgroupcode",
+        "testcode",
+        "testsimp",
+        "patientprice"
+      ],
+      "n_columns": 5,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "daytip": {
+      "columns": [
+        "daytipnum",
+        "daytip2"
+      ],
+      "n_columns": 2,
+      "sample_rows": 19,
+      "redacted": false
+    },
+    "db-summary": {
+      "columns": [
+        "database",
+        "path",
+        "label",
+        "size_bytes",
+        "jet_version",
+        "table_count",
+        "column_count",
+        "total_rows"
+      ],
+      "n_columns": 8,
+      "sample_rows": 4,
+      "redacted": false
+    },
+    "evidence-inventory": {
+      "columns": [
+        "evidence_id",
+        "subject",
+        "path",
+        "availability",
+        "method",
+        "sha256",
+        "verification",
+        "note"
+      ],
+      "n_columns": 8,
+      "sample_rows": 16,
+      "redacted": false
+    },
+    "evidence_manifest": {
+      "columns": [
+        "batch",
+        "source_archive",
+        "workspace_path",
+        "filename",
+        "size_bytes",
+        "sha256",
+        "in_upload_manifest",
+        "analysis_state",
+        "notes"
+      ],
+      "n_columns": 9,
+      "sample_rows": 466,
+      "redacted": false
+    },
+    "executable-object-register": {
+      "columns": [
+        "index",
+        "name",
+        "classification",
+        "method_count",
+        "type_flags",
+        "public_bytes_va",
+        "static_bytes_va"
+      ],
+      "n_columns": 7,
+      "sample_rows": 212,
+      "redacted": false
+    },
+    "file-inventory (2)": {
+      "columns": [
+        "relative_path",
+        "file_name",
+        "size_bytes",
+        "sha256",
+        "extension",
+        "magic",
+        "content_type",
+        "analysis_state",
+        "analysis_method",
+        "duplicate_of",
+        "notes"
+      ],
+      "n_columns": 11,
+      "sample_rows": 69,
+      "redacted": false
+    },
+    "file-inventory (3)": {
+      "columns": [
+        "path",
+        "size_bytes",
+        "sha256",
+        "content_type",
+        "magic",
+        "extension",
+        "category",
+        "language",
+        "parsed",
+        "analysed",
+        "notes"
+      ],
+      "n_columns": 11,
+      "sample_rows": 158,
+      "redacted": false
+    },
+    "file-inventory (4)": {
+      "columns": [
+        "path",
+        "size_bytes",
+        "sha256",
+        "content_type",
+        "magic",
+        "extension",
+        "category",
+        "language",
+        "parsed",
+        "analysed",
+        "notes"
+      ],
+      "n_columns": 11,
+      "sample_rows": 70,
+      "redacted": false
+    },
+    "file-inventory": {
+      "columns": [
+        "relative_path",
+        "file_name",
+        "size_bytes",
+        "sha256",
+        "extension",
+        "content_type",
+        "analysis_state",
+        "method",
+        "role",
+        "duplicate_of"
+      ],
+      "n_columns": 10,
+      "sample_rows": 251,
+      "redacted": false
+    },
+    "findings_register": {
+      "columns": [
+        "finding_id",
+        "area",
+        "finding",
+        "status",
+        "evidence_basis",
+        "evidence_source",
+        "limitations"
+      ],
+      "n_columns": 7,
+      "sample_rows": 21,
+      "redacted": false
+    },
+    "frames-index": {
+      "columns": [
+        "projector",
+        "frame",
+        "bytes",
+        "file"
+      ],
+      "n_columns": 4,
+      "sample_rows": 379,
+      "redacted": false
+    },
+    "function_inventory": {
+      "columns": [
+        "program",
+        "executable_sha256",
+        "md5",
+        "image_base",
+        "function_index",
+        "entry_point",
+        "body_min",
+        "body_max",
+        "body_address_count",
+        "body_byte_length",
+        "name",
+        "category",
+        "is_thunk",
+        "is_external",
+        "symbol_source",
+        "signature"
+      ],
+      "n_columns": 16,
+      "sample_rows": 6522,
+      "redacted": false
+    },
+    "functional-module-catalogue": {
+      "columns": [
+        "index",
+        "name",
+        "family_code",
+        "family",
+        "method_count",
+        "type_flags",
+        "public_bytes_va",
+        "static_bytes_va",
+        "is_zero_method"
+      ],
+      "n_columns": 9,
+      "sample_rows": 212,
+      "redacted": false
+    },
+    "grouptable": {
+      "columns": [
+        "groupcode",
+        "groupname",
+        "arname",
+        "deleteprotect"
+      ],
+      "n_columns": 4,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "hba1c": {
+      "columns": [
+        "patientid",
+        "requestdate",
+        "hba1c",
+        "eag",
+        "comment"
+      ],
+      "n_columns": 5,
+      "sample_rows": 1,
+      "redacted": true
+    },
+    "help-topics (2)": {
+      "columns": [
+        "topic_file",
+        "title_ar",
+        "chars",
+        "images",
+        "text"
+      ],
+      "n_columns": 5,
+      "sample_rows": 1595,
+      "redacted": false
+    },
+    "help-topics": {
+      "columns": [
+        "topic_file",
+        "title_ar",
+        "chars",
+        "images",
+        "text"
+      ],
+      "n_columns": 5,
+      "sample_rows": 1595,
+      "redacted": false
+    },
+    "hepatitis": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 20,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "history": {
+      "columns": [
+        "selector",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 25,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "hormones": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 16,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "ini-key-delta": {
+      "columns": [
+        "file",
+        "kind",
+        "key",
+        "v1",
+        "v2019"
+      ],
+      "n_columns": 5,
+      "sample_rows": 3712,
+      "redacted": false
+    },
+    "instrument": {
+      "columns": [
+        "instrumentid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 20,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "insulin": {
+      "columns": [
+        "id",
+        "insulin"
+      ],
+      "n_columns": 2,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "iron": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 9,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "keys-frequency": {
+      "columns": [
+        "key",
+        "occurrences",
+        "distinct_files"
+      ],
+      "n_columns": 3,
+      "sample_rows": 3184,
+      "redacted": false
+    },
+    "kidney": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 14,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "ledger": {
+      "columns": [
+        "inventory_id",
+        "relative_path",
+        "filename",
+        "directory",
+        "extension",
+        "size_bytes",
+        "sha256",
+        "file_version",
+        "product_version",
+        "product_name",
+        "company",
+        "version_id",
+        "component_tag",
+        "version_confidence",
+        "batch_id",
+        "received",
+        "received_sha256",
+        "integrity_status",
+        "format_status",
+        "analysis_status",
+        "analysis_evidence",
+        "open_questions",
+        "final_disposition"
+      ],
+      "n_columns": 23,
+      "sample_rows": 837,
+      "redacted": false
+    },
+    "liver": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 15,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "loggroup": {
+      "columns": [
+        "logid",
+        "logname"
+      ],
+      "n_columns": 2,
+      "sample_rows": 8,
+      "redacted": true
+    },
+    "normalrange": {
+      "columns": [
+        "normalid",
+        "testcode",
+        "testsimp",
+        "subgroupcode",
+        "sex",
+        "firstold",
+        "secondold",
+        "ageunit",
+        "pregsmok",
+        "normalrang",
+        "testunit",
+        "lowlimit",
+        "highlimit",
+        "nolowexe",
+        "nohighexe",
+        "lowcomment",
+        "highcomment",
+        "REFRANGE"
+      ],
+      "n_columns": 18,
+      "sample_rows": 852,
+      "redacted": false
+    },
+    "noteic": {
+      "columns": [
+        "noteid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 6,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "parsed": {
+      "columns": [
+        "file",
+        "filename",
+        "category",
+        "variant",
+        "sections",
+        "key_count",
+        "reportdata_keys",
+        "setupx_keys",
+        "formsubtitle",
+        "reportmaintitle",
+        "reportsubtitle1",
+        "normal_label",
+        "comment_label",
+        "signature",
+        "printcritical",
+        "printhistory",
+        "statusflag",
+        "backcolor",
+        "printer"
+      ],
+      "n_columns": 19,
+      "sample_rows": 223,
+      "redacted": false
+    },
+    "patientinfo": {
+      "columns": [
+        "patientsefa",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 33,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "patients": {
+      "columns": [
+        "patientusid",
+        "patientusname",
+        "lastvisit",
+        "patientuscap",
+        "patientword",
+        "patientad",
+        "patientus",
+        "grant1",
+        "grant2",
+        "grant3",
+        "grant4",
+        "grant5",
+        "grant6",
+        "grant7",
+        "grant8",
+        "grant9",
+        "grant10",
+        "grant11",
+        "grant12",
+        "showtip",
+        "tipnum",
+        "startwork",
+        "endwork",
+        "breakyorn",
+        "breaktime",
+        "khasmlimit"
+      ],
+      "n_columns": 26,
+      "sample_rows": 2,
+      "redacted": true
+    },
+    "patienttest": {
+      "columns": [
+        "requestdate",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 44,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "patienttotal": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 15,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "payment": {
+      "columns": [
+        "patientid",
+        "paiddate",
+        "type",
+        "gehah",
+        "testsimp",
+        "money",
+        "mowzaf",
+        "editdate",
+        "comment"
+      ],
+      "n_columns": 9,
+      "sample_rows": 6,
+      "redacted": true
+    },
+    "pe-envelope": {
+      "columns": [
+        "file",
+        "bytes",
+        "type",
+        "machine",
+        "subsystem",
+        "sections",
+        "timestamp_utc",
+        "linker",
+        "file_version",
+        "product_version",
+        "company",
+        "product",
+        "description",
+        "copyright",
+        "authenticode",
+        "sig_bytes",
+        "signer",
+        "overlay_bytes",
+        "import_dlls"
+      ],
+      "n_columns": 19,
+      "sample_rows": 5,
+      "redacted": false
+    },
+    "pe-summary (2)": {
+      "columns": [
+        "relative_path",
+        "size_bytes",
+        "format",
+        "machine",
+        "sections",
+        "subsystem",
+        "entry_point",
+        "import_dlls",
+        "import_functions",
+        "resources",
+        "vb5_project",
+        "overlay_bytes",
+        "overlay_entropy",
+        "file_entropy",
+        "linker",
+        "file_version",
+        "product_name",
+        "company",
+        "description",
+        "is_vb6"
+      ],
+      "n_columns": 20,
+      "sample_rows": 46,
+      "redacted": false
+    },
+    "pe-summary": {
+      "columns": [
+        "relative_path",
+        "size_bytes",
+        "format",
+        "machine",
+        "sections",
+        "subsystem",
+        "entry_point",
+        "import_dlls",
+        "import_functions",
+        "resources",
+        "vb5_project",
+        "overlay_bytes",
+        "overlay_entropy",
+        "file_entropy",
+        "linker",
+        "file_version",
+        "product_name",
+        "company",
+        "description",
+        "is_vb6"
+      ],
+      "n_columns": 20,
+      "sample_rows": 13,
+      "redacted": false
+    },
+    "phone": {
+      "columns": [
+        "contactid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 19,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "pictures": {
+      "columns": [
+        "patientid",
+        "requestdate",
+        "testcode",
+        "pictpix1",
+        "pictpix2",
+        "pictpix3",
+        "pictpix4",
+        "Label1V",
+        "Label1T",
+        "Label2V",
+        "Label2T",
+        "Label3V",
+        "Label3T",
+        "Label4V",
+        "Label4T",
+        "Label5V",
+        "Label5T",
+        "Label6V",
+        "Label6T",
+        "Label7V",
+        "Label7T",
+        "Label8V",
+        "Label8T",
+        "Label9V",
+        "Label9T",
+        "Label10V",
+        "Label10T",
+        "Label11V",
+        "Label11T",
+        "Label12V",
+        "Label12T",
+        "numsx1",
+        "numsx2",
+        "numsx3",
+        "numsx4",
+        "numsx5",
+        "numsx6",
+        "numsx7",
+        "numsx8",
+        "numsx9",
+        "numsx10",
+        "numsx11",
+        "numsx12",
+        "numsx13",
+        "numsx14",
+        "numsx15",
+        "shapesx1",
+        "shapesx2",
+        "shapesx3",
+        "shapesx4",
+        "shapesx5",
+        "shapesx6",
+        "shapesx7",
+        "shapesx8",
+        "shapesx9",
+        "shapesx10",
+        "shapesx11",
+        "shapesx12",
+        "numsxt1",
+        "numsxt2",
+        "numsxt3",
+        "numsxt4",
+        "numsxt5",
+        "numsxt6",
+        "numsxt7",
+        "numsxt8",
+        "numsxt9",
+        "numsxt10",
+        "numsxt11",
+        "numsxt12",
+        "numsxt13",
+        "numsxt14",
+        "numsxt15"
+      ],
+      "n_columns": 73,
+      "sample_rows": 2,
+      "redacted": true
+    },
+    "postcoitalt": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 17,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "pregnancy": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 6,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "pricelist": {
+      "columns": [
+        "pricenum",
+        "testsimp",
+        "pricelistname",
+        "testprice"
+      ],
+      "n_columns": 4,
+      "sample_rows": 5,
+      "redacted": true
+    },
+    "pricemenu": {
+      "columns": [
+        "pricelistname"
+      ],
+      "n_columns": 1,
+      "sample_rows": 2,
+      "redacted": false
+    },
+    "printer-settings": {
+      "columns": [
+        "printer",
+        "category_count",
+        "categories"
+      ],
+      "n_columns": 3,
+      "sample_rows": 3,
+      "redacted": false
+    },
+    "project-source-inventory": {
+      "columns": [
+        "path",
+        "file_name",
+        "area",
+        "label",
+        "investigation",
+        "file_type",
+        "size_bytes",
+        "sha256",
+        "purpose",
+        "verification",
+        "copies",
+        "unique_evidence"
+      ],
+      "n_columns": 12,
+      "sample_rows": 857,
+      "redacted": false
+    },
+    "projectors": {
+      "columns": [
+        "file",
+        "filename",
+        "size_bytes",
+        "sha256",
+        "file_version",
+        "product_name",
+        "company",
+        "description",
+        "pe_overlay_offset",
+        "swf_offset",
+        "swf_bytes",
+        "swf_signature",
+        "swf_version",
+        "swf_declared_length",
+        "stage_width_px",
+        "stage_height_px",
+        "frame_rate",
+        "tag_count",
+        "shapes",
+        "sprites",
+        "buttons",
+        "fonts",
+        "bitmaps",
+        "jpeg",
+        "lossless",
+        "sounds",
+        "action_bytes",
+        "frame_labels",
+        "export_assets",
+        "text_runs"
+      ],
+      "n_columns": 30,
+      "sample_rows": 13,
+      "redacted": false
+    },
+    "prostaticx": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 45,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "pt": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 16,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "ptc-curve": {
+      "columns": [
+        "control",
+        "concent"
+      ],
+      "n_columns": 2,
+      "sample_rows": 33,
+      "redacted": false
+    },
+    "ratios": {
+      "columns": [
+        "patientid",
+        "requestdate",
+        "cacreat",
+        "ptcreat",
+        "uriccreat",
+        "creat",
+        "ca",
+        "pt",
+        "uric",
+        "comment"
+      ],
+      "n_columns": 10,
+      "sample_rows": 1,
+      "redacted": true
+    },
+    "renalfailure": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 11,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "reportview": {
+      "columns": [
+        "stripnum",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 42,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "rowcounts": {
+      "columns": [
+        "table",
+        "rows",
+        "columns",
+        "export_ok"
+      ],
+      "n_columns": 4,
+      "sample_rows": 49,
+      "redacted": false
+    },
+    "sarfeda3": {
+      "columns": [
+        "sarfnum",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 3,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "seana": {
+      "columns": [
+        "seanaid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 10,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "sections": {
+      "columns": [
+        "section",
+        "files"
+      ],
+      "n_columns": 2,
+      "sample_rows": 6,
+      "redacted": false
+    },
+    "semen": {
+      "columns": [
+        "requestdate",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 59,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "sharekat": {
+      "columns": [
+        "sherkaid",
+        "sherkaname",
+        "sherkaadre",
+        "sherkaphone1",
+        "sherkaphone2",
+        "sherkanote"
+      ],
+      "n_columns": 6,
+      "sample_rows": 1,
+      "redacted": true
+    },
+    "sharekathesab": {
+      "columns": [
+        "taamelid",
+        "sherkaid",
+        "sherkaname",
+        "taameldate",
+        "wareed",
+        "saader",
+        "taamelnote"
+      ],
+      "n_columns": 7,
+      "sample_rows": 3,
+      "redacted": true
+    },
+    "shopping": {
+      "columns": [
+        "matlobid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 7,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "statements": {
+      "columns": [
+        "va",
+        "verb",
+        "tables",
+        "has_star",
+        "length",
+        "text"
+      ],
+      "n_columns": 6,
+      "sample_rows": 1337,
+      "redacted": false
+    },
+    "stone": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 19,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "stool": {
+      "columns": [
+        "requestdate",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 58,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "strings-reallab": {
+      "columns": [
+        "file",
+        "enc",
+        "offset",
+        "kind",
+        "string"
+      ],
+      "n_columns": 5,
+      "sample_rows": 13,
+      "redacted": false
+    },
+    "subgrouptable": {
+      "columns": [
+        "subgroupcode",
+        "subgroupname",
+        "arname",
+        "deleteprotect"
+      ],
+      "n_columns": 4,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "sugar": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 12,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "table-overlap": {
+      "columns": [
+        "table",
+        "in_databases",
+        "databases"
+      ],
+      "n_columns": 3,
+      "sample_rows": 95,
+      "redacted": false
+    },
+    "tables": {
+      "columns": [
+        "table",
+        "statements",
+        "select",
+        "delete",
+        "shape",
+        "distinct_columns",
+        "sample_statement"
+      ],
+      "n_columns": 7,
+      "sample_rows": 100,
+      "redacted": false
+    },
+    "tasgel": {
+      "columns": [
+        "tasgelnum",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 11,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "test-catalogue": {
+      "columns": [
+        "category",
+        "ini_file",
+        "formsubtitle",
+        "reportmaintitle",
+        "reportsubtitle1",
+        "main_symb",
+        "sub_symb",
+        "subtitle_symb",
+        "normal_label",
+        "comment_label",
+        "signature",
+        "signature2",
+        "signature3",
+        "printer",
+        "printcritical",
+        "printhistory",
+        "statusflag",
+        "columns_configured",
+        "colors_configured",
+        "fonts_configured",
+        "key_count"
+      ],
+      "n_columns": 21,
+      "sample_rows": 114,
+      "redacted": false
+    },
+    "testlearn": {
+      "columns": [
+        "testcode",
+        "testsimp",
+        "testlearnid"
+      ],
+      "n_columns": 3,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "testname": {
+      "columns": [
+        "groupcode",
+        "subgroupcode",
+        "arrangnum",
+        "testcode",
+        "testname",
+        "testsimp",
+        "testunit",
+        "num"
+      ],
+      "n_columns": 8,
+      "sample_rows": 1,
+      "redacted": true
+    },
+    "testtable": {
+      "columns": [
+        "testcode",
+        "arrangnum",
+        "subgroupcode",
+        "testsimp",
+        "testabrev",
+        "testname",
+        "waslname",
+        "waslname2",
+        "historyname",
+        "barcodesymb",
+        "testnamear",
+        "subgroupname",
+        "loggroup",
+        "active",
+        "inotherlab",
+        "otherlabname",
+        "otherlabprice",
+        "patientprice",
+        "labprice",
+        "anyqus",
+        "thequse",
+        "testdiscr",
+        "testeffect",
+        "testusage",
+        "typeofsample",
+        "deleteprotect",
+        "testtime",
+        "printwith",
+        "barcode1",
+        "barcode2",
+        "barcode3",
+        "branch",
+        "seereport",
+        "normaltype",
+        "addorno",
+        "testorno",
+        "REFRANGE"
+      ],
+      "n_columns": 37,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "testunits": {
+      "columns": [
+        "unitsid",
+        "unitsname"
+      ],
+      "n_columns": 2,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "titless": {
+      "columns": [
+        "titlenum",
+        "titlesex",
+        "titlename"
+      ],
+      "n_columns": 3,
+      "sample_rows": 12,
+      "redacted": true
+    },
+    "tool_usage_matrix": {
+      "columns": [
+        "tool_or_framework",
+        "intended_role",
+        "actual_use_established_by_evidence",
+        "inputs",
+        "outputs",
+        "coverage",
+        "limitations"
+      ],
+      "n_columns": 7,
+      "sample_rows": 13,
+      "redacted": false
+    },
+    "trace": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 25,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "traceability-matrix": {
+      "columns": [
+        "finding_id",
+        "evidence_id",
+        "finding_title",
+        "severity",
+        "confidence",
+        "source",
+        "cross_batch"
+      ],
+      "n_columns": 7,
+      "sample_rows": 14,
+      "redacted": false
+    },
+    "unified-findings-register": {
+      "columns": [
+        "unified_id",
+        "subject",
+        "original_finding_ids",
+        "origins",
+        "title",
+        "severity",
+        "confidence",
+        "status",
+        "relationship"
+      ],
+      "n_columns": 9,
+      "sample_rows": 41,
+      "redacted": false
+    },
+    "unified-unresolved-questions": {
+      "columns": [
+        "id",
+        "question",
+        "status",
+        "answer"
+      ],
+      "n_columns": 4,
+      "sample_rows": 17,
+      "redacted": false
+    },
+    "upload_priority_matrix": {
+      "columns": [
+        "file_or_category",
+        "current_availability_to_the_agent",
+        "expected_analytical_value",
+        "questions_it_may_resolve",
+        "priority",
+        "justification"
+      ],
+      "n_columns": 6,
+      "sample_rows": 13,
+      "redacted": false
+    },
+    "urine": {
+      "columns": [
+        "requestdate",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 58,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "v1.605-package-manifest": {
+      "columns": [
+        "\"Batch\"",
+        "\"BatchTitle\"",
+        "\"RequestedName\"",
+        "\"ResolvedName\"",
+        "\"MatchType\"",
+        "\"SourceRelPath\"",
+        "\"SizeBytes\"",
+        "\"SHA256\"",
+        "\"StagedPath\""
+      ],
+      "n_columns": 9,
+      "sample_rows": 584,
+      "redacted": false
+    },
+    "v1.605-verification-result": {
+      "columns": [
+        "\"Check\"",
+        "\"Status\"",
+        "\"Detail\""
+      ],
+      "n_columns": 3,
+      "sample_rows": 25,
+      "redacted": false
+    },
+    "v1.605_Batch_Selection_List": {
+      "columns": [
+        "batch",
+        "batch_title",
+        "filename",
+        "extension",
+        "manifest_entries",
+        "copies_in_tree",
+        "size_mb_listed",
+        "status"
+      ],
+      "n_columns": 8,
+      "sample_rows": 449,
+      "redacted": false
+    },
+    "v1.605_Batch_Selection_List_v2": {
+      "columns": [
+        "batch",
+        "batch_title",
+        "filename_as_in_manifest",
+        "filename_corrected",
+        "was_corrected",
+        "extension",
+        "manifest_entries",
+        "size_mb_listed"
+      ],
+      "n_columns": 8,
+      "sample_rows": 448,
+      "redacted": false
+    },
+    "version-baseline": {
+      "columns": [
+        "metric",
+        "v1.00",
+        "v1.605",
+        "delta"
+      ],
+      "n_columns": 4,
+      "sample_rows": 13,
+      "redacted": false
+    },
+    "version_partition": {
+      "columns": [
+        "batch",
+        "archive",
+        "member",
+        "size",
+        "mtime",
+        "version_session"
+      ],
+      "n_columns": 6,
+      "sample_rows": 537,
+      "redacted": false
+    },
+    "wasl": {
+      "columns": [
+        "subgroupcode",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 6,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "widal": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 16,
+      "sample_rows": 0,
+      "redacted": true
+    },
+    "widal2": {
+      "columns": [
+        "patientid",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>",
+        "<redacted>"
+      ],
+      "n_columns": 26,
+      "sample_rows": 0,
+      "redacted": true
+    }
+  },
+  "rowcounts_rows": 49,
+  "branch_data_tables": 49,
+  "branch_data_names_count": 49
+}

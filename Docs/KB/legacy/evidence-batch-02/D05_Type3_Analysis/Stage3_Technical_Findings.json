@@ -1,0 +1,180 @@
+{
+  "stage": 3,
+  "evidence_type": 3,
+  "evidence_type_name": "Analytical Synthesis & Process Evidence",
+  "generated_utc": "2026-11-16T00:00:00Z",
+  "method": "static read of the prior investigators' consolidated registers, matrices, ledgers and tooling records; no re-derivation of target evidence",
+  "scope": {
+    "files_total": 160,
+    "bytes_total": 6767476,
+    "note": "Includes 74 Python tooling scripts, 17 batch manifests, 55 registers/matrices and synthesis catalogues."
+  },
+  "findings": [
+    {
+      "id": "FIND-T3-001",
+      "title": "A consolidated findings register of 41 items exists (9 High, 16 Medium, 11 Low, 5 Info)",
+      "domain": "security",
+      "class": 1,
+      "confidence": "high",
+      "detail": "unified-findings-register.csv consolidates findings from origins B1|B2|B3|B4|FIN. High-severity (9): U-001 default admin/admin operator credentials documented in the manual; U-002 patient-DB backup via generated .bat/.sql; U-003 hardcoded remote patient-DB credential in the .NET e-mail component; U-004 installer creates SQL Server 'sa' with a hardcoded password; U-005 bulk-deletion maintenance tools over every clinical table; U-006 installer scripts execute unverified payloads by absolute path and attach DB from hardcoded D:\\Lab_data; U-016 SMS gateway over plain HTTP with credentials in URL; U-018 41 of 62 PE binaries unsigned; U-037 SQL 'sa' password assembled at runtime from fragments and shipped cleartext.",
+      "evidence": ["unified-findings-register.csv"],
+      "locations": ["unified-findings-register.csv"]
+    },
+    {
+      "id": "FIND-T3-002",
+      "title": "The main executable is VB6 compiled to NATIVE code (resolves the Type 1 p-code/native question)",
+      "domain": "architecture",
+      "class": 1,
+      "confidence": "high",
+      "detail": "findings_register.csv F-01 records NATIVE code, verified by six independent evidence lines: VB5! magic at the entry-pushed address; push+call[ThunRTMain] stub; 186 MSVBVM60 imports (118 __vba*); a 40,076,128-byte native code span in ProjectInfo; Ghidra x86:LE:32:default:windows with MSVBVM60 linkage; REA inspect_pe_imports coverage=complete. This upgrades Type 1 FIND-T1-001 (which left p-code/native unresolved) to a resolved fact.",
+      "evidence": ["findings_register.csv"],
+      "locations": ["findings_register.csv:F-01"]
+    },
+    {
+      "id": "FIND-T3-003",
+      "title": "Procedure/method names are absent from the executable by design (VB6 native, names never stored)",
+      "domain": "architecture",
+      "class": 1,
+      "confidence": "high",
+      "detail": "findings_register.csv F-07: procedure names absent, confirmed by two independent methods (static ObjectInfo lpMethodNames=null for all modules; dynamic Ghidra category_named=0). This explains why Type 1 could recover object names and method counts but not method names.",
+      "evidence": ["findings_register.csv"],
+      "locations": ["findings_register.csv:F-07"]
+    },
+    {
+      "id": "FIND-T3-004",
+      "title": "Object/form counts differ between the two builds (169/163 for V-ROOT-1.00 vs 212/198 for v1.605)",
+      "domain": "version",
+      "class": 3,
+      "confidence": "medium",
+      "detail": "B1's findings_register F-02 records 163 forms + 5 modules + 1 class = 169 VB6 objects for the V-ROOT-1.00 executable (118 forms + 45 report forms = 163). Type 1 vb6-objects.json records 212 objects / 8,026 methods / 132 forms + 66 DataReports for the v1.605 executable. The most plausible explanation is a version difference between the two builds (V1.00 vs v1.605), not a tool error. Recorded as CON-002 and flagged provisional pending a direct comparison of both object tables.",
+      "evidence": ["findings_register.csv", "vb6-objects.json"],
+      "locations": ["findings_register.csv:F-02", "Stage1: FIND-T1-003"]
+    },
+    {
+      "id": "FIND-T3-005",
+      "title": "Unresolved-question register: 17 questions, 5 still UNRESOLVED",
+      "domain": "knowledge-gap",
+      "class": 1,
+      "confidence": "high",
+      "detail": "unified-unresolved-questions.csv: 1 RESOLVED (UNR-001: authoritative exe = sha c54ce6c8…), 5 UNRESOLVED, 4 NO, 4 PARTIALLY RESOLVED, 2 NO-ANSWERED, 1 ANSWERED. Key open items: UNR-002 meaning of 17 grantN operator-permission columns; UNR-003 seven IDPassword* values; UNR-004 two 32-char uppercase literals (possible obfuscated credentials); UNR-005 whether accuntpw is hashed (evidence suggests cleartext); UNR-008 mapping of ~1,370 embedded SELECTs to backends.",
+      "evidence": ["unified-unresolved-questions.csv"],
+      "locations": ["unified-unresolved-questions.csv"]
+    },
+    {
+      "id": "FIND-T3-006",
+      "title": "Prior methodology and tool limitations are documented (13 tools)",
+      "domain": "methodology",
+      "class": 1,
+      "confidence": "high",
+      "detail": "tool_usage_matrix.csv records REA (PE corroborator only; no VB6 p-code/Jet/CAB/CHM support), Ghidra 12.1.4 (function census; no pseudocode for the 59 MB exe), mdbtools 1.0.0 (schema only; mdb-export never invoked; no rows), 7-Zip (CHM/CAB), cabextract 1.9 (list/extract), python3 custom parsers (PE/VB6/CHM/CAB), file(1), sha256sum, openssl 3.x, olefile, strings/grep/diff, pdfplumber/pypdf, dotnet 9.0.316. This is essential QA context for confidence scoring.",
+      "evidence": ["tool_usage_matrix.csv"],
+      "locations": ["tool_usage_matrix.csv"]
+    },
+    {
+      "id": "FIND-T3-007",
+      "title": "Coverage record: B1/B2/B3 per-category coverage with an explicit schema-only MDB policy",
+      "domain": "methodology",
+      "class": 1,
+      "confidence": "high",
+      "detail": "coverage.json (B3) and coverage_matrix.csv (batches 1,2,3; 16 category rows) record file-level coverage. The .mdb categories are marked 'mdb-tables + mdb-schema (SCHEMA ONLY, no rows)': row data was never read, by policy. Some categories are partial (e.g. .cat catalogue via text/hex only).",
+      "evidence": ["coverage.json", "coverage_matrix.csv"],
+      "locations": ["coverage.json", "coverage_matrix.csv"]
+    },
+    {
+      "id": "FIND-T3-008",
+      "title": "Cross-version matrix: 837 file relationships between V-ROOT-1.00 and V-CD-2019",
+      "domain": "version",
+      "class": 1,
+      "confidence": "high",
+      "detail": "cross-version-matrix.csv (837 rows; version_id V-ROOT-1.00 364, V-CD-2019 473): cross_class RELOCATED_IDENTICAL 41, REL_IDENTICAL 127, REL_DIFFERENT 190, NO_PARTNER_IN_OTHER_VERSION 479. 190 files differ between the two versions; 168 are byte-identical (41 relocated + 127 same-path). This quantifies what changed between V1.00 and V-CD-2019.",
+      "evidence": ["cross-version-matrix.csv"],
+      "locations": ["cross-version-matrix.csv:cross_class"]
+    },
+    {
+      "id": "FIND-T3-009",
+      "title": "Master file ledger covers 837 files across 9 component tags",
+      "domain": "process",
+      "class": 1,
+      "confidence": "high",
+      "detail": "ledger.csv (837 rows) maps every target file to an inventory_id, version_id, component_tag, hash and analysis state. Component tags: V1-INSTALLED-APP 364, V2-DEPLOY-PAYLOAD 361, V2-REDIST-VB6RUNTIME 73, V2-SYSTEM-STAGING 13, V2-CD-TOOLS 12, V2-REDIST-PDF 7, V2-INSTALLMEDIA-WIN7/WINXP 3 each, V2-REDIST-MDAC 1. (Note: this ledger's integrity column reads NOT_YET_RECEIVED for all 837 rows — it is a forward plan from a different workspace state, not a record of this batch's files.)",
+      "evidence": ["ledger.csv"],
+      "locations": ["ledger.csv:component_tag"]
+    },
+    {
+      "id": "FIND-T3-010",
+      "title": "Evidence-gap register: specific missing artefacts that would close open questions",
+      "domain": "knowledge-gap",
+      "class": 1,
+      "confidence": "high",
+      "detail": "upload_priority_matrix.csv lists missing evidence: RL_CD2019Access/System/real lab system.exe (would settle single-vs-multiple builds), bin/calculator.exe and bin/real lab timer.exe (sibling apps referenced by path), real lab Image Gallery.exe (pictures consumer), vkUserControlsXP.ocx, Avira (avipbb.sys + engine DLLs/.dat), ark.ico, Patients_backup.mdb, D:\\Lab_data\\Attaching.sql + Attach_database.bat, and the 3 VS6sp6B*.cab member contents.",
+      "evidence": ["upload_priority_matrix.csv"],
+      "locations": ["upload_priority_matrix.csv"]
+    },
+    {
+      "id": "FIND-T3-011",
+      "title": "Evidence of a possible THIRD database backend (MySQL)",
+      "domain": "database",
+      "class": 3,
+      "confidence": "low",
+      "detail": "upload_priority_matrix.csv references 'mysql-connector-odbc-3.51.30-win32.msi' and speaks of 'confirming the third (MySQL) back end at package level'. Combined with SQL Server (Type 1) and Access/Jet (Type 2), this hints at a third backend. It is recorded as a hypothesis (Class 3) because the MySQL connector was not itself present in this batch.",
+      "evidence": ["upload_priority_matrix.csv"],
+      "locations": ["upload_priority_matrix.csv"]
+    },
+    {
+      "id": "FIND-T3-012",
+      "title": "Runtime behaviour: schema-migration engine runs DDL at start-up; IE COM automation for HTTP",
+      "domain": "behaviour",
+      "class": 2,
+      "confidence": "medium",
+      "detail": "FND-F-004 (traceability-matrix.csv): the executable carries its own schema-migration engine and runs DDL (CREATE TABLE etc.) against the clinical database at start-up. FND-F-006: the application drives Internet Explorer by COM automation for an outbound HTTP request. Both are evidence-supported static findings; runtime behaviour was not observed.",
+      "evidence": ["traceability-matrix.csv"],
+      "locations": ["traceability-matrix.csv:FND-F-004", "traceability-matrix.csv:FND-F-006"]
+    },
+    {
+      "id": "FIND-T3-013",
+      "title": "Coarse, undocumented authorization model: per-patient grant flags + per-section print passwords",
+      "domain": "security",
+      "class": 2,
+      "confidence": "medium",
+      "detail": "FND-F-007 (Suspected) + UNR-002/003: a per-patient grant model (the 12 grantN columns on the operator table) and per-section numeric print passwords (IDPassword*) form a coarse authorisation scheme. The mapping of grant bits and IDPassword* values to specific sections is unresolved.",
+      "evidence": ["traceability-matrix.csv", "unified-unresolved-questions.csv"],
+      "locations": ["traceability-matrix.csv:FND-F-007", "unified-unresolved-questions.csv:UNR-002/003"]
+    },
+    {
+      "id": "FIND-T3-014",
+      "title": "Bundled third-party components with security/licensing impact are already catalogued",
+      "domain": "security",
+      "class": 1,
+      "confidence": "high",
+      "detail": "Consolidated register records: U-015 orphaned Avira antivirus kernel-driver descriptors shipped in the deployment; U-019 orphaned unrar 3.50 (20-year-old archive library); U-008 redistributed fonts with prohibitive licence terms (Tahoma renamed); U-033 commercial PDF printer installed in evaluation mode with expired certificate; U-020 unsigned local copies of Windows system DLLs. These are supply-chain observations about the shipped product.",
+      "evidence": ["unified-findings-register.csv"],
+      "locations": ["unified-findings-register.csv:U-015/U-019/U-008/U-033/U-020"]
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "CON-002",
+      "subject": "VB6 object/form count",
+      "claim_a": "169 objects (163 forms + 5 modules + 1 class) — B1 findings_register F-02, for V-ROOT-1.00",
+      "claim_b": "212 objects (132 forms + 66 DataReports + 9 modules + 3 classes) — vb6-objects.json, for v1.605",
+      "evidence_quality": "Both are direct object-table walks, but of different executable builds",
+      "resolution": "Most plausible: a version difference between V1.00 and v1.605 (Class 3, medium confidence). Requires comparing both object tables to confirm. Recorded, not discarded.",
+      "confidence": "Medium"
+    },
+    {
+      "id": "CON-003",
+      "subject": "Embedded SELECT statement count",
+      "claim_a": "1,337 statements (SELECT 1220, DELETE 72, SHAPE 20, OTHER 25) — statements.csv in this batch",
+      "claim_b": "1,370 embedded SELECT statements — unified-unresolved-questions UNR-008 text (prior investigation)",
+      "evidence_quality": "Both are static string/statement extractions from the same executable family",
+      "resolution": "Two different extraction passes / corpora. The delta (~33) is not material to any conclusion. Recorded.",
+      "confidence": "High"
+    }
+  ],
+  "limitations": [
+    "Type 3 does not re-derive target evidence; it inherits prior conclusions (noted where inherited vs independently confirmed).",
+    "The master ledger's NOT_YET_RECEIVED state reflects a different workspace snapshot and must not be read as the state of this batch.",
+    "Open questions UNR-002/003/004/005 remain genuinely unresolved and are carried into the Unresolved Issues Register.",
+    "Some consolidated findings originate from B2, which was explicitly NOT independently re-investigated (UNR-007)."
+  ]
+}

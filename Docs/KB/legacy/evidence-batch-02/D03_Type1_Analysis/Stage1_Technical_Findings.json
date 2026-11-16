@@ -1,0 +1,151 @@
+{
+  "stage": 1,
+  "evidence_type": 1,
+  "evidence_type_name": "Program & Resource Binary Evidence",
+  "generated_utc": "2026-11-16T00:00:00Z",
+  "method": "static analysis only; nothing in the batch was executed",
+  "scope": {
+    "files_total": 121,
+    "bytes_total": 92745469,
+    "note": "Type 1 is dominated by rtf-analysis.json (80.4 MB). All files catalogued, hashed and format-identified in file_disposition.csv."
+  },
+  "findings": [
+    {
+      "id": "FIND-T1-001",
+      "title": "RealLab is a 32-bit Visual Basic 6 native (p-code) Windows GUI application",
+      "domain": "architecture",
+      "class": 1,
+      "confidence": "high",
+      "detail": "real lab system.exe is a PE32 i386 GUI executable that imports only MSVBVM60.DLL (231 named imports) and carries a 'VB5!' VBHeader (runtime build 9782, revision 10). No p-code/native distinction is recoverable from the static header, but the VB6 runtime dependency and VB5! signature establish VB6 as the development platform.",
+      "evidence": ["EVD-000313", "EVD-000312", "EVD-000437", "EVD-000246"],
+      "locations": ["real lab system.exe.json:pe", "vb6-objects.json:vb_header"]
+    },
+    {
+      "id": "FIND-T1-002",
+      "title": "Two distinct builds of the main executable are present (V-ROOT-1.00 and v1.605)",
+      "domain": "version",
+      "class": 1,
+      "confidence": "high",
+      "detail": "real lab system.exe.json describes a 59,150,336-byte build (timestamp 1388267701 = 2013-12-28, sha256 12828D0A..., FileVersion 1.00). 'real lab system.exe (2).json' / pe-structure.json describe a 76,292,096-byte build (timestamp 1595435962 = 2020-07-22, sha256 C54CE6C8..., the v1.605 target). Both are PE32 i386 GUI with image base 0x400000 and sections .text/.data/.rsrc. They are NOT the same file.",
+      "evidence": ["EVD-000313", "EVD-000312", "EVD-000284"],
+      "locations": ["real lab system.exe.json:size_bytes/sha256/pe.timestamp", "pe-structure.json:size_bytes/timestamp"]
+    },
+    {
+      "id": "FIND-T1-003",
+      "title": "VB6 project 'Real_lab_system': 212 objects, 8026 methods, 198 forms + 66 DataReports",
+      "domain": "architecture",
+      "class": 1,
+      "confidence": "high",
+      "detail": "VBHeader.project_name = Real_lab_system; project_description = 'real lab system'; LCID 1033 (en-US). object_count = 212 (210 named). A second tool (objects.json) classifies 210 objects as 132 form + 9 module + 66 datareport + 3 class. The VBHeader form_count 198 = 132 forms + 66 DataReports, reconciling the two tool classifications exactly. 8,026 methods are declared across the project.",
+      "evidence": ["EVD-000437", "EVD-000257"],
+      "locations": ["vb6-objects.json:summary", "objects.json:stats"]
+    },
+    {
+      "id": "FIND-T1-004",
+      "title": "Application is organised as per-domain result-entry forms and per-domain print DataReports",
+      "domain": "business-logic",
+      "class": 2,
+      "confidence": "high",
+      "detail": "Object names follow a Result* / Report* convention per clinical discipline (Resultliver/Reportliver, Resultkidney, Resulturine/Reporturine, Resultsugar/ReportSugar, Resultlipids, resultculutre/reportculutres, ReportFatora, Reporttotal, Reporthistory, Reportinstrument, Reportsemen, statisReport, Reportqc, Reportcross, etc.). Core modules include labmain (71 methods), patientmain (84 methods), labdb and labdb1 (data access), tools, testmain, addpatient, barcode, phone, moneypaid, testrange, workpaper.",
+      "evidence": ["EVD-000437", "EVD-000257"],
+      "locations": ["vb6-objects.json:objects", "objects.json:objects"]
+    },
+    {
+      "id": "FIND-T1-005",
+      "title": "Dual database architecture: SQL Server is the system of record; Access/Jet MDBs are the offline/branch mirror",
+      "domain": "data-access",
+      "class": 2,
+      "confidence": "high",
+      "detail": "dependency-inventory records ADO 2.7 (msado27.tlb, MSADODC.OCX, Provider=SQLOLEDB.1) and a live SQL Server 'Patients' catalog (InitialCatalog=Patients in BASE.ini and data_connection*.udl). It separately records seven Jet 3 (Access 97) .mdb files as an offline workstation cache / branch data store. Type 2 evidence (the Access schemas) therefore describes the mirror, not the primary store.",
+      "evidence": ["EVD-000136", "EVD-000231"],
+      "locations": ["dependency-inventory.json:framework_dependencies", "dependency-inventory.json:database_dependencies"]
+    },
+    {
+      "id": "FIND-T1-006",
+      "title": "Third-party VB6 UI control packs and Microsoft OCX dependencies",
+      "domain": "dependencies",
+      "class": 1,
+      "confidence": "high",
+      "detail": "external_component_count = 25 in the VBHeader. Named controls include ChamaleonButton.ocx (144 typelib members), RgheedButtonControlV2.ocx (100), XP_BUTTONS.ocx (114), vkUserControlsXP.ocx (524), Redsoul911XPCOmponents.ocx (410), plus Microsoft MSCOMCTL/MSCOMCT2/COMDLG32/RICHTX32/MSCOMM32/MSFLXGRD/MSCHRT20/MSADODC/MSDATGRD/MSDATLST/MSDBRPT and vendor NOTEX.dll / REPORT.dll.",
+      "evidence": ["EVD-000136", "EVD-000097", "EVD-000418"],
+      "locations": ["dependency-inventory.json:external_components", "control-typelib-surface.json"]
+    },
+    {
+      "id": "FIND-T1-007",
+      "title": "Outbound integrations: SMTP e-mail, smsmisr.com SMS gateway, serial-port analysers",
+      "domain": "interfaces",
+      "class": 2,
+      "confidence": "medium",
+      "detail": "A .NET 4.0 VB.NET component 'RealLab E-Mail Sender.exe' sends mail via SmtpClient. The main exe contains an smsmisr.com HTTP (cleartext) SMS API call with username/password in the query string (offset 0x27d79a). MSCOMM32.OCX indicates serial-port I/O for laboratory analysers; a UDL references an 'AUTOMATIC HEMATOLOGY ANALYZER ... BF6500' catalog. These are evidence-supported but were not runtime-verified.",
+      "evidence": ["EVD-000136"],
+      "locations": ["dependency-inventory.json:external_services", "dependency-inventory.json:dotnet_assembly_references"]
+    },
+    {
+      "id": "FIND-T1-008",
+      "title": "Shipped help is an Arabic (RTL) HTML Help 4.74 CHM with 17 topics and 79 images",
+      "domain": "documentation",
+      "class": 1,
+      "confidence": "high",
+      "detail": "real lab system help.chm: HTML Help Workshop 4.74.8702, topic_count 17, image_count 79, TOC in Arabic. Copyright topic reads 'Copyright: ais group corporation 2010. All rights reserved.' Topics cover installation, login, patient registration, result entry, reports, backup and notes.",
+      "evidence": ["EVD-000076", "EVD-000077"],
+      "locations": ["chm-analysis.json:topics", "chm-analysis.json:toc_entries"]
+    },
+    {
+      "id": "FIND-T1-009",
+      "title": "Report layout is driven by 146 per-test INI files plus a 228-template RTF cache",
+      "domain": "reporting",
+      "class": 1,
+      "confidence": "high",
+      "detail": "ini-analysis.json analyses 146 .ini files (Data\\*.ini), each with sections reportdata/setupx (and often FORM/report), defining reportmaintitle, subtitles, symbols, fonts and print flags. report_maintitles include MICROBIOLOGY REPORT, MOLECULAR BIOLOGY REPORT, HEMATOLOGY REPORT, IMMUNOLOGY/ENDOCRINOLOGY/CYTOPATHOLOGY/SEROLOGY/BIOCHEMISTRY REPORT. A separate RTF template corpus of 228 cached report templates (template-corpus-228.json) provides the printable layouts.",
+      "evidence": ["EVD-000193", "EVD-000398", "EVD-000350"],
+      "locations": ["ini-analysis.json:report_maintitles", "template-corpus-228.json:rows"]
+    },
+    {
+      "id": "FIND-T1-010",
+      "title": "Barcode and Arabic display fonts are shipped as first-party assets",
+      "domain": "resources",
+      "class": 1,
+      "confidence": "high",
+      "detail": "asset-analysis.json lists 47 assets including barcode fonts FREE3OF9.TTF, WBCW_UPCEAN.ttf, WBCWS_UPCEAN.ttf, Arabic fonts MCS Taybah.ttf / ais lab.ttf / ais symbol.ttf, and Digiface.ttf. The 146 INI files reference Arial (675), Tahoma (597) and Times New Roman (328).",
+      "evidence": ["EVD-000024", "EVD-000193"],
+      "locations": ["asset-analysis.json:assets", "ini-analysis.json:font_names_referenced"]
+    },
+    {
+      "id": "FIND-T1-011",
+      "title": "Executable resources: 10 icons + 1 group icon + 1 VERSION resource; no ASLR/DEP",
+      "domain": "runtime",
+      "class": 1,
+      "confidence": "high",
+      "detail": "pe-resources.json enumerates 10 ICON entries (incl. 69,012-byte 256x256 icon and 67,624-byte icon), one GROUP_ICON and one VERSION resource. pe-structure.json reports characteristics 0x010f, DllCharacteristics 0x0000 (ASLR=false, DEP/NX=false), SEH=true, CFG=false. This matches the consolidated security finding that the legacy binaries ship without modern mitigations.",
+      "evidence": ["EVD-000283", "EVD-000284"],
+      "locations": ["pe-resources.json:entries", "pe-structure.json:dll_characteristics/aslr/dep_nx"]
+    },
+    {
+      "id": "FIND-T1-012",
+      "title": "Component dependency map (B3 slice): 6 components, 9 confirmed dependencies, 31 .NET assembly refs",
+      "domain": "dependencies",
+      "class": 2,
+      "confidence": "medium",
+      "detail": "components.json (B3) catalogues 6 components; dependencies.json records runtime_platform, 9 confirmed dependencies, 2 possible and 4 unresolved; dependency-inventory.json lists 20 external components, 5 framework dependencies, 31 .NET assembly references and 6 analyst tools. These describe the deployment/runtime surface rather than internal call graph.",
+      "evidence": ["EVD-000092", "EVD-000135", "EVD-000136"],
+      "locations": ["components.json", "dependencies.json", "dependency-inventory.json"]
+    },
+    {
+      "id": "FIND-T1-013",
+      "title": "Media asset: RLS_Learn.wmv training video (85 MB ASF/WMV)",
+      "domain": "resources",
+      "class": 1,
+      "confidence": "high",
+      "detail": "asf-metadata.json analyses RLS_Learn.wmv (85,279,236 bytes), an ASF container with 2 streams, confirming the product ships an instructional video.",
+      "evidence": ["EVD-000023"],
+      "locations": ["asf-metadata.json"]
+    }
+  ],
+  "limitations": [
+    "No binary was executed; all findings are static.",
+    "Method bodies were not decompiled; method names/counts come from the VB6 object table only.",
+    "The p-code vs native-code distinction of the VB6 build was not resolved from the static header.",
+    "runtime_build 9782 is the VB6 SP6 runtime build; the exact VB6 service-pack level of the build toolchain is inferred, not proven.",
+    "Duplicate artefacts ('... (2).json') are byte-identical re-analyses where hashes match; the two exe JSONs are NOT duplicates but two different builds (see FIND-T1-002)."
+  ]
+}

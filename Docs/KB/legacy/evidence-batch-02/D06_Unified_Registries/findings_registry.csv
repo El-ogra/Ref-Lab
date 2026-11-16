@@ -1,0 +1,40 @@
+finding_id,evidence_type,domain,title,class,confidence,evidence_ids,stage_status
+FIND-T1-001,Type_1,architecture,RealLab is a 32-bit Visual Basic 6 native (p-code) Windows GUI application,1,high,EVD-000313;EVD-000312;EVD-000437;EVD-000246,established
+FIND-T1-002,Type_1,version,Two distinct builds of the main executable are present (V-ROOT-1.00 and v1.605),1,high,EVD-000313;EVD-000312;EVD-000284,established
+FIND-T1-003,Type_1,architecture,"VB6 project 'Real_lab_system': 212 objects, 8026 methods, 198 forms + 66 DataReports",1,high,EVD-000437;EVD-000257,established
+FIND-T1-004,Type_1,business-logic,Application is organised as per-domain result-entry forms and per-domain print DataReports,2,high,EVD-000437;EVD-000257,established
+FIND-T1-005,Type_1,data-access,Dual database architecture: SQL Server is the system of record; Access/Jet MDBs are the offline/branch mirror,2,high,EVD-000136;EVD-000231,established
+FIND-T1-006,Type_1,dependencies,Third-party VB6 UI control packs and Microsoft OCX dependencies,1,high,EVD-000136;EVD-000097;EVD-000418,established
+FIND-T1-007,Type_1,interfaces,"Outbound integrations: SMTP e-mail, smsmisr.com SMS gateway, serial-port analysers",2,medium,EVD-000136,established
+FIND-T1-008,Type_1,documentation,Shipped help is an Arabic (RTL) HTML Help 4.74 CHM with 17 topics and 79 images,1,high,EVD-000076;EVD-000077,established
+FIND-T1-009,Type_1,reporting,Report layout is driven by 146 per-test INI files plus a 228-template RTF cache,1,high,EVD-000193;EVD-000398;EVD-000350,established
+FIND-T1-010,Type_1,resources,Barcode and Arabic display fonts are shipped as first-party assets,1,high,EVD-000024;EVD-000193,established
+FIND-T1-011,Type_1,runtime,Executable resources: 10 icons + 1 group icon + 1 VERSION resource; no ASLR/DEP,1,high,EVD-000283;EVD-000284,established
+FIND-T1-012,Type_1,dependencies,"Component dependency map (B3 slice): 6 components, 9 confirmed dependencies, 31 .NET assembly refs",2,medium,EVD-000092;EVD-000135;EVD-000136,established
+FIND-T1-013,Type_1,resources,Media asset: RLS_Learn.wmv training video (85 MB ASF/WMV),1,high,EVD-000023,established
+FIND-T2-001,Type_2,database,Four Microsoft Access 'Jet 4' (Access 2000) MDB databases make up the local data layer,1,high,db-summary.csv,established
+FIND-T2-002,Type_2,database,Schema is a master/configuration core plus ~96 per-test 'profile' result tables,1,high,cumulative-schema.csv;branch-data.json;db-summary.csv,established
+FIND-T2-003,Type_2,database,"Naming trap: the Access table 'patients' is the OPERATOR/user account table, not patient demographics",1,high,patients.csv;tables.csv;columns.csv,established
+FIND-T2-004,Type_2,database,"Core master tables: patientinfo (demographics), patienttest (orders/results), testtable (catalogue), normalrange (ranges)",1,high,tables.csv;columns.csv;statements.csv;testtable.csv,established
+FIND-T2-005,Type_2,data-access,"SQL access pattern: 1,337 ADO statements, SELECT-dominated with SHAPE hierarchies and DELETE maintenance",1,high,statements.csv,established
+FIND-T2-006,Type_2,business,Test catalogue: 609 tests in 48 subgroups; 591 priced; 605 delete-protected; category-driven,1,high,testtable-stats.json;testtable.csv;subgrouptable.csv;grouptable.csv,established
+FIND-T2-007,Type_2,business,"Reference ranges: 852 rows across 304 tests, sex- and age-stratified",1,high,normalrange-stats.json;normalrange.csv,established
+FIND-T2-008,Type_2,database,Schema evolution V1 (Jet) -> V2019 (DDL): 103 table/column deltas,1,high,column-evolution.csv;created-tables.csv;added-columns.csv,established
+FIND-T2-009,Type_2,business,"Derived-value constants table (PTCONS, CBCCONS) supports coagulation/CBC calculations",2,medium,constanttable.csv,established
+FIND-T2-010,Type_2,privacy,Patient data in samples is redacted; reference/config data is not,1,high,patients.csv;normalrange.csv;constanttable.csv,established
+FIND-T2-011,Type_2,database,Branch_Data.mdb is a 0-row structural template; Patients.mdb is the live store,2,medium,db-summary.csv;branch-data.json;rowcounts.csv,established
+FIND-T2-012,Type_2,database,"data.mdb holds the shared master data (3 tables, 34 columns)",2,medium,db-summary.csv;constanttable.csv,established
+FIND-T3-001,Type_3,security,"A consolidated findings register of 41 items exists (9 High, 16 Medium, 11 Low, 5 Info)",1,high,unified-findings-register.csv,established
+FIND-T3-002,Type_3,architecture,The main executable is VB6 compiled to NATIVE code (resolves the Type 1 p-code/native question),1,high,findings_register.csv,established
+FIND-T3-003,Type_3,architecture,"Procedure/method names are absent from the executable by design (VB6 native, names never stored)",1,high,findings_register.csv,established
+FIND-T3-004,Type_3,version,Object/form counts differ between the two builds (169/163 for V-ROOT-1.00 vs 212/198 for v1.605),3,medium,findings_register.csv;vb6-objects.json,established
+FIND-T3-005,Type_3,knowledge-gap,"Unresolved-question register: 17 questions, 5 still UNRESOLVED",1,high,unified-unresolved-questions.csv,established
+FIND-T3-006,Type_3,methodology,Prior methodology and tool limitations are documented (13 tools),1,high,tool_usage_matrix.csv,established
+FIND-T3-007,Type_3,methodology,Coverage record: B1/B2/B3 per-category coverage with an explicit schema-only MDB policy,1,high,coverage.json;coverage_matrix.csv,established
+FIND-T3-008,Type_3,version,Cross-version matrix: 837 file relationships between V-ROOT-1.00 and V-CD-2019,1,high,cross-version-matrix.csv,established
+FIND-T3-009,Type_3,process,Master file ledger covers 837 files across 9 component tags,1,high,ledger.csv,established
+FIND-T3-010,Type_3,knowledge-gap,Evidence-gap register: specific missing artefacts that would close open questions,1,high,upload_priority_matrix.csv,established
+FIND-T3-011,Type_3,database,Evidence of a possible THIRD database backend (MySQL),3,low,upload_priority_matrix.csv,established
+FIND-T3-012,Type_3,behaviour,Runtime behaviour: schema-migration engine runs DDL at start-up; IE COM automation for HTTP,2,medium,traceability-matrix.csv,established
+FIND-T3-013,Type_3,security,"Coarse, undocumented authorization model: per-patient grant flags + per-section print passwords",2,medium,traceability-matrix.csv;unified-unresolved-questions.csv,established
+FIND-T3-014,Type_3,security,Bundled third-party components with security/licensing impact are already catalogued,1,high,unified-findings-register.csv,established

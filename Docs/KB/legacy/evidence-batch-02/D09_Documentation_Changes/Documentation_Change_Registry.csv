@@ -1,0 +1,16 @@
+change_id,file_path,change_type,previous_state,new_state,reason,supporting_evidence_ids,related_findings,validation_status
+CHG-000001,00_Project_Control/Input_Archive_Manifest.csv,created,archive inventory,all 461 entries enumerated,M0/M1,,,validated
+CHG-000002,00_Project_Control/Evidence_Discovery_Register.csv,created,evidence classification,461 entries classified (T1 121 / T2 180 / T3 160),M2,EVD-000001,,validated
+CHG-000003,03_Independent_Analysis/Evidence_Type_1/Stage1_Technical_Findings.md,created,Type 1 analysis,13 findings (FIND-T1-001..013),M3,EVD-000313,,validated
+CHG-000004,03_Independent_Analysis/Evidence_Type_2/Stage2_Technical_Findings.md,created,Type 2 analysis,12 findings + CON-001,M4,EVD-000284,,validated
+CHG-000005,03_Independent_Analysis/Evidence_Type_3/Stage3_Technical_Findings.md,created,Type 3 analysis,14 findings + CON-002/003,M5,EVD-000044,,validated
+CHG-000006,04_Cross_Evidence_Integration/Cross_Evidence_Integration.md,created,cross-type integration,unified model + 5 contradiction resolutions,M6,EVD-000313,,validated
+CHG-000007,04_Cross_Evidence_Integration/findings_registry.csv,created,registry consolidation,39 findings,M7,,,validated
+CHG-000008,04_Cross_Evidence_Integration/contradiction_registry.csv,created,contradiction register,5 contradictions,M6/M7,,,validated
+CHG-000009,05_Engineering_Knowledge_Base/00_Overview/Executive_Summary.md,created,KB reconstruction,synthesised understanding,M8,EVD-000313,,validated
+CHG-000010,05_Engineering_Knowledge_Base/02_Database/Database_Architecture.md,created,KB reconstruction,corrects Jet 3 -> Jet 4 (CON-001),M8,db-summary.csv,,validated
+CHG-000011,05_Engineering_Knowledge_Base/02_Database/Tables_and_Columns.md,created,KB reconstruction,master + profile tables,M8,columns.csv,,validated
+CHG-000012,05_Engineering_Knowledge_Base/05_Business_Logic/Business_Rules_and_Workflows.md,created,KB reconstruction,rules documented (not duplicated into Domain),M8,testtable-stats.json,,validated
+CHG-000013,05_Engineering_Knowledge_Base/09_Unresolved/Open_Questions_and_Gaps.md,created,unresolved register,UNR-002..009 + gaps,M8/M9,unified-unresolved-questions.csv,,validated
+CHG-000014,07_Validation_and_QA/Validation_Report.md,created,QA report,coverage/traceability/consistency,M9,,,validated
+CHG-000015,08_Final_Deliverables/Final_Project_Manifest.md,created,final manifest,13 deliverables,M10,,,validated

@@ -1,0 +1,40 @@
+graph TD
+    subgraph Client["VB6 Client — real lab system.exe (native)"]
+        UI["132 Forms + 66 DataReports<br/>per-domain Result*/Report*"]
+        MOD["Business modules<br/>labmain · patientmain · labdb · labdb1 · labfunction · testmain · addpatient · barcode · moneypaid · testrange · workpaper"]
+        RPT["Report engine<br/>RTF x228 · INI x146 · barcode fonts (FREE3OF9, UPCEAN)"]
+        UI --> MOD
+        MOD --> RPT
+    end
+    subgraph Controls["COM / ActiveX stack"]
+        MSOCX["Microsoft OCX<br/>MSCOMCTL · MSCOMCT2 · COMDLG32 · RICHTX32 · MSADODC · MSDATGRD · MSDATLST · MSDBRPT · MSFLXGRD · MSCHRT20 · MSCOMM32 · MCI32 · MSWINSCK"]
+        TPOXC["Third-party controls<br/>ChamaleonButton · RgheedButtonControlV2 · XP_BUTTONS · Redsoul911XPCOmponents · vkUserControlsXP"]
+        VENDOR["Vendor DLLs<br/>NOTEX.dll · REPORT.dll · unrar.dll"]
+    end
+    subgraph Data["Data layer"]
+        SQL[("SQL Server 'Patients'<br/>system of record")]
+        ACC[("Access Jet4 MDBs<br/>Patients · Patients_backup · Branch_Data · data<br/>offline/branch mirror")]
+    end
+    subgraph Ext["External integrations"]
+        SMTP["SMTP relay"]
+        SMS["smsmisr.com SMS (HTTP)"]
+        SER["Serial analysers (MSCOMM32, BF6500)"]
+        IE["IE COM automation"]
+    end
+    subgraph Sats["Satellite utilities"]
+        MAIL["RealLab E-Mail Sender.exe (.NET 4.0)"]
+        IMG["real lab Image Gallery.exe"]
+        PDT["Patient Data Transport.exe"]
+        TOOLS["RLS Access/SQL DB Tools · RLUTool"]
+        CALC["calculator.exe / real lab timer.exe (missing)"]
+    end
+    MOD --> MSOCX
+    MOD --> TPOXC
+    MOD --> VENDOR
+    MOD -->|"ADO 2.7 / SQLOLEDB.1"| SQL
+    MOD -->|"offline / branch"| ACC
+    MOD --> SMS
+    MOD --> SER
+    MOD --> IE
+    MAIL --> SMTP
+    UI -.->|"login admin/admin; grant1-12"| MOD

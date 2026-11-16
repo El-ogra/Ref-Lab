@@ -156,3 +156,8 @@ See `MAINTENANCE.md` for update rules, budgets, governance integration, and vali
 - `scripts/kb_build.py`, `scripts/kb_check.py` — governance tooling.
 - `Docs/KB/legacy/MAINTENANCE.md` — legacy maintenance guide.
 - `Docs/KB/legacy/mapping/LEGACY-TO-MODERN.md` — legacy vs modern.
+
+
+## 9. Evidence Batch 02 (reverse engineering)
+
+Reverse-engineering knowledge base for the reference system (V-ROOT-1.00 + V-CD-2019): `Docs/KB/legacy/evidence-batch-02/D12_Executive_Summary/Executive_Summary.md`.

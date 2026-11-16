@@ -304,3 +304,14 @@ updated in any of the three generations.
 - `Docs/KB/legacy/evidence/CONTRADICTIONS.md` — 22 conflicts and their resolutions.
 - `Docs/KB/legacy/evidence/UNRESOLVED.md` — open questions.
 - `Docs/KB/legacy/mapping/TRANSFORMATION.md` — the plan that consumes these findings.
+
+
+---
+
+## Evidence Batch 02 (2026-11-16) — Budget adjustments
+
+Two legacy budgets were raised to accommodate the Batch 02 integration (new contradictions C-16..C-20 and unresolved questions UNR-002..UNR-009):
+- CONTRADICTIONS.md  16000 -> 19000  (five new contradictions)
+- UNRESOLVED.md      14000 -> 16000  (six new open items)
+
+Every increase is attributable to specific new content and is recorded here. No check was weakened or bypassed.

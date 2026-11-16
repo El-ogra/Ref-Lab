@@ -93,3 +93,20 @@ The V1 documents are **not** preserved inside the repository. Preserving them is
 - `evidence/reverse-engineering/*` — original evidence artefacts (preserved).
 - `Docs/KB/legacy/mapping/LEGACY-TO-MODERN.md` — legacy vs modern.
 - Original detailed sources: `Database documentation.md`, `Documenting the Executable File.md` (root).
+
+
+---
+
+## Evidence Batch 02 (2026-11-16)
+
+Reverse-engineering knowledge base for the reference system (V-ROOT-1.00 + V-CD-2019) is available under
+`Docs/KB/legacy/evidence-batch-02/`. Entry point: `D12_Executive_Summary/Executive_Summary.md`.
+
+Key new artifacts:
+- `D03_Type1_Analysis/Stage1_Technical_Findings.md` — 13 findings (program/binary evidence).
+- `D04_Type2_Analysis/Stage2_Technical_Findings.md` — 12 findings + CON-001 (database/data evidence).
+- `D05_Type3_Analysis/Stage3_Technical_Findings.md` — 14 findings + CON-002/003 (synthesis/process evidence).
+- `D06_Unified_Registries/` — findings (39), evidence (461), relationships (15), contradictions (5).
+- `D08_Engineering_Knowledge_Base/` — 22-file reconstructed KB.
+- `D10_Unresolved_Issues/Open_Questions_and_Gaps.md` — UNR-002..009 + evidence gaps.
+- `D13_Final_Project_Manifest/` — 62-file manifest.

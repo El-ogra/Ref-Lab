@@ -1,0 +1,41 @@
+{
+  "Type_1": {
+    "binary-analysis": 87,
+    "pe-triage": 1,
+    "component-catalogue": 3,
+    "typelib-surface": 1,
+    "dependency-map": 4,
+    "vb6-objects": 1,
+    "media-analysis": 2,
+    "file-analysis": 1,
+    "file-inventory": 5,
+    "tooling-file-inventory": 1,
+    "function-inventory": 1,
+    "chm-topics": 2,
+    "rtf-parse": 3,
+    "vb6-program": 7,
+    "strings": 1,
+    "rtf-template-corpus": 1
+  },
+  "Type_2": {
+    "data-table": 102,
+    "data-sample": 50,
+    "schema-analysis": 11,
+    "mdb-analysis": 1,
+    "schema": 9,
+    "schema-summary": 1,
+    "rowcount": 4,
+    "sql": 2
+  },
+  "Type_3": {
+    "tooling": 74,
+    "batch-manifest": 17,
+    "verification": 4,
+    "cross-batch": 3,
+    "register-or-matrix": 55,
+    "synthesis-catalogue": 4,
+    "process-log": 1,
+    "workspace-inventory": 2
+  },
+  "UNRESOLVED": {}
+}

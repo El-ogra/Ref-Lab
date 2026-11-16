@@ -1,0 +1,778 @@
+{
+  "generated_utc": "2026-11-16T00:00:00Z",
+  "method": "static read of prior consolidated registers and matrices; no re-derivation of target evidence",
+  "unified_findings": [
+    {
+      "id": "U-001",
+      "subject": "admin",
+      "title": "The vendor's own manual documents default operator credentials 'admin' / 'admin'",
+      "severity": "High",
+      "confidence": "Confirmed",
+      "status": "Consolidated",
+      "origins": "B1|B4"
+    },
+    {
+      "id": "U-002",
+      "subject": "sql",
+      "title": "Patient-database backup executed through generated .bat/.sql files with a configurable server and destination",
+      "severity": "High",
+      "confidence": "Confirmed",
+      "status": "Consolidated",
+      "origins": "B1|B2|B4"
+    },
+    {
+      "id": "U-003",
+      "subject": "hardcoded remote patient-database creden",
+      "title": "Hardcoded remote patient-database credential in the .NET e-mail component",
+      "severity": "High",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B1"
+    },
+    {
+      "id": "U-004",
+      "subject": "password",
+      "title": "The installer creates the SQL Server 'sa' account with a hardcoded password and leaves network protocols enabled",
+      "severity": "High",
+      "confidence": "Confirmed",
+      "status": "Consolidated",
+      "origins": "B1|B4|FIN"
+    },
+    {
+      "id": "U-005",
+      "subject": "bulk-deletion maintenance tools targetin",
+      "title": "Bulk-deletion maintenance tools targeting every clinical table",
+      "severity": "High",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B1"
+    },
+    {
+      "id": "U-006",
+      "subject": "script",
+      "title": "Installer scripts execute unverified payloads by absolute path and attach the database from a hardcoded D:\\Lab_data folder",
+      "severity": "High",
+      "confidence": "Confirmed",
+      "status": "Consolidated",
+      "origins": "B1|B2|B3|B4"
+    },
+    {
+      "id": "U-007",
+      "subject": "aslr",
+      "title": "Obsolete Microsoft components are installed system-wide with COM self-registration and no ASLR or DEP",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Consolidated",
+      "origins": "B1|B2|B4|FIN"
+    },
+    {
+      "id": "U-008",
+      "subject": "font",
+      "title": "Redistributed fonts carry licence terms that prohibit redistribution, including Microsoft's Tahoma under a renamed identity",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Consolidated",
+      "origins": "B1|B3"
+    },
+    {
+      "id": "U-009",
+      "subject": "default operator account name shipped in",
+      "title": "Default operator account name shipped in configuration",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B1"
+    },
+    {
+      "id": "U-010",
+      "subject": "operator-controlled outbound e-mail with",
+      "title": "Operator-controlled outbound e-mail with arbitrary attachment",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B1"
+    },
+    {
+      "id": "U-011",
+      "subject": "full patient-identifiable schema shipped",
+      "title": "Full patient-identifiable schema shipped with the installer",
+      "severity": "Low",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B1"
+    },
+    {
+      "id": "U-012",
+      "subject": "direct device access and serial i/o",
+      "title": "Direct device access and serial I/O",
+      "severity": "Low",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B1"
+    },
+    {
+      "id": "U-013",
+      "subject": "keyboard hook api present in the main ex",
+      "title": "Keyboard hook API present in the main executable",
+      "severity": "Low",
+      "confidence": "Suspected",
+      "status": "Single-source",
+      "origins": "B1"
+    },
+    {
+      "id": "U-014",
+      "subject": "live credentials retained in unreachable",
+      "title": "Live credentials retained in unreachable code",
+      "severity": "Info",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B1"
+    },
+    {
+      "id": "U-015",
+      "subject": "dep",
+      "title": "Orphaned Avira antivirus kernel-driver descriptors are shipped inside the clinical deployment",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Consolidated",
+      "origins": "B1|B2|B4|FIN"
+    },
+    {
+      "id": "U-016",
+      "subject": "http",
+      "title": "The SMS gateway is called over plain HTTP with the account credential in the URL query string",
+      "severity": "High",
+      "confidence": "Confirmed",
+      "status": "Consolidated",
+      "origins": "B1|FIN"
+    },
+    {
+      "id": "U-017",
+      "subject": "whole patient database can be backed up ",
+      "title": "Whole patient database can be backed up to an operator-configurable path",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B1"
+    },
+    {
+      "id": "U-018",
+      "subject": "41 of 62 pe binaries are unsigned, inclu",
+      "title": "41 of 62 PE binaries are unsigned, including every vendor and third-party binary",
+      "severity": "High",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B2"
+    },
+    {
+      "id": "U-019",
+      "subject": "orphaned 20-year-old third-party archive",
+      "title": "Orphaned 20-year-old third-party archive library (unrar 3.50) shipped in the installation",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B2"
+    },
+    {
+      "id": "U-020",
+      "subject": "unsigned local copies of windows system ",
+      "title": "Unsigned local copies of Windows system DLLs shipped in the application directory",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B2"
+    },
+    {
+      "id": "U-021",
+      "subject": "third-party button control exposes a url",
+      "title": "Third-party button control exposes a URL-opening method",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B2"
+    },
+    {
+      "id": "U-022",
+      "subject": "a file with a .dll extension is actually",
+      "title": "A file with a .dll extension is actually an INI configuration file",
+      "severity": "Low",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B2"
+    },
+    {
+      "id": "U-023",
+      "subject": "a 675-byte pe stub stands in for the rea",
+      "title": "A 675-byte PE stub stands in for the real RichText control",
+      "severity": "Low",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B2"
+    },
+    {
+      "id": "U-024",
+      "subject": "third-party control packs have spanish-l",
+      "title": "Third-party control packs have Spanish-language member names and no attribution",
+      "severity": "Info",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B2"
+    },
+    {
+      "id": "U-025",
+      "subject": "legacy mdac 2.8 redistributable installe",
+      "title": "Legacy MDAC 2.8 redistributable installer shipped",
+      "severity": "Info",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B2"
+    },
+    {
+      "id": "U-026",
+      "subject": "clinical report templates and reference ",
+      "title": "Clinical report templates and reference documents carry no integrity protection and are therefore tamperable",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B3"
+    },
+    {
+      "id": "U-027",
+      "subject": "allergen-panel templates store arabic la",
+      "title": "Allergen-panel templates store Arabic labels in Windows-1256, so they mis-render on a non-Arabic-locale host",
+      "severity": "Medium",
+      "confidence": "Confirmed (encoding); Inferred (impact)",
+      "status": "Single-source",
+      "origins": "B3"
+    },
+    {
+      "id": "U-028",
+      "subject": "every report template hardcodes a legacy",
+      "title": "Every report template hardcodes a legacy printer driver name and absolute print geometry",
+      "severity": "Low",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B3"
+    },
+    {
+      "id": "U-029",
+      "subject": "shipped report stationery carries placeh",
+      "title": "Shipped report stationery carries placeholder laboratory identity and a placeholder ministry-of-health reference",
+      "severity": "Low",
+      "confidence": "Confirmed (content); Inferred (impact)",
+      "status": "Single-source",
+      "origins": "B3"
+    },
+    {
+      "id": "U-030",
+      "subject": "two cached reference documents are large",
+      "title": "Two cached reference documents are large enough to pressure a constrained Rich Text host",
+      "severity": "Low",
+      "confidence": "Confirmed (size); Inferred (impact)",
+      "status": "Single-source",
+      "origins": "B3"
+    },
+    {
+      "id": "U-031",
+      "subject": "the global report-theme file the applica",
+      "title": "The global report-theme file the application reads is absent from the batch",
+      "severity": "Low",
+      "confidence": "Confirmed (absence); Confirmed (dependency, from B1/B2)",
+      "status": "Single-source",
+      "origins": "B3"
+    },
+    {
+      "id": "U-032",
+      "subject": "machine-generated templates contain dupl",
+      "title": "Machine-generated templates contain duplicate keys inside a single section",
+      "severity": "Info",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B3"
+    },
+    {
+      "id": "U-033",
+      "subject": "certificate",
+      "title": "A commercial PDF printer is silently installed in evaluation mode with an expired code-signing certificate",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B4"
+    },
+    {
+      "id": "U-034",
+      "subject": "report layouts are per-workstation, so i",
+      "title": "Report layouts are per-workstation, so identical tests can print differently on different machines",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B4"
+    },
+    {
+      "id": "U-035",
+      "subject": "clinical derivation constants are shippe",
+      "title": "Clinical derivation constants are shipped as user-editable values and are documented in the manual",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B4"
+    },
+    {
+      "id": "U-036",
+      "subject": "debug symbol",
+      "title": "Microsoft debug symbol files are shipped inside the clinical installation",
+      "severity": "Low",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "B4"
+    },
+    {
+      "id": "U-037",
+      "subject": "sa ",
+      "title": "The SQL Server sa password is assembled at run time from separate literal fragments and shipped in cleartext",
+      "severity": "High",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "FIN"
+    },
+    {
+      "id": "U-038",
+      "subject": "the executable carries its own schema-mi",
+      "title": "The executable carries its own schema-migration engine and runs DDL against the clinical database at start-up",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "FIN"
+    },
+    {
+      "id": "U-039",
+      "subject": "internet explorer",
+      "title": "The application drives Internet Explorer by COM automation for an outbound HTTP request",
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "FIN"
+    },
+    {
+      "id": "U-040",
+      "subject": "the build embeds an absolute installatio",
+      "title": "The build embeds an absolute installation path that ties the product to one drive layout",
+      "severity": "Low",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "FIN"
+    },
+    {
+      "id": "U-041",
+      "subject": "the binary carries no version resource m",
+      "title": "The binary carries no version resource metadata beyond a minimal VS_VERSIONINFO block",
+      "severity": "Info",
+      "confidence": "Confirmed",
+      "status": "Single-source",
+      "origins": "FIN"
+    }
+  ],
+  "unified_findings_count": 41,
+  "unified_findings_by_severity": {
+    "High": 9,
+    "Medium": 16,
+    "Low": 11,
+    "Info": 5
+  },
+  "unresolved_questions": [
+    {
+      "id": "UNR-001",
+      "question": "Which executable copy is authoritative?",
+      "status": "RESOLVED",
+      "answer": "The newly supplied copy. Its SHA-256 c54ce6c8c98a679efc5ab485bc4b313b452026d6a40f9bda36eca7ea18df93c0 is byte-identical to the digest B1 recorded for RL_CD2019Access/System/real lab system.exe, so there is no discrepancy to resolve and exactly one content."
+    },
+    {
+      "id": "UNR-002",
+      "question": "What does each of the 17 grantN columns on the Patients table mean?",
+      "status": "UNRESOLVED",
+      "answer": "The column names and their Bit/YESNO type are established. Their meaning is not: the strings are pooled by the compiler, so adjacency proves nothing. The association with pricing is suggested by the presence of `discount`, `discount100` and `Discount=` literals in the same binary, but that is an inference, not a determination."
+    },
+    {
+      "id": "UNR-003",
+      "question": "What are the seven IDPassword* values and what do they unlock?",
+      "status": "UNRESOLVED",
+      "answer": "The identifiers and the \"Digits only\" prompt are established. The mapping of each identifier to a report section, and whether the check is server-side, were not determined statically."
+    },
+    {
+      "id": "UNR-004",
+      "question": "What are the two 32-character uppercase literals (9OYOJAUGJ6LHS8NHT5IPI00YHC52WY7DT6HK, 13ADE9E2Z0VXJAJJ1D230PP5TRHZ1IB8ZEXF)?",
+      "status": "UNRESOLVED",
+      "answer": "Not determined. They sit in the VB6 string-literal pool among sputum/TB report text and beside the connection-string fragments, but VB6 pools literals contiguously, so position carries no meaning. They are recorded so a future stage can test the hypothesis that they are obfuscated credentials."
+    },
+    {
+      "id": "UNR-005",
+      "question": "Is the password stored in accuntpw hashed before it is written?",
+      "status": "UNRESOLVED",
+      "answer": "The column is varchar(50) with no salt/hash column, and the login path SELECTs the row directly. That is consistent with cleartext storage but does not exclude an application-side hash."
+    },
+    {
+      "id": "UNR-006",
+      "question": "Is the B1 target archive available anywhere?",
+      "status": "NO",
+      "answer": "No. The B1 analysis package is present in context/B1, and its file-inventory.csv records the SHA-256 of every file it contained - including the primary executable - but the 28,314,816-byte B1 target archive itself is not in the workspace or the attachment directories. The executable was recovered from the newly supplied copy, and its identity was confirmed against B1's recorded digest."
+    },
+    {
+      "id": "UNR-007",
+      "question": "Was B2 independently investigated in this project?",
+      "status": "NO",
+      "answer": "No. B2 materials are present in context/B2 as an analysis package supplied through the handover archive, and they were read and used as evidence. B2 was not independently re-investigated, and its findings were not re-derived. Every B2 statement in this package is cited as inherited, never as independently verified."
+    },
+    {
+      "id": "UNR-008",
+      "question": "Which of the 1,370 embedded SELECT statements are executed against which backend?",
+      "status": "PARTIALLY RESOLVED",
+      "answer": "The statements were extracted and their target tables enumerated (patienttest 138, normalrange 78, patientinfo 65, comments 28, testtable 26, insulin 23, Gehats 22 and so on). Mapping each statement to the object that issues it requires decompilation, which was not completed."
+    },
+    {
+      "id": "UNR-009",
+      "question": "What are the 25 external components declared in the VB6 header?",
+      "status": "UNRESOLVED",
+      "answer": "The header records the count (25) and the table pointer, but the descriptor layout for that table was not established, so the component names were not recovered. The object table (212 entries) was recovered in full."
+    },
+    {
+      "id": "UNR-010",
+      "question": "What is the compiled code path of the report renderer?",
+      "status": "PARTIALLY RESOLVED",
+      "answer": "The static architecture is established: Report* and Result* objects per discipline, the B3 INI layout templates and the B2 MSDBRPTR.DLL engine. The exact call chain was not decompiled."
+    },
+    {
+      "id": "UNR-011",
+      "question": "Does Data/REPORT.ini exist anywhere?",
+      "status": "NO",
+      "answer": "Absent from B1, B2, B3 and B4. Still open (B3 DEP-B3-U01, B4 DEP-B4-U01)."
+    },
+    {
+      "id": "UNR-012",
+      "question": "What is unrar.dll for?",
+      "status": "NO",
+      "answer": "Still unexplained. B2 recorded it as an orphaned 2003-era third-party library and no later batch has shed light on it."
+    },
+    {
+      "id": "UNR-013",
+      "question": "Does the analysis of the 76 MB executable reach its decompiled code?",
+      "status": "PARTIALLY RESOLVED",
+      "answer": "The VB6 project structures, the complete object register, the import surface, the resources and the full string corpus were recovered statically without decompilation. Ghidra headless analysis was attempted under a 1.2 GB heap cap; see the coverage report for its outcome."
+    },
+    {
+      "id": "UNR-014",
+      "question": "How is the _S template variant selected?",
+      "status": "PARTIALLY RESOLVED",
+      "answer": "The manual (B4) states the report-settings changes apply only on the machine where they were made, and the executable carries a 20-method reportsetup object. The selection rule itself was not recovered."
+    },
+    {
+      "id": "UNR-015",
+      "question": "Did the Ghidra headless run produce any usable decompilation?",
+      "status": "NO — ANSWERED",
+      "answer": "No. The second attempt (corrected GHIDRA_HEADLESS_MAXMEM=1200M) was kernel-OOM-killed with SIGKILL (exit 137) during auto-analysis. The saved Ghidra project is 23 KB of metadata with no committed function data, and the post-script never ran. UNR-008 and UNR-010 therefore remain open."
+    },
+    {
+      "id": "UNR-016",
+      "question": "Is a 1.2 GB -Xmx sufficient to analyse this binary in this container?",
+      "status": "NO — ANSWERED",
+      "answer": "No. RSS reached 1.54 GB because JVM metaspace, native memory and the Ghidra analysis structures sit outside -Xmx. On 3,072 MiB with no swap the process was killed. A workable run needs swap, a larger memory limit, or a different analyser configuration."
+    },
+    {
+      "id": "UNR-017",
+      "question": "Why do B1 and B2 have no byte-identical overlap with each other?",
+      "status": "ANSWERED",
+      "answer": "None is expected. B1 is the application portion (the executable, the Access/Jet mirror, the INI templates) and B2 is the platform payload (ActiveX controls, type libraries, runtime DLLs). The one shared file across the whole project is the primary executable, which B1 recorded and this stage re-obtained byte-identically."
+    }
+  ],
+  "unresolved_by_status": {
+    "RESOLVED": 1,
+    "UNRESOLVED": 5,
+    "NO": 4,
+    "PARTIALLY RESOLVED": 4,
+    "NO — ANSWERED": 2,
+    "ANSWERED": 1
+  },
+  "findings_register": [
+    {
+      "id": "F-01",
+      "area": "Application architecture",
+      "finding": "real lab system.exe is a Visual Basic 6 application compiled to NATIVE CODE",
+      "status": "Verified"
+    },
+    {
+      "id": "F-02",
+      "area": "Application architecture",
+      "finding": "163 forms + 5 modules + 1 class = 169 VB6 objects",
+      "status": "Verified"
+    },
+    {
+      "id": "F-03",
+      "area": "Application inventory",
+      "finding": "Exactly ONE application binary exists in the uploaded evidence",
+      "status": "Verified"
+    },
+    {
+      "id": "F-04",
+      "area": "Application versions",
+      "finding": "Whether a second application BUILD exists is UNRESOLVED",
+      "status": "Unresolved"
+    },
+    {
+      "id": "F-05",
+      "area": "Application identity",
+      "finding": "The single application binary is FileVersion 1.00, CompanyName/LegalCopyright/LegalTrademarks 'RealLab', PE build date 2013-12-28 21:55:01 UTC",
+      "status": "Verified"
+    },
+    {
+      "id": "F-06",
+      "area": "Ghidra",
+      "finding": "The main executable WAS analysed to completion; the 6,522 vs 2,999 discrepancy was a 3,000-row EXPORT CAP, not a counting error",
+      "status": "Verified"
+    },
+    {
+      "id": "F-07",
+      "area": "Ghidra",
+      "finding": "Procedure names are absent from the executable — confirmed by two independent methods",
+      "status": "Verified"
+    },
+    {
+      "id": "F-08",
+      "area": "Data model",
+      "finding": "Access/Jet: 49 shared tables across two databases; Patients.mdb adds 44 application tables (93 total)",
+      "status": "Verified"
+    },
+    {
+      "id": "F-09",
+      "area": "Data model",
+      "finding": "useraccounts/user are referenced in SQL but exist in NEITHER .mdb",
+      "status": "Verified (absence) / Inferred (location)"
+    },
+    {
+      "id": "F-10",
+      "area": "Architecture",
+      "finding": "Three database back ends: Access/Jet 4.0, SQL Server Express 2005, MySQL (ODBC 3.51)",
+      "status": "Verified"
+    },
+    {
+      "id": "F-11",
+      "area": "Security",
+      "finding": "A hard-coded SQL sa password is distributed in cleartext on the disc",
+      "status": "Verified"
+    },
+    {
+      "id": "F-12",
+      "area": "Reporting",
+      "finding": "A home-grown INI report engine: 357 templates across 110 tests plus SETING.ini and a disguised REPORT.dll",
+      "status": "Verified"
+    },
+    {
+      "id": "F-13",
+      "area": "Documentation",
+      "finding": "The CHM is a genuine Arabic user guide and its vocabulary is inside the binary",
+      "status": "Verified"
+    },
+    {
+      "id": "F-14",
+      "area": "Deployment",
+      "finding": "The disc ships the complete Visual Studio 6.0 Service Pack 6 including the VB6 compiler",
+      "status": "Verified"
+    },
+    {
+      "id": "F-15",
+      "area": "Security",
+      "finding": "No cryptographic integrity validation covers the ActiveX components",
+      "status": "Verified"
+    },
+    {
+      "id": "F-16",
+      "area": "Security",
+      "finding": "CORRECTION — avipbb.cat IS a Windows crypto catalogue (for the Avira driver), contradicting the Batch 2 claim that it was not a catalogue at all",
+      "status": "Contradicted (earlier claim) / Verified (corrected position)"
+    },
+    {
+      "id": "F-17",
+      "area": "Batch counts",
+      "finding": "466 = the total number of ZIP members uploaded (8+54+404); 801 = files INSIDE the 34 CAB archives, a nested counting unit",
+      "status": "Verified"
+    },
+    {
+      "id": "F-18",
+      "area": "Batch counts",
+      "finding": "No file was uploaded and left unprocessed",
+      "status": "Verified"
+    },
+    {
+      "id": "F-19",
+      "area": "Fonts",
+      "finding": "The Batch 1 decision to EXCLUDE .ttf was wrong",
+      "status": "Verified (inverted)"
+    },
+    {
+      "id": "F-20",
+      "area": "Application inventory",
+      "finding": "The application references sibling executables that were never uploaded",
+      "status": "Verified"
+    },
+    {
+      "id": "F-21",
+      "area": "Licensing",
+      "finding": "The executable contains demo/licence-mode markers",
+      "status": "Partially verified"
+    }
+  ],
+  "consolidated_findings_summary": {
+    "finding_count": 11,
+    "severity_counts": {
+      "High": 3,
+      "Medium": 4,
+      "Low": 2,
+      "Info": 2
+    }
+  },
+  "traceability_findings": [
+    "FND-F-001",
+    "FND-F-002",
+    "FND-F-003",
+    "FND-F-004",
+    "FND-F-005",
+    "FND-F-006",
+    "FND-F-007",
+    "FND-F-008",
+    "FND-F-009",
+    "FND-F-010",
+    "FND-F-011"
+  ],
+  "traceability_rows": 14,
+  "coverage": {
+    "batch": "B3",
+    "file_level": {
+      "total_files": 251,
+      "analysed": 251,
+      "not_analysed": 0,
+      "by_extension": {
+        ".jpg": 19,
+        ".rtf": 58,
+        ".ini": 146,
+        ".ttf": 14,
+        ".gif": 14
+      }
+    }
+  },
+  "coverage_matrix_batches": {
+    "1": 6,
+    "2": 5,
+    "3": 5
+  },
+  "coverage_matrix_rows": 16,
+  "cross_version_class": {
+    "RELOCATED_IDENTICAL": 41,
+    "REL_IDENTICAL": 127,
+    "REL_DIFFERENT": 190,
+    "NO_PARTNER_IN_OTHER_VERSION": 479
+  },
+  "cross_version_version_id": {
+    "V-ROOT-1.00": 364,
+    "V-CD-2019": 473
+  },
+  "cross_version_rows": 837,
+  "ledger_rows": 837,
+  "ledger_component_tags": {
+    "V1-INSTALLED-APP": 364,
+    "V2-CD-TOOLS": 12,
+    "V2-DEPLOY-PAYLOAD": 361,
+    "V2-SYSTEM-STAGING": 13,
+    "V2-REDIST-MDAC": 1,
+    "V2-REDIST-PDF": 7,
+    "V2-REDIST-VB6RUNTIME": 73,
+    "V2-INSTALLMEDIA-WIN7": 3,
+    "V2-INSTALLMEDIA-WINXP": 3
+  },
+  "ledger_version_ids": {
+    "V-ROOT-1.00": 364,
+    "V-CD-2019": 473
+  },
+  "ledger_integrity": {
+    "NOT_YET_RECEIVED": 837
+  },
+  "tools": [
+    "REA (Reverse Engineer Anything)",
+    "Ghidra 12.1.4",
+    "mdbtools 1.0.0",
+    "7-Zip / 7z (p7zip 16.02, 7-Zip 26.02 engine)",
+    "cabextract 1.9",
+    "python3 3.11 (custom parsers)",
+    "file(1) / libmagic",
+    "sha256sum",
+    "openssl 3.x",
+    "olefile 0.46",
+    "strings / grep / diff",
+    "pdfplumber / pypdf",
+    "dotnet 9.0.316"
+  ],
+  "evidence_gaps": [
+    {
+      "item": "RL_CD2019Access/System/real lab system.exe",
+      "priority": "P1",
+      "value": "VERY HIGH — the single artefact that would settle the application-version question"
+    },
+    {
+      "item": "bin/calculator.exe",
+      "priority": "P1",
+      "value": "HIGH — a sibling application binary; a second application-authored executable"
+    },
+    {
+      "item": "bin/real lab timer.exe",
+      "priority": "P1",
+      "value": "HIGH — a sibling application binary; 'timer' suggests a lab-workflow/turnaround-timer feature"
+    },
+    {
+      "item": "real lab Image Gallery.exe",
+      "priority": "P1",
+      "value": "HIGH — a sibling application binary; implies an image/gallery feature (patient images are a column family in the schema: pictures)"
+    },
+    {
+      "item": "vkUserControlsXP.ocx",
+      "priority": "P2",
+      "value": "MEDIUM-HIGH — completes an orphaned COM component; the only missing OCX"
+    },
+    {
+      "item": "ais lab.ttf / ais symbol.ttf",
+      "priority": "P3",
+      "value": "MEDIUM — already effectively obtained; the loose copies would only remove the need to extract the CAB"
+    },
+    {
+      "item": "The 5 RealLab fonts + remaining CAB members (801 total, 96 extracted)",
+      "priority": "P3",
+      "value": "MEDIUM — the 705 unextracted members are VS6 SP6 and Microsoft component files (redistributables), so low application-specific yield"
+    },
+    {
+      "item": "System/ installer payload (WI-KB893803-v2-x86.exe, msxml6_x86.msi, dotnetfx.exe, SQLEXPR.EXE, mysql-connector-odbc-3.51.30-win32.msi, dotNetFx40_Full_x86_x64.exe, Setup_BullzipPDFPrinter_*.exe)",
+      "priority": "P3",
+      "value": "MEDIUM — these are third-party installers, not application code; but the SQL Express package would carry the default sa password policy and the MySQL connector confirms the third back end"
+    },
+    {
+      "item": "D:\\Lab_data\\Attaching.sql and Attach_database.bat",
+      "priority": "P2",
+      "value": "MEDIUM-HIGH — would reveal exactly how BF6500.DB.MDF is attached, closing the loop on the analyser database and the useraccounts location"
+    },
+    {
+      "item": "avipbb.sys + the Avira engine DLLs and .dat files (16 files named in avipbb.cat)",
+      "priority": "P2",
+      "value": "MEDIUM — determines whether the antivirus feature was ever real or is a vestigial INF/CAT pair"
+    },
+    {
+      "item": "ark.ico",
+      "priority": "P4",
+      "value": "LOW — a disc icon; no analytical value beyond confirming the packaging"
+    },
+    {
+      "item": "Patients_backup.mdb",
+      "priority": "P2",
+      "value": "MEDIUM — a database the application expects to find; its absence would mean the app's backup path is broken, and its schema may differ from Patients.mdb (revealing a schema-version history)"
+    },
+    {
+      "item": "The 3 VS6sp6B*.cab cabinets' member contents (648 members)",
+      "priority": "P3",
+      "value": "LOW-MEDIUM — these are the Visual Studio 6.0 Service Pack 6 media; the three are the same 216 filenames with different content, most likely the three install media"
+    }
+  ]
+}

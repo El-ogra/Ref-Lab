@@ -167,3 +167,19 @@ a reader of the repository alone cannot verify a V1 citation. That is a *preserv
   external: Complete_Reverse_Engineering_Reference_V1.md §1.6 (external),
   external: 1605-phase2-findings.md, `evidence/reverse-engineering/reverse-engineering-unresolved-issues.md`,
   `LEGACY_SYSTEM_UNDERSTANDING_REPORT.md` §4.
+
+
+---
+
+## Evidence Batch 02 (2026-11-16) — New Unresolved Questions
+
+| ID | Question | Status | Affected domain |
+|---|---|---|---|
+| UNR-002 | What do the 17 grantN columns on the operator table mean? | UNRESOLVED | security, business |
+| UNR-003 | What are the seven IDPassword* values and what do they unlock? | UNRESOLVED | security, printing |
+| UNR-004 | What are the two 32-char uppercase literals (possible obfuscated credentials)? | UNRESOLVED | security |
+| UNR-005 | Is accuntpw hashed before storage? (evidence suggests cleartext) | UNRESOLVED | security, data |
+| UNR-008 | Which of the ~1,370 embedded SELECTs run against which backend? | PARTIALLY RESOLVED | data-access |
+| UNR-009 | What are the 5 unnamed external components (header declares 25, 20 named)? | UNRESOLVED | dependencies |
+
+Sources: `Docs/KB/legacy/evidence-batch-02/D03_Type1_Analysis/`, `D05_Type3_Analysis/`, `unified-unresolved-questions.csv`.
