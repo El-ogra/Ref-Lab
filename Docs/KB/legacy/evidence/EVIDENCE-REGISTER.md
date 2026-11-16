@@ -145,7 +145,7 @@ A second independent analysis corpus (298 reports) is available under
 `Docs/KB/legacy/reference-system-corpus/`. Entry point:
 `Docs/KB/legacy/reference-system-corpus/master-engineering-reference.md`.
 
-Key files (36 copied):
+Key files (35 copied):
 - `master-engineering-reference.md` — central engineering reference.
 - `unified-application-architecture.md` — components, relationships, diagrams.
 - `functional-module-catalogue.md` — 212-object register with method counts.

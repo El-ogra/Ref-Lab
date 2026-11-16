@@ -169,4 +169,4 @@ Full-spectrum RE output for RealLab 1.605: `Docs/KB/legacy/reverse-engineering-o
 
 ## 11. Reference System Source Corpus (Agent B)
 
-Master engineering reference: `Docs/KB/legacy/reference-system-corpus/master-engineering-reference.md` (36 detailed reports).
+Master engineering reference: `Docs/KB/legacy/reference-system-corpus/master-engineering-reference.md` (35 detailed reports).
