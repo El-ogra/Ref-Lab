@@ -43,8 +43,19 @@ conventions of `Docs/KB/CONVENTIONS.md` and the governance of `scripts/kb_build.
    `Documenting the Executable File.md`, `Docs/Complete_Reverse_Engineering_Reference_V2.md`,
    `Docs/Business_Rules_V2.md`, etc.) are retained as evidence. Merging means extracting facts,
    not deleting sources.
-9. **External sources.** V1 consolidated docs are not in this repo. Label them `EXTERNAL SOURCE
-   REQUIRED`. Do not fabricate contents. Do not start external-corpus discovery.
+9. **External sources.** The V1 consolidated documents are **accessible** — they are present in the
+   reverse-engineering corpus and are already integrated (resolved 2026-11-16). Their per-version
+   facts live in `VERSIONS.md`; their dispositions in `Docs/KB/legacy/evidence/SOURCES.md`. Do not fabricate
+   contents. A statement in this knowledge base that has no entry in `Docs/KB/legacy/evidence/SOURCES.md` has **no
+   traceable origin** and must not be relied upon.
+
+10. **Register every source.** Any source added to the corpus or to a deliverables archive must get
+    a row in `Docs/KB/legacy/evidence/SOURCES.md`, a review status and an explicit integration decision —
+    including the decision *"excluded, because …"*. `Docs/KB/legacy/evidence/COVERAGE.md` records the accounting.
+
+11. **Canonical descriptions.** Every major subject has exactly one authoritative document
+    (`SPECIFICATION.md`, `data/DATABASE.md`, `architecture/EXECUTABLE.md`, `VERSIONS.md`). Other
+    documents reference the canonical one; they do not restate it.
 10. **No secrets.** Never reproduce actual credentials (`sa`/`12345678`, `admin`/`admin`) in a
     way that could be used; preserve findings in redacted form.
 

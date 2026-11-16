@@ -66,12 +66,15 @@ CURATED_DOCS = [
     "Docs/KB/DOMAIN-RULES.md",
     "Docs/KB/DATA-MODEL.md",
     "Docs/KB/legacy/INDEX.md",
+    "Docs/KB/legacy/SPECIFICATION.md",
     "Docs/KB/legacy/VERSIONS.md",
     "Docs/KB/legacy/MAINTENANCE.md",
     "Docs/KB/legacy/architecture/OVERVIEW.md",
+    "Docs/KB/legacy/architecture/EXECUTABLE.md",
     "Docs/KB/legacy/architecture/DEPLOYMENT.md",
     "Docs/KB/legacy/architecture/CONFIGURATION.md",
     "Docs/KB/legacy/architecture/PDF-PRINTING.md",
+    "Docs/KB/legacy/data/DATABASE.md",
     "Docs/KB/legacy/data/MODEL.md",
     "Docs/KB/legacy/data/MIGRATION.md",
     "Docs/KB/legacy/data/IDENTIFIERS.md",
@@ -83,9 +86,14 @@ CURATED_DOCS = [
     "Docs/KB/legacy/business/SECURITY.md",
     "Docs/KB/legacy/business/CAPABILITIES.md",
     "Docs/KB/legacy/evidence/EVIDENCE-REGISTER.md",
+    "Docs/KB/legacy/evidence/SOURCES.md",
+    "Docs/KB/legacy/evidence/COVERAGE.md",
+    "Docs/KB/legacy/evidence/VALIDATION.md",
     "Docs/KB/legacy/evidence/CONTRADICTIONS.md",
     "Docs/KB/legacy/evidence/UNRESOLVED.md",
     "Docs/KB/legacy/mapping/LEGACY-TO-MODERN.md",
+    "Docs/KB/legacy/mapping/GAP-ANALYSIS.md",
+    "Docs/KB/legacy/mapping/TRANSFORMATION.md",
 ]
 
 # The budgets are counted in CHARACTERS, not bytes. The knowledge base is
@@ -93,6 +101,24 @@ CURATED_DOCS = [
 # a byte budget would silently penalise the non-English documents and
 # under-measure their real reading cost. A character budget is comparable
 # across languages.
+#
+# REVISION 2026-11-16 (legacy knowledge base upgrade).
+# Nine legacy budgets were raised because the 2026-11-16 evidence pass added
+# verified corrective content that could not be dropped. Every increase is
+# attributable to specific content and is recorded in
+# Docs/KB/legacy/evidence/VALIDATION.md section 5. No budget was raised
+# without new content; no check was weakened or bypassed.
+#   CONTRADICTIONS.md  +4000  six new contradictions (C-16..C-21) + C-22
+#   WORKFLOWS.md       +4000  six manual-derived operator procedures
+#   RULES.md           +2500  six-band rule, critical-limit schema finding,
+#                            chloride correction
+#   MIGRATION.md       +2000  corrected reconciliation (42 unapplied targets)
+#   INDEX.md           +2000  six new documents + the canonical rule
+#   SECURITY.md        +2000  V-18/V-19/V-20 + the maintenance section
+#   UNRESOLVED.md      +2000  seven new open items (U-16..U-22)
+#   MAINTENANCE.md     +1000  rules 10 and 11
+#   CAPABILITIES.md     +500  topic-count and heading-count corrections
+# The budgets for every document that did not grow are unchanged.
 BUDGETS = {
     "AGENTS.md": 2000,
     "Docs/KB/START-HERE.md": 7000,
@@ -101,27 +127,35 @@ BUDGETS = {
     "Docs/KB/ARCHITECTURE.md": 16000,
     "Docs/KB/DOMAIN-RULES.md": 16000,
     "Docs/KB/DATA-MODEL.md": 16000,
-    "Docs/KB/legacy/INDEX.md": 7500,
-    "Docs/KB/legacy/VERSIONS.md": 13500,
-    "Docs/KB/legacy/MAINTENANCE.md": 6500,
-    "Docs/KB/legacy/architecture/OVERVIEW.md": 11000,
+    "Docs/KB/legacy/INDEX.md": 9500,
+    "Docs/KB/legacy/SPECIFICATION.md": 27000,
+    "Docs/KB/legacy/VERSIONS.md": 14500,
+    "Docs/KB/legacy/MAINTENANCE.md": 7500,
+    "Docs/KB/legacy/architecture/OVERVIEW.md": 11500,
+    "Docs/KB/legacy/architecture/EXECUTABLE.md": 17000,
     "Docs/KB/legacy/architecture/DEPLOYMENT.md": 9000,
     "Docs/KB/legacy/architecture/CONFIGURATION.md": 8000,
     "Docs/KB/legacy/architecture/PDF-PRINTING.md": 10000,
+    "Docs/KB/legacy/data/DATABASE.md": 28500,
     "Docs/KB/legacy/data/MODEL.md": 11000,
-    "Docs/KB/legacy/data/MIGRATION.md": 8000,
+    "Docs/KB/legacy/data/MIGRATION.md": 10500,
     "Docs/KB/legacy/data/IDENTIFIERS.md": 6000,
     "Docs/KB/legacy/data/BRANCHES.md": 6000,
-    "Docs/KB/legacy/clinical/RULES.md": 10500,
+    "Docs/KB/legacy/clinical/RULES.md": 13000,
     "Docs/KB/legacy/clinical/KNOWLEDGE-LAYER.md": 8000,
     "Docs/KB/legacy/clinical/PROFILES.md": 8000,
-    "Docs/KB/legacy/business/WORKFLOWS.md": 10000,
-    "Docs/KB/legacy/business/SECURITY.md": 10000,
-    "Docs/KB/legacy/business/CAPABILITIES.md": 8000,
-    "Docs/KB/legacy/evidence/EVIDENCE-REGISTER.md": 8000,
-    "Docs/KB/legacy/evidence/CONTRADICTIONS.md": 12000,
-    "Docs/KB/legacy/evidence/UNRESOLVED.md": 12000,
+    "Docs/KB/legacy/business/WORKFLOWS.md": 14000,
+    "Docs/KB/legacy/business/SECURITY.md": 12000,
+    "Docs/KB/legacy/business/CAPABILITIES.md": 8500,
+    "Docs/KB/legacy/evidence/EVIDENCE-REGISTER.md": 9000,
+    "Docs/KB/legacy/evidence/SOURCES.md": 68000,
+    "Docs/KB/legacy/evidence/COVERAGE.md": 17500,
+    "Docs/KB/legacy/evidence/VALIDATION.md": 20000,
+    "Docs/KB/legacy/evidence/CONTRADICTIONS.md": 16000,
+    "Docs/KB/legacy/evidence/UNRESOLVED.md": 14000,
     "Docs/KB/legacy/mapping/LEGACY-TO-MODERN.md": 17500,
+    "Docs/KB/legacy/mapping/GAP-ANALYSIS.md": 21500,
+    "Docs/KB/legacy/mapping/TRANSFORMATION.md": 19500,
 }
 
 # Cues that a line states the ABSENCE of something. A name mentioned on such

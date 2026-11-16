@@ -93,6 +93,17 @@ single most important functional gap in the system.
 age window (`Age From`, `Age To`), and age unit (Years/Days/Mons.). Only 5 of 852 rows are `All`
 and 4 carry empty sex — so a patient whose sex is unrecorded may match only those 9 rows.
 
+**★ The six-band duplication rule.** The official manual (topic 10, `008.htm`) states that where a
+test does **not** differ by sex, the same range must be entered **six times**: Male and Female ×
+three age windows (0–120 years, 1–29 days, 1–11 months). Where the range does differ by age, the
+age window is split instead (e.g. male 0–12 and 12–120 years, and the female equivalents).
+**This is why 304 tests yield 852 range rows rather than a fixed multiple** — the row count is a
+function of the age-unit vocabulary each test actually uses. The editor commands are
+«إضافة مدى» (Add Range), «تعديل» (Edit), «حفظ» (Save), «تراجع» (Undo), «حذف» (Delete),
+«قائمة التحاليل» (Test List); the window has **no keyboard shortcuts**. Navigation is
+main window → «بيانات النظام» (System Data) → «بيانات التحاليل» (Test Data) → select the test →
+«المعدل الطبيعي» (Normal Range). Evidence: `help-manual-ar.md` §10; `Cache\008.htm`.
+
 **★ Selection algorithm UNKNOWN:** the runtime selector emits
 `SELECT Top 1 * FROM normalrange WHERE testcode=<n> AND sex='<s>' AND ageunit='<u>'
 AND firstold < <age> AND secondold >= <age> AND pregsmok=<p>` with **no ORDER BY**. Selection at
@@ -125,12 +136,27 @@ Stored per analyte-and-unit-pair, not globally (V1-BR-029).
 | Bilirubin (015.rtf) | Newborn > 15 mg/dL · SI > 257 µmol/L |
 | Ionised Calcium (175.rtf) | > 6.29 mg/dL (SI > 1.57) · < 3.1 mg/dL (SI < 0.78) |
 | Total Calcium (176.rtf) | > 12 mg/dL (SI > 2.99 — coma/death) · < 7 mg/dL (SI < 1.75 — tetany/death) |
-| Sodium (180.rtf) | < 80 mEq/L · > 115 mEq/L |
+| **Chloride, Cl (180.rtf)** | < 80 mEq/L · > 115 mEq/L |
+
+**★ CORRECTION (2026-11-16): `180.rtf` is the CHLORIDE (Cl) method sheet, not sodium.** The sheet's
+own header reads `Chloride (Cl)` and its reference interval is `Adult: 96–106 mEq/L`. The row above
+was mislabelled; the thresholds themselves (`< 80 mEq/L or > 115 mEq/L`) are correct for chloride.
+Source: `Cache\180.rtf` rendered to text.
 
 Critical thresholds are stated in the method sheet, **separately** from `normalrange` (V1-BR-035).
 The exact flag precedence when a value breaches both limits is not established.
 
-**Evidence:** external: 04-clinical-rules.md §4.
+**★ Now VERIFIED at schema level (2026-11-16).** The live `normalrange` table has **18** columns and
+**no** `critical*` column, while the `Patients_backup.mdb` ancestor schema has **22** columns
+including `criticalrang`, `lowlcrit`, `highlcrit`, `criticalexe` and `criticalcomment`. The official
+manual nevertheless documents critical-limit, critical-flag and critical-comment fields on the
+range editor. The shipped schema therefore **cannot persist** critical limits on the range row —
+which is exactly why the product stores them in the method sheets instead. Evidence:
+`txt nd sql/v2019-Patients.mdb.sql`,
+`txt nd sql/schema__[analysis_BATCH-02_db_Patients_backup].sql`, `Cache\180.rtf` (and 28 sibling
+sheets), `analysis/BATCH-02/db/…/normalrange.csv`. Full detail: `data/DATABASE.md` §6.1.
+
+**Evidence:** external: 04-clinical-rules.md §4; `Cache\*.rtf`; `data/DATABASE.md` §6.1.
 
 ## 8. Comment sources (V1-BR-013)
 

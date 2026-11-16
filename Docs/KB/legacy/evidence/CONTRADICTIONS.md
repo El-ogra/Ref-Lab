@@ -209,14 +209,95 @@ supports that conclusion. Do not silently resolve.
 
 | Status | Count |
 |---|---:|
-| RESOLVED | 12 (C-03, C-04, C-05, C-06, C-07, C-08, C-09, C-10, C-11, C-12, C-13) |
+| RESOLVED | 19 (C-03 … C-13, C-16 … C-21) |
 | OPEN | 3 (C-01, C-14, C-15) |
+
+**C-16 to C-21 were added on 2026-11-16** from the primary schema, executable and manual evidence
+supplied in the 2026-11-16 batch. C-22 is new and OPEN.
 
 **Note:** C-02 (two branch templates) is listed as OPEN in the audit but the resolution status
 in the source docs is "NOT ESTABLISHED" — treated as OPEN here.
 
+## C-16 — The embedded DDL is 27 CREATE statements, not 12
+
+- **Claim A:** "268 embedded DDL statements (12 CREATE TABLE, 228 ALTER ADD, 13 ALTER COLUMN)".
+- **Claim B:** "268 embedded DDL statements (27 CREATE TABLE → 14 distinct tables, 228 ALTER ADD,
+  13 ALTER COLUMN)".
+- **Evidence:** `txt nd sql/ddl-all.txt` — 268 statement blocks, each prefixed `-- VA <hex>  [CREATE|ALTER]`.
+  Parsing them yields 27 `CREATE TABLE` statements naming **14** distinct tables, 228 `ALTER TABLE
+  … ADD …` statements and 13 `ALTER TABLE … ALTER COLUMN …` statements. `27 + 228 + 13 = 268`.
+- **Resolution:** **Claim B.** The "12" in Claim A is the number of `CREATE` *statement rows* that
+  create a table absent from V1 — a different quantity. Claim A's own arithmetic (12 + 228 + 13)
+  sums to 253, not 268.
+- **Status:** RESOLVED. Corrected in `data/MIGRATION.md` §1 and `VERSIONS.md` §4.
+
+## C-17 — The migration applied 90 of 132 column targets, not 109
+
+- **Claim A:** "109 of 132 column targets and 10 of 12 created tables applied"; "19 … never applied"
+  (in a table that lists 23 columns).
+- **Claim B:** "90 of 132 distinct column targets present across 18 tables; 42 absent across 14
+  tables; of the 14 tables named by `CREATE TABLE`, 7 were created by the migration, 4 already
+  existed and 3 (`FMF`, `IgEallergy`, `LBC`) are absent".
+- **Evidence:** `analysis/BATCH-07/migration-proof.json` — `alters_added_by_migration: 22`,
+  `alters_not_applied: 61`, `creates_created_by_migration: 12`, `alters_not_applied_jet: 38`,
+  `alters_not_applied_sqlserver_only: 23`, over 228 statement rows and 132 distinct targets.
+- **Resolution:** **Claim B.** The distinct-target view was never computed by the earlier pass.
+- **Status:** RESOLVED. Corrected in `data/MIGRATION.md` §3.
+
+## C-18 — The vendor guide's module numbering
+
+- **Claim A:** "Server 4-1 … 4-6 · Accounting 5-1 … 5-5 · General 6-1 … 9-7".
+- **Claim B:** "Users & attendance 4-1 … 4-3 · Statistics 5-1 … 5-4 · Accounting 6-1 … 6-5 ·
+  Settings 7-1 … 7-9".
+- **Evidence:** `txt nd sql/RLS_Learn.txt` — the Arabic table of contents of the 212-page vendor
+  guide, recomputed module by module.
+- **Resolution:** **Claim B.** Statistics and accounting were each shifted by one module.
+- **Status:** RESOLVED. Corrected in `architecture/OVERVIEW.md` §6.
+
+## C-19 — The CHM has 17 topics, not 15
+
+- **Claim A:** "15 topics".
+- **Claim B:** "17 topics — 16 in the table of contents plus `X000X.htm`, the copyright page. 15 is
+  the count of *documented capabilities*".
+- **Evidence:** `txt nd sql/chm-topics.txt` (17 `TOPIC FILE:` blocks), `chm-full-text.txt` (17
+  markers), `chm-crossref-summary.txt` (lists all 17).
+- **Resolution:** **Claim B.** The two counts were conflated.
+- **Status:** RESOLVED. Corrected in `VERSIONS.md` §5 and `business/CAPABILITIES.md` §1.
+
+## C-20 — "510 headings" in the vendor guide is not reproducible
+
+- **Claim A:** "~60 capabilities … 510 headings".
+- **Claim B:** "56 numbered capability markers, 47 distinct capability numbers, 7 modules".
+- **Evidence:** `txt nd sql/RLS_Learn.txt` — the extracted PDF text yields 56 numbered markers.
+- **Resolution:** **Claim B** for the capability count; the "510 headings" figure is **withdrawn** as
+  unreproducible. The "~60" figure remains a fair approximation of 56.
+- **Status:** RESOLVED. Corrected in `business/CAPABILITIES.md` §2.
+
+## C-21 — `180.rtf` is the chloride method sheet
+
+- **Claim A:** "Sodium (180.rtf) | < 80 mEq/L · > 115 mEq/L".
+- **Claim B:** "Chloride, Cl (180.rtf) | < 80 mEq/L · > 115 mEq/L".
+- **Evidence:** `txt nd sql/180.txt` — the rendered `Cache\180.rtf` method sheet. Its own header
+  reads `Chloride (Cl)`; its reference interval is `Adult: 96–106 mEq/L`; its critical levels are
+  `< 80 mEq/L or > 115 mEq/L`.
+- **Resolution:** **Claim B.** The thresholds were correct; the analyte label was not.
+- **Status:** RESOLVED. Corrected in `clinical/RULES.md` §7.
+
+## C-22 — `RICHTX32.OCX` is a synthetic marker, not a compiled library
+
+- **Claim A:** `pe-summary.txt` describes `System\datareport_vh\RICHTX32.OCX` as a PE32 library
+  with sections `.text/.data/.rsrc/.reloc`.
+- **Claim B:** the file is a **synthetic marker artefact** — 675 bytes, a bogus `e_lfanew`, 15,057
+  bogus "sections" and the marker string `99111B9908`.
+- **Evidence:** `txt nd sql/richttx32-stub-pe-structure.txt` — the dedicated teardown.
+- **Resolution:** **Claim B.** The generic PE summary mis-classified it.
+- **Status:** OPEN — the file is a synthetic artefact and must not be listed as a third-party
+  dependency. Its origin is not established.
+
 ## Related documents
 
+- `Docs/KB/legacy/evidence/SOURCES.md` — source traceability and disposition register.
+- `Docs/KB/legacy/evidence/COVERAGE.md` — integration and coverage accounting.
 - `Docs/KB/legacy/evidence/UNRESOLVED.md` — open questions.
 - `Docs/KB/legacy/evidence/EVIDENCE-REGISTER.md` — evidence index.
 - `Docs/KB/legacy/mapping/LEGACY-TO-MODERN.md` — legacy vs modern.

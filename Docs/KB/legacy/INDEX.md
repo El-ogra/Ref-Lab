@@ -40,18 +40,28 @@ Docs/KB/START-HERE.md  (modern entry point)
 A coding agent should:
 1. Read `Docs/KB/START-HERE.md` for the modern system context.
 2. Read `Docs/KB/legacy/INDEX.md` (this file) for legacy navigation.
-3. Read only the domain doc(s) matching the task (see §4).
-4. Follow cross-references to evidence files only when verifying a claim.
+3. Read **`Docs/KB/legacy/SPECIFICATION.md`** for the reference system as a whole.
+4. Read only the domain doc(s) matching the task (see §4).
+5. Follow cross-references to evidence files only when verifying a claim.
+
+> **★ Canonical rule (2026-11-16).** For every major technical subject there is exactly **one**
+> authoritative description. `SPECIFICATION.md` is canonical for the system as a whole;
+> `data/DATABASE.md` for the schema; `architecture/EXECUTABLE.md` for the executable;
+> `VERSIONS.md` for version identity. Other documents **reference** the canonical one and must not
+> restate it.
 
 ## 3. Document inventory
 
 | Path | Purpose |
 |---|---|
-| `VERSIONS.md` | Version identity, shared vs specific, deltas, external V1 sources |
+| **`SPECIFICATION.md`** | **★ The canonical reference-system specification — start here** |
+| `VERSIONS.md` | Version identity, shared vs specific, deltas, version-evolution model |
 | `architecture/OVERVIEW.md` | 5 layers, modules, dependencies, screens, startup, errors |
+| `architecture/EXECUTABLE.md` | ★ PE/VB6 structure, the 169→210 object delta, the 1,797 SQL statements, the string pool |
 | `architecture/DEPLOYMENT.md` | Engines, installer, licensing, paths, prerequisites, defects |
 | `architecture/CONFIGURATION.md` | BASE.ini, SETTING.ini, IDCARD.INI, REPORT.dll, Data\*.ini, NOTE.ini |
 | `architecture/PDF-PRINTING.md` | Bullzip path, printer roles, categories, audit, requirements |
+| **`data/DATABASE.md`** | **★ The consolidated database reference — schema, constraints, migration engine, table→behaviour link** |
 | `data/MODEL.md` | Database inventory, tables, columns, rows, keys, constraints |
 | `data/MIGRATION.md` | (see MODEL.md §; dedicated migration doc — TBD content) |
 | `data/IDENTIFIERS.md` | `patientid` positional contract, branch, person key, barcode |
@@ -62,10 +72,15 @@ A coding agent should:
 | `business/WORKFLOWS.md` | Patient lifecycle, result entry, send-out, accounting, ranges, catalogue |
 | `business/SECURITY.md` | Credentials, permissions, audit, vulnerabilities |
 | `business/CAPABILITIES.md` | 15 V1 + ~60 V2 capabilities, vendor taxonomy, integrations |
-| `Docs/KB/legacy/evidence/EVIDENCE-REGISTER.md` | Evidence index (registers, exports, hashes, external V1) |
-| `Docs/KB/legacy/evidence/CONTRADICTIONS.md` | 15 contradictions with status and reasoning |
+| `Docs/KB/legacy/evidence/EVIDENCE-REGISTER.md` | Evidence index (registers, exports, hashes) |
+| `Docs/KB/legacy/evidence/SOURCES.md` | ★ Source traceability and disposition register — every source, its canonical path and its disposition |
+| `Docs/KB/legacy/evidence/COVERAGE.md` | ★ Knowledge integration and coverage accounting |
+| `Docs/KB/legacy/evidence/VALIDATION.md` | ★ Checks performed, their results, and the outstanding issues |
+| `Docs/KB/legacy/evidence/CONTRADICTIONS.md` | 22 contradictions with status and reasoning |
 | `Docs/KB/legacy/evidence/UNRESOLVED.md` | Open questions, hypotheses, unknowns |
 | `mapping/LEGACY-TO-MODERN.md` | Legacy vs modern comparison (4 categories) |
+| `mapping/GAP-ANALYSIS.md` | ★ Gap analysis — modern `Ref Lab` against the reconstructed reference system (61 assessed items) |
+| `mapping/TRANSFORMATION.md` | ★ Engineering transformation blueprint (plan only — nothing implemented) |
 | `MAINTENANCE.md` | Governance, budgets, validation, update rules |
 
 ## 4. Task-oriented loading guide
@@ -105,12 +120,15 @@ See `VERSIONS.md` for the full version identity and delta.
 - Evidence types: ET-DOC, ET-DOC+DB, ET-DB, ET-CODE, ET-DDL, ET-CFG, ET-INST, ET-DERIVED, ET-PRES.
 - Confidence levels: CONFIRMED · STRONGLY SUPPORTED · INFERRED · UNKNOWN · CONFLICTING.
 - Original source documents are preserved (not replaced). See `Docs/KB/legacy/evidence/EVIDENCE-REGISTER.md`.
-- V1 consolidated documents are external (`E:\Markdown Source Files`) — label as `EXTERNAL SOURCE REQUIRED`.
+- **V1 consolidated documents are accessible** (resolved 2026-11-16) — they are present in the
+  reverse-engineering corpus and are already integrated. See `Docs/KB/legacy/evidence/SOURCES.md` §3 and
+  `Docs/KB/legacy/evidence/UNRESOLVED.md` §6. **Do not** label V1 references `EXTERNAL SOURCE REQUIRED`.
 
 ## 7. Contradictions and unresolved questions
 
-- 15 contradictions registered in `Docs/KB/legacy/evidence/CONTRADICTIONS.md` (12 RESOLVED, 3 OPEN).
-- 60+ unresolved questions registered in `Docs/KB/legacy/evidence/UNRESOLVED.md`.
+- 22 contradictions registered in `Docs/KB/legacy/evidence/CONTRADICTIONS.md` (19 RESOLVED, 3 OPEN).
+- 73 unresolved-question rows registered in `Docs/KB/legacy/evidence/UNRESOLVED.md`
+  (15 RESOLVED, 58 not fully resolved).
 - Do not silently resolve — update the register status with reasoning.
 
 ## 8. Original source evidence (preserved)
@@ -120,7 +138,7 @@ These large source documents are retained as evidence and are **not** replaced b
 - `Database documentation.md` (root, 209,465 B) — full DB reference.
 - `Documenting the Executable File.md` (root, 172,287 B) — full PE/VB6 RE.
 - `Docs/Complete_Reverse_Engineering_Reference_V2.md` (64,412 B) — V2 consolidated.
-- `Docs/Business_Rules_V2.md` (76,639 B) — V2 business rules.
+- `Docs/Business_Rules_V2.md` (76,641 B) — V2 business rules.
 - `Docs/Data_Model_and_Workflow_Entities_V2.md` (40,598 B) — V2 entities.
 - `Docs/Functional_Specification_V2.md` (65,753 B) — V2 functional spec.
 - `evidence/reverse-engineering/*` — registers, scripts, exports, phase reports.

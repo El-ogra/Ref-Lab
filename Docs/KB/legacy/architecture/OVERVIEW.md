@@ -103,9 +103,15 @@ L4  BEHAVIOUR   Documented capabilities (15 in V1, ~60 in V2)
 | Patient | 1-1 … 1-13a | Registration, account settlement, result entry, consolidated reports, farm reports, patient search, visit history, follow-up, NATIGH.COM delivery, medical history |
 | Work Sheet | 2-1 … 2-2 | Work sheet over a patient group in a period; work sheet over a test or test group in a period |
 | System | 3-1 … 3-11 | Test data and prices, new test, reference values, price lists, printing price lists, attendance, farm reporting, antibiotic catalogue |
-| Server | 4-1 … 4-6 | Laboratory statistics and performance monitoring, patient-count statistics by month/year/sex, request-rate statistics, sample counting, stock-take |
-| Accounting | 5-1 … 5-5 | Period stock-take, multi-branch stock-take, stock-take by treating physician or referring party, send-out sample reconciliation |
-| General | 6-1 … 9-7 | System settings, report settings, margins, paper size (A4/A5), header/footer, colours, printer configuration, default account type, connection settings, background, sample splitting/withdrawal |
+| Users & attendance | **4-1 … 4-3** | User management, permissions, attendance logging (`loger`) |
+| Statistics | **5-1 … 5-4** | Laboratory statistics and performance monitoring, patient-count statistics by month/year/sex, request-rate statistics, sample counting |
+| Accounting | **6-1 … 6-5** | Period stock-take, multi-branch stock-take, stock-take by treating physician or referring party, send-out sample reconciliation |
+| Settings | **7-1 … 7-9** | System settings, report settings, margins, paper size (A4/A5), header/footer, colours, printer configuration, default account type, connection settings, background, sample splitting/withdrawal |
+
+> **CORRECTION (2026-11-16).** The module numbering was previously given as Server 4-1…4-6, Accounting
+> 5-1…5-5, General 6-1…9-7. The vendor guide's own table of contents (`RLS_Learn.pdf`, 212 pp.)
+> assigns users/attendance to 4-x, statistics to 5-x, accounting to 6-x and settings to 7-x.
+> See `Docs/KB/legacy/evidence/CONTRADICTIONS.md` C-18.
 | (outside index) | — | NATIGH account creation, user/admin management, attendance registration, referring-party creation, farm creation, antibiotic catalogue, fixed comments, test-group creation, treating-physician creation, send-out samples |
 
 **★ Gap:** the in-application `help.chm` documents only 15 capabilities; `RLS_Learn.pdf` documents ~60 in 7 modules. The CHM is byte-identical in both versions and is stale (documents V1 only).

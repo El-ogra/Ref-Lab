@@ -74,6 +74,9 @@
 | V-15 | Hardware-bound licence (HDD + motherboard + CPU) | `RL_SETUP.exe` strings; `Win32_Processor` query | STRONGLY SUPPORTED | V2 ONLY |
 | V-16 | No password hashing, salting, expiry, lockout, or session timeout evidenced | CHM + schema | CONFIRMED (absence) | both |
 | V-17 | Table-level row security not established | — | NOT ESTABLISHED | both |
+| V-18 | The **database-maintenance password defaults to `123`**, is published in the shipped manual, and guards system-zeroing and restore | CHM `backup.htm` — «قم بإدخال كلمة المرور الاساسية 123 ثم موافق … ويفضل تغير كلمة المرور بعد ذلك لضمان حماية النظام من العبث» | CONFIRMED | both |
+| V-19 | The SMS gateway is called over **plain HTTP with the credentials as query-string parameters**, through browser automation (`InternetExplorer.Application`) — a third-party provider is inside the trust boundary | `session-2026-10-31-executable.log`; `txt nd sql/reallab_copy_log.txt` | CONFIRMED | V2 ONLY |
+| V-20 | The branch code occupies **position 9 of the 13-character `patientid`**, so the identifier alone discloses the branch | `data/IDENTIFIERS.md`; `patientinfo.patientid` schema | CONFIRMED | V2 ONLY |
 
 **★ Architectural assessment (V1):** security model is **application-level user accounts over a shared,
 statically-credentialed database connection**. No encryption at rest, no per-user database identity,
@@ -95,6 +98,20 @@ RL-V1-SEC-01..11: clear-text DB password (two shipped files), `sa` admin identit
 `admin` account, `PersistSecurityInfo=True`, connection strings leaking pre-rebranding product identity
 and install layout, cleartext data path, shared immutable credential, vendor contact in config, barcode
 as direct identifier, `history` EAV without type enforcement, manual advises no internet on server.
+
+### 6.1 Maintenance and backup exposure (both versions)
+
+The database-maintenance screen is reached via **«اعدادات» → «Database Maintenance»** and is
+protected by a **maintenance password whose documented default is `123`**. The manual advises
+changing it *after* the first use, but the shipped default is a three-character literal published
+in the product's own help file. The screen exposes the most destructive operations in the product:
+zeroing all or part of the system, and restoring a backup — including restoring a single patient by
+their work code (كود الشغل).
+
+Backup files are named **`Patient_yyyymmdd.bak`** and are written **inside the database path**; the
+manual advises moving them to a separate disc or machine.
+
+**Evidence:** CHM `backup.htm`; `help-manual-ar.md` §14.
 
 ## 7. NATIGH / SMS delivery (V2) — security notes
 

@@ -69,7 +69,8 @@ Every fact in this knowledge base must carry one of:
 
 ## 4. V2-only characteristics (V2 ONLY)
 
-- **Schema self-migration:** 268 embedded DDL statements (12 CREATE TABLE, 228 ALTER ADD, 13 ALTER COLUMN) applied at start-up. V1 has zero DDL.
+- **Schema self-migration:** 268 embedded DDL statements (**27 CREATE TABLE** → 14 distinct tables, **228 ALTER ADD**, **13 ALTER COLUMN**) applied at start-up. V1 has zero DDL.
+  *(Corrected 2026-11-16: the earlier text read “12 CREATE TABLE”, a statement-row count, not a statement-class count; 27 + 228 + 13 = 268. See `Docs/KB/legacy/evidence/CONTRADICTIONS.md` C-16.)*
 - **Multi-branch model:** master laboratory + reception branches; branch code at position 9 of `patientid`; `Labbranch`, `Patient.branche`, `Branch_Data.mdb` seeding.
 - **Digital delivery:** NATIGH.COM result delivery + SMS subsystem (`SMSSender`, `SMStemplate`, `smsgroups`, `smslist`, `SMSfrmsenderos`, `ReportSMS`, `Natigh` installed file).
 - **PDF export:** via external `Bullzip PDF Printer` (name and version 11.1 hardcoded). Four output categories (`Contracts`, `Free`, `Individual`, `LabToLab`). V1 has zero PDF capability.
@@ -112,7 +113,7 @@ Every fact in this knowledge base must carry one of:
 |---|---:|---:|---:|
 | `Patients.mdb` tables | 93 | 103 | +10 |
 | `Patients.mdb` columns | 1,527 | 1,682 | +155 |
-| `Patients.mdb` rows | 3,123 | (shipped partial) | — |
+| `Patients.mdb` rows | 3,123 | **3,809** | +686 |
 | VB6 objects | 169 | 210 | +41 |
 | Declared methods | 6,528 | 8,026 | +1,498 |
 | String literals | 104,997 | 270,166 | +165,169 |
@@ -121,11 +122,15 @@ Every fact in this knowledge base must carry one of:
 | Forms | 118 | 132 | +14 |
 | Modules | 5 | 9 | +4 |
 | Permission bits | 12 | 17 | +5 |
+| VB header `wFormCount` | 163 | **198** | +35 |
+| VB header external components | 21 | **25** | +4 |
+| VB header `dwLCID` | `0x00000409` (en-US only) | **1033 / 4105 (ar-SA)** | localised |
+| PE timestamp | 2013-12-27 | 2013-12-27 | **identical — not a discriminator** |
 | Embedded DDL | 0 | 268 | +268 |
-| `Data\*.ini` files | 223 | 223 | 173 changed, 50 identical |
+| `Data\*.ini` files | 223 | 223 | **172 changed, 51 identical** |
 | `Cache\*.rtf` | 29 | 29 | 0 changed (byte-identical) |
 | `Cache\*.exe` | 13 | 13 | 0 changed (byte-identical) |
-| `help.chm` | 15 topics | 15 topics | byte-identical |
+| `help.chm` | **17 topics** (15 documented capabilities + copyright page) | 17 topics | byte-identical |
 | `Branch_Data.mdb` (bin) | 970,752 B | 970,752 B | byte-identical |
 
 **Architectural conclusion (STRONGLY SUPPORTED):** RealLab evolved the *data and workflow* layer only

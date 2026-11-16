@@ -144,6 +144,20 @@ See `LEGACY-UNDERSTANDING-REPORT.md` §4 for the full gap register. Summary:
 
 ## 12. Companion documents
 
+**The canonical legacy knowledge base** — read `Docs/KB/legacy/SPECIFICATION.md` first.
+
+| Subject | Canonical document |
+|---|---|
+| The reference system as a whole | `Docs/KB/legacy/SPECIFICATION.md` |
+| Architecture, executable, object model | `Docs/KB/legacy/architecture/OVERVIEW.md` · `architecture/EXECUTABLE.md` |
+| Database schema and migration engine | `Docs/KB/legacy/data/DATABASE.md` · `data/MIGRATION.md` |
+| Clinical rules and the reference-range screen | `Docs/KB/legacy/clinical/RULES.md` · `business/WORKFLOWS.md` |
+| Version identity and evolution | `Docs/KB/legacy/VERSIONS.md` |
+| Source traceability, coverage and validation | `Docs/KB/legacy/evidence/SOURCES.md` · `Docs/KB/legacy/evidence/COVERAGE.md` · `Docs/KB/legacy/evidence/VALIDATION.md` |
+| Gap analysis and the transformation plan | `Docs/KB/legacy/mapping/GAP-ANALYSIS.md` · `mapping/TRANSFORMATION.md` |
+
+**Modern-side companions**
+
 - `Docs/KB/ARCHITECTURE.md`, `DATA-MODEL.md`, `DOMAIN-RULES.md`, `OPERATIONS.md`, `CONVENTIONS.md`.
 - `Docs/KB/features/*.md` — 14 feature files.
 - `Database documentation.md`, `Documenting the Executable File.md` (at repo root) — full reverse-engineering deliverables.

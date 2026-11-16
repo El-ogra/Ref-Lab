@@ -122,21 +122,45 @@
 - `zarf`/`zarfprinter` denotes integration with an external system (UNKNOWN).
 - `BF6500` / "Automatic Hematology Analyzer" is the pre-rebranding product name (STRONGLY SUPPORTED).
 
-## 6. Missing V1 source accessibility
+## 6. V1 source accessibility — RESOLVED 2026-11-16
 
-The V1 consolidated documents are **not in this repository**. They exist only in the external corpus
-(`E:\Markdown Source Files`):
-- `Complete_Reverse_Engineering_Reference_V1.md` (external)
-- `Business_Rules_V1.md` (external)
-- `Data_Model_and_Workflow_Entities_V1.md` (external)
-- `Functional_Specification_V1.md` (external)
+**The V1 consolidated documents are accessible and have already been used.** They are not in *this
+repository*, but they are present in the reverse-engineering corpus:
 
-**Accessibility:** not verified from this repo. Label all V1 references as `EXTERNAL SOURCE REQUIRED`.
-Do not fabricate contents. Do not start external-corpus discovery.
+| Document | Size | Status |
+|---|---:|---|
+| `Complete_Reverse_Engineering_Reference_V1.md` | 53,573 B | **REVIEWED AND INTEGRATED** — §2 of this register reproduces its §1.6 questions verbatim; 9 legacy documents cite it |
+| `Business_Rules_V1.md` | 82,164 B | **REVIEWED AND INTEGRATED** — `clinical/RULES.md` §2/§3/§8/§9 cites V1-BR-005, 009–013, 018, 019, 029, 031, 035, 037–041, 047 |
+| `Data_Model_and_Workflow_Entities_V1.md` | 52,372 B | **PARTIALLY INTEGRATED** — cited by `data/MODEL.md`, `clinical/PROFILES.md` and `VERSIONS.md` |
+| `Functional_Specification_V1.md` | 79,248 B | **REVIEWED AND INTEGRATED** — cited by `VERSIONS.md` |
 
-## 7. Related documents
+**The `EXTERNAL SOURCE REQUIRED` labelling is withdrawn.** It was based on the documents being
+absent from the repository, not on them being unavailable; instructing future agents to "do not
+start external-corpus discovery" blocked resolvable work.
+
+**What is genuinely still open:** none of these documents is **preserved inside the repository**, so
+a reader of the repository alone cannot verify a V1 citation. That is a *preservation* gap, not an
+*accessibility* gap, and it is recorded in `Docs/KB/legacy/evidence/VALIDATION.md` §6 and in
+`Docs/KB/legacy/evidence/SOURCES.md` §3.
+
+## 7. Open items added by the 2026-11-16 evidence pass
+
+| ID | Question | Status | Affected domain |
+|---|---|---|---|
+| U-16 | Does `pregsmok` participate in reference-range selection? It is populated on all 852 rows and appears in the runtime `SELECT`, but no source states its purpose | **UNKNOWN** — clinical owner decision required | clinical, data |
+| U-17 | What does `REFRANGE` mean exactly, and why are `'2'`-valued bands absent from the Access mirror? | **UNKNOWN** | clinical, data |
+| U-18 | Does the `normalrange` row ever persist a critical limit? The live schema has no `critical*` column; the manual documents critical fields on the editor | **RESOLVED — structurally impossible.** Critical thresholds live in the `Cache\*.rtf` method sheets | clinical |
+| U-19 | What is the value domain of `patientinfo.pricemethod`? (C-15) | **OPEN** — vendor question | business, billing |
+| U-20 | Is `loger` an attendance log or a clinical audit log? | **UNKNOWN** — vendor question | business, auditing |
+| U-21 | Is `RICHTX32.OCX` a real dependency or a synthetic marker artefact? | **OPEN** — it is a 675-byte marker with a bogus `e_lfanew` (C-22) | architecture |
+| U-22 | What is `VIDAS`? A BATCH-10 hypothesis proposes Visual FoxPro 6.0, which would put it beyond `mdb-schema` | **UNKNOWN** | data, deployment |
+
+## 8. Related documents
 
 - `Docs/KB/legacy/evidence/CONTRADICTIONS.md` — contradiction register.
+- `Docs/KB/legacy/evidence/SOURCES.md` — source traceability and disposition register.
+- `Docs/KB/legacy/evidence/COVERAGE.md` — integration and coverage accounting.
+- `Docs/KB/legacy/evidence/VALIDATION.md` — validation state and outstanding issues.
 - `Docs/KB/legacy/evidence/EVIDENCE-REGISTER.md` — evidence index.
 - `Docs/KB/legacy/mapping/LEGACY-TO-MODERN.md` — legacy vs modern.
 - Original source evidence: `Docs/Complete_Reverse_Engineering_Reference_V2.md` §1.6,

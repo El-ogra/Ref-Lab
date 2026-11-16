@@ -7,7 +7,11 @@
 
 ---
 
-## 1. V1 capabilities (15, from `help.chm`)
+## 1. V1 capabilities (15 documented capabilities, from a 17-topic `help.chm`)
+
+> The CHM physically contains **17 topics** — the 16 in its table of contents plus `X000X.htm`
+> (the copyright page, not in the TOC). **15** is the count of *documented capabilities*.
+> See `Docs/KB/legacy/evidence/CONTRADICTIONS.md` C-19.
 
 | ID | Capability | Arabic label | Evidence |
 |---|---|---|---|
@@ -29,7 +33,11 @@
 
 **Evidence:** external: Complete_Reverse_Engineering_Reference_V1.md §10.1.
 
-## 2. V2 capabilities (~60, from `RLS_Learn.pdf`, 212 pp., 510 headings, 7 modules)
+## 2. V2 capabilities (~60, from `RLS_Learn.pdf`, 212 pp., 7 modules)
+
+> The guide text yields **56 numbered capability markers / 47 distinct capability numbers** across
+> **7 modules**. The previously quoted “510 headings” figure is **not reproducible** from the
+> extracted PDF text and has been withdrawn. See `Docs/KB/legacy/evidence/CONTRADICTIONS.md` C-20.
 
 The vendor guide documents ~60 capabilities in 7 modules. See external: 09-vendor-capability-catalogue.md for
 the full catalogue. Summary by module:

@@ -85,10 +85,98 @@ Operations: add a range · edit · save · undo · delete.
 age unit, normal range, low/high limit, low/high flag, low/high comment, critical comment,
 critical range, critical low/high limit, critical flag.
 
+> **★ SCHEMA CORRECTION (2026-11-16).** The sentence above is **not** accurate as written: the
+> attributes are "all present in the manual", **not** "all present in the `normalrange` schema".
+> The live `normalrange` table has **18 columns and no `critical*` column at all**. The five
+> critical attributes exist only in the `Patients_backup.mdb` ancestor schema (22 columns). The
+> shipped database therefore **cannot persist** a critical limit on the range row — which is why
+> the product keeps critical thresholds in the `Cache\*.rtf` method sheets (V1-BR-035), now
+> **VERIFIED at schema level**. Evidence: `txt nd sql/v2019-Patients.mdb.sql`,
+> `txt nd sql/schema__[analysis_BATCH-02_db_Patients_backup].sql`. See `data/DATABASE.md` §6.1.
+
+**★ The six-band duplication rule (2026-11-16).** The manual states that where a test does **not**
+differ by sex, the same range must be entered **six times**:
+
+| # | Sex | Age window |
+|---:|---|---|
+| 1 | Male | 0–120 years |
+| 2 | Female | 0–120 years |
+| 3 | Male | 1–29 days |
+| 4 | Female | 1–29 days |
+| 5 | Male | 1–11 months |
+| 6 | Female | 1–11 months |
+
+Where the range does differ by age, the age window is split instead (e.g. male 0–12 and 12–120
+years, and the female equivalents). **This is why 304 tests yield 852 range rows** — the row count
+is a function of the age-unit vocabulary each test actually uses, not a fixed multiple of the test
+count. Evidence: CHM `008.htm`; `help-manual-ar.md` §10.
+
+**★ Presentation behaviour.** An out-of-range result is rendered with **background text shading**
+in the report. Flags appear during entry and during printing. Comments appear when the test name is
+clicked. The critical-range text prints only when *"print critical ranges"* is enabled in the
+report settings. The editor window has **no keyboard shortcuts**.
+
 **★ Standing restriction:** topic `nots.htm` states the urine analysis carries test number 4, and
 neither its number nor its name may be changed.
 
-**Evidence:** CHM `008.htm`; `normalrange` schema.
+**Evidence:** CHM `008.htm`; `help-manual-ar.md` §10; `normalrange` schema (`v2019-Patients.mdb.sql`).
+
+## 6.1 Operator procedures recovered from the official manual (2026-11-16)
+
+The 17-topic CHM is the product's own operating manual. Its procedures were not previously
+represented in this knowledge base at procedure level. The following are now recorded.
+
+### Result entry
+
+Double-click a test in the patient's test list to open its entry window. If the test belongs to a
+profile (بروفيل), **all** profile tests are shown and only the selected ones are enabled. The
+**«Constants»** button at the bottom-right of the entry window opens the live clinical-constants
+editor.
+
+**Evidence:** CHM `004A.htm`; `help-manual-ar.md` §6.
+
+### Accounting and stock-take
+
+**«حسابات» → «الجرد وحساب الدرج»**, or the **F7** shortcut from any main window.
+
+**Evidence:** CHM `011.htm`; `help-manual-ar.md` §13.
+
+### Backup
+
+**«اعدادات» → «Database Maintenance»**, guarded by the maintenance password (default `123`).
+Eight-part screen for large installations: change the maintenance password; zero all or part of the
+system; select the database path; list previous backups; count them; show their size; the
+auto-named backup file for today (**`Patient_yyyymmdd.bak`**, stored inside the database path);
+delete; and restore. Small installations additionally allow **restoring a single patient by their
+work code** (كود الشغل). The manual advises moving backups to a separate disc or machine.
+
+**Evidence:** CHM `backup.htm`; `help-manual-ar.md` §14.
+
+### Start-up and sign-in
+
+1. The server-settings window carries **four** items: the server IP or machine name (with an
+   «احضار» fetch button for use when the NIC or cable fails); the login-permission type; the user
+   name and password; and the database name. The manual states that the permission type, the
+   credentials and the database name are **fixed constants of the system** and must not be changed —
+   only the server address varies per machine.
+2. Allow the machine to finish loading, then wait **five seconds** for the database server.
+3. On a non-English Windows locale the application refuses to start with **«رجاء تحويل التاريخ الى
+   اللغة الانجليزية»**; the documented remedy is to set the regional format to **English (Canada)**.
+4. Sign in by choosing the user name from the drop-down (`admin` on first use) and entering the
+   password (case-sensitive; on first use the password equals the user name). «تسجيل دخول» signs in,
+   «خروج» exits.
+
+**Evidence:** CHM `001.htm`, `002.htm`; `help-manual-ar.md` §1–§2.
+
+### Pre-flight constants checklist
+
+The manual's closing notes require the operator to confirm, before the day's work: Prothrombin Time
+(ISI, control time, concentration table), PTT (control time), and CBC (Hct). The documented
+formulas are `Hct = Hgb × 3.3`; `Hgb% = Hgb × 8.25` (age < 1 yr), `× 7.50` (1–12 yr),
+`× 6.25` (male, > 12 yr), `× 6.75` (female, > 12 yr). The urine analysis is fixed at **test
+number 4** and cannot be renumbered or renamed.
+
+**Evidence:** CHM `nots.htm`; `help-manual-ar.md` §15.
 
 ## 7. WF-06 — Catalogue interlock
 
