@@ -1,0 +1,3 @@
+# Managed Assembly Analysis — Real Lab System 1.605
+
+The main executable (real lab system.exe) has NO CLI data directory → not a managed .NET assembly. REA inspect_managed_artifact confirms: container=pe, runtime_family=unknown, implementation=not-managed, metadata=absent, no types/methods/refs. The only managed component is "RealLab E-Mail Sender.exe" (.NET 4.0, VB.NET) — a separate satellite utility with 31 assembly references (System, System.Net.Mail, System.Data.SqlClient, Microsoft.VisualBasic, mscorlib, …). The main app is VB6 native code.

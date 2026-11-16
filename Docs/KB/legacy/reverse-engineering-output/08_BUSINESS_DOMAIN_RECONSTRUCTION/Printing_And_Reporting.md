@@ -1,0 +1,3 @@
+# Printing and Reporting — Real Lab System 1.605
+
+66 DataReports (Report*), 228 cached RTF templates, 146 per-test INI configs (reportdata/setupx/FORM/report), barcode fonts (FREE3OF9, WBCW_UPCEAN, WBCWS_UPCEAN, Digiface), Arabic fonts (MCS Taybah, ais lab, ais symbol). Report titles: MICROBIOLOGY, MOLECULAR BIOLOGY, HEMATOLOGY, IMMUNOLOGY, ENDOCRINOLOGY, CYTOPATHOLOGY, SEROLOGY, BIOCHEMISTRY. Default printer HP LaserJet 1100 (MS). SHAPE hierarchies feed DataReports. Per-workstation layout (U-034). PDF via Bullzip (evaluation). See Printing_And_Reports.md.

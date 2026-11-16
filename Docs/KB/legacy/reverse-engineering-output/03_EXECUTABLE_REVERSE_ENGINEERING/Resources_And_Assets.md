@@ -1,0 +1,3 @@
+# Resources and Assets — Real Lab System 1.605
+
+PE resources: 10 ICONs (incl. 69,012 B 256x256 + 67,624 B), 1 GROUP_ICON, 1 VERSION resource. Fonts: barcode (FREE3OF9, WBCW_UPCEAN, WBCWS_UPCEAN, Digiface), Arabic (MCS Taybah, ais lab, ais symbol), UI (Arial, Tahoma, Times New Roman). Images: 79 in CHM. Training video: RLS_Learn.wmv (85,279,236 B ASF/WMV, 35:25). Report templates: 228 RTF. INI configs: 146. See pe-resources.json, asset-analysis.json, asf-metadata.json.

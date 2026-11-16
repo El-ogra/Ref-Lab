@@ -1,0 +1,3 @@
+# Application Data Access Architecture — Real Lab System 1.605
+
+Client-side, string-built ADO access (no ORM, no parameterisation visible). Provider SQLOLEDB.1 (ADO 2.7) for SQL Server; Jet 4 OLEDB for Access. 1,337 statements (SELECT 1220, DELETE 72, SHAPE 20, OTHER 25). SHAPE hierarchies for DataReports. MSADODC/MSDATGRD/MSDATLST/MSDBRPT controls. Runtime DDL migration engine (U-038). See 03_DATABASE_FORENSICS/SQL_Analysis.md.

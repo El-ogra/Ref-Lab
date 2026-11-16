@@ -1,0 +1,3 @@
+# Executable Business Logic — Real Lab System 1.605
+
+Business logic recovered from executable structure (not decompiled bodies): per-domain Result*/Report* forms imply per-discipline result entry and reporting; labdb/labdb1 modules imply data-access layer; testmain/addpatient imply catalogue/patient management; moneypaid/frm_money imply financial; barcode implies barcode printing; testrange implies reference ranges; workpaper implies worksheet generation. Calculation formulas (PT/INR, CBC) in constanttable (PTCONS, CBCCONS) but exact formula use is inferred (Class 2). Method bodies not decompiled. See MASTER_SYSTEM_KNOWLEDGE.md §5.

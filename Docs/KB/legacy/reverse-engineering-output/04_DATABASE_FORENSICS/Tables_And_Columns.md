@@ -1,0 +1,3 @@
+# Tables and Columns — Real Lab System 1.605
+
+Master core: patientinfo (33 cols), patienttest (44), testtable (37), normalrange (18), grouptable (4), subgrouptable (4), constanttable (7), pricelist (4), testunits (2), patients (26 — operator accounts), payment, history, comments, phone, sections, instrument, barcodes. Per-test profile tables (96): ABO, Abuse, BILH, BloodGases, BONEMAR, CRP, CSFT, CoagFactors, cbc, liver, kidney, lipids, stool, urine, hepatitis, hormones, Tumors, TORCH, ZN, semen, … (patientid, requestdate, analytes, comment). Top referenced columns: patientinfo.patientid (273), patientinfo.patientnamear (233), patientinfo.labid (198), patienttest.patientid (71). Full column lists in type2_tables.csv.

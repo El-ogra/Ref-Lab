@@ -1,0 +1,178 @@
+RefLab.Domain — Technical Inventory
+Scope: /tmp/ref-lab-analysis-cache/Ref-Lab/src/RefLab.Domain — 63 .cs files, ~6,229 lines. Project file src/RefLab.Domain/RefLab.Domain.csproj (net8.0, RootNamespace RefLab.Domain, zero PackageReference entries — an explicit architectural invariant documented in the csproj comment at lines 10–14).
+
+All paths below are relative to src/RefLab.Domain/.
+
+1. Domain Layer Inventory (Entities)
+Entity	File	Key Invariants	Notable Methods
+Patient	Patients/Patient.cs:24	Name must be non-blank (:84, :109); Age may not be negative (:89, :138). Id is a PatientId assigned by PatientId.New(). Private ctor; all mutation through methods.	static Create(name, sex, age, ageUnit, birthDate); SetName; UpdateContactDetails; SetBirthDate; SetAge; SetReferringPhysician; SetAdditionalInfo; SetReceptionNote; private Normalize (blank→null, trim)
+PatientOrder (order/visit aggregate root)	Patients/PatientOrder.cs:25	currencyCode and createdBy must be non-blank (:125, :130); currency normalised to upper-case (:140); AddTest rejects a test whose OrderId != Id (:158); Status is a derived projection, never stored (:111, :239)	static Create(...); AttachLegacyIdentifier; AddTest; RemoveTest; SetTimeIn; SetBarcode; SetPriceMethod; SetReferringParty; SetTreatingPhysician; SetAmounts; SetAdditionalInfo; SetReceptionNote; Close(outDate); MarkComplete(bool); IsFullyDelivered(); IsFullyReviewed(); private DeriveStatus()
+OrderTest	Patients/OrderTest.cs:28	orderId != Guid.Empty (:224); testCode > 0 (:229); testSimpleName non-blank (:234); createdBy non-blank (:239); result may not be amended once IsResultReviewed (:270); a result must exist before review (:312); print/handover require IsResultReviewed → ResultNotReviewedException (:413, :329, :345); additional-result slot must be 0–3 (:286)	static Create(...); EnterResult(result, at, editedBy); SetAdditionalResult(slotIndex, value, at, editedBy); AttachReferenceSnapshot; ConfirmReviewed(at, reviewedBy); MarkPrinted(printedBy, at, printNumber); MarkGiven(handedOverBy, at); MarkSent(); MarkSentOut(); ConfigureSendOut(...); SetPrice(Money); SetComment(...); SetReportingSnapshots(...); SetTiming(...); RequireReviewed(); private RecordAmendment(...) (moves EditedBy/EditedAt → PreviousUser/PreviousAt)
+PatientHistory	Patients/PatientHistory.cs:22	SlotCount = 20 (:25); selector >= 0 (:63); slot number must be 1–20 (:83, :111); array is replaced, never mutated in place (:35–38, :89) so persistence can diff it	static Create(patientId, selector, requestDate); SetSlot(slotNumber, value); GetSlot(slotNumber); SetPrintFlag(bool); UsedSlotCount recomputed as highest used index
+PatientPicture	Patients/PatientPicture.cs:22	SlotCount = 15 (:25); slot must be 1–15 (:64); imagePath non-blank (:70)	static Create(patientId, slot, imagePath, caption, orderId, testCode); SetCaption(caption)
+ReferenceSnapshot (frozen range on the order row)	Patients/ReferenceSnapshot.cs:23	ageBand/interval must be non-null (:56); copies the band and interval (ageBand.Copy(), interval.Copy() — :70–71) so two orders never share one owned value object	static Capture(testCode, name, sexScope, ageBand, interval, capturedAt); static Capture(ClinicalKnowledge.ReferenceRange range, capturedAt) (:79)
+Operator	Identity/Operator.cs:25	id > 0 (:100); name non-blank (:105); password hash must be non-blank (:110, :151); clear-text password never stored; permission collection replaced on every change (:79–86)	static Create(id, name, passwordHash, roleCaption); Grant(permission); Revoke(permission); Has(permission) → true for administrators (:141); SetPasswordHash; SetSecurityWordHash; SetAdministrator; SetActive; SetName; SetRoleCaption; RecordAttendanceStart/End; RecordBreakStart/End; RecordLastVisit
+Permission (enum, not a class)	Identity/Permission.cs:27	15 named capabilities replacing the 17 anonymous legacy grant1..grant17 bits (bits 16 = multi-branch, 17 = digital delivery, both dropped — :20–25)	Has, Grant, Revoke on Operator
+TestDefinition	ClinicalKnowledge/TestDefinition.cs:22	code > 0 (:167); name and simpleName non-blank (:172, :177); test number 4 (urine analysis) is immutable — neither number nor name may change → TestNumberImmutableException (:28, :200–228, :333)	static Create(code, name, simpleName, subGroupCode, arrangementNumber); Rename(newName); ChangeCode(newCode); UpdatePrices(patient, lab, otherLab); ConfigureSendOut(isSendOut, otherLabName); SetCriticalInterval(...); UpdateDetails(...); SetArabicName; MoveTo(subGroupCode, arrangementNumber); Deactivate() / Activate(); IsUrineAnalysis
+ReferenceRange	ClinicalKnowledge/ReferenceRange.cs:24	id > 0, testCode > 0, analyte name non-blank (:79–92); AgeBand/Interval non-null (:94); UpdateLimits re-validates low ≤ high and copies the critical interval (:129, :148)	static Create(...); UpdateLimits(lowLimit, highLimit, lowExceptionText, highExceptionText, lowComment, highComment, rangeText); Matches(sex, age, ageUnit) (:154); SexSpecificity (:171); AgeSpan (:177); Specificity (:184)
+Abbreviation	ClinicalKnowledge/Abbreviation.cs:13	id > 0 (:34); abbreviation text non-blank (:39)	static Create(id, abbreviation, meaning); UpdateMeaning(meaning)
+TestUnit	ClinicalKnowledge/TestUnit.cs:12	id > 0 (:30); name non-blank (:35)	static Create(id, name); UpdateName(name)
+ClinicalSubGroup	ClinicalKnowledge/ClinicalSubGroup.cs:15	code > 0 (:39); name non-blank (:44, :60); Arabic name optional	static Create(code, name, arabicName, isDeleteProtected); UpdateName; UpdateArabicName
+ClinicalConstant	ClinicalKnowledge/ClinicalConstant.cs:21	SlotCount = 7 (:24); group name non-blank (:48); more than 7 values rejected (:53); slot must be 1–7 → ArgumentOutOfRangeException (:110–119); numeric read throws InvalidClinicalConstantException when the slot is empty/non-numeric (:89–93)	static Create(groupName, params string?[] values); GetText(slot); GetNumber(slot); TryGetNumber(slot, out value); constants CbcGroupName = "CBCCONS", PtGroupName = "PTCONS"
+ConversionFactor	ClinicalKnowledge/ConversionFactor.cs:21	analyte name non-blank (:57); both unit names non-blank (:62); decimal counts may not be negative (:67, :87)	static Create(testSimpleName, fromUnit, toUnit, factor, fromDecimals, toDecimals); UpdateFactor(factor, fromDecimals, toDecimals); Convert(value) → value * Factor (:98)
+ProthrombinControlCalibration	ClinicalKnowledge/ProthrombinControlCalibration.cs:15	id > 0 (:36); control time may not be negative (:42)	static Create(id, controlTime, concentration); ToPoint() → ProthrombinControlPoint (:56)
+Payment	Billing/Payment.cs:16	orderId != Guid.Empty (:73); amount non-null (:78); Type carried as raw legacy integer (value domain not established — :13)	static Create(orderId, paidDate, amount, number, type, referringPartyCode, testSimpleName, treatingPhysicianCode, legacyOrderIdentifier); SetComment
+PriceList	Billing/PriceList.cs:18	id > 0 (:42); analyte name non-blank (:47); price-list name non-blank (:52)	static Create(id, testSimpleName, priceListName, price); SetPrice(price)
+ReferringParty	Billing/ReferringParty.cs:22	id > 0 (:100); code non-blank (:105); name non-blank (:110); CommissionRate is Percentage? (nullable ⇒ no rate)	static Create(id, code, name); SetCommissionRate; UpdateContactDetails(...); SetContactPerson(code, name, phone); SetSpecialTreatment(isSpecial, specialLimit); SetTreatingPhysician(code, physicianId); SetPriceMethod; SetPrintOrderNumber; Deactivate() / Activate(); SetMorsel
+TreatingPhysician	Billing/TreatingPhysician.cs:21	id > 0 (:45); code non-blank (:50); name non-blank (:55). Only the identifiers the evidence establishes are asserted (:16–18)	static Create(id, code, name); SetPhone(phone)
+SendOutRequest	SendOut/SendOutRequest.cs:22	orderTestId != Guid.Empty (:72); destination lab name non-blank (:77); a settled referral cannot be re-dispatched (:95); a referral must be dispatched before it can be settled (:108); destination may not change after dispatch (:124); State projection: Settled > Dispatched > Pending (:56)	static Create(orderTestId, destinationLabName, outPrice, outPriceBeforeDiscount); MarkDispatched(at); MarkSettled(at); SetDestinationLab(name); SetPrices(outPrice, outPriceBeforeDiscount)
+SampleDisposition	SendOut/SampleDisposition.cs:19	orderTestId != Guid.Empty (:54); recordedBy non-blank (:60). Immutable after creation	static Create(orderTestId, action, recordedAt, recordedBy, destinationLabName)
+CultureResult	Microbiology/CultureResult.cs:67	culture id non-blank (:132); organism non-blank (:137); one susceptibility per antibiotic symbol (case-insensitive) → InvalidTestDefinitionException (:162–167); susceptibility list replaced, not mutated (:106–115)	static Create(patientId, cultureId, organism, requestDate, orderId, secondOrganism, condition, colony, reactions); AddSusceptibility(...); RemoveSusceptibility(symbol) → bool
+AntibioticSensitivity (declared in CultureResult.cs:14)	Microbiology/CultureResult.cs:14	antibiotic symbol non-blank (:33); reading non-blank (:38)	static Create(antibioticSymbol, reading, unit)
+Antibiotic	Microbiology/Antibiotic.cs:24	id > 0 (:70); symbol non-blank (:75); scientific name non-blank (:80)	static Create(id, symbol, scientificName, cultureType, isAllowedInPregnancy, isAllowedInChildren, commonNames); SetSusceptibility(sensitivity, unit); SetClinicalFlags(...); SetCommonNames(...)
+Farm (file Farming/FarmRecord.cs — no type named FarmRecord exists)	Farming/FarmRecord.cs:12	id > 0 (:48); name non-blank (:53)	static Create(id, name, address, phone, secondaryPhone, note); UpdateContactDetails(...)
+FarmTransaction	Farming/FarmRecord.cs:90	id > 0 (:130); farm name non-blank (:135)	static Create(id, farmId, farmName, transactionDate, issuedAmount, receivedAmount, note); Update(issuedAmount, receivedAmount, note)
+PrintAudit	Auditing/PrintAudit.cs:21	orderTestId != Guid.Empty (:56); operator non-blank (:61); sequence origin is SETTING.ini reportstart=1984 (:14)	static Create(orderTestId, operator, printedAt, sequenceNumber, category = ReportCategory.Individual)
+AttendanceEntry	Auditing/AttendanceEntry.cs:22	operatorId > 0 (:53); operator name non-blank (:58)	static Create(operatorId, operatorName, eventType, occurredAt)
+LaboratorySettings (singleton aggregate)	Configuration/LaboratorySettings.cs:70	Id is always SingletonId = 1 (:82, :144); margins may not be negative (:191); report sequence origin must be positive (:163); printer name non-blank (:218); printer map replaced on every change (:129–134)	static Create(); SetPaperSize; SetReportSequenceStart; SetBarcodeAutoCreated; SetWorkSheetPrinted; SetHistoryDisplayMode; SetGlobalHeaderTexts; SetMargins(left, right, top, bottom); SetBackgroundColour; SetDefaultAccountType; SetConnectionReceipt(header, footer); BindPrinter(role, name); UnbindPrinter(role); GetPrinter(role)
+State-transition summary (the only real state machines in the layer):
+
+OrderTest: NotEntered → Entered → Reviewed → Printed → Delivered, plus independent send/sentout flags for send-out. Enforced by EnterResult → ConfirmReviewed → MarkPrinted → MarkGiven, each guarded by RequireReviewed().
+PatientOrder: Open → InProgress → Completed → Delivered derived in DeriveStatus() (Patients/PatientOrder.cs:239-257).
+SendOutRequest: Pending → Dispatched → Settled with forward-only guards.
+Operator attendance: RecordAttendanceStart/End, RecordBreakStart/End reset the opposite flags.
+2. Value Objects (ValueObjects/)
+Type	File	Validation rules	Factories / API
+AgeBand	ValueObjects/AgeBand.cs:16	from/to may not be negative (:40,:45); from > to rejected (:50) → InvalidAgeBandException. Implements IEquatable<AgeBand> (value semantics on From,To,Unit).	static Create(decimal? from, decimal? to, AgeUnit unit); Copy() (:68); Contains(decimal age, AgeUnit unit) — returns false on unit mismatch (:75); ToString()
+CriticalInterval	ValueObjects/CriticalInterval.cs:25	low ≤ high when both present (:96) → InvalidCriticalIntervalException	static Create(lowCriticalLimit, highCriticalLimit, criticalRangeText, criticalExceptionText, criticalComment); static CriticalInterval None — returns a new instance on every call (:121, deliberately to avoid a shared owned instance); Copy(); HasLimits
+Money	ValueObjects/Money.cs:25	currency must be exactly 3 ASCII letters after trim/upper (:49) → InvalidMoneyException; currency is mandatory, no default (:20–23); all arithmetic throws CurrencyMismatchException on differing currencies (:132)	static Create(decimal amount, string currencyCode); static Zero(currencyCode); operators +, - (binary & unary), * (decimal factor only), >, <, >=, <=, ==, !=; IComparable<Money>; EnsureSameCurrency
+OrderIdentifier	ValueObjects/OrderIdentifier.cs:34	Length = 13 exactly (:37, :72); segment lengths 2/2/5/3/1 enforced in FromSegments (:101–131) → InvalidOrderIdentifierException; layout is a hard contract (:29–32)	static Create(string value); static FromSegments(leadingSegment, personKey, middleSegment, displayCode, trailingCharacter); positional accessors LeadingSegment (1–2), PersonKey (3–4), MiddleSegment (5–9), DisplayCode (10–12), TrailingCharacter (13)
+PatientId	ValueObjects/PatientId.cs:21	readonly struct over Guid; empty GUID rejected (:33); implicit conversion to Guid (:63)	static From(Guid); static New(); ==/!=; ToString("D")
+Percentage	ValueObjects/Percentage.cs:13	must be within 0–100 inclusive (:29) → InvalidPercentageException	static Create(decimal value); static FromRatio(decimal ratio) → ratio * 100; Apply(decimal amount) → amount * Value / 100
+ReferenceInterval	ValueObjects/ReferenceInterval.cs:28	low ≤ high when both present (:111) → InvalidReferenceIntervalException; comparison semantics documented as inclusive (:24–26); owns a CriticalInterval	static Create(lowLimit, highLimit, lowExceptionText, highExceptionText, lowComment, highComment, rangeText, unit, criticalInterval); Copy() (:138); HasLimits; ExceptionTextFor(ResultClassification); CommentFor(ResultClassification)
+ResultValue	ValueObjects/ResultValue.cs:23	text may not be empty (:57) → InvalidResultValueException; text is the source of truth, numeric form is derived (:13–14); non-numeric (qualitative) results are legal, NumericValue is then null (:17–20)	static Create(string text, string? unit = null); static FromNumber(decimal number, string? unit = null); IsNumeric
+ProthrombinControlPoint (Rules/ProthrombinControlPoint.cs:12) is a readonly record struct (decimal ControlTime, decimal Concentration) — a calibration DTO living in Rules/, not in ValueObjects/.
+
+3. Domain Rules & Policies (Rules/)
+Policy	File	Public API	Rule enforced
+ClinicalConstantResolver (static)	Rules/ClinicalConstantResolver.cs:22	Resolve(constants, groupName) → ClinicalConstant?; ResolveNumber(constants, groupName, slot) → decimal; ResolveText(constants, groupName, slot) → string?	Constants are data, never hard-coded; a missing group or a non-numeric slot raises InvalidClinicalConstantException (:48). Group name matched case-insensitively after trim (:33–36).
+ClinicalDerivationPolicy (static)	Rules/ClinicalDerivationPolicy.cs:29	DeriveHematocrit(hemoglobin, cbcConstants); DeriveHemoglobinPercentage(hemoglobin, sex, age, cbcConstants); SelectHemoglobinFactorSlot(sex, age); DeriveInternationalSensitivityIndex(patientPT, controlPT, normalPT, controlIsi); InterpolateControlConcentration(calibration, controlTime)	CBC factors from CBCCONS: slot1 = Hct (Hgb × 3.3), slot2 = adult male (×6.25), slot3 = adult female (×6.75), slot4 = child 1–12 y (×7.50), slot5 = infant <1 y (×8.25). Slot selection by age: < 1 → infant, <= 12 → child, else sex-based (:92–105). Factors must be positive → InvalidClinicalDerivationException (:207). ISI denominator normalPT − controlPT must not be zero (:131). Control-curve interpolation rejects an empty curve or a control time outside the calibrated range (:161, :171). All results rounded to 2 dp AwayFromZero (:216). The ISI formula is explicitly flagged as not recoverable from legacy evidence and “flagged for owner confirmation” (:118–121).
+CommissionCalculator (static)	Rules/CommissionCalculator.cs:21	Calculate(Percentage, Money); Calculate(ReferringParty, Money); CalculateTotal(Percentage, IEnumerable<Money>)	Legacy formula SUM(Gehats.omola * patientinfo.elmadfoo3 / 100) (:11). A referring party with no CommissionRate → InvalidPercentageException (:45). A total over an empty set → InvalidPaymentException (:83); mixed currencies → CurrencyMismatchException (:75).
+IdentifierAllocator (static)	Rules/IdentifierAllocator.cs:23	Allocate(leadingSegment, personKey, middleSegment, displayCode, trailingCharacter) → OrderIdentifier	Enforces the 13-char positional layout rather than accepting an arbitrary string (:16–21). Thin delegation to OrderIdentifier.FromSegments.
+ReferenceRangeSelector (static)	Rules/ReferenceRangeSelector.cs:22	Select(ranges, testCode, sex, age, ageUnit) → ReferenceRange?; SelectAll(...) → IReadOnlyList<ReferenceRange>	Deterministic tie-break where the legacy rule was not established (:11–19): sex-specific beats SexScope.All (OrderByDescending(SexSpecificity)), then narrowest age window (ThenBy(AgeSpan ?? decimal.MaxValue)), then lowest Id (:43–45).
+ResultClassificationPolicy (static)	Rules/ResultClassificationPolicy.cs:32	Classify(ResultValue? result, ReferenceSnapshot? snapshot) → ResultClassification?	Three-valued ordered classification. Critical is checked first and strictly (< / >) (:52, :57); the normal interval is inclusive (:67, :72). Returns null when the result is not numeric, when no snapshot was frozen, or when the interval defines no limits (:43, :62). Uses the frozen range on the order row, never the live catalogue.
+ProthrombinControlPoint	Rules/ProthrombinControlPoint.cs:12	record struct	Calibration point carrier, not a policy.
+InvalidClinicalDerivationException	Rules/InvalidClinicalDerivationException.cs:6	—	Exception placed in Rules/ instead of Exceptions/ (see Gaps).
+4. Enumerations
+Enums/ (10):
+
+Enum	File	Members
+AgeUnit	Enums/AgeUnit.cs:12	Years = 1, Months = 2, Days = 3 — legacy Mons. normalised to Months; the legacy empty value is not reproduced (:7–10)
+AttendanceEventType	Enums/AttendanceEventType.cs:11	StartedWork = 1, EndedWork = 2, StartedBreak = 3, EndedBreak = 4 — the only four events the operator table evidences
+RecordStatus	Enums/RecordStatus.cs:14	Open = 1, InProgress = 2, Completed = 3, Delivered = 4 — derived projection, not a stored legacy field (:7–12)
+ReportCategory	Enums/ReportCategory.cs:14	Contracts = 1, Free = 2, Individual = 3, LabToLab = 4 — mirrors the legacy D:\PDF\ sub-directories (commercial, not functional, taxonomy)
+ResultClassification	Enums/ResultClassification.cs:17	Normal = 0, High = 1, Low = 2, Critical = 3 — Critical overrides any abnormal classification
+ResultState	Enums/ResultState.cs:13	NotEntered = 1, Entered = 2, Reviewed = 3 (F8), Printed = 4 (F12), Delivered = 5 — derived from the legacy booleans
+SampleDispositionAction	Enums/SampleDispositionAction.cs:14	Split = 1, Withdrawn = 2 — only the two documented actions; the sample table structure was never extracted (:10–12)
+SendOutState	Enums/SendOutState.cs:14	Pending = 1, Dispatched = 2, Settled = 3 — settlement wins over dispatch
+Sex	Enums/Sex.cs:11	Male = 1, Female = 2
+SexScope	Enums/SexScope.cs:12	Male = 1, Female = 2, All = 3 — the sex-agnostic scope for reference ranges
+Enums outside Enums/:
+
+Permission — Identity/Permission.cs:27 — 15 members, RegisterPatient = 1 … ManageAccounting = 15 (full list in file; e.g. OrderTests = 4, EnterResults = 5, ReviewResults = 6, PrintReports = 7, HandOverResults = 8, ManageTestCatalogue = 9, ManageReferenceRanges = 10, ManagePricing = 11, ManageOperators = 12, ViewStatistics = 13, ManageSettings = 14).
+PrinterRole — Configuration/LaboratorySettings.cs:14 — Report = 1, ReportAlternate = 2, Barcode = 3, Zarf = 4, WorkSheet = 5, IdentityCard = 6.
+PaperSize — Configuration/LaboratorySettings.cs:42 — A4 = 1, A5 = 2.
+5. Exceptions
+Exceptions/DomainException.cs:12 — public abstract class DomainException : Exception — the base of every domain exception; two protected ctors (message, message+inner).
+
+Type	File:line	Payload
+InvalidOrderIdentifierException	Exceptions/PatientExceptions.cs:7	ActualLength, ExpectedLength (both int); second ctor (object offendingValue, string reason) leaves both lengths at 0
+InvalidResultValueException	Exceptions/PatientExceptions.cs:33	Text
+InvalidPatientOrderException	Exceptions/PatientExceptions.cs:49	message only
+ResultNotReviewedException	Exceptions/PatientExceptions.cs:67	TestCode — mirrors the legacy refusal “Not found any Verified selected tests or result to print it” (:63–65)
+TestCatalogueException (non-sealed base)	Exceptions/CatalogueExceptions.cs:6	message
+TestNumberImmutableException	Exceptions/CatalogueExceptions.cs:23	TestCode — the urine-analysis protection
+InvalidTestDefinitionException	Exceptions/CatalogueExceptions.cs:40	message
+InvalidMoneyException	Exceptions/BillingExceptions.cs:6	CurrencyCode
+CurrencyMismatchException	Exceptions/BillingExceptions.cs:22	LeftCurrency, RightCurrency
+InvalidPercentageException	Exceptions/BillingExceptions.cs:42	Value
+InvalidPaymentException	Exceptions/BillingExceptions.cs:58	message
+InvalidReferenceIntervalException	Exceptions/ReferenceRangeExceptions.cs:6	LowLimit, HighLimit
+InvalidCriticalIntervalException	Exceptions/ReferenceRangeExceptions.cs:26	LowCriticalLimit, HighCriticalLimit
+InvalidAgeBandException	Exceptions/ReferenceRangeExceptions.cs:46	From, To
+ReferenceRangeNotFoundException	Exceptions/ReferenceRangeExceptions.cs:66	TestCode, Scope
+AuthorizationException	Exceptions/SecurityExceptions.cs:6	message
+InvalidOperatorException	Exceptions/SecurityExceptions.cs:18	message
+WeakPasswordException	Exceptions/SecurityExceptions.cs:37	Reason — password policy rejection
+InvalidSendOutStateException	Exceptions/SendOutExceptions.cs:6	message
+InvalidSampleDispositionException	Exceptions/SendOutExceptions.cs:18	message
+InvalidClinicalConstantException	ClinicalKnowledge/InvalidClinicalConstantException.cs:6	GroupName, Slot — lives in ClinicalKnowledge/, not Exceptions/
+InvalidClinicalDerivationException	Rules/InvalidClinicalDerivationException.cs:6	message — lives in Rules/, not Exceptions/
+Total: 23 exception types (1 abstract base + 22 concrete).
+
+6. Clinical Knowledge (ClinicalKnowledge/)
+Abbreviation (Abbreviation.cs:13) — Id, Text, Meaning; 650 legacy entries in the abbreviations table; Create(id, abbreviation, meaning), UpdateMeaning(meaning).
+ClinicalConstant (ClinicalConstant.cs:21) — named group of up to 7 text slots (SlotCount = 7), values stored as text so a token such as 2CVJW can coexist with numbers (:15–19). Group names CBCCONS and PTCONS. GetText(slot), GetNumber(slot) (invariant culture), TryGetNumber(slot, out value).
+ClinicalSubGroup (ClinicalSubGroup.cs:15) — Code, Name, ArabicName (optional; all 46 shipped rows had an empty arname), IsDeleteProtected.
+ConversionFactor (ConversionFactor.cs:21) — TestSimpleName, FromUnit, ToUnit, Factor, FromDecimals, ToDecimals (the legacy Ffix/Sfix decimal-place counts); 167 legacy rows; Convert(value) multiplies.
+ProthrombinControlCalibration (ProthrombinControlCalibration.cs:15) — Id, ControlTime (seconds), Concentration; legacy PTC table with 33 points (e.g. 12 s → 100, 12.5 s → 92); ToPoint() → ProthrombinControlPoint.
+ReferenceRange (ReferenceRange.cs:24) — legacy normalrange, 18 columns, 852 rows over 304 analytes; sex distribution Male 422 / Female 421 / All 5 / empty 4; age-unit distribution Years 708 / Days 70 / Mons. 65 / empty 9. Carries PregnancySmokingFactor (populated on all rows, role never traced, deliberately unused in selection — :48–56), ReferenceRangeType, plus SexScope, AgeBand, Interval. Matches(sex, age, ageUnit), SexSpecificity, AgeSpan, Specificity.
+TestDefinition (TestDefinition.cs:22) — legacy testtable, 38 columns, 609 rows, unchanged between the two legacy versions. Prices (PatientPrice, LabPrice, OtherLabPrice), send-out flag + standing destination, AllowsQuestion/Question, Description/Effect/Usage/SampleType, IsDeleteProtected, TestTime, PrintWithGroup, Barcode1..3, SeeReport, NormalType, AddOrderNumber, HasTestOrderNumber, ReferenceRangeType, CriticalInterval. Protected test: UrineAnalysisTestCode = 4.
+TestUnit (TestUnit.cs:12) — Id, Name; legacy testunits, 69 units.
+Prothrombin control calibration flow: ProthrombinControlCalibration.ToPoint() → ProthrombinControlPoint → ClinicalDerivationPolicy.InterpolateControlConcentration(IEnumerable<ProthrombinControlPoint>, decimal controlTime) (linear interpolation between the two bracketing points, Rules/ClinicalDerivationPolicy.cs:151).
+
+7. Aggregate Boundaries & Relationships
+Evidence: a repo-wide grep of RefLab.Domain for entity-typed properties (public Patient , public OrderTest , public PatientOrder , public Operator , public TestDefinition , public ReferenceRange , public Antibiotic , public ReferringParty , public CultureResult , …) returns zero matches. The domain contains no entity navigation properties at all — every cross-aggregate link is an id/scalar.
+
+PatientOrder is the aggregate root of the order aggregate. It owns its tests through the private field private readonly List<OrderTest> _tests exposed as IReadOnlyCollection<OrderTest> Tests (Patients/PatientOrder.cs:27, :106) and mutated only via AddTest/RemoveTest with the ownership check orderTest.OrderId != Id (:158). OrderTest has a private constructor and is created through OrderTest.Create(orderId, …), so it cannot exist outside an order.
+OrderTest owns ResultValue Result (:78), ReferenceSnapshot ReferenceSnapshot (:84), Money Price (:111) and the four AdditionalResults slots (:81).
+Value-object ownership is enforced by copying, not by reference. ReferenceSnapshot.Capture copies the band and interval (:70–71) with an explicit rationale (two orders may capture the same catalogue range; the persistence layer would otherwise have to re-key one instance from one owner to another). ReferenceRange.UpdateLimits copies the nested critical interval (:144–148). CriticalInterval.None returns a fresh instance on every access (:110–121). Collections are replaced rather than mutated: PatientHistory.Slots (:35–42), Operator.Permissions (:79–91), CultureResult.Susceptibilities (:106–115), LaboratorySettings.Printers (:129–141).
+Id-based references across aggregates:
+PatientOrder.PatientId → Patient (Patients/PatientOrder.cs:37)
+PatientOrder.ReferringPartyId → ReferringParty (:82); TreatingPhysicianCode (:85)
+OrderTest.OrderId → PatientOrder; ReferenceSnapshot/Money owned
+Payment.OrderId → PatientOrder (Billing/Payment.cs:26)
+SendOutRequest.OrderTestId → OrderTest (SendOut/SendOutRequest.cs:32)
+SampleDisposition.OrderTestId → OrderTest (SendOut/SampleDisposition.cs:29)
+PrintAudit.OrderTestId → OrderTest (Auditing/PrintAudit.cs:31)
+CultureResult.PatientId / OrderId → Patient / PatientOrder (Microbiology/CultureResult.cs:79,:82)
+PatientHistory.PatientId → Patient; PatientPicture.PatientId / OrderId → Patient / PatientOrder
+AttendanceEntry.OperatorId → Operator; FarmTransaction.FarmId → Farm
+OrderTest.TestCode / SubGroupCode / MainTestCode → the clinical catalogue (ids only); ReferenceRange.TestCode → TestDefinition
+CultureResult → antibiotics by symbol string, not by Antibiotic.Id (Microbiology/CultureResult.cs:21) — a deliberate weak reference.
+Standalone aggregates (no owner, referenced by id from elsewhere): Operator, TestDefinition, ReferenceRange, Abbreviation, TestUnit, ClinicalSubGroup, ClinicalConstant, ConversionFactor, ProthrombinControlCalibration, ReferringParty, TreatingPhysician, PriceList, Antibiotic, Farm, LaboratorySettings (singleton, Id == 1).
+Aggregate roots: Patient, PatientOrder, Operator, TestDefinition, ReferenceRange, Abbreviation, TestUnit, ClinicalSubGroup, ClinicalConstant, ConversionFactor, ProthrombinControlCalibration, Payment, PriceList, ReferringParty, TreatingPhysician, SendOutRequest, SampleDisposition, CultureResult, Antibiotic, Farm, FarmTransaction, PrintAudit, AttendanceEntry, LaboratorySettings; OrderTest is an entity inside the PatientOrder aggregate (owned, created only through the order).
+
+8. Domain Events
+Absent. Evidence:
+
+grep -rn --include=*.cs -E "IEvent|DomainEvent|INotification|EventHandler|Raise|Occurred" over src/RefLab.Domain returns only XML-doc prose ("Raised when…", OccurredAt on AttendanceEntry) — no interface, base class, record, collection, or raise mechanism exists.
+find src -type d -iname "*event*" returns no directory.
+A repo-wide grep over src/ for interface I[A-Za-z]*Event|IDomainEvent|EventBase|record .*Event|class .*Event yields exactly one hit, and it is in the Application layer, not the Domain layer: src/RefLab.Application/Features/Auditing/RecordAttendance.cs:14 — public sealed record RecordAttendanceCommand(AttendanceEventType EventType) : IRequest<AttendanceEntryDto>; (a MediatR request, i.e. CQRS command, not a domain event).
+No entity exposes a domain-event collection (e.g. IReadOnlyCollection<IDomainEvent> DomainEvents); none of the 29 entities has such a member.
+Discrepancy worth flagging: RefLab.Domain.csproj:7 describes the assembly as “entities, value objects, enumerations, domain events and business rules”, but no domain-event concept is implemented in the layer. The description overstates the contents.
+
+9. Notable Gaps or Anomalies
+No domain events at all — the csproj description claims them; the layer implements none (see §8).
+No FarmRecord type. The file Farming/FarmRecord.cs contains two types: Farm (:12) and FarmTransaction (:90). Any name-based expectation of a FarmRecord entity is unmet.
+CultureResult.cs contains two types — AntibioticSensitivity (:14) and CultureResult (:67). There is no AntibioticSensitivity.cs.
+Enums outside Enums/ — Permission (Identity/), PrinterRole and PaperSize (Configuration/LaboratorySettings.cs). A consumer enumerating Enums/ alone misses three.
+Exceptions outside Exceptions/ — InvalidClinicalConstantException in ClinicalKnowledge/, InvalidClinicalDerivationException in Rules/. Consequently the cref Exceptions.InvalidClinicalConstantException at Rules/ClinicalConstantResolver.cs:42 points at a non-existent RefLab.Domain.Exceptions.InvalidClinicalConstantException (unresolvable documentation cref).
+Exception-type miscategorisation. InvalidTestDefinitionException (a catalogue exception) is thrown by non-catalogue entities: Abbreviation, ClinicalSubGroup, ConversionFactor, ProthrombinControlCalibration, Antibiotic, AntibioticSensitivity, CultureResult, Farm, FarmTransaction. Conversely InvalidPaymentException (a billing exception) is thrown by PriceList, ReferringParty, TreatingPhysician (Billing/PriceList.cs:44, Billing/ReferringParty.cs:102, Billing/TreatingPhysician.cs:47).
+PatientOrder.MarkComplete(bool) doc-comment lies. It says “Sets the stored completion flag and refreshes the derived status” (Patients/PatientOrder.cs:224), but Status is a computed property over _tests (:111, :239) — MarkComplete does not and cannot influence it. The legacy IsComplete flag is stored but never read by any derivation in the domain.
+No currency-consistency check between an order and its amounts. PatientOrder.SetAmounts(...) (:196–208) and OrderTest.SetPrice(Money) (:373) accept any Money regardless of the order's CurrencyCode (Patients/PatientOrder.cs:55). Money itself enforces same-currency only within a single operation.
+OrderTest.MarkSent() / MarkSentOut() are unguarded (:353, :359) — they do not require the test to be configured as a send-out, and MarkSentOut() does not require IsSent. This is inconsistent with SendOutRequest, where MarkSettled requires IsDispatched (SendOut/SendOutRequest.cs:108). The two representations of the same legacy send/sentout pair enforce different rules.
+ReferenceRange.Create shares the caller's AgeBand and ReferenceInterval instances (ClinicalKnowledge/ReferenceRange.cs:102–103) — no Copy(), unlike ReferenceSnapshot.Capture which copies both. A catalogue range and a captured snapshot can therefore hold the same ReferenceInterval instance.
+TestDefinition.SetCriticalInterval stores the caller's instance without copying (ClinicalKnowledge/TestDefinition.cs:246–250), again inconsistent with the copy-on-capture discipline stated elsewhere.
+ReferenceRange.Specificity is dead code. It is defined (:184) but the selector orders by SexSpecificity → AgeSpan → Id instead (Rules/ReferenceRangeSelector.cs:43–45). No reference to Specificity exists anywhere in src/.
+Two exceptions are declared but never thrown anywhere in the solution: ReferenceRangeNotFoundException (Exceptions/ReferenceRangeExceptions.cs:66) — ReferenceRangeSelector.Select returns null instead (:46); and AuthorizationException (Exceptions/SecurityExceptions.cs:6) — no authorisation check is implemented in the domain (the closest is Operator.Has, :141).
+Operator.Has(permission) returns true for every permission when IsAdministrator (Identity/Operator.cs:141) — administrators bypass the permission set entirely, with no audit trail in the domain.
+Slot-indexing inconsistency. PatientHistory.SetSlot/GetSlot are 1-based (1–20, Patients/PatientHistory.cs:83), while OrderTest.SetAdditionalResult is 0-based (0–3, Patients/OrderTest.cs:286).
+Legacy slot-count discrepancy for results. The patienttest legacy row carries the result plus resultt1..resultt4 (5 slots, per the doc comment at Patients/OrderTest.cs:17), but the entity models the primary Result plus exactly 4 AdditionalResults (:81, :256) — the primary slot is separate, so the total is consistent, but the array is fixed at 4 and cannot grow.
+Age and AgeUnit are independent on Patient (:40, :43); SetAge(age, ageUnit) (:136) accepts an age with a null unit or a unit with a null age, producing a band that can never match (AgeBand.Contains returns false on unit mismatch, ValueObjects/AgeBand.cs:75).
+PriceList.Id is long but the guard message says “positive integer” (Billing/PriceList.cs:42–45).
+InvalidOrderIdentifierException’s second constructor (Exceptions/PatientExceptions.cs:18–21) never sets ActualLength/ExpectedLength, so both public properties read 0 for that ctor.
+Dead using directives — System.Diagnostics.CodeAnalysis in ValueObjects/OrderIdentifier.cs:1 and ValueObjects/PatientId.cs:1 are unused (no [NotNullWhen] attributes present).
+Percentage has no operator overloads (no +/-/*), unlike Money — CommissionCalculator must call Percentage.Apply explicitly (Rules/CommissionCalculator.cs:31, :78).
+No unused entities. Every entity type declared in the layer is referenced from the Application/Infrastructure/Presentation layers (checked by name across src/, excluding the Domain project itself) — e.g. CultureResult 10, Antibiotic 7, Farm 10, PatientPicture 9, PrintAudit 9, AttendanceEntry 7, SampleDisposition 8 outside-domain references. The only dead code in the layer is the Specificity property and the two unthrown exceptions listed above.
+Legacy-evidence discipline is the layer’s defining trait. Where the legacy value domain was not established, the domain deliberately keeps raw scalars instead of inventing enums — PatientOrder.PriceMethod (:19–22), Payment.Type (:13–14), PatientOrder.Discount100 (:79), OrderTest.ResultCasePrint / Timeout (:108, :126), ReferenceRange.PregnancySmokingFactor (ClinicalKnowledge/ReferenceRange.cs:48–56), AgeUnit empty value (Enums/AgeUnit.cs:7–10), SexScope empty value (Enums/SexScope.cs:7–10).

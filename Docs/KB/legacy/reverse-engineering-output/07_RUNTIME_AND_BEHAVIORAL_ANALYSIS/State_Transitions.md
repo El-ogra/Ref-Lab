@@ -1,0 +1,3 @@
+# State Transitions — Real Lab System 1.605
+
+Result states: entered → validated (vs normalrange, sex/age) → printed (resultprint + printuser/printdate) → finished (resultfinsh + edituser/editdate). Re-issue/re-print supported (Report* 's' variants). Patient/visit/test-order state transitions not fully evidenced. Authorisation: per-patient grant1..grant12 + per-section numeric IDPassword* (coarse, undocumented) — UNR-002/003. See State_Transitions.md.

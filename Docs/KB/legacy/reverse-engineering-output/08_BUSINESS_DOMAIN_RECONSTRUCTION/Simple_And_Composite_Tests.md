@@ -1,0 +1,3 @@
+# Simple and Composite Tests — Real Lab System 1.605
+
+Simple tests (single component: creatinine, urea, uric acid) vs composite (multi-component: CBC). Each profile table carries its own analyte columns; composite profiles (cbc, liver, kidney, …) have many columns, simple ones (ABO, CRP) have few. The exact representation differs per profile — do not assume uniform handling. testtable: 609 tests, 48 subgroups. See Tests_And_Components.md.

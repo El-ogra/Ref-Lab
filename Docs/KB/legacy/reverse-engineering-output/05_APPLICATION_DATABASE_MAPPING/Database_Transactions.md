@@ -1,0 +1,3 @@
+# Database Transactions — Real Lab System 1.605
+
+Transaction boundaries not evidenced at SQL level (no BEGIN TRANSACTION in extracted statements). ADO-level transaction management likely (Connection.BeginTrans/CommitTrans) but not confirmed from static analysis. Bulk-deletion maintenance tools (U-005) operate on all clinical tables. Backup via generated .bat/.sql (U-002). Schema migration runs DDL at startup (U-038).

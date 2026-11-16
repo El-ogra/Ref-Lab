@@ -1,0 +1,3 @@
+# Native Code Analysis — Real Lab System 1.605
+
+VB6 native code (runtime build 9782/SP6). Import table: MSVBVM60.DLL only (231 named imports, 118 __vba*). Ghidra produced a function census (6,522 functions) but no pseudocode (export cap issue, later resolved to 6,522 total). Procedure names absent from binary by design (F-07, confirmed by 2 independent methods: static ObjectInfo.lpMethodNames=null; dynamic Ghidra category_named=0). REA native providers (rizin/Ghidra/objdump) unavailable for PE in this environment. Decompilation not performed. Method bodies not recovered.<|end|>

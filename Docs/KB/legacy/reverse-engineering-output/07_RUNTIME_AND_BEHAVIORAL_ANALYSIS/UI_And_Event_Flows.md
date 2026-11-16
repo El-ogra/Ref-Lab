@@ -1,0 +1,3 @@
+# UI and Event Flows — Real Lab System 1.605
+
+132 forms + 66 DataReports. Per-discipline Result*/Report* naming. Core: labmain (71 methods), patientmain (84), addpatient, frm_money, tqrermog, barcode, phone, testmain, testrange, workpaper, tools. Navigation: login → main menu → registration → ordering → result entry → validation → report → notification. Arabic RTL. Help: CHM 17 topics/79 images. Event handlers not decompiled (method names absent). See Screens_Inventory.md, Navigation_Flows.md.

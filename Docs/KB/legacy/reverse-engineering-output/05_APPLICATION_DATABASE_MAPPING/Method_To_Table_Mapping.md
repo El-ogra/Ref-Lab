@@ -1,0 +1,3 @@
+# Method to Table Mapping — Real Lab System 1.605
+
+Inferred from form/module names + SQL table references: labdb/labdb1 → data access (patientinfo, patienttest, profile tables); testmain → testtable; addpatient → patientinfo; moneypaid/frm_money → payment, sharekathesab; testrange → normalrange; barcode → barcodes. Per-discipline Result* forms → matching profile tables. Method bodies not decompiled; mapping is structural.

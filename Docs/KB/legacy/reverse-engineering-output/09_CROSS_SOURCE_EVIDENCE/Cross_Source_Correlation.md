@@ -1,0 +1,3 @@
+# Cross Source Correlation — Real Lab System 1.605
+
+Multiple evidence categories correlated: executable (PE/VB6), database (Access/SQL), previous RE outputs (B01-B11), configuration (INI/UDL), help (CHM), reports (RTF). Key correlations: Result*/Report* forms ↔ profile tables ↔ subgroups; normalrange ↔ validation; constanttable ↔ derivation; grant bits ↔ authorisation; U-001 (admin/admin) ↔ operator table; CON-001 (Jet 4) ↔ db-summary header. See 04_Cross_Evidence_Integration/Cross_Evidence_Integration.md (prior workspace).

@@ -1,0 +1,3 @@
+# Configuration Analysis — Real Lab System 1.605
+
+BASE.ini (Initial Catalog=Patients, DataSource REAL_LAB/DESKELTEL/REALLAB_AIS), data_connection*.udl (SQLOLEDB.1), SETING.ini, IDCARD.INI, NOTE.ini, 146 Data\*.ini (reportdata/setupx/FORM/report: reportmaintitle, subtitles, symbols, fonts, print flags, left/width/top/bottom), default printer HP LaserJet 1100 (MS), testtype (r/pcr/pnt). Report titles: MICROBIOLOGY, MOLECULAR BIOLOGY, HEMATOLOGY, IMMUNOLOGY, ENDOCRINOLOGY, CYTOPATHOLOGY, SEROLOGY, BIOCHEMISTRY. Fonts: Arial (675), Tahoma (597), Times New Roman (328). See Configuration_and_Runtime.md.

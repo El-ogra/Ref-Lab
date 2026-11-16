@@ -1,0 +1,3 @@
+# Final Reverse Engineering Report — Real Lab System 1.605
+
+See 10_UNIFIED_KNOWLEDGE_BASE/MASTER_SYSTEM_KNOWLEDGE.md for the comprehensive reference. Summary: VB6 native 32-bit client (210 objects/8,026 methods), SQL Server primary + Access Jet 4 mirror (133 tables), 609 tests/48 subgroups, 852 reference ranges, 66 DataReports + 228 RTF + 146 INI, 41 security findings (9 High). Knowledge recovery ~80-85% (behavioral ~75-80%, technical ~85-90%, engineering ~80-85%). Remaining gaps: missing binaries, decompiled method bodies, runtime observation, grant bits, IDPassword*, 32-char literals, SELECT-to-backend mapping, 5 unnamed components. See 09_GAPS_AND_CONFLICTS/, Evidence_Coverage_Report.md.

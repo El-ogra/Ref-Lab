@@ -1,0 +1,3 @@
+# Data Flow Reconstruction — Real Lab System 1.605
+
+Operator login → patient registration (patientinfo) → test order (patienttest) → result entry (Result* → profile table) → validation (normalrange) → derivation (constants) → pricing → report print (Report* + RTF/INI + barcode) → notification (SMS/e-mail) → send-out routing → sync (Jet mirror) → backup. Startup runs DDL migration. SQL Server (Patients) ↔ Access mirror. See Data_Flow.md.

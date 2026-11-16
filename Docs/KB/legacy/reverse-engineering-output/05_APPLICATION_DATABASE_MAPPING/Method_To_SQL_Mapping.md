@@ -1,0 +1,3 @@
+# Method to SQL Mapping — Real Lab System 1.605
+
+~1,370 embedded SELECTs not fully mapped to issuing objects (UNR-008). Top tables by statement count: testtable 352, patientinfo 307, patienttest 216, normalrange 52, comments 25, gehats 16, sharekathesab 15, payment 13, history 12, patienttotal 12, patients 12, pricelist 11, phone 11, subgrouptable 10, cbc 10. Method bodies not decompiled; mapping is by table-name frequency in SQL strings. See Data_Access_and_SQL.md.

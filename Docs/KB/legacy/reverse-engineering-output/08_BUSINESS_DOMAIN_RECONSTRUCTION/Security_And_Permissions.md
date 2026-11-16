@@ -1,0 +1,3 @@
+# Security and Permissions — Real Lab System 1.605
+
+Operator table `patients` (misnamed): patientusname, patientword, patientuscap, grant1..grant12, showtip, startwork, endwork, breakyorn, breaktime, khasmlimit. Default admin/admin (U-001). Cleartext passwords (U-003). Per-section numeric IDPassword* print passwords. Coarse, undocumented authorisation (UNR-002/003). 41 consolidated security findings (9 High). No ASLR/DEP; 41/62 unsigned. See Users_And_Permissions.md, Conflicting_Findings.md.

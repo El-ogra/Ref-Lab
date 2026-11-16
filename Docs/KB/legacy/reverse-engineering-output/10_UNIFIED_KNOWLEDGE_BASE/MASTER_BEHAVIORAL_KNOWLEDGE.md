@@ -1,0 +1,3 @@
+# MASTER_BEHAVIORAL_KNOWLEDGE.md — Real Lab System 1.605
+
+End-to-end flow: login → registration → ordering → result entry → validation → derivation → pricing → report → notification → sync → backup. Startup DDL migration. Result states: entered → validated → printed → finished. 12 workflows. Business rules: catalogue/grouping, reference ranges, derived values, pricing, authorisation, multi-branch, microbiology, QC, delete protection. Exception scenarios: bulk-deletion tools, per-workstation layout, Windows-1256 labels, cleartext SMS, default admin/admin. See System_Behavior.md, Workflows.md, State_Transitions.md, Business_Rules.md, Exception_Scenarios.md.

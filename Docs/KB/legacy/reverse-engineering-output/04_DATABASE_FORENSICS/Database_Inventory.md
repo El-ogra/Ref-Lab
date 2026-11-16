@@ -1,0 +1,3 @@
+# Database Inventory — Real Lab System 1.605
+
+4 Access Jet 4 (Access 2000) MDBs: Patients.mdb (93 tables, 1527 cols, 3123 rows), Patients_backup.mdb (90, 1381, 2786), Branch_Data.mdb (49, 969, 0), data.mdb (3, 34, 0). SQL Server primary (catalog Patients; servers REAL_LAB/DESKELTEL/REALLAB_AIS) — not directly accessible in this environment. 133 tables total in cumulative schema. Possible third backend: MySQL (hypothesis).

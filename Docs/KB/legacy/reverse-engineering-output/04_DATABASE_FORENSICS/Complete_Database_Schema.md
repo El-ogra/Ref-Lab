@@ -1,0 +1,3 @@
+# Complete Database Schema — Real Lab System 1.605
+
+See 03_DATABASE_KNOWLEDGE/Database_Architecture.md and Tables_And_Columns.md (prior KB). 133 tables: 96 per-test profile result tables + 33 configuration/master + 1 generic 20-col history + 1 patient master + 1 test-order/result index + 1 work-analysis list. Full DDL in schema-Patients.sql, v2019-Patients.mdb.sql, ddl-all.txt (in Sources.zip). Schema evolution: 103 deltas V1→V2019.

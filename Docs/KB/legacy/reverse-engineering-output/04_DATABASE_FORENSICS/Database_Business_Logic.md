@@ -1,0 +1,3 @@
+# Database Business Logic — Real Lab System 1.605
+
+DB-implemented rules: delete protection (deleteprotect flag), active flag, send-out routing (inotherlab/otherlabprice), pricing (patientprice/labprice/otherlabprice), reference ranges (sex/age stratified), derivation constants (PTCONS/CBCCONS), multi-branch (branch column + Branch_Data template), microbiology (cultures/cultureanti/culturesec). Schema-migration engine runs DDL at startup (U-038). Most business logic is in application code (VB6), not DB. See Business_Rules.md.

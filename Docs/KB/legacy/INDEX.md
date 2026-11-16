@@ -161,3 +161,12 @@ See `MAINTENANCE.md` for update rules, budgets, governance integration, and vali
 ## 9. Evidence Batch 02 (reverse engineering)
 
 Reverse-engineering knowledge base for the reference system (V-ROOT-1.00 + V-CD-2019): `Docs/KB/legacy/evidence-batch-02/D12_Executive_Summary/Executive_Summary.md`.
+
+## 10. Reverse Engineering Output (MASTER DIRECTIVE)
+
+Full-spectrum RE output for RealLab 1.605: `Docs/KB/legacy/reverse-engineering-output/10_UNIFIED_KNOWLEDGE_BASE/MASTER_SYSTEM_KNOWLEDGE.md`.
+
+
+## 11. Reference System Source Corpus (Agent B)
+
+Master engineering reference: `Docs/KB/legacy/reference-system-corpus/master-engineering-reference.md` (36 detailed reports).

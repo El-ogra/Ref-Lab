@@ -110,3 +110,60 @@ Key new artifacts:
 - `D08_Engineering_Knowledge_Base/` — 22-file reconstructed KB.
 - `D10_Unresolved_Issues/Open_Questions_and_Gaps.md` — UNR-002..009 + evidence gaps.
 - `D13_Final_Project_Manifest/` — 62-file manifest.
+
+
+---
+
+## Reverse Engineering Output (MASTER DIRECTIVE, 2026-11-16)
+
+Full-spectrum RE output for RealLab 1.605 is available under
+`Docs/KB/legacy/reverse-engineering-output/`. Entry point:
+`Docs/KB/legacy/reverse-engineering-output/10_UNIFIED_KNOWLEDGE_BASE/MASTER_SYSTEM_KNOWLEDGE.md`.
+
+Key artifacts:
+- `00_EXECUTIVE_REPORT/` — Investigation_Overview, Final_Reverse_Engineering_Report, Evidence_Coverage_Report, Remaining_Knowledge_Gaps.
+- `01_ENVIRONMENT_AND_TOOLS/` — Environment_Verification, Installed_Tools_Inventory, Tool_Capability_Matrix, Tool_Usage_Log.
+- `02_SOURCE_INVENTORY/` — Complete_Artifact_Inventory (2,843 rows), SHA256_Manifest, Archive_Extraction_Report, Unreadable_Artifacts.
+- `03_EXECUTABLE_REVERSE_ENGINEERING/` — Executable_Inventory, Binary_Architecture, Managed_Assembly_Analysis, Native_Code_Analysis, Reconstructed_Code_Structure, Class_And_Method_Catalog, Dependency_Graph, Resources_And_Assets, Executable_Business_Logic.
+- `04_DATABASE_FORENSICS/` — Database_Inventory, Complete_Database_Schema, Tables_And_Columns, Relationships, Constraints_And_Indexes, Stored_Procedures_And_Triggers, Database_Data_Analysis, Database_Business_Logic.
+- `05_APPLICATION_DATABASE_MAPPING/` — Application_Data_Access_Architecture, Method_To_SQL_Mapping, Method_To_Table_Mapping, Database_Transactions, Data_Flow_Reconstruction.
+- `06_CONFIGURATION_AND_DEPENDENCIES/` — Configuration_Analysis, Runtime_Requirements, External_Dependencies, Deployment_Architecture.
+- `07_RUNTIME_AND_BEHAVIORAL_ANALYSIS/` — Startup_And_Initialization, Runtime_Observations, UI_And_Event_Flows, Application_Workflows, State_Transitions, Controlled_Experiments.
+- `08_BUSINESS_DOMAIN_RECONSTRUCTION/` — Patient_Management, Visits_And_Orders, Simple_And_Composite_Tests, Results_Management, Laboratory_Business_Rules, Financial_Management, Printing_And_Reporting, Security_And_Permissions.
+- `09_CROSS_SOURCE_EVIDENCE/` — Evidence_Catalog, Cross_Source_Correlation, Verified_Findings, Conflicting_Findings, Confidence_Assessment.
+- `10_UNIFIED_KNOWLEDGE_BASE/` — MASTER_SYSTEM_KNOWLEDGE, MASTER_SYSTEM_ARCHITECTURE, MASTER_DATABASE_KNOWLEDGE, MASTER_BEHAVIORAL_KNOWLEDGE, MASTER_BUSINESS_LOGIC, MASTER_TECHNICAL_SPECIFICATION, MASTER_REVERSE_ENGINEERING_EVIDENCE.
+- `11_INVESTIGATION_LOGS/` — Investigation_Progress, Tool_Execution_Log, Failed_Analysis_Operations, Knowledge_Gap_Resolution_Log, Resume_Checkpoint.
+
+New REA verification (2026-11-16): open_binary confirmed v1.605 exe (PE x86, sha256 c54ce6c8...). inspect_managed_artifact confirmed NOT managed (no CLI directory). Native providers (rizin/Ghidra/objdump) unavailable for PE. No DB row reading (no mdbtools/olefile/pyodbc). No runtime execution (safety).
+
+
+---
+
+## Reference System Source Corpus (Agent B, 2026-11-16)
+
+A second independent analysis corpus (298 reports) is available under
+`Docs/KB/legacy/reference-system-corpus/`. Entry point:
+`Docs/KB/legacy/reference-system-corpus/master-engineering-reference.md`.
+
+Key files (36 copied):
+- `master-engineering-reference.md` — central engineering reference.
+- `unified-application-architecture.md` — components, relationships, diagrams.
+- `functional-module-catalogue.md` — 212-object register with method counts.
+- `primary-executable-technical-reference.md` — executable in full.
+- `database-engineering-reference.md` — schema, tables, SQL, connections.
+- `installation-and-deployment-reference.md` — installers, manifests, dependencies.
+- `security-and-technical-risk-register.md` — consolidated risk view.
+- `unified-findings-register.md` — every finding with origin and cross-references.
+- `cross-batch-correlation-matrix.md` — batch relationships with SHA-256.
+- `unresolved-questions-and-evidence-gaps.md` — 17 open questions.
+- `verification-and-integrity-report.md` — hashes, archives, validation.
+- `project-evidence-and-source-inventory.md` — every source artefact.
+- `Complete_Reverse_Engineering_Reference_V1.md` / `V2.md` — full reference.
+- `Business_Rules_V1.md` / `V2.md`, `Data_Model_and_Workflow_Entities_V1.md` / `V2.md`.
+- `Functional_Specification_V1.md` / `V2.md`, `Functionality_Requirements_Matrix_V1.md` / `V2.md`.
+- `software-architecture.md`, `data-flow-and-control-flow.md`, `dependency-analysis.md`.
+- `evidence-index.md`, `coverage-and-limitations.md`, `methodology-and-tools.md`.
+- `Version_Identity_and_Scope.md`, `Version-Identification.md`.
+- `Open-Issues-and-Limitations.md`.
+
+Independent verification: Agent B's corpus confirms and expands on Batch-02 findings (native code, Jet 4, 212 objects, 6,522 Ghidra functions, 190 changed files V1->V2019, 41 consolidated findings). Cross-verification pending comparison of per-finding PASS/FAIL.

@@ -1,0 +1,3 @@
+# MASTER_REVERSE_ENGINEERING_EVIDENCE.md — Real Lab System 1.605
+
+Evidence: Sources.zip (2,843 files, 5 nested archives) + RealLab-Reverse-Engineering-Evidence-Batch-02.zip (461 files) + 11 prior batches. EVD-000001..EVD-000461 (Batch-02). Findings: FND-* (B1, 21), FND-F-* (11, final executable), U-* (41 consolidated, 9 High), UNR-* (17, 5 unresolved), CON-* (5). Registries: findings (39), evidence (461), relationships (15), contradictions (5). All significant findings cite EVD-* IDs. Confidence: Class 1 (direct), Class 2 (inference), Class 3 (hypothesis), Class 4 (unresolved). See 08_EVIDENCE_AND_TRACEABILITY/, 09_CROSS_SOURCE_EVIDENCE/.

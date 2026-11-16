@@ -1,0 +1,3 @@
+# External Dependencies — Real Lab System 1.605
+
+External services: SMTP relay, smsmisr.com SMS (cleartext HTTP, creds in URL), serial analysers (MSCOMM32, BF6500 hematology), IE COM automation, possible MySQL (ODBC, hypothesis). Third-party controls: ChamaleonButton, RgheedButtonControlV2, XP_BUTTONS, vkUserControlsXP, Redsoul911XPCOmponents. Vendor DLLs: NOTEX, REPORT, unrar 3.50. Deployment: Bullzip PDF (evaluation, expired cert), Avira AV (orphaned descriptors), unsigned system DLL copies. See Dependency_Graph.md.

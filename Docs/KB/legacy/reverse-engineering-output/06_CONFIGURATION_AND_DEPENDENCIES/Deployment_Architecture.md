@@ -1,0 +1,3 @@
+# Deployment Architecture — Real Lab System 1.605
+
+Setup*.bat scripts (absolute paths, D:\Lab_data attach), VS6 Setup Wizard (RL_SETUP.exe, setup.exe, setupsp6.exe), Bullzip PDF Printer (evaluation mode, expired cert — U-033), Avira AV engine (orphaned — U-015), unrar 3.50 (U-019), unsigned system DLL copies (U-020), RLS ACCESS/SQL DB Tools, RLUTool. Database backup via generated .bat/.sql to configurable server/path (U-002). See Configuration_and_Runtime.md.

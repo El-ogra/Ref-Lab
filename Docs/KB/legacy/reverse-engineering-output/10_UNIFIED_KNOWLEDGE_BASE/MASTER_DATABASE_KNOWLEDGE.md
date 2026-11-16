@@ -1,0 +1,3 @@
+# MASTER_DATABASE_KNOWLEDGE.md — Real Lab System 1.605
+
+SQL Server (system of record, catalog Patients) + Access Jet 4 mirror (Patients.mdb 93t/1527c/3123r, Patients_backup.mdb 90/1381/2786, Branch_Data.mdb 49/969/0, data.mdb 3/34/0). 133 tables: 96 per-test profile + 33 master + extras. Critical naming trap: `patients` = operator accounts, not demographics (patientinfo). Catalogue: 609 tests/48 subgroups, 852 ranges/304 tests, PTCONS/CBCCONS, pricelist. Schema evolution: 103 deltas V1→V2019. Jet 4 (not Jet 3). See Database_Schema.md, Tables_And_Columns.md, Relationships.md.

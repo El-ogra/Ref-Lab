@@ -1,0 +1,3 @@
+# Remaining Knowledge Gaps — Real Lab System 1.605
+
+See 09_GAPS_AND_CONFLICTS/Knowledge_Gaps.md. Summary: UNR-002 (grant bits), UNR-003 (IDPassword*), UNR-004 (32-char literals), UNR-005 (accuntpw hashing), UNR-008 (SELECT-to-backend), UNR-009 (5 unnamed components). Missing binaries: calculator.exe, real lab timer.exe, Image Gallery.exe (binary), vkUserControlsXP.ocx, Avira engine, Attaching.sql, VS6sp6B cabinets, Patients_backup.mdb. Possible MySQL third backend (hypothesis). Method bodies unavailable (VB6 native). Runtime not observed. Grant bits/IDPassword* unverified. See Conflicting_Findings.md, Unverified_Assumptions.md.

@@ -1,0 +1,3 @@
+# Database Data Analysis — Real Lab System 1.605
+
+Patient-bearing samples redacted (<redacted>); reference/config data not redacted. testtable: 609 tests, 48 subgroups, 591 priced, 605 delete-protected, 94 active, 1 send-out. normalrange: 852 rows/304 tests, sex-stratified (M 422/F 421), age units Years 708/Days 70/Mons 65. constanttable: PTCONS, CBCCONS. Row counts describe shipped sample/backup MDBs, not production. Full column lists in type2_tables.csv.

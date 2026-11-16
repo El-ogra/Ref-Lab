@@ -1,0 +1,3 @@
+# Binary Architecture — Real Lab System 1.605
+
+Main executable: PE32, i386 (x86), subsystem WINDOWS_GUI, image base 0x400000, 3 sections (.text 76,119,116 B virtual, .data 304,852 B, .rsrc 161,682 B). Timestamp 1595435962 (2020-07-22). Characteristics 0x010f. DllCharacteristics 0x0000 (no ASLR, no DEP/NX). SEH present, CFG absent. Imports only MSVBVM60.DLL (231 functions). VBHeader: signature VB5!, runtime build 9782, revision 10, LCID 1033, project name Real_lab_system, form_count 198, external_component_count 25. Resources: 10 ICONs (incl. 69,012 B 256x256), 1 GROUP_ICON, 1 VERSION resource. No CLI data directory → not managed. Native code confirmed (F-01, 6 evidence lines). Procedure names never stored (F-07).

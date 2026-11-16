@@ -1,0 +1,3 @@
+# MASTER_SYSTEM_ARCHITECTURE.md — Real Lab System 1.605
+
+Classic two-tier desktop LIS: VB6 Windows client (native code) → SQL Server (system of record) + Access/Jet 4 mirror (offline/branch). No service layer; client embeds ADO data access, SHAPE queries, runtime DDL migration engine. Layers: Presentation (132 forms + 66 DataReports) → Business logic (VB6 modules, 8,026 methods) → Data access (ADO) → Reporting (DataReports + 228 RTF + 146 INI) → Configuration (INI/UDL) → Deployment (Setup scripts, VS6 installer). No ASLR/DEP; 41/62 unsigned; default admin/admin; cleartext passwords. See System_Architecture.md, Binary_Architecture.md.

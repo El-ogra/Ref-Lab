@@ -1,0 +1,3 @@
+# MASTER_TECHNICAL_SPECIFICATION.md — Real Lab System 1.605
+
+Technology: VB6 native code (runtime build 9782/SP6), PE32 x86, subsystem GUI, image base 0x400000, 3 sections, imports only MSVBVM60.DLL (231). ADO 2.7/SQLOLEDB.1 (SQL Server), Jet 4 (Access). UI: 132 forms + 66 DataReports, Microsoft OCX set + 5 third-party + vendor DLLs. Reporting: MSDBRPT DataReports, 228 RTF templates, 146 INI configs, barcode + Arabic fonts. .NET 4.0 e-mail component. Config: BASE.ini, UDL, SETING.ini, IDCARD.INI, NOTE.ini, Data\*.ini. Deployment: VS6 installer, Setup*.bat, Bullzip PDF, Avira, unrar 3.50. No ASLR/DEP; 41/62 unsigned. See Technology_Stack.md, Binary_Architecture.md, Configuration_Analysis.md.

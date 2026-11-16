@@ -1,0 +1,3 @@
+# Verified Findings — Real Lab System 1.605
+
+VERIFIED (directly confirmed): product identity (ais group, ©2010), VB6 native code (F-01, 6 lines), two builds (V1.00 2013 vs v1.605 2020), dual-DB architecture, schema shape (133 tables), catalogue (609 tests/48 subgroups), ranges (852/304 tests), Jet 4 (CON-001), native code (CON-004), 41 consolidated security findings (U-001..U-041), version matrix (190 changed/168 identical). See 08_EVIDENCE_AND_TRACEABILITY/.

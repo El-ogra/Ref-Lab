@@ -1,0 +1,3 @@
+# Investigation Overview — Real Lab System 1.605
+
+Full-spectrum reverse engineering of RealLab 1.605 using Sources.zip (2,843 files) + Batch-02 (461 files) + 11 prior batches + actual artifacts (D:\real lab system). Static analysis only; no binary executed; no DB rows read (no mdbtools). Tools: Python, REA (open_binary, managed inspection), PowerShell, Git, kb_build/kb_check. Output: REAL_LAB_1605_REVERSE_ENGINEERING_OUTPUT/ (this folder). Entry point: 10_UNIFIED_KNOWLEDGE_BASE/MASTER_SYSTEM_KNOWLEDGE.md.
