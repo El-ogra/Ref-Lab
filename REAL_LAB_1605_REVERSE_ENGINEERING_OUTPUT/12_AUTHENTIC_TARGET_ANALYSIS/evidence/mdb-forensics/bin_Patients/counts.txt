@@ -1,0 +1,72 @@
+### SELECT REFRANGE, COUNT(*) AS n FROM normalrange GROUP BY REFRANGE
+REFRANGE | n
+ | 797
+0 | 345
+1 | 10
+
+### SELECT sex, COUNT(*) AS n FROM normalrange GROUP BY sex
+sex | n
+ | 4
+All | 10
+Female | 568
+Male | 570
+
+### SELECT COUNT(DISTINCT testcode) AS distinct_tests FROM normalrange
+ERROR: Exception calling "ExecuteReader" with "0" argument(s): "Syntax error (missing operator) in query expression 'COUNT(DISTINCT testcode)'."
+
+### SELECT COUNT(*) AS nr_cols FROM (SELECT TOP 1 * FROM normalrange)
+nr_cols
+1
+
+### SELECT COUNT(*) AS patients_rows FROM patients
+patients_rows
+2
+
+### SELECT COUNT(*) AS pt_rows FROM patientinfo
+pt_rows
+0
+
+### SELECT COUNT(*) AS ptest_rows FROM patienttest
+ptest_rows
+0
+
+### SELECT COUNT(*) AS payment_rows FROM payment
+payment_rows
+0
+
+### SELECT COUNT(*) AS ptot_rows FROM patienttotal
+ptot_rows
+0
+
+### SELECT COUNT(*) AS pricelist_rows FROM pricelist
+pricelist_rows
+6
+
+### SELECT COUNT(*) AS testtable_rows FROM testtable
+testtable_rows
+609
+
+### SELECT COUNT(*) AS subgrouptable_rows FROM subgrouptable
+subgrouptable_rows
+48
+
+### SELECT COUNT(*) AS constanttable_rows FROM constanttable
+constanttable_rows
+2
+
+### SELECT COUNT(*) AS instrument_rows FROM instrument
+instrument_rows
+0
+
+### SELECT COUNT(*) AS loggroup_rows FROM loggroup
+loggroup_rows
+8
+
+### SELECT COUNT(*) AS patienttestgroup_rows FROM patienttestgroup
+patienttestgroup_rows
+0
+
+### SELECT COUNT(*) AS noteic_rows FROM noteic
+noteic_rows
+0
+

@@ -1,0 +1,517 @@
+[
+  {
+    "name": "abbreviations",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "ABO",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Abuse",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "antibio",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "antibiotic",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "anyreport",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "barcodes",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "BILH",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "BloodGases",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "BONEMAR",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "cardiac",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "cbc",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "CoagFactors",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "comments",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "constanttable",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "converts",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "crossmat",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "CRP",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "CSFT",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "cultureanti",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "cultures",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "culturesec",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "customgrouptable",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "customtesttable",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "daytip",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Drugs",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Electrolytes",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "ESR",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Fertlity",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Gehats",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "GLUCOSETOLERANCE",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "hba1c",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Helicobacter",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "hepatitis",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Hgbectrophoresis",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "history",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "hormones",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Immunoglobulin",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "IMMUNOLOGY",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "instrument",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "insulin",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "iron",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "kidney",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Labbranch",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Lipids",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "liver",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "loggroup",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "MyLabSetting",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "normalrange",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "noteic",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Pancreas",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Paste Errors",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "patientinfo",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "patients",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "patienttest",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "patienttestgroup",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "patienttotal",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "payment",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "phone",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "pictures",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "postcoitalt",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "pregnancy",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "pricelist",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "pricemenu",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Proelectrophoresis",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "prostaticx",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "pt",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "PTC",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "ratios",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "renalfailure",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "reportview",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "sarfeda3",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "seana",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "semen",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "sharekat",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "sharekathesab",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "shopping",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "smsgroups",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "smslist",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "SMSSender",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "SMStemplate",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "stone",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "stool",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "subgrouptable",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "sugar",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Suprarenal",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "tasgel",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "testlearn",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "testname",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "testtable",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "testtemp",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "testunits",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "titless",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "TORCH",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "trace",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "TUBERCULINT",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Tumors",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "urine",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "Vitamins",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "wasl",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "widal",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "widal2",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "ZN",
+    "type": "TABLE",
+    "remarks": ""
+  }
+]

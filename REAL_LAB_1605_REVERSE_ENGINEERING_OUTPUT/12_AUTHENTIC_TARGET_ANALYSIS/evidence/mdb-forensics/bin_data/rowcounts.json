@@ -1,0 +1,17 @@
+[
+  {
+    "table": "history",
+    "rows": 0,
+    "error": null
+  },
+  {
+    "table": "patientinfo",
+    "rows": 0,
+    "error": null
+  },
+  {
+    "table": "wasl",
+    "rows": 0,
+    "error": null
+  }
+]

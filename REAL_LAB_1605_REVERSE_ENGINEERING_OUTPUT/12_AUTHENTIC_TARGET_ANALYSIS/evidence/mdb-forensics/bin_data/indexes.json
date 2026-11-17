@@ -1,0 +1,50 @@
+[
+  {
+    "table": "history",
+    "name": "id",
+    "column": "selector",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  },
+  {
+    "table": "history",
+    "name": "labid",
+    "column": "labid",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  },
+  {
+    "table": "patientinfo",
+    "name": "patientid",
+    "column": "patientid",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  },
+  {
+    "table": "wasl",
+    "name": "subgroupcode",
+    "column": "subgroupcode",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  }
+]

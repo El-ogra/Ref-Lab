@@ -1,0 +1,432 @@
+[
+ {
+  "claim": "net = gross - discount, ROUND(...,2)",
+  "prior_va": "69EA76",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [
+   "0x696aa8",
+   "0x69b2c4",
+   "0x69eab8",
+   "0x69eeb4",
+   "0x6a03d8",
+   "0x6a0a4c",
+   "0x6a1a7c"
+  ],
+  "count_real_vas": 7,
+  "delta_first": "-0x7fce"
+ },
+ {
+  "claim": "referrer commission omola * amount / 100",
+  "prior_va": "694C92",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [
+   "0x694cd4",
+   "0x694e4c",
+   "0x694ec8",
+   "0x69502c",
+   "0x69b7ac",
+   "0x69b818",
+   "0x69b854",
+   "0x69c728"
+  ],
+  "count_real_vas": 18,
+  "delta_first": "0x42"
+ },
+ {
+  "claim": "company farq = wareed - saader",
+  "prior_va": "722674",
+  "prior_va_resolves_to": "SELECT * FROM sharekat where sherkaid= ",
+  "real_vas_for_claim": [
+   "0x7220c8",
+   "0x722470",
+   "0x7226b8",
+   "0x722854",
+   "0x722bfc",
+   "0x722cb4",
+   "0x722de8",
+   "0x722fd0"
+  ],
+  "count_real_vas": 13,
+  "delta_first": "-0x5ac"
+ },
+ {
+  "claim": "unpaid predicate totalpricedisc/elmadfoo3/elbakyma3mal",
+  "prior_va": "6CEA20",
+  "prior_va_resolves_to": "SELECT patientinfo.patientid, patientinfo.labid, patientinfo.patientsefa, patientinfo.patientnamear, patientinfo.patientsex, patientinfo.patientage, patientinfo.patientageunit, patientinfo.requestdate",
+  "real_vas_for_claim": [
+   "0x684ecc",
+   "0x6913f8",
+   "0x69160c",
+   "0x6917f8",
+   "0x691a0c",
+   "0x691bfc",
+   "0x691cc8",
+   "0x691fc8"
+  ],
+  "count_real_vas": 100,
+  "delta_first": "-0x49b54"
+ },
+ {
+  "claim": "branch code SUBSTRING(patientid,2,1)+SUBSTRING(patientid,9,1) AS bran",
+  "prior_va": "72714C",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [],
+  "count_real_vas": 0,
+  "delta_first": null
+ },
+ {
+  "claim": "resultfinsh + edituser/editdate",
+  "prior_va": "6860BE",
+  "prior_va_resolves_to": "See Report",
+  "real_vas_for_claim": [
+   "0x6745a0",
+   "0x681f14",
+   "0x682070",
+   "0x684434",
+   "0x68467c",
+   "0x686100",
+   "0x686214",
+   "0x686f04"
+  ],
+  "count_real_vas": 92,
+  "delta_first": "-0x11b1e"
+ },
+ {
+  "claim": "resultreview + prevuser/prevdate",
+  "prior_va": "686312",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [
+   "0x6745a0",
+   "0x681f14",
+   "0x681fe0",
+   "0x68201c",
+   "0x68208c",
+   "0x686354",
+   "0x6864c0",
+   "0x686f04"
+  ],
+  "count_real_vas": 68,
+  "delta_first": "-0x11d72"
+ },
+ {
+  "claim": "resultprint + printuser/printdate",
+  "prior_va": "6865A6",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [
+   "0x6745a0",
+   "0x681f14",
+   "0x6820ac",
+   "0x6865e8",
+   "0x6866b0",
+   "0x686f04",
+   "0x688298",
+   "0x688578"
+  ],
+  "count_real_vas": 90,
+  "delta_first": "-0x12006"
+ },
+ {
+  "claim": "give + taslimuser/taslimdate",
+  "prior_va": "6867AA",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [
+   "0x686454",
+   "0x6867ec",
+   "0x6868a4",
+   "0x6d42d4",
+   "0x6d6584",
+   "0x6d6678"
+  ],
+  "count_real_vas": 6,
+  "delta_first": "-0x356"
+ },
+ {
+  "claim": "queue predicate with NatighU",
+  "prior_va": "681ED2",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [
+   "0x677690",
+   "0x67d938",
+   "0x6869e4",
+   "0x686a74",
+   "0x686a90",
+   "0x686f04",
+   "0x6b3c44",
+   "0x6b3fec"
+  ],
+  "count_real_vas": 8,
+  "delta_first": "-0xa842"
+ },
+ {
+  "claim": "queue predicate 2",
+  "prior_va": "686EC2",
+  "prior_va_resolves_to": "SELECT * FROM constanttable where constantdiscrp='PTCONS' ",
+  "real_vas_for_claim": [
+   "0x677690",
+   "0x67d938",
+   "0x6869e4",
+   "0x686a74",
+   "0x686a90",
+   "0x686f04",
+   "0x6b3c44",
+   "0x6b3fec"
+  ],
+  "count_real_vas": 8,
+  "delta_first": "-0xf832"
+ },
+ {
+  "claim": "queue predicate 3",
+  "prior_va": "6B3C00",
+  "prior_va_resolves_to": "SELECT Top 5 sugar.requestdate, sugar.FBG, sugar.PBG, sugar.RBG, patientinfo.patientnamear FROM patientinfo INNER JOIN sugar ON patientinfo.patientid = sugar.patientid WHERE (patientinfo.patientnamear",
+  "real_vas_for_claim": [
+   "0x677690",
+   "0x67d938",
+   "0x6869e4",
+   "0x686a74",
+   "0x686a90",
+   "0x686f04",
+   "0x6b3c44",
+   "0x6b3fec"
+  ],
+  "count_real_vas": 8,
+  "delta_first": "-0x3c570"
+ },
+ {
+  "claim": "queue predicate 4",
+  "prior_va": "6B3FA8",
+  "prior_va_resolves_to": "Select  patientid, completes, totalpricedisc, elmadfoo3, elbakyma3mal from patientinfo where patientid= '",
+  "real_vas_for_claim": [
+   "0x677690",
+   "0x67d938",
+   "0x6869e4",
+   "0x686a74",
+   "0x686a90",
+   "0x686f04",
+   "0x6b3c44",
+   "0x6b3fec"
+  ],
+  "count_real_vas": 8,
+  "delta_first": "-0x3c918"
+ },
+ {
+  "claim": "financial GROUP BY pricemethod 1",
+  "prior_va": "6977A6",
+  "prior_va_resolves_to": "SHAPE {SELECT patientinfo.patientid,patientinfo.requestdate,patientinfo.patientnamear,Round(sum(patientinfo.totalprice),2) as tot1 ,Round(sum(patientinfo.totalpricedisc),2) as tot2 ,Round((sum(patient",
+  "real_vas_for_claim": [
+   "0x66e940",
+   "0x6830b8",
+   "0x683130",
+   "0x683450",
+   "0x6834c8",
+   "0x68362c",
+   "0x6836a0",
+   "0x6836e0"
+  ],
+  "count_real_vas": 48,
+  "delta_first": "-0x28e66"
+ },
+ {
+  "claim": "financial GROUP BY 2",
+  "prior_va": "69DE12",
+  "prior_va_resolves_to": "SHAPE {SELECT patientinfo.patientid,patientinfo.requestdate,patientinfo.patientnamear,Round(sum(patientinfo.totalprice),2) as tot1 ,Round(sum(patientinfo.totalpricedisc),2) as tot2 ,Round((sum(patient",
+  "real_vas_for_claim": [
+   "0x66e940",
+   "0x6830b8",
+   "0x683130",
+   "0x683450",
+   "0x6834c8",
+   "0x68362c",
+   "0x6836a0",
+   "0x6836e0"
+  ],
+  "count_real_vas": 48,
+  "delta_first": "-0x2f4d2"
+ },
+ {
+  "claim": "financial GROUP BY 3",
+  "prior_va": "69E4E6",
+  "prior_va_resolves_to": "SHAPE {SELECT patientinfo.patientid,patientinfo.requestdate,patientinfo.patientnamear,sum(patientinfo.totalprice) as tot1 ,sum(patientinfo.totalpricedisc) as tot2 ,(sum(patientinfo.totalprice)- sum(pa",
+  "real_vas_for_claim": [
+   "0x66e940",
+   "0x6830b8",
+   "0x683130",
+   "0x683450",
+   "0x6834c8",
+   "0x68362c",
+   "0x6836a0",
+   "0x6836e0"
+  ],
+  "count_real_vas": 48,
+  "delta_first": "-0x2fba6"
+ },
+ {
+  "claim": "financial GROUP BY 4",
+  "prior_va": "69F48A",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [
+   "0x66e940",
+   "0x6830b8",
+   "0x683130",
+   "0x683450",
+   "0x6834c8",
+   "0x68362c",
+   "0x6836a0",
+   "0x6836e0"
+  ],
+  "count_real_vas": 48,
+  "delta_first": "-0x30b4a"
+ },
+ {
+  "claim": "financial GROUP BY 5",
+  "prior_va": "69FB46",
+  "prior_va_resolves_to": "SHAPE {SELECT patientinfo.patientid,patientinfo.requestdate,patientinfo.patientnamear,Round(sum(patientinfo.totalprice),2) as tot1 ,Round(sum(patientinfo.totalpricedisc),2) as tot2 ,Round((sum(patient",
+  "real_vas_for_claim": [
+   "0x66e940",
+   "0x6830b8",
+   "0x683130",
+   "0x683450",
+   "0x6834c8",
+   "0x68362c",
+   "0x6836a0",
+   "0x6836e0"
+  ],
+  "count_real_vas": 48,
+  "delta_first": "-0x31206"
+ },
+ {
+  "claim": "financial GROUP BY 6",
+  "prior_va": "6A16A2",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [
+   "0x66e940",
+   "0x6830b8",
+   "0x683130",
+   "0x683450",
+   "0x6834c8",
+   "0x68362c",
+   "0x6836a0",
+   "0x6836e0"
+  ],
+  "count_real_vas": 48,
+  "delta_first": "-0x32d62"
+ },
+ {
+  "claim": "pricelist patient/lab/otherlab prices",
+  "prior_va": "6A9632",
+  "prior_va_resolves_to": "SELECT * FROM testtable where subgroupcode=",
+  "real_vas_for_claim": [
+   "0x6a9674",
+   "0x6a9808",
+   "0x6a9c04",
+   "0x6aa2b4",
+   "0x6aa4a8",
+   "0x6f45f0",
+   "0x98f508",
+   "0x14594a4"
+  ],
+  "count_real_vas": 9,
+  "delta_first": "0x42"
+ },
+ {
+  "claim": "invoice discount / discount100",
+  "prior_va": "6A5796",
+  "prior_va_resolves_to": "SELECT * FROM payment where type=100",
+  "real_vas_for_claim": [
+   "0x684eb0",
+   "0x6a57d8",
+   "0x6a59c0",
+   "0x6ab1c4",
+   "0x732098",
+   "0x73227c"
+  ],
+  "count_real_vas": 6,
+  "delta_first": "-0x208e6"
+ },
+ {
+  "claim": "worklist join patienttest",
+  "prior_va": "6843F2",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [
+   "0x677690",
+   "0x67d938",
+   "0x681f14",
+   "0x684080",
+   "0x684434",
+   "0x68467c",
+   "0x686100",
+   "0x686214"
+  ],
+  "count_real_vas": 497,
+  "delta_first": "-0xcd62"
+ },
+ {
+  "claim": "SHAPE testtable subgroup",
+  "prior_va": "672722",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [
+   "0x672764",
+   "0x672a18",
+   "0x6f2588",
+   "0x709bc8"
+  ],
+  "count_real_vas": 4,
+  "delta_first": "0x42"
+ },
+ {
+  "claim": "RESULTT1..T4 for testcode=42",
+  "prior_va": "6C3AFC",
+  "prior_va_resolves_to": "D:\\real lab system\\Data\\ESR_S.ini",
+  "real_vas_for_claim": [
+   "0x6895f8",
+   "0x689a08",
+   "0x689dd8",
+   "0x68a1e8",
+   "0x68aa0c",
+   "0x6b0748",
+   "0x6b0ccc",
+   "0x6c3b40"
+  ],
+  "count_real_vas": 13,
+  "delta_first": "-0x3a504"
+ },
+ {
+  "claim": "loger table",
+  "prior_va": "66F746",
+  "prior_va_resolves_to": null,
+  "real_vas_for_claim": [
+   "0x66f788"
+  ],
+  "count_real_vas": 1,
+  "delta_first": "0x42"
+ },
+ {
+  "claim": "error string",
+  "prior_va": "6717E2",
+  "prior_va_resolves_to": "https://www.facebook.com/RealLab.Systems",
+  "real_vas_for_claim": [
+   "0x671824"
+  ],
+  "count_real_vas": 1,
+  "delta_first": "0x42"
+ },
+ {
+  "claim": "sp_addumpdevice",
+  "prior_va": "66FCB2",
+  "prior_va_resolves_to": "D:\\Lab_data\\RealLab_Backup\\backup.bat",
+  "real_vas_for_claim": [
+   "0x66fcf4"
+  ],
+  "count_real_vas": 1,
+  "delta_first": "0x42"
+ },
+ {
+  "claim": "sp_dropdevice",
+  "prior_va": "66FD56",
+  "prior_va_resolves_to": "BACKUP database Patients TO ",
+  "real_vas_for_claim": [
+   "0x66fd98"
+  ],
+  "count_real_vas": 1,
+  "delta_first": "0x42"
+ }
+]

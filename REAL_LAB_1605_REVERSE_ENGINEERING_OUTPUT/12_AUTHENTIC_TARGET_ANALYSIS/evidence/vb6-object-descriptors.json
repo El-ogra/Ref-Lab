@@ -1,0 +1,4250 @@
+[
+ {
+  "i": 0,
+  "name": "labmain",
+  "method_count": 71,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6342088,
+   "0x08": 6735392,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729420,
+   "0x20": 6697804,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 1,
+  "name": "labxxyyzz",
+  "method_count": 3,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4971356,
+   "0x08": 6745472,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729428,
+   "0x20": 6698088,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 2,
+  "name": "patientmain",
+  "method_count": 84,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6268528,
+   "0x08": 6744096,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729440,
+   "0x20": 6698100,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 3,
+  "name": "labdb",
+  "method_count": 24,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4951324,
+   "0x08": 6736344,
+   "0x10": 80318708,
+   "0x14": 0,
+   "0x18": 6729452,
+   "0x20": 0,
+   "0x24": 65535,
+   "0x28": 98305,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 4,
+  "name": "frm_money",
+  "method_count": 38,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5477812,
+   "0x08": 6741992,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729460,
+   "0x20": 6698436,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 5,
+  "name": "tools",
+  "method_count": 1,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4973516,
+   "0x08": 6952632,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729472,
+   "0x20": 6698588,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 6,
+  "name": "Resultliver",
+  "method_count": 101,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5999848,
+   "0x08": 6871248,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729480,
+   "0x20": 6698592,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 7,
+  "name": "moneypaid",
+  "method_count": 18,
+  "addr_label": "desc+0x00->+0x54",
+  "addr_array_va": 5015900,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5015776,
+   "0x08": 6968504,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729492,
+   "0x20": 6698996,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 8,
+  "name": "addpatient",
+  "method_count": 192,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6578828,
+   "0x08": 6739584,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729504,
+   "0x20": 6699068,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 9,
+  "name": "Resulturine",
+  "method_count": 167,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6245088,
+   "0x08": 6869360,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729516,
+   "0x20": 6699836,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 10,
+  "name": "Reporturine",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4956316,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729528,
+   "0x20": 63524768,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 11,
+  "name": "Reportliver",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4959044,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729540,
+   "0x20": 80818176,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 12,
+  "name": "tqrermog",
+  "method_count": 41,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5193704,
+   "0x08": 6787796,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729552,
+   "0x20": 6700504,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 13,
+  "name": "ReportFatora",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4962020,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729564,
+   "0x20": 79364096,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 14,
+  "name": "Reporttotal",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4964252,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729580,
+   "0x20": 108221024,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 15,
+  "name": "Reporthistory",
+  "method_count": 1,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4967780,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729592,
+   "0x20": 6700668,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 16,
+  "name": "barcode",
+  "method_count": 76,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5237160,
+   "0x08": 6999652,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729608,
+   "0x20": 6700672,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 17,
+  "name": "phone",
+  "method_count": 33,
+  "addr_label": "desc+0x08->+0x6c",
+  "addr_array_va": 6581871,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5246500,
+   "0x08": 6758584,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729616,
+   "0x20": 6700976,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 18,
+  "name": "testmain",
+  "method_count": 30,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5391344,
+   "0x08": 6754076,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729624,
+   "0x20": 6701108,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 19,
+  "name": "Resultsugar",
+  "method_count": 61,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5532076,
+   "0x08": 6868656,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729636,
+   "0x20": 6701228,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 20,
+  "name": "labdb1",
+  "method_count": 20,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4951492,
+   "0x08": 6745292,
+   "0x10": 80319912,
+   "0x14": 0,
+   "0x18": 6729648,
+   "0x20": 0,
+   "0x24": 65535,
+   "0x28": 98305,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 21,
+  "name": "Reportworkp",
+  "method_count": 0,
+  "addr_label": "desc+0x00->+0x3c",
+  "addr_array_va": 6971828,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 4953092,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729656,
+   "0x20": 80427152,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 22,
+  "name": "workpaper",
+  "method_count": 17,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5068024,
+   "0x08": 6754540,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729668,
+   "0x20": 6701472,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 23,
+  "name": "Reportwp",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4962516,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729680,
+   "0x20": 111055768,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 24,
+  "name": "Resultstool",
+  "method_count": 139,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6042328,
+   "0x08": 6870376,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729692,
+   "0x20": 6701540,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 25,
+  "name": "testrange",
+  "method_count": 17,
+  "addr_label": "desc+0x00->+0x34",
+  "addr_array_va": 5154168,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5154048,
+   "0x08": 6757804,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729712,
+   "0x20": 6702096,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 26,
+  "name": "ReportSugar",
+  "method_count": 0,
+  "addr_label": "desc+0x00->+0x1c",
+  "addr_array_va": 80322656,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 4955324,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729724,
+   "0x20": 112135792,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 27,
+  "name": "Resultkidney",
+  "method_count": 117,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6221704,
+   "0x08": 6871444,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729736,
+   "0x20": 6702164,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 28,
+  "name": "resultculutre",
+  "method_count": 115,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6064076,
+   "0x08": 6876560,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729752,
+   "0x20": 6702632,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 29,
+  "name": "Resultlipids",
+  "method_count": 81,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5792892,
+   "0x08": 6871560,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729768,
+   "0x20": 6703092,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 30,
+  "name": "ais",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4984336,
+   "0x08": 7077844,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729784,
+   "0x20": 112881664,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 31,
+  "name": "reportculutre",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4965244,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729788,
+   "0x20": 109590456,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 32,
+  "name": "Resultsemen",
+  "method_count": 222,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6649452,
+   "0x08": 6881152,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729804,
+   "0x20": 6703416,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 33,
+  "name": "resultABO",
+  "method_count": 47,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5357336,
+   "0x08": 6871712,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729816,
+   "0x20": 6704304,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 34,
+  "name": "resultwidal",
+  "method_count": 41,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5427052,
+   "0x08": 6875280,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729828,
+   "0x20": 6704492,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 35,
+  "name": "resulthepatitis",
+  "method_count": 187,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6482604,
+   "0x08": 6879644,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729840,
+   "0x20": 6704656,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 36,
+  "name": "ReportFatoraS",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4957060,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729856,
+   "0x20": 106824232,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 37,
+  "name": "ResultESR",
+  "method_count": 32,
+  "addr_label": "desc+0x08",
+  "addr_array_va": 6871828,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5255908,
+   "0x08": 6871828,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729872,
+   "0x20": 6705404,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 38,
+  "name": "resultcbc",
+  "method_count": 172,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6612632,
+   "0x08": 6874020,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729884,
+   "0x20": 6705532,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 39,
+  "name": "repotrwidal",
+  "method_count": 0,
+  "addr_label": "desc+0x00->+0x1c",
+  "addr_array_va": 80322896,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 4957308,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729896,
+   "0x20": 63404368,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 40,
+  "name": "Reporthistory2",
+  "method_count": 1,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4967228,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729908,
+   "0x20": 6706220,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 41,
+  "name": "ResultTORCH",
+  "method_count": 123,
+  "addr_label": "desc+0x08",
+  "addr_array_va": 6876912,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5882012,
+   "0x08": 6876912,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729924,
+   "0x20": 6706224,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 42,
+  "name": "resultcrp",
+  "method_count": 97,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5827448,
+   "0x08": 6875444,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729936,
+   "0x20": 6706716,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 43,
+  "name": "resultpt",
+  "method_count": 110,
+  "addr_label": "desc+0x00->+0x54",
+  "addr_array_va": 6198572,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 6198448,
+   "0x08": 6872312,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729948,
+   "0x20": 6707104,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 44,
+  "name": "resulthormon",
+  "method_count": 116,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6175524,
+   "0x08": 6880024,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729960,
+   "0x20": 6707544,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 45,
+  "name": "Reportinstrument",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4964500,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729976,
+   "0x20": 112628728,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 46,
+  "name": "patient",
+  "method_count": 58,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5368620,
+   "0x08": 6747300,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729996,
+   "0x20": 6708008,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 47,
+  "name": "Reportshareka",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4961276,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730004,
+   "0x20": 107523976,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 48,
+  "name": "patientview",
+  "method_count": 33,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5265424,
+   "0x08": 6753808,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730020,
+   "0x20": 6708240,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 49,
+  "name": "outtest",
+  "method_count": 11,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5091816,
+   "0x08": 6759116,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730032,
+   "0x20": 6708372,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 50,
+  "name": "setup",
+  "method_count": 16,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5131620,
+   "0x08": 6752488,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730040,
+   "0x20": 6708416,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 51,
+  "name": "anyreport",
+  "method_count": 16,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5402832,
+   "0x08": 6850760,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730048,
+   "0x20": 6708480,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 52,
+  "name": "calctest",
+  "method_count": 2,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4972348,
+   "0x08": 6745472,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730060,
+   "0x20": 6708544,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 53,
+  "name": "statisReport",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4963012,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730072,
+   "0x20": 63213024,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 54,
+  "name": "Reportwpm",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4964004,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730088,
+   "0x20": 80343344,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 55,
+  "name": "Reportwpt",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4964748,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730104,
+   "0x20": 63177224,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 56,
+  "name": "Reportwpot",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4960036,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730116,
+   "0x20": 63180744,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 57,
+  "name": "barcodeform",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4974804,
+   "0x08": 7017764,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730128,
+   "0x20": 110001456,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 58,
+  "name": "ResultInsulin",
+  "method_count": 92,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5863236,
+   "0x08": 6879908,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730140,
+   "0x20": 6708552,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 59,
+  "name": "start",
+  "method_count": 10,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4989240,
+   "0x08": 6885528,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730156,
+   "0x20": 6708920,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 60,
+  "name": "Resultbilharzias",
+  "method_count": 64,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5504340,
+   "0x08": 6875560,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730164,
+   "0x20": 6708960,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 61,
+  "name": "Reportcross",
+  "method_count": 0,
+  "addr_label": "desc+0x00->+0x6c",
+  "addr_array_va": 80351684,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 4963260,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730184,
+   "0x20": 114605016,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 62,
+  "name": "Reportmony1",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4952348,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730196,
+   "0x20": 62829912,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 63,
+  "name": "Reportsemen",
+  "method_count": 0,
+  "addr_label": "desc+0x00->+0x1c",
+  "addr_array_va": 80322776,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 4965492,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730208,
+   "0x20": 109795144,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 64,
+  "name": "Reportanyreport",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4962764,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730220,
+   "0x20": 113667248,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 65,
+  "name": "BCWFonts",
+  "method_count": 7,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4951000,
+   "0x08": 6745292,
+   "0x10": 80322268,
+   "0x14": 0,
+   "0x18": 6730236,
+   "0x20": 0,
+   "0x24": 65535,
+   "0x28": 98305,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 66,
+  "name": "reportsetup",
+  "method_count": 113,
+  "addr_label": "desc+0x08->+0x28",
+  "addr_array_va": 6488174,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 6129964,
+   "0x08": 6959792,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730248,
+   "0x20": 6709216,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 67,
+  "name": "patienthistory",
+  "method_count": 22,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5146548,
+   "0x08": 6830808,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730260,
+   "0x20": 6709668,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 68,
+  "name": "resultselectro",
+  "method_count": 144,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6368812,
+   "0x08": 6879260,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730276,
+   "0x20": 6709756,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 69,
+  "name": "resultcardiac",
+  "method_count": 66,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5560400,
+   "0x08": 6875676,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730292,
+   "0x20": 6710332,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 70,
+  "name": "resultTumors",
+  "method_count": 100,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5919876,
+   "0x08": 6881376,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730308,
+   "0x20": 6710596,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 71,
+  "name": "resultVitamins",
+  "method_count": 110,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6020632,
+   "0x08": 6881504,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730324,
+   "0x20": 6710996,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 72,
+  "name": "resultTrace",
+  "method_count": 183,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6512940,
+   "0x08": 6881752,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730340,
+   "0x20": 6711436,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 73,
+  "name": "resultanytest",
+  "method_count": 33,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5325324,
+   "0x08": 6883524,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730352,
+   "0x20": 6712168,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 74,
+  "name": "Resultpregnancy",
+  "method_count": 44,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5304712,
+   "0x08": 6880256,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730368,
+   "0x20": 6712300,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 75,
+  "name": "pricelists",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4958796,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730384,
+   "0x20": 63178144,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 76,
+  "name": "resultiron",
+  "method_count": 62,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5518040,
+   "0x08": 6876796,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730396,
+   "0x20": 6712476,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 77,
+  "name": "reportsetup2",
+  "method_count": 69,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5633524,
+   "0x08": 7200388,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730408,
+   "0x20": 6712724,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 78,
+  "name": "labfunction",
+  "method_count": 25,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4951056,
+   "0x08": 6740880,
+   "0x10": 80319148,
+   "0x14": 0,
+   "0x18": 6730424,
+   "0x20": 0,
+   "0x24": 65535,
+   "0x28": 98305,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 79,
+  "name": "ResultFertlity",
+  "method_count": 125,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6292012,
+   "0x08": 6880140,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730436,
+   "0x20": 6713000,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 80,
+  "name": "ResultSuprarenal",
+  "method_count": 117,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6152716,
+   "0x08": 6880340,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730452,
+   "0x20": 6713500,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 81,
+  "name": "server",
+  "method_count": 17,
+  "addr_label": "desc+0x00->+0x54",
+  "addr_array_va": 5035520,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5035396,
+   "0x08": 6885688,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730472,
+   "0x20": 6713968,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 82,
+  "name": "users",
+  "method_count": 57,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5414840,
+   "0x08": 6741324,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730480,
+   "0x20": 6714036,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 83,
+  "name": "login",
+  "method_count": 13,
+  "addr_label": "desc+0x00->+0x54",
+  "addr_array_va": 4978164,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 4978040,
+   "0x08": 6752660,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730488,
+   "0x20": 6714264,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 84,
+  "name": "userspw",
+  "method_count": 12,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4986596,
+   "0x08": 6742372,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6729704,
+   "0x20": 6714316,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 85,
+  "name": "Reportlog",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4962268,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730500,
+   "0x20": 111809448,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 86,
+  "name": "z_units",
+  "method_count": 14,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5001852,
+   "0x08": 6756892,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730512,
+   "0x20": 6714364,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 87,
+  "name": "z_barcodes",
+  "method_count": 14,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5012228,
+   "0x08": 6757160,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730520,
+   "0x20": 6714420,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 88,
+  "name": "z_branchs",
+  "method_count": 14,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5005284,
+   "0x08": 6756892,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730532,
+   "0x20": 6714476,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 89,
+  "name": "z_logs",
+  "method_count": 14,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4994988,
+   "0x08": 6756892,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730544,
+   "0x20": 6714532,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 90,
+  "name": "z_gehats",
+  "method_count": 56,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5335664,
+   "0x08": 6742272,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730552,
+   "0x20": 6714588,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 91,
+  "name": "z_pricelists",
+  "method_count": 27,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5052844,
+   "0x08": 6818868,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730564,
+   "0x20": 6714812,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 92,
+  "name": "z_titles",
+  "method_count": 15,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5031296,
+   "0x08": 6757236,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730580,
+   "0x20": 6714920,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 93,
+  "name": "labtolab",
+  "method_count": 32,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5210680,
+   "0x08": 6752128,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730592,
+   "0x20": 6714980,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 94,
+  "name": "sarfz",
+  "method_count": 26,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5062412,
+   "0x08": 6746896,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730604,
+   "0x20": 6715108,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 95,
+  "name": "instrument",
+  "method_count": 29,
+  "addr_label": "desc+0x08->+0x34",
+  "addr_array_va": 6488174,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5452120,
+   "0x08": 6820312,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730612,
+   "0x20": 6715212,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 96,
+  "name": "Reportmony2",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4951852,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730624,
+   "0x20": 81591368,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 97,
+  "name": "Reportmony3",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4955820,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730636,
+   "0x20": 63401704,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 98,
+  "name": "zarf",
+  "method_count": 1,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4967504,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730648,
+   "0x20": 6715328,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 99,
+  "name": "aaaClass",
+  "method_count": 15,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4968668,
+   "0x08": 6755688,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730656,
+   "0x20": 6715332,
+   "0x24": 65535,
+   "0x28": 1146883,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 100,
+  "name": "static1",
+  "method_count": 30,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5315008,
+   "0x08": 6753440,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730668,
+   "0x20": 6715392,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 101,
+  "name": "reportstatic1",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4958300,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730676,
+   "0x20": 94363128,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 102,
+  "name": "static2",
+  "method_count": 26,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5294648,
+   "0x08": 6753516,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730692,
+   "0x20": 6715512,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 103,
+  "name": "static3",
+  "method_count": 15,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5139060,
+   "0x08": 6753236,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730700,
+   "0x20": 6715616,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 104,
+  "name": "noteic",
+  "method_count": 10,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5008716,
+   "0x08": 6758132,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730708,
+   "0x20": 6715676,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 105,
+  "name": "z_group",
+  "method_count": 14,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4998420,
+   "0x08": 6756892,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730716,
+   "0x20": 6715716,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 106,
+  "name": "antibioticfrm",
+  "method_count": 29,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5185520,
+   "0x08": 6757372,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730724,
+   "0x20": 6715772,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 107,
+  "name": "Frmcomment",
+  "method_count": 17,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5019572,
+   "0x08": 6757448,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730740,
+   "0x20": 6715888,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 108,
+  "name": "static4",
+  "method_count": 18,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5202096,
+   "0x08": 6753592,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730752,
+   "0x20": 6715956,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 109,
+  "name": "z_customgroup",
+  "method_count": 31,
+  "addr_label": "desc+0x00->+0x34",
+  "addr_array_va": 5079928,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5079808,
+   "0x08": 6819320,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730760,
+   "0x20": 6716028,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 110,
+  "name": "Reportsemen1",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4960532,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730776,
+   "0x20": 109230720,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 111,
+  "name": "commentsetup",
+  "method_count": 5,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5124552,
+   "0x08": 7090324,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730792,
+   "0x20": 6716152,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 112,
+  "name": "abbrevi",
+  "method_count": 41,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5161600,
+   "0x08": 6757804,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730808,
+   "0x20": 6716172,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 113,
+  "name": "learntest",
+  "method_count": 6,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4991936,
+   "0x08": 6758040,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730816,
+   "0x20": 6716336,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 114,
+  "name": "converter",
+  "method_count": 14,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5023404,
+   "0x08": 6758216,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730828,
+   "0x20": 6716360,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 115,
+  "name": "shoppingfrm",
+  "method_count": 15,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5039528,
+   "0x08": 6758304,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730840,
+   "0x20": 6716416,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 116,
+  "name": "frmTip",
+  "method_count": 5,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4976240,
+   "0x08": 7386912,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730852,
+   "0x20": 6716476,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 117,
+  "name": "workpaper2",
+  "method_count": 18,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5104124,
+   "0x08": 6758720,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730860,
+   "0x20": 6716496,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 118,
+  "name": "Reportsemen2",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4954332,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730872,
+   "0x20": 109084368,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 119,
+  "name": "resultabuse",
+  "method_count": 95,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5727028,
+   "0x08": 6881936,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730888,
+   "0x20": 6716568,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 120,
+  "name": "resultdrugs",
+  "method_count": 98,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5939648,
+   "0x08": 6882052,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730900,
+   "0x20": 6716948,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 121,
+  "name": "resultcoagfactor",
+  "method_count": 79,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5776048,
+   "0x08": 6883232,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730912,
+   "0x20": 6717340,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 122,
+  "name": "resultImmunoglob",
+  "method_count": 72,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5664404,
+   "0x08": 6883100,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730932,
+   "0x20": 6717656,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 123,
+  "name": "resultimmun",
+  "method_count": 138,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6315948,
+   "0x08": 6883348,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730952,
+   "0x20": 6717944,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 124,
+  "name": "resulthgbelec",
+  "method_count": 51,
+  "addr_label": "desc+0x08",
+  "addr_array_va": 6874332,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5439448,
+   "0x08": 6874332,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730964,
+   "0x20": 6718496,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 125,
+  "name": "resultprotelec",
+  "method_count": 61,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5589332,
+   "0x08": 6874448,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730980,
+   "0x20": 6718700,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 126,
+  "name": "resultbloodgas",
+  "method_count": 81,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5959520,
+   "0x08": 6874216,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6730996,
+   "0x20": 6718944,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 127,
+  "name": "resultcrossm",
+  "method_count": 140,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6107940,
+   "0x08": 6875172,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731012,
+   "0x20": 6719268,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 128,
+  "name": "resultsugacurve",
+  "method_count": 78,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5845016,
+   "0x08": 6882336,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731028,
+   "0x20": 6719828,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 129,
+  "name": "resultstone",
+  "method_count": 72,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5603944,
+   "0x08": 6872736,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731044,
+   "0x20": 6720140,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 130,
+  "name": "resultprostata",
+  "method_count": 113,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6086008,
+   "0x08": 6872608,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731056,
+   "0x20": 6720428,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 131,
+  "name": "resultcsf",
+  "method_count": 83,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5810096,
+   "0x08": 6875856,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731072,
+   "0x20": 6720880,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 132,
+  "name": "resultzn",
+  "method_count": 36,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5346156,
+   "0x08": 6878232,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731084,
+   "0x20": 6721212,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 133,
+  "name": "resultTUBERCULIN",
+  "method_count": 32,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5177380,
+   "0x08": 6877976,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731096,
+   "0x20": 6721356,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 134,
+  "name": "resultmarrow",
+  "method_count": 64,
+  "addr_label": "desc+0x00->+0x34",
+  "addr_array_va": 5743308,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5743188,
+   "0x08": 6878360,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731116,
+   "0x20": 6721484,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 135,
+  "name": "resultpostcoital",
+  "method_count": 60,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5464912,
+   "0x08": 6878488,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731132,
+   "0x20": 6721740,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 136,
+  "name": "moenysharekat",
+  "method_count": 27,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5219264,
+   "0x08": 6766560,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731152,
+   "0x20": 6721980,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 137,
+  "name": "resultrenal",
+  "method_count": 80,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5759460,
+   "0x08": 6882824,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731168,
+   "0x20": 6722088,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 138,
+  "name": "patienthistory2",
+  "method_count": 17,
+  "addr_label": "desc+0x00->+0x1c",
+  "addr_array_va": 80323016,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5027252,
+   "0x08": 6757448,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731180,
+   "0x20": 6722408,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 139,
+  "name": "qcfrm",
+  "method_count": 27,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5097900,
+   "0x08": 6759116,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731196,
+   "0x20": 6722476,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 140,
+  "name": "printerselect",
+  "method_count": 11,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4951244,
+   "0x08": 6745292,
+   "0x10": 80319816,
+   "0x14": 0,
+   "0x18": 6731204,
+   "0x20": 0,
+   "0x24": 65535,
+   "0x28": 98305,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 141,
+  "name": "z_labaccount",
+  "method_count": 18,
+  "addr_label": "desc+0x00->+0x34",
+  "addr_array_va": 5057628,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5057508,
+   "0x08": 6766956,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731220,
+   "0x20": 6722584,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 142,
+  "name": "static5",
+  "method_count": 21,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5117516,
+   "0x08": 6753084,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731236,
+   "0x20": 6722656,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 143,
+  "name": "logindetect",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4956068,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731244,
+   "0x20": 118702512,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 144,
+  "name": "logindete",
+  "method_count": 6,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4980060,
+   "0x08": 6767316,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731256,
+   "0x20": 6722740,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 145,
+  "name": "Reportqc",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4956564,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731268,
+   "0x20": 91420064,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 146,
+  "name": "Reportlivers",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4958548,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731280,
+   "0x20": 81420288,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 147,
+  "name": "setup1",
+  "method_count": 56,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5618592,
+   "0x08": 7138848,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731296,
+   "0x20": 6722764,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 148,
+  "name": "setup2",
+  "method_count": 58,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5574768,
+   "0x08": 7176760,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731304,
+   "0x20": 6722988,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 149,
+  "name": "setup3",
+  "method_count": 42,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5979660,
+   "0x08": 7176504,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731312,
+   "0x20": 6723220,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 150,
+  "name": "normal_test",
+  "method_count": 36,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5043788,
+   "0x08": 6757448,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731320,
+   "0x20": 6723388,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 151,
+  "name": "Reporturines",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4958052,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731332,
+   "0x20": 107259376,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 152,
+  "name": "ReportSugars",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4953836,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731348,
+   "0x20": 111928408,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 153,
+  "name": "Reporttotals",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4959540,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731364,
+   "0x20": 74412032,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 154,
+  "name": "Reportanyreports",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4965988,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731380,
+   "0x20": 114057216,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 155,
+  "name": "repotrwidals",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4955076,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731400,
+   "0x20": 112822256,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 156,
+  "name": "Reportcrosss",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4956812,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731416,
+   "0x20": 62833944,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 157,
+  "name": "reportculutres",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4966732,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731432,
+   "0x20": 110091856,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 158,
+  "name": "Reportsemen1s",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4964996,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731448,
+   "0x20": 109251920,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 159,
+  "name": "Reportsemen2s",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4961028,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731464,
+   "0x20": 109136248,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 160,
+  "name": "Reportmony4",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4954828,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731480,
+   "0x20": 95533288,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 161,
+  "name": "moenymozafeen",
+  "method_count": 27,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5228212,
+   "0x08": 6766560,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731492,
+   "0x20": 6723532,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 162,
+  "name": "resultha1c",
+  "method_count": 39,
+  "addr_label": "desc+0x08",
+  "addr_array_va": 6882168,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5284688,
+   "0x08": 6882168,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731508,
+   "0x20": 6723640,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 163,
+  "name": "resultwidal2",
+  "method_count": 51,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5648960,
+   "0x08": 6876680,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731520,
+   "0x20": 6723796,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 164,
+  "name": "Frm_pic",
+  "method_count": 55,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5085780,
+   "0x08": 7003800,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731536,
+   "0x20": 6724000,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 165,
+  "name": "CRect",
+  "method_count": 20,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4969544,
+   "0x08": 7514024,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731544,
+   "0x20": 6724220,
+   "0x24": 65535,
+   "0x28": 1146883,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 166,
+  "name": "rpttotaliss",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4966980,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731552,
+   "0x20": 81280568,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 167,
+  "name": "rpttotalisss",
+  "method_count": 0,
+  "addr_label": "desc+0x00",
+  "addr_array_va": 4963508,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 4963508,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731564,
+   "0x20": 88608504,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 168,
+  "name": "Frm_pic2",
+  "method_count": 31,
+  "addr_label": "desc+0x08",
+  "addr_array_va": 7004216,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5073844,
+   "0x08": 7004216,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731580,
+   "0x20": 6724300,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 169,
+  "name": "resultretios",
+  "method_count": 97,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5900884,
+   "0x08": 6879792,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731592,
+   "0x20": 6724424,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 170,
+  "name": "ReportFatoraC",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4966236,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731608,
+   "0x20": 107141296,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 171,
+  "name": "resulthpylori",
+  "method_count": 83,
+  "addr_label": "desc+0x00",
+  "addr_array_va": 5546112,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 5546112,
+   "0x08": 6876796,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731624,
+   "0x20": 6724812,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 172,
+  "name": "Frmac",
+  "method_count": 26,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5110568,
+   "0x08": 6757804,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731640,
+   "0x20": 6725144,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 173,
+  "name": "Reportmony5",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4952844,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731648,
+   "0x20": 2246472,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 174,
+  "name": "saveIOtemp",
+  "method_count": 10,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4951116,
+   "0x08": 6735672,
+   "0x10": 80318500,
+   "0x14": 0,
+   "0x18": 6731664,
+   "0x20": 0,
+   "0x24": 65535,
+   "0x28": 98305,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 175,
+  "name": "CardFrm",
+  "method_count": 0,
+  "addr_label": "desc+0x00->+0x3c",
+  "addr_array_va": 6971096,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 4970632,
+   "0x08": 6968736,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731676,
+   "0x20": 105365176,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 176,
+  "name": "CardFrmSetx",
+  "method_count": 22,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5048312,
+   "0x08": 7175168,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731684,
+   "0x20": 6725248,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 177,
+  "name": "Resultsemen5",
+  "method_count": 216,
+  "addr_label": "desc+0x00->+0x54",
+  "addr_array_va": 6545920,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 6545796,
+   "0x08": 6881272,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731696,
+   "0x20": 6725336,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 178,
+  "name": "Patient_samples",
+  "method_count": 89,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5679864,
+   "0x08": 6746536,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731712,
+   "0x20": 6726200,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 179,
+  "name": "ReportFatorareset",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4966484,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731728,
+   "0x20": 75606688,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 180,
+  "name": "ReportPatPhone",
+  "method_count": 0,
+  "addr_label": "desc+0x20",
+  "addr_array_va": 63017496,
+  "addr_count": 1,
+  "addresses": [],
+  "fields": {
+   "0x00": 4953588,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731748,
+   "0x20": 63017496,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 181,
+  "name": "pricelistsN",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4957556,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731764,
+   "0x20": 62797480,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 182,
+  "name": "SMSfrmsenderos",
+  "method_count": 139,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6396416,
+   "0x08": 6751968,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731776,
+   "0x20": 6726556,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 183,
+  "name": "BiosData",
+  "method_count": 8,
+  "addr_label": "desc+0x20",
+  "addr_array_va": 6727112,
+  "addr_count": 7,
+  "addresses": [
+   7560552,
+   7560568,
+   7560588,
+   7560608,
+   7560624,
+   7560644,
+   7560664
+  ],
+  "fields": {
+   "0x00": 4968332,
+   "0x08": 7560684,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731792,
+   "0x20": 6727112,
+   "0x24": 65535,
+   "0x28": 1146883,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 184,
+  "name": "boisais",
+  "method_count": 16,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4951408,
+   "0x08": 7273316,
+   "0x10": 80323460,
+   "0x14": 0,
+   "0x18": 6731804,
+   "0x20": 0,
+   "0x24": 65535,
+   "0x28": 98305,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 185,
+  "name": "ReportSMS",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4954580,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731812,
+   "0x20": 108869800,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 186,
+  "name": "Reportmony11",
+  "method_count": 1,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4968056,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731824,
+   "0x20": 6727144,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 187,
+  "name": "Reportliver7his",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4963756,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731840,
+   "0x20": 107150312,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 188,
+  "name": "Reportlivers7his",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4961524,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731856,
+   "0x20": 112820816,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 189,
+  "name": "mInputbox",
+  "method_count": 12,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4951584,
+   "0x08": 6740656,
+   "0x10": 80319120,
+   "0x14": 0,
+   "0x18": 6731876,
+   "0x20": 0,
+   "0x24": 65535,
+   "0x28": 98305,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 190,
+  "name": "ReportTestTime",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4957804,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731888,
+   "0x20": 88994048,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 191,
+  "name": "RPTPatientVisit",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4953340,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731904,
+   "0x20": 119656048,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 192,
+  "name": "static6",
+  "method_count": 24,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5274996,
+   "0x08": 6753344,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731920,
+   "0x20": 6727148,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 193,
+  "name": "ReportPCR",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4961772,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731928,
+   "0x20": 63268184,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 194,
+  "name": "ReportFatorareset8",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4965740,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731940,
+   "0x20": 63321904,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 195,
+  "name": "ResultPCR",
+  "method_count": 37,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5490728,
+   "0x08": 6882664,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731960,
+   "0x20": 6727244,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 196,
+  "name": "labmainTools",
+  "method_count": 6,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4982148,
+   "0x08": 7558152,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731972,
+   "0x20": 6727392,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 197,
+  "name": "ReportPCRs",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4954084,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6731988,
+   "0x20": 115854256,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 198,
+  "name": "ResultFMF",
+  "method_count": 48,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5695516,
+   "0x08": 6876680,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6732000,
+   "0x20": 6727416,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 199,
+  "name": "resultLBC",
+  "method_count": 33,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 5169320,
+   "0x08": 6882940,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6732012,
+   "0x20": 6727608,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 200,
+  "name": "ReportLBC",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4960780,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6732024,
+   "0x20": 115855360,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 201,
+  "name": "ReportLBCs",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4960284,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6732036,
+   "0x20": 114075096,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 202,
+  "name": "ReportZN",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4959788,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6732048,
+   "0x20": 79520752,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 203,
+  "name": "ReportZNs",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4959292,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6732060,
+   "0x20": 62938640,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 204,
+  "name": "Reportmony01",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4955572,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6732072,
+   "0x20": 95533512,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 205,
+  "name": "resultIgeAllergy",
+  "method_count": 231,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6453020,
+   "0x08": 6877852,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6732088,
+   "0x20": 6727740,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 206,
+  "name": "ReportIGE1",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4952596,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6732108,
+   "0x20": 114297224,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 207,
+  "name": "ReportIGE1s",
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4952100,
+   "0x08": 6744296,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6732120,
+   "0x20": 117864952,
+   "0x24": 65535,
+   "0x28": 16875651,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 208,
+  "name": "otherfun",
+  "method_count": 2,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 4951180,
+   "0x08": 6745292,
+   "0x10": 80323264,
+   "0x14": 0,
+   "0x18": 6732132,
+   "0x20": 0,
+   "0x24": 65535,
+   "0x28": 98305,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 209,
+  "name": "ResulturineAuto",
+  "method_count": 184,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 6424404,
+   "0x08": 6869940,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 6732144,
+   "0x20": 6728664,
+   "0x24": 65535,
+   "0x28": 98435,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 210,
+  "name": null,
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 0,
+   "0x08": 0,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 0,
+   "0x20": 0,
+   "0x24": 0,
+   "0x28": 0,
+   "0x2c": 0
+  }
+ },
+ {
+  "i": 211,
+  "name": null,
+  "method_count": 0,
+  "addr_label": null,
+  "addr_array_va": null,
+  "addr_count": 0,
+  "addresses": [],
+  "fields": {
+   "0x00": 0,
+   "0x08": 0,
+   "0x10": 0,
+   "0x14": 0,
+   "0x18": 0,
+   "0x20": 0,
+   "0x24": 0,
+   "0x28": 0,
+   "0x2c": 0
+  }
+ }
+]

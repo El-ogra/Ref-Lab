@@ -1,0 +1,4868 @@
+{
+ "vb_header_va": 4951680,
+ "object_table_va": 6687640,
+ "object_array_va": 6687724,
+ "object_count": 212,
+ "compiled_objects": 210,
+ "sum_method_count": 8026,
+ "named_methods_recovered": 444,
+ "objects": [
+  {
+   "i": 0,
+   "name": "labmain",
+   "method_count": 71,
+   "methods": [],
+   "desc_va": 6687724,
+   "p00": 6342088,
+   "p08": 6735392,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 1,
+   "name": "labxxyyzz",
+   "method_count": 3,
+   "methods": [],
+   "desc_va": 6687772,
+   "p00": 4971356,
+   "p08": 6745472,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 2,
+   "name": "patientmain",
+   "method_count": 84,
+   "methods": [
+    {
+     "index": 77,
+     "name": "Hgb_test",
+     "name_va": 6744016
+    },
+    {
+     "index": 78,
+     "name": "pt_test",
+     "name_va": 6744028
+    },
+    {
+     "index": 80,
+     "name": "altratio_test",
+     "name_va": 6744036
+    },
+    {
+     "index": 81,
+     "name": "SMSresultmsg",
+     "name_va": 6744052
+    },
+    {
+     "index": 82,
+     "name": "WIDAEL_test",
+     "name_va": 6744068
+    },
+    {
+     "index": 83,
+     "name": "BRUCELLA_test",
+     "name_va": 6744080
+    }
+   ],
+   "desc_va": 6687820,
+   "p00": 6268528,
+   "p08": 6744096,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 3,
+   "name": "labdb",
+   "method_count": 24,
+   "methods": [],
+   "desc_va": 6687868,
+   "p00": 4951324,
+   "p08": 6736344,
+   "p10": 80318708,
+   "p14": 0,
+   "f28": 98305
+  },
+  {
+   "i": 4,
+   "name": "frm_money",
+   "method_count": 38,
+   "methods": [],
+   "desc_va": 6687916,
+   "p00": 5477812,
+   "p08": 6741992,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 5,
+   "name": "tools",
+   "method_count": 1,
+   "methods": [],
+   "desc_va": 6687964,
+   "p00": 4973516,
+   "p08": 6952632,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 6,
+   "name": "Resultliver",
+   "method_count": 101,
+   "methods": [
+    {
+     "index": 50,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 97,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 98,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 99,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 100,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 112,
+     "name": "calculateprice",
+     "name_va": 6739556
+    }
+   ],
+   "desc_va": 6688012,
+   "p00": 5999848,
+   "p08": 6871248,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 7,
+   "name": "moneypaid",
+   "method_count": 18,
+   "methods": [
+    {
+     "index": 11,
+     "name": "calculateprice",
+     "name_va": 6739556
+    }
+   ],
+   "desc_va": 6688060,
+   "p00": 5015776,
+   "p08": 6968504,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 8,
+   "name": "addpatient",
+   "method_count": 192,
+   "methods": [
+    {
+     "index": 190,
+     "name": "calculateprice",
+     "name_va": 6739556
+    },
+    {
+     "index": 191,
+     "name": "fill_title",
+     "name_va": 6739572
+    }
+   ],
+   "desc_va": 6688108,
+   "p00": 6578828,
+   "p08": 6739584,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 9,
+   "name": "Resulturine",
+   "method_count": 167,
+   "methods": [
+    {
+     "index": 40,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 41,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 162,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 165,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 166,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 188,
+     "name": "printout",
+     "name_va": 6794188
+    }
+   ],
+   "desc_va": 6688156,
+   "p00": 6245088,
+   "p08": 6869360,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 10,
+   "name": "Reporturine",
+   "method_count": 0,
+   "methods": [
+    {
+     "index": 43,
+     "name": "t",
+     "name_va": 6946922
+    }
+   ],
+   "desc_va": 6688204,
+   "p00": 4956316,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 11,
+   "name": "Reportliver",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6688252,
+   "p00": 4959044,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 12,
+   "name": "tqrermog",
+   "method_count": 41,
+   "methods": [
+    {
+     "index": 21,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 26,
+     "name": "esr_test",
+     "name_va": 6824156
+    },
+    {
+     "index": 27,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 28,
+     "name": "esr_tests",
+     "name_va": 6823684
+    },
+    {
+     "index": 29,
+     "name": "pt_test",
+     "name_va": 6744028
+    },
+    {
+     "index": 30,
+     "name": "pt_tests",
+     "name_va": 6823208
+    },
+    {
+     "index": 31,
+     "name": "FBG_test",
+     "name_va": 6822068
+    },
+    {
+     "index": 32,
+     "name": "FBG_tests",
+     "name_va": 6821932
+    },
+    {
+     "index": 33,
+     "name": "Hgb_test",
+     "name_va": 6744016
+    },
+    {
+     "index": 34,
+     "name": "Hgb_tests",
+     "name_va": 6821836
+    },
+    {
+     "index": 35,
+     "name": "altratio_test",
+     "name_va": 6744036
+    },
+    {
+     "index": 36,
+     "name": "altratios_test",
+     "name_va": 6821736
+    },
+    {
+     "index": 37,
+     "name": "widal_test",
+     "name_va": 6821360
+    },
+    {
+     "index": 38,
+     "name": "BRUCELLA_test",
+     "name_va": 6744080
+    },
+    {
+     "index": 39,
+     "name": "widal_testS",
+     "name_va": 6805688
+    },
+    {
+     "index": 40,
+     "name": "BRUCELLA_testS",
+     "name_va": 6793696
+    },
+    {
+     "index": 41,
+     "name": "DataReport_Initialize",
+     "name_va": 6837028
+    }
+   ],
+   "desc_va": 6688300,
+   "p00": 5193704,
+   "p08": 6787796,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 13,
+   "name": "ReportFatora",
+   "method_count": 0,
+   "methods": [
+    {
+     "index": 33,
+     "name": "c",
+     "name_va": 6962076
+    }
+   ],
+   "desc_va": 6688348,
+   "p00": 4962020,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 14,
+   "name": "Reporttotal",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6688396,
+   "p00": 4964252,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 15,
+   "name": "Reporthistory",
+   "method_count": 1,
+   "methods": [
+    {
+     "index": 0,
+     "name": "DataReport_Initialize",
+     "name_va": 6837028
+    }
+   ],
+   "desc_va": 6688444,
+   "p00": 4967780,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 16,
+   "name": "barcode",
+   "method_count": 76,
+   "methods": [],
+   "desc_va": 6688492,
+   "p00": 5237160,
+   "p08": 6999652,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 17,
+   "name": "phone",
+   "method_count": 33,
+   "methods": [],
+   "desc_va": 6688540,
+   "p00": 5246500,
+   "p08": 6758584,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 18,
+   "name": "testmain",
+   "method_count": 30,
+   "methods": [
+    {
+     "index": 24,
+     "name": "cleans",
+     "name_va": 6754068
+    }
+   ],
+   "desc_va": 6688588,
+   "p00": 5391344,
+   "p08": 6754076,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 19,
+   "name": "Resultsugar",
+   "method_count": 61,
+   "methods": [
+    {
+     "index": 41,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 48,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 58,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 59,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 60,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 67,
+     "name": "serrshch",
+     "name_va": 6754528
+    }
+   ],
+   "desc_va": 6688636,
+   "p00": 5532076,
+   "p08": 6868656,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 20,
+   "name": "labdb1",
+   "method_count": 20,
+   "methods": [],
+   "desc_va": 6688684,
+   "p00": 4951492,
+   "p08": 6745292,
+   "p10": 80319912,
+   "p14": 0,
+   "f28": 98305
+  },
+  {
+   "i": 21,
+   "name": "Reportworkp",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6688732,
+   "p00": 4953092,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 22,
+   "name": "workpaper",
+   "method_count": 17,
+   "methods": [
+    {
+     "index": 6,
+     "name": "serrshch",
+     "name_va": 6754528
+    }
+   ],
+   "desc_va": 6688780,
+   "p00": 5068024,
+   "p08": 6754540,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 23,
+   "name": "Reportwp",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6688828,
+   "p00": 4962516,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 24,
+   "name": "Resultstool",
+   "method_count": 139,
+   "methods": [
+    {
+     "index": 37,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 38,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 134,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 137,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 138,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 151,
+     "name": "cleansx",
+     "name_va": 7021668
+    }
+   ],
+   "desc_va": 6688876,
+   "p00": 6042328,
+   "p08": 6870376,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 25,
+   "name": "testrange",
+   "method_count": 17,
+   "methods": [
+    {
+     "index": 12,
+     "name": "cleansx",
+     "name_va": 7021668
+    }
+   ],
+   "desc_va": 6688924,
+   "p00": 5154048,
+   "p08": 6757804,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 26,
+   "name": "ReportSugar",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6688972,
+   "p00": 4955324,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 27,
+   "name": "Resultkidney",
+   "method_count": 117,
+   "methods": [
+    {
+     "index": 52,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 94,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 95,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 115,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 116,
+     "name": "positions",
+     "name_va": 6868644
+    }
+   ],
+   "desc_va": 6689020,
+   "p00": 6221704,
+   "p08": 6871444,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 28,
+   "name": "resultculutre",
+   "method_count": 115,
+   "methods": [
+    {
+     "index": 99,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 108,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 109,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 111,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 112,
+     "name": "positions",
+     "name_va": 6868644
+    }
+   ],
+   "desc_va": 6689068,
+   "p00": 6064076,
+   "p08": 6876560,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 29,
+   "name": "Resultlipids",
+   "method_count": 81,
+   "methods": [
+    {
+     "index": 40,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 77,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 78,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 79,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 80,
+     "name": "positions",
+     "name_va": 6868644
+    }
+   ],
+   "desc_va": 6689116,
+   "p00": 5792892,
+   "p08": 6871560,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 30,
+   "name": "ais",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6689164,
+   "p00": 4984336,
+   "p08": 7077844,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 31,
+   "name": "reportculutre",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6689212,
+   "p00": 4965244,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 32,
+   "name": "Resultsemen",
+   "method_count": 222,
+   "methods": [
+    {
+     "index": 207,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 208,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 214,
+     "name": "printout2",
+     "name_va": 6869928
+    },
+    {
+     "index": 215,
+     "name": "printout3",
+     "name_va": 6881084
+    },
+    {
+     "index": 216,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 217,
+     "name": "position2",
+     "name_va": 6881096
+    },
+    {
+     "index": 218,
+     "name": "printout2s",
+     "name_va": 6881108
+    },
+    {
+     "index": 219,
+     "name": "position2s",
+     "name_va": 6881120
+    },
+    {
+     "index": 220,
+     "name": "printout3s",
+     "name_va": 6881132
+    },
+    {
+     "index": 221,
+     "name": "resuprt",
+     "name_va": 6881144
+    }
+   ],
+   "desc_va": 6689260,
+   "p00": 6649452,
+   "p08": 6881152,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 33,
+   "name": "resultABO",
+   "method_count": 47,
+   "methods": [
+    {
+     "index": 29,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 32,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 33,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 34,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 46,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6689308,
+   "p00": 5357336,
+   "p08": 6871712,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 34,
+   "name": "resultwidal",
+   "method_count": 41,
+   "methods": [
+    {
+     "index": 32,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 35,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 36,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 39,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 40,
+     "name": "positions",
+     "name_va": 6868644
+    }
+   ],
+   "desc_va": 6689356,
+   "p00": 5427052,
+   "p08": 6875280,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 35,
+   "name": "resulthepatitis",
+   "method_count": 187,
+   "methods": [
+    {
+     "index": 113,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 140,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 141,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 142,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 143,
+     "name": "interpreta",
+     "name_va": 6875420
+    },
+    {
+     "index": 186,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 205,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    }
+   ],
+   "desc_va": 6689404,
+   "p00": 6482604,
+   "p08": 6879644,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 36,
+   "name": "ReportFatoraS",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6689452,
+   "p00": 4957060,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 37,
+   "name": "ResultESR",
+   "method_count": 32,
+   "methods": [
+    {
+     "index": 18,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 30,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 31,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6689500,
+   "p00": 5255908,
+   "p08": 6871828,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 38,
+   "name": "resultcbc",
+   "method_count": 172,
+   "methods": [
+    {
+     "index": 42,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 157,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 158,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 159,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 166,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 172,
+     "name": "DataReport_Initialize",
+     "name_va": 6837028
+    }
+   ],
+   "desc_va": 6689548,
+   "p00": 6612632,
+   "p08": 6874020,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 39,
+   "name": "repotrwidal",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6689596,
+   "p00": 4957308,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 40,
+   "name": "Reporthistory2",
+   "method_count": 1,
+   "methods": [
+    {
+     "index": 0,
+     "name": "DataReport_Initialize",
+     "name_va": 6837028
+    }
+   ],
+   "desc_va": 6689644,
+   "p00": 4967228,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 41,
+   "name": "ResultTORCH",
+   "method_count": 123,
+   "methods": [
+    {
+     "index": 46,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 119,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 120,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 121,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 122,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6689692,
+   "p00": 5882012,
+   "p08": 6876912,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 42,
+   "name": "resultcrp",
+   "method_count": 97,
+   "methods": [
+    {
+     "index": 72,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 83,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 84,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 85,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 86,
+     "name": "interpretas",
+     "name_va": 6875408
+    },
+    {
+     "index": 87,
+     "name": "interpreta",
+     "name_va": 6875420
+    },
+    {
+     "index": 96,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6689740,
+   "p00": 5827448,
+   "p08": 6875444,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 43,
+   "name": "resultpt",
+   "method_count": 110,
+   "methods": [
+    {
+     "index": 72,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 104,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 105,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 106,
+     "name": "positionz",
+     "name_va": 6872288
+    },
+    {
+     "index": 107,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 108,
+     "name": "positionzs",
+     "name_va": 6872300
+    },
+    {
+     "index": 109,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6689788,
+   "p00": 6198448,
+   "p08": 6872312,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 44,
+   "name": "resulthormon",
+   "method_count": 116,
+   "methods": [
+    {
+     "index": 42,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 97,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 98,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 99,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 115,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6689836,
+   "p00": 6175524,
+   "p08": 6880024,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 45,
+   "name": "Reportinstrument",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6689884,
+   "p00": 4964500,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 46,
+   "name": "patient",
+   "method_count": 58,
+   "methods": [
+    {
+     "index": 55,
+     "name": "searcho",
+     "name_va": 6747292
+    }
+   ],
+   "desc_va": 6689932,
+   "p00": 5368620,
+   "p08": 6747300,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 47,
+   "name": "Reportshareka",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6689980,
+   "p00": 4961276,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 48,
+   "name": "patientview",
+   "method_count": 33,
+   "methods": [],
+   "desc_va": 6690028,
+   "p00": 5265424,
+   "p08": 6753808,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 49,
+   "name": "outtest",
+   "method_count": 11,
+   "methods": [],
+   "desc_va": 6690076,
+   "p00": 5091816,
+   "p08": 6759116,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 50,
+   "name": "setup",
+   "method_count": 16,
+   "methods": [],
+   "desc_va": 6690124,
+   "p00": 5131620,
+   "p08": 6752488,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 51,
+   "name": "anyreport",
+   "method_count": 16,
+   "methods": [],
+   "desc_va": 6690172,
+   "p00": 5402832,
+   "p08": 6850760,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 52,
+   "name": "calctest",
+   "method_count": 2,
+   "methods": [],
+   "desc_va": 6690220,
+   "p00": 4972348,
+   "p08": 6745472,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 53,
+   "name": "statisReport",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6690268,
+   "p00": 4963012,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 54,
+   "name": "Reportwpm",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6690316,
+   "p00": 4964004,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 55,
+   "name": "Reportwpt",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6690364,
+   "p00": 4964748,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 56,
+   "name": "Reportwpot",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6690412,
+   "p00": 4960036,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 57,
+   "name": "barcodeform",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6690460,
+   "p00": 4974804,
+   "p08": 7017764,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 58,
+   "name": "ResultInsulin",
+   "method_count": 92,
+   "methods": [
+    {
+     "index": 46,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 88,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 89,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 90,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 91,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 100,
+     "name": "FILUSERS",
+     "name_va": 6752648
+    }
+   ],
+   "desc_va": 6690508,
+   "p00": 5863236,
+   "p08": 6879908,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 59,
+   "name": "start",
+   "method_count": 10,
+   "methods": [
+    {
+     "index": 8,
+     "name": "FILUSERS",
+     "name_va": 6752648
+    }
+   ],
+   "desc_va": 6690556,
+   "p00": 4989240,
+   "p08": 6885528,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 60,
+   "name": "Resultbilharzias",
+   "method_count": 64,
+   "methods": [
+    {
+     "index": 43,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 54,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 55,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 62,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 63,
+     "name": "positions",
+     "name_va": 6868644
+    }
+   ],
+   "desc_va": 6690604,
+   "p00": 5504340,
+   "p08": 6875560,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 61,
+   "name": "Reportcross",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6690652,
+   "p00": 4963260,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 62,
+   "name": "Reportmony1",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6690700,
+   "p00": 4952348,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 63,
+   "name": "Reportsemen",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6690748,
+   "p00": 4965492,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 64,
+   "name": "Reportanyreport",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6690796,
+   "p00": 4962764,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 65,
+   "name": "BCWFonts",
+   "method_count": 7,
+   "methods": [],
+   "desc_va": 6690844,
+   "p00": 4951000,
+   "p08": 6745292,
+   "p10": 80322268,
+   "p14": 0,
+   "f28": 98305
+  },
+  {
+   "i": 66,
+   "name": "reportsetup",
+   "method_count": 113,
+   "methods": [
+    {
+     "index": 112,
+     "name": "saveini",
+     "name_va": 6959784
+    }
+   ],
+   "desc_va": 6690892,
+   "p00": 6129964,
+   "p08": 6959792,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 67,
+   "name": "patienthistory",
+   "method_count": 22,
+   "methods": [],
+   "desc_va": 6690940,
+   "p00": 5146548,
+   "p08": 6830808,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 68,
+   "name": "resultselectro",
+   "method_count": 144,
+   "methods": [
+    {
+     "index": 48,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 140,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 141,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 142,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 143,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6690988,
+   "p00": 6368812,
+   "p08": 6879260,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 69,
+   "name": "resultcardiac",
+   "method_count": 66,
+   "methods": [
+    {
+     "index": 34,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 62,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 63,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 64,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 65,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6691036,
+   "p00": 5560400,
+   "p08": 6875676,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 70,
+   "name": "resultTumors",
+   "method_count": 100,
+   "methods": [
+    {
+     "index": 48,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 96,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 97,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 98,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 99,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6691084,
+   "p00": 5919876,
+   "p08": 6881376,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 71,
+   "name": "resultVitamins",
+   "method_count": 110,
+   "methods": [
+    {
+     "index": 54,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 70,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 71,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 72,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 109,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6691132,
+   "p00": 6020632,
+   "p08": 6881504,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 72,
+   "name": "resultTrace",
+   "method_count": 183,
+   "methods": [
+    {
+     "index": 85,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 111,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 112,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 113,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 114,
+     "name": "historic",
+     "name_va": 6881728
+    },
+    {
+     "index": 181,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 182,
+     "name": "historics",
+     "name_va": 6881740
+    },
+    {
+     "index": 204,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    }
+   ],
+   "desc_va": 6691180,
+   "p00": 6512940,
+   "p08": 6881752,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 73,
+   "name": "resultanytest",
+   "method_count": 33,
+   "methods": [
+    {
+     "index": 21,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 28,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 32,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6691228,
+   "p00": 5325324,
+   "p08": 6883524,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 74,
+   "name": "Resultpregnancy",
+   "method_count": 44,
+   "methods": [
+    {
+     "index": 25,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 41,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 43,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6691276,
+   "p00": 5304712,
+   "p08": 6880256,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 75,
+   "name": "pricelists",
+   "method_count": 0,
+   "methods": [
+    {
+     "index": 39,
+     "name": "7",
+     "name_va": 4500384
+    }
+   ],
+   "desc_va": 6691324,
+   "p00": 4958796,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 76,
+   "name": "resultiron",
+   "method_count": 62,
+   "methods": [
+    {
+     "index": 32,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 58,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 59,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 60,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 61,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 62,
+     "name": "dateos",
+     "name_va": 7200380
+    }
+   ],
+   "desc_va": 6691372,
+   "p00": 5518040,
+   "p08": 6876796,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 77,
+   "name": "reportsetup2",
+   "method_count": 69,
+   "methods": [
+    {
+     "index": 0,
+     "name": "dateos",
+     "name_va": 7200380
+    }
+   ],
+   "desc_va": 6691420,
+   "p00": 5633524,
+   "p08": 7200388,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 78,
+   "name": "labfunction",
+   "method_count": 25,
+   "methods": [],
+   "desc_va": 6691468,
+   "p00": 4951056,
+   "p08": 6740880,
+   "p10": 80319148,
+   "p14": 0,
+   "f28": 98305
+  },
+  {
+   "i": 79,
+   "name": "ResultFertlity",
+   "method_count": 125,
+   "methods": [
+    {
+     "index": 61,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 79,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 80,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 81,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 124,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6691516,
+   "p00": 6292012,
+   "p08": 6880140,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 80,
+   "name": "ResultSuprarenal",
+   "method_count": 117,
+   "methods": [
+    {
+     "index": 55,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 113,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 114,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 115,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 116,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6691564,
+   "p00": 6152716,
+   "p08": 6880340,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 81,
+   "name": "server",
+   "method_count": 17,
+   "methods": [],
+   "desc_va": 6691612,
+   "p00": 5035396,
+   "p08": 6885688,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 82,
+   "name": "users",
+   "method_count": 57,
+   "methods": [
+    {
+     "index": 68,
+     "name": "FILUSERS",
+     "name_va": 6752648
+    }
+   ],
+   "desc_va": 6691660,
+   "p00": 5414840,
+   "p08": 6741324,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 83,
+   "name": "login",
+   "method_count": 13,
+   "methods": [
+    {
+     "index": 11,
+     "name": "FILUSERS",
+     "name_va": 6752648
+    }
+   ],
+   "desc_va": 6691708,
+   "p00": 4978040,
+   "p08": 6752660,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 84,
+   "name": "userspw",
+   "method_count": 12,
+   "methods": [],
+   "desc_va": 6691756,
+   "p00": 4986596,
+   "p08": 6742372,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 85,
+   "name": "Reportlog",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6691804,
+   "p00": 4962268,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 86,
+   "name": "z_units",
+   "method_count": 14,
+   "methods": [],
+   "desc_va": 6691852,
+   "p00": 5001852,
+   "p08": 6756892,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 87,
+   "name": "z_barcodes",
+   "method_count": 14,
+   "methods": [],
+   "desc_va": 6691900,
+   "p00": 5012228,
+   "p08": 6757160,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 88,
+   "name": "z_branchs",
+   "method_count": 14,
+   "methods": [],
+   "desc_va": 6691948,
+   "p00": 5005284,
+   "p08": 6756892,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 89,
+   "name": "z_logs",
+   "method_count": 14,
+   "methods": [],
+   "desc_va": 6691996,
+   "p00": 4994988,
+   "p08": 6756892,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 90,
+   "name": "z_gehats",
+   "method_count": 56,
+   "methods": [],
+   "desc_va": 6692044,
+   "p00": 5335664,
+   "p08": 6742272,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 91,
+   "name": "z_pricelists",
+   "method_count": 27,
+   "methods": [],
+   "desc_va": 6692092,
+   "p00": 5052844,
+   "p08": 6818868,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 92,
+   "name": "z_titles",
+   "method_count": 15,
+   "methods": [],
+   "desc_va": 6692140,
+   "p00": 5031296,
+   "p08": 6757236,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 93,
+   "name": "labtolab",
+   "method_count": 32,
+   "methods": [],
+   "desc_va": 6692188,
+   "p00": 5210680,
+   "p08": 6752128,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 94,
+   "name": "sarfz",
+   "method_count": 26,
+   "methods": [],
+   "desc_va": 6692236,
+   "p00": 5062412,
+   "p08": 6746896,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 95,
+   "name": "instrument",
+   "method_count": 29,
+   "methods": [
+    {
+     "index": 29,
+     "name": "DataReport_Initialize",
+     "name_va": 6837028
+    },
+    {
+     "index": 37,
+     "name": "GetModelNumber",
+     "name_va": 6755608
+    },
+    {
+     "index": 38,
+     "name": "GetSerialNumber",
+     "name_va": 6755624
+    },
+    {
+     "index": 39,
+     "name": "GetFirmwareRevision",
+     "name_va": 6755640
+    },
+    {
+     "index": 40,
+     "name": "CurrentDrive",
+     "name_va": 6755660
+    },
+    {
+     "index": 41,
+     "name": "CurrentDrive",
+     "name_va": 6755660
+    },
+    {
+     "index": 42,
+     "name": "Platform",
+     "name_va": 6755676
+    }
+   ],
+   "desc_va": 6692284,
+   "p00": 5452120,
+   "p08": 6820312,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 96,
+   "name": "Reportmony2",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6692332,
+   "p00": 4951852,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 97,
+   "name": "Reportmony3",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6692380,
+   "p00": 4955820,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 98,
+   "name": "zarf",
+   "method_count": 1,
+   "methods": [
+    {
+     "index": 0,
+     "name": "DataReport_Initialize",
+     "name_va": 6837028
+    },
+    {
+     "index": 8,
+     "name": "GetModelNumber",
+     "name_va": 6755608
+    },
+    {
+     "index": 9,
+     "name": "GetSerialNumber",
+     "name_va": 6755624
+    },
+    {
+     "index": 10,
+     "name": "GetFirmwareRevision",
+     "name_va": 6755640
+    },
+    {
+     "index": 11,
+     "name": "CurrentDrive",
+     "name_va": 6755660
+    },
+    {
+     "index": 12,
+     "name": "CurrentDrive",
+     "name_va": 6755660
+    },
+    {
+     "index": 13,
+     "name": "Platform",
+     "name_va": 6755676
+    }
+   ],
+   "desc_va": 6692428,
+   "p00": 4967504,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 99,
+   "name": "aaaClass",
+   "method_count": 15,
+   "methods": [
+    {
+     "index": 7,
+     "name": "GetModelNumber",
+     "name_va": 6755608
+    },
+    {
+     "index": 8,
+     "name": "GetSerialNumber",
+     "name_va": 6755624
+    },
+    {
+     "index": 9,
+     "name": "GetFirmwareRevision",
+     "name_va": 6755640
+    },
+    {
+     "index": 10,
+     "name": "CurrentDrive",
+     "name_va": 6755660
+    },
+    {
+     "index": 11,
+     "name": "CurrentDrive",
+     "name_va": 6755660
+    },
+    {
+     "index": 12,
+     "name": "Platform",
+     "name_va": 6755676
+    }
+   ],
+   "desc_va": 6692476,
+   "p00": 4968668,
+   "p08": 6755688,
+   "p10": 0,
+   "p14": 0,
+   "f28": 1146883
+  },
+  {
+   "i": 100,
+   "name": "static1",
+   "method_count": 30,
+   "methods": [],
+   "desc_va": 6692524,
+   "p00": 5315008,
+   "p08": 6753440,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 101,
+   "name": "reportstatic1",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6692572,
+   "p00": 4958300,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 102,
+   "name": "static2",
+   "method_count": 26,
+   "methods": [],
+   "desc_va": 6692620,
+   "p00": 5294648,
+   "p08": 6753516,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 103,
+   "name": "static3",
+   "method_count": 15,
+   "methods": [],
+   "desc_va": 6692668,
+   "p00": 5139060,
+   "p08": 6753236,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 104,
+   "name": "noteic",
+   "method_count": 10,
+   "methods": [],
+   "desc_va": 6692716,
+   "p00": 5008716,
+   "p08": 6758132,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 105,
+   "name": "z_group",
+   "method_count": 14,
+   "methods": [],
+   "desc_va": 6692764,
+   "p00": 4998420,
+   "p08": 6756892,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 106,
+   "name": "antibioticfrm",
+   "method_count": 29,
+   "methods": [],
+   "desc_va": 6692812,
+   "p00": 5185520,
+   "p08": 6757372,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 107,
+   "name": "Frmcomment",
+   "method_count": 17,
+   "methods": [],
+   "desc_va": 6692860,
+   "p00": 5019572,
+   "p08": 6757448,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 108,
+   "name": "static4",
+   "method_count": 18,
+   "methods": [],
+   "desc_va": 6692908,
+   "p00": 5202096,
+   "p08": 6753592,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 109,
+   "name": "z_customgroup",
+   "method_count": 31,
+   "methods": [],
+   "desc_va": 6692956,
+   "p00": 5079808,
+   "p08": 6819320,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 110,
+   "name": "Reportsemen1",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6693004,
+   "p00": 4960532,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 111,
+   "name": "commentsetup",
+   "method_count": 5,
+   "methods": [],
+   "desc_va": 6693052,
+   "p00": 5124552,
+   "p08": 7090324,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 112,
+   "name": "abbrevi",
+   "method_count": 41,
+   "methods": [],
+   "desc_va": 6693100,
+   "p00": 5161600,
+   "p08": 6757804,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 113,
+   "name": "learntest",
+   "method_count": 6,
+   "methods": [],
+   "desc_va": 6693148,
+   "p00": 4991936,
+   "p08": 6758040,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 114,
+   "name": "converter",
+   "method_count": 14,
+   "methods": [],
+   "desc_va": 6693196,
+   "p00": 5023404,
+   "p08": 6758216,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 115,
+   "name": "shoppingfrm",
+   "method_count": 15,
+   "methods": [
+    {
+     "index": 26,
+     "name": "serrshch",
+     "name_va": 6754528
+    }
+   ],
+   "desc_va": 6693244,
+   "p00": 5039528,
+   "p08": 6758304,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 116,
+   "name": "frmTip",
+   "method_count": 5,
+   "methods": [
+    {
+     "index": 11,
+     "name": "serrshch",
+     "name_va": 6754528
+    }
+   ],
+   "desc_va": 6693292,
+   "p00": 4976240,
+   "p08": 7386912,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 117,
+   "name": "workpaper2",
+   "method_count": 18,
+   "methods": [
+    {
+     "index": 6,
+     "name": "serrshch",
+     "name_va": 6754528
+    }
+   ],
+   "desc_va": 6693340,
+   "p00": 5104124,
+   "p08": 6758720,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 118,
+   "name": "Reportsemen2",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6693388,
+   "p00": 4954332,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 119,
+   "name": "resultabuse",
+   "method_count": 95,
+   "methods": [
+    {
+     "index": 43,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 91,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 92,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 93,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 94,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6693436,
+   "p00": 5727028,
+   "p08": 6881936,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 120,
+   "name": "resultdrugs",
+   "method_count": 98,
+   "methods": [
+    {
+     "index": 49,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 94,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 95,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 96,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 97,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6693484,
+   "p00": 5939648,
+   "p08": 6882052,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 121,
+   "name": "resultcoagfactor",
+   "method_count": 79,
+   "methods": [
+    {
+     "index": 40,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 75,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 76,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 77,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 78,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6693532,
+   "p00": 5776048,
+   "p08": 6883232,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 122,
+   "name": "resultImmunoglob",
+   "method_count": 72,
+   "methods": [
+    {
+     "index": 37,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 68,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 69,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 70,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 71,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6693580,
+   "p00": 5664404,
+   "p08": 6883100,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 123,
+   "name": "resultimmun",
+   "method_count": 138,
+   "methods": [
+    {
+     "index": 64,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 134,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 135,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 136,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 137,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6693628,
+   "p00": 6315948,
+   "p08": 6883348,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 124,
+   "name": "resulthgbelec",
+   "method_count": 51,
+   "methods": [
+    {
+     "index": 28,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 47,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 48,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 49,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 50,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6693676,
+   "p00": 5439448,
+   "p08": 6874332,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 125,
+   "name": "resultprotelec",
+   "method_count": 61,
+   "methods": [
+    {
+     "index": 32,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 51,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 52,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 53,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 54,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6693724,
+   "p00": 5589332,
+   "p08": 6874448,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 126,
+   "name": "resultbloodgas",
+   "method_count": 81,
+   "methods": [
+    {
+     "index": 37,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 71,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 72,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 73,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 74,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6693772,
+   "p00": 5959520,
+   "p08": 6874216,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 127,
+   "name": "resultcrossm",
+   "method_count": 140,
+   "methods": [
+    {
+     "index": 27,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 76,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 77,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 138,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 139,
+     "name": "positions",
+     "name_va": 6868644
+    }
+   ],
+   "desc_va": 6693820,
+   "p00": 6107940,
+   "p08": 6875172,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 128,
+   "name": "resultsugacurve",
+   "method_count": 78,
+   "methods": [
+    {
+     "index": 47,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 66,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 67,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 68,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 69,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 70,
+     "name": "positionaa",
+     "name_va": 6882312
+    },
+    {
+     "index": 71,
+     "name": "positionaas",
+     "name_va": 6882324
+    }
+   ],
+   "desc_va": 6693868,
+   "p00": 5845016,
+   "p08": 6882336,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 129,
+   "name": "resultstone",
+   "method_count": 72,
+   "methods": [
+    {
+     "index": 25,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 26,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 67,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 70,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 71,
+     "name": "positions",
+     "name_va": 6868644
+    }
+   ],
+   "desc_va": 6693916,
+   "p00": 5603944,
+   "p08": 6872736,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 130,
+   "name": "resultprostata",
+   "method_count": 113,
+   "methods": [
+    {
+     "index": 35,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 36,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 108,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 111,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 112,
+     "name": "positions",
+     "name_va": 6868644
+    }
+   ],
+   "desc_va": 6693964,
+   "p00": 6086008,
+   "p08": 6872608,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 131,
+   "name": "resultcsf",
+   "method_count": 83,
+   "methods": [
+    {
+     "index": 29,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 30,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 78,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 81,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 82,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 97,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 98,
+     "name": "position",
+     "name_va": 6868632
+    }
+   ],
+   "desc_va": 6694012,
+   "p00": 5810096,
+   "p08": 6875856,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 132,
+   "name": "resultzn",
+   "method_count": 36,
+   "methods": [
+    {
+     "index": 14,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 15,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 30,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 33,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 34,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 35,
+     "name": "positionNormal",
+     "name_va": 6878216
+    },
+    {
+     "index": 48,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 49,
+     "name": "position",
+     "name_va": 6868632
+    }
+   ],
+   "desc_va": 6694060,
+   "p00": 5346156,
+   "p08": 6878232,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 133,
+   "name": "resultTUBERCULIN",
+   "method_count": 32,
+   "methods": [
+    {
+     "index": 12,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 13,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 27,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 30,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 31,
+     "name": "positions",
+     "name_va": 6868644
+    }
+   ],
+   "desc_va": 6694108,
+   "p00": 5177380,
+   "p08": 6877976,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 134,
+   "name": "resultmarrow",
+   "method_count": 64,
+   "methods": [
+    {
+     "index": 29,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 30,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 59,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 62,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 63,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 85,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 86,
+     "name": "position",
+     "name_va": 6868632
+    }
+   ],
+   "desc_va": 6694156,
+   "p00": 5743188,
+   "p08": 6878360,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 135,
+   "name": "resultpostcoital",
+   "method_count": 60,
+   "methods": [
+    {
+     "index": 21,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 22,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 55,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 58,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 59,
+     "name": "positions",
+     "name_va": 6868644
+    }
+   ],
+   "desc_va": 6694204,
+   "p00": 5464912,
+   "p08": 6878488,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 136,
+   "name": "moenysharekat",
+   "method_count": 27,
+   "methods": [],
+   "desc_va": 6694252,
+   "p00": 5219264,
+   "p08": 6766560,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 137,
+   "name": "resultrenal",
+   "method_count": 80,
+   "methods": [
+    {
+     "index": 40,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 76,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 77,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 78,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 79,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6694300,
+   "p00": 5759460,
+   "p08": 6882824,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 138,
+   "name": "patienthistory2",
+   "method_count": 17,
+   "methods": [],
+   "desc_va": 6694348,
+   "p00": 5027252,
+   "p08": 6757448,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 139,
+   "name": "qcfrm",
+   "method_count": 27,
+   "methods": [],
+   "desc_va": 6694396,
+   "p00": 5097900,
+   "p08": 6759116,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 140,
+   "name": "printerselect",
+   "method_count": 11,
+   "methods": [],
+   "desc_va": 6694444,
+   "p00": 4951244,
+   "p08": 6745292,
+   "p10": 80319816,
+   "p14": 0,
+   "f28": 98305
+  },
+  {
+   "i": 141,
+   "name": "z_labaccount",
+   "method_count": 18,
+   "methods": [],
+   "desc_va": 6694492,
+   "p00": 5057508,
+   "p08": 6766956,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 142,
+   "name": "static5",
+   "method_count": 21,
+   "methods": [],
+   "desc_va": 6694540,
+   "p00": 5117516,
+   "p08": 6753084,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 143,
+   "name": "logindetect",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6694588,
+   "p00": 4956068,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 144,
+   "name": "logindete",
+   "method_count": 6,
+   "methods": [],
+   "desc_va": 6694636,
+   "p00": 4980060,
+   "p08": 6767316,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 145,
+   "name": "Reportqc",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6694684,
+   "p00": 4956564,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 146,
+   "name": "Reportlivers",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6694732,
+   "p00": 4958548,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 147,
+   "name": "setup1",
+   "method_count": 56,
+   "methods": [],
+   "desc_va": 6694780,
+   "p00": 5618592,
+   "p08": 7138848,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 148,
+   "name": "setup2",
+   "method_count": 58,
+   "methods": [],
+   "desc_va": 6694828,
+   "p00": 5574768,
+   "p08": 7176760,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 149,
+   "name": "setup3",
+   "method_count": 42,
+   "methods": [],
+   "desc_va": 6694876,
+   "p00": 5979660,
+   "p08": 7176504,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 150,
+   "name": "normal_test",
+   "method_count": 36,
+   "methods": [],
+   "desc_va": 6694924,
+   "p00": 5043788,
+   "p08": 6757448,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 151,
+   "name": "Reporturines",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6694972,
+   "p00": 4958052,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 152,
+   "name": "ReportSugars",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6695020,
+   "p00": 4953836,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 153,
+   "name": "Reporttotals",
+   "method_count": 0,
+   "methods": [
+    {
+     "index": 70,
+     "name": "r",
+     "name_va": 6756780
+    }
+   ],
+   "desc_va": 6695068,
+   "p00": 4959540,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 154,
+   "name": "Reportanyreports",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6695116,
+   "p00": 4965988,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 155,
+   "name": "repotrwidals",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6695164,
+   "p00": 4955076,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 156,
+   "name": "Reportcrosss",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6695212,
+   "p00": 4956812,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 157,
+   "name": "reportculutres",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6695260,
+   "p00": 4966732,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 158,
+   "name": "Reportsemen1s",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6695308,
+   "p00": 4964996,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 159,
+   "name": "Reportsemen2s",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6695356,
+   "p00": 4961028,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 160,
+   "name": "Reportmony4",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6695404,
+   "p00": 4954828,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 161,
+   "name": "moenymozafeen",
+   "method_count": 27,
+   "methods": [
+    {
+     "index": 49,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    }
+   ],
+   "desc_va": 6695452,
+   "p00": 5228212,
+   "p08": 6766560,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 162,
+   "name": "resultha1c",
+   "method_count": 39,
+   "methods": [
+    {
+     "index": 22,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 34,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 35,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 36,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 37,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6695500,
+   "p00": 5284688,
+   "p08": 6882168,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 163,
+   "name": "resultwidal2",
+   "method_count": 51,
+   "methods": [
+    {
+     "index": 42,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 45,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 46,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 49,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 50,
+     "name": "positions",
+     "name_va": 6868644
+    }
+   ],
+   "desc_va": 6695548,
+   "p00": 5648960,
+   "p08": 6876680,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 164,
+   "name": "Frm_pic",
+   "method_count": 55,
+   "methods": [
+    {
+     "index": 57,
+     "name": "Left",
+     "name_va": 7506076
+    },
+    {
+     "index": 58,
+     "name": "Left",
+     "name_va": 7506076
+    },
+    {
+     "index": 59,
+     "name": "Top",
+     "name_va": 7527088
+    },
+    {
+     "index": 60,
+     "name": "Top",
+     "name_va": 7527088
+    },
+    {
+     "index": 61,
+     "name": "Right",
+     "name_va": 7524644
+    },
+    {
+     "index": 62,
+     "name": "Right",
+     "name_va": 7524644
+    },
+    {
+     "index": 63,
+     "name": "Bottom",
+     "name_va": 7525144
+    },
+    {
+     "index": 64,
+     "name": "Bottom",
+     "name_va": 7525144
+    },
+    {
+     "index": 65,
+     "name": "Width",
+     "name_va": 7529056
+    },
+    {
+     "index": 66,
+     "name": "Width",
+     "name_va": 7529056
+    },
+    {
+     "index": 67,
+     "name": "Height",
+     "name_va": 7526592
+    },
+    {
+     "index": 68,
+     "name": "Height",
+     "name_va": 7526592
+    },
+    {
+     "index": 69,
+     "name": "SetRectToCtrl",
+     "name_va": 7523696
+    },
+    {
+     "index": 70,
+     "name": "SetCtrlToRect",
+     "name_va": 7508332
+    },
+    {
+     "index": 71,
+     "name": "ScreenToTwips",
+     "name_va": 7508348
+    },
+    {
+     "index": 72,
+     "name": "TwipsToScreen",
+     "name_va": 7509412
+    },
+    {
+     "index": 73,
+     "name": "NormalizeRect",
+     "name_va": 7512932
+    },
+    {
+     "index": 74,
+     "name": "PtInRect",
+     "name_va": 7524184
+    }
+   ],
+   "desc_va": 6695596,
+   "p00": 5085780,
+   "p08": 7003800,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 165,
+   "name": "CRect",
+   "method_count": 20,
+   "methods": [
+    {
+     "index": 2,
+     "name": "Left",
+     "name_va": 7506076
+    },
+    {
+     "index": 3,
+     "name": "Left",
+     "name_va": 7506076
+    },
+    {
+     "index": 4,
+     "name": "Top",
+     "name_va": 7527088
+    },
+    {
+     "index": 5,
+     "name": "Top",
+     "name_va": 7527088
+    },
+    {
+     "index": 6,
+     "name": "Right",
+     "name_va": 7524644
+    },
+    {
+     "index": 7,
+     "name": "Right",
+     "name_va": 7524644
+    },
+    {
+     "index": 8,
+     "name": "Bottom",
+     "name_va": 7525144
+    },
+    {
+     "index": 9,
+     "name": "Bottom",
+     "name_va": 7525144
+    },
+    {
+     "index": 10,
+     "name": "Width",
+     "name_va": 7529056
+    },
+    {
+     "index": 11,
+     "name": "Width",
+     "name_va": 7529056
+    },
+    {
+     "index": 12,
+     "name": "Height",
+     "name_va": 7526592
+    },
+    {
+     "index": 13,
+     "name": "Height",
+     "name_va": 7526592
+    },
+    {
+     "index": 14,
+     "name": "SetRectToCtrl",
+     "name_va": 7523696
+    },
+    {
+     "index": 15,
+     "name": "SetCtrlToRect",
+     "name_va": 7508332
+    },
+    {
+     "index": 16,
+     "name": "ScreenToTwips",
+     "name_va": 7508348
+    },
+    {
+     "index": 17,
+     "name": "TwipsToScreen",
+     "name_va": 7509412
+    },
+    {
+     "index": 18,
+     "name": "NormalizeRect",
+     "name_va": 7512932
+    },
+    {
+     "index": 19,
+     "name": "PtInRect",
+     "name_va": 7524184
+    }
+   ],
+   "desc_va": 6695644,
+   "p00": 4969544,
+   "p08": 7514024,
+   "p10": 0,
+   "p14": 0,
+   "f28": 1146883
+  },
+  {
+   "i": 166,
+   "name": "rpttotaliss",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6695692,
+   "p00": 4966980,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 167,
+   "name": "rpttotalisss",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6695740,
+   "p00": 4963508,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 168,
+   "name": "Frm_pic2",
+   "method_count": 31,
+   "methods": [],
+   "desc_va": 6695788,
+   "p00": 5073844,
+   "p08": 7004216,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 169,
+   "name": "resultretios",
+   "method_count": 97,
+   "methods": [
+    {
+     "index": 37,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 82,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 83,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 84,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 85,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6695836,
+   "p00": 5900884,
+   "p08": 6879792,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 170,
+   "name": "ReportFatoraC",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6695884,
+   "p00": 4966236,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 171,
+   "name": "resulthpylori",
+   "method_count": 83,
+   "methods": [
+    {
+     "index": 34,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 79,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 80,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 81,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 82,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 99,
+     "name": "calculateprice",
+     "name_va": 6739556
+    }
+   ],
+   "desc_va": 6695932,
+   "p00": 5546112,
+   "p08": 6876796,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 172,
+   "name": "Frmac",
+   "method_count": 26,
+   "methods": [
+    {
+     "index": 16,
+     "name": "calculateprice",
+     "name_va": 6739556
+    }
+   ],
+   "desc_va": 6695980,
+   "p00": 5110568,
+   "p08": 6757804,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 173,
+   "name": "Reportmony5",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6696028,
+   "p00": 4952844,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 174,
+   "name": "saveIOtemp",
+   "method_count": 10,
+   "methods": [],
+   "desc_va": 6696076,
+   "p00": 4951116,
+   "p08": 6735672,
+   "p10": 80318500,
+   "p14": 0,
+   "f28": 98305
+  },
+  {
+   "i": 175,
+   "name": "CardFrm",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6696124,
+   "p00": 4970632,
+   "p08": 6968736,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 176,
+   "name": "CardFrmSetx",
+   "method_count": 22,
+   "methods": [],
+   "desc_va": 6696172,
+   "p00": 5048312,
+   "p08": 7175168,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 177,
+   "name": "Resultsemen5",
+   "method_count": 216,
+   "methods": [
+    {
+     "index": 201,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 202,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 208,
+     "name": "printout2",
+     "name_va": 6869928
+    },
+    {
+     "index": 209,
+     "name": "printout3",
+     "name_va": 6881084
+    },
+    {
+     "index": 210,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 211,
+     "name": "position2",
+     "name_va": 6881096
+    },
+    {
+     "index": 212,
+     "name": "printout2s",
+     "name_va": 6881108
+    },
+    {
+     "index": 213,
+     "name": "position2s",
+     "name_va": 6881120
+    },
+    {
+     "index": 214,
+     "name": "printout3s",
+     "name_va": 6881132
+    },
+    {
+     "index": 215,
+     "name": "resuprt",
+     "name_va": 6881144
+    }
+   ],
+   "desc_va": 6696220,
+   "p00": 6545796,
+   "p08": 6881272,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 178,
+   "name": "Patient_samples",
+   "method_count": 89,
+   "methods": [],
+   "desc_va": 6696268,
+   "p00": 5679864,
+   "p08": 6746536,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 179,
+   "name": "ReportFatorareset",
+   "method_count": 0,
+   "methods": [
+    {
+     "index": 21,
+     "name": "L",
+     "name_va": 7082932
+    }
+   ],
+   "desc_va": 6696316,
+   "p00": 4966484,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 180,
+   "name": "ReportPatPhone",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6696364,
+   "p00": 4953588,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 181,
+   "name": "pricelistsN",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6696412,
+   "p00": 4957556,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 182,
+   "name": "SMSfrmsenderos",
+   "method_count": 139,
+   "methods": [
+    {
+     "index": 139,
+     "name": "VideoBiosDate",
+     "name_va": 7560552
+    },
+    {
+     "index": 140,
+     "name": "VideoBiosVersion",
+     "name_va": 7560568
+    },
+    {
+     "index": 141,
+     "name": "VideoBiosCopyRight",
+     "name_va": 7560588
+    },
+    {
+     "index": 142,
+     "name": "SystemBiosDate",
+     "name_va": 7560608
+    },
+    {
+     "index": 143,
+     "name": "SystemBiosCopyRight",
+     "name_va": 7560624
+    },
+    {
+     "index": 144,
+     "name": "SystemBiosVersion",
+     "name_va": 7560644
+    },
+    {
+     "index": 145,
+     "name": "SystemBiosExtraInfo",
+     "name_va": 7560664
+    },
+    {
+     "index": 147,
+     "name": "DataReport_Initialize",
+     "name_va": 6837028
+    }
+   ],
+   "desc_va": 6696460,
+   "p00": 6396416,
+   "p08": 6751968,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 183,
+   "name": "BiosData",
+   "method_count": 8,
+   "methods": [
+    {
+     "index": 0,
+     "name": "VideoBiosDate",
+     "name_va": 7560552
+    },
+    {
+     "index": 1,
+     "name": "VideoBiosVersion",
+     "name_va": 7560568
+    },
+    {
+     "index": 2,
+     "name": "VideoBiosCopyRight",
+     "name_va": 7560588
+    },
+    {
+     "index": 3,
+     "name": "SystemBiosDate",
+     "name_va": 7560608
+    },
+    {
+     "index": 4,
+     "name": "SystemBiosCopyRight",
+     "name_va": 7560624
+    },
+    {
+     "index": 5,
+     "name": "SystemBiosVersion",
+     "name_va": 7560644
+    },
+    {
+     "index": 6,
+     "name": "SystemBiosExtraInfo",
+     "name_va": 7560664
+    },
+    {
+     "index": 8,
+     "name": "DataReport_Initialize",
+     "name_va": 6837028
+    }
+   ],
+   "desc_va": 6696508,
+   "p00": 4968332,
+   "p08": 7560684,
+   "p10": 0,
+   "p14": 0,
+   "f28": 1146883
+  },
+  {
+   "i": 184,
+   "name": "boisais",
+   "method_count": 16,
+   "methods": [],
+   "desc_va": 6696556,
+   "p00": 4951408,
+   "p08": 7273316,
+   "p10": 80323460,
+   "p14": 0,
+   "f28": 98305
+  },
+  {
+   "i": 185,
+   "name": "ReportSMS",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6696604,
+   "p00": 4954580,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 186,
+   "name": "Reportmony11",
+   "method_count": 1,
+   "methods": [
+    {
+     "index": 0,
+     "name": "DataReport_Initialize",
+     "name_va": 6837028
+    }
+   ],
+   "desc_va": 6696652,
+   "p00": 4968056,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 187,
+   "name": "Reportliver7his",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6696700,
+   "p00": 4963756,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 188,
+   "name": "Reportlivers7his",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6696748,
+   "p00": 4961524,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 189,
+   "name": "mInputbox",
+   "method_count": 12,
+   "methods": [],
+   "desc_va": 6696796,
+   "p00": 4951584,
+   "p08": 6740656,
+   "p10": 80319120,
+   "p14": 0,
+   "f28": 98305
+  },
+  {
+   "i": 190,
+   "name": "ReportTestTime",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6696844,
+   "p00": 4957804,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 191,
+   "name": "RPTPatientVisit",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6696892,
+   "p00": 4953340,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 192,
+   "name": "static6",
+   "method_count": 24,
+   "methods": [
+    {
+     "index": 45,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    }
+   ],
+   "desc_va": 6696940,
+   "p00": 5274996,
+   "p08": 6753344,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 193,
+   "name": "ReportPCR",
+   "method_count": 0,
+   "methods": [
+    {
+     "index": 53,
+     "name": "C",
+     "name_va": 7199296
+    }
+   ],
+   "desc_va": 6696988,
+   "p00": 4961772,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 194,
+   "name": "ReportFatorareset8",
+   "method_count": 0,
+   "methods": [
+    {
+     "index": 39,
+     "name": "@",
+     "name_va": 71993855
+    },
+    {
+     "index": 85,
+     "name": "c",
+     "name_va": 6963276
+    }
+   ],
+   "desc_va": 6697036,
+   "p00": 4965740,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 195,
+   "name": "ResultPCR",
+   "method_count": 37,
+   "methods": [
+    {
+     "index": 21,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 33,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 34,
+     "name": "printouts",
+     "name_va": 6826960
+    }
+   ],
+   "desc_va": 6697084,
+   "p00": 5490728,
+   "p08": 6882664,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 196,
+   "name": "labmainTools",
+   "method_count": 6,
+   "methods": [],
+   "desc_va": 6697132,
+   "p00": 4982148,
+   "p08": 7558152,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 197,
+   "name": "ReportPCRs",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6697180,
+   "p00": 4954084,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 198,
+   "name": "ResultFMF",
+   "method_count": 48,
+   "methods": [
+    {
+     "index": 40,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 43,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 44,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 46,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 47,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 62,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    }
+   ],
+   "desc_va": 6697228,
+   "p00": 5695516,
+   "p08": 6876680,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 199,
+   "name": "resultLBC",
+   "method_count": 33,
+   "methods": [
+    {
+     "index": 14,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 29,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 30,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 31,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 32,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 52,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    }
+   ],
+   "desc_va": 6697276,
+   "p00": 5169320,
+   "p08": 6882940,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 200,
+   "name": "ReportLBC",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6697324,
+   "p00": 4960780,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 201,
+   "name": "ReportLBCs",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6697372,
+   "p00": 4960284,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 202,
+   "name": "ReportZN",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6697420,
+   "p00": 4959788,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 203,
+   "name": "ReportZNs",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6697468,
+   "p00": 4959292,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 204,
+   "name": "Reportmony01",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6697516,
+   "p00": 4955572,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 205,
+   "name": "resultIgeAllergy",
+   "method_count": 231,
+   "methods": [
+    {
+     "index": 19,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 223,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 224,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 225,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 226,
+     "name": "printout2",
+     "name_va": 6869928
+    },
+    {
+     "index": 227,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 228,
+     "name": "printouts2",
+     "name_va": 6877840
+    }
+   ],
+   "desc_va": 6697564,
+   "p00": 6453020,
+   "p08": 6877852,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 206,
+   "name": "ReportIGE1",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6697612,
+   "p00": 4952596,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 207,
+   "name": "ReportIGE1s",
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6697660,
+   "p00": 4952100,
+   "p08": 6744296,
+   "p10": 0,
+   "p14": 0,
+   "f28": 16875651
+  },
+  {
+   "i": 208,
+   "name": "otherfun",
+   "method_count": 2,
+   "methods": [],
+   "desc_va": 6697708,
+   "p00": 4951180,
+   "p08": 6745292,
+   "p10": 80323264,
+   "p14": 0,
+   "f28": 98305
+  },
+  {
+   "i": 209,
+   "name": "ResulturineAuto",
+   "method_count": 184,
+   "methods": [
+    {
+     "index": 54,
+     "name": "printout",
+     "name_va": 6794188
+    },
+    {
+     "index": 55,
+     "name": "printout2",
+     "name_va": 6869928
+    },
+    {
+     "index": 56,
+     "name": "position",
+     "name_va": 6868632
+    },
+    {
+     "index": 177,
+     "name": "stoptimer2",
+     "name_va": 6868620
+    },
+    {
+     "index": 182,
+     "name": "printouts",
+     "name_va": 6826960
+    },
+    {
+     "index": 183,
+     "name": "positions",
+     "name_va": 6868644
+    },
+    {
+     "index": 188,
+     "name": "ption1",
+     "name_va": 7169396
+    },
+    {
+     "index": 206,
+     "name": "w",
+     "name_va": 7497078
+    }
+   ],
+   "desc_va": 6697756,
+   "p00": 6424404,
+   "p08": 6869940,
+   "p10": 0,
+   "p14": 0,
+   "f28": 98435
+  },
+  {
+   "i": 210,
+   "name": null,
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6697804,
+   "p00": 0,
+   "p08": 0,
+   "p10": 0,
+   "p14": 0,
+   "f28": 0
+  },
+  {
+   "i": 211,
+   "name": null,
+   "method_count": 0,
+   "methods": [],
+   "desc_va": 6697852,
+   "p00": 0,
+   "p08": 0,
+   "p10": 0,
+   "p14": 0,
+   "f28": 0
+  }
+ ]
+}

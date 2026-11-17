@@ -1,0 +1,110 @@
+[
+  {
+    "table": "patientinfo",
+    "name": "PrimaryKey",
+    "column": "patientid",
+    "ordinal": 1,
+    "type": 1,
+    "unique": true,
+    "primary": true,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  },
+  {
+    "table": "CSFT",
+    "name": "chlorid",
+    "column": "chlorid",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  },
+  {
+    "table": "ZN",
+    "name": "Numberbacilli",
+    "column": "Numberbacilli",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  },
+  {
+    "table": "BONEMAR",
+    "name": "patientid",
+    "column": "patientid",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  },
+  {
+    "table": "CSFT",
+    "name": "patientid",
+    "column": "patientid",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  },
+  {
+    "table": "postcoitalt",
+    "name": "patientid",
+    "column": "patientid",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  },
+  {
+    "table": "renalfailure",
+    "name": "patientid",
+    "column": "patientid",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  },
+  {
+    "table": "TUBERCULINT",
+    "name": "patientid",
+    "column": "patientid",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  },
+  {
+    "table": "ZN",
+    "name": "patientid",
+    "column": "patientid",
+    "ordinal": 1,
+    "type": 1,
+    "unique": false,
+    "primary": false,
+    "clustered": false,
+    "cardinality": 0.0,
+    "filter": null
+  }
+]

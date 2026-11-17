@@ -1,0 +1,145 @@
+### SELECT * FROM subgrouptable
+subgroupcode | subgroupname | arname | deleteprotect
+1 | BLOOD GLUCOSE |  | True
+2 | KIDNEY FUNCTIONS |  | True
+3 | LIVER FUNCTIONS |  | True
+4 | LIPIDS PROFILE |  | True
+5 | URINE EXAMINATION |  | True
+6 | STOOL EXAMINATION |  | True
+7 | Autoimmune diseases |  | True
+8 | BLOOD GROUP |  | True
+9 | Erythrocyte Sedimentation Rate |  | True
+10 | CULTURE AND SENSITIVITY |  | True
+11 | BLOOD PICTURE |  | True
+12 | SERODIAGNOSIS |  | True
+13 | Hepatitis Markers |  | True
+14 | TOXOPLASMOSOIS |  | True
+15 | HEMATOLOGY |  | True
+16 | Thyroid Hormones |  | True
+17 | Antiphospholipid antibody syndrome |  | True
+18 | Cardiac Markers |  | True
+19 | TORCH Screen |  | True
+20 | Coagulation Profile |  | True
+21 | Pancreas Hormones |  | True
+22 | Separate |  | True
+23 | Semen Examination |  | True
+24 | Tumors Markers |  | True
+25 | Serum Electrolytes |  | True
+26 | Urine Electrolytes |  | True
+27 | CSF Electrolytes |  | True
+28 | Vitamins |  | True
+29 | Trace Elements |  | True
+30 | Iron Tests |  | True
+31 | Pregnancy Tests |  | True
+32 | Fertlity Hormones |  | True
+33 | Suprarenal Hormones |  | True
+34 | VIROLOGY |  | True
+35 | MOLECULAR BIOLOGY |  | True
+37 | Drug Monitoring |  | True
+38 | Drugs of Abuse |  | True
+39 | Coagulation Factors |  | True
+40 | Immunoglobulins |  | True
+41 | Blood Gases |  | True
+42 | Hemoglobin electrophoresis |  | True
+43 | Protein electrophoresis |  | True
+44 | Aminogram |  | True
+45 | WBCs function |  | False
+47 | Renal Failure |  | False
+48 | Diabetes profile |  | False
+49 | Allergy Screen |  | False
+50 | CYTOPATHOLOGY |  | False
+
+### SELECT TOP 8 * FROM testtable
+testcode | testcodebill | arrangnum | subgroupcode | testsimp | testabrev | testname | waslname | waslname2 | historyname | barcodesymb | testnamear | subgroupname | loggroup | active | inotherlab | otherlabname | otherlabprice | patientprice | labprice | anyqus | thequse | testdiscr | testeffect | testusage | typeofsample | deleteprotect | testtime | printwith | barcode1 | barcode2 | barcode3 | branch | seereport | normaltype | addorno | testorno | REFRANGE
+1 |  | 5 | 1 | F.B.G. | F.B.G. | (Fasting Blood Glucose) | Blood Glucose | F.B.G. | FBG | FBG | سكر صائم | Blood Glucose | CHEMISTRY | True | False |  | 0 | 8 | 4 | False | هل المريض ديبيتك؟ |  |  |  | 1.0 ml. Serum | True | 1 | True | Serum Fasting |  |  | CHEMISTRY |  |  | True | True | 1
+2 |  | 5 | 1 | PP.Bl.G. | PP.Bl.G. | (Postprandial Blood Glucose) | Blood Glucose | PP.Bl.G. | PPBG | PPBG | سكر فاطر | Blood Glucose | CHEMISTRY | True | False |  | 0 | 8 | 4 | False |  |  |  |  | 1.0 ml. Serum | True | 1 | True | Serum Postprandial |  |  | CHEMISTRY |  |  | True | True | 0
+3 |  | 5 | 1 | R.B.G. | R.B.G. | (Random Blood Glucose) | Blood Glucose | R.B.G. | RBG | RBG | سكر عشوائى | BLOOD GLUCOSE | CHEMISTRY | True | False |  | 0 | 8 | 4 | False | هل المريض ديبيتك؟ |  |  |  | 1.0 ml. Serum | True | 1 | True | Serum |  |  | Clinical Chemistry |  |  | True | True | 1
+4 | 6766 | 1 | 5 | Urine |  | Urine Examination | URINE EXAMINATION |  | Urine | Urine | تحليل بول | URINE EXAMINATION | MICROBIOLOGY | True | False |  | 0 | 4.5 | 2.5 | False |  |  |  |  | Urine | True | 1 | False | Urine |  |  | MICROBIOLOGY | See Report |  | True | True | 0
+5 |  | 2 | 6 | Stool |  | Stool Examination | STOOL EXAMINATION |  | Stool | Stool |  | STOOL EXAMINATION | MICROBIOLOGY | True | False |  | 0 | 4.5 | 2.5 | False |  |  |  |  | Stool | True | 1 | False | Stool |  |  | MICROBIOLOGY | See Report |  | True | True | 
+6 |  | 8 | 3 | Alk. Ph. | ALP | (Alkaline Phosphates) | LIVER FUNCTIONS | ALP | ALP | ALP |  | LIVER FUNCTIONS | CHEMISTRY | True | False | أوتولاب | 10 | 15 | 7 | False |  |  |  |  | 1.0 ml. Serum | True | 1 | True | Serum Fasting |  |  | CHEMISTRY |  |  | True | True | 
+7 |  | 8 | 3 | Albumin | Serum Albumin |  | LIVER FUNCTIONS | ALB | ALB | ALB |  | LIVER FUNCTIONS | CHEMISTRY | True | False |  | 0 | 10 | 5.5 | False |  |  |  |  | 1.0 ml. Serum | True | 0 | True | Serum Fasting |  |  | CHEMISTRY |  |  | True | True | 0
+8 |  | 6 | 3 | SGPT (ALT) | SGPT | (Alanine Aminotransferase) | LIVER FUNCTIONS | SGPT | SGPT | SGPT |  | LIVER FUNCTIONS | Manual Chemistry | True | False |  | 5 | 12 | 6 | False |  |  |  |  | Serum 1.0 ml. Refrigerated | True | 1 | True | Serum Fasting |  |  | Clinical Chemistry |  |  | True | True | 0
+
+### SELECT * FROM constanttable
+constantdiscrp | constant1 | constant2 | constant3 | constant4 | constant5 | constant6 | constant7
+PTCONS | 12 | 35 | 1.3300000000000001 | 2CVJW | 0 |  4021 | 94
+CBCCONS | 0 | 6.25 | 6.75 | 7.5 | 8.25 | 100 | BD111
+
+### SELECT * FROM pricelist
+pricenum | testsimp | pricelistname | testprice
+1 | F.B.G. | price list 1 | 3
+2 | ABO | price list 1 | 4
+3 | ACTH (10 PM) | price list 2 | 22
+4 | Urea | price list 2 | 3
+5 | ABO | price list 2 | 7
+6 | Urine | seed | 1
+
+### SELECT * FROM testtemp
+patientid | requestdate | testcode | subgroupcode | testsimp | loggroup | arrangnum | RESULTT | testprice | sentout | testpriceout | otherlabname | testtime | printwith | testabrev | testname | historyname | normalrang | testunit | lowlimit | highlimit | nolowexe | nohighexe | detelethis | resultfinsh | resultreview | resultprint | give
+ |  | 70 | 41 | Blood Gases |  | 9999 | See Report | 175 | False | 0 |  | 1 | False | Blood Gases |  |  |  |  |  |  |  |  | 0 | False | False | False | False
+
+### SELECT * FROM customgrouptable
+customgroupcode | customgroupname
+1 | CHECKUP 1
+2 | CHECKUP 2
+3 | CHECKUP 3
+4 | CHECKUP 4
+7 | CHECKUP 5
+
+### SELECT * FROM customtesttable
+testnum | customgroupcode | testcode | testsimp | patientprice
+1 | 1 | 4 | Urine | 4
+2 | 1 | 5 | Stool           | 4
+3 | 1 | 8 | SGPT (ALT) | 10
+4 | 1 | 9 | SGOT (AST) | 10
+5 | 2 | 11 | Creatinine | 9
+17 | 2 | 4 | Urine | 3
+12 | 1 | 1 | F.Bl.G. | 5
+13 | 1 | 15 | Bilirubin Total | 10
+14 | 1 | 11 | Creatinine | 10
+15 | 1 | 56 | CBC | 20
+18 | 2 | 5 | Stool | 3
+50 | 2 | 80 | Bilharzias Antibodies | 20
+51 | 3 | 80 | Bilharzias Antibodies | 20
+54 | 3 | 7 | Albumin | 10
+55 | 3 | 10 | Uric Acid | 10
+19 | 2 | 8 | SGPT (ALT) | 9
+20 | 2 | 9 | SGOT (AST) | 9
+21 | 2 | 1 | F.B.G.           | 6
+22 | 2 | 15 | Bilirubin Total | 9
+25 | 3 | 20 | A/G Ratio                       20 | 6
+24 | 2 | 56 | CBC | 17
+27 | 3 | 5 | Stool | 3
+28 | 3 | 8 | SGPT (ALT) | 10
+29 | 3 | 9 | SGOT (AST) | 10
+30 | 3 | 11 | Creatinine | 10
+31 | 3 | 15 | Bilirubin Total | 10
+32 | 3 | 56 | CBC | 20
+33 | 4 | 1 | F.Bl.G. | 6
+34 | 4 | 4 | Urine | 3
+35 | 4 | 5 | Stool | 3
+36 | 4 | 8 | SGPT (ALT) | 9
+37 | 4 | 9 | SGOT (AST) | 9
+40 | 4 | 56 | CBC | 17
+42 | 7 | 4 | Urine | 3
+44 | 7 | 5 | Stool | 3
+45 | 7 | 8 | SGPT (ALT) | 9
+46 | 7 | 9 | SGOT (AST) | 9
+47 | 7 | 11 | Creatinine | 9
+49 | 7 | 56 | CBC | 17
+59 | 7 | 10 | Uric Acid | 9
+61 | 1 | 7 | Albumin | 10
+62 | 1 | 10 | Uric Acid | 10
+63 | 1 | 208 | HCV antibodies | 40
+64 | 1 | 202 | HBsAg | 15
+65 | 1 | 80 | Bilharzias Antibodies | 20
+66 | 1 | 30 | Cholesterol           | 15
+67 | 1 | 31 | Triglyceride | 15
+68 | 2 | 208 | HCV antibodies | 50
+69 | 2 | 202 | HBsAg | 20
+70 | 2 | 7 | Albumin | 10
+71 | 2 | 10 | Uric Acid | 10
+75 | 4 | 80 | Bilharzias Antibodies (serum) | 20
+76 | 4 | 11 | Creatinine (Serum) | 12
+77 | 3 | 4 | Urine                         | 3
+

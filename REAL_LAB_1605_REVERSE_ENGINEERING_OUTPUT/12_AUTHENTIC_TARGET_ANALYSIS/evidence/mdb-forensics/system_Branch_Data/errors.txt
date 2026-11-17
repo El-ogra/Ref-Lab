@@ -1,0 +1,7 @@
+PK: Cannot convert argument "schema", with value: "", for "GetOleDbSchemaTable" to type "System.Guid": "Cannot convert null to type "System.Guid"."
+FK: Cannot convert argument "schema", with value: "", for "GetOleDbSchemaTable" to type "System.Guid": "Cannot convert null to type "System.Guid"."
+MSYSOBJECTS: Exception calling "ExecuteReader" with "0" argument(s): "Record(s) cannot be read; no read permission on 'MSysObjects'."
+SYSQUERIES: Exception calling "ExecuteReader" with "0" argument(s): "Record(s) cannot be read; no read permission on 'MSysQueries'."
+MSYSCOLUMNS: Exception calling "ExecuteReader" with "0" argument(s): "The Microsoft Access database engine cannot find the input table or query 'MSysColumns'. Make sure it exists and that its name is spelled correctly."
+MSYSINDEXES: Exception calling "ExecuteReader" with "0" argument(s): "The Microsoft Access database engine cannot find the input table or query 'MSysIndexes'. Make sure it exists and that its name is spelled correctly."
+MSYSRELATIONSHIPS: Exception calling "ExecuteReader" with "0" argument(s): "Record(s) cannot be read; no read permission on 'MSysRelationships'."

@@ -1,0 +1,48 @@
+# Ghidra 12.1.4 headless auto-analysis timings for the authentic v1.605 image
+# source: ghidra_run2.log (attempt 2, reduced-heap configuration)
+# NOTE: the ConfigureAnalysis pre-script FAILED TO COMPILE (Ghidra 12.1.4 API mismatch),
+#       so NO analyzer was disabled - these are DEFAULT-configurator timings.
+# auto-analysis hit the -analysisTimeoutPerFile 7200 s limit; total elapsed 9077 s.
+# the program was still saved to the project and is reusable with -noanalysis.
+#
+# analyzer                                          seconds
+# ---------------------------------------------------------------------
+
+    Apply Data Archives                        3.794 secs
+    Call Convention ID                         0.001 secs
+    Call-Fixup Installer                       0.694 secs
+    Create Address Tables                     40.637 secs
+    Create Address Tables - One Time          68.419 secs
+    Create Function                           98.815 secs
+    Data Reference                           165.956 secs
+    Decompiler Switch Analysis               122.702 secs
+    Demangler Microsoft                        0.712 secs
+    Disassemble                              778.923 secs
+    Disassemble Entry Points                   0.151 secs
+    Embedded Media                             4.993 secs
+    External Entry References                  0.001 secs
+    Function ID                              158.297 secs
+    Function Start Pre Search                  1.379 secs
+    Function Start Search                     12.830 secs
+    Function Start Search After Code           7.080 secs
+    Function Start Search After Data           8.877 secs
+    Non-Returning Functions - Discovered     125.706 secs
+    Non-Returning Functions - Known            0.016 secs
+    PDB Universal                              0.018 secs
+    Reference                                364.355 secs
+    Scalar Operand References                305.082 secs
+    Shared Return Calls                       53.595 secs
+    Stack                                   2984.146 secs
+    Subroutine References                     48.086 secs
+    Subroutine References - One Time           2.992 secs
+    Windows x86 PE Exception Handling          3.290 secs
+    Windows x86 PE RTTI Analyzer               0.818 secs
+    Windows x86 Thread Environment Block (TEB) Analyzer     0.109 secs
+    WindowsResourceReference                  23.781 secs
+    X86 Function Callee Purge                109.159 secs
+    x86 Constant Reference Analyzer         3582.079 secs
+-----------------------------------------------------
+     Total Time   9077 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+ERROR REPORT: Analysis timed out at 7200 seconds. Processing not completed for file: file:///C:/Users/LAP LINK/AppData/Local/Temp/opencode/rl1605/work/RLS_v1605.exe (HeadlessAnalyzer)  

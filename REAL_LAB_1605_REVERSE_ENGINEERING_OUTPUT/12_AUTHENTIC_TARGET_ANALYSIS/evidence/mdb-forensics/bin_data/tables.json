@@ -1,0 +1,17 @@
+[
+  {
+    "name": "history",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "patientinfo",
+    "type": "TABLE",
+    "remarks": ""
+  },
+  {
+    "name": "wasl",
+    "type": "TABLE",
+    "remarks": ""
+  }
+]

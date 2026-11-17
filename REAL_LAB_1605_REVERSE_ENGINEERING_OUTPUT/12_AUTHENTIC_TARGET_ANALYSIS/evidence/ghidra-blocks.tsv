@@ -1,0 +1,6 @@
+name	start	end	size	rwx	initialized
+Headers	00400000	00400fff	4096	--r	true
+.text	00401000	04c98fff	76120064	x-r	true
+.data	04c99000	04ce36d3	304852	-wr	true
+.rsrc	04ce4000	04d0bfff	163840	--r	true
+tdb	ffdff000	ffdfffff	4096	-wr	true

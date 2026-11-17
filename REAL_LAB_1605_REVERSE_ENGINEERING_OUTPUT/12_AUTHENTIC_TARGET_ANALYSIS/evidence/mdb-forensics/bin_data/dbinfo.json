@@ -1,0 +1,7 @@
+{
+  "path": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\data.mdb",
+  "sizeBytes": 266240,
+  "sha256": "84840CDA3AA8333BBD9E04631E20F2ECB7329EF9CA588329E05629C3E7512902",
+  "provider": "Microsoft.ACE.OLEDB.16.0",
+  "connectionString": "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\data.mdb;Persist Security Info=False;"
+}

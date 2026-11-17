@@ -1,0 +1,7 @@
+{
+  "path": "F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb",
+  "sizeBytes": 2682880,
+  "sha256": "98D51F5294496E03F352FF329F099572915CCB2E670C1F143D6BA368EEE898A3",
+  "provider": "Microsoft.ACE.OLEDB.16.0",
+  "connectionString": "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=F:\\REAL_LAB_COPY\\real lab system\\RL_CD2019Access\\bin\\Patients.mdb;Persist Security Info=False;"
+}
